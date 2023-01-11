@@ -25,6 +25,7 @@ def main():
     if not DATA_DIR.is_dir():
         DATA_DIR.mkdir()
 
+    print(REMOTE_DATA_URL, REMOTE_SCHEMA_URL)
     if not all((REMOTE_DATA_URL, REMOTE_SCHEMA_URL)):
         return
 
