@@ -1,7 +1,3 @@
-from deepdiff import DeepDiff
-from thefuzz import fuzz
-
-
 def diff_schemas(old_schema: dict, current_schema: dict) -> list:
     differences = []
 
