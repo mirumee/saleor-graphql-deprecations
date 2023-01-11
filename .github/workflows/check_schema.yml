@@ -5,6 +5,10 @@ on:
   schedule:
     - cron:  "0 8,18 * * 1,2,3,4,5"
 
+env:
+  REMOTE_DATA_URL: ${{ vars.REMOTE_DATA_URL }}
+  REMOTE_SCHEMA_URL: ${{ vars.REMOTE_SCHEMA_URL }}
+
 jobs:
   build:
 
