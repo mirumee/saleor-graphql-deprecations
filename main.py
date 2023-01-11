@@ -56,6 +56,8 @@ def main():
         if diff:
             changes.insert(diff)
             changes.save_index()
+            schemas.insert(current_schema)
+            schemas.save_index()
 
 
 if __name__ == "__main__":
