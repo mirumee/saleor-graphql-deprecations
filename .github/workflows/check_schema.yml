@@ -34,5 +34,5 @@ jobs:
         REPO: self
         BRANCH: gh-pages
         FOLDER: build
-        CLEAR_GLOBS_FILE: glob_file
+        CLEAR_GLOBS_FILE: gh_manifest
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
