@@ -1,3 +1,4 @@
+import os
 from os.path import abspath, dirname
 from pathlib import Path
 
@@ -13,10 +14,9 @@ from saleor_deprecations import (
 
 BUILD_DIR = Path(dirname(abspath(__file__))) / "build"
 DATA_DIR = BUILD_DIR / "data"
-REMOTE_URL = "https://raw.githubusercontent.com/mirumee/saleor-graphql-deprecations/gh-pages/data/"
-REMOTE_SCHEMA_URL = (
-    "https://raw.githubusercontent.com/saleor/saleor/main/saleor/graphql/schema.graphql"
-)
+
+REMOTE_DATA_URL = os.environ.get("REMOTE_DATA_URL")
+REMOTE_SCHEMA_URL = os.environ.get("REMOTE_SCHEMA_URL")
 
 
 def main():
@@ -25,10 +25,13 @@ def main():
     if not DATA_DIR.is_dir():
         DATA_DIR.mkdir()
 
+    if not all((REMOTE_DATA_URL, REMOTE_SCHEMA_URL)):
+        return
+
     schemas = JsonStore(
         prefix="sch",
         index_name="schemas",
-        remote_url=REMOTE_URL,
+        remote_url=REMOTE_DATA_URL,
         data_dir=DATA_DIR,
     )
     changes = JsonStore(
@@ -50,7 +53,9 @@ def main():
         schemas.save_index()
     else:
         diff = diff_schemas(old_schema, current_schema)
-        print(diff)
+        if diff:
+            changes.insert(diff)
+            changes.save_index()
 
 
 if __name__ == "__main__":
