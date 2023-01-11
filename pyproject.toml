@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "saleor_graphql_deprecations"
+description = "Static page generator for report with GraphQL deprecations in Saleor API"
+version = "0.1.0"
+dependencies = ["graphql-core", "requests"]
+
+[project.optional-dependencies]
+dev = [
+    "black"
+]
