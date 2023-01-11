@@ -21,7 +21,7 @@ def download_schema(schema_url: str) -> str:
 
     content_type, charset = [p.strip() for p in type_header.lower().split(";")]
     charset = charset.replace("charset=", "")
-    
+
     if content_type != REQUIRED_CONTENT_TYPE:
         raise exceptions.SchemaDownloadContentTypeError(content_type)
     if charset != REQUIRED_CHARSET:

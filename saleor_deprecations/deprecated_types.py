@@ -1,7 +1,6 @@
 import re
 from dataclasses import dataclass
 
-from graphql import parse
 from graphql.language import (
     DirectiveDefinitionNode,
     DocumentNode,
@@ -14,21 +13,17 @@ from graphql.language import (
     UnionTypeDefinitionNode,
 )
 
-from .download_schema import download_schema
-
 
 @dataclass
 class DeprecatedNode:
     version: str
 
 
-def get_deprecations(schema_url: str) -> list[DeprecatedNode]:
-    schema_ast = parse(download_schema(schema_url))
+def get_deprecated_types(schema_ast: str) -> list[DeprecatedNode]:
+    deprecated_types: list[DeprecatedNode] = []
+    find_deprecations_in_ast(schema_ast, deprecated_types)
 
-    deprecations: list[DeprecatedNode] = []
-    find_deprecations_in_ast(schema_ast, deprecations)
-
-    return deprecations
+    return deprecated_types
 
 
 SKIP_NODES = (
@@ -37,35 +32,39 @@ SKIP_NODES = (
 )
 
 
-def find_deprecations_in_ast(schema_ast: DocumentNode, deprecations: list[DeprecatedNode]):
+def find_deprecations_in_ast(
+    schema_ast: DocumentNode, deprecated_types: list[DeprecatedNode]
+):
     for graphql_type in schema_ast.definitions:
-        if isinstance(graphql_type, (ObjectTypeDefinitionNode, InterfaceTypeDefinitionNode)):
-            find_deprecations_in_object_type(graphql_type, deprecations)
+        if isinstance(
+            graphql_type, (ObjectTypeDefinitionNode, InterfaceTypeDefinitionNode)
+        ):
+            visit_object_type(graphql_type, deprecated_types)
         elif isinstance(graphql_type, InputObjectTypeDefinitionNode):
-            find_deprecations_in_input_type(graphql_type, deprecations)
+            visit_input_type(graphql_type, deprecated_types)
         elif isinstance(graphql_type, EnumTypeDefinitionNode):
-            find_deprecations_in_enum_type(graphql_type, deprecations)
+            visit_enum_type(graphql_type, deprecated_types)
         elif isinstance(graphql_type, ScalarTypeDefinitionNode):
-            find_deprecations_in_scalar_type(graphql_type, deprecations)
+            visit_scalar_type(graphql_type, deprecated_types)
         elif isinstance(graphql_type, UnionTypeDefinitionNode):
-            find_deprecations_in_union_type(graphql_type, deprecations)
+            visit_union_type(graphql_type, deprecated_types)
         elif isinstance(graphql_type, SKIP_NODES):
             pass  # We skip some nodes that don't have deprecations
         else:
             raise ValueError(f"Unknown node type: {type(graphql_type).__name__}")
 
 
-def find_deprecations_in_object_type(
+def visit_object_type(
     node: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,
     deprecations: list[DeprecatedNode],
 ):
-    if version := get_deprecated_version(node):
+    if version := get_version_deprecated(node):
         deprecations.append(
             DeprecatedObjectType(version=version, object=node.name.value)
         )
 
     for field in node.fields:
-        if version := get_deprecated_version(field):
+        if version := get_version_deprecated(field):
             deprecations.append(
                 DeprecatedObjectFieldType(
                     version=version,
@@ -76,7 +75,7 @@ def find_deprecations_in_object_type(
 
         if field.arguments:
             for arg in field.arguments:
-                if version := get_deprecated_version(field):
+                if version := get_version_deprecated(arg):
                     deprecations.append(
                         DeprecatedObjectFieldArgumentType(
                             version=version,
@@ -105,17 +104,15 @@ class DeprecatedObjectFieldArgumentType(DeprecatedNode):
     argument: str
 
 
-def find_deprecations_in_input_type(
+def visit_input_type(
     node: InputObjectTypeDefinitionNode,
     deprecations: list[DeprecatedNode],
 ):
-    if version := get_deprecated_version(node):
-        deprecations.append(
-            DeprecatedInputType(version=version, input=node.name.value)
-        )
+    if version := get_version_deprecated(node):
+        deprecations.append(DeprecatedInputType(version=version, input=node.name.value))
 
     for field in node.fields:
-        if version := get_deprecated_version(field):
+        if version := get_version_deprecated(field):
             deprecations.append(
                 DeprecatedInputFieldType(
                     version=version,
@@ -136,17 +133,15 @@ class DeprecatedInputFieldType(DeprecatedNode):
     field: str
 
 
-def find_deprecations_in_enum_type(
+def visit_enum_type(
     node: EnumTypeDefinitionNode,
     deprecations: list[DeprecatedNode],
 ):
-    if version := get_deprecated_version(node):
-        deprecations.append(
-            DeprecatedEnumType(version=version, enum=node.name.value)
-        )
+    if version := get_version_deprecated(node):
+        deprecations.append(DeprecatedEnumType(version=version, enum=node.name.value))
 
     for value in node.values:
-        if version := get_deprecated_version(value):
+        if version := get_version_deprecated(value):
             deprecations.append(
                 DeprecatedEnumValueType(
                     version=version,
@@ -167,11 +162,11 @@ class DeprecatedEnumValueType(DeprecatedNode):
     value: str
 
 
-def find_deprecations_in_scalar_type(
+def visit_scalar_type(
     node: EnumTypeDefinitionNode,
     deprecations: list[DeprecatedNode],
 ):
-    if version := get_deprecated_version(node):
+    if version := get_version_deprecated(node):
         deprecations.append(
             DeprecatedScalarType(version=version, scalar=node.name.value)
         )
@@ -182,14 +177,12 @@ class DeprecatedScalarType(DeprecatedNode):
     scalar: str
 
 
-def find_deprecations_in_union_type(
+def visit_union_type(
     node: UnionTypeDefinitionNode,
     deprecations: list[DeprecatedNode],
 ):
-    if version := get_deprecated_version(node):
-        deprecations.append(
-            DeprecatedUnionType(version=version, union=node.name.value)
-        )
+    if version := get_version_deprecated(node):
+        deprecations.append(DeprecatedUnionType(version=version, union=node.name.value))
 
 
 @dataclass
@@ -197,7 +190,7 @@ class DeprecatedUnionType(DeprecatedNode):
     union: str
 
 
-def get_deprecated_version(node):
+def get_version_deprecated(node):
     if hasattr(node, "description") and node.description:
         if version := parse_deprecated_message(node.description.value):
             return version
@@ -208,7 +201,7 @@ def get_deprecated_version(node):
                 for arg in directive.arguments:
                     if arg.name.value == "reason":
                         return parse_deprecated_message(arg.value.value)
-    
+
     return None
 
 
@@ -221,5 +214,5 @@ def parse_deprecated_message(message: str):
     if REMOVED_MESSAGE not in message:
         return None
 
-    message = message[message.find(REMOVED_MESSAGE) + len(REMOVED_MESSAGE):].strip()
+    message = message[message.find(REMOVED_MESSAGE) + len(REMOVED_MESSAGE) :].strip()
     return VERSION_RE.match(message)[0].strip()
