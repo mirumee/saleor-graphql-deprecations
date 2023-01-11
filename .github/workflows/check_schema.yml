@@ -27,14 +27,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e .
     - name: Run command
-      run: |
-        python main.py
-        ls ./build
-        ls ./build/data
-    # - name: Deploy
-    #   uses: s0/git-publish-subdir-action@develop
-    #   env:
-    #     REPO: self
-    #     BRANCH: gh-pages
-    #     FOLDER: build
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: python main.py
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: build
+        CLEAR_GLOBS_FILE: glob_file
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
