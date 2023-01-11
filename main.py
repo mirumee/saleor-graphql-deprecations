@@ -25,7 +25,6 @@ def main():
     if not DATA_DIR.is_dir():
         DATA_DIR.mkdir()
 
-    print(REMOTE_DATA_URL, REMOTE_SCHEMA_URL)
     if not all((REMOTE_DATA_URL, REMOTE_SCHEMA_URL)):
         return
 
@@ -38,7 +37,7 @@ def main():
     changes = JsonStore(
         prefix="ch",
         index_name="changes",
-        remote_url=REMOTE_URL,
+        remote_url=REMOTE_DATA_URL,
         data_dir=DATA_DIR,
     )
 
