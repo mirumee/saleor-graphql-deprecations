@@ -23,7 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -e .
     - name: Run command
-      run: python main.py
+      run: |
+        python main.py
+        ls ./build
+        ls ./build/data
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
       env:
