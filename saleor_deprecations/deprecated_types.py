@@ -59,12 +59,14 @@ def visit_object_type(
     node: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,
     deprecations: list[DeprecatedNode],
 ):
+    interface = isinstance(node, InterfaceTypeDefinitionNode)
     if deprecated := get_deprecated_status(node):
         version, message = deprecated
         deprecations.append(
             DeprecatedObjectType(
                 version=version,
                 message=message,
+                interface=interface,
                 object=node.name.value,
             )
         )
@@ -76,6 +78,7 @@ def visit_object_type(
                 DeprecatedObjectFieldType(
                     version=version,
                     message=message,
+                    interface=interface,
                     object=node.name.value,
                     field=field.name.value,
                 )
@@ -89,6 +92,7 @@ def visit_object_type(
                         DeprecatedObjectFieldArgumentType(
                             version=version,
                             message=message,
+                            interface=interface,
                             object=node.name.value,
                             field=field.name.value,
                             argument=arg.name.value,
@@ -98,17 +102,20 @@ def visit_object_type(
 
 @dataclass
 class DeprecatedObjectType(DeprecatedNode):
+    interface: bool
     object: str
 
 
 @dataclass
 class DeprecatedObjectFieldType(DeprecatedNode):
+    interface: bool
     object: str
     field: str
 
 
 @dataclass
 class DeprecatedObjectFieldArgumentType(DeprecatedNode):
+    interface: bool
     object: str
     field: str
     argument: str

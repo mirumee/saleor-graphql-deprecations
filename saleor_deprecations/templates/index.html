@@ -14,25 +14,68 @@
       <h1>Saleor Deprecations Report</h1>
       <p class="m-0">Generated on {{ gen_time.strftime("%Y-%m-%d %H:%M:%S") }}</p>
     </div>
+    <div class="border-bottom py-3 my-3">
+      <h2>Summary</h2>
+      <table class="table align-middle table-sm">
+        <thead class="table-light">
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">Type</th>
+            <th scope="col">Member</th>
+            <th scope="col">Argument</th>
+            <th scope="col">Version deprecated</th>
+          </tr>
+        </thead>
+        <tbody class="font-monospace">
+          {% for type in deprecated_types %}
+            <tr>
+              <td>
+                <a href="#{{ type.id }}" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              {% if type.type == "object" %}
+                <td colspan="3">{{ type.object }}</td>
+              {% elif type.type == "object-field" %}
+                <td>{{ type.object }}</td>
+                <td colspan="2">{{ type.field }}</td>
+              {% elif type.type == "object-field-argument" %}
+                <td>{{ type.object }}</td>
+                <td>{{ type.field }}</td>
+                <td>{{ type.argument }}</td>
+              {% elif type.type == "input" %}
+                <td colspan="3">{{ type.input }}</td>
+              {% elif type.type == "input-field" %}
+                <td>{{ type.input }}</td>
+                <td colspan="2">{{ type.field }}</td>
+              {% endif %}
+              <td>{{ type.version }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
     {% for type in deprecated_types %}
       <div id="{{ type.id }}" class="border-bottom py-3 my-3">
         <div class="row">
-          <div class="col-12 col-md-6">
+          <div class="col col-md-6">
             <h2 class="fs-4 mb-3">
               <a href="#{{ type.id }}" class="text-reset">
                 {% if type.type == "object" -%}
-                  Type <strong class="text-danger">{{ type.object }}</strong>
+                  {{ "Interface" if type.interface else "Type" }} <strong class="text-danger">{{ type.object }}</strong>
                 {%- elif type.type == "object-field" -%}
-                  Field <strong class="text-danger">{{ type.field }}</strong> of type <strong class="text-danger">{{ type.object }}</strong>
+                  Field <strong class="text-danger">{{ type.field }}</strong> of {{ "interface" if type.interface else "type" }} <strong class="text-danger">{{ type.object }}</strong>
                 {%- elif type.type == "object-field-argument" -%}
-                  Argument <strong class="text-danger">{{ type.argument }}</strong> of field <strong class="text-danger">{{ type.field }}</strong> on the type <strong class="text-danger">{{ type.object }}</strong>
+                  Argument <strong class="text-danger">{{ type.argument }}</strong> of field <strong class="text-danger">{{ type.field }}</strong> on the {{ "interface" if type.interface else "type" }} <strong class="text-danger">{{ type.object }}</strong>
+                {% elif type.type == "input" -%}
+                  Type <strong class="text-danger">{{ type.object }}</strong>
+                {%- elif type.type == "input-field" -%}
+                  Field <strong class="text-danger">{{ type.field }}</strong> of input <strong class="text-danger">{{ type.input }}</strong>
                 {%- endif %}
               </a>
             </h2>
             <p>Removed in <strong>Saleor {{ type.version }}</strong></p>
-            <p>{{ type.message|escape|parse|safe }}</p>
+            <p>{{ type.message|parse|safe }}</p>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col col-md-6">
             <div class="font-monospace">{% include type.template %}</div>
           </div>
         </div>

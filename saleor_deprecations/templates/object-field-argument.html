@@ -1,6 +1,9 @@
-<span class="text-primary">type</span> <strong>{{ type.object }}</strong> {<br />
+<span class="text-primary">{{ "interface" if type.interface else "type" }}</span> <strong>{{ type.object }}</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
-&nbsp;&nbsp;<strong>{{ type.field }}</strong>(<span class="text-secondary">...,</span> <strong class="text-danger">{{ type.argument }}</strong>: {{ type.schema.type }}<span class="text-secondary">, ...</span>): {{
-type.field_schema.type }}<br />
+&nbsp;&nbsp;<strong>{{ type.field }}</strong>(<br>
+{% if not first %}&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />{% endif %}
+&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">{{ type.argument }}</strong>: {{ type.schema.type }}{% if not last %}<span class="text-secondary">,</span>{% endif %}<br />
+{% if not last %}&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span>{% endif %}<br />
+&nbsp;&nbsp;): {{ type.field_schema.type }}<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }
