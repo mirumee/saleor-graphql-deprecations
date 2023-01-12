@@ -2,6 +2,8 @@
 
 Deprecations tracker for Saleor's GraphQL API.
 
+Full report is available [here](https://mirumee.github.io/saleor-graphql-deprecations/).
+
 Two scripts are provided:
 
 - `main`: "live" script that does real work, eg. pulls schema from Saleor's repo and compares against previous one.
