@@ -14,7 +14,7 @@
       <h1>Saleor Deprecations Report</h1>
       <p class="m-0">Generated on {{ gen_time.strftime("%Y-%m-%d %H:%M:%S") }}</p>
     </div>
-    <div class="border-bottom py-3 my-3">
+    <div class="py-3 my-3">
       <h2>Summary</h2>
       <table class="table align-middle table-sm">
         <thead class="table-light">
@@ -46,6 +46,15 @@
               {% elif type.type == "input-field" %}
                 <td>{{ type.input }}</td>
                 <td colspan="2">{{ type.field }}</td>
+              {% elif type.type == "enum" %}
+                <td colspan="3">{{ type.enum }}</td>
+              {% elif type.type == "enum-value" %}
+                <td>{{ type.enum }}</td>
+                <td colspan="2">{{ type.value }}</td>
+              {% elif type.type == "scalar" %}
+                <td colspan="3">{{ type.scalar }}</td>
+              {% elif type.type == "union" %}
+                <td colspan="3">{{ type.union }}</td>
               {% endif %}
               <td>{{ type.version }}</td>
             </tr>
@@ -66,9 +75,17 @@
                 {%- elif type.type == "object-field-argument" -%}
                   Argument <strong class="text-danger">{{ type.argument }}</strong> of field <strong class="text-danger">{{ type.field }}</strong> on the {{ "interface" if type.interface else "type" }} <strong class="text-danger">{{ type.object }}</strong>
                 {% elif type.type == "input" -%}
-                  Type <strong class="text-danger">{{ type.object }}</strong>
+                  Input <strong class="text-danger">{{ type.object }}</strong>
                 {%- elif type.type == "input-field" -%}
                   Field <strong class="text-danger">{{ type.field }}</strong> of input <strong class="text-danger">{{ type.input }}</strong>
+                {% elif type.type == "enum" -%}
+                  Enum <strong class="text-danger">{{ type.enum }}</strong>
+                {%- elif type.type == "enum-value" -%}
+                  Value <strong class="text-danger">{{ type.value }}</strong> of enum <strong class="text-danger">{{ type.enum }}</strong>
+                {%- elif type.type == "scalar" -%}
+                  Scalar <strong class="text-danger">{{ type.scalar }}</strong>
+                {%- elif type.type == "union" -%}
+                  Union <strong class="text-danger">{{ type.union }}</strong>
                 {%- endif %}
               </a>
             </h2>

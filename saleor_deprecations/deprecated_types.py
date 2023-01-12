@@ -57,12 +57,12 @@ def find_deprecations_in_ast(
 
 def visit_object_type(
     node: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,
-    deprecations: list[DeprecatedNode],
+    deprecated_types: list[DeprecatedNode],
 ):
     interface = isinstance(node, InterfaceTypeDefinitionNode)
     if deprecated := get_deprecated_status(node):
         version, message = deprecated
-        deprecations.append(
+        deprecated_types.append(
             DeprecatedObjectType(
                 version=version,
                 message=message,
@@ -74,7 +74,7 @@ def visit_object_type(
     for field in node.fields:
         if deprecated := get_deprecated_status(field):
             version, message = deprecated
-            deprecations.append(
+            deprecated_types.append(
                 DeprecatedObjectFieldType(
                     version=version,
                     message=message,
@@ -88,7 +88,7 @@ def visit_object_type(
             for arg in field.arguments:
                 if deprecated := get_deprecated_status(arg):
                     version, message = deprecated
-                    deprecations.append(
+                    deprecated_types.append(
                         DeprecatedObjectFieldArgumentType(
                             version=version,
                             message=message,
@@ -123,11 +123,11 @@ class DeprecatedObjectFieldArgumentType(DeprecatedNode):
 
 def visit_input_type(
     node: InputObjectTypeDefinitionNode,
-    deprecations: list[DeprecatedNode],
+    deprecated_types: list[DeprecatedNode],
 ):
     if deprecated := get_deprecated_status(node):
         version, message = deprecated
-        deprecations.append(
+        deprecated_types.append(
             DeprecatedInputType(
                 version=version,
                 message=message,
@@ -138,7 +138,7 @@ def visit_input_type(
     for field in node.fields:
         if deprecated := get_deprecated_status(field):
             version, message = deprecated
-            deprecations.append(
+            deprecated_types.append(
                 DeprecatedInputFieldType(
                     version=version,
                     message=message,
@@ -161,11 +161,11 @@ class DeprecatedInputFieldType(DeprecatedNode):
 
 def visit_enum_type(
     node: EnumTypeDefinitionNode,
-    deprecations: list[DeprecatedNode],
+    deprecated_types: list[DeprecatedNode],
 ):
     if deprecated := get_deprecated_status(node):
         version, message = deprecated
-        deprecations.append(
+        deprecated_types.append(
             DeprecatedEnumType(
                 version=version,
                 message=message,
@@ -176,7 +176,7 @@ def visit_enum_type(
     for value in node.values:
         if deprecated := get_deprecated_status(value):
             version, message = deprecated
-            deprecations.append(
+            deprecated_types.append(
                 DeprecatedEnumValueType(
                     version=version,
                     message=message,
@@ -199,11 +199,11 @@ class DeprecatedEnumValueType(DeprecatedNode):
 
 def visit_scalar_type(
     node: EnumTypeDefinitionNode,
-    deprecations: list[DeprecatedNode],
+    deprecated_types: list[DeprecatedNode],
 ):
     if deprecated := get_deprecated_status(node):
         version, message = deprecated
-        deprecations.append(
+        deprecated_types.append(
             DeprecatedScalarType(
                 version=version,
                 message=message,
@@ -219,11 +219,11 @@ class DeprecatedScalarType(DeprecatedNode):
 
 def visit_union_type(
     node: UnionTypeDefinitionNode,
-    deprecations: list[DeprecatedNode],
+    deprecated_types: list[DeprecatedNode],
 ):
     if deprecated := get_deprecated_status(node):
         version, message = deprecated
-        deprecations.append(
+        deprecated_types.append(
             DeprecatedUnionType(
                 version=version,
                 message=message,

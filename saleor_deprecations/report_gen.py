@@ -114,6 +114,47 @@ def get_deprecated_types_data(schema, deprecated_types):
                 "message": graphql_type.message,
             }
 
+        if isinstance(graphql_type, DeprecatedEnumType):
+            yield {
+                "id": graphql_type.enum,
+                "type": "enum",
+                "template": "enum.html",
+                "enum": graphql_type.enum,
+                "version": graphql_type.version,
+                "message": graphql_type.message,
+            }
+
+        if isinstance(graphql_type, DeprecatedEnumValueType):
+            yield {
+                "id": f"{graphql_type.enum}-{graphql_type.value}",
+                "type": "enum-value",
+                "template": "enum-value.html",
+                "enum": graphql_type.enum,
+                "value": graphql_type.value,
+                "version": graphql_type.version,
+                "message": graphql_type.message,
+            }
+
+        if isinstance(graphql_type, DeprecatedScalarType):
+            yield {
+                "id": graphql_type.scalar,
+                "type": "scalar",
+                "template": "scalar.html",
+                "scalar": graphql_type.scalar,
+                "version": graphql_type.version,
+                "message": graphql_type.message,
+            }
+
+        if isinstance(graphql_type, DeprecatedUnionType):
+            yield {
+                "id": graphql_type.union,
+                "type": "union",
+                "template": "union.html",
+                "union": graphql_type.union,
+                "version": graphql_type.version,
+                "message": graphql_type.message,
+            }
+
 
 @pass_eval_context
 def parse_markdown(eval_ctx, value):
