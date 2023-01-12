@@ -22,7 +22,7 @@ from .deprecated_types import (
 def generate_report(schema, deprecated_types, file_path):
     env = Environment(
         loader=FileSystemLoader(
-            Path(dirname(abspath(__file__))) / "TEMPLATES",
+            Path(dirname(abspath(__file__))) / "templates",
         ),
         autoescape=select_autoescape(),
     )
