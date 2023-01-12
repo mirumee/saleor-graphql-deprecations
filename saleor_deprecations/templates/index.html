@@ -30,7 +30,7 @@
               </a>
             </h2>
             <p>Removed in <strong>Saleor {{ type.version }}</strong></p>
-            <p>{{ type.message }}</p>
+            <p>{{ type.message|escape|parse|safe }}</p>
           </div>
           <div class="col-12 col-md-6">
             <div class="font-monospace">{% include type.template %}</div>

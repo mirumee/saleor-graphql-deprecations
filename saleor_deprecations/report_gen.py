@@ -28,6 +28,7 @@ def generate_report(schema, deprecated_types, file_path):
     data = {
         "gen_time": datetime.now(),
         "deprecated_types": get_deprecated_types_data(schema, deprecated_types),
+        "parse": parse_markdown,
     }
 
     template = env.get_template("index.html")
@@ -75,10 +76,5 @@ def get_deprecated_types_data(schema, deprecated_types):
             }
 
 
-    #   <div id="{{ graphql_type.name }}" class="border-bottom py-3 mb-3">
-    #     <h2>
-    #       <a href="#{{ graphql_type.name }}">
-    #         {{ graphql_type.type }} {{ graphql_type.name }}
-    #       </a>
-    #     </h2>
-    #   </div>
+def parse_markdown(value):
+    return value
