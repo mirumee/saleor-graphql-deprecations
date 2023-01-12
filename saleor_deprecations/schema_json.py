@@ -93,6 +93,7 @@ def get_graphql_object_type_json(node: ObjectTypeDefinitionNode):
         "interfaces": [i.name.value for i in node.interfaces],
         "description": get_description(node),
         "deprecated": None,
+        "message": None,
         "fields": get_graphql_object_fields_json(node),
     }
 
@@ -107,6 +108,7 @@ def get_graphql_object_fields_json(
             "type": print_type_node(field.type),
             "description": get_description(field),
             "deprecated": None,
+            "message": None,
             "arguments": get_graphql_object_field_args_json(field),
         }
 
@@ -121,6 +123,7 @@ def get_graphql_object_field_args_json(node: FieldDefinitionNode):
             "type": print_type_node(arg.type),
             "description": get_description(arg),
             "deprecated": None,
+            "message": None,
             "default": print_value_node(arg.default_value),
         }
 
@@ -133,6 +136,7 @@ def get_graphql_interface_type_json(node: InterfaceTypeDefinitionNode):
         "interfaces": [i.name.value for i in node.interfaces],
         "description": get_description(node),
         "deprecated": None,
+        "message": None,
         "fields": get_graphql_object_fields_json(node),
     }
 
@@ -142,6 +146,7 @@ def get_graphql_input_type_json(node: InputObjectTypeDefinitionNode):
         "type": "input",
         "description": get_description(node),
         "deprecated": None,
+        "message": None,
         "fields": get_graphql_input_fields_json(node),
     }
 
@@ -154,6 +159,7 @@ def get_graphql_input_fields_json(node: InputObjectTypeDefinitionNode):
             "type": print_type_node(field.type),
             "description": get_description(field),
             "deprecated": None,
+            "message": None,
             "default": print_value_node(field.default_value),
         }
 
@@ -165,6 +171,7 @@ def get_graphql_enum_type_json(node: EnumTypeDefinitionNode):
         "type": "enum",
         "description": get_description(node),
         "deprecated": None,
+        "message": None,
         "values": get_graphql_enum_values_json(node),
     }
 
@@ -176,6 +183,7 @@ def get_graphql_enum_values_json(node: EnumTypeDefinitionNode):
         values_json[value.name.value] = {
             "description": get_description(value),
             "deprecated": None,
+            "message": None,
         }
 
     return sort_by_keys(values_json)
@@ -186,6 +194,7 @@ def get_graphql_scalar_type_json(node: ScalarTypeDefinitionNode):
         "type": "scalar",
         "description": get_description(node),
         "deprecated": None,
+        "message": None,
     }
 
 
@@ -194,6 +203,7 @@ def get_graphql_union_type_json(node: UnionTypeDefinitionNode):
         "type": "union",
         "description": get_description(node),
         "deprecated": None,
+        "message": None,
         "types": [t.name.value for t in node.types],
     }
 
@@ -266,36 +276,75 @@ def update_types_deprecated_flags(
 ):
     for deprecated_type in deprecated_types:
         if isinstance(deprecated_type, DeprecatedObjectType):
-            schema_json[deprecated_type.object]["deprecated"] = deprecated_type.version
+            schema_json[deprecated_type.object].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedObjectFieldType):
-            schema_json[deprecated_type.object]["fields"][deprecated_type.field][
-                "deprecated"
-            ] = deprecated_type.version
+            schema_json[deprecated_type.object]["fields"][deprecated_type.field].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedObjectFieldArgumentType):
             schema_json[deprecated_type.object]["fields"][deprecated_type.field][
                 "arguments"
-            ][deprecated_type.argument]["deprecated"] = deprecated_type.version
+            ][deprecated_type.argument].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedEnumType):
-            schema_json[deprecated_type.enum]["deprecated"] = deprecated_type.version
+            schema_json[deprecated_type.enum].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedEnumValueType):
-            schema_json[deprecated_type.enum]["values"][deprecated_type.value][
-                "deprecated"
-            ] = deprecated_type.version
+            schema_json[deprecated_type.enum]["values"][deprecated_type.value].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedInputType):
-            schema_json[deprecated_type.input]["deprecated"] = deprecated_type.version
+            schema_json[deprecated_type.input].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedInputFieldType):
-            schema_json[deprecated_type.input]["fields"][deprecated_type.field][
-                "deprecated"
-            ] = deprecated_type.version
+            schema_json[deprecated_type.input]["fields"][deprecated_type.field].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedScalarType):
-            schema_json[deprecated_type.scalar]["deprecated"] = deprecated_type.version
+            schema_json[deprecated_type.scalar].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )
 
         if isinstance(deprecated_type, DeprecatedUnionType):
-            schema_json[deprecated_type.union]["deprecated"] = deprecated_type.version
+            schema_json[deprecated_type.union].update(
+                {
+                    "deprecated": deprecated_type.version,
+                    "message": deprecated_type.message,
+                }
+            )

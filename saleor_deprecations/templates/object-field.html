@@ -1,0 +1,6 @@
+<span class="text-primary">type</span> <strong>{{ type.object }}</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">{{ type.field }}</strong>{% if type.schema.arguments %}(<span class="text-secondary">...</span>){% endif %}: {{
+type.schema.type }}<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}

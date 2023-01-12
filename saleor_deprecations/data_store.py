@@ -8,7 +8,7 @@ class DataStore:
     def __init__(self, remote_url: str, local_path: Path):
         self.remote_url = remote_url.rstrip("/")
         self.local_path = local_path
-    
+
     def get_remote(self, key: str):
         r = requests.get(f"{self.remote_url}/{key}.json")
         if r.status_code == 404:

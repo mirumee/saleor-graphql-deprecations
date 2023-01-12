@@ -8,6 +8,7 @@ from saleor_deprecations import (
     DataStore,
     diff_schemas,
     download_schema,
+    generate_report,
     get_deprecated_types,
     get_schema_json,
 )
@@ -42,8 +43,9 @@ def main():
         diff = diff_schemas(previous_schema, current_schema)
         if diff:
             data_store.set_local(CHANGES, diff)
-        
+
     data_store.set_local(PREVIOUS_SCHEMA, current_schema)
+    generate_report(current_schema, deprecated_types, BUILD_DIR / "index.html")
 
 
 if __name__ == "__main__":
