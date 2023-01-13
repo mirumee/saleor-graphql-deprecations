@@ -65,7 +65,7 @@
     {% for type in deprecated_types %}
       <div id="{{ type.id }}" class="border-bottom py-3 my-3">
         <div class="row">
-          <div class="col col-md-6">
+          <div class="col-12 col-md">
             <h2 class="fs-4 mb-3">
               <a href="#{{ type.id }}" class="text-reset">
                 {% if type.type == "object" -%}
@@ -92,7 +92,7 @@
             <p>Removed in <strong>Saleor {{ type.version }}</strong></p>
             <p>{{ type.message|parse|safe }}</p>
           </div>
-          <div class="col col-md-6">
+          <div class="col-12 col-md">
             <div class="font-monospace">{% include type.template %}</div>
           </div>
         </div>
