@@ -1,0 +1,19 @@
+[
+  {
+    "diff": "type_new",
+    "type": "WebhookDryRun"
+  },
+  {
+    "diff": "type_new",
+    "type": "WebhookDryRunError"
+  },
+  {
+    "diff": "type_new",
+    "type": "WebhookDryRunErrorCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "webhookDryRun"
+  }
+]

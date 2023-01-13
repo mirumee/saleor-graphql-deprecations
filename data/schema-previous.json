@@ -30464,6 +30464,28 @@
           }
         }
       },
+      "webhookDryRun": {
+        "type": "WebhookDryRun",
+        "description": "Performs a dry run of a webhook event. Supports a single event (the first if multiple provided in the `query`). Requires permission relevant to processed event.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "objectId": {
+            "type": "ID!",
+            "description": "The ID of an object to serialize.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "query": {
+            "type": "String!",
+            "description": "The subscription query that defines the webhook event and its payload.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "webhookUpdate": {
         "type": "WebhookUpdate",
         "description": "Updates a webhook subscription. \n\nRequires one of the following permissions: MANAGE_APPS.",
@@ -58161,6 +58183,97 @@
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
         "arguments": {}
+      }
+    }
+  },
+  "WebhookDryRun": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Performs a dry run of a webhook event. Supports a single event (the first if multiple provided in the `query`). Requires permission relevant to processed event.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[WebhookDryRunError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "payload": {
+        "type": "JSONString",
+        "description": "JSON payload, that would be sent out to webhook's target URL.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "WebhookDryRunError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "WebhookDryRunErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "WebhookDryRunErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_ID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MISSING_PERMISSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "TYPE_NOT_SUPPORTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNABLE_TO_PARSE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
