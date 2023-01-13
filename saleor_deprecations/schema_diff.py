@@ -301,7 +301,7 @@ def find_new_enums_values(old_schema, current_schema) -> list:
 
         if (
             current_name in old_schema
-            and current_data["type"] != old_schema[current_name]["type"]
+            and current_data["type"] == old_schema[current_name]["type"]
         ):
             continue
 
@@ -385,7 +385,7 @@ def find_new_unions_types(old_schema, current_schema) -> list:
 
         if (
             current_name in old_schema
-            and current_data["type"] != old_schema[current_name]["type"]
+            and current_data["type"] == old_schema[current_name]["type"]
         ):
             continue
 
@@ -410,8 +410,8 @@ def find_deleted_unions_types(old_schema, current_schema) -> list:
             continue
 
         if (
-            current_name in old_schema
-            and current_data["type"] != old_schema[current_name]["type"]
+            current_name not in old_schema
+            or current_data["type"] != old_schema[current_name]["type"]
         ):
             continue
 
