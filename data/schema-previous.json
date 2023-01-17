@@ -30708,6 +30708,13 @@
         "message": null,
         "arguments": {}
       },
+      "checkoutId": {
+        "type": "ID",
+        "description": "ID of the checkout that the order was created from. \n\nAdded in Saleor 3.11.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "collectionPointName": {
         "type": "String",
         "description": null,
@@ -32894,6 +32901,13 @@
       },
       "chargeStatus": {
         "type": "[OrderChargeStatusEnum!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "checkoutIds": {
+        "type": "[ID!]",
         "description": null,
         "deprecated": null,
         "message": null,

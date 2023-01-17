@@ -1,19 +1,12 @@
 [
   {
-    "diff": "type_new",
-    "type": "WebhookDryRun"
-  },
-  {
-    "diff": "type_new",
-    "type": "WebhookDryRunError"
-  },
-  {
-    "diff": "type_new",
-    "type": "WebhookDryRunErrorCode"
+    "diff": "field_new",
+    "type": "Order",
+    "field": "checkoutId"
   },
   {
     "diff": "field_new",
-    "type": "Mutation",
-    "field": "webhookDryRun"
+    "type": "OrderFilterInput",
+    "field": "checkoutIds"
   }
 ]
