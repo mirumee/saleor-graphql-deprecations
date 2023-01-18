@@ -1,12 +1,7 @@
 [
   {
     "diff": "field_new",
-    "type": "Order",
-    "field": "checkoutId"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderFilterInput",
-    "field": "checkoutIds"
+    "type": "AttributeValueInput",
+    "field": "swatch"
   }
 ]
