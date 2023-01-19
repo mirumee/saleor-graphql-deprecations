@@ -1,7 +1,19 @@
 [
   {
+    "diff": "type_new",
+    "type": "WebhookTrigger"
+  },
+  {
+    "diff": "type_new",
+    "type": "WebhookTriggerError"
+  },
+  {
+    "diff": "type_new",
+    "type": "WebhookTriggerErrorCode"
+  },
+  {
     "diff": "field_new",
-    "type": "AttributeValueInput",
-    "field": "swatch"
+    "type": "Mutation",
+    "field": "webhookTrigger"
   }
 ]
