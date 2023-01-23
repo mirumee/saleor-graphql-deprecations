@@ -1,19 +1,21 @@
 [
   {
     "diff": "type_new",
-    "type": "WebhookTrigger"
+    "type": "ProductVariantStockUpdated"
   },
   {
-    "diff": "type_new",
-    "type": "WebhookTriggerError"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PRODUCT_VARIANT_STOCK_UPDATED"
   },
   {
-    "diff": "type_new",
-    "type": "WebhookTriggerErrorCode"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PRODUCT_VARIANT_STOCK_UPDATED"
   },
   {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "webhookTrigger"
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PRODUCT_VARIANT_STOCK_UPDATED"
   }
 ]

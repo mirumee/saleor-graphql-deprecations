@@ -43419,6 +43419,67 @@
       }
     }
   },
+  "ProductVariantStockUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when product variant stock is updated.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productVariant": {
+        "type": "ProductVariant",
+        "description": "The product variant the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channel": {
+            "type": "String",
+            "description": "Slug of a channel for which the data should be returned.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "warehouse": {
+        "type": "Warehouse",
+        "description": "Look up a warehouse.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductVariantStocksCreate": {
     "type": "object",
     "interfaces": [],
@@ -58863,6 +58924,11 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_VARIANT_STOCK_UPDATED": {
+        "description": "A product variant stock is updated",
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_VARIANT_UPDATED": {
         "description": "A product variant is updated.",
         "deprecated": null,
@@ -59458,6 +59524,11 @@
       },
       "PRODUCT_VARIANT_OUT_OF_STOCK": {
         "description": "A product variant is out of stock.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_STOCK_UPDATED": {
+        "description": "A product variant stock is updated",
         "deprecated": null,
         "message": null
       },
@@ -60068,6 +60139,11 @@
         "message": null
       },
       "PRODUCT_VARIANT_OUT_OF_STOCK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_STOCK_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null
