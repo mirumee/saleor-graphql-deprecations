@@ -2956,8 +2956,8 @@
       "availableInGrid": {
         "type": "Boolean!",
         "description": "Whether the attribute can be displayed in the admin product list. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "choices": {
@@ -3034,8 +3034,8 @@
       "filterableInStorefront": {
         "type": "Boolean!",
         "description": "Whether the attribute can be filtered in storefront. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "id": {
@@ -3215,8 +3215,8 @@
       "storefrontSearchPosition": {
         "type": "Int!",
         "description": "The position of the attribute in the storefront navigation (0 by default). Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "translation": {
@@ -3432,9 +3432,9 @@
     "fields": {
       "availableInGrid": {
         "type": "Boolean",
-        "description": "Whether the attribute can be displayed in the admin product list.",
-        "deprecated": null,
-        "message": null,
+        "description": "Whether the attribute can be displayed in the admin product list.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Whether the attribute can be displayed in the admin product list.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
         "default": null
       },
       "entityType": {
@@ -3460,9 +3460,9 @@
       },
       "filterableInStorefront": {
         "type": "Boolean",
-        "description": "Whether the attribute can be filtered in storefront.",
-        "deprecated": null,
-        "message": null,
+        "description": "Whether the attribute can be filtered in storefront.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Whether the attribute can be filtered in storefront.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
         "default": null
       },
       "inputType": {
@@ -3495,9 +3495,9 @@
       },
       "storefrontSearchPosition": {
         "type": "Int",
-        "description": "The position of the attribute in the storefront navigation (0 by default).",
-        "deprecated": null,
-        "message": null,
+        "description": "The position of the attribute in the storefront navigation (0 by default).\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "The position of the attribute in the storefront navigation (0 by default).\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
         "default": null
       },
       "type": {
@@ -3679,6 +3679,28 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "AttributeEntityTypeEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "AttributeEntityTypeEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[AttributeEntityTypeEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -3969,6 +3991,28 @@
       }
     }
   },
+  "AttributeInputTypeEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "AttributeInputTypeEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[AttributeInputTypeEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "AttributeReorderValues": {
     "type": "object",
     "interfaces": [],
@@ -4201,6 +4245,28 @@
       }
     }
   },
+  "AttributeTypeEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "AttributeTypeEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[AttributeTypeEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "AttributeUpdate": {
     "type": "object",
     "interfaces": [],
@@ -4246,9 +4312,9 @@
       },
       "availableInGrid": {
         "type": "Boolean",
-        "description": "Whether the attribute can be displayed in the admin product list.",
-        "deprecated": null,
-        "message": null,
+        "description": "Whether the attribute can be displayed in the admin product list.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Whether the attribute can be displayed in the admin product list.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
         "default": null
       },
       "externalReference": {
@@ -4267,9 +4333,9 @@
       },
       "filterableInStorefront": {
         "type": "Boolean",
-        "description": "Whether the attribute can be filtered in storefront.",
-        "deprecated": null,
-        "message": null,
+        "description": "Whether the attribute can be filtered in storefront.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Whether the attribute can be filtered in storefront.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
         "default": null
       },
       "isVariantOnly": {
@@ -4302,9 +4368,9 @@
       },
       "storefrontSearchPosition": {
         "type": "Int",
-        "description": "The position of the attribute in the storefront navigation (0 by default).",
-        "deprecated": null,
-        "message": null,
+        "description": "The position of the attribute in the storefront navigation (0 by default).\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "The position of the attribute in the storefront navigation (0 by default).\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
         "default": null
       },
       "unit": {
@@ -5259,6 +5325,126 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "AttributeWhereInput": {
+    "type": "input",
+    "description": "Where filtering options.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[AttributeWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[AttributeWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "entityType": {
+        "type": "AttributeEntityTypeEnumFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "filterableInDashboard": {
+        "type": "Boolean",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "inCategory": {
+        "type": "ID",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "inCollection": {
+        "type": "ID",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "inputType": {
+        "type": "AttributeInputTypeEnumFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataFilter!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "StringFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "StringFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "type": {
+        "type": "AttributeTypeEnumFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "unit": {
+        "type": "MeasurementUnitsEnumFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "valueRequired": {
+        "type": "Boolean",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "visibleInStorefront": {
+        "type": "Boolean",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "withChoices": {
+        "type": "Boolean",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -13833,6 +14019,29 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "ErrorPolicyEnum": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "IGNORE_FAILED": {
+        "description": "Save what is possible within a single row. If there are errors in an input data row, try to save it partially and skip the invalid part.",
+        "deprecated": null,
+        "message": null
+      },
+      "REJECT_EVERYTHING": {
+        "description": "Reject all rows if there is at least one error in any of them.",
+        "deprecated": null,
+        "message": null
+      },
+      "REJECT_FAILED_ROWS": {
+        "description": "Reject rows with errors.",
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -22776,6 +22985,28 @@
       }
     }
   },
+  "MeasurementUnitsEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "MeasurementUnitsEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[MeasurementUnitsEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "MediaChoicesSortField": {
     "type": "enum",
     "description": null,
@@ -28788,6 +29019,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "deprecated": null,
+            "message": null,
+            "default": "ENUM.reject_everything"
+          },
           "product": {
             "type": "ID!",
             "description": "ID of the product to create the variants for.",
@@ -28820,6 +29058,35 @@
           "skus": {
             "type": "[String!]",
             "description": "List of product variant SKUs to delete.\n\nAdded in Saleor 3.8.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "productVariantBulkUpdate": {
+        "type": "ProductVariantBulkUpdate",
+        "description": "Update multiple product variants.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
+            "deprecated": null,
+            "message": null,
+            "default": "ENUM.reject_everything"
+          },
+          "product": {
+            "type": "ID!",
+            "description": "ID of the product to update the variants for.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "variants": {
+            "type": "[ProductVariantBulkUpdateInput!]!",
+            "description": "Input list of product variants to update.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -35771,6 +36038,13 @@
             "deprecated": null,
             "message": null,
             "default": null
+          },
+          "where": {
+            "type": "AttributeWhereInput",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
           }
         }
       },
@@ -39062,8 +39336,8 @@
       "variant": {
         "type": "ProductVariant",
         "description": "Get a single variant by SKU or ID. \n\nAdded in Saleor 3.9.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use top-level `variant` query.",
         "arguments": {
           "id": {
             "type": "ID",
@@ -40025,6 +40299,11 @@
         "message": null
       },
       "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_PRICE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -41318,6 +41597,13 @@
             "deprecated": null,
             "message": null,
             "default": null
+          },
+          "where": {
+            "type": "AttributeWhereInput",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
           }
         }
       },
@@ -42474,7 +42760,14 @@
       },
       "productVariants": {
         "type": "[ProductVariant!]!",
-        "description": "List of the created variants.",
+        "description": "List of the created variants.This field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "List of the created variants.This field will be removed in Saleor 4.0.",
+        "arguments": {}
+      },
+      "results": {
+        "type": "[ProductVariantBulkResult!]!",
+        "description": "List of the created variants.\n\nAdded in Saleor 3.11.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42600,6 +42893,284 @@
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
         "arguments": {}
+      }
+    }
+  },
+  "ProductVariantBulkError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attributes": {
+        "type": "[ID!]",
+        "description": "List of attributes IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "channels": {
+        "type": "[ID!]",
+        "description": "List of channel IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "code": {
+        "type": "ProductVariantBulkErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "values": {
+        "type": "[ID!]",
+        "description": "List of attribute values IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "warehouses": {
+        "type": "[ID!]",
+        "description": "List of warehouse IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantBulkErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ATTRIBUTE_ALREADY_ASSIGNED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ATTRIBUTE_CANNOT_BE_ASSIGNED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ATTRIBUTE_VARIANTS_DISABLED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DUPLICATED_INPUT_ITEM": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_PRICE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_PRODUCTS_VARIANT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_NOT_ASSIGNED_TO_CHANNEL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "ProductVariantBulkResult": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[ProductVariantBulkError!]",
+        "description": "List of errors occurred on create attempt.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productVariant": {
+        "type": "ProductVariant",
+        "description": "Product variant data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantBulkUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Update multiple product variants.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many objects were updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[ProductVariantBulkError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "results": {
+        "type": "[ProductVariantBulkResult!]!",
+        "description": "List of the updated variants.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantBulkUpdateInput": {
+    "type": "input",
+    "description": "Input fields to update product variants.\n\nAdded in Saleor 3.11.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attributes": {
+        "type": "[BulkAttributeValueInput!]",
+        "description": "List of attributes specific to this variant.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "channelListings": {
+        "type": "[ProductVariantChannelListingAddInput!]",
+        "description": "List of prices assigned to channels.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "externalReference": {
+        "type": "String",
+        "description": "External ID of this product variant.\n\nAdded in Saleor 3.10.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "id": {
+        "type": "ID!",
+        "description": "ID of the product variant to update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the product variant metadata.\n\nAdded in Saleor 3.8.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Variant name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "preorder": {
+        "type": "PreorderSettingsInput",
+        "description": "Determines if variant is in preorder.\n\nAdded in Saleor 3.1.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the product variant private metadata.\n\nAdded in Saleor 3.8.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "quantityLimitPerCustomer": {
+        "type": "Int",
+        "description": "Determines maximum quantity of `ProductVariant`,that can be bought in a single checkout.\n\nAdded in Saleor 3.1.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "sku": {
+        "type": "String",
+        "description": "Stock keeping unit.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "stocks": {
+        "type": "[StockInput!]",
+        "description": "Stocks of a product available for sale.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "trackInventory": {
+        "type": "Boolean",
+        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "weight": {
+        "type": "WeightScalar",
+        "description": "Weight of the Product Variant.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -44093,9 +44664,23 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search attributes.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "AttributeSortingInput",
             "description": "Sorting options for attributes.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "AttributeWhereInput",
+            "description": "Filtering options for attributes.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -51701,6 +52286,28 @@
         "description": "On session storage type. The payment is stored only to be reused when the customer is present in the checkout flow.",
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "StringFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for string fields.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "String",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[String!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },

@@ -1,21 +1,131 @@
 [
   {
     "diff": "type_new",
-    "type": "ProductVariantStockUpdated"
+    "type": "AttributeEntityTypeEnumFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeInputTypeEnumFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeTypeEnumFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeWhereInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "ErrorPolicyEnum"
+  },
+  {
+    "diff": "type_new",
+    "type": "MeasurementUnitsEnumFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductVariantBulkError"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductVariantBulkErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductVariantBulkResult"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductVariantBulkUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductVariantBulkUpdateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "StringFilterInput"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "productVariantBulkUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "ProductVariantBulkCreate",
+    "field": "results"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Attribute",
+    "field": "availableInGrid",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Attribute",
+    "field": "filterableInStorefront",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Attribute",
+    "field": "storefrontSearchPosition",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "AttributeCreateInput",
+    "field": "availableInGrid",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "AttributeCreateInput",
+    "field": "filterableInStorefront",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "AttributeCreateInput",
+    "field": "storefrontSearchPosition",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "AttributeUpdateInput",
+    "field": "availableInGrid",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "AttributeUpdateInput",
+    "field": "filterableInStorefront",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "AttributeUpdateInput",
+    "field": "storefrontSearchPosition",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Product",
+    "field": "variant",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "ProductVariantBulkCreate",
+    "field": "productVariants",
+    "version": "4.0"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "PRODUCT_VARIANT_STOCK_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "PRODUCT_VARIANT_STOCK_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "PRODUCT_VARIANT_STOCK_UPDATED"
+    "enum": "ProductErrorCode",
+    "value": "INVALID_PRICE"
   }
 ]

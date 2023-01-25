@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-01-24 14:00:57</p>
+      <p class="m-0">Generated on 2023-01-25 14:01:03</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -243,6 +243,17 @@
           
             <tr>
               <td>
+                <a href="#Product-variant" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Product</td>
+                <td colspan="2">variant</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#Product-images" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -292,6 +303,39 @@
               
                 <td>ProductType</td>
                 <td colspan="2">variantAttributes</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Attribute-filterableInStorefront" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Attribute</td>
+                <td colspan="2">filterableInStorefront</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Attribute-availableInGrid" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Attribute</td>
+                <td colspan="2">availableInGrid</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Attribute-storefrontSearchPosition" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Attribute</td>
+                <td colspan="2">storefrontSearchPosition</td>
               
               <td>4.0</td>
             </tr>
@@ -2379,6 +2423,17 @@
           
             <tr>
               <td>
+                <a href="#ProductVariantBulkCreate-productVariants" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>ProductVariantBulkCreate</td>
+                <td colspan="2">productVariants</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#ProductVariantBulkCreate-bulkProductErrors" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -3875,6 +3930,39 @@
           
             <tr>
               <td>
+                <a href="#AttributeCreateInput-filterableInStorefront" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>AttributeCreateInput</td>
+                <td colspan="2">filterableInStorefront</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#AttributeCreateInput-storefrontSearchPosition" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>AttributeCreateInput</td>
+                <td colspan="2">storefrontSearchPosition</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#AttributeCreateInput-availableInGrid" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>AttributeCreateInput</td>
+                <td colspan="2">availableInGrid</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#AttributeValueCreateInput-richText" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -3913,6 +4001,39 @@
               
                 <td>AttributeUpdate</td>
                 <td colspan="2">attributeErrors</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#AttributeUpdateInput-filterableInStorefront" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>AttributeUpdateInput</td>
+                <td colspan="2">filterableInStorefront</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#AttributeUpdateInput-storefrontSearchPosition" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>AttributeUpdateInput</td>
+                <td colspan="2">storefrontSearchPosition</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#AttributeUpdateInput-availableInGrid" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>AttributeUpdateInput</td>
+                <td colspan="2">availableInGrid</td>
               
               <td>4.0</td>
             </tr>
@@ -5063,6 +5184,27 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
         </div>
       </div>
     
+      <div id="Product-variant" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Product-variant" class="text-reset">
+                Field <strong class="text-danger">variant</strong> of type <strong class="text-danger">Product</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0. Use top-level <strong class="text-danger font-monospace">variant</strong> query.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Product</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">variant</strong>( <span class="text-secondary">...</span> ): ProductVariant<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="Product-images" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -5162,6 +5304,69 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
             <div class="font-monospace"><span class="text-primary">type</span> <strong>ProductType</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">variantAttributes</strong>( <span class="text-secondary">...</span> ): [Attribute!]<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Attribute-filterableInStorefront" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Attribute-filterableInStorefront" class="text-reset">
+                Field <strong class="text-danger">filterableInStorefront</strong> of type <strong class="text-danger">Attribute</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Attribute</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">filterableInStorefront</strong>: Boolean!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Attribute-availableInGrid" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Attribute-availableInGrid" class="text-reset">
+                Field <strong class="text-danger">availableInGrid</strong> of type <strong class="text-danger">Attribute</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Attribute</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">availableInGrid</strong>: Boolean!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Attribute-storefrontSearchPosition" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Attribute-storefrontSearchPosition" class="text-reset">
+                Field <strong class="text-danger">storefrontSearchPosition</strong> of type <strong class="text-danger">Attribute</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Attribute</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">storefrontSearchPosition</strong>: Int!<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -9410,6 +9615,27 @@ DEPRECATED: this field will be removed in Saleor 4.0.. Use tax classes to contro
         </div>
       </div>
     
+      <div id="ProductVariantBulkCreate-productVariants" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#ProductVariantBulkCreate-productVariants" class="text-reset">
+                Field <strong class="text-danger">productVariants</strong> of type <strong class="text-danger">ProductVariantBulkCreate</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>List of the created variants.This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>ProductVariantBulkCreate</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">productVariants</strong>: [ProductVariant!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="ProductVariantBulkCreate-bulkProductErrors" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -12290,6 +12516,78 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
         </div>
       </div>
     
+      <div id="AttributeCreateInput-filterableInStorefront" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#AttributeCreateInput-filterableInStorefront" class="text-reset">
+                Field <strong class="text-danger">filterableInStorefront</strong> of input <strong class="text-danger">AttributeCreateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Whether the attribute can be filtered in storefront.
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>AttributeCreateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">filterableInStorefront</strong>: Boolean<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="AttributeCreateInput-storefrontSearchPosition" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#AttributeCreateInput-storefrontSearchPosition" class="text-reset">
+                Field <strong class="text-danger">storefrontSearchPosition</strong> of input <strong class="text-danger">AttributeCreateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>The position of the attribute in the storefront navigation (0 by default).
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>AttributeCreateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">storefrontSearchPosition</strong>: Int<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="AttributeCreateInput-availableInGrid" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#AttributeCreateInput-availableInGrid" class="text-reset">
+                Field <strong class="text-danger">availableInGrid</strong> of input <strong class="text-danger">AttributeCreateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Whether the attribute can be displayed in the admin product list.
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>AttributeCreateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">availableInGrid</strong>: Boolean<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="AttributeValueCreateInput-richText" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -12376,6 +12674,78 @@ DEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute ha
             <div class="font-monospace"><span class="text-primary">type</span> <strong>AttributeUpdate</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">attributeErrors</strong>: [AttributeError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="AttributeUpdateInput-filterableInStorefront" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#AttributeUpdateInput-filterableInStorefront" class="text-reset">
+                Field <strong class="text-danger">filterableInStorefront</strong> of input <strong class="text-danger">AttributeUpdateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Whether the attribute can be filtered in storefront.
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>AttributeUpdateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">filterableInStorefront</strong>: Boolean<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="AttributeUpdateInput-storefrontSearchPosition" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#AttributeUpdateInput-storefrontSearchPosition" class="text-reset">
+                Field <strong class="text-danger">storefrontSearchPosition</strong> of input <strong class="text-danger">AttributeUpdateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>The position of the attribute in the storefront navigation (0 by default).
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>AttributeUpdateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">storefrontSearchPosition</strong>: Int<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="AttributeUpdateInput-availableInGrid" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#AttributeUpdateInput-availableInGrid" class="text-reset">
+                Field <strong class="text-danger">availableInGrid</strong> of input <strong class="text-danger">AttributeUpdateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Whether the attribute can be displayed in the admin product list.
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>AttributeUpdateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">availableInGrid</strong>: Boolean<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
