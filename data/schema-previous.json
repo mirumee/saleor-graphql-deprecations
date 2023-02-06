@@ -58966,12 +58966,27 @@
         "deprecated": null,
         "message": null
       },
+      "MISSING_EVENT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MISSING_PERMISSION": {
         "description": null,
         "deprecated": null,
         "message": null
       },
+      "MISSING_SUBSCRIPTION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SYNTAX": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -59039,12 +59054,32 @@
         "deprecated": null,
         "message": null
       },
+      "MISSING_EVENT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MISSING_SUBSCRIPTION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_FOUND": {
         "description": null,
         "deprecated": null,
         "message": null
       },
       "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SYNTAX": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNABLE_TO_PARSE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -60961,6 +60996,11 @@
         "deprecated": null,
         "message": null
       },
+      "MISSING_EVENT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MISSING_PERMISSION": {
         "description": null,
         "deprecated": null,
@@ -60971,7 +61011,17 @@
         "deprecated": null,
         "message": null
       },
+      "MISSING_SUBSCRIPTION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SYNTAX": {
         "description": null,
         "deprecated": null,
         "message": null
