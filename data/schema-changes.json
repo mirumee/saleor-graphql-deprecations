@@ -1,52 +1,33 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookDryRunErrorCode",
-    "value": "MISSING_EVENT"
+    "diff": "type_new",
+    "type": "OrderSettingsInput"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookDryRunErrorCode",
-    "value": "MISSING_SUBSCRIPTION"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "orderSettings"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookDryRunErrorCode",
-    "value": "SYNTAX"
+    "diff": "field_new",
+    "type": "ChannelCreateInput",
+    "field": "orderSettings"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookErrorCode",
-    "value": "MISSING_EVENT"
+    "diff": "field_new",
+    "type": "ChannelUpdateInput",
+    "field": "orderSettings"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookErrorCode",
-    "value": "MISSING_SUBSCRIPTION"
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "orderSettingsUpdate",
+    "version": "4.0"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookErrorCode",
-    "value": "SYNTAX"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookErrorCode",
-    "value": "UNABLE_TO_PARSE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookTriggerErrorCode",
-    "value": "MISSING_EVENT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookTriggerErrorCode",
-    "value": "MISSING_SUBSCRIPTION"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookTriggerErrorCode",
-    "value": "SYNTAX"
+    "diff": "field_deprecated",
+    "type": "Query",
+    "field": "orderSettings",
+    "version": "4.0"
   }
 ]

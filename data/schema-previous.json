@@ -6720,6 +6720,13 @@
         "message": null,
         "arguments": {}
       },
+      "orderSettings": {
+        "type": "OrderSettings!",
+        "description": "Channel-specific order settings.\n\nAdded in Saleor 3.12.\n\nRequires one of the following permissions: MANAGE_CHANNELS, MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "slug": {
         "type": "String!",
         "description": "Slug of the channel.",
@@ -6847,6 +6854,13 @@
       "name": {
         "type": "String!",
         "description": "Name of the channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "orderSettings": {
+        "type": "OrderSettingsInput",
+        "description": "The channel order settings\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7203,7 +7217,7 @@
   "ChannelUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7267,6 +7281,13 @@
       "name": {
         "type": "String",
         "description": "Name of the channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "orderSettings": {
+        "type": "OrderSettingsInput",
+        "description": "The channel order settings\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -25682,7 +25703,7 @@
       },
       "channelUpdate": {
         "type": "ChannelUpdate",
-        "description": "Update a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28036,9 +28057,9 @@
       },
       "orderSettingsUpdate": {
         "type": "OrderSettingsUpdate",
-        "description": "Update shop order settings. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": null,
+        "description": "Update shop order settings across all channels. Returns `orderSettings` for the first `channel` in alphabetical order.  \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": "4.0",
+        "message": "\\n\\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `channelUpdate` mutation instead.",
         "arguments": {
           "input": {
             "type": "OrderSettingsUpdateInput!",
@@ -34396,20 +34417,20 @@
   "OrderSettings": {
     "type": "object",
     "interfaces": [],
-    "description": "Order related settings from site settings.",
+    "description": "Represents the channel-specific order settings.",
     "deprecated": null,
     "message": null,
     "fields": {
       "automaticallyConfirmAllNewOrders": {
         "type": "Boolean!",
-        "description": null,
+        "description": "When disabled, all new orders from checkout will be marked as unconfirmed. When enabled orders from checkout will become unfulfilled immediately.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "automaticallyFulfillNonShippableGiftCard": {
         "type": "Boolean!",
-        "description": null,
+        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -34459,10 +34480,32 @@
       }
     }
   },
+  "OrderSettingsInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "automaticallyConfirmAllNewOrders": {
+        "type": "Boolean",
+        "description": "When disabled, all new orders from checkout will be marked as unconfirmed. When enabled orders from checkout will become unfulfilled immediately. By default set to True",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "automaticallyFulfillNonShippableGiftCard": {
+        "type": "Boolean",
+        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By defualt set to True.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "OrderSettingsUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update shop order settings. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Update shop order settings across all channels. Returns `orderSettings` for the first `channel` in alphabetical order.  \n\nRequires one of the following permissions: MANAGE_ORDERS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -34497,14 +34540,14 @@
     "fields": {
       "automaticallyConfirmAllNewOrders": {
         "type": "Boolean",
-        "description": "When disabled, all new orders from checkout will be marked as unconfirmed. When enabled orders from checkout will become unfulfilled immediately.",
+        "description": "When disabled, all new orders from checkout will be marked as unconfirmed. When enabled orders from checkout will become unfulfilled immediately. By default set to True",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "automaticallyFulfillNonShippableGiftCard": {
         "type": "Boolean",
-        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically.",
+        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By defualt set to True.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -45588,9 +45631,9 @@
       },
       "orderSettings": {
         "type": "OrderSettings",
-        "description": "Order related settings from site settings.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": null,
+        "description": "Order related settings from site settings. Returns `orderSettings` for the first `channel` in alphabetical order.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use the `channel` query to fetch the `orderSettings` field instead.",
         "arguments": {}
       },
       "orders": {
