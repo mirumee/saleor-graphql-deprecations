@@ -40806,7 +40806,8 @@
   "ProductMedia": {
     "type": "object",
     "interfaces": [
-      "Node"
+      "Node",
+      "ObjectWithMetadata"
     ],
     "description": "Represents a product media.",
     "deprecated": null,
@@ -40826,9 +40827,90 @@
         "message": null,
         "arguments": {}
       },
+      "metadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "metafield": {
+        "type": "String",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "metafields": {
+        "type": "Metadata",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "oembedData": {
         "type": "JSONString!",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetafield": {
+        "type": "String",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "privateMetafields": {
+        "type": "Metadata",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "productId": {
+        "type": "ID",
+        "description": "Product id the media refers to.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40974,6 +41056,52 @@
       }
     }
   },
+  "ProductMediaCreated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new product media is created.\n\nAdded in Saleor 3.12.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productMedia": {
+        "type": "ProductMedia",
+        "description": "The product media the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductMediaDelete": {
     "type": "object",
     "interfaces": [],
@@ -41007,6 +41135,52 @@
         "description": null,
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "ProductMediaDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when product media is deleted.\n\nAdded in Saleor 3.12.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productMedia": {
+        "type": "ProductMedia",
+        "description": "The product media the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
         "arguments": {}
       }
     }
@@ -41115,6 +41289,52 @@
         "deprecated": null,
         "message": null,
         "default": null
+      }
+    }
+  },
+  "ProductMediaUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when product media is updated.\n\nAdded in Saleor 3.12.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productMedia": {
+        "type": "ProductMedia",
+        "description": "The product media the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -53912,6 +54132,73 @@
       }
     }
   },
+  "ThumbnailCreated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when thumbnail is created.\n\nAdded in Saleor 3.12.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "id": {
+        "type": "ID",
+        "description": "Thumbnail id.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "mediaUrl": {
+        "type": "String",
+        "description": "Original media url.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "objectId": {
+        "type": "ID",
+        "description": "Object the thumbnail refers to.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "url": {
+        "type": "String",
+        "description": "Thumbnail url.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ThumbnailFormatEnum": {
     "type": "enum",
     "description": "An enumeration.",
@@ -59574,6 +59861,21 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_MEDIA_CREATED": {
+        "description": "A new product media is created.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_MEDIA_DELETED": {
+        "description": "A product media is deleted.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_MEDIA_UPDATED": {
+        "description": "A product media is updated.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_METADATA_UPDATED": {
         "description": "A product metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
@@ -59686,6 +59988,11 @@
       },
       "STAFF_UPDATED": {
         "description": "A staff user is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "THUMBNAIL_CREATED": {
+        "description": "A thumbnail is created.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null
       },
@@ -60177,6 +60484,21 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_MEDIA_CREATED": {
+        "description": "A new product media is created.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_MEDIA_DELETED": {
+        "description": "A product media is deleted.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_MEDIA_UPDATED": {
+        "description": "A product media is updated.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_METADATA_UPDATED": {
         "description": "A product metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
@@ -60294,6 +60616,11 @@
       },
       "STAFF_UPDATED": {
         "description": "A staff user is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "THUMBNAIL_CREATED": {
+        "description": "A thumbnail is created.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null
       },
@@ -60793,6 +61120,21 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_MEDIA_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_MEDIA_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_MEDIA_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_METADATA_UPDATED": {
         "description": null,
         "deprecated": null,
@@ -60904,6 +61246,11 @@
         "message": null
       },
       "STAFF_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "THUMBNAIL_CREATED": {
         "description": null,
         "deprecated": null,
         "message": null
