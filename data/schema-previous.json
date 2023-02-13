@@ -38849,7 +38849,7 @@
   },
   "PositiveDecimal": {
     "type": "scalar",
-    "description": "Positive Decimal scalar implementation.\n\nShould be used in places where value must be positive.",
+    "description": "Nonnegative Decimal scalar implementation.\n\nShould be used in places where value must be nonnegative (0 or greater).",
     "deprecated": null,
     "message": null
   },
