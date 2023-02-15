@@ -7145,6 +7145,42 @@
       }
     }
   },
+  "ChannelListingUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channelListing": {
+        "type": "ID!",
+        "description": "ID of a channel listing.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "costPrice": {
+        "type": "PositiveDecimal",
+        "description": "Cost price of the variant in channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "preorderThreshold": {
+        "type": "Int",
+        "description": "The threshold for preorder variant in channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "price": {
+        "type": "PositiveDecimal",
+        "description": "Price of the particular variant in channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "ChannelReorderWarehouses": {
     "type": "object",
     "interfaces": [],
@@ -28430,7 +28466,7 @@
             "default": null
           },
           "oldPassword": {
-            "type": "String!",
+            "type": "String",
             "description": "Current user password.",
             "deprecated": null,
             "message": null,
@@ -43173,9 +43209,16 @@
         "message": null,
         "arguments": {}
       },
+      "channelListings": {
+        "type": "[ID!]",
+        "description": "List of channel listings IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "channels": {
         "type": "[ID!]",
-        "description": "List of channel IDs which causes the error.",
+        "description": "List of channel IDs which causes the error.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43197,6 +43240,13 @@
       "message": {
         "type": "String",
         "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "stocks": {
+        "type": "[ID!]",
+        "description": "List of stocks IDs which causes the error.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43352,8 +43402,8 @@
         "default": null
       },
       "channelListings": {
-        "type": "[ProductVariantChannelListingAddInput!]",
-        "description": "List of prices assigned to channels.",
+        "type": "ProductVariantChannelListingUpdateInput",
+        "description": "Channel listings input.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43415,8 +43465,8 @@
         "default": null
       },
       "stocks": {
-        "type": "[StockInput!]",
-        "description": "Stocks of a product available for sale.",
+        "type": "ProductVariantStocksUpdateInput",
+        "description": "Stocks input.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43553,6 +43603,35 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "ProductVariantChannelListingUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "create": {
+        "type": "[ProductVariantChannelListingAddInput!]",
+        "description": "List of channels to create variant channel listings.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "remove": {
+        "type": "[ID!]",
+        "description": "List of channel listings to remove.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "update": {
+        "type": "[ChannelListingUpdateInput!]",
+        "description": "List of channel listings to update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -44401,6 +44480,35 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "ProductVariantStocksUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "create": {
+        "type": "[StockInput!]",
+        "description": "List of warehouses to create stocks.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "remove": {
+        "type": "[ID!]",
+        "description": "List of stocks to remove.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "update": {
+        "type": "[StockUpdateInput!]",
+        "description": "List of stocks to update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -52523,6 +52631,28 @@
       "allocationStrategy": {
         "type": "AllocationStrategyEnum!",
         "description": "Allocation strategy options. Strategy defines the preference of warehouses for allocations and reservations.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "StockUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "quantity": {
+        "type": "Int!",
+        "description": "Quantity of items available for sell.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "stock": {
+        "type": "ID!",
+        "description": "Stock.",
         "deprecated": null,
         "message": null,
         "default": null
