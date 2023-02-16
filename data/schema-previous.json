@@ -5761,7 +5761,7 @@
             "description": "The format of the image. When not provided, format of the original image will be used. Must be provided together with the size value, otherwise original image will be returned.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": null
+            "default": "ENUM.ORIGINAL"
           },
           "size": {
             "type": "Int",
@@ -9195,7 +9195,7 @@
             "description": "The format of the image. When not provided, format of the original image will be used. Must be provided together with the size value, otherwise original image will be returned.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": null
+            "default": "ENUM.ORIGINAL"
           },
           "size": {
             "type": "Int",
@@ -33821,7 +33821,7 @@
             "description": "The format of the image. When not provided, format of the original image will be used. Must be provided together with the size value, otherwise original image will be returned.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": null
+            "default": "ENUM.ORIGINAL"
           },
           "size": {
             "type": "Int",
@@ -39379,7 +39379,7 @@
             "description": "The format of the image. When not provided, format of the original image will be used. Must be provided together with the size value, otherwise original image will be returned.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": null
+            "default": "ENUM.ORIGINAL"
           },
           "size": {
             "type": "Int",
@@ -40713,7 +40713,7 @@
             "description": "The format of the image. When not provided, format of the original image will be used. Must be provided together with the size value, otherwise original image will be returned.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": null
+            "default": "ENUM.ORIGINAL"
           },
           "size": {
             "type": "Int",
@@ -40976,7 +40976,7 @@
             "description": "The format of the image. When not provided, format of the original image will be used. Must be provided together with the size value, otherwise original image will be returned.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": null
+            "default": "ENUM.ORIGINAL"
           },
           "size": {
             "type": "Int",
@@ -54335,6 +54335,16 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "AVIF": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ORIGINAL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "WEBP": {
         "description": null,
         "deprecated": null,
@@ -55881,7 +55891,7 @@
             "description": "The format of the image. When not provided, format of the original image will be used. Must be provided together with the size value, otherwise original image will be returned.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": null
+            "default": "ENUM.ORIGINAL"
           },
           "size": {
             "type": "Int",

@@ -1,28 +1,12 @@
 [
   {
-    "diff": "type_new",
-    "type": "ChannelListingUpdateInput"
+    "diff": "enum_value_new",
+    "enum": "ThumbnailFormatEnum",
+    "value": "AVIF"
   },
   {
-    "diff": "type_new",
-    "type": "ProductVariantChannelListingUpdateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantStocksUpdateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "StockUpdateInput"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductVariantBulkError",
-    "field": "channelListings"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductVariantBulkError",
-    "field": "stocks"
+    "diff": "enum_value_new",
+    "enum": "ThumbnailFormatEnum",
+    "value": "ORIGINAL"
   }
 ]
