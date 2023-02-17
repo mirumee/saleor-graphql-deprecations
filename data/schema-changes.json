@@ -1,12 +1,27 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "ThumbnailFormatEnum",
-    "value": "AVIF"
+    "diff": "field_new",
+    "type": "Webhook",
+    "field": "customHeaders"
+  },
+  {
+    "diff": "field_new",
+    "type": "WebhookCreateInput",
+    "field": "customHeaders"
+  },
+  {
+    "diff": "field_new",
+    "type": "WebhookUpdateInput",
+    "field": "customHeaders"
   },
   {
     "diff": "enum_value_new",
-    "enum": "ThumbnailFormatEnum",
-    "value": "ORIGINAL"
+    "enum": "AppErrorCode",
+    "value": "INVALID_CUSTOM_HEADERS"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookErrorCode",
+    "value": "INVALID_CUSTOM_HEADERS"
   }
 ]

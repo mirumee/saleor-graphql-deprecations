@@ -1854,6 +1854,11 @@
         "deprecated": null,
         "message": null
       },
+      "INVALID_CUSTOM_HEADERS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "INVALID_MANIFEST_FORMAT": {
         "description": null,
         "deprecated": null,
@@ -59128,6 +59133,13 @@
         "message": null,
         "arguments": {}
       },
+      "customHeaders": {
+        "type": "JSONString",
+        "description": "Custom headers, which will be added to HTTP request.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "eventDeliveries": {
         "type": "EventDeliveryCountableConnection",
         "description": "Event deliveries.",
@@ -59282,6 +59294,13 @@
       "asyncEvents": {
         "type": "[WebhookEventTypeAsyncEnum!]",
         "description": "The asynchronous events that webhook wants to subscribe.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "customHeaders": {
+        "type": "JSONString",
+        "description": "Custom headers, which will be added to HTTP request. There is a limitation of 5 headers per webhook and 998 characters per header.Only \"X-*\" and \"Authorization*\" keys are allowed.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -59520,6 +59539,11 @@
         "message": null
       },
       "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_CUSTOM_HEADERS": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -61614,6 +61638,13 @@
       "asyncEvents": {
         "type": "[WebhookEventTypeAsyncEnum!]",
         "description": "The asynchronous events that webhook wants to subscribe.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "customHeaders": {
+        "type": "JSONString",
+        "description": "Custom headers, which will be added to HTTP request. There is a limitation of 5 headers per webhook and 998 characters per header.Only \"X-*\" and \"Authorization*\" keys are allowed.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
