@@ -5466,6 +5466,41 @@
         "message": null,
         "default": null
       },
+      "contentType": {
+        "type": "String",
+        "description": "File content type.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "date": {
+        "type": "Date",
+        "description": "Represents the date value of the attribute value.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "dateTime": {
+        "type": "DateTime",
+        "description": "Represents the date/time value of the attribute value.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "dropdown": {
+        "type": "AttributeValueSelectableTypeInput",
+        "description": "Attribute value ID.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "file": {
+        "type": "String",
+        "description": "URL of the file attribute. Every time, a new value is created.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "id": {
         "type": "ID",
         "description": "ID of the selected attribute.",
@@ -5473,11 +5508,53 @@
         "message": null,
         "default": null
       },
-      "values": {
-        "type": "[String!]",
-        "description": "The value or slug of an attribute to resolve. If the passed value is non-existent, it will be created.",
+      "multiselect": {
+        "type": "[AttributeValueSelectableTypeInput!]",
+        "description": "List of attribute value IDs.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
+        "default": null
+      },
+      "numeric": {
+        "type": "String",
+        "description": "Numeric value of an attribute.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "plainText": {
+        "type": "String",
+        "description": "Plain text content.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "references": {
+        "type": "[ID!]",
+        "description": "List of entity IDs that will be used as references.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "richText": {
+        "type": "JSONString",
+        "description": "Text content in JSON format.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "swatch": {
+        "type": "AttributeValueSelectableTypeInput",
+        "description": "Attribute value ID.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "values": {
+        "type": "[String!]",
+        "description": "The value or slug of an attribute to resolve. If the passed value is non-existent, it will be created.This field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "The value or slug of an attribute to resolve. If the passed value is non-existent, it will be created.This field will be removed in Saleor 4.0.",
         "default": null
       }
     }

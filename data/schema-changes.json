@@ -1,27 +1,63 @@
 [
   {
     "diff": "field_new",
-    "type": "Webhook",
-    "field": "customHeaders"
+    "type": "BulkAttributeValueInput",
+    "field": "contentType"
   },
   {
     "diff": "field_new",
-    "type": "WebhookCreateInput",
-    "field": "customHeaders"
+    "type": "BulkAttributeValueInput",
+    "field": "date"
   },
   {
     "diff": "field_new",
-    "type": "WebhookUpdateInput",
-    "field": "customHeaders"
+    "type": "BulkAttributeValueInput",
+    "field": "dateTime"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "AppErrorCode",
-    "value": "INVALID_CUSTOM_HEADERS"
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "dropdown"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookErrorCode",
-    "value": "INVALID_CUSTOM_HEADERS"
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "file"
+  },
+  {
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "multiselect"
+  },
+  {
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "numeric"
+  },
+  {
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "plainText"
+  },
+  {
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "references"
+  },
+  {
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "richText"
+  },
+  {
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "swatch"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "BulkAttributeValueInput",
+    "field": "values",
+    "version": "4.0"
   }
 ]

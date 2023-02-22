@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-02-21 14:02:20</p>
+      <p class="m-0">Generated on 2023-02-22 14:00:52</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -2461,6 +2461,17 @@
               
                 <td>ProductVariantBulkCreate</td>
                 <td colspan="2">bulkProductErrors</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#BulkAttributeValueInput-values" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>BulkAttributeValueInput</td>
+                <td colspan="2">values</td>
               
               <td>4.0</td>
             </tr>
@@ -9715,6 +9726,28 @@ DEPRECATED: this field will be removed in Saleor 4.0.. Use tax classes to contro
             <div class="font-monospace"><span class="text-primary">type</span> <strong>ProductVariantBulkCreate</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">bulkProductErrors</strong>: [BulkProductError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="BulkAttributeValueInput-values" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#BulkAttributeValueInput-values" class="text-reset">
+                Field <strong class="text-danger">values</strong> of input <strong class="text-danger">BulkAttributeValueInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>The value or slug of an attribute to resolve. If the passed value is non-existent, it will be created.This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>BulkAttributeValueInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">values</strong>: [String!]<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
