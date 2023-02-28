@@ -36161,7 +36161,7 @@
       },
       "availableAttributes": {
         "type": "AttributeCountableConnection",
-        "description": "Attributes that can be assigned to the page type.\n\nRequires one of the following permissions: MANAGE_PAGES.",
+        "description": "Attributes that can be assigned to the page type.\n\nRequires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -36211,7 +36211,7 @@
       },
       "hasPages": {
         "type": "Boolean",
-        "description": "Whether page type has pages assigned.\n\nRequires one of the following permissions: MANAGE_PAGES.",
+        "description": "Whether page type has pages assigned.\n\nRequires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
         "message": null,
         "arguments": {}
