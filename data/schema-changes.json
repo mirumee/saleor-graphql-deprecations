@@ -1,63 +1,27 @@
 [
   {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "contentType"
+    "diff": "type_new",
+    "type": "StockBulkResult"
+  },
+  {
+    "diff": "type_new",
+    "type": "StockBulkUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "StockBulkUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "StockBulkUpdateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "StockBulkUpdateInput"
   },
   {
     "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "date"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "dateTime"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "dropdown"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "file"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "multiselect"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "numeric"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "plainText"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "references"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "richText"
-  },
-  {
-    "diff": "field_new",
-    "type": "BulkAttributeValueInput",
-    "field": "swatch"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "BulkAttributeValueInput",
-    "field": "values",
-    "version": "4.0"
+    "type": "Mutation",
+    "field": "stockBulkUpdate"
   }
 ]

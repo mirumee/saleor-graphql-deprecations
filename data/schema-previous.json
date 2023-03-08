@@ -30216,6 +30216,28 @@
           }
         }
       },
+      "stockBulkUpdate": {
+        "type": "StockBulkUpdate",
+        "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
+            "deprecated": null,
+            "message": null,
+            "default": "ENUM.reject_everything"
+          },
+          "stocks": {
+            "type": "[StockBulkUpdateInput!]!",
+            "description": "Input list of stocks to update.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "taxClassCreate": {
         "type": "TaxClassCreate",
         "description": "Create a tax class.\n\nAdded in Saleor 3.9.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_TAXES.",
@@ -52520,6 +52542,160 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "StockBulkResult": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[StockBulkUpdateError!]",
+        "description": "List of errors occurred on create or update attempt.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "stock": {
+        "type": "Stock",
+        "description": "Stock data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "StockBulkUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many objects were updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[StockBulkUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "results": {
+        "type": "[StockBulkResult!]!",
+        "description": "List of the updated stocks.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "StockBulkUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "StockBulkUpdateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "StockBulkUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "StockBulkUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "quantity": {
+        "type": "Int!",
+        "description": "Quantity of items available for sell.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "variantExternalReference": {
+        "type": "String",
+        "description": "Variant external reference.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "variantId": {
+        "type": "ID",
+        "description": "Variant ID.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "warehouseExternalReference": {
+        "type": "String",
+        "description": "Warehouse external reference.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "warehouseId": {
+        "type": "ID",
+        "description": "Warehouse ID.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
