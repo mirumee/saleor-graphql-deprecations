@@ -1908,6 +1908,11 @@
         "description": null,
         "deprecated": null,
         "message": null
+      },
+      "UNSUPPORTED_SALEOR_VERSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -2446,6 +2451,29 @@
       "url": {
         "type": "String!",
         "description": "URL of a view where extension's iframe is placed.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AppManifestRequiredSaleorVersion": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "constraint": {
+        "type": "String!",
+        "description": "Required Saleor version as semver range.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "satisfied": {
+        "type": "Boolean!",
+        "description": "Informs if the Saleor version matches the required one.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -22909,6 +22937,13 @@
       "permissions": {
         "type": "[Permission!]",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "requiredSaleorVersion": {
+        "type": "AppManifestRequiredSaleorVersion",
+        "description": "Determines the app's required Saleor version as semver range.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}

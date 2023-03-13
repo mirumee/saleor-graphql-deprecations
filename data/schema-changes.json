@@ -1,27 +1,16 @@
 [
   {
     "diff": "type_new",
-    "type": "StockBulkResult"
-  },
-  {
-    "diff": "type_new",
-    "type": "StockBulkUpdate"
-  },
-  {
-    "diff": "type_new",
-    "type": "StockBulkUpdateError"
-  },
-  {
-    "diff": "type_new",
-    "type": "StockBulkUpdateErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "StockBulkUpdateInput"
+    "type": "AppManifestRequiredSaleorVersion"
   },
   {
     "diff": "field_new",
-    "type": "Mutation",
-    "field": "stockBulkUpdate"
+    "type": "Manifest",
+    "field": "requiredSaleorVersion"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "AppErrorCode",
+    "value": "UNSUPPORTED_SALEOR_VERSION"
   }
 ]
