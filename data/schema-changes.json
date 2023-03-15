@@ -1,16 +1,17 @@
 [
   {
-    "diff": "type_new",
-    "type": "AppManifestRequiredSaleorVersion"
+    "diff": "field_new",
+    "type": "App",
+    "field": "author"
   },
   {
     "diff": "field_new",
     "type": "Manifest",
-    "field": "requiredSaleorVersion"
+    "field": "author"
   },
   {
     "diff": "enum_value_new",
-    "enum": "AppErrorCode",
-    "value": "UNSUPPORTED_SALEOR_VERSION"
+    "enum": "AccountErrorCode",
+    "value": "PASSWORD_RESET_ALREADY_REQUESTED"
   }
 ]

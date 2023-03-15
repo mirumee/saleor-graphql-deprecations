@@ -323,6 +323,11 @@
         "deprecated": null,
         "message": null
       },
+      "PASSWORD_RESET_ALREADY_REQUESTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PASSWORD_TOO_COMMON": {
         "description": null,
         "deprecated": null,
@@ -1348,6 +1353,13 @@
       "appUrl": {
         "type": "String",
         "description": "URL to iframe with the app.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "author": {
+        "type": "String",
+        "description": "The App's author name.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -22881,6 +22893,13 @@
       "audience": {
         "type": "String",
         "description": "The audience that will be included in all JWT tokens for the app.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "author": {
+        "type": "String",
+        "description": "The App's author name.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
