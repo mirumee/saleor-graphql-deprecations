@@ -40284,9 +40284,9 @@
       },
       "taxCode": {
         "type": "String",
-        "description": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product.",
+        "description": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
         "deprecated": "4.0",
-        "message": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product.",
+        "message": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
         "default": null
       },
       "weight": {
@@ -40983,9 +40983,9 @@
       },
       "taxCode": {
         "type": "String",
-        "description": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product.",
+        "description": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
         "deprecated": "4.0",
-        "message": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product.",
+        "message": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
         "default": null
       },
       "weight": {
@@ -42575,9 +42575,9 @@
       },
       "taxCode": {
         "type": "String",
-        "description": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0.. Use tax classes to control the tax calculation for a product type.",
+        "description": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0.. Use tax classes to control the tax calculation for a product type. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
         "deprecated": "4.0",
-        "message": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0.. Use tax classes to control the tax calculation for a product type.",
+        "message": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0.. Use tax classes to control the tax calculation for a product type. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
         "default": null
       },
       "variantAttributes": {
