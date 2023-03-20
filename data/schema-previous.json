@@ -31526,7 +31526,7 @@
       },
       "shippingTaxClass": {
         "type": "TaxClass",
-        "description": "Denormalized tax class assigned to the shipping method.\n\nAdded in Saleor 3.9.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
+        "description": "Denormalized tax class assigned to the shipping method.\n\nAdded in Saleor 3.9.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -33935,7 +33935,7 @@
       },
       "taxClass": {
         "type": "TaxClass",
-        "description": "Denormalized tax class of the product in this order line.\n\nAdded in Saleor 3.9.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
+        "description": "Denormalized tax class of the product in this order line.\n\nAdded in Saleor 3.9.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39514,7 +39514,7 @@
       },
       "taxClass": {
         "type": "TaxClass",
-        "description": "Tax class assigned to this product type. All products of this product type use this tax class, unless it's overridden in the `Product` type.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
+        "description": "Tax class assigned to this product type. All products of this product type use this tax class, unless it's overridden in the `Product` type.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42239,7 +42239,7 @@
       },
       "taxClass": {
         "type": "TaxClass",
-        "description": "Tax class assigned to this product type. All products of this product type use this tax class, unless it's overridden in the `Product` type.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
+        "description": "Tax class assigned to this product type. All products of this product type use this tax class, unless it's overridden in the `Product` type.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -49813,7 +49813,7 @@
       },
       "taxClass": {
         "type": "TaxClass",
-        "description": "Tax class assigned to this shipping method.\n\nRequires one of the following permissions: MANAGE_TAXES, MANAGE_SHIPPING.",
+        "description": "Tax class assigned to this shipping method.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
