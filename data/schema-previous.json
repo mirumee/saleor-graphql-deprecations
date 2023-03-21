@@ -46656,7 +46656,7 @@
           },
           "sku": {
             "type": "String",
-            "description": "Sku of the product variant.",
+            "description": "SKU of the product variant.",
             "deprecated": null,
             "message": null,
             "default": null
