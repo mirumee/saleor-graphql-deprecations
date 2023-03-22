@@ -62091,7 +62091,8 @@
       "ProductMedia",
       "Category",
       "Collection",
-      "PageType"
+      "PageType",
+      "Order"
     ]
   },
   "_Service": {
