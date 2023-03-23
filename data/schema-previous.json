@@ -143,7 +143,7 @@
   "AccountError": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "Represents errors in account mutations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -357,7 +357,7 @@
   },
   "AccountInput": {
     "type": "input",
-    "description": null,
+    "description": "Fields required to update the user.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -437,7 +437,7 @@
   },
   "AccountRegisterInput": {
     "type": "input",
-    "description": null,
+    "description": "Fields required to create a user.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1151,7 +1151,7 @@
   "AddressValidationData": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "Represents address validation rules for a country.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -15255,7 +15255,7 @@
   "ExternalAuthenticationUrl": {
     "type": "object",
     "interfaces": [],
-    "description": "Prepare external authentication url for user by custom plugin.",
+    "description": "Prepare external authentication URL for user by custom plugin.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -27122,7 +27122,7 @@
       },
       "externalAuthenticationUrl": {
         "type": "ExternalAuthenticationUrl",
-        "description": "Prepare external authentication url for user by custom plugin.",
+        "description": "Prepare external authentication URL for user by custom plugin.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -38533,7 +38533,7 @@
   },
   "PermissionGroupSortField": {
     "type": "enum",
-    "description": null,
+    "description": "Sorting options for permission groups.",
     "deprecated": null,
     "message": null,
     "values": {
@@ -51955,7 +51955,7 @@
   },
   "StaffCreateInput": {
     "type": "input",
-    "description": null,
+    "description": "Fields required to create a staff user.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52192,7 +52192,7 @@
   },
   "StaffMemberStatus": {
     "type": "enum",
-    "description": null,
+    "description": "Represents status of a staff account.",
     "deprecated": null,
     "message": null,
     "values": {
@@ -52398,7 +52398,7 @@
   },
   "StaffUpdateInput": {
     "type": "input",
-    "description": null,
+    "description": "Fields required to update a staff user.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56814,7 +56814,7 @@
   "UserPermission": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "Represents user's permissions.",
     "deprecated": null,
     "message": null,
     "fields": {
