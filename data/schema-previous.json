@@ -12339,6 +12339,166 @@
       }
     }
   },
+  "CustomerBulkResult": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customer": {
+        "type": "User",
+        "description": "Customer data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerBulkUpdateError!]",
+        "description": "List of errors that occurred during the update attempt.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerBulkUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates customers.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many objects were created.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerBulkUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "results": {
+        "type": "[CustomerBulkResult!]!",
+        "description": "List of the updated customers.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerBulkUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CustomerBulkUpdateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "path": {
+        "type": "String",
+        "description": "Path to field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerBulkUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "BLANK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DUPLICATED_INPUT_ITEM": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MAX_LENGTH": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerBulkUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "externalReference": {
+        "type": "String",
+        "description": "External ID of a customer to update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "id": {
+        "type": "ID",
+        "description": "ID of a customer to update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "input": {
+        "type": "CustomerInput!",
+        "description": "Fields required to update a customer.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "CustomerCreate": {
     "type": "object",
     "interfaces": [],
@@ -12930,6 +13090,12 @@
         "arguments": {}
       }
     }
+  },
+  "Decimal": {
+    "type": "scalar",
+    "description": "Custom Decimal implementation.\n\nReturns Decimal as a float in the API,\nparses float to the Decimal on the way back.",
+    "deprecated": null,
+    "message": null
   },
   "DeleteMetadata": {
     "type": "object",
@@ -23020,6 +23186,24 @@
       }
     }
   },
+  "MarkAsPaidStrategyEnum": {
+    "type": "enum",
+    "description": "Determine the mark as paid strategy for the channel.\n\n    TRANSACTION_FLOW - new orders marked as paid will receive a\n    `TransactionItem` object, that will cover the `order.total`.\n\n    PAYMENT_FLOW - new orders marked as paid will receive a\n    `Payment` object, that will cover the `order.total`.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "PAYMENT_FLOW": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_FLOW": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "MeasurementUnitsEnum": {
     "type": "enum",
     "description": "An enumeration.",
@@ -23210,6 +23394,35 @@
         "description": "Sort media by ID.",
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "MediaInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "alt": {
+        "type": "String",
+        "description": "Alt text for a product media.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "image": {
+        "type": "Upload",
+        "description": "Represents an image file in a multipart request.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "mediaUrl": {
+        "type": "String",
+        "description": "Represents an URL to an external media.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -26765,6 +26978,28 @@
           }
         }
       },
+      "customerBulkUpdate": {
+        "type": "CustomerBulkUpdate",
+        "description": "Updates customers.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "customers": {
+            "type": "[CustomerBulkUpdateInput!]!",
+            "description": "Input list of customers to update.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "customerCreate": {
         "type": "CustomerCreate",
         "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.",
@@ -28087,6 +28322,50 @@
           }
         }
       },
+      "orderGrantRefundCreate": {
+        "type": "OrderGrantRefundCreate",
+        "description": "Adds granted refund to the order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the order.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "input": {
+            "type": "OrderGrantRefundCreateInput!",
+            "description": "Fields required to create a granted refund for the order.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderGrantRefundUpdate": {
+        "type": "OrderGrantRefundUpdate",
+        "description": "Updates granted refund.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the granted refund.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "input": {
+            "type": "OrderGrantRefundUpdateInput!",
+            "description": "Fields required to update a granted refund.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "orderLineDelete": {
         "type": "OrderLineDelete",
         "description": "Deletes an order line from an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
@@ -28854,6 +29133,28 @@
           "productTypeId": {
             "type": "ID!",
             "description": "ID of the product type from which the attributes should be unassigned.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "productBulkCreate": {
+        "type": "ProductBulkCreate",
+        "description": "Creates products.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling.",
+            "deprecated": null,
+            "message": null,
+            "default": "ENUM.reject_everything"
+          },
+          "products": {
+            "type": "[ProductBulkCreateInput!]!",
+            "description": "Input list of products to create.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -30500,7 +30801,7 @@
       },
       "transactionCreate": {
         "type": "TransactionCreate",
-        "description": "Create transaction for checkout or order. Requires the following permissions: AUTHENTICATED_APP and HANDLE_PAYMENTS.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Create transaction for checkout or order.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30527,9 +30828,73 @@
           }
         }
       },
+      "transactionEventReport": {
+        "type": "TransactionEventReport",
+        "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "amount": {
+            "type": "PositiveDecimal!",
+            "description": "The amount of the event to report.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "availableActions": {
+            "type": "[TransactionActionEnum!]",
+            "description": "List of all possible actions for the transaction",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "externalUrl": {
+            "type": "String",
+            "description": "The url that will allow to redirect user to payment provider page with event details.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "ID!",
+            "description": "The ID of the transaction.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "message": {
+            "type": "String",
+            "description": "The message related to the event.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "pspReference": {
+            "type": "String!",
+            "description": "PSP Reference of the event to report.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "time": {
+            "type": "DateTime",
+            "description": "The time of the event to report. If not provide, the current time will be used.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "type": {
+            "type": "TransactionEventTypeEnum!",
+            "description": "Current status of the event to report.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "transactionRequestAction": {
         "type": "TransactionRequestAction",
-        "description": "Request an action for payment transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS, MANAGE_ORDERS.",
+        "description": "Request an action for payment transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30558,7 +30923,7 @@
       },
       "transactionUpdate": {
         "type": "TransactionUpdate",
-        "description": "Create transaction for checkout or order. Requires the following permissions: AUTHENTICATED_APP and HANDLE_PAYMENTS.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Create transaction for checkout or order.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30703,7 +31068,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of user IDs to (de)activate).",
+            "description": "List of user IDs to activate/deactivate.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -31317,6 +31682,13 @@
         "message": null,
         "arguments": {}
       },
+      "grantedRefunds": {
+        "type": "[OrderGrantedRefund!]!",
+        "description": "List of granted refunds.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "id": {
         "type": "ID!",
         "description": null,
@@ -31601,6 +31973,13 @@
         "message": null,
         "arguments": {}
       },
+      "totalAuthorizePending": {
+        "type": "Money!",
+        "description": "Total amount of ongoing authorize requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "totalAuthorized": {
         "type": "Money!",
         "description": "Amount authorized for the order.",
@@ -31615,9 +31994,65 @@
         "message": null,
         "arguments": {}
       },
+      "totalCancelPending": {
+        "type": "Money!",
+        "description": "Total amount of ongoing cancel requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalCanceled": {
+        "type": "Money!",
+        "description": "Amount canceled for the order.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "totalCaptured": {
         "type": "Money!",
-        "description": "Amount captured by payment.",
+        "description": "Amount captured for the order.",
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use `totalCharged` instead.",
+        "arguments": {}
+      },
+      "totalChargePending": {
+        "type": "Money!",
+        "description": "Total amount of ongoing charge requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalCharged": {
+        "type": "Money!",
+        "description": "Amount charged for the order.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalGrantedRefund": {
+        "type": "Money!",
+        "description": "Total amount of granted refund.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalRefundPending": {
+        "type": "Money!",
+        "description": "Total amount of ongoing refund requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalRefunded": {
+        "type": "Money!",
+        "description": "Total refund amount for the order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalRemainingGrant": {
+        "type": "Money!",
+        "description": "The difference amount between granted refund and the amounts that are pending and refunded.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -31769,7 +32204,7 @@
   },
   "OrderAuthorizeStatusEnum": {
     "type": "enum",
-    "description": "Determine a current authorize status for order.\n\n    We treat the order as fully authorized when the sum of authorized and charged funds\n    cover the order.total.\n    We treat the order as partially authorized when the sum of authorized and charged\n    funds covers only part of the order.total\n    We treat the order as not authorized when the sum of authorized and charged funds is\n    0.\n\n    NONE - the funds are not authorized\n    PARTIAL - the funds that are authorized or charged don't cover fully the order's\n    total\n    FULL - the funds that are authorized or charged fully cover the order's total",
+    "description": "Determine a current authorize status for order.\n\n    We treat the order as fully authorized when the sum of authorized and charged funds\n    cover the `order.total`-`order.totalGrantedRefund`.\n    We treat the order as partially authorized when the sum of authorized and charged\n    funds covers only part of the `order.total`-`order.totalGrantedRefund`.\n    We treat the order as not authorized when the sum of authorized and charged funds is\n    0.\n\n    NONE - the funds are not authorized\n    PARTIAL - the funds that are authorized and charged don't cover fully the\n    `order.total`-`order.totalGrantedRefund`\n    FULL - the funds that are authorized and charged fully cover the\n    `order.total`-`order.totalGrantedRefund`",
     "deprecated": null,
     "message": null,
     "values": {
@@ -31928,7 +32363,7 @@
   },
   "OrderChargeStatusEnum": {
     "type": "enum",
-    "description": "Determine the current charge status for the order.\n\n    We treat the order as overcharged when the charged amount is bigger that order.total\n    We treat the order as fully charged when the charged amount is equal to order.total.\n    We treat the order as partially charged when the charged amount covers only part of\n    the order.total\n\n    NONE - the funds are not charged.\n    PARTIAL - the funds that are charged don't cover the order's total\n    FULL - the funds that are charged fully cover the order's total\n    OVERCHARGED - the charged funds are bigger than order's total",
+    "description": "Determine the current charge status for the order.\n\n    An order is considered overcharged when the sum of the\n    transactionItem's charge amounts exceeds the value of\n    `order.total` - `order.totalGrantedRefund`.\n    If the sum of the transactionItem's charge amounts equals\n    `order.total` - `order.totalGrantedRefund`, we consider the order to be fully\n    charged.\n    If the sum of the transactionItem's charge amounts covers a part of the\n    `order.total` - `order.totalGrantedRefund`, we treat the order as partially charged.\n\n    NONE - the funds are not charged.\n    PARTIAL - the funds that are charged don't cover the\n    `order.total`-`order.totalGrantedRefund`\n    FULL - the funds that are charged fully cover the\n    `order.total`-`order.totalGrantedRefund`\n    OVERCHARGED - the charged funds are bigger than the\n    `order.total`-`order.totalGrantedRefund`",
     "deprecated": null,
     "message": null,
     "values": {
@@ -32683,11 +33118,6 @@
         "deprecated": null,
         "message": null
       },
-      "MISSING_TRANSACTION_ACTION_REQUEST_WEBHOOK": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
       "NOT_AVAILABLE_IN_CHANNEL": {
         "description": null,
         "deprecated": null,
@@ -32744,6 +33174,11 @@
         "message": null
       },
       "TAX_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_ERROR": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -32917,8 +33352,8 @@
       "status": {
         "type": "TransactionStatus",
         "description": "The status of payment's transaction.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `TransactionEvent` to track the status of `TransactionItem`.",
         "arguments": {}
       },
       "transactionReference": {
@@ -33154,7 +33589,7 @@
   },
   "OrderEventsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": "The different order event types.",
     "deprecated": null,
     "message": null,
     "values": {
@@ -33363,12 +33798,27 @@
         "deprecated": null,
         "message": null
       },
+      "TRANSACTION_CANCEL_REQUESTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "TRANSACTION_CAPTURE_REQUESTED": {
+        "description": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead.",
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead."
+      },
+      "TRANSACTION_CHARGE_REQUESTED": {
         "description": null,
         "deprecated": null,
         "message": null
       },
       "TRANSACTION_EVENT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_MARK_AS_PAID_FAILED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -33379,9 +33829,9 @@
         "message": null
       },
       "TRANSACTION_VOID_REQUESTED": {
-        "description": null,
-        "deprecated": null,
-        "message": null
+        "description": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead.",
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead."
       },
       "UPDATED_ADDRESS": {
         "description": null,
@@ -33773,6 +34223,276 @@
       "version": {
         "type": "String",
         "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantRefundCreate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Adds granted refund to the order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[OrderGrantRefundCreateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "grantedRefund": {
+        "type": "OrderGrantedRefund",
+        "description": "Created granted refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "Order which has assigned new grant refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantRefundCreateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "OrderGrantRefundCreateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantRefundCreateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "OrderGrantRefundCreateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "amount": {
+        "type": "Decimal!",
+        "description": "Amount of the granted refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason of the granted refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "OrderGrantRefundUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates granted refund.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[OrderGrantRefundUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "grantedRefund": {
+        "type": "OrderGrantedRefund",
+        "description": "Created granted refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "Order which has assigned updated grant refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "orderGrantedRefund": {
+        "type": "OrderGrantedRefund",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantRefundUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "OrderGrantRefundUpdateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantRefundUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "OrderGrantRefundUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "amount": {
+        "type": "Decimal",
+        "description": "Amount of the granted refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason of the granted refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "OrderGrantedRefund": {
+    "type": "object",
+    "interfaces": [],
+    "description": "The details of granted refund.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "amount": {
+        "type": "Money!",
+        "description": "Refund amount.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "app": {
+        "type": "App",
+        "description": "App that performed the action.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "createdAt": {
+        "type": "DateTime!",
+        "description": "Time of creation.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason of the refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "updatedAt": {
+        "type": "DateTime!",
+        "description": "Time of last update.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "User who performed the action. Requires of of the following permissions: MANAGE_USERS, MANAGE_STAFF, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -34628,6 +35348,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "markAsPaidStrategy": {
+        "type": "MarkAsPaidStrategyEnum!",
+        "description": "Determine what strategy will be used to mark the order as paid. Based on the chosen option, the proper object will be created and attached to the order when it's manually marked as paid.\n`PAYMENT_FLOW` - [default option] creates the `Payment` object.\n`TRANSACTION_FLOW` - creates the `TransactionItem` object.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -34690,6 +35417,13 @@
       "automaticallyFulfillNonShippableGiftCard": {
         "type": "Boolean",
         "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By defualt set to True.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "markAsPaidStrategy": {
+        "type": "MarkAsPaidStrategyEnum",
+        "description": "Determine what strategy will be used to mark the order as paid. Based on the chosen option, the proper object will be created and attached to the order when it's manually marked as paid.\n`PAYMENT_FLOW` - [default option] creates the `Payment` object.\n`TRANSACTION_FLOW` - creates the `TransactionItem` object.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -39767,6 +40501,318 @@
       }
     }
   },
+  "ProductBulkCreate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates products.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many objects were created.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[ProductBulkCreateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "results": {
+        "type": "[ProductBulkResult!]!",
+        "description": "List of the created products.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductBulkCreateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attributes": {
+        "type": "[ID!]",
+        "description": "List of attributes IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "channels": {
+        "type": "[ID!]",
+        "description": "List of channel IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "code": {
+        "type": "ProductBulkCreateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "path": {
+        "type": "String",
+        "description": "Path to field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "values": {
+        "type": "[ID!]",
+        "description": "List of attribute values IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "warehouses": {
+        "type": "[ID!]",
+        "description": "List of warehouse IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductBulkCreateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ATTRIBUTE_ALREADY_ASSIGNED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ATTRIBUTE_CANNOT_BE_ASSIGNED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ATTRIBUTE_VARIANTS_DISABLED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "BLANK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DUPLICATED_INPUT_ITEM": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_PRICE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MAX_LENGTH": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_NOT_ASSIGNED_TO_CHANNEL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_WITHOUT_CATEGORY": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNSUPPORTED_MEDIA_PROVIDER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "ProductBulkCreateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attributes": {
+        "type": "[AttributeValueInput!]",
+        "description": "List of attributes.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "category": {
+        "type": "ID",
+        "description": "ID of the product's category.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "channelListings": {
+        "type": "[ProductChannelListingCreateInput!]",
+        "description": "List of channels in which the product is available.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "chargeTaxes": {
+        "type": "Boolean",
+        "description": "Determine if taxes are being charged for the product. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use `Channel.taxConfiguration` to configure whether tax collection is enabled.",
+        "deprecated": "4.0",
+        "message": "Determine if taxes are being charged for the product. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use `Channel.taxConfiguration` to configure whether tax collection is enabled.",
+        "default": null
+      },
+      "collections": {
+        "type": "[ID!]",
+        "description": "List of IDs of collections that the product belongs to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "description": {
+        "type": "JSONString",
+        "description": "Product description.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "externalReference": {
+        "type": "String",
+        "description": "External ID of this product.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "media": {
+        "type": "[MediaInput!]",
+        "description": "List of media inputs associated with the product.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the product metadata.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Product name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the product private metadata.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productType": {
+        "type": "ID!",
+        "description": "ID of the type that product belongs to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rating": {
+        "type": "Float",
+        "description": "Defines the product rating value.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "seo": {
+        "type": "SeoInput",
+        "description": "Search engine optimization fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "String",
+        "description": "Product slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "taxClass": {
+        "type": "ID",
+        "description": "ID of a tax class to assign to this product. If not provided, product will use the tax class which is assigned to the product type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "taxCode": {
+        "type": "String",
+        "description": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
+        "deprecated": "4.0",
+        "message": "Tax rate for enabled tax gateway. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use tax classes to control the tax calculation for a product. If taxCode is provided, Saleor will try to find a tax class with given code (codes are stored in metadata) and assign it. If no tax class is found, it would be created and assigned.",
+        "default": null
+      },
+      "variants": {
+        "type": "[ProductVariantBulkCreateInput!]",
+        "description": "Input list of product variants to create.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "weight": {
+        "type": "WeightScalar",
+        "description": "Weight of the Product.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "ProductBulkDelete": {
     "type": "object",
     "interfaces": [],
@@ -39793,6 +40839,29 @@
         "description": null,
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "ProductBulkResult": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[ProductBulkCreateError!]",
+        "description": "List of errors occurred on create attempt.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "product": {
+        "type": "Product",
+        "description": "Product data.",
+        "deprecated": null,
+        "message": null,
         "arguments": {}
       }
     }
@@ -39972,6 +41041,56 @@
       "removeVariants": {
         "type": "[ID!]",
         "description": "List of variants from which the channel should be unassigned.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "visibleInListings": {
+        "type": "Boolean",
+        "description": "Determines if product is visible in product listings (doesn't apply to product collections).",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "ProductChannelListingCreateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "availableForPurchaseAt": {
+        "type": "DateTime",
+        "description": "A start date time from which a product will be available for purchase. When not set and `isAvailable` is set to True, the current day is assumed.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "channelId": {
+        "type": "ID!",
+        "description": "ID of a channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isAvailableForPurchase": {
+        "type": "Boolean",
+        "description": "Determine if product should be available for purchase.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isPublished": {
+        "type": "Boolean",
+        "description": "Determines if object is visible to customers.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "publishedAt": {
+        "type": "DateTime",
+        "description": "Publication date time. ISO 8601 standard.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -54836,10 +55955,15 @@
   },
   "TransactionActionEnum": {
     "type": "enum",
-    "description": "Represents possible actions on payment transaction.\n\n    The following actions are possible:\n    CHARGE - Represents the charge action.\n    REFUND - Represents a refund action.\n    VOID - Represents a void action.",
+    "description": "Represents possible actions on payment transaction.\n\n    The following actions are possible:\n    CHARGE - Represents the charge action.\n    REFUND - Represents a refund action.\n    VOID - Represents a void action. This field will be removed\n    in Saleor 3.14 (Preview Feature). Use `CANCEL` instead.\n    CANCEL - Represents a cancel action. Added in Saleor 3.12.",
     "deprecated": null,
     "message": null,
     "values": {
+      "CANCEL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "CHARGE": {
         "description": null,
         "deprecated": null,
@@ -54862,13 +55986,13 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Event sent when transaction action is requested.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
-    "deprecated": null,
-    "message": null,
+    "description": "Event sent when transaction action is requested.\n\nAdded in Saleor 3.4.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TransactionChargeRequested`, `TransactionRefundRequested`, `TransactionCancelationRequested` instead.",
+    "deprecated": "3.14",
+    "message": "Event sent when transaction action is requested.\n\nAdded in Saleor 3.4.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TransactionChargeRequested`, `TransactionRefundRequested`, `TransactionCancelationRequested` instead.",
     "fields": {
       "action": {
         "type": "TransactionAction!",
-        "description": "Requested action data.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Requested action data.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -54896,7 +56020,113 @@
       },
       "transaction": {
         "type": "TransactionItem",
-        "description": "Look up a transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Look up a transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionCancelationRequested": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when transaction cancelation is requested.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "action": {
+        "type": "TransactionAction!",
+        "description": "Requested action data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": "Look up a transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionChargeRequested": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when transaction charge is requested.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "action": {
+        "type": "TransactionAction!",
+        "description": "Requested action data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": "Look up a transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -54913,7 +56143,7 @@
   "TransactionCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create transaction for checkout or order. Requires the following permissions: AUTHENTICATED_APP and HANDLE_PAYMENTS.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Create transaction for checkout or order.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54993,6 +56223,11 @@
         "description": null,
         "deprecated": null,
         "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -55005,6 +56240,13 @@
       "amountAuthorized": {
         "type": "MoneyInput",
         "description": "Amount authorized by this transaction.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "amountCanceled": {
+        "type": "MoneyInput",
+        "description": "Amount canceled by this transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -55025,14 +56267,28 @@
       },
       "amountVoided": {
         "type": "MoneyInput",
-        "description": "Amount voided by this transaction.",
-        "deprecated": null,
-        "message": null,
+        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
+        "deprecated": "3.14",
+        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
         "default": null
       },
       "availableActions": {
         "type": "[TransactionActionEnum!]",
         "description": "List of all possible actions for the transaction",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "externalUrl": {
+        "type": "String",
+        "description": "The url that will allow to redirect user to payment provider page with transaction event details.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "message": {
+        "type": "String",
+        "description": "The message of the transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -55044,6 +56300,13 @@
         "message": null,
         "default": null
       },
+      "name": {
+        "type": "String",
+        "description": "Payment name of the transaction.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "privateMetadata": {
         "type": "[MetadataInput!]",
         "description": "Payment private metadata.",
@@ -55051,25 +56314,32 @@
         "message": null,
         "default": null
       },
-      "reference": {
+      "pspReference": {
         "type": "String",
-        "description": "Reference of the transaction.",
+        "description": "PSP Reference of the transaction. \n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
+        "default": null
+      },
+      "reference": {
+        "type": "String",
+        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
+        "deprecated": "3.14",
+        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
         "default": null
       },
       "status": {
-        "type": "String!",
-        "description": "Status of the transaction.",
-        "deprecated": null,
-        "message": null,
+        "type": "String",
+        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
+        "deprecated": "3.14",
+        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
         "default": null
       },
       "type": {
-        "type": "String!",
-        "description": "Payment type used for this transaction.",
-        "deprecated": null,
-        "message": null,
+        "type": "String",
+        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
+        "deprecated": "3.14",
+        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
         "default": null
       }
     }
@@ -55083,9 +56353,30 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "amount": {
+        "type": "Money!",
+        "description": "The amount related to this event.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "createdAt": {
         "type": "DateTime!",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the transaction event.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "externalUrl": {
+        "type": "String!",
+        "description": "The url that will allow to redirect user to payment provider page with transaction details.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55097,9 +56388,23 @@
         "message": null,
         "arguments": {}
       },
+      "message": {
+        "type": "String!",
+        "description": "Message related to the transaction's event.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "name": {
         "type": "String",
         "description": "Name of the transaction's event.",
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `message` instead.",
+        "arguments": {}
+      },
+      "pspReference": {
+        "type": "String!",
+        "description": "PSP reference of transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55107,13 +56412,20 @@
       "reference": {
         "type": "String!",
         "description": "Reference of transaction's event.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `pspReference` instead.",
         "arguments": {}
       },
       "status": {
-        "type": "TransactionStatus!",
+        "type": "TransactionStatus",
         "description": "Status of transaction's event.",
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `type` instead.",
+        "arguments": {}
+      },
+      "type": {
+        "type": "TransactionEventTypeEnum",
+        "description": "The type of action related to this event.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55126,26 +56438,228 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "message": {
+        "type": "String",
+        "description": "The message related to the event.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "name": {
         "type": "String",
-        "description": "Name of the transaction.",
+        "description": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
+        "deprecated": "3.14",
+        "message": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
+        "default": null
+      },
+      "pspReference": {
+        "type": "String",
+        "description": "PSP Reference related to this action.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "reference": {
         "type": "String",
-        "description": "Reference of the transaction.",
-        "deprecated": null,
-        "message": null,
+        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
+        "deprecated": "3.14",
+        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
         "default": null
       },
       "status": {
-        "type": "TransactionStatus!",
-        "description": "Current status of the payment transaction.",
+        "type": "TransactionStatus",
+        "description": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Status will be calculated by Saleor.",
+        "deprecated": "3.14",
+        "message": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Status will be calculated by Saleor.",
+        "default": null
+      }
+    }
+  },
+  "TransactionEventReport": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "alreadyProcessed": {
+        "type": "Boolean",
+        "description": "Defines if the reported event hasn't been processed earlier.",
         "deprecated": null,
         "message": null,
-        "default": null
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[TransactionEventReportError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": "The transaction related to the reported event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transactionEvent": {
+        "type": "TransactionEvent",
+        "description": "The event assigned to this report. if `alreadyProcessed` is set to `true`, the previously processed event will be returned.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionEventReportError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "TransactionEventReportErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionEventReportErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ALREADY_EXISTS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INCORRECT_DETAILS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "TransactionEventTypeEnum": {
+    "type": "enum",
+    "description": "Represents possible event types.\n\n    Added in Saleor 3.12.\n\n    The following types are possible:\n    AUTHORIZATION_SUCCESS - represents success authorization.\n    AUTHORIZATION_FAILURE - represents failure authorization.\n    AUTHORIZATION_ADJUSTMENT - represents authorization adjustment.\n    AUTHORIZATION_REQUEST - represents authorization request.\n    CHARGE_SUCCESS - represents success charge.\n    CHARGE_FAILURE - represents failure charge.\n    CHARGE_BACK - represents chargeback.\n    CHARGE_REQUEST - represents charge request.\n    REFUND_SUCCESS - represents success refund.\n    REFUND_FAILURE - represents failure refund.\n    REFUND_REVERSE - represents reverse refund.\n    REFUND_REQUEST - represents refund request.\n    CANCEL_SUCCESS - represents success cancel.\n    CANCEL_FAILURE - represents failure cancel.\n    CANCEL_REQUEST - represents cancel request.\n    INFO - represents info event.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "AUTHORIZATION_ADJUSTMENT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "AUTHORIZATION_FAILURE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "AUTHORIZATION_REQUEST": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "AUTHORIZATION_SUCCESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CANCEL_FAILURE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CANCEL_REQUEST": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CANCEL_SUCCESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHARGE_BACK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHARGE_FAILURE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHARGE_REQUEST": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHARGE_SUCCESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INFO": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REFUND_FAILURE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REFUND_REQUEST": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REFUND_REVERSE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REFUND_SUCCESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -55166,9 +56680,37 @@
         "message": null,
         "arguments": {}
       },
+      "authorizePendingAmount": {
+        "type": "Money!",
+        "description": "Total amount of ongoing authorization requests for the transaction.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "authorizedAmount": {
         "type": "Money!",
         "description": "Total amount authorized for this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "cancelPendingAmount": {
+        "type": "Money!",
+        "description": "Total amount of ongoing cancel requests for the transaction.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "canceledAmount": {
+        "type": "Money!",
+        "description": "Total amount canceled for this payment.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "chargePendingAmount": {
+        "type": "Money!",
+        "description": "Total amount of ongoing charge requests for the transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55187,6 +56729,13 @@
         "message": null,
         "arguments": {}
       },
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the transaction.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "events": {
         "type": "[TransactionEvent!]!",
         "description": "List of all transaction's events.",
@@ -55194,9 +56743,23 @@
         "message": null,
         "arguments": {}
       },
+      "externalUrl": {
+        "type": "String!",
+        "description": "The url that will allow to redirect user to payment provider page with transaction details.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "id": {
         "type": "ID!",
         "description": "The ID of the object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String!",
+        "description": "Message related to the transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55245,6 +56808,13 @@
         "message": null,
         "arguments": {}
       },
+      "name": {
+        "type": "String!",
+        "description": "Name of the transaction.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "order": {
         "type": "Order",
         "description": "The related order.\n\nAdded in Saleor 3.6.",
@@ -55289,9 +56859,23 @@
           }
         }
       },
+      "pspReference": {
+        "type": "String!",
+        "description": "PSP reference of transaction.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "reference": {
         "type": "String!",
         "description": "Reference of transaction.",
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `pspReference` instead.",
+        "arguments": {}
+      },
+      "refundPendingAmount": {
+        "type": "Money!",
+        "description": "Total amount of ongoing refund requests for the transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55306,22 +56890,22 @@
       "status": {
         "type": "String!",
         "description": "Status of transaction.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
         "arguments": {}
       },
       "type": {
         "type": "String!",
         "description": "Type of transaction.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `name` or `message` instead.",
         "arguments": {}
       },
       "voidedAmount": {
         "type": "Money!",
         "description": "Total amount voided for this payment.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "3.14",
+        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `canceledAmount` instead.",
         "arguments": {}
       }
     }
@@ -55430,10 +57014,63 @@
       }
     }
   },
+  "TransactionRefundRequested": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when transaction refund is requested.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "action": {
+        "type": "TransactionAction!",
+        "description": "Requested action data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": "Look up a transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "TransactionRequestAction": {
     "type": "object",
     "interfaces": [],
-    "description": "Request an action for payment transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS, MANAGE_ORDERS.",
+    "description": "Request an action for payment transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55513,7 +57150,7 @@
   },
   "TransactionStatus": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": "Represents a status of payment transaction.\n\n    The following statuses are possible:\n    SUCCESS - Represents a sucess action.\n    FAILURE - Represents a failure action.\n    PENDING - Represents a pending action.",
     "deprecated": null,
     "message": null,
     "values": {
@@ -55537,7 +57174,7 @@
   "TransactionUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create transaction for checkout or order. Requires the following permissions: AUTHENTICATED_APP and HANDLE_PAYMENTS.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Create transaction for checkout or order.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55617,6 +57254,11 @@
         "description": null,
         "deprecated": null,
         "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -55629,6 +57271,13 @@
       "amountAuthorized": {
         "type": "MoneyInput",
         "description": "Amount authorized by this transaction.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "amountCanceled": {
+        "type": "MoneyInput",
+        "description": "Amount canceled by this transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -55649,14 +57298,28 @@
       },
       "amountVoided": {
         "type": "MoneyInput",
-        "description": "Amount voided by this transaction.",
-        "deprecated": null,
-        "message": null,
+        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
+        "deprecated": "3.14",
+        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
         "default": null
       },
       "availableActions": {
         "type": "[TransactionActionEnum!]",
         "description": "List of all possible actions for the transaction",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "externalUrl": {
+        "type": "String",
+        "description": "The url that will allow to redirect user to payment provider page with transaction event details.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "message": {
+        "type": "String",
+        "description": "The message of the transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -55668,6 +57331,13 @@
         "message": null,
         "default": null
       },
+      "name": {
+        "type": "String",
+        "description": "Payment name of the transaction.\n\nAdded in Saleor 3.13.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "privateMetadata": {
         "type": "[MetadataInput!]",
         "description": "Payment private metadata.",
@@ -55675,25 +57345,32 @@
         "message": null,
         "default": null
       },
-      "reference": {
+      "pspReference": {
         "type": "String",
-        "description": "Reference of the transaction.",
+        "description": "PSP Reference of the transaction. \n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
+        "default": null
+      },
+      "reference": {
+        "type": "String",
+        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
+        "deprecated": "3.14",
+        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
         "default": null
       },
       "status": {
         "type": "String",
-        "description": "Status of the transaction.",
-        "deprecated": null,
-        "message": null,
+        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
+        "deprecated": "3.14",
+        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
         "default": null
       },
       "type": {
         "type": "String",
-        "description": "Payment type used for this transaction.",
-        "deprecated": null,
-        "message": null,
+        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
+        "deprecated": "3.14",
+        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
         "default": null
       }
     }
@@ -56810,6 +58487,16 @@
         "default": null
       }
     }
+  },
+  "UserOrApp": {
+    "type": "union",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "User",
+      "App"
+    ]
   },
   "UserPermission": {
     "type": "object",
@@ -60468,9 +62155,9 @@
         "message": null
       },
       "TRANSACTION_ACTION_REQUEST": {
-        "description": "An action requested for transaction.",
-        "deprecated": null,
-        "message": null
+        "description": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead.",
+        "deprecated": "3.14",
+        "message": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead."
       },
       "TRANSACTION_ITEM_METADATA_UPDATED": {
         "description": "Transaction item metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -61096,12 +62783,27 @@
         "message": null
       },
       "TRANSACTION_ACTION_REQUEST": {
-        "description": "An action requested for transaction.",
+        "description": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead.",
+        "deprecated": "3.14",
+        "message": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead."
+      },
+      "TRANSACTION_CANCELATION_REQUESTED": {
+        "description": "Event called when cancel has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_CHARGE_REQUESTED": {
+        "description": "Event called when charge has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null
       },
       "TRANSACTION_ITEM_METADATA_UPDATED": {
         "description": "Transaction item metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_REFUND_REQUESTED": {
+        "description": "Event called when refund has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null
       },
@@ -61220,6 +62922,21 @@
       },
       "SHIPPING_LIST_METHODS_FOR_CHECKOUT": {
         "description": "Fetch external shipping methods for checkout.",
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_CANCELATION_REQUESTED": {
+        "description": "Event called when cancel has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_CHARGE_REQUESTED": {
+        "description": "Event called when charge has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_REFUND_REQUESTED": {
+        "description": "Event called when refund has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null
       }

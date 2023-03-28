@@ -1,7 +1,570 @@
 [
   {
-    "diff": "union_type_new",
-    "union": "_Entity",
-    "type": "Order"
+    "diff": "type_new",
+    "type": "CustomerBulkResult"
+  },
+  {
+    "diff": "type_new",
+    "type": "CustomerBulkUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "CustomerBulkUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "CustomerBulkUpdateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "CustomerBulkUpdateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "Decimal"
+  },
+  {
+    "diff": "type_new",
+    "type": "MarkAsPaidStrategyEnum"
+  },
+  {
+    "diff": "type_new",
+    "type": "MediaInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundCreate"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundCreateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundCreateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundCreateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundUpdateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundUpdateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantedRefund"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductBulkCreate"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductBulkCreateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductBulkCreateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductBulkCreateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductBulkResult"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductChannelListingCreateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionCancelationRequested"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionChargeRequested"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionEventReport"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionEventReportError"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionEventReportErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionEventTypeEnum"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionRefundRequested"
+  },
+  {
+    "diff": "type_new",
+    "type": "UserOrApp"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "TransactionActionRequest",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "customerBulkUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "orderGrantRefundCreate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "orderGrantRefundUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "productBulkCreate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "transactionEventReport"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "grantedRefunds"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalAuthorizePending"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalCancelPending"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalCanceled"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalChargePending"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalCharged"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalGrantedRefund"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalRefundPending"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalRefunded"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "totalRemainingGrant"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderSettings",
+    "field": "markAsPaidStrategy"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderSettingsInput",
+    "field": "markAsPaidStrategy"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionCreateInput",
+    "field": "amountCanceled"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionCreateInput",
+    "field": "externalUrl"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionCreateInput",
+    "field": "message"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionCreateInput",
+    "field": "name"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionCreateInput",
+    "field": "pspReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEvent",
+    "field": "amount"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEvent",
+    "field": "createdBy"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEvent",
+    "field": "externalUrl"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEvent",
+    "field": "message"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEvent",
+    "field": "pspReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEvent",
+    "field": "type"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEventInput",
+    "field": "message"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEventInput",
+    "field": "pspReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "authorizePendingAmount"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "cancelPendingAmount"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "canceledAmount"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "chargePendingAmount"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "createdBy"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "externalUrl"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "message"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "name"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "pspReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "refundPendingAmount"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionUpdateInput",
+    "field": "amountCanceled"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionUpdateInput",
+    "field": "externalUrl"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionUpdateInput",
+    "field": "message"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionUpdateInput",
+    "field": "name"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionUpdateInput",
+    "field": "pspReference"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Order",
+    "field": "totalCaptured",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "OrderEvent",
+    "field": "status",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "amountVoided",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "reference",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "status",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "type",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEvent",
+    "field": "name",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEvent",
+    "field": "reference",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEvent",
+    "field": "status",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEventInput",
+    "field": "name",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEventInput",
+    "field": "reference",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEventInput",
+    "field": "status",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "reference",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "status",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "type",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "voidedAmount",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "amountVoided",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "reference",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "status",
+    "version": "3.14"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "type",
+    "version": "3.14"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderErrorCode",
+    "value": "TRANSACTION_ERROR"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_CANCEL_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_CHARGE_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_MARK_AS_PAID_FAILED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionActionEnum",
+    "value": "CANCEL"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionCreateErrorCode",
+    "value": "UNIQUE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionUpdateErrorCode",
+    "value": "UNIQUE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "TRANSACTION_CANCELATION_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "TRANSACTION_CHARGE_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "TRANSACTION_REFUND_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "TRANSACTION_CANCELATION_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "TRANSACTION_CHARGE_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "TRANSACTION_REFUND_REQUESTED"
+  },
+  {
+    "diff": "enum_value_deleted",
+    "enum": "OrderErrorCode",
+    "value": "MISSING_TRANSACTION_ACTION_REQUEST_WEBHOOK"
+  },
+  {
+    "diff": "enum_value_deprecated",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_CAPTURE_REQUESTED",
+    "version": "3.14"
+  },
+  {
+    "diff": "enum_value_deprecated",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_VOID_REQUESTED",
+    "version": "3.14"
+  },
+  {
+    "diff": "enum_value_deprecated",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "TRANSACTION_ACTION_REQUEST",
+    "version": "3.14"
+  },
+  {
+    "diff": "enum_value_deprecated",
+    "enum": "WebhookEventTypeEnum",
+    "value": "TRANSACTION_ACTION_REQUEST",
+    "version": "3.14"
   }
 ]
