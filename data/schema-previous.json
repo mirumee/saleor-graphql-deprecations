@@ -7536,6 +7536,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "authorizeStatus": {
+        "type": "CheckoutAuthorizeStatusEnum!",
+        "description": "The authorize status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "availableCollectionPoints": {
         "type": "[Warehouse!]!",
         "description": "Collection points that can be used for this order.\n\nAdded in Saleor 3.1.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -7567,6 +7574,13 @@
       "channel": {
         "type": "Channel!",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "chargeStatus": {
+        "type": "CheckoutChargeStatusEnum!",
+        "description": "The charge status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -7644,8 +7658,8 @@
       "lastChange": {
         "type": "DateTime!",
         "description": null,
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use `updatedAt` instead.",
         "arguments": {}
       },
       "lines": {
@@ -7799,6 +7813,13 @@
         "message": null,
         "arguments": {}
       },
+      "totalBalance": {
+        "type": "Money!",
+        "description": "The difference between the paid and the checkout total amount.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "totalPrice": {
         "type": "TaxedMoney!",
         "description": "The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.",
@@ -7816,6 +7837,13 @@
       "translatedDiscountName": {
         "type": "String",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "updatedAt": {
+        "type": "DateTime!",
+        "description": "Time of last modification of the given checkout.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -7895,6 +7923,29 @@
       }
     }
   },
+  "CheckoutAuthorizeStatusEnum": {
+    "type": "enum",
+    "description": "Determine a current authorize status for checkout.\n\n    We treat the checkout as fully authorized when the sum of authorized and charged\n    funds cover the checkout.total.\n    We treat the checkout as partially authorized when the sum of authorized and charged\n    funds covers only part of the checkout.total\n    We treat the checkout as not authorized when the sum of authorized and charged funds\n    is 0.\n\n    NONE - the funds are not authorized\n    PARTIAL - the cover funds don't cover fully the checkout's total\n    FULL - the cover funds covers the checkout's total",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "FULL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NONE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PARTIAL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "CheckoutBillingAddressUpdate": {
     "type": "object",
     "interfaces": [],
@@ -7922,6 +7973,34 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "CheckoutChargeStatusEnum": {
+    "type": "enum",
+    "description": "Determine the current charge status for the checkout.\n\n    The checkout is considered overcharged when the sum of the transactionItem's charge\n    amounts exceeds the value of `checkout.total`.\n    If the sum of the transactionItem's charge amounts equals\n    `checkout.total`, we consider the checkout to be fully charged.\n    If the sum of the transactionItem's charge amounts covers a part of the\n    `checkout.total`, we treat the checkout as partially charged.\n\n\n    NONE - the funds are not charged.\n    PARTIAL - the funds that are charged don't cover the checkout's total\n    FULL - the funds that are charged fully cover the checkout's total\n    OVERCHARGED - the charged funds are bigger than checkout's total",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "FULL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NONE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "OVERCHARGED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PARTIAL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -8480,8 +8559,22 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "authorizeStatus": {
+        "type": "[CheckoutAuthorizeStatusEnum!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "channels": {
         "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "chargeStatus": {
+        "type": "[CheckoutChargeStatusEnum!]",
         "description": null,
         "deprecated": null,
         "message": null,
@@ -8510,6 +8603,13 @@
       },
       "search": {
         "type": "String",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "updatedAt": {
+        "type": "DateRangeInput",
         "description": null,
         "deprecated": null,
         "message": null,
@@ -8557,6 +8657,52 @@
       "shippingMethods": {
         "type": "[ShippingMethod!]",
         "description": "Shipping methods that can be used with this checkout.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutFullyPaid": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when checkout is fully paid with transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "checkout": {
+        "type": "Checkout",
+        "description": "The checkout the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18971,6 +19117,12 @@
       "User"
     ]
   },
+  "JSON": {
+    "type": "scalar",
+    "description": null,
+    "deprecated": null,
+    "message": null
+  },
   "JSONString": {
     "type": "scalar",
     "description": null,
@@ -28926,6 +29078,35 @@
           }
         }
       },
+      "paymentGatewayInitialize": {
+        "type": "PaymentGatewayInitialize",
+        "description": "Initializes a payment gateway session. It triggers the webhook `PAYMENT_GATEWAY_INITIALIZE_SESSION`, to the requested `paymentGateways`. If `paymentGateways` is not provided, the webhook will be send to all subscribed payment gateways.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "amount": {
+            "type": "PositiveDecimal",
+            "description": "The amount requested for initializing the payment gateway. If not provided, the difference between checkout.total - transactions that are already processed will be send.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "ID!",
+            "description": "The ID of the checkout or order.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "paymentGateways": {
+            "type": "[PaymentGatewayToInitialize!]",
+            "description": "List of payment gateways to initialize.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "paymentInitialize": {
         "type": "PaymentInitialize",
         "description": "Initializes payment process when it is required by gateway.",
@@ -30886,6 +31067,64 @@
           "type": {
             "type": "TransactionEventTypeEnum!",
             "description": "Current status of the event to report.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "transactionInitialize": {
+        "type": "TransactionInitialize",
+        "description": "Initializes a transaction session. It triggers the webhook `TRANSACTION_INITIALIZE_SESSION`, to the requested `paymentGateways`. \n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "action": {
+            "type": "TransactionFlowStrategyEnum",
+            "description": "The expected action called for the transaction. By default, the `channel.defaultTransactionFlowStrategy` will be used. The field can be used only by app that has `HANDLE_PAYMENTS` permission.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "amount": {
+            "type": "PositiveDecimal",
+            "description": "The amount requested for initializing the payment gateway. If not provided, the difference between checkout.total - transactions that are already processed will be send.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "ID!",
+            "description": "The ID of the checkout or order.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "paymentGateway": {
+            "type": "PaymentGatewayToInitialize!",
+            "description": "Payment gateway used to initialize the transaction.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "transactionProcess": {
+        "type": "TransactionProcess",
+        "description": "Processes a transaction session. It triggers the webhook `TRANSACTION_PROCESS_SESSION`, to the assigned `paymentGateways`. \n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "data": {
+            "type": "JSON",
+            "description": "The data that will be passed to the payment gateway.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "ID!",
+            "description": "The ID of the transaction to process.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -35094,6 +35333,16 @@
       }
     }
   },
+  "OrderOrCheckout": {
+    "type": "union",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "Checkout",
+      "Order"
+    ]
+  },
   "OrderOriginEnum": {
     "type": "enum",
     "description": "An enumeration.",
@@ -35349,6 +35598,13 @@
         "message": null,
         "arguments": {}
       },
+      "defaultTransactionFlowStrategy": {
+        "type": "TransactionFlowStrategyEnum!",
+        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "markAsPaidStrategy": {
         "type": "MarkAsPaidStrategyEnum!",
         "description": "Determine what strategy will be used to mark the order as paid. Based on the chosen option, the proper object will be created and attached to the order when it's manually marked as paid.\n`PAYMENT_FLOW` - [default option] creates the `Payment` object.\n`TRANSACTION_FLOW` - creates the `TransactionItem` object.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -35417,6 +35673,13 @@
       "automaticallyFulfillNonShippableGiftCard": {
         "type": "Boolean",
         "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By defualt set to True.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "defaultTransactionFlowStrategy": {
+        "type": "TransactionFlowStrategyEnum",
+        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -38430,6 +38693,247 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayConfig": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "data": {
+        "type": "JSON",
+        "description": "The JSON data required to initialize the payment gateway.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[PaymentGatewayConfigError!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "String!",
+        "description": "The app identifier.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayConfigError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PaymentGatewayConfigErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayConfigErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PaymentGatewayInitialize": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Initializes a payment gateway session. It triggers the webhook `PAYMENT_GATEWAY_INITIALIZE_SESSION`, to the requested `paymentGateways`. If `paymentGateways` is not provided, the webhook will be send to all subscribed payment gateways.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[PaymentGatewayInitializeError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "gatewayConfigs": {
+        "type": "[PaymentGatewayConfig!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayInitializeError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PaymentGatewayInitializeErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayInitializeErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PaymentGatewayInitializeSession": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when user wants to initialize the payment gateway.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "amount": {
+        "type": "PositiveDecimal",
+        "description": "Amount requested for initializing the payment gateway.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "data": {
+        "type": "JSON",
+        "description": "Payment gateway data in JSON format, recieved from storefront.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "sourceObject": {
+        "type": "OrderOrCheckout!",
+        "description": "Checkout or order",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayToInitialize": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "data": {
+        "type": "JSON",
+        "description": "The data that will be passed to the payment gateway.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "id": {
+        "type": "String!",
+        "description": "The identifier of the payment gateway app to initialize.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -56577,10 +57081,15 @@
   },
   "TransactionEventTypeEnum": {
     "type": "enum",
-    "description": "Represents possible event types.\n\n    Added in Saleor 3.12.\n\n    The following types are possible:\n    AUTHORIZATION_SUCCESS - represents success authorization.\n    AUTHORIZATION_FAILURE - represents failure authorization.\n    AUTHORIZATION_ADJUSTMENT - represents authorization adjustment.\n    AUTHORIZATION_REQUEST - represents authorization request.\n    CHARGE_SUCCESS - represents success charge.\n    CHARGE_FAILURE - represents failure charge.\n    CHARGE_BACK - represents chargeback.\n    CHARGE_REQUEST - represents charge request.\n    REFUND_SUCCESS - represents success refund.\n    REFUND_FAILURE - represents failure refund.\n    REFUND_REVERSE - represents reverse refund.\n    REFUND_REQUEST - represents refund request.\n    CANCEL_SUCCESS - represents success cancel.\n    CANCEL_FAILURE - represents failure cancel.\n    CANCEL_REQUEST - represents cancel request.\n    INFO - represents info event.",
+    "description": "Represents possible event types.\n\n    Added in Saleor 3.12.\n\n    The following types are possible:\n    AUTHORIZATION_SUCCESS - represents success authorization.\n    AUTHORIZATION_FAILURE - represents failure authorization.\n    AUTHORIZATION_ADJUSTMENT - represents authorization adjustment.\n    AUTHORIZATION_REQUEST - represents authorization request.\n    AUTHORIZATION_ACTION_REQUIRED - represents authorization that needs\n    additional actions from the customer.\n    CHARGE_ACTION_REQUIRED - represents charge that needs\n    additional actions from the customer.\n    CHARGE_SUCCESS - represents success charge.\n    CHARGE_FAILURE - represents failure charge.\n    CHARGE_BACK - represents chargeback.\n    CHARGE_REQUEST - represents charge request.\n    REFUND_SUCCESS - represents success refund.\n    REFUND_FAILURE - represents failure refund.\n    REFUND_REVERSE - represents reverse refund.\n    REFUND_REQUEST - represents refund request.\n    CANCEL_SUCCESS - represents success cancel.\n    CANCEL_FAILURE - represents failure cancel.\n    CANCEL_REQUEST - represents cancel request.\n    INFO - represents info event.",
     "deprecated": null,
     "message": null,
     "values": {
+      "AUTHORIZATION_ACTION_REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "AUTHORIZATION_ADJUSTMENT": {
         "description": null,
         "deprecated": null,
@@ -56612,6 +57121,11 @@
         "message": null
       },
       "CANCEL_SUCCESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHARGE_ACTION_REQUIRED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -56660,6 +57174,188 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "TransactionFlowStrategyEnum": {
+    "type": "enum",
+    "description": "Determine the transaction flow strategy.\n\n    AUTHORIZATION - the processed transaction should be only authorized\n    CHARGE - the processed transaction should be charged.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "AUTHORIZATION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHARGE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "TransactionInitialize": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Initializes a transaction session. It triggers the webhook `TRANSACTION_INITIALIZE_SESSION`, to the requested `paymentGateways`. \n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "data": {
+        "type": "JSON",
+        "description": "The JSON data required to finalize the payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[TransactionInitializeError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": "The initialized transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transactionEvent": {
+        "type": "TransactionEvent",
+        "description": "The event created for the initialized transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionInitializeError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "TransactionInitializeErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionInitializeErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "TransactionInitializeSession": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when user starts processing the payment.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "action": {
+        "type": "TransactionProcessAction!",
+        "description": "Action to proceed for the transaction",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "data": {
+        "type": "JSON",
+        "description": "Payment gateway data in JSON format, recieved from storefront.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "merchantReference": {
+        "type": "String!",
+        "description": "Merchant reference assigned to this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "sourceObject": {
+        "type": "OrderOrCheckout!",
+        "description": "Checkout or order",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem!",
+        "description": "Look up a transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -57011,6 +57707,215 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "TransactionProcess": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Processes a transaction session. It triggers the webhook `TRANSACTION_PROCESS_SESSION`, to the assigned `paymentGateways`. \n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "data": {
+        "type": "JSON",
+        "description": "The json data required to finalize the payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[TransactionProcessError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": "The processed transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transactionEvent": {
+        "type": "TransactionEvent",
+        "description": "The event created for the processed transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionProcessAction": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "actionType": {
+        "type": "TransactionFlowStrategyEnum!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "amount": {
+        "type": "PositiveDecimal!",
+        "description": "Transaction amount to process.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "currency": {
+        "type": "String!",
+        "description": "Currency of the amount.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionProcessError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "TransactionProcessErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionProcessErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MISSING_PAYMENT_APP": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MISSING_PAYMENT_APP_RELATION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_ALREADY_PROCESSED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "TransactionProcessSession": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when user has additional payment action to process.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "action": {
+        "type": "TransactionProcessAction!",
+        "description": "Action to proceed for the transaction",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "data": {
+        "type": "JSON",
+        "description": "Payment gateway data in JSON format, recieved from storefront.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "merchantReference": {
+        "type": "String!",
+        "description": "Merchant reference assigned to this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "sourceObject": {
+        "type": "OrderOrCheckout!",
+        "description": "Checkout or order",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem!",
+        "description": "Look up a transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -61764,6 +62669,11 @@
         "deprecated": null,
         "message": null
       },
+      "CHECKOUT_FULLY_PAID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "CHECKOUT_METADATA_UPDATED": {
         "description": "A checkout metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
@@ -62342,6 +63252,11 @@
         "deprecated": null,
         "message": null
       },
+      "CHECKOUT_FULLY_PAID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "CHECKOUT_METADATA_UPDATED": {
         "description": "A checkout metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
@@ -62597,6 +63512,11 @@
         "deprecated": null,
         "message": null
       },
+      "PAYMENT_GATEWAY_INITIALIZE_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PAYMENT_LIST_GATEWAYS": {
         "description": "Listing available payment gateways.",
         "deprecated": null,
@@ -62797,8 +63717,18 @@
         "deprecated": null,
         "message": null
       },
+      "TRANSACTION_INITIALIZE_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "TRANSACTION_ITEM_METADATA_UPDATED": {
         "description": "Transaction item metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_PROCESS_SESSION": {
+        "description": null,
         "deprecated": null,
         "message": null
       },
@@ -62900,6 +63830,11 @@
         "deprecated": null,
         "message": null
       },
+      "PAYMENT_GATEWAY_INITIALIZE_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PAYMENT_LIST_GATEWAYS": {
         "description": "Listing available payment gateways.",
         "deprecated": null,
@@ -62932,6 +63867,16 @@
       },
       "TRANSACTION_CHARGE_REQUESTED": {
         "description": "Event called when charge has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_INITIALIZE_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "TRANSACTION_PROCESS_SESSION": {
+        "description": null,
         "deprecated": null,
         "message": null
       },
@@ -63049,6 +63994,11 @@
         "message": null
       },
       "CHECKOUT_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHECKOUT_FULLY_PAID": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -63808,8 +64758,8 @@
       "ProductMedia",
       "Category",
       "Collection",
-      "PageType",
-      "Order"
+      "Order",
+      "PageType"
     ]
   },
   "_Service": {
