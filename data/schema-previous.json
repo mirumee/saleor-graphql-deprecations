@@ -2592,7 +2592,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort apps.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -3372,7 +3372,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort attribute choices.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -4149,7 +4149,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort attributes.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -6514,7 +6514,7 @@
       },
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort categories.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -9337,7 +9337,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort checkouts.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -10581,7 +10581,7 @@
       },
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort collections.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -14810,7 +14810,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort attempts.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -14943,7 +14943,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort deliveries.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -15336,7 +15336,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort export file.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -18088,7 +18088,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort gift cards.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -23586,7 +23586,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort media.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -24746,7 +24746,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort menu items.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -24992,7 +24992,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort menus.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -35801,7 +35801,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort orders.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36993,7 +36993,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort pages.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -37728,7 +37728,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort page types.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -39790,7 +39790,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort permission group.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -40191,7 +40191,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort plugins.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -44298,7 +44298,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort product types.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -46099,7 +46099,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort productVariants.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -50259,7 +50259,7 @@
       },
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort sales.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -55116,7 +55116,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort tax classes.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -59487,7 +59487,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort users.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -60917,7 +60917,7 @@
       },
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort vouchers.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -61862,7 +61862,7 @@
     "fields": {
       "direction": {
         "type": "OrderDirection!",
-        "description": "Specifies the direction in which to sort products.",
+        "description": "Specifies the direction in which to sort warehouses.",
         "deprecated": null,
         "message": null,
         "default": null
