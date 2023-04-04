@@ -3034,14 +3034,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -3200,14 +3200,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -3236,14 +3236,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -5858,14 +5858,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -5916,14 +5916,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -6082,14 +6082,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -9619,14 +9619,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -14604,14 +14604,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -37261,14 +37261,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -43666,14 +43666,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -43839,14 +43839,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -46668,14 +46668,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -46711,14 +46711,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -46804,14 +46804,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -46868,14 +46868,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -46991,14 +46991,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47041,14 +47041,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47127,14 +47127,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47177,14 +47177,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47235,14 +47235,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47278,14 +47278,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47343,14 +47343,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47422,14 +47422,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47465,14 +47465,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47508,14 +47508,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47623,14 +47623,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47680,14 +47680,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47781,14 +47781,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47890,14 +47890,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -47940,14 +47940,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48005,14 +48005,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48063,14 +48063,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48128,14 +48128,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48229,14 +48229,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48322,7 +48322,7 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48336,7 +48336,7 @@
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48386,14 +48386,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48436,14 +48436,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48515,14 +48515,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48601,14 +48601,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48651,14 +48651,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48716,14 +48716,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48774,14 +48774,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48839,14 +48839,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48941,7 +48941,7 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48955,7 +48955,7 @@
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -49049,14 +49049,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -49128,14 +49128,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -49373,14 +49373,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -49416,14 +49416,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -49568,14 +49568,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -49640,14 +49640,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -51283,14 +51283,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -58862,14 +58862,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -58954,14 +58954,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -59076,14 +59076,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -59842,14 +59842,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -59892,14 +59892,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -60072,14 +60072,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -60151,14 +60151,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -61309,14 +61309,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -62068,14 +62068,14 @@
           },
           "first": {
             "type": "Int",
-            "description": "Return the first n elements from the list.",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "last": {
             "type": "Int",
-            "description": "Return the last n elements from the list.",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
             "deprecated": null,
             "message": null,
             "default": null
