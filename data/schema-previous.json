@@ -25226,6 +25226,12 @@
       }
     }
   },
+  "Minute": {
+    "type": "scalar",
+    "description": "The `Minute` scalar type represents number of minutes by integer value.",
+    "deprecated": null,
+    "message": null
+  },
   "Money": {
     "type": "object",
     "interfaces": [],
@@ -33862,6 +33868,11 @@
         "deprecated": null,
         "message": null
       },
+      "EXPIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "EXTERNAL_SERVICE_NOTIFICATION": {
         "description": null,
         "deprecated": null,
@@ -34076,6 +34087,52 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "OrderExpired": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when order becomes expired.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "The order the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -35605,6 +35662,13 @@
         "message": null,
         "arguments": {}
       },
+      "expireOrdersAfter": {
+        "type": "Minute",
+        "description": "Expiration time in minutes. Default null - means do not expire any orders.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "markAsPaidStrategy": {
         "type": "MarkAsPaidStrategyEnum!",
         "description": "Determine what strategy will be used to mark the order as paid. Based on the chosen option, the proper object will be created and attached to the order when it's manually marked as paid.\n`PAYMENT_FLOW` - [default option] creates the `Payment` object.\n`TRANSACTION_FLOW` - creates the `TransactionItem` object.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -35680,6 +35744,13 @@
       "defaultTransactionFlowStrategy": {
         "type": "TransactionFlowStrategyEnum",
         "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "expireOrdersAfter": {
+        "type": "Minute",
+        "description": "Expiration time in minutes. Default null - means do not expire any orders. Enter 0 or null to disable.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -35827,6 +35898,11 @@
         "message": null
       },
       "DRAFT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "EXPIRED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -62854,6 +62930,11 @@
         "deprecated": null,
         "message": null
       },
+      "ORDER_EXPIRED": {
+        "description": "An order is expired.",
+        "deprecated": null,
+        "message": null
+      },
       "ORDER_FULFILLED": {
         "description": "An order is fulfilled.",
         "deprecated": null,
@@ -63439,6 +63520,11 @@
       },
       "ORDER_CREATED": {
         "description": "A new order is placed.",
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_EXPIRED": {
+        "description": "An order is expired.",
         "deprecated": null,
         "message": null
       },
@@ -64179,6 +64265,11 @@
         "message": null
       },
       "ORDER_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_EXPIRED": {
         "description": null,
         "deprecated": null,
         "message": null

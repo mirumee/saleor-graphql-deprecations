@@ -1,215 +1,45 @@
 [
   {
     "diff": "type_new",
-    "type": "CheckoutAuthorizeStatusEnum"
+    "type": "Minute"
   },
   {
     "diff": "type_new",
-    "type": "CheckoutChargeStatusEnum"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutFullyPaid"
-  },
-  {
-    "diff": "type_new",
-    "type": "JSON"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderOrCheckout"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayConfig"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayConfigError"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayConfigErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayInitialize"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayInitializeError"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayInitializeErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayInitializeSession"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentGatewayToInitialize"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionFlowStrategyEnum"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionInitialize"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionInitializeError"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionInitializeErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionInitializeSession"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionProcess"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionProcessAction"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionProcessError"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionProcessErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionProcessSession"
-  },
-  {
-    "diff": "field_new",
-    "type": "Checkout",
-    "field": "authorizeStatus"
-  },
-  {
-    "diff": "field_new",
-    "type": "Checkout",
-    "field": "chargeStatus"
-  },
-  {
-    "diff": "field_new",
-    "type": "Checkout",
-    "field": "totalBalance"
-  },
-  {
-    "diff": "field_new",
-    "type": "Checkout",
-    "field": "updatedAt"
-  },
-  {
-    "diff": "field_new",
-    "type": "CheckoutFilterInput",
-    "field": "authorizeStatus"
-  },
-  {
-    "diff": "field_new",
-    "type": "CheckoutFilterInput",
-    "field": "chargeStatus"
-  },
-  {
-    "diff": "field_new",
-    "type": "CheckoutFilterInput",
-    "field": "updatedAt"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "paymentGatewayInitialize"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "transactionInitialize"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "transactionProcess"
+    "type": "OrderExpired"
   },
   {
     "diff": "field_new",
     "type": "OrderSettings",
-    "field": "defaultTransactionFlowStrategy"
+    "field": "expireOrdersAfter"
   },
   {
     "diff": "field_new",
     "type": "OrderSettingsInput",
-    "field": "defaultTransactionFlowStrategy"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "Checkout",
-    "field": "lastChange",
-    "version": "4.0"
+    "field": "expireOrdersAfter"
   },
   {
     "diff": "enum_value_new",
-    "enum": "TransactionEventTypeEnum",
-    "value": "AUTHORIZATION_ACTION_REQUIRED"
+    "enum": "OrderEventsEnum",
+    "value": "EXPIRED"
   },
   {
     "diff": "enum_value_new",
-    "enum": "TransactionEventTypeEnum",
-    "value": "CHARGE_ACTION_REQUIRED"
+    "enum": "OrderStatus",
+    "value": "EXPIRED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "CHECKOUT_FULLY_PAID"
+    "value": "ORDER_EXPIRED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeEnum",
-    "value": "CHECKOUT_FULLY_PAID"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "PAYMENT_GATEWAY_INITIALIZE_SESSION"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "TRANSACTION_INITIALIZE_SESSION"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "TRANSACTION_PROCESS_SESSION"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeSyncEnum",
-    "value": "PAYMENT_GATEWAY_INITIALIZE_SESSION"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeSyncEnum",
-    "value": "TRANSACTION_INITIALIZE_SESSION"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeSyncEnum",
-    "value": "TRANSACTION_PROCESS_SESSION"
+    "value": "ORDER_EXPIRED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookSampleEventTypeEnum",
-    "value": "CHECKOUT_FULLY_PAID"
+    "value": "ORDER_EXPIRED"
   }
 ]
