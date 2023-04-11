@@ -17913,6 +17913,66 @@
       }
     }
   },
+  "GiftCardSent": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when gift card is e-mailed.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "String",
+        "description": "Slug of a channel for which this gift card email was sent.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftCard": {
+        "type": "GiftCard",
+        "description": "The gift card the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "sentToEmail": {
+        "type": "String",
+        "description": "E-mail address to which gift card was sent.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "GiftCardSettings": {
     "type": "object",
     "interfaces": [],
@@ -62850,6 +62910,11 @@
         "deprecated": null,
         "message": null
       },
+      "GIFT_CARD_SENT": {
+        "description": "A gift card has been sent.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
       "GIFT_CARD_STATUS_CHANGED": {
         "description": "A gift card status is changed.",
         "deprecated": null,
@@ -63435,6 +63500,11 @@
       },
       "GIFT_CARD_METADATA_UPDATED": {
         "description": "A gift card metadata is updated.\n\nAdded in Saleor 3.8.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_SENT": {
+        "description": "A gift card has been sent.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null
       },
@@ -64185,6 +64255,11 @@
         "message": null
       },
       "GIFT_CARD_METADATA_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_SENT": {
         "description": null,
         "deprecated": null,
         "message": null

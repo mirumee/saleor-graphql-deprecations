@@ -1,45 +1,21 @@
 [
   {
     "diff": "type_new",
-    "type": "Minute"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderExpired"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderSettings",
-    "field": "expireOrdersAfter"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderSettingsInput",
-    "field": "expireOrdersAfter"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "OrderEventsEnum",
-    "value": "EXPIRED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "OrderStatus",
-    "value": "EXPIRED"
+    "type": "GiftCardSent"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ORDER_EXPIRED"
+    "value": "GIFT_CARD_SENT"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeEnum",
-    "value": "ORDER_EXPIRED"
+    "value": "GIFT_CARD_SENT"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookSampleEventTypeEnum",
-    "value": "ORDER_EXPIRED"
+    "value": "GIFT_CARD_SENT"
   }
 ]
