@@ -45161,6 +45161,13 @@
         "message": null,
         "arguments": {}
       },
+      "path": {
+        "type": "String",
+        "description": "Path to field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "stocks": {
         "type": "[ID!]",
         "description": "List of stocks IDs which causes the error.\n\nAdded in Saleor 3.12.",
