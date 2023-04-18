@@ -1,7 +1,47 @@
 [
   {
     "diff": "field_new",
-    "type": "ProductVariantBulkError",
-    "field": "path"
+    "type": "AccountInput",
+    "field": "metadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "CustomerInput",
+    "field": "metadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "CustomerInput",
+    "field": "privateMetadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "StaffCreateInput",
+    "field": "metadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "StaffCreateInput",
+    "field": "privateMetadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "StaffUpdateInput",
+    "field": "metadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "StaffUpdateInput",
+    "field": "privateMetadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "UserCreateInput",
+    "field": "metadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "UserCreateInput",
+    "field": "privateMetadata"
   }
 ]

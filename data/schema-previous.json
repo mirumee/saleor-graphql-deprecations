@@ -395,6 +395,13 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user metadata.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -13027,9 +13034,23 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user metadata.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "note": {
         "type": "String",
         "description": "A note about the user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user private metadata.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -46703,7 +46724,7 @@
       },
       "address": {
         "type": "Address",
-        "description": "Look up an address by ID.",
+        "description": "Look up an address by ID.\n\nRequires one of the following permissions: MANAGE_USERS, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -53760,9 +53781,23 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user metadata.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "note": {
         "type": "String",
         "description": "A note about the user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user private metadata.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -54203,9 +54238,23 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user metadata.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "note": {
         "type": "String",
         "description": "A note about the user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user private metadata.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -59520,9 +59569,23 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user metadata.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "note": {
         "type": "String",
         "description": "A note about the user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the user private metadata.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
