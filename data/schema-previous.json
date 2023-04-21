@@ -29415,10 +29415,10 @@
         "arguments": {
           "errorPolicy": {
             "type": "ErrorPolicyEnum",
-            "description": "Policies of error handling.",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
             "deprecated": null,
             "message": null,
-            "default": "ENUM.reject_everything"
+            "default": null
           },
           "products": {
             "type": "[ProductBulkCreateInput!]!",
@@ -29786,7 +29786,7 @@
             "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
-            "default": "ENUM.reject_everything"
+            "default": null
           },
           "product": {
             "type": "ID!",
@@ -29837,7 +29837,7 @@
             "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
             "deprecated": null,
             "message": null,
-            "default": "ENUM.reject_everything"
+            "default": null
           },
           "product": {
             "type": "ID!",
@@ -30850,7 +30850,7 @@
             "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
             "deprecated": null,
             "message": null,
-            "default": "ENUM.reject_everything"
+            "default": null
           },
           "stocks": {
             "type": "[StockBulkUpdateInput!]!",
@@ -31025,13 +31025,13 @@
       },
       "tokenRefresh": {
         "type": "RefreshToken",
-        "description": "Refresh JWT token. Mutation tries to take refreshToken from the input.If it fails it will try to take refreshToken from the http-only cookie -refreshToken. csrfToken is required when refreshToken is provided as a cookie.",
+        "description": "Refresh JWT token. Mutation tries to take refreshToken from the input. If it fails it will try to take `refreshToken` from the http-only cookie `refreshToken`. `csrfToken` is required when `refreshToken` is provided as a cookie.",
         "deprecated": null,
         "message": null,
         "arguments": {
           "csrfToken": {
             "type": "String",
-            "description": "CSRF token required to refresh token. This argument is required when refreshToken is provided as a cookie.",
+            "description": "CSRF token required to refresh token. This argument is required when `refreshToken` is provided as a cookie.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -49378,7 +49378,7 @@
   "RefreshToken": {
     "type": "object",
     "interfaces": [],
-    "description": "Refresh JWT token. Mutation tries to take refreshToken from the input.If it fails it will try to take refreshToken from the http-only cookie -refreshToken. csrfToken is required when refreshToken is provided as a cookie.",
+    "description": "Refresh JWT token. Mutation tries to take refreshToken from the input. If it fails it will try to take `refreshToken` from the http-only cookie `refreshToken`. `csrfToken` is required when `refreshToken` is provided as a cookie.",
     "deprecated": null,
     "message": null,
     "fields": {
