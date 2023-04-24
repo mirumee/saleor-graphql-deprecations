@@ -18778,9 +18778,23 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the invoice metadata.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "number": {
         "type": "String!",
         "description": "Invoice number.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the invoice private metadata.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -31690,7 +31704,7 @@
       },
       "webhookUpdate": {
         "type": "WebhookUpdate",
-        "description": "Updates a webhook subscription. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "description": "Updates a webhook subscription. \n\nRequires one of the following permissions: MANAGE_APPS, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -58824,9 +58838,23 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the invoice metadata.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "number": {
         "type": "String",
         "description": "Invoice number",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Fields required to update the invoice private metadata.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -64805,7 +64833,7 @@
   "WebhookUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a webhook subscription. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "description": "Updates a webhook subscription. \n\nRequires one of the following permissions: MANAGE_APPS, AUTHENTICATED_APP.",
     "deprecated": null,
     "message": null,
     "fields": {

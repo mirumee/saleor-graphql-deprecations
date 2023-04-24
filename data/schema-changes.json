@@ -1,47 +1,22 @@
 [
   {
     "diff": "field_new",
-    "type": "AccountInput",
+    "type": "InvoiceCreateInput",
     "field": "metadata"
   },
   {
     "diff": "field_new",
-    "type": "CustomerInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerInput",
+    "type": "InvoiceCreateInput",
     "field": "privateMetadata"
   },
   {
     "diff": "field_new",
-    "type": "StaffCreateInput",
+    "type": "UpdateInvoiceInput",
     "field": "metadata"
   },
   {
     "diff": "field_new",
-    "type": "StaffCreateInput",
-    "field": "privateMetadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "StaffUpdateInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "StaffUpdateInput",
-    "field": "privateMetadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "UserCreateInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "UserCreateInput",
+    "type": "UpdateInvoiceInput",
     "field": "privateMetadata"
   }
 ]
