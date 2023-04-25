@@ -1,22 +1,59 @@
 [
   {
-    "diff": "field_new",
-    "type": "InvoiceCreateInput",
-    "field": "metadata"
+    "diff": "type_new",
+    "type": "OrderFullyRefunded"
   },
   {
-    "diff": "field_new",
-    "type": "InvoiceCreateInput",
-    "field": "privateMetadata"
+    "diff": "type_new",
+    "type": "OrderPaid"
   },
   {
-    "diff": "field_new",
-    "type": "UpdateInvoiceInput",
-    "field": "metadata"
+    "diff": "type_new",
+    "type": "OrderRefunded"
   },
   {
-    "diff": "field_new",
-    "type": "UpdateInvoiceInput",
-    "field": "privateMetadata"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "ORDER_FULLY_REFUNDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "ORDER_PAID"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "ORDER_REFUNDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "ORDER_FULLY_REFUNDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "ORDER_PAID"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "ORDER_REFUNDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "ORDER_FULLY_REFUNDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "ORDER_PAID"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "ORDER_REFUNDED"
   }
 ]

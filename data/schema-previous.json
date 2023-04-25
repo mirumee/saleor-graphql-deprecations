@@ -34620,6 +34620,52 @@
       }
     }
   },
+  "OrderFullyRefunded": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "The order is fully refunded.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "The order the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "OrderGrantRefundCreate": {
     "type": "object",
     "interfaces": [],
@@ -35518,6 +35564,52 @@
       }
     }
   },
+  "OrderPaid": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Payment has been made. The order may be partially or fully paid.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "The order the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "OrderRefund": {
     "type": "object",
     "interfaces": [],
@@ -35625,6 +35717,52 @@
         "deprecated": null,
         "message": null,
         "default": null
+      }
+    }
+  },
+  "OrderRefunded": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "The order received a refund. The order may be partially or fully refunded.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "The order the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -63108,8 +63246,23 @@
         "deprecated": null,
         "message": null
       },
+      "ORDER_FULLY_REFUNDED": {
+        "description": "The order is fully refunded.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
       "ORDER_METADATA_UPDATED": {
         "description": "An order metadata is updated.\n\nAdded in Saleor 3.8.",
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_PAID": {
+        "description": "Payment has been made. The order may be partially or fully paid.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_REFUNDED": {
+        "description": "The order received a refund. The order may be partially or fully refunded.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null
       },
@@ -63711,8 +63864,23 @@
         "deprecated": null,
         "message": null
       },
+      "ORDER_FULLY_REFUNDED": {
+        "description": "The order is fully refunded.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
       "ORDER_METADATA_UPDATED": {
         "description": "An order metadata is updated.\n\nAdded in Saleor 3.8.",
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_PAID": {
+        "description": "Payment has been made. The order may be partially or fully paid.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_REFUNDED": {
+        "description": "The order received a refund. The order may be partially or fully refunded.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null
       },
@@ -64457,7 +64625,22 @@
         "deprecated": null,
         "message": null
       },
+      "ORDER_FULLY_REFUNDED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "ORDER_METADATA_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_PAID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_REFUNDED": {
         "description": null,
         "deprecated": null,
         "message": null
