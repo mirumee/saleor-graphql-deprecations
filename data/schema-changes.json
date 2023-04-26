@@ -1,59 +1,57 @@
 [
   {
-    "diff": "type_new",
-    "type": "OrderFullyRefunded"
+    "diff": "field_new",
+    "type": "Group",
+    "field": "accessibleChannels"
   },
   {
-    "diff": "type_new",
-    "type": "OrderPaid"
+    "diff": "field_new",
+    "type": "Group",
+    "field": "restrictedAccessToChannels"
   },
   {
-    "diff": "type_new",
-    "type": "OrderRefunded"
+    "diff": "field_new",
+    "type": "PermissionGroupCreateInput",
+    "field": "addChannels"
+  },
+  {
+    "diff": "field_new",
+    "type": "PermissionGroupCreateInput",
+    "field": "restrictedAccessToChannels"
+  },
+  {
+    "diff": "field_new",
+    "type": "PermissionGroupError",
+    "field": "channels"
+  },
+  {
+    "diff": "field_new",
+    "type": "PermissionGroupUpdateInput",
+    "field": "addChannels"
+  },
+  {
+    "diff": "field_new",
+    "type": "PermissionGroupUpdateInput",
+    "field": "removeChannels"
+  },
+  {
+    "diff": "field_new",
+    "type": "PermissionGroupUpdateInput",
+    "field": "restrictedAccessToChannels"
+  },
+  {
+    "diff": "field_new",
+    "type": "User",
+    "field": "accessibleChannels"
+  },
+  {
+    "diff": "field_new",
+    "type": "User",
+    "field": "restrictedAccessToChannels"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ORDER_FULLY_REFUNDED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ORDER_PAID"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ORDER_REFUNDED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "ORDER_FULLY_REFUNDED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "ORDER_PAID"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "ORDER_REFUNDED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "ORDER_FULLY_REFUNDED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "ORDER_PAID"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "ORDER_REFUNDED"
+    "enum": "PermissionGroupErrorCode",
+    "value": "OUT_OF_SCOPE_CHANNEL"
   }
 ]

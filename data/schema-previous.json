@@ -18457,6 +18457,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "accessibleChannels": {
+        "type": "[Channel!]",
+        "description": "List of channels the group has access to.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "id": {
         "type": "ID!",
         "description": null,
@@ -18474,6 +18481,13 @@
       "permissions": {
         "type": "[Permission!]",
         "description": "List of group permissions",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "restrictedAccessToChannels": {
+        "type": "Boolean!",
+        "description": "Determine if the group have restricted access to channels.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39819,6 +39833,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "addChannels": {
+        "type": "[ID!]",
+        "description": "List of channels to assign to this group.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "addPermissions": {
         "type": "[PermissionEnum!]",
         "description": "List of permission code names to assign to this group.",
@@ -39839,6 +39860,13 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "restrictedAccessToChannels": {
+        "type": "Boolean",
+        "description": "Determine if the group has restricted access to channels.  DEFAULT: False\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": false
       }
     }
   },
@@ -39971,6 +39999,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "channels": {
+        "type": "[ID!]",
+        "description": "List of chnnels IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "code": {
         "type": "PermissionGroupErrorCode!",
         "description": "The error code.",
@@ -40030,6 +40065,11 @@
         "message": null
       },
       "LEFT_NOT_MANAGEABLE_PERMISSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "OUT_OF_SCOPE_CHANNEL": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -40149,6 +40189,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "addChannels": {
+        "type": "[ID!]",
+        "description": "List of channels to assign to this group.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "addPermissions": {
         "type": "[PermissionEnum!]",
         "description": "List of permission code names to assign to this group.",
@@ -40170,6 +40217,13 @@
         "message": null,
         "default": null
       },
+      "removeChannels": {
+        "type": "[ID!]",
+        "description": "List of channels to unassign from this group.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "removePermissions": {
         "type": "[PermissionEnum!]",
         "description": "List of permission code names to unassign from this group.",
@@ -40180,6 +40234,13 @@
       "removeUsers": {
         "type": "[ID!]",
         "description": "List of users to unassign from this group.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "restrictedAccessToChannels": {
+        "type": "Boolean",
+        "description": "Determine if the group has restricted access to channels.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -59125,6 +59186,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "accessibleChannels": {
+        "type": "[Channel!]",
+        "description": "List of channels the user has access to. The sum of channels from all user groups. If at least one group has `restrictedAccessToChannels` set to False - all channels are returned.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "addresses": {
         "type": "[Address!]!",
         "description": "List of all user's addresses.",
@@ -59491,6 +59559,13 @@
             "default": null
           }
         }
+      },
+      "restrictedAccessToChannels": {
+        "type": "Boolean!",
+        "description": "Determine if user have restricted access to channels. False if at least one user group has `restrictedAccessToChannels` set to False.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       },
       "storedPaymentSources": {
         "type": "[PaymentSource!]",
