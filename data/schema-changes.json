@@ -1,57 +1,7 @@
 [
   {
-    "diff": "field_new",
-    "type": "Group",
-    "field": "accessibleChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "Group",
-    "field": "restrictedAccessToChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "PermissionGroupCreateInput",
-    "field": "addChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "PermissionGroupCreateInput",
-    "field": "restrictedAccessToChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "PermissionGroupError",
-    "field": "channels"
-  },
-  {
-    "diff": "field_new",
-    "type": "PermissionGroupUpdateInput",
-    "field": "addChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "PermissionGroupUpdateInput",
-    "field": "removeChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "PermissionGroupUpdateInput",
-    "field": "restrictedAccessToChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "User",
-    "field": "accessibleChannels"
-  },
-  {
-    "diff": "field_new",
-    "type": "User",
-    "field": "restrictedAccessToChannels"
-  },
-  {
     "diff": "enum_value_new",
-    "enum": "PermissionGroupErrorCode",
-    "value": "OUT_OF_SCOPE_CHANNEL"
+    "enum": "OrderDiscountType",
+    "value": "SALE"
   }
 ]
