@@ -8145,6 +8145,174 @@
       }
     }
   },
+  "CheckoutCreateFromOrder": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Create new checkout from existing order.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "checkout": {
+        "type": "Checkout",
+        "description": "Created checkout.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CheckoutCreateFromOrderError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "unavailableVariants": {
+        "type": "[CheckoutCreateFromOrderUnavailableVariant!]",
+        "description": "Variants that were not attached to the checkout.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutCreateFromOrderError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CheckoutCreateFromOrderErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutCreateFromOrderErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CHANNEL_INACTIVE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER_NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "TAX_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CheckoutCreateFromOrderUnavailableVariant": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CheckoutCreateFromOrderUnavailableVariantErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "lineId": {
+        "type": "ID!",
+        "description": "Order line ID that is unavailable.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String!",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "variantId": {
+        "type": "ID!",
+        "description": "Variant ID that is unavailable.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutCreateFromOrderUnavailableVariantErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "INSUFFICIENT_STOCK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_NOT_PUBLISHED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_UNAVAILABLE_FOR_PURCHASE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "QUANTITY_GREATER_THAN_LIMIT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNAVAILABLE_VARIANT_IN_CHANNEL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "CheckoutCreateInput": {
     "type": "input",
     "description": null,
@@ -26520,6 +26688,21 @@
           "input": {
             "type": "CheckoutCreateInput!",
             "description": "Fields required to create checkout.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "checkoutCreateFromOrder": {
+        "type": "CheckoutCreateFromOrder",
+        "description": "Create new checkout from existing order.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of a order that will be used to create the checkout.",
             "deprecated": null,
             "message": null,
             "default": null
