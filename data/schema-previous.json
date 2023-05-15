@@ -53512,6 +53512,13 @@
         "message": null,
         "arguments": {}
       },
+      "enableAccountConfirmationByEmail": {
+        "type": "Boolean",
+        "description": "Determines if account confirmation by email is enabled.\n\nAdded in Saleor 3.14.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "fulfillmentAllowUnpaid": {
         "type": "Boolean!",
         "description": "Allow to approve fulfillments which are unpaid.\n\nAdded in Saleor 3.1.",
@@ -53878,6 +53885,13 @@
         "description": "Display prices with tax in store. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use `taxConfigurationUpdate` mutation to configure this setting per channel or country.",
         "deprecated": "4.0",
         "message": "Display prices with tax in store. \n\nDEPRECATED: this field will be removed in Saleor 4.0. Use `taxConfigurationUpdate` mutation to configure this setting per channel or country.",
+        "default": null
+      },
+      "enableAccountConfirmationByEmail": {
+        "type": "Boolean",
+        "description": "Enable automatic account confirmation by email.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
         "default": null
       },
       "fulfillmentAllowUnpaid": {

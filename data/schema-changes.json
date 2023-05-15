@@ -1,27 +1,12 @@
 [
   {
-    "diff": "type_new",
-    "type": "CheckoutCreateFromOrder"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutCreateFromOrderError"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutCreateFromOrderErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutCreateFromOrderUnavailableVariant"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutCreateFromOrderUnavailableVariantErrorCode"
+    "diff": "field_new",
+    "type": "Shop",
+    "field": "enableAccountConfirmationByEmail"
   },
   {
     "diff": "field_new",
-    "type": "Mutation",
-    "field": "checkoutCreateFromOrder"
+    "type": "ShopSettingsInput",
+    "field": "enableAccountConfirmationByEmail"
   }
 ]
