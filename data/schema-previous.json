@@ -31309,7 +31309,7 @@
       },
       "transactionEventReport": {
         "type": "TransactionEventReport",
-        "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
+        "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31460,7 +31460,7 @@
       },
       "transactionUpdate": {
         "type": "TransactionUpdate",
-        "description": "Create transaction for checkout or order.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
+        "description": "Update transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57589,7 +57589,7 @@
   "TransactionEventReport": {
     "type": "object",
     "interfaces": [],
-    "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
+    "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -58686,7 +58686,7 @@
   "TransactionUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create transaction for checkout or order.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS.",
+    "description": "Update transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.",
     "deprecated": null,
     "message": null,
     "fields": {
