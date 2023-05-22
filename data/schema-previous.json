@@ -13403,6 +13403,12 @@
       }
     }
   },
+  "Day": {
+    "type": "scalar",
+    "description": "The `Day` scalar type represents number of days by integer value.",
+    "deprecated": null,
+    "message": null
+  },
   "DeactivateAllUserTokens": {
     "type": "object",
     "interfaces": [],
@@ -36097,6 +36103,13 @@
         "message": null,
         "arguments": {}
       },
+      "deleteExpiredOrdersAfter": {
+        "type": "Day!",
+        "description": "The time in days after expired orders will be deleted.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "expireOrdersAfter": {
         "type": "Minute",
         "description": "Expiration time in minutes. Default null - means do not expire any orders.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -36179,6 +36192,13 @@
       "defaultTransactionFlowStrategy": {
         "type": "TransactionFlowStrategyEnum",
         "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "deleteExpiredOrdersAfter": {
+        "type": "Day",
+        "description": "The time in days after expired orders will be deleted.Allowed range is from 1 to 120.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null

@@ -1,12 +1,16 @@
 [
   {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "enableAccountConfirmationByEmail"
+    "diff": "type_new",
+    "type": "Day"
   },
   {
     "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "enableAccountConfirmationByEmail"
+    "type": "OrderSettings",
+    "field": "deleteExpiredOrdersAfter"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderSettingsInput",
+    "field": "deleteExpiredOrdersAfter"
   }
 ]
