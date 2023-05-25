@@ -45865,7 +45865,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "Represents product varaint channel listing.",
+    "description": "Represents product variant channel listing.",
     "deprecated": null,
     "message": null,
     "fields": {
