@@ -1371,6 +1371,13 @@
         "message": null,
         "arguments": {}
       },
+      "brand": {
+        "type": "AppBrand",
+        "description": "App's brand data.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "configurationUrl": {
         "type": "String",
         "description": "URL to iframe with the configuration for the app.",
@@ -1586,6 +1593,53 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "AppBrand": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the app's brand data.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "logo": {
+        "type": "AppBrandLogo!",
+        "description": "App's logos details.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AppBrandLogo": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the app's brand logo data.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "default": {
+        "type": "String!",
+        "description": "URL to the default logo image.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "format": {
+            "type": "IconThumbnailFormatEnum",
+            "description": "The format of the image. When not provided, format of the original image will be used.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "deprecated": null,
+            "message": null,
+            "default": "ENUM.ORIGINAL"
+          },
+          "size": {
+            "type": "Int",
+            "description": "Desired longest side the image in pixels. Defaults to 4096. Images are never cropped. Pass 0 to retrieve the original size (not recommended).",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       }
     }
   },
@@ -2342,6 +2396,13 @@
         "message": null,
         "arguments": {}
       },
+      "brand": {
+        "type": "AppBrand",
+        "description": "App's brand data.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "createdAt": {
         "type": "DateTime!",
         "description": "Created date time of job in ISO 8601 format.",
@@ -2429,6 +2490,53 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "AppManifestBrand": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the app's manifest brand data.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "logo": {
+        "type": "AppManifestBrandLogo!",
+        "description": "App's logos details.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AppManifestBrandLogo": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the app's manifest brand data.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "default": {
+        "type": "String!",
+        "description": "Data URL with a base64 encoded logo image.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "format": {
+            "type": "IconThumbnailFormatEnum",
+            "description": "The format of the image. When not provided, format of the original image will be used.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "deprecated": null,
+            "message": null,
+            "default": "ENUM.ORIGINAL"
+          },
+          "size": {
+            "type": "Int",
+            "description": "Desired longest side the image in pixels. Defaults to 4096. Images are never cropped. Pass 0 to retrieve the original size (not recommended).",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       }
     }
   },
@@ -18735,6 +18843,24 @@
       }
     }
   },
+  "IconThumbnailFormatEnum": {
+    "type": "enum",
+    "description": "Thumbnail formats for icon images.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ORIGINAL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "WEBP": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "Image": {
     "type": "object",
     "interfaces": [],
@@ -23501,6 +23627,13 @@
       "author": {
         "type": "String",
         "description": "The App's author name.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "brand": {
+        "type": "AppManifestBrand",
+        "description": "App's brand data.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}

@@ -1,92 +1,37 @@
 [
   {
     "diff": "type_new",
-    "type": "OrderBulkCreate"
+    "type": "AppBrand"
   },
   {
     "diff": "type_new",
-    "type": "OrderBulkCreateDeliveryMethodInput"
+    "type": "AppBrandLogo"
   },
   {
     "diff": "type_new",
-    "type": "OrderBulkCreateError"
+    "type": "AppManifestBrand"
   },
   {
     "diff": "type_new",
-    "type": "OrderBulkCreateErrorCode"
+    "type": "AppManifestBrandLogo"
   },
   {
     "diff": "type_new",
-    "type": "OrderBulkCreateFulfillmentInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreateFulfillmentLineInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreateInvoiceInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreateNoteInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreateOrderLineInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreateResult"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreateUserInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderBulkCreated"
-  },
-  {
-    "diff": "type_new",
-    "type": "StockUpdatePolicyEnum"
-  },
-  {
-    "diff": "type_new",
-    "type": "TaxedMoneyInput"
+    "type": "IconThumbnailFormatEnum"
   },
   {
     "diff": "field_new",
-    "type": "Mutation",
-    "field": "orderBulkCreate"
+    "type": "App",
+    "field": "brand"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "OrderOriginEnum",
-    "value": "BULK_CREATE"
+    "diff": "field_new",
+    "type": "AppInstallation",
+    "field": "brand"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "PermissionEnum",
-    "value": "MANAGE_ORDERS_IMPORT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ORDER_BULK_CREATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "ORDER_BULK_CREATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "ORDER_BULK_CREATED"
+    "diff": "field_new",
+    "type": "Manifest",
+    "field": "brand"
   }
 ]
