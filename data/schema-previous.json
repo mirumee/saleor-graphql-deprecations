@@ -34899,8 +34899,8 @@
       "status": {
         "type": "TransactionStatus",
         "description": "The status of payment's transaction.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `TransactionEvent` to track the status of `TransactionItem`.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `TransactionEvent` to track the status of `TransactionItem`.",
         "arguments": {}
       },
       "transactionReference": {
@@ -35356,9 +35356,9 @@
         "message": null
       },
       "TRANSACTION_CAPTURE_REQUESTED": {
-        "description": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead."
+        "description": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead."
       },
       "TRANSACTION_CHARGE_REQUESTED": {
         "description": null,
@@ -35381,9 +35381,9 @@
         "message": null
       },
       "TRANSACTION_VOID_REQUESTED": {
-        "description": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead."
+        "description": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead."
       },
       "UPDATED_ADDRESS": {
         "description": null,
@@ -58459,9 +58459,9 @@
       },
       "amountVoided": {
         "type": "MoneyInput",
-        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
-        "deprecated": "3.14",
-        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
+        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
+        "deprecated": "3.15",
+        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
         "default": null
       },
       "availableActions": {
@@ -58515,23 +58515,23 @@
       },
       "reference": {
         "type": "String",
-        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
-        "deprecated": "3.14",
-        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
+        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
+        "deprecated": "3.15",
+        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
         "default": null
       },
       "status": {
         "type": "String",
-        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
-        "deprecated": "3.14",
-        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
+        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
+        "deprecated": "3.15",
+        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
         "default": null
       },
       "type": {
         "type": "String",
-        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
-        "deprecated": "3.14",
-        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
+        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
+        "deprecated": "3.15",
+        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
         "default": null
       }
     }
@@ -58590,8 +58590,8 @@
       "name": {
         "type": "String",
         "description": "Name of the transaction's event.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `message` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `message` instead.",
         "arguments": {}
       },
       "pspReference": {
@@ -58604,15 +58604,15 @@
       "reference": {
         "type": "String!",
         "description": "Reference of transaction's event.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `pspReference` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `pspReference` instead.",
         "arguments": {}
       },
       "status": {
         "type": "TransactionStatus",
         "description": "Status of transaction's event.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `type` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `type` instead.",
         "arguments": {}
       },
       "type": {
@@ -58639,9 +58639,9 @@
       },
       "name": {
         "type": "String",
-        "description": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
-        "deprecated": "3.14",
-        "message": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
+        "description": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
+        "deprecated": "3.15",
+        "message": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
         "default": null
       },
       "pspReference": {
@@ -58653,16 +58653,16 @@
       },
       "reference": {
         "type": "String",
-        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
-        "deprecated": "3.14",
-        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
+        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
+        "deprecated": "3.15",
+        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
         "default": null
       },
       "status": {
         "type": "TransactionStatus",
-        "description": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Status will be calculated by Saleor.",
-        "deprecated": "3.14",
-        "message": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Status will be calculated by Saleor.",
+        "description": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Status will be calculated by Saleor.",
+        "deprecated": "3.15",
+        "message": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Status will be calculated by Saleor.",
         "default": null
       }
     }
@@ -59253,8 +59253,8 @@
       "reference": {
         "type": "String!",
         "description": "Reference of transaction.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `pspReference` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `pspReference` instead.",
         "arguments": {}
       },
       "refundPendingAmount": {
@@ -59274,22 +59274,22 @@
       "status": {
         "type": "String!",
         "description": "Status of transaction.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
         "arguments": {}
       },
       "type": {
         "type": "String!",
         "description": "Type of transaction.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature). Use `name` or `message` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `name` or `message` instead.",
         "arguments": {}
       },
       "voidedAmount": {
         "type": "Money!",
         "description": "Total amount voided for this payment.",
-        "deprecated": "3.14",
-        "message": "This field will be removed in Saleor 3.14 (Preview Feature).Use `canceledAmount` instead.",
+        "deprecated": "3.15",
+        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `canceledAmount` instead.",
         "arguments": {}
       }
     }
@@ -59891,9 +59891,9 @@
       },
       "amountVoided": {
         "type": "MoneyInput",
-        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
-        "deprecated": "3.14",
-        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `amountCanceled` instead.",
+        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
+        "deprecated": "3.15",
+        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
         "default": null
       },
       "availableActions": {
@@ -59947,23 +59947,23 @@
       },
       "reference": {
         "type": "String",
-        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
-        "deprecated": "3.14",
-        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `pspReference` instead.",
+        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
+        "deprecated": "3.15",
+        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
         "default": null
       },
       "status": {
         "type": "String",
-        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
-        "deprecated": "3.14",
-        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
+        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
+        "deprecated": "3.15",
+        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
         "default": null
       },
       "type": {
         "type": "String",
-        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
-        "deprecated": "3.14",
-        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.14 (Preview Feature). Use `name` and `message` instead.",
+        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
+        "deprecated": "3.15",
+        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
         "default": null
       }
     }

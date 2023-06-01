@@ -1,37 +1,128 @@
 [
   {
-    "diff": "type_new",
-    "type": "AppBrand"
+    "diff": "field_deprecated",
+    "type": "OrderEvent",
+    "field": "status",
+    "version": "3.15"
   },
   {
-    "diff": "type_new",
-    "type": "AppBrandLogo"
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "amountVoided",
+    "version": "3.15"
   },
   {
-    "diff": "type_new",
-    "type": "AppManifestBrand"
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "reference",
+    "version": "3.15"
   },
   {
-    "diff": "type_new",
-    "type": "AppManifestBrandLogo"
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "status",
+    "version": "3.15"
   },
   {
-    "diff": "type_new",
-    "type": "IconThumbnailFormatEnum"
+    "diff": "field_deprecated",
+    "type": "TransactionCreateInput",
+    "field": "type",
+    "version": "3.15"
   },
   {
-    "diff": "field_new",
-    "type": "App",
-    "field": "brand"
+    "diff": "field_deprecated",
+    "type": "TransactionEvent",
+    "field": "name",
+    "version": "3.15"
   },
   {
-    "diff": "field_new",
-    "type": "AppInstallation",
-    "field": "brand"
+    "diff": "field_deprecated",
+    "type": "TransactionEvent",
+    "field": "reference",
+    "version": "3.15"
   },
   {
-    "diff": "field_new",
-    "type": "Manifest",
-    "field": "brand"
+    "diff": "field_deprecated",
+    "type": "TransactionEvent",
+    "field": "status",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEventInput",
+    "field": "name",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEventInput",
+    "field": "reference",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionEventInput",
+    "field": "status",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "reference",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "status",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "type",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionItem",
+    "field": "voidedAmount",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "amountVoided",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "reference",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "status",
+    "version": "3.15"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "TransactionUpdateInput",
+    "field": "type",
+    "version": "3.15"
+  },
+  {
+    "diff": "enum_value_deprecated",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_CAPTURE_REQUESTED",
+    "version": "3.15"
+  },
+  {
+    "diff": "enum_value_deprecated",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_VOID_REQUESTED",
+    "version": "3.15"
   }
 ]
