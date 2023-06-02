@@ -1,128 +1,52 @@
 [
   {
-    "diff": "field_deprecated",
-    "type": "OrderEvent",
-    "field": "status",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeBulkTranslate"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionCreateInput",
-    "field": "amountVoided",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeBulkTranslateError"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionCreateInput",
-    "field": "reference",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeBulkTranslateInput"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionCreateInput",
-    "field": "status",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeBulkTranslateResult"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionCreateInput",
-    "field": "type",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeTranslateErrorCode"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionEvent",
-    "field": "name",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeValueBulkTranslate"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionEvent",
-    "field": "reference",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeValueBulkTranslateError"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionEvent",
-    "field": "status",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeValueBulkTranslateInput"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionEventInput",
-    "field": "name",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeValueBulkTranslateResult"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionEventInput",
-    "field": "reference",
-    "version": "3.15"
+    "diff": "type_new",
+    "type": "AttributeValueTranslateErrorCode"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionEventInput",
-    "field": "status",
-    "version": "3.15"
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "attributeBulkTranslate"
   },
   {
-    "diff": "field_deprecated",
-    "type": "TransactionItem",
-    "field": "reference",
-    "version": "3.15"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "TransactionItem",
-    "field": "status",
-    "version": "3.15"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "TransactionItem",
-    "field": "type",
-    "version": "3.15"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "TransactionItem",
-    "field": "voidedAmount",
-    "version": "3.15"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "TransactionUpdateInput",
-    "field": "amountVoided",
-    "version": "3.15"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "TransactionUpdateInput",
-    "field": "reference",
-    "version": "3.15"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "TransactionUpdateInput",
-    "field": "status",
-    "version": "3.15"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "TransactionUpdateInput",
-    "field": "type",
-    "version": "3.15"
-  },
-  {
-    "diff": "enum_value_deprecated",
-    "enum": "OrderEventsEnum",
-    "value": "TRANSACTION_CAPTURE_REQUESTED",
-    "version": "3.15"
-  },
-  {
-    "diff": "enum_value_deprecated",
-    "enum": "OrderEventsEnum",
-    "value": "TRANSACTION_VOID_REQUESTED",
-    "version": "3.15"
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "attributeValueBulkTranslate"
   }
 ]
