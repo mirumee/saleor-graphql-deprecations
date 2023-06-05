@@ -6509,6 +6509,13 @@
             "deprecated": null,
             "message": null,
             "default": null
+          },
+          "where": {
+            "type": "ProductWhereInput",
+            "description": "Filtering options for products.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "deprecated": null,
+            "message": null,
+            "default": null
           }
         }
       },
@@ -10214,6 +10221,13 @@
             "deprecated": null,
             "message": null,
             "default": null
+          },
+          "where": {
+            "type": "ProductWhereInput",
+            "description": "Filtering options for products.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "deprecated": null,
+            "message": null,
+            "default": null
           }
         }
       },
@@ -13839,6 +13853,57 @@
     "description": "Custom Decimal implementation.\n\nReturns Decimal as a float in the API,\nparses float to the Decimal on the way back.",
     "deprecated": null,
     "message": null
+  },
+  "DecimalFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for decimal fields.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "Decimal",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[Decimal!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "range": {
+        "type": "DecimalRangeInput",
+        "description": "The value in range.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "DecimalRangeInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "gte": {
+        "type": "Decimal",
+        "description": "Decimal value greater than or equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "lte": {
+        "type": "Decimal",
+        "description": "Decimal value less than or equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
   },
   "DeleteMetadata": {
     "type": "object",
@@ -19021,6 +19086,28 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "GlobalIDFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for foreign key fields.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "ID",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[ID!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -48432,6 +48519,175 @@
       }
     }
   },
+  "ProductWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[ProductWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[ProductWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "attributes": {
+        "type": "[AttributeInput!]",
+        "description": "Filter by attributes associated with the product.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "availableFrom": {
+        "type": "DateTime",
+        "description": "Filter by the date of availability for purchase.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "category": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by product category.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "collection": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by collection.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "giftCard": {
+        "type": "Boolean",
+        "description": "Filter on whether product is a gift card or not.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "hasCategory": {
+        "type": "Boolean",
+        "description": "Filter by product with category assigned.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "hasPreorderedVariants": {
+        "type": "Boolean",
+        "description": "Filter by product with preordered variants.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isAvailable": {
+        "type": "Boolean",
+        "description": "Filter by availability for purchase.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isPublished": {
+        "type": "Boolean",
+        "description": "Filter by public visibility.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isVisibleInListing": {
+        "type": "Boolean",
+        "description": "Filter by visibility on the channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataFilter!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "minimalPrice": {
+        "type": "DecimalFilterInput",
+        "description": "Filter by the lowest variant price after discounts.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "StringFilterInput",
+        "description": "Filter by product name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "price": {
+        "type": "DecimalFilterInput",
+        "description": "Filter by product variant price.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productType": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by product type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "publishedFrom": {
+        "type": "DateTime",
+        "description": "Filter by the publication date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "StringFilterInput",
+        "description": "Filter by product slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "stockAvailability": {
+        "type": "StockAvailability",
+        "description": "Filter by variants having specific stock status.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "stocks": {
+        "type": "ProductStockFilterInput",
+        "description": "Filter by stock of the product variant.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "updatedAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter by when was the most recent update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "PublishableChannelListingInput": {
     "type": "input",
     "description": null,
@@ -50337,9 +50593,23 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search products.\n\nAdded in Saleor 3.14.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "ProductOrder",
             "description": "Sort products.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "ProductWhereInput",
+            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
             "default": null

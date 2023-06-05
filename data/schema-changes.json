@@ -1,52 +1,18 @@
 [
   {
     "diff": "type_new",
-    "type": "AttributeBulkTranslate"
+    "type": "DecimalFilterInput"
   },
   {
     "diff": "type_new",
-    "type": "AttributeBulkTranslateError"
+    "type": "DecimalRangeInput"
   },
   {
     "diff": "type_new",
-    "type": "AttributeBulkTranslateInput"
+    "type": "GlobalIDFilterInput"
   },
   {
     "diff": "type_new",
-    "type": "AttributeBulkTranslateResult"
-  },
-  {
-    "diff": "type_new",
-    "type": "AttributeTranslateErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "AttributeValueBulkTranslate"
-  },
-  {
-    "diff": "type_new",
-    "type": "AttributeValueBulkTranslateError"
-  },
-  {
-    "diff": "type_new",
-    "type": "AttributeValueBulkTranslateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "AttributeValueBulkTranslateResult"
-  },
-  {
-    "diff": "type_new",
-    "type": "AttributeValueTranslateErrorCode"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "attributeBulkTranslate"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "attributeValueBulkTranslate"
+    "type": "ProductWhereInput"
   }
 ]
