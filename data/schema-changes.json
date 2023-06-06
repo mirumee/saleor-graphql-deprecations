@@ -1,18 +1,17 @@
 [
   {
-    "diff": "type_new",
-    "type": "DecimalFilterInput"
+    "diff": "field_new",
+    "type": "AttributeValueInput",
+    "field": "externalReference"
   },
   {
-    "diff": "type_new",
-    "type": "DecimalRangeInput"
+    "diff": "field_new",
+    "type": "AttributeValueSelectableTypeInput",
+    "field": "externalReference"
   },
   {
-    "diff": "type_new",
-    "type": "GlobalIDFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductWhereInput"
+    "diff": "field_new",
+    "type": "BulkAttributeValueInput",
+    "field": "externalReference"
   }
 ]

@@ -5349,7 +5349,14 @@
       },
       "dropdown": {
         "type": "AttributeValueSelectableTypeInput",
-        "description": "Attribute value ID.\n\nAdded in Saleor 3.9.",
+        "description": "Attribute value ID or external reference.\n\nAdded in Saleor 3.9.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "externalReference": {
+        "type": "String",
+        "description": "External ID of this attribute.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -5370,7 +5377,7 @@
       },
       "multiselect": {
         "type": "[AttributeValueSelectableTypeInput!]",
-        "description": "List of attribute value IDs.\n\nAdded in Saleor 3.9.",
+        "description": "List of attribute value IDs or external references.\n\nAdded in Saleor 3.9.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -5405,7 +5412,7 @@
       },
       "swatch": {
         "type": "AttributeValueSelectableTypeInput",
-        "description": "Attribute value ID.\n\nAdded in Saleor 3.9.",
+        "description": "Attribute value ID or external reference.\n\nAdded in Saleor 3.9.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -5421,10 +5428,17 @@
   },
   "AttributeValueSelectableTypeInput": {
     "type": "input",
-    "description": "Represents attribute value. If no ID provided, value will be resolved. \n\nAdded in Saleor 3.9.",
+    "description": "Represents attribute value.\n1. If ID is provided, then attribute value will be resolved by ID.\n2. If externalReference is provided, then attribute value will be resolved by external reference.\n3. If value is provided, then attribute value will be resolved by value. If this attribute value doesn't exist, then it will be created.\n4. If externalReference and value is provided then new attribute value will be created.\n\nAdded in Saleor 3.9.",
     "deprecated": null,
     "message": null,
     "fields": {
+      "externalReference": {
+        "type": "String",
+        "description": "External reference of an attribute value.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "id": {
         "type": "ID",
         "description": "ID of an attribute value.",
@@ -5939,6 +5953,13 @@
       "dropdown": {
         "type": "AttributeValueSelectableTypeInput",
         "description": "Attribute value ID.\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "externalReference": {
+        "type": "String",
+        "description": "External ID of this attribute.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "default": null
