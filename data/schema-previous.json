@@ -7206,6 +7206,42 @@
       }
     }
   },
+  "CategoryWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[CategoryWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[CategoryWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataFilter!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "Channel": {
     "type": "object",
     "interfaces": [
@@ -11453,6 +11489,42 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "CollectionWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[CollectionWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[CollectionWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataFilter!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -17549,15 +17621,15 @@
       "usedBy": {
         "type": "User",
         "description": "The customer who used a gift card.\n\nAdded in Saleor 3.1.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "usedByEmail": {
         "type": "String",
         "description": "Email address of the customer who used a gift card.\n\nAdded in Saleor 3.1.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "user": {
@@ -48540,6 +48612,42 @@
       }
     }
   },
+  "ProductVariantWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[ProductVariantWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[ProductVariantWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataFilter!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "ProductWhereInput": {
     "type": "input",
     "description": null,
@@ -49109,6 +49217,13 @@
             "deprecated": null,
             "message": null,
             "default": null
+          },
+          "where": {
+            "type": "CategoryWhereInput",
+            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "deprecated": null,
+            "message": null,
+            "default": null
           }
         }
       },
@@ -49358,6 +49473,13 @@
           "sortBy": {
             "type": "CollectionSortingInput",
             "description": "Sort collections.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "CollectionWhereInput",
+            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -50560,6 +50682,13 @@
           "sortBy": {
             "type": "ProductVariantSortingInput",
             "description": "Sort products variants.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "ProductVariantWhereInput",
+            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
             "default": null
