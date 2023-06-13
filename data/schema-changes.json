@@ -1,26 +1,42 @@
 [
   {
-    "diff": "type_new",
-    "type": "CategoryWhereInput"
+    "diff": "enum_value_new",
+    "enum": "AreaUnitsEnum",
+    "value": "SQ_DM"
   },
   {
-    "diff": "type_new",
-    "type": "CollectionWhereInput"
+    "diff": "enum_value_new",
+    "enum": "AreaUnitsEnum",
+    "value": "SQ_MM"
   },
   {
-    "diff": "type_new",
-    "type": "ProductVariantWhereInput"
+    "diff": "enum_value_new",
+    "enum": "DistanceUnitsEnum",
+    "value": "DM"
   },
   {
-    "diff": "field_deprecated",
-    "type": "GiftCard",
-    "field": "usedBy",
-    "version": "4.0"
+    "diff": "enum_value_new",
+    "enum": "DistanceUnitsEnum",
+    "value": "MM"
   },
   {
-    "diff": "field_deprecated",
-    "type": "GiftCard",
-    "field": "usedByEmail",
-    "version": "4.0"
+    "diff": "enum_value_new",
+    "enum": "MeasurementUnitsEnum",
+    "value": "DM"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "MeasurementUnitsEnum",
+    "value": "MM"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "MeasurementUnitsEnum",
+    "value": "SQ_DM"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "MeasurementUnitsEnum",
+    "value": "SQ_MM"
   }
 ]
