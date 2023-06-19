@@ -64639,7 +64639,7 @@
         "arguments": {}
       },
       "name": {
-        "type": "String!",
+        "type": "String",
         "description": null,
         "deprecated": null,
         "message": null,
