@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-06-19 14:01:10</p>
+      <p class="m-0">Generated on 2023-06-20 14:01:06</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -1242,6 +1242,17 @@
               
                 <td>Mutation</td>
                 <td colspan="2">draftOrderLinesBulkDelete</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Mutation-orderAddNote" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Mutation</td>
+                <td colspan="2">orderAddNote</td>
               
               <td>4.0</td>
             </tr>
@@ -3215,11 +3226,32 @@
           
             <tr>
               <td>
+                <a href="#OrderAddNote" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td colspan="3">OrderAddNote</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#OrderAddNote-orderErrors" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
                 <td>OrderAddNote</td>
                 <td colspan="2">orderErrors</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#OrderAddNoteInput-message" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>OrderAddNoteInput</td>
+                <td colspan="2">message</td>
               
               <td>4.0</td>
             </tr>
@@ -7525,6 +7557,31 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use root-level channel arg
         </div>
       </div>
     
+      <div id="Mutation-orderAddNote" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Mutation-orderAddNote" class="text-reset">
+                Field <strong class="text-danger">orderAddNote</strong> of type <strong class="text-danger">Mutation</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Adds note to the order.
+
+DEPRECATED: this mutation will be removed in Saleor 4.0. 
+
+Requires one of the following permissions: MANAGE_ORDERS.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Mutation</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">orderAddNote</strong>( <span class="text-secondary">...</span> ): OrderAddNote<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="Mutation-checkoutAddPromoCode-checkoutId" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -11539,6 +11596,29 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
         </div>
       </div>
     
+      <div id="OrderAddNote" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#OrderAddNote" class="text-reset">
+                Type <strong class="text-danger">OrderAddNote</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Adds note to the order.
+
+DEPRECATED: this mutation will be removed in Saleor 4.0. 
+
+Requires one of the following permissions: MANAGE_ORDERS.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong class="text-danger">OrderAddNote</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="OrderAddNote-orderErrors" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -11554,6 +11634,30 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
             <div class="font-monospace"><span class="text-primary">type</span> <strong>OrderAddNote</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">orderErrors</strong>: [OrderError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="OrderAddNoteInput-message" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#OrderAddNoteInput-message" class="text-reset">
+                Field <strong class="text-danger">message</strong> of input <strong class="text-danger">OrderAddNoteInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Note message.
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>OrderAddNoteInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">message</strong>: String!<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

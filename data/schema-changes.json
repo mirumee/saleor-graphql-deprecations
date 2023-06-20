@@ -1,42 +1,67 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "AreaUnitsEnum",
-    "value": "SQ_DM"
+    "diff": "type_new",
+    "type": "OrderNoteAdd"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderNoteAddError"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderNoteAddErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderNoteInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderNoteUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderNoteUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderNoteUpdateErrorCode"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "OrderAddNote",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "orderNoteAdd"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "orderNoteUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderEvent",
+    "field": "related"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "orderAddNote",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "OrderAddNoteInput",
+    "field": "message",
+    "version": "4.0"
   },
   {
     "diff": "enum_value_new",
-    "enum": "AreaUnitsEnum",
-    "value": "SQ_MM"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "DistanceUnitsEnum",
-    "value": "DM"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "DistanceUnitsEnum",
-    "value": "MM"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "MeasurementUnitsEnum",
-    "value": "DM"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "MeasurementUnitsEnum",
-    "value": "MM"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "MeasurementUnitsEnum",
-    "value": "SQ_DM"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "MeasurementUnitsEnum",
-    "value": "SQ_MM"
+    "enum": "OrderEventsEnum",
+    "value": "NOTE_UPDATED"
   }
 ]

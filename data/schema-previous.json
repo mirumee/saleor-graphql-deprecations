@@ -8263,7 +8263,7 @@
       },
       "shippingPrice": {
         "type": "TaxedMoney!",
-        "description": "The price of the shipping, with all the taxes included.",
+        "description": "The price of the shipping, with all the taxes included. Set to 0 when no delivery method is selected.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -29148,9 +29148,9 @@
       },
       "orderAddNote": {
         "type": "OrderAddNote",
-        "description": "Adds note to the order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": null,
+        "description": "Adds note to the order.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": "4.0",
+        "message": "Adds note to the order.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "arguments": {
           "input": {
             "type": "OrderAddNoteInput!",
@@ -29654,6 +29654,50 @@
           "transactionReference": {
             "type": "String",
             "description": "The external transaction reference.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderNoteAdd": {
+        "type": "OrderNoteAdd",
+        "description": "Adds note to the order.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "OrderNoteInput!",
+            "description": "Fields required to create a note for the order.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "order": {
+            "type": "ID!",
+            "description": "ID of the order to add a note for.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderNoteUpdate": {
+        "type": "OrderNoteUpdate",
+        "description": "Updates note of an order.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "OrderNoteInput!",
+            "description": "Fields required to create a note for the order.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "note": {
+            "type": "ID!",
+            "description": "ID of the note.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -33416,9 +33460,9 @@
   "OrderAddNote": {
     "type": "object",
     "interfaces": [],
-    "description": "Adds note to the order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
-    "deprecated": null,
-    "message": null,
+    "description": "Adds note to the order.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "deprecated": "4.0",
+    "message": "Adds note to the order.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
     "fields": {
       "errors": {
         "type": "[OrderError!]!",
@@ -33458,9 +33502,9 @@
     "fields": {
       "message": {
         "type": "String!",
-        "description": "Note message.",
-        "deprecated": null,
-        "message": null,
+        "description": "Note message.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Note message.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
         "default": null
       }
     }
@@ -35440,6 +35484,13 @@
         "message": null,
         "arguments": {}
       },
+      "related": {
+        "type": "OrderEvent",
+        "description": "The order event which is related to this event.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "relatedOrder": {
         "type": "Order",
         "description": "The order which is related to this order.",
@@ -35794,6 +35845,11 @@
         "message": null
       },
       "NOTE_ADDED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOTE_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -37300,6 +37356,182 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "OrderNoteAdd": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Adds note to the order.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[OrderNoteAddError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "event": {
+        "type": "OrderEvent",
+        "description": "Order note created.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "Order with the note added.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderNoteAddError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "OrderNoteAddErrorCode",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderNoteAddErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "OrderNoteInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "message": {
+        "type": "String!",
+        "description": "Note message.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "OrderNoteUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates note of an order.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[OrderNoteUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "event": {
+        "type": "OrderEvent",
+        "description": "Order note updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "Order with the note updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderNoteUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "OrderNoteUpdateErrorCode",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderNoteUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -42721,7 +42953,7 @@
       },
       "isAvailable": {
         "type": "Boolean",
-        "description": "Whether the product is in stock and visible or not.",
+        "description": "Whether the product is in stock, set as available for purchase in the given channel, and published.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -42736,7 +42968,7 @@
       },
       "isAvailableForPurchase": {
         "type": "Boolean",
-        "description": "Whether the product is available for purchase.",
+        "description": "Refers to a state that can be set by admins to control whether a product is available for purchase in storefronts. This does not guarantee the availability of stock. When set to `False`, this product is still visible to customers, but it cannot be purchased.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43568,7 +43800,7 @@
       },
       "isAvailableForPurchase": {
         "type": "Boolean",
-        "description": "Whether the product is available for purchase.",
+        "description": "Refers to a state that can be set by admins to control whether a product is available for purchase in storefronts in this channel. This does not guarantee the availability of stock. When set to `False`, this product is still visible to customers, but it cannot be purchased.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43668,7 +43900,7 @@
       },
       "isAvailableForPurchase": {
         "type": "Boolean",
-        "description": "Determine if product should be available for purchase.",
+        "description": "Determines if product should be available for purchase in this channel. This does not guarantee the availability of stock. When set to `False`, this product is still visible to customers, but it cannot be purchased.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43732,7 +43964,7 @@
       },
       "isAvailableForPurchase": {
         "type": "Boolean",
-        "description": "Determine if product should be available for purchase.",
+        "description": "Determines if product should be available for purchase in this channel. This does not guarantee the availability of stock. When set to `False`, this product is still visible to customers, but it cannot be purchased.",
         "deprecated": null,
         "message": null,
         "default": null
