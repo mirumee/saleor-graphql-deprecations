@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-06-20 14:01:06</p>
+      <p class="m-0">Generated on 2023-06-21 14:00:55</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -936,6 +936,17 @@
                 <td colspan="2">reference</td>
               
               <td>3.15</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Order-trackingClientId" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Order</td>
+                <td colspan="2">trackingClientId</td>
+              
+              <td>4.0</td>
             </tr>
           
             <tr>
@@ -6936,6 +6947,27 @@ DEPRECATED: this field will be removed in Saleor 4.0.</p>
             <div class="font-monospace"><span class="text-primary">type</span> <strong>TransactionItem</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">reference</strong>: String!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Order-trackingClientId" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Order-trackingClientId" class="text-reset">
+                Field <strong class="text-danger">trackingClientId</strong> of type <strong class="text-danger">Order</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Google Analytics tracking client ID. This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Order</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">trackingClientId</strong>: String!<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

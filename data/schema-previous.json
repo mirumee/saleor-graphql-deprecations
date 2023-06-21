@@ -33366,9 +33366,9 @@
       },
       "trackingClientId": {
         "type": "String!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
+        "description": "Google Analytics tracking client ID. This field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Google Analytics tracking client ID. This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "transactions": {
@@ -34012,13 +34012,6 @@
       "status": {
         "type": "OrderStatus",
         "description": "Status of the order.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "trackingClientId": {
-        "type": "String",
-        "description": "Tracking ID of the customer.",
         "deprecated": null,
         "message": null,
         "default": null

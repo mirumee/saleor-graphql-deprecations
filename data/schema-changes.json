@@ -1,67 +1,13 @@
 [
   {
-    "diff": "type_new",
-    "type": "OrderNoteAdd"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderNoteAddError"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderNoteAddErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderNoteInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderNoteUpdate"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderNoteUpdateError"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderNoteUpdateErrorCode"
-  },
-  {
-    "diff": "type_deprecated",
-    "type": "OrderAddNote",
-    "version": "4.0"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "orderNoteAdd"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "orderNoteUpdate"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderEvent",
-    "field": "related"
+    "diff": "field_deleted",
+    "type": "OrderBulkCreateInput",
+    "field": "trackingClientId"
   },
   {
     "diff": "field_deprecated",
-    "type": "Mutation",
-    "field": "orderAddNote",
+    "type": "Order",
+    "field": "trackingClientId",
     "version": "4.0"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "OrderAddNoteInput",
-    "field": "message",
-    "version": "4.0"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "OrderEventsEnum",
-    "value": "NOTE_UPDATED"
   }
 ]
