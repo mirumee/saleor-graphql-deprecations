@@ -601,49 +601,49 @@
     "fields": {
       "city": {
         "type": "String!",
-        "description": null,
+        "description": "The city of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "cityArea": {
         "type": "String!",
-        "description": null,
+        "description": "The district of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "companyName": {
         "type": "String!",
-        "description": null,
+        "description": "Company or organization name.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "country": {
         "type": "CountryDisplay!",
-        "description": "Shop's default country.",
+        "description": "The country of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "countryArea": {
         "type": "String!",
-        "description": null,
+        "description": "The country area of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "firstName": {
         "type": "String!",
-        "description": null,
+        "description": "The given name of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -664,7 +664,7 @@
       },
       "lastName": {
         "type": "String!",
-        "description": null,
+        "description": "The family name of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -708,14 +708,14 @@
       },
       "phone": {
         "type": "String",
-        "description": null,
+        "description": "The phone number assigned the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "postalCode": {
         "type": "String!",
-        "description": null,
+        "description": "The postal code of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -759,14 +759,14 @@
       },
       "streetAddress1": {
         "type": "String!",
-        "description": null,
+        "description": "The first line of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "streetAddress2": {
         "type": "String!",
-        "description": null,
+        "description": "The second line of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -996,7 +996,7 @@
       },
       "phone": {
         "type": "String",
-        "description": "Phone number.",
+        "description": "Phone number.\n\nPhone numbers are validated with Google's [libphonenumber](https://github.com/google/libphonenumber) library.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -1164,119 +1164,119 @@
     "fields": {
       "addressFormat": {
         "type": "String!",
-        "description": null,
+        "description": "The address format of the address validation rule.\n\nMany fields in the JSON refer to address fields by one-letter abbreviations. These are defined as follows:\n\n- `N`: Name\n- `O`: Organisation\n- `A`: Street Address Line(s)\n- `D`: Dependent locality (may be an inner-city district or a suburb)\n- `C`: City or Locality\n- `S`: Administrative area such as a state, province, island etc\n- `Z`: Zip or postal code\n- `X`: Sorting code\n\n[Click here for more information.](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata)",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "addressLatinFormat": {
         "type": "String!",
-        "description": null,
+        "description": "The latin address format of the address validation rule.\n\nMany fields in the JSON refer to address fields by one-letter abbreviations. These are defined as follows:\n\n- `N`: Name\n- `O`: Organisation\n- `A`: Street Address Line(s)\n- `D`: Dependent locality (may be an inner-city district or a suburb)\n- `C`: City or Locality\n- `S`: Administrative area such as a state, province, island etc\n- `Z`: Zip or postal code\n- `X`: Sorting code\n\n[Click here for more information.](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata)",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "allowedFields": {
         "type": "[String!]!",
-        "description": null,
+        "description": "The allowed fields to use in address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "cityAreaChoices": {
         "type": "[ChoiceValue!]!",
-        "description": null,
+        "description": "The available choices for the city area of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "cityAreaType": {
         "type": "String!",
-        "description": null,
+        "description": "The formal name of the city area of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "cityChoices": {
         "type": "[ChoiceValue!]!",
-        "description": null,
+        "description": "The available choices for the city of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "cityType": {
         "type": "String!",
-        "description": null,
+        "description": "The formal name of the city of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "countryAreaChoices": {
         "type": "[ChoiceValue!]!",
-        "description": null,
+        "description": "The available choices for the country area of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "countryAreaType": {
         "type": "String!",
-        "description": null,
+        "description": "The formal name of the county area of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "countryCode": {
         "type": "String!",
-        "description": null,
+        "description": "The country code of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "countryName": {
         "type": "String!",
-        "description": null,
+        "description": "The country name of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "postalCodeExamples": {
         "type": "[String!]!",
-        "description": null,
+        "description": "The example postal code of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "postalCodeMatchers": {
         "type": "[String!]!",
-        "description": null,
+        "description": "The regular expression for postal code validation.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "postalCodePrefix": {
         "type": "String!",
-        "description": null,
+        "description": "The postal code prefix of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "postalCodeType": {
         "type": "String!",
-        "description": null,
+        "description": "The formal name of the postal code of the address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "requiredFields": {
         "type": "[String!]!",
-        "description": null,
+        "description": "The required fields to create a valid address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "upperFields": {
         "type": "[String!]!",
-        "description": null,
+        "description": "The list of fields that should be in upper case for address validation rule.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -1422,7 +1422,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the app.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -2000,21 +2000,21 @@
     "fields": {
       "accessToken": {
         "type": "String",
-        "description": "JWT token used to authenticate by thridparty app extension.",
+        "description": "JWT token used to authenticate by third-party app extension.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "app": {
         "type": "App!",
-        "description": null,
+        "description": "The app assigned to app extension.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the app extension.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -2255,7 +2255,7 @@
       },
       "manifest": {
         "type": "Manifest",
-        "description": null,
+        "description": "The validated manifest.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -2365,7 +2365,7 @@
       },
       "manifestUrl": {
         "type": "String",
-        "description": "Url to app's manifest in JSON format.",
+        "description": "URL to app's manifest in JSON format.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -2391,7 +2391,7 @@
     "fields": {
       "appName": {
         "type": "String!",
-        "description": null,
+        "description": "The name of the app installation.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -2412,14 +2412,14 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the app installation.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "manifestUrl": {
         "type": "String!",
-        "description": null,
+        "description": "The URL address of manifest for the app installation.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -2785,7 +2785,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the app token.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -10079,14 +10079,14 @@
     "fields": {
       "raw": {
         "type": "String",
-        "description": null,
+        "description": "The raw name of the choice.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "verbose": {
         "type": "String",
-        "description": null,
+        "description": "The verbose name of the choice.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -13477,7 +13477,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the customer event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19242,14 +19242,14 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the group.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "The name of the group.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -24099,14 +24099,14 @@
     "fields": {
       "about": {
         "type": "String",
-        "description": null,
+        "description": "Description of the app displayed in the dashboard.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "appUrl": {
         "type": "String",
-        "description": null,
+        "description": "App website rendered in the dashboard.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -24148,42 +24148,42 @@
       },
       "dataPrivacyUrl": {
         "type": "String",
-        "description": null,
+        "description": "URL to the full privacy policy.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "extensions": {
         "type": "[AppManifestExtension!]!",
-        "description": null,
+        "description": "List of extensions that will be mounted in Saleor's dashboard. For details, please [see the extension section.](https://docs.saleor.io/docs/3.x/developer/extending/apps/extending-dashboard-with-apps#key-concepts)",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "homepageUrl": {
         "type": "String",
-        "description": null,
+        "description": "External URL to the app homepage.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "identifier": {
         "type": "String!",
-        "description": null,
+        "description": "The identifier of the manifest for the app.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "The name of the manifest for the app .",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "permissions": {
         "type": "[Permission!]",
-        "description": null,
+        "description": "The array permissions required for the app.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -24197,21 +24197,21 @@
       },
       "supportUrl": {
         "type": "String",
-        "description": null,
+        "description": "External URL to the page where app users can find support.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "tokenTargetUrl": {
         "type": "String",
-        "description": null,
+        "description": "Endpoint used during process of app installation, [see installing an app.](https://docs.saleor.io/docs/3.x/developer/extending/apps/installing-apps#installing-an-app)",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "version": {
         "type": "String!",
-        "description": null,
+        "description": "The version of the manifest for the app.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -26578,7 +26578,7 @@
         "arguments": {
           "manifestUrl": {
             "type": "String!",
-            "description": null,
+            "description": "URL to app's manifest in JSON format.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56508,7 +56508,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the staff notification recipient.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61508,7 +61508,7 @@
       },
       "avatar": {
         "type": "Image",
-        "description": null,
+        "description": "The avatar of the user.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -61610,21 +61610,21 @@
       },
       "dateJoined": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The data when the user create account.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "defaultBillingAddress": {
         "type": "Address",
-        "description": null,
+        "description": "The default billing address of the user.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "defaultShippingAddress": {
         "type": "Address",
-        "description": null,
+        "description": "The default shipping address of the user.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61638,7 +61638,7 @@
       },
       "email": {
         "type": "String!",
-        "description": null,
+        "description": "The email address of the user.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61659,7 +61659,7 @@
       },
       "firstName": {
         "type": "String!",
-        "description": null,
+        "description": "The given name of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61702,21 +61702,21 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the user.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isActive": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determine if the user is active.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isStaff": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determine if the user is a staff admin.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61730,14 +61730,14 @@
       },
       "lastLogin": {
         "type": "DateTime",
-        "description": null,
+        "description": "The date when the user last time log in to the system.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "lastName": {
         "type": "String!",
-        "description": null,
+        "description": "The family name of the address.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61890,7 +61890,7 @@
       },
       "updatedAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The data when the user last update the account information.",
         "deprecated": null,
         "message": null,
         "arguments": {}
