@@ -3210,7 +3210,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the attribute.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -3305,7 +3305,7 @@
       },
       "productTypes": {
         "type": "ProductTypeCountableConnection!",
-        "description": null,
+        "description": "A list of product types that use this attribute as a product attribute.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -3341,7 +3341,7 @@
       },
       "productVariantTypes": {
         "type": "ProductTypeCountableConnection!",
-        "description": null,
+        "description": "A list of product types that use this attribute as a product variant attribute.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -4805,7 +4805,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the attribute value.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -7306,7 +7306,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -7451,7 +7451,7 @@
       },
       "isActive": {
         "type": "Boolean",
-        "description": "isActive flag.",
+        "description": "Determine if channel will be set active or not.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7914,7 +7914,7 @@
       },
       "isActive": {
         "type": "Boolean",
-        "description": "isActive flag.",
+        "description": "Determine if channel will be set active or not.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -8049,14 +8049,14 @@
       },
       "billingAddress": {
         "type": "Address",
-        "description": null,
+        "description": "The billing address of the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "The channel for which checkout was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8070,7 +8070,7 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The date and time when the checkout was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8084,14 +8084,14 @@
       },
       "discount": {
         "type": "Money",
-        "description": null,
+        "description": "The total discount applied to the checkout. Note: Only discount created via voucher are included in this field.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "discountName": {
         "type": "String",
-        "description": null,
+        "description": "The name of voucher assigned to the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8119,7 +8119,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8191,7 +8191,7 @@
       },
       "note": {
         "type": "String!",
-        "description": null,
+        "description": "The note for the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8242,7 +8242,7 @@
       },
       "shippingAddress": {
         "type": "Address",
-        "description": null,
+        "description": "The shipping address of the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8319,7 +8319,7 @@
       },
       "translatedDiscountName": {
         "type": "String",
-        "description": null,
+        "description": "Translation of the discountName field in the language set in Checkout.languageCode field.Note: this field is set automatically when Checkout.languageCode is defined; otherwise it's null",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8333,14 +8333,14 @@
       },
       "user": {
         "type": "User",
-        "description": null,
+        "description": "The user assigned to the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "voucherCode": {
         "type": "String",
-        "description": null,
+        "description": "The code of voucher assigned to the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9409,7 +9409,7 @@
     "fields": {
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the checkout line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9490,7 +9490,7 @@
       },
       "quantity": {
         "type": "Int!",
-        "description": null,
+        "description": "The quantity of product variant assigned to the checkout line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9532,7 +9532,7 @@
       },
       "variant": {
         "type": "ProductVariant!",
-        "description": null,
+        "description": "The product variant from which the checkout line was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
