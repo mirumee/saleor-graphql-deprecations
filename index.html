@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-06-23 14:00:56</p>
+      <p class="m-0">Generated on 2023-06-26 14:01:04</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -459,6 +459,50 @@
                 <td>ProductVariant</td>
                 <td>quantityAvailable</td>
                 <td>countryCode</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#VariantPricingInfo-discountLocalCurrency" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>VariantPricingInfo</td>
+                <td colspan="2">discountLocalCurrency</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#VariantPricingInfo-priceLocalCurrency" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>VariantPricingInfo</td>
+                <td colspan="2">priceLocalCurrency</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#ProductPricingInfo-discountLocalCurrency" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>ProductPricingInfo</td>
+                <td colspan="2">discountLocalCurrency</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#ProductPricingInfo-priceRangeLocalCurrency" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>ProductPricingInfo</td>
+                <td colspan="2">priceRangeLocalCurrency</td>
               
               <td>4.0</td>
             </tr>
@@ -5497,7 +5541,7 @@ DEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). 
               </a>
             </h2>
             <p>Removed in <strong>Saleor 4.0</strong></p>
-            <p>This field will be removed in Saleor 4.0. Use <strong class="text-danger font-monospace">TaxClassCountryRate</strong> type to manage tax rates per country.</p>
+            <p>This field will be removed in Saleor 4.0. Always returns <strong class="text-danger font-monospace">null</strong>. Use <strong class="text-danger font-monospace">TaxClassCountryRate</strong> type to manage tax rates per country.</p>
           </div>
           <div class="col-12 col-md">
             <div class="font-monospace"><span class="text-primary">type</span> <strong>CountryDisplay</strong> {<br />
@@ -6030,6 +6074,90 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
 &nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">countryCode</strong>: CountryCode<span class="text-secondary">,</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;): Int<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="VariantPricingInfo-discountLocalCurrency" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#VariantPricingInfo-discountLocalCurrency" class="text-reset">
+                Field <strong class="text-danger">discountLocalCurrency</strong> of type <strong class="text-danger">VariantPricingInfo</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0. Always returns <strong class="text-danger font-monospace">null</strong>.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>VariantPricingInfo</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">discountLocalCurrency</strong>: TaxedMoney<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="VariantPricingInfo-priceLocalCurrency" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#VariantPricingInfo-priceLocalCurrency" class="text-reset">
+                Field <strong class="text-danger">priceLocalCurrency</strong> of type <strong class="text-danger">VariantPricingInfo</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0. Always returns <strong class="text-danger font-monospace">null</strong>.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>VariantPricingInfo</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">priceLocalCurrency</strong>: TaxedMoney<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="ProductPricingInfo-discountLocalCurrency" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#ProductPricingInfo-discountLocalCurrency" class="text-reset">
+                Field <strong class="text-danger">discountLocalCurrency</strong> of type <strong class="text-danger">ProductPricingInfo</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0. Always returns <strong class="text-danger font-monospace">null</strong>.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>ProductPricingInfo</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">discountLocalCurrency</strong>: TaxedMoney<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="ProductPricingInfo-priceRangeLocalCurrency" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#ProductPricingInfo-priceRangeLocalCurrency" class="text-reset">
+                Field <strong class="text-danger">priceRangeLocalCurrency</strong> of type <strong class="text-danger">ProductPricingInfo</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0. Always returns <strong class="text-danger font-monospace">null</strong>.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>ProductPricingInfo</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">priceRangeLocalCurrency</strong>: TaxedMoneyRange<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

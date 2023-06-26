@@ -12990,7 +12990,7 @@
         "type": "VAT",
         "description": "Country tax.",
         "deprecated": "4.0",
-        "message": "This field will be removed in Saleor 4.0. Use `TaxClassCountryRate` type to manage tax rates per country.",
+        "message": "This field will be removed in Saleor 4.0. Always returns `null`. Use `TaxClassCountryRate` type to manage tax rates per country.",
         "arguments": {}
       }
     }
@@ -15916,7 +15916,7 @@
     "fields": {
       "app": {
         "type": "App",
-        "description": null,
+        "description": "The app which requests file export.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -15937,7 +15937,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the export file.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -15972,7 +15972,7 @@
       },
       "user": {
         "type": "User",
-        "description": null,
+        "description": "The user who requests file export.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18519,6 +18519,13 @@
     "message": null,
     "fields": {
       "code": {
+        "type": "String",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "createdByEmail": {
         "type": "String",
         "description": null,
         "deprecated": null,
@@ -45724,8 +45731,8 @@
       "discountLocalCurrency": {
         "type": "TaxedMoney",
         "description": "The discount amount in the local currency.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
         "arguments": {}
       },
       "displayGrossPrices": {
@@ -45752,8 +45759,8 @@
       "priceRangeLocalCurrency": {
         "type": "TaxedMoneyRange",
         "description": "The discounted price range of the product variants in the local currency.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
         "arguments": {}
       },
       "priceRangeUndiscounted": {
@@ -62398,8 +62405,8 @@
       "discountLocalCurrency": {
         "type": "TaxedMoney",
         "description": "The discount amount in the local currency.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
         "arguments": {}
       },
       "onSale": {
@@ -62419,8 +62426,8 @@
       "priceLocalCurrency": {
         "type": "TaxedMoney",
         "description": "The discounted price in the local currency.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
         "arguments": {}
       },
       "priceUndiscounted": {
