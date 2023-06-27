@@ -110,6 +110,80 @@
       }
     }
   },
+  "AccountConfirmationRequested": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when account confirmation requested. This event is always sent. enableAccountConfirmationByEmail flag set to True is not required.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel",
+        "description": "The channel data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "redirectUrl": {
+        "type": "String",
+        "description": "The URL to redirect the user after he accepts the request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shop": {
+        "type": "Shop",
+        "description": "Shop data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "token": {
+        "type": "String",
+        "description": "The token required to confirm request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "The user the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "AccountDelete": {
     "type": "object",
     "interfaces": [],
@@ -134,6 +208,80 @@
       "user": {
         "type": "User",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AccountDeleteRequested": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when account delete is requested.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel",
+        "description": "The channel data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "redirectUrl": {
+        "type": "String",
+        "description": "The URL to redirect the user after he accepts the request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shop": {
+        "type": "Shop",
+        "description": "Shop data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "token": {
+        "type": "String",
+        "description": "The token required to confirm request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "The user the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -65319,6 +65467,16 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "ACCOUNT_CONFIRMATION_REQUESTED": {
+        "description": "An account confirmation is requested.",
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_DELETE_REQUESTED": {
+        "description": "An account delete is requested.",
+        "deprecated": null,
+        "message": null
+      },
       "ADDRESS_CREATED": {
         "description": "A new address created.",
         "deprecated": null,
@@ -65922,6 +66080,16 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "ACCOUNT_CONFIRMATION_REQUESTED": {
+        "description": "An account confirmation is requested.",
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_DELETE_REQUESTED": {
+        "description": "An account delete is requested.",
+        "deprecated": null,
+        "message": null
+      },
       "ADDRESS_CREATED": {
         "description": "A new address created.",
         "deprecated": null,
@@ -66713,6 +66881,16 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "ACCOUNT_CONFIRMATION_REQUESTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_DELETE_REQUESTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "ADDRESS_CREATED": {
         "description": null,
         "deprecated": null,

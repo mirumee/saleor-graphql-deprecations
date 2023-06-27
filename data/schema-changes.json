@@ -1,31 +1,40 @@
 [
   {
-    "diff": "field_new",
-    "type": "GiftCardFilterInput",
-    "field": "createdByEmail"
+    "diff": "type_new",
+    "type": "AccountConfirmationRequested"
   },
   {
-    "diff": "field_deprecated",
-    "type": "ProductPricingInfo",
-    "field": "discountLocalCurrency",
-    "version": "4.0"
+    "diff": "type_new",
+    "type": "AccountDeleteRequested"
   },
   {
-    "diff": "field_deprecated",
-    "type": "ProductPricingInfo",
-    "field": "priceRangeLocalCurrency",
-    "version": "4.0"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "ACCOUNT_CONFIRMATION_REQUESTED"
   },
   {
-    "diff": "field_deprecated",
-    "type": "VariantPricingInfo",
-    "field": "discountLocalCurrency",
-    "version": "4.0"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "ACCOUNT_DELETE_REQUESTED"
   },
   {
-    "diff": "field_deprecated",
-    "type": "VariantPricingInfo",
-    "field": "priceLocalCurrency",
-    "version": "4.0"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "ACCOUNT_CONFIRMATION_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "ACCOUNT_DELETE_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "ACCOUNT_CONFIRMATION_REQUESTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "ACCOUNT_DELETE_REQUESTED"
   }
 ]
