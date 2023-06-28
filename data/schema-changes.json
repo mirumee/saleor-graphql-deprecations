@@ -1,40 +1,132 @@
 [
   {
     "diff": "type_new",
-    "type": "AccountConfirmationRequested"
+    "type": "OrderGrantRefundCreateLineError"
   },
   {
     "diff": "type_new",
-    "type": "AccountDeleteRequested"
+    "type": "OrderGrantRefundCreateLineErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundCreateLineInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundUpdateLineAddInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundUpdateLineError"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantRefundUpdateLineErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "OrderGrantedRefundLine"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionRequestRefundForGrantedRefund"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionRequestRefundForGrantedRefundError"
+  },
+  {
+    "diff": "type_new",
+    "type": "TransactionRequestRefundForGrantedRefundErrorCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "transactionRequestRefundForGrantedRefund"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundCreateError",
+    "field": "lines"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundCreateInput",
+    "field": "grantRefundForShipping"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundCreateInput",
+    "field": "lines"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateError",
+    "field": "addLines"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateError",
+    "field": "removeLines"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateInput",
+    "field": "addLines"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateInput",
+    "field": "grantRefundForShipping"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateInput",
+    "field": "removeLines"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantedRefund",
+    "field": "lines"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantedRefund",
+    "field": "shippingCostsIncluded"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionRefundRequested",
+    "field": "grantedRefund"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "OrderGrantRefundUpdate",
+    "field": "orderGrantedRefund"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ACCOUNT_CONFIRMATION_REQUESTED"
+    "enum": "OrderGrantRefundCreateErrorCode",
+    "value": "INVALID"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ACCOUNT_DELETE_REQUESTED"
+    "enum": "OrderGrantRefundCreateErrorCode",
+    "value": "REQUIRED"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "ACCOUNT_CONFIRMATION_REQUESTED"
+    "enum": "OrderGrantRefundCreateErrorCode",
+    "value": "SHIPPING_COSTS_ALREADY_GRANTED"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "ACCOUNT_DELETE_REQUESTED"
+    "enum": "OrderGrantRefundUpdateErrorCode",
+    "value": "INVALID"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "ACCOUNT_CONFIRMATION_REQUESTED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "ACCOUNT_DELETE_REQUESTED"
+    "enum": "OrderGrantRefundUpdateErrorCode",
+    "value": "SHIPPING_COSTS_ALREADY_GRANTED"
   }
 ]

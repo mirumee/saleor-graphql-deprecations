@@ -2,7 +2,7 @@
   "AccountAddressCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+    "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -39,7 +39,7 @@
   "AccountAddressDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.",
+    "description": "Delete an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -76,7 +76,7 @@
   "AccountAddressUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.",
+    "description": "Updates an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_UPDATED (async): An address was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -556,7 +556,7 @@
   "AccountRegister": {
     "type": "object",
     "interfaces": [],
-    "description": "Register a new user.",
+    "description": "Register a new user.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- NOTIFY_USER (async): A notification for account confirmation.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -657,7 +657,7 @@
   "AccountRequestDeletion": {
     "type": "object",
     "interfaces": [],
-    "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+    "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account delete request.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -680,7 +680,7 @@
   "AccountSetDefaultAddress": {
     "type": "object",
     "interfaces": [],
-    "description": "Sets a default address for the authenticated user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+    "description": "Sets a default address for the authenticated user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer's address was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -710,7 +710,7 @@
   "AccountUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+    "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -924,7 +924,7 @@
   "AddressCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates user address. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Creates user address. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- ADDRESS_CREATED (async): A new address was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1007,7 +1007,7 @@
   "AddressDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes an address. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Deletes an address. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1175,7 +1175,7 @@
   "AddressSetDefault": {
     "type": "object",
     "interfaces": [],
-    "description": "Sets a default address for the given user. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Sets a default address for the given user. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1223,7 +1223,7 @@
   "AddressUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates an address. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Updates an address. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- ADDRESS_UPDATED (async): An address was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1717,7 +1717,7 @@
   "AppActivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Activate the app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "description": "Activate the app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_STATUS_CHANGED (async): An app was activated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1847,7 +1847,7 @@
   "AppCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new app. Requires the following permissions: AUTHENTICATED_STAFF_USER and MANAGE_APPS.",
+    "description": "Creates a new app. Requires the following permissions: AUTHENTICATED_STAFF_USER and MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_INSTALLED (async): An app was installed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1884,7 +1884,7 @@
   "AppDeactivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Deactivate the app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "description": "Deactivate the app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_STATUS_CHANGED (async): An app was deactivated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1914,7 +1914,7 @@
   "AppDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes an app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "description": "Deletes an app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_DELETED (async): An app was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -2802,7 +2802,7 @@
   "AppRetryInstall": {
     "type": "object",
     "interfaces": [],
-    "description": "Retry failed installation of new app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "description": "Retry failed installation of new app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_INSTALLED (async): An app was installed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -3087,7 +3087,7 @@
   "AppUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates an existing app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "description": "Updates an existing app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_UPDATED (async): An app was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -3592,7 +3592,7 @@
   "AttributeBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+    "description": "Deletes attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -3834,7 +3834,7 @@
   "AttributeCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates an attribute.",
+    "description": "Creates an attribute.\n\nTriggers the following webhook events:\n- ATTRIBUTE_CREATED (async): An attribute was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -4023,7 +4023,7 @@
   "AttributeDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+    "description": "Deletes an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -4453,7 +4453,7 @@
   "AttributeReorderValues": {
     "type": "object",
     "interfaces": [],
-    "description": "Reorder the values of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+    "description": "Reorder the values of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -4735,7 +4735,7 @@
   "AttributeUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+    "description": "Updates attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -5027,7 +5027,7 @@
   "AttributeValueBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes values of attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+    "description": "Deletes values of attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -5229,7 +5229,7 @@
   "AttributeValueCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a value for an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Creates a value for an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_CREATED (async): An attribute value was created.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -5369,7 +5369,7 @@
   "AttributeValueDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+    "description": "Deletes a value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -5817,7 +5817,7 @@
   "AttributeValueUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+    "description": "Updates value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7506,7 +7506,7 @@
   "ChannelActivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Activate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+    "description": "Activate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_STATUS_CHANGED (async): A channel was activated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7536,7 +7536,7 @@
   "ChannelCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+    "description": "Creates new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_CREATED (async): A channel was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7683,7 +7683,7 @@
   "ChannelDeactivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Deactivate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+    "description": "Deactivate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_STATUS_CHANGED (async): A channel was deactivated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7713,7 +7713,7 @@
   "ChannelDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+    "description": "Delete a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_DELETED (async): A channel was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -8006,7 +8006,7 @@
   "ChannelUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.",
+    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -8169,7 +8169,7 @@
     "fields": {
       "authorizeStatus": {
         "type": "CheckoutAuthorizeStatusEnum!",
-        "description": "The authorize status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "The authorize status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8183,14 +8183,14 @@
       },
       "availablePaymentGateways": {
         "type": "[PaymentGateway!]!",
-        "description": "List of available payment gateways.",
+        "description": "List of available payment gateways.\n\nTriggers the following webhook events:\n- PAYMENT_LIST_GATEWAYS (sync): Fetch payment gateways available for checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "availableShippingMethods": {
         "type": "[ShippingMethod!]!",
-        "description": "Shipping methods that can be used with this checkout.",
+        "description": "Shipping methods that can be used with this checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `shippingMethods` instead.",
         "arguments": {}
@@ -8211,7 +8211,7 @@
       },
       "chargeStatus": {
         "type": "CheckoutChargeStatusEnum!",
-        "description": "The charge status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "The charge status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8225,7 +8225,7 @@
       },
       "deliveryMethod": {
         "type": "DeliveryMethod",
-        "description": "The delivery method selected for this checkout.\n\nAdded in Saleor 3.1.",
+        "description": "The delivery method selected for this checkout.\n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8397,21 +8397,21 @@
       },
       "shippingMethod": {
         "type": "ShippingMethod",
-        "description": "The shipping method related with checkout.",
+        "description": "The shipping method related with checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `deliveryMethod` instead.",
         "arguments": {}
       },
       "shippingMethods": {
         "type": "[ShippingMethod!]!",
-        "description": "Shipping methods that can be used with this checkout.",
+        "description": "Shipping methods that can be used with this checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "shippingPrice": {
         "type": "TaxedMoney!",
-        "description": "The price of the shipping, with all the taxes included. Set to 0 when no delivery method is selected.",
+        "description": "The price of the shipping, with all the taxes included. Set to 0 when no delivery method is selected.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8425,7 +8425,7 @@
       },
       "subtotalPrice": {
         "type": "TaxedMoney!",
-        "description": "The price of the checkout before shipping, with taxes included.",
+        "description": "The price of the checkout before shipping, with taxes included.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8446,14 +8446,14 @@
       },
       "totalBalance": {
         "type": "Money!",
-        "description": "The difference between the paid and the checkout total amount.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "The difference between the paid and the checkout total amount.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "totalPrice": {
         "type": "TaxedMoney!",
-        "description": "The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.",
+        "description": "The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8498,7 +8498,7 @@
   "CheckoutAddPromoCode": {
     "type": "object",
     "interfaces": [],
-    "description": "Adds a gift card or a voucher to a checkout.",
+    "description": "Adds a gift card or a voucher to a checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -8580,7 +8580,7 @@
   "CheckoutBillingAddressUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update billing address in the existing checkout.",
+    "description": "Update billing address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -8638,7 +8638,7 @@
   "CheckoutComplete": {
     "type": "object",
     "interfaces": [],
-    "description": "Completes the checkout. As a result a new order is created and a payment charge is made. This action requires a successful payment before it can be performed. In case additional confirmation step as 3D secure is required confirmationNeeded flag will be set to True and no order created until payment is confirmed with second call of this mutation.",
+    "description": "Completes the checkout. As a result a new order is created and a payment charge is made. This action requires a successful payment before it can be performed. In case additional confirmation step as 3D secure is required confirmationNeeded flag will be set to True and no order created until payment is confirmed with second call of this mutation.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -8735,7 +8735,7 @@
   "CheckoutCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create a new checkout.",
+    "description": "Create a new checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9043,7 +9043,7 @@
   "CheckoutCustomerAttach": {
     "type": "object",
     "interfaces": [],
-    "description": "Sets the customer as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.",
+    "description": "Sets the customer as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9073,7 +9073,7 @@
   "CheckoutCustomerDetach": {
     "type": "object",
     "interfaces": [],
-    "description": "Removes the user assigned as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.",
+    "description": "Removes the user assigned as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9103,7 +9103,7 @@
   "CheckoutDeliveryMethodUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates the delivery method (shipping method or pick up point) of the checkout.\n\nAdded in Saleor 3.1.",
+    "description": "Updates the delivery method (shipping method or pick up point) of the checkout.\n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9126,7 +9126,7 @@
   "CheckoutEmailUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates email address in the existing checkout object.",
+    "description": "Updates email address in the existing checkout object.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9518,7 +9518,7 @@
   "CheckoutLanguageCodeUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update language code in the existing checkout.",
+    "description": "Update language code in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9652,7 +9652,7 @@
       },
       "totalPrice": {
         "type": "TaxedMoney!",
-        "description": "The sum of the checkout line price, taxes and discounts.",
+        "description": "The sum of the checkout line price, taxes and discounts.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9673,7 +9673,7 @@
       },
       "unitPrice": {
         "type": "TaxedMoney!",
-        "description": "The unit price of the checkout line, with taxes and discounts.",
+        "description": "The unit price of the checkout line, with taxes and discounts.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9743,7 +9743,7 @@
   "CheckoutLineDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a CheckoutLine.",
+    "description": "Deletes a CheckoutLine.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9852,7 +9852,7 @@
   "CheckoutLinesAdd": {
     "type": "object",
     "interfaces": [],
-    "description": "Adds a checkout line to the existing checkout.If line was already in checkout, its quantity will be increased.",
+    "description": "Adds a checkout line to the existing checkout.If line was already in checkout, its quantity will be increased.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9882,7 +9882,7 @@
   "CheckoutLinesDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes checkout lines.",
+    "description": "Deletes checkout lines.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9905,7 +9905,7 @@
   "CheckoutLinesUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates checkout line in the existing checkout.",
+    "description": "Updates checkout line in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10018,7 +10018,7 @@
   "CheckoutRemovePromoCode": {
     "type": "object",
     "interfaces": [],
-    "description": "Remove a gift card or a voucher from a checkout.",
+    "description": "Remove a gift card or a voucher from a checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10048,7 +10048,7 @@
   "CheckoutShippingAddressUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update shipping address in the existing checkout.",
+    "description": "Update shipping address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10078,7 +10078,7 @@
   "CheckoutShippingMethodUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates the shipping method of the checkout.",
+    "description": "Updates the shipping method of the checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout shipping method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -11828,7 +11828,7 @@
   "ConfirmEmailChange": {
     "type": "object",
     "interfaces": [],
-    "description": "Confirm the email change of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+    "description": "Confirm the email change of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- NOTIFY_USER (async): A notification that account email change was confirmed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -13300,7 +13300,7 @@
   "CustomerBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes customers. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Deletes customers. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_DELETED (async): A customer account was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -13353,7 +13353,7 @@
   "CustomerBulkUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates customers.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Updates customers.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -13490,7 +13490,7 @@
   "CustomerCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.\n- NOTIFY_USER (async): A notification for setting the password.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -13566,7 +13566,7 @@
   "CustomerDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a customer. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Deletes a customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_DELETED (async): A customer account was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -13941,7 +13941,7 @@
   "CustomerUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates an existing customer. \n\nRequires one of the following permissions: MANAGE_USERS.",
+    "description": "Updates an existing customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A new customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -16276,7 +16276,7 @@
   "ExportGiftCards": {
     "type": "object",
     "interfaces": [],
-    "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -16371,7 +16371,7 @@
   "ExportProducts": {
     "type": "object",
     "interfaces": [],
-    "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -26416,7 +26416,7 @@
     "fields": {
       "accountAddressCreate": {
         "type": "AccountAddressCreate",
-        "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+        "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26438,7 +26438,7 @@
       },
       "accountAddressDelete": {
         "type": "AccountAddressDelete",
-        "description": "Delete an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.",
+        "description": "Delete an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26453,7 +26453,7 @@
       },
       "accountAddressUpdate": {
         "type": "AccountAddressUpdate",
-        "description": "Updates an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.",
+        "description": "Updates an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_UPDATED (async): An address was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26490,7 +26490,7 @@
       },
       "accountRegister": {
         "type": "AccountRegister",
-        "description": "Register a new user.",
+        "description": "Register a new user.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- NOTIFY_USER (async): A notification for account confirmation.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26505,7 +26505,7 @@
       },
       "accountRequestDeletion": {
         "type": "AccountRequestDeletion",
-        "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+        "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account delete request.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26527,7 +26527,7 @@
       },
       "accountSetDefaultAddress": {
         "type": "AccountSetDefaultAddress",
-        "description": "Sets a default address for the authenticated user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+        "description": "Sets a default address for the authenticated user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer's address was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26549,7 +26549,7 @@
       },
       "accountUpdate": {
         "type": "AccountUpdate",
-        "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+        "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26564,7 +26564,7 @@
       },
       "addressCreate": {
         "type": "AddressCreate",
-        "description": "Creates user address. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Creates user address. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- ADDRESS_CREATED (async): A new address was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26586,7 +26586,7 @@
       },
       "addressDelete": {
         "type": "AddressDelete",
-        "description": "Deletes an address. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Deletes an address. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26601,7 +26601,7 @@
       },
       "addressSetDefault": {
         "type": "AddressSetDefault",
-        "description": "Sets a default address for the given user. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Sets a default address for the given user. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26630,7 +26630,7 @@
       },
       "addressUpdate": {
         "type": "AddressUpdate",
-        "description": "Updates an address. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Updates an address. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- ADDRESS_UPDATED (async): An address was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26652,7 +26652,7 @@
       },
       "appActivate": {
         "type": "AppActivate",
-        "description": "Activate the app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "description": "Activate the app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_STATUS_CHANGED (async): An app was activated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26667,7 +26667,7 @@
       },
       "appCreate": {
         "type": "AppCreate",
-        "description": "Creates a new app. Requires the following permissions: AUTHENTICATED_STAFF_USER and MANAGE_APPS.",
+        "description": "Creates a new app. Requires the following permissions: AUTHENTICATED_STAFF_USER and MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_INSTALLED (async): An app was installed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26682,7 +26682,7 @@
       },
       "appDeactivate": {
         "type": "AppDeactivate",
-        "description": "Deactivate the app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "description": "Deactivate the app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_STATUS_CHANGED (async): An app was deactivated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26697,7 +26697,7 @@
       },
       "appDelete": {
         "type": "AppDelete",
-        "description": "Deletes an app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "description": "Deletes an app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_DELETED (async): An app was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26757,7 +26757,7 @@
       },
       "appRetryInstall": {
         "type": "AppRetryInstall",
-        "description": "Retry failed installation of new app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "description": "Retry failed installation of new app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_INSTALLED (async): An app was installed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26824,7 +26824,7 @@
       },
       "appUpdate": {
         "type": "AppUpdate",
-        "description": "Updates an existing app. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "description": "Updates an existing app. \n\nRequires one of the following permissions: MANAGE_APPS.\n\nTriggers the following webhook events:\n- APP_UPDATED (async): An app was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26890,7 +26890,7 @@
       },
       "attributeBulkDelete": {
         "type": "AttributeBulkDelete",
-        "description": "Deletes attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+        "description": "Deletes attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26927,7 +26927,7 @@
       },
       "attributeCreate": {
         "type": "AttributeCreate",
-        "description": "Creates an attribute.",
+        "description": "Creates an attribute.\n\nTriggers the following webhook events:\n- ATTRIBUTE_CREATED (async): An attribute was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26942,7 +26942,7 @@
       },
       "attributeDelete": {
         "type": "AttributeDelete",
-        "description": "Deletes an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+        "description": "Deletes an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -26964,7 +26964,7 @@
       },
       "attributeReorderValues": {
         "type": "AttributeReorderValues",
-        "description": "Reorder the values of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+        "description": "Reorder the values of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27015,7 +27015,7 @@
       },
       "attributeUpdate": {
         "type": "AttributeUpdate",
-        "description": "Updates attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+        "description": "Updates attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27044,7 +27044,7 @@
       },
       "attributeValueBulkDelete": {
         "type": "AttributeValueBulkDelete",
-        "description": "Deletes values of attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+        "description": "Deletes values of attributes. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27081,7 +27081,7 @@
       },
       "attributeValueCreate": {
         "type": "AttributeValueCreate",
-        "description": "Creates a value for an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Creates a value for an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_CREATED (async): An attribute value was created.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27103,7 +27103,7 @@
       },
       "attributeValueDelete": {
         "type": "AttributeValueDelete",
-        "description": "Deletes a value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+        "description": "Deletes a value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27154,7 +27154,7 @@
       },
       "attributeValueUpdate": {
         "type": "AttributeValueUpdate",
-        "description": "Updates value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
+        "description": "Updates value of an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27286,7 +27286,7 @@
       },
       "channelActivate": {
         "type": "ChannelActivate",
-        "description": "Activate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+        "description": "Activate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_STATUS_CHANGED (async): A channel was activated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27301,7 +27301,7 @@
       },
       "channelCreate": {
         "type": "ChannelCreate",
-        "description": "Creates new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+        "description": "Creates new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_CREATED (async): A channel was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27316,7 +27316,7 @@
       },
       "channelDeactivate": {
         "type": "ChannelDeactivate",
-        "description": "Deactivate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+        "description": "Deactivate a channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_STATUS_CHANGED (async): A channel was deactivated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27331,7 +27331,7 @@
       },
       "channelDelete": {
         "type": "ChannelDelete",
-        "description": "Delete a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.",
+        "description": "Delete a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_DELETED (async): A channel was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27375,7 +27375,7 @@
       },
       "channelUpdate": {
         "type": "ChannelUpdate",
-        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.",
+        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27397,7 +27397,7 @@
       },
       "checkoutAddPromoCode": {
         "type": "CheckoutAddPromoCode",
-        "description": "Adds a gift card or a voucher to a checkout.",
+        "description": "Adds a gift card or a voucher to a checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27433,7 +27433,7 @@
       },
       "checkoutBillingAddressUpdate": {
         "type": "CheckoutBillingAddressUpdate",
-        "description": "Update billing address in the existing checkout.",
+        "description": "Update billing address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27476,7 +27476,7 @@
       },
       "checkoutComplete": {
         "type": "CheckoutComplete",
-        "description": "Completes the checkout. As a result a new order is created and a payment charge is made. This action requires a successful payment before it can be performed. In case additional confirmation step as 3D secure is required confirmationNeeded flag will be set to True and no order created until payment is confirmed with second call of this mutation.",
+        "description": "Completes the checkout. As a result a new order is created and a payment charge is made. This action requires a successful payment before it can be performed. In case additional confirmation step as 3D secure is required confirmationNeeded flag will be set to True and no order created until payment is confirmed with second call of this mutation.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27533,7 +27533,7 @@
       },
       "checkoutCreate": {
         "type": "CheckoutCreate",
-        "description": "Create a new checkout.",
+        "description": "Create a new checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27563,7 +27563,7 @@
       },
       "checkoutCustomerAttach": {
         "type": "CheckoutCustomerAttach",
-        "description": "Sets the customer as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.",
+        "description": "Sets the customer as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27599,7 +27599,7 @@
       },
       "checkoutCustomerDetach": {
         "type": "CheckoutCustomerDetach",
-        "description": "Removes the user assigned as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.",
+        "description": "Removes the user assigned as the owner of the checkout. \n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27628,7 +27628,7 @@
       },
       "checkoutDeliveryMethodUpdate": {
         "type": "CheckoutDeliveryMethodUpdate",
-        "description": "Updates the delivery method (shipping method or pick up point) of the checkout.\n\nAdded in Saleor 3.1.",
+        "description": "Updates the delivery method (shipping method or pick up point) of the checkout.\n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27657,7 +27657,7 @@
       },
       "checkoutEmailUpdate": {
         "type": "CheckoutEmailUpdate",
-        "description": "Updates email address in the existing checkout object.",
+        "description": "Updates email address in the existing checkout object.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27693,7 +27693,7 @@
       },
       "checkoutLanguageCodeUpdate": {
         "type": "CheckoutLanguageCodeUpdate",
-        "description": "Update language code in the existing checkout.",
+        "description": "Update language code in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27729,7 +27729,7 @@
       },
       "checkoutLineDelete": {
         "type": "CheckoutLineDelete",
-        "description": "Deletes a CheckoutLine.",
+        "description": "Deletes a CheckoutLine.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `checkoutLinesDelete` instead.",
         "arguments": {
@@ -27765,7 +27765,7 @@
       },
       "checkoutLinesAdd": {
         "type": "CheckoutLinesAdd",
-        "description": "Adds a checkout line to the existing checkout.If line was already in checkout, its quantity will be increased.",
+        "description": "Adds a checkout line to the existing checkout.If line was already in checkout, its quantity will be increased.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27801,7 +27801,7 @@
       },
       "checkoutLinesDelete": {
         "type": "CheckoutLinesDelete",
-        "description": "Deletes checkout lines.",
+        "description": "Deletes checkout lines.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27830,7 +27830,7 @@
       },
       "checkoutLinesUpdate": {
         "type": "CheckoutLinesUpdate",
-        "description": "Updates checkout line in the existing checkout.",
+        "description": "Updates checkout line in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27902,7 +27902,7 @@
       },
       "checkoutRemovePromoCode": {
         "type": "CheckoutRemovePromoCode",
-        "description": "Remove a gift card or a voucher from a checkout.",
+        "description": "Remove a gift card or a voucher from a checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27945,7 +27945,7 @@
       },
       "checkoutShippingAddressUpdate": {
         "type": "CheckoutShippingAddressUpdate",
-        "description": "Update shipping address in the existing checkout.",
+        "description": "Update shipping address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -27988,7 +27988,7 @@
       },
       "checkoutShippingMethodUpdate": {
         "type": "CheckoutShippingMethodUpdate",
-        "description": "Updates the shipping method of the checkout.",
+        "description": "Updates the shipping method of the checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout shipping method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `checkoutDeliveryMethodUpdate` instead.",
         "arguments": {
@@ -28230,7 +28230,7 @@
       },
       "confirmEmailChange": {
         "type": "ConfirmEmailChange",
-        "description": "Confirm the email change of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+        "description": "Confirm the email change of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- NOTIFY_USER (async): A notification that account email change was confirmed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28267,7 +28267,7 @@
       },
       "customerBulkDelete": {
         "type": "CustomerBulkDelete",
-        "description": "Deletes customers. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Deletes customers. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_DELETED (async): A customer account was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28282,7 +28282,7 @@
       },
       "customerBulkUpdate": {
         "type": "CustomerBulkUpdate",
-        "description": "Updates customers.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Updates customers.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28304,7 +28304,7 @@
       },
       "customerCreate": {
         "type": "CustomerCreate",
-        "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.\n- NOTIFY_USER (async): A notification for setting the password.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28319,7 +28319,7 @@
       },
       "customerDelete": {
         "type": "CustomerDelete",
-        "description": "Deletes a customer. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Deletes a customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_DELETED (async): A customer account was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28341,7 +28341,7 @@
       },
       "customerUpdate": {
         "type": "CustomerUpdate",
-        "description": "Updates an existing customer. \n\nRequires one of the following permissions: MANAGE_USERS.",
+        "description": "Updates an existing customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A new customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28629,7 +28629,7 @@
       },
       "exportGiftCards": {
         "type": "ExportGiftCards",
-        "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28644,7 +28644,7 @@
       },
       "exportProducts": {
         "type": "ExportProducts",
-        "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29421,7 +29421,7 @@
       },
       "orderCreateFromCheckout": {
         "type": "OrderCreateFromCheckout",
-        "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nAdded in Saleor 3.2.",
+        "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nAdded in Saleor 3.2.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30398,7 +30398,7 @@
       },
       "permissionGroupCreate": {
         "type": "PermissionGroupCreate",
-        "description": "Create new permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+        "description": "Create new permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- PERMISSION_GROUP_CREATED (async)",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30413,7 +30413,7 @@
       },
       "permissionGroupDelete": {
         "type": "PermissionGroupDelete",
-        "description": "Delete permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+        "description": "Delete permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- PERMISSION_GROUP_DELETED (async)",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30428,7 +30428,7 @@
       },
       "permissionGroupUpdate": {
         "type": "PermissionGroupUpdate",
-        "description": "Update permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+        "description": "Update permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- PERMISSION_GROUP_UPDATED (async)",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31299,7 +31299,7 @@
       },
       "requestEmailChange": {
         "type": "RequestEmailChange",
-        "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+        "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account email change.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31335,7 +31335,7 @@
       },
       "requestPasswordReset": {
         "type": "RequestPasswordReset",
-        "description": "Sends an email with the account password modification link.",
+        "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31364,7 +31364,7 @@
       },
       "saleBulkDelete": {
         "type": "SaleBulkDelete",
-        "description": "Deletes sales. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Deletes sales. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31379,7 +31379,7 @@
       },
       "saleCataloguesAdd": {
         "type": "SaleAddCatalogues",
-        "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31401,7 +31401,7 @@
       },
       "saleCataloguesRemove": {
         "type": "SaleRemoveCatalogues",
-        "description": "Removes products, categories, collections from a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Removes products, categories, collections from a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31445,7 +31445,7 @@
       },
       "saleCreate": {
         "type": "SaleCreate",
-        "description": "Creates a new sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Creates a new sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31460,7 +31460,7 @@
       },
       "saleDelete": {
         "type": "SaleDelete",
-        "description": "Deletes a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Deletes a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31504,7 +31504,7 @@
       },
       "saleUpdate": {
         "type": "SaleUpdate",
-        "description": "Updates a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Updates a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31858,7 +31858,7 @@
       },
       "staffBulkDelete": {
         "type": "StaffBulkDelete",
-        "description": "Deletes staff users. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+        "description": "Deletes staff users. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_DELETED (async): A staff account was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31873,7 +31873,7 @@
       },
       "staffCreate": {
         "type": "StaffCreate",
-        "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+        "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_CREATED (async): A new staff account was created.\n- NOTIFY_USER (async): A notification for setting the password.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31888,7 +31888,7 @@
       },
       "staffDelete": {
         "type": "StaffDelete",
-        "description": "Deletes a staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+        "description": "Deletes a staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_DELETED (async): A staff account was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31955,7 +31955,7 @@
       },
       "staffUpdate": {
         "type": "StaffUpdate",
-        "description": "Updates an existing staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+        "description": "Updates an existing staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_UPDATED (async): A staff account was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32383,6 +32383,28 @@
           }
         }
       },
+      "transactionRequestRefundForGrantedRefund": {
+        "type": "TransactionRequestRefundForGrantedRefund",
+        "description": "Request a refund for payment transaction based on granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "grantedRefundId": {
+            "type": "ID!",
+            "description": "The ID of the granted refund.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "ID!",
+            "description": "The ID of the transaction.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "transactionUpdate": {
         "type": "TransactionUpdate",
         "description": "Update transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.",
@@ -32590,7 +32612,7 @@
       },
       "voucherBulkDelete": {
         "type": "VoucherBulkDelete",
-        "description": "Deletes vouchers. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Deletes vouchers. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_DELETED (async): A voucher was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32605,7 +32627,7 @@
       },
       "voucherCataloguesAdd": {
         "type": "VoucherAddCatalogues",
-        "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32627,7 +32649,7 @@
       },
       "voucherCataloguesRemove": {
         "type": "VoucherRemoveCatalogues",
-        "description": "Removes products, categories, collections from a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Removes products, categories, collections from a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32649,7 +32671,7 @@
       },
       "voucherChannelListingUpdate": {
         "type": "VoucherChannelListingUpdate",
-        "description": "Manage voucher's availability in channels. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Manage voucher's availability in channels. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32671,7 +32693,7 @@
       },
       "voucherCreate": {
         "type": "VoucherCreate",
-        "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CREATED (async): A voucher was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32686,7 +32708,7 @@
       },
       "voucherDelete": {
         "type": "VoucherDelete",
-        "description": "Deletes a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Deletes a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_DELETED (async): A voucher was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32730,7 +32752,7 @@
       },
       "voucherUpdate": {
         "type": "VoucherUpdate",
-        "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34813,7 +34835,7 @@
   "OrderCreateFromCheckout": {
     "type": "object",
     "interfaces": [],
-    "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nAdded in Saleor 3.2.",
+    "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nAdded in Saleor 3.2.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -36686,6 +36708,13 @@
         "message": null,
         "arguments": {}
       },
+      "lines": {
+        "type": "[OrderGrantRefundCreateLineError!]",
+        "description": "List of lines which cause the error.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "message": {
         "type": "String",
         "description": "The error message.",
@@ -36706,7 +36735,22 @@
         "deprecated": null,
         "message": null
       },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SHIPPING_COSTS_ALREADY_GRANTED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -36720,8 +36764,22 @@
     "message": null,
     "fields": {
       "amount": {
-        "type": "Decimal!",
-        "description": "Amount of the granted refund.",
+        "type": "Decimal",
+        "description": "Amount of the granted refund. If not provided, the amount will be calculated automatically based on provided `lines` and `grantRefundForShipping`.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "grantRefundForShipping": {
+        "type": "Boolean",
+        "description": "Determine if granted refund should include shipping costs.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "lines": {
+        "type": "[OrderGrantRefundCreateLineInput!]",
+        "description": "Lines to assign to granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36729,6 +36787,95 @@
       "reason": {
         "type": "String",
         "description": "Reason of the granted refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "OrderGrantRefundCreateLineError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "OrderGrantRefundCreateLineErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "lineId": {
+        "type": "ID!",
+        "description": "The ID of the line related to the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantRefundCreateLineErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "QUANTITY_GREATER_THAN_AVAILABLE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "OrderGrantRefundCreateLineInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "id": {
+        "type": "ID!",
+        "description": "The ID of the order line.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "quantity": {
+        "type": "Int!",
+        "description": "The quantity of line items to be marked to refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason of the granted refund for the line.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36762,13 +36909,6 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
-      },
-      "orderGrantedRefund": {
-        "type": "OrderGrantedRefund",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
       }
     }
   },
@@ -36779,6 +36919,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "addLines": {
+        "type": "[OrderGrantRefundUpdateLineError!]",
+        "description": "List of lines to add which cause the error.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "code": {
         "type": "OrderGrantRefundUpdateErrorCode!",
         "description": "The error code.",
@@ -36799,10 +36946,159 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "removeLines": {
+        "type": "[OrderGrantRefundUpdateLineError!]",
+        "description": "List of lines to remove which cause the error.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
   "OrderGrantRefundUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SHIPPING_COSTS_ALREADY_GRANTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "OrderGrantRefundUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "addLines": {
+        "type": "[OrderGrantRefundUpdateLineAddInput!]",
+        "description": "Lines to assign to granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "amount": {
+        "type": "Decimal",
+        "description": "Amount of the granted refund. if not provided and `addLines` or `removeLines` or `grantRefundForShipping` is provided, amount will be calculated automatically.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "grantRefundForShipping": {
+        "type": "Boolean",
+        "description": "Determine if granted refund should include shipping costs.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason of the granted refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "removeLines": {
+        "type": "[ID!]",
+        "description": "Lines to remove from granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "OrderGrantRefundUpdateLineAddInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "id": {
+        "type": "ID!",
+        "description": "The ID of the order line.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "quantity": {
+        "type": "Int!",
+        "description": "The quantity of line items to be marked to refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason of the granted refund for the line.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "OrderGrantRefundUpdateLineError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "OrderGrantRefundUpdateLineErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "lineId": {
+        "type": "ID!",
+        "description": "The ID of the line related to the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantRefundUpdateLineErrorCode": {
     "type": "enum",
     "description": "An enumeration.",
     "deprecated": null,
@@ -36818,32 +37114,10 @@
         "deprecated": null,
         "message": null
       },
-      "REQUIRED": {
+      "QUANTITY_GREATER_THAN_AVAILABLE": {
         "description": null,
         "deprecated": null,
         "message": null
-      }
-    }
-  },
-  "OrderGrantRefundUpdateInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "amount": {
-        "type": "Decimal",
-        "description": "Amount of the granted refund.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "reason": {
-        "type": "String",
-        "description": "Reason of the granted refund.",
-        "deprecated": null,
-        "message": null,
-        "default": null
       }
     }
   },
@@ -36882,9 +37156,23 @@
         "message": null,
         "arguments": {}
       },
+      "lines": {
+        "type": "[OrderGrantedRefundLine!]",
+        "description": "Lines assigned to the granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "reason": {
         "type": "String",
         "description": "Reason of the refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shippingCostsIncluded": {
+        "type": "Boolean!",
+        "description": "If true, the refunded amount includes the shipping price.If false, the refunded amount does not include the shipping price.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -36899,6 +37187,43 @@
       "user": {
         "type": "User",
         "description": "User who performed the action. Requires of of the following permissions: MANAGE_USERS, MANAGE_STAFF, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderGrantedRefundLine": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents granted refund line.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "orderLine": {
+        "type": "OrderLine!",
+        "description": "Line of the order associated with this granted refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "quantity": {
+        "type": "Int!",
+        "description": "Number of items to refund.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason for refunding the line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -41962,7 +42287,7 @@
   "PermissionGroupCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create new permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+    "description": "Create new permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- PERMISSION_GROUP_CREATED (async)",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -42081,7 +42406,7 @@
   "PermissionGroupDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+    "description": "Delete permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- PERMISSION_GROUP_DELETED (async)",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -42318,7 +42643,7 @@
   "PermissionGroupUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+    "description": "Update permission group. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- PERMISSION_GROUP_UPDATED (async)",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52070,7 +52395,7 @@
   "RequestEmailChange": {
     "type": "object",
     "interfaces": [],
-    "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+    "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account email change.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52100,7 +52425,7 @@
   "RequestPasswordReset": {
     "type": "object",
     "interfaces": [],
-    "description": "Sends an email with the account password modification link.",
+    "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52438,7 +52763,7 @@
   "SaleAddCatalogues": {
     "type": "object",
     "interfaces": [],
-    "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52468,7 +52793,7 @@
   "SaleBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes sales. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Deletes sales. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52664,7 +52989,7 @@
   "SaleCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Creates a new sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52748,7 +53073,7 @@
   "SaleDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Deletes a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -52953,7 +53278,7 @@
   "SaleRemoveCatalogues": {
     "type": "object",
     "interfaces": [],
-    "description": "Removes products, categories, collections from a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Removes products, categories, collections from a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53236,7 +53561,7 @@
   "SaleUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Updates a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56312,7 +56637,7 @@
   "StaffBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes staff users. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+    "description": "Deletes staff users. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_DELETED (async): A staff account was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56342,7 +56667,7 @@
   "StaffCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+    "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_CREATED (async): A new staff account was created.\n- NOTIFY_USER (async): A notification for setting the password.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56489,7 +56814,7 @@
   "StaffDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+    "description": "Deletes a staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_DELETED (async): A staff account was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56799,7 +57124,7 @@
   "StaffUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates an existing staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.",
+    "description": "Updates an existing staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_UPDATED (async): A staff account was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -60801,6 +61126,13 @@
         "message": null,
         "arguments": {}
       },
+      "grantedRefund": {
+        "type": "OrderGrantedRefund",
+        "description": "Granted refund related to refund request.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "issuedAt": {
         "type": "DateTime",
         "description": "Time of the event.",
@@ -60892,6 +61224,87 @@
     }
   },
   "TransactionRequestActionErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MISSING_TRANSACTION_ACTION_REQUEST_WEBHOOK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "TransactionRequestRefundForGrantedRefund": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Request a refund for payment transaction based on granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[TransactionRequestRefundForGrantedRefundError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionRequestRefundForGrantedRefundError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "TransactionRequestRefundForGrantedRefundErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TransactionRequestRefundForGrantedRefundErrorCode": {
     "type": "enum",
     "description": "An enumeration.",
     "deprecated": null,
@@ -63078,7 +63491,7 @@
   "VoucherAddCatalogues": {
     "type": "object",
     "interfaces": [],
-    "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -63108,7 +63521,7 @@
   "VoucherBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes vouchers. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Deletes vouchers. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_DELETED (async): A voucher was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -63235,7 +63648,7 @@
   "VoucherChannelListingUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Manage voucher's availability in channels. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Manage voucher's availability in channels. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -63318,7 +63731,7 @@
   "VoucherCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CREATED (async): A voucher was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -63402,7 +63815,7 @@
   "VoucherDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Deletes a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_DELETED (async): A voucher was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -63740,7 +64153,7 @@
   "VoucherRemoveCatalogues": {
     "type": "object",
     "interfaces": [],
-    "description": "Removes products, categories, collections from a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Removes products, categories, collections from a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -63974,7 +64387,7 @@
   "VoucherUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
