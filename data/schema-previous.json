@@ -35756,13 +35756,6 @@
         "message": null,
         "arguments": {}
       },
-      "status": {
-        "type": "TransactionStatus",
-        "description": "The status of payment's transaction.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `TransactionEvent` to track the status of `TransactionItem`.",
-        "arguments": {}
-      },
       "transactionReference": {
         "type": "String",
         "description": "The transaction reference of captured payment.",
@@ -36220,11 +36213,6 @@
         "deprecated": null,
         "message": null
       },
-      "TRANSACTION_CAPTURE_REQUESTED": {
-        "description": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED` instead."
-      },
       "TRANSACTION_CHARGE_REQUESTED": {
         "description": null,
         "deprecated": null,
@@ -36244,11 +36232,6 @@
         "description": null,
         "deprecated": null,
         "message": null
-      },
-      "TRANSACTION_VOID_REQUESTED": {
-        "description": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `TRANSACTION_CANCEL_REQUESTED` instead."
       },
       "UPDATED_ADDRESS": {
         "description": null,
@@ -59731,7 +59714,7 @@
   },
   "TransactionActionEnum": {
     "type": "enum",
-    "description": "Represents possible actions on payment transaction.\n\n    The following actions are possible:\n    CHARGE - Represents the charge action.\n    REFUND - Represents a refund action.\n    VOID - Represents a void action. This field will be removed\n    in Saleor 3.14 (Preview Feature). Use `CANCEL` instead.\n    CANCEL - Represents a cancel action. Added in Saleor 3.12.",
+    "description": "Represents possible actions on payment transaction.\n\n    The following actions are possible:\n    CHARGE - Represents the charge action.\n    REFUND - Represents a refund action.\n    CANCEL - Represents a cancel action. Added in Saleor 3.12.",
     "deprecated": null,
     "message": null,
     "values": {
@@ -59749,64 +59732,6 @@
         "description": null,
         "deprecated": null,
         "message": null
-      },
-      "VOID": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      }
-    }
-  },
-  "TransactionActionRequest": {
-    "type": "object",
-    "interfaces": [
-      "Event"
-    ],
-    "description": "Event sent when transaction action is requested.\n\nAdded in Saleor 3.4.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TransactionChargeRequested`, `TransactionRefundRequested`, `TransactionCancelationRequested` instead.",
-    "deprecated": "3.14",
-    "message": "Event sent when transaction action is requested.\n\nAdded in Saleor 3.4.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TransactionChargeRequested`, `TransactionRefundRequested`, `TransactionCancelationRequested` instead.",
-    "fields": {
-      "action": {
-        "type": "TransactionAction!",
-        "description": "Requested action data.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "issuedAt": {
-        "type": "DateTime",
-        "description": "Time of the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "issuingPrincipal": {
-        "type": "IssuingPrincipal",
-        "description": "The user or application that triggered the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "recipient": {
-        "type": "App",
-        "description": "The application receiving the webhook.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "transaction": {
-        "type": "TransactionItem",
-        "description": "Look up a transaction.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "version": {
-        "type": "String",
-        "description": "Saleor version that triggered the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
       }
     }
   },
@@ -60041,13 +59966,6 @@
         "message": null,
         "default": null
       },
-      "amountVoided": {
-        "type": "MoneyInput",
-        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
-        "deprecated": "3.15",
-        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
-        "default": null
-      },
       "availableActions": {
         "type": "[TransactionActionEnum!]",
         "description": "List of all possible actions for the transaction",
@@ -60095,27 +60013,6 @@
         "description": "PSP Reference of the transaction. \n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "reference": {
-        "type": "String",
-        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
-        "deprecated": "3.15",
-        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
-        "default": null
-      },
-      "status": {
-        "type": "String",
-        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
-        "deprecated": "3.15",
-        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
-        "default": null
-      },
-      "type": {
-        "type": "String",
-        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
-        "deprecated": "3.15",
-        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
         "default": null
       }
     }
@@ -60171,32 +60068,11 @@
         "message": null,
         "arguments": {}
       },
-      "name": {
-        "type": "String",
-        "description": "Name of the transaction's event.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `message` instead.",
-        "arguments": {}
-      },
       "pspReference": {
         "type": "String!",
         "description": "PSP reference of transaction.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
-      },
-      "reference": {
-        "type": "String!",
-        "description": "Reference of transaction's event.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `pspReference` instead.",
-        "arguments": {}
-      },
-      "status": {
-        "type": "TransactionStatus",
-        "description": "Status of transaction's event.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `type` instead.",
         "arguments": {}
       },
       "type": {
@@ -60221,32 +60097,11 @@
         "message": null,
         "default": null
       },
-      "name": {
-        "type": "String",
-        "description": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
-        "deprecated": "3.15",
-        "message": "Name of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `message` instead. `name` field will be added to `message`.",
-        "default": null
-      },
       "pspReference": {
         "type": "String",
         "description": "PSP Reference related to this action.\n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "reference": {
-        "type": "String",
-        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
-        "deprecated": "3.15",
-        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
-        "default": null
-      },
-      "status": {
-        "type": "TransactionStatus",
-        "description": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Status will be calculated by Saleor.",
-        "deprecated": "3.15",
-        "message": "Current status of the payment transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Status will be calculated by Saleor.",
         "default": null
       }
     }
@@ -60834,13 +60689,6 @@
         "message": null,
         "arguments": {}
       },
-      "reference": {
-        "type": "String!",
-        "description": "Reference of transaction.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `pspReference` instead.",
-        "arguments": {}
-      },
       "refundPendingAmount": {
         "type": "Money!",
         "description": "Total amount of ongoing refund requests for the transaction.\n\nAdded in Saleor 3.13.",
@@ -60853,27 +60701,6 @@
         "description": "Total amount refunded for this payment.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
-      },
-      "status": {
-        "type": "String!",
-        "description": "Status of transaction.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
-        "arguments": {}
-      },
-      "type": {
-        "type": "String!",
-        "description": "Type of transaction.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature). Use `name` or `message` instead.",
-        "arguments": {}
-      },
-      "voidedAmount": {
-        "type": "Money!",
-        "description": "Total amount voided for this payment.",
-        "deprecated": "3.15",
-        "message": "This field will be removed in Saleor 3.15 (Preview Feature).Use `canceledAmount` instead.",
         "arguments": {}
       }
     }
@@ -61413,29 +61240,6 @@
       }
     }
   },
-  "TransactionStatus": {
-    "type": "enum",
-    "description": "Represents a status of payment transaction.\n\n    The following statuses are possible:\n    SUCCESS - Represents a sucess action.\n    FAILURE - Represents a failure action.\n    PENDING - Represents a pending action.",
-    "deprecated": null,
-    "message": null,
-    "values": {
-      "FAILURE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PENDING": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "SUCCESS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      }
-    }
-  },
   "TransactionUpdate": {
     "type": "object",
     "interfaces": [],
@@ -61561,13 +61365,6 @@
         "message": null,
         "default": null
       },
-      "amountVoided": {
-        "type": "MoneyInput",
-        "description": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
-        "deprecated": "3.15",
-        "message": "Amount voided by this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `amountCanceled` instead.",
-        "default": null
-      },
       "availableActions": {
         "type": "[TransactionActionEnum!]",
         "description": "List of all possible actions for the transaction",
@@ -61615,27 +61412,6 @@
         "description": "PSP Reference of the transaction. \n\nAdded in Saleor 3.13.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "reference": {
-        "type": "String",
-        "description": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
-        "deprecated": "3.15",
-        "message": "Reference of the transaction. \n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `pspReference` instead.",
-        "default": null
-      },
-      "status": {
-        "type": "String",
-        "description": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
-        "deprecated": "3.15",
-        "message": "Status of the transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). The `status` is not needed. The amounts can be used to define the current status of transactions.",
-        "default": null
-      },
-      "type": {
-        "type": "String",
-        "description": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
-        "deprecated": "3.15",
-        "message": "Payment type used for this transaction.\n\nDEPRECATED: this field will be removed in Saleor 3.15 (Preview Feature). Use `name` and `message` instead.",
         "default": null
       }
     }
@@ -66511,11 +66287,6 @@
         "deprecated": null,
         "message": null
       },
-      "TRANSACTION_ACTION_REQUEST": {
-        "description": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead.",
-        "deprecated": "3.14",
-        "message": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead."
-      },
       "TRANSACTION_ITEM_METADATA_UPDATED": {
         "description": "Transaction item metadata is updated.\n\nAdded in Saleor 3.8.",
         "deprecated": null,
@@ -67193,11 +66964,6 @@
         "description": "A thumbnail is created.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null
-      },
-      "TRANSACTION_ACTION_REQUEST": {
-        "description": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead.",
-        "deprecated": "3.14",
-        "message": "An action requested for transaction.\n\nDEPRECATED: this subscription will be removed in Saleor 3.14 (Preview Feature). Use `TRANSACTION_CHARGE_REQUESTED`, `TRANSACTION_REFUND_REQUESTED`, `TRANSACTION_CANCELATION_REQUESTED` instead."
       },
       "TRANSACTION_CANCELATION_REQUESTED": {
         "description": "Event called when cancel has been requested for transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -67926,11 +67692,6 @@
         "message": null
       },
       "THUMBNAIL_CREATED": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "TRANSACTION_ACTION_REQUEST": {
         "description": null,
         "deprecated": null,
         "message": null

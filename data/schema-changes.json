@@ -1,21 +1,135 @@
 [
   {
-    "diff": "type_new",
-    "type": "AccountChangeEmailRequested"
+    "diff": "type_deleted",
+    "type": "TransactionActionRequest"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "type_deleted",
+    "type": "TransactionStatus"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "OrderEvent",
+    "field": "status"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionCreateInput",
+    "field": "amountVoided"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionCreateInput",
+    "field": "reference"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionCreateInput",
+    "field": "status"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionCreateInput",
+    "field": "type"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionEvent",
+    "field": "name"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionEvent",
+    "field": "reference"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionEvent",
+    "field": "status"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionEventInput",
+    "field": "name"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionEventInput",
+    "field": "reference"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionEventInput",
+    "field": "status"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionItem",
+    "field": "reference"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionItem",
+    "field": "status"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionItem",
+    "field": "type"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionItem",
+    "field": "voidedAmount"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionUpdateInput",
+    "field": "amountVoided"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionUpdateInput",
+    "field": "reference"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionUpdateInput",
+    "field": "status"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "TransactionUpdateInput",
+    "field": "type"
+  },
+  {
+    "diff": "enum_value_deleted",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_CAPTURE_REQUESTED"
+  },
+  {
+    "diff": "enum_value_deleted",
+    "enum": "OrderEventsEnum",
+    "value": "TRANSACTION_VOID_REQUESTED"
+  },
+  {
+    "diff": "enum_value_deleted",
+    "enum": "TransactionActionEnum",
+    "value": "VOID"
+  },
+  {
+    "diff": "enum_value_deleted",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ACCOUNT_CHANGE_EMAIL_REQUESTED"
+    "value": "TRANSACTION_ACTION_REQUEST"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookEventTypeEnum",
-    "value": "ACCOUNT_CHANGE_EMAIL_REQUESTED"
+    "value": "TRANSACTION_ACTION_REQUEST"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookSampleEventTypeEnum",
-    "value": "ACCOUNT_CHANGE_EMAIL_REQUESTED"
+    "value": "TRANSACTION_ACTION_REQUEST"
   }
 ]
