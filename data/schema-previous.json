@@ -900,14 +900,14 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.10.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.10.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -922,7 +922,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.10.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -951,14 +951,14 @@
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.10.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.10.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -973,7 +973,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.10.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.10.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -1679,7 +1679,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -1694,7 +1694,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -1730,7 +1730,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -1745,7 +1745,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -3460,7 +3460,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -3475,7 +3475,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -3504,7 +3504,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -3519,7 +3519,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -6636,7 +6636,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -6651,7 +6651,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -6687,7 +6687,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -6702,7 +6702,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8390,7 +8390,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8405,7 +8405,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8434,7 +8434,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8449,7 +8449,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -9645,14 +9645,14 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -9667,7 +9667,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -9682,14 +9682,14 @@
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -9704,7 +9704,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10398,7 +10398,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10413,7 +10413,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10442,7 +10442,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10457,7 +10457,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -14354,7 +14354,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -14369,7 +14369,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -14391,7 +14391,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -14406,7 +14406,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -16995,7 +16995,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -17010,7 +17010,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -17032,7 +17032,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -17047,7 +17047,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -17781,7 +17781,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -17796,7 +17796,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -17818,7 +17818,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -17833,7 +17833,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -19684,7 +19684,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -19699,7 +19699,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -19735,7 +19735,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -19750,7 +19750,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -24799,7 +24799,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -24814,7 +24814,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -24843,7 +24843,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -24858,7 +24858,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -25362,7 +25362,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -25377,7 +25377,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -25420,7 +25420,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -25435,7 +25435,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33312,7 +33312,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33327,7 +33327,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33391,7 +33391,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33406,7 +33406,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -37334,14 +37334,14 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -37356,7 +37356,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -37371,14 +37371,14 @@
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -37393,7 +37393,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39023,7 +39023,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39038,7 +39038,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39067,7 +39067,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39082,7 +39082,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -40174,7 +40174,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -40189,7 +40189,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -40218,7 +40218,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -40233,7 +40233,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -40932,7 +40932,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -40947,7 +40947,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -40990,7 +40990,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -41005,7 +41005,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -43549,7 +43549,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -43564,7 +43564,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -43608,7 +43608,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -43623,7 +43623,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -45567,14 +45567,14 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -45589,7 +45589,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -45611,14 +45611,14 @@
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -45633,7 +45633,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.12.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -46652,7 +46652,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -46667,7 +46667,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -46696,7 +46696,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -46711,7 +46711,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -47451,7 +47451,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -47466,7 +47466,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -47517,7 +47517,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -47532,7 +47532,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -52642,7 +52642,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -52657,7 +52657,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -52686,7 +52686,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -52701,7 +52701,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -54502,7 +54502,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -54517,7 +54517,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -54574,7 +54574,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -54589,7 +54589,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -55317,7 +55317,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -55332,7 +55332,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -55368,7 +55368,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -55383,7 +55383,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57939,7 +57939,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57954,7 +57954,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57983,7 +57983,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57998,7 +57998,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -58534,7 +58534,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -58549,7 +58549,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -58578,7 +58578,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -58593,7 +58593,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -60596,7 +60596,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -60611,7 +60611,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -60654,7 +60654,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -60669,7 +60669,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -62176,7 +62176,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -62191,7 +62191,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -62263,7 +62263,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -62278,7 +62278,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -63135,7 +63135,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -63150,7 +63150,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -63200,7 +63200,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -63215,7 +63215,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -64393,7 +64393,7 @@
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -64408,7 +64408,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -64437,7 +64437,7 @@
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -64452,7 +64452,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
