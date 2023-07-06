@@ -1523,7 +1523,7 @@
     "fields": {
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of allocation.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -16548,7 +16548,7 @@
   "ExternalAuthentication": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "External authentication plugin.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -17893,7 +17893,7 @@
   "GiftCardActivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Activate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Activate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was activated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -17923,7 +17923,7 @@
   "GiftCardAddNote": {
     "type": "object",
     "interfaces": [],
-    "description": "Adds note to the gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Adds note to the gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -17968,7 +17968,7 @@
   "GiftCardBulkActivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Activate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Activate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was activated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -17991,7 +17991,7 @@
   "GiftCardBulkCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Create gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18064,7 +18064,7 @@
   "GiftCardBulkDeactivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Deactivate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Deactivate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was deactivated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18087,7 +18087,7 @@
   "GiftCardBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Delete gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18163,7 +18163,7 @@
   "GiftCardCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Creates a new gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18317,7 +18317,7 @@
   "GiftCardDeactivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Deactivate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Deactivate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was deactivated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18347,7 +18347,7 @@
   "GiftCardDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Delete gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18875,7 +18875,7 @@
   "GiftCardResend": {
     "type": "object",
     "interfaces": [],
-    "description": "Resend a gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Resend a gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for gift card resend.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -19315,7 +19315,7 @@
   "GiftCardUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+    "description": "Update a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -20016,7 +20016,7 @@
   "InvoiceRequest": {
     "type": "object",
     "interfaces": [],
-    "description": "Request an invoice for the order using plugin. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Request an invoice for the order using plugin. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- INVOICE_REQUESTED (async): An invoice was requested.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -20053,7 +20053,7 @@
   "InvoiceRequestDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Requests deletion of an invoice. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Requests deletion of an invoice. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- INVOICE_DELETED (async): An invoice was requested to delete.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -20136,7 +20136,7 @@
   "InvoiceSendNotification": {
     "type": "object",
     "interfaces": [],
-    "description": "Send an invoice notification to the customer. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Send an invoice notification to the customer. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- INVOICE_SENT (async): A notification for invoice send\n- NOTIFY_USER (async): A notification for invoice send",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -24262,7 +24262,7 @@
   "LimitInfo": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "Store the current and allowed usage.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -24291,35 +24291,35 @@
     "fields": {
       "channels": {
         "type": "Int",
-        "description": null,
+        "description": "Defines the number of channels.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "orders": {
         "type": "Int",
-        "description": null,
+        "description": "Defines the number of order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "productVariants": {
         "type": "Int",
-        "description": null,
+        "description": "Defines the number of product variants.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "staffUsers": {
         "type": "Int",
-        "description": null,
+        "description": "Defines the number of staff users.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "warehouses": {
         "type": "Int",
-        "description": null,
+        "description": "Defines the number of warehouses.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -28894,7 +28894,7 @@
       },
       "giftCardActivate": {
         "type": "GiftCardActivate",
-        "description": "Activate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Activate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was activated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28909,7 +28909,7 @@
       },
       "giftCardAddNote": {
         "type": "GiftCardAddNote",
-        "description": "Adds note to the gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Adds note to the gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28931,7 +28931,7 @@
       },
       "giftCardBulkActivate": {
         "type": "GiftCardBulkActivate",
-        "description": "Activate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Activate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was activated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28946,7 +28946,7 @@
       },
       "giftCardBulkCreate": {
         "type": "GiftCardBulkCreate",
-        "description": "Create gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Create gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28961,7 +28961,7 @@
       },
       "giftCardBulkDeactivate": {
         "type": "GiftCardBulkDeactivate",
-        "description": "Deactivate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Deactivate gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was deactivated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28976,7 +28976,7 @@
       },
       "giftCardBulkDelete": {
         "type": "GiftCardBulkDelete",
-        "description": "Delete gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Delete gift cards.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -28991,7 +28991,7 @@
       },
       "giftCardCreate": {
         "type": "GiftCardCreate",
-        "description": "Creates a new gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Creates a new gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29006,7 +29006,7 @@
       },
       "giftCardDeactivate": {
         "type": "GiftCardDeactivate",
-        "description": "Deactivate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Deactivate a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was deactivated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29021,7 +29021,7 @@
       },
       "giftCardDelete": {
         "type": "GiftCardDelete",
-        "description": "Delete gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Delete gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29036,7 +29036,7 @@
       },
       "giftCardResend": {
         "type": "GiftCardResend",
-        "description": "Resend a gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Resend a gift card.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for gift card resend.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29066,7 +29066,7 @@
       },
       "giftCardUpdate": {
         "type": "GiftCardUpdate",
-        "description": "Update a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "Update a gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29125,7 +29125,7 @@
       },
       "invoiceRequest": {
         "type": "InvoiceRequest",
-        "description": "Request an invoice for the order using plugin. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Request an invoice for the order using plugin. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- INVOICE_REQUESTED (async): An invoice was requested.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29147,7 +29147,7 @@
       },
       "invoiceRequestDelete": {
         "type": "InvoiceRequestDelete",
-        "description": "Requests deletion of an invoice. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Requests deletion of an invoice. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- INVOICE_DELETED (async): An invoice was requested to delete.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29162,7 +29162,7 @@
       },
       "invoiceSendNotification": {
         "type": "InvoiceSendNotification",
-        "description": "Send an invoice notification to the customer. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Send an invoice notification to the customer. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- INVOICE_SENT (async): A notification for invoice send\n- NOTIFY_USER (async): A notification for invoice send",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -50089,7 +50089,7 @@
       },
       "checkout": {
         "type": "Checkout",
-        "description": "Look up a checkout by token and slug of channel.",
+        "description": "Look up a checkout by id.\n\nRequires one of the following permissions to query checkouts that belong to other users: MANAGE_CHECKOUTS, IMPERSONATE_USER.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -50620,6 +50620,13 @@
           "last": {
             "type": "Int",
             "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "search": {
+            "type": "String",
+            "description": "Search gift cards by email and name of user, who created or used the gift card, and by code.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57372,14 +57379,14 @@
     "fields": {
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of stock.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "productVariant": {
         "type": "ProductVariant!",
-        "description": null,
+        "description": "Information about the product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -57407,7 +57414,7 @@
       },
       "warehouse": {
         "type": "Warehouse!",
-        "description": null,
+        "description": "The warehouse associated with the stock.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64337,7 +64344,7 @@
     "fields": {
       "address": {
         "type": "Address!",
-        "description": null,
+        "description": "Address of the warehouse.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64358,7 +64365,7 @@
       },
       "email": {
         "type": "String!",
-        "description": null,
+        "description": "Warehouse email.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64372,14 +64379,14 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the warehouse.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isPrivate": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determine if the warehouse is private.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64423,7 +64430,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "Warehouse name.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64467,7 +64474,7 @@
       },
       "shippingZones": {
         "type": "ShippingZoneCountableConnection!",
-        "description": null,
+        "description": "Shipping zones supported by the warehouse.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -64503,7 +64510,7 @@
       },
       "slug": {
         "type": "String!",
-        "description": null,
+        "description": "Warehouse slug.",
         "deprecated": null,
         "message": null,
         "arguments": {}
