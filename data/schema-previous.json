@@ -6543,7 +6543,7 @@
       },
       "backgroundImage": {
         "type": "Image",
-        "description": null,
+        "description": "Background image of the category.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -6615,14 +6615,14 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the category.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "level": {
         "type": "Int!",
-        "description": null,
+        "description": "Level of the category.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6666,14 +6666,14 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "Name of category",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "parent": {
         "type": "Category",
-        "description": null,
+        "description": "Parent category.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6781,21 +6781,21 @@
       },
       "seoDescription": {
         "type": "String",
-        "description": null,
+        "description": "SEO description of category.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "seoTitle": {
         "type": "String",
-        "description": null,
+        "description": "SEO title of category.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "slug": {
         "type": "String!",
-        "description": null,
+        "description": "Slug of the category.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -10334,7 +10334,7 @@
     "fields": {
       "backgroundImage": {
         "type": "Image",
-        "description": null,
+        "description": "Background image of the collection.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10384,7 +10384,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the collection.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -10428,7 +10428,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "Name of the collection.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -10529,21 +10529,21 @@
       },
       "seoDescription": {
         "type": "String",
-        "description": null,
+        "description": "SEO description of the collection.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "seoTitle": {
         "type": "String",
-        "description": null,
+        "description": "SEO title of the collection.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "slug": {
         "type": "String!",
-        "description": null,
+        "description": "Slug of the collection.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -10636,21 +10636,21 @@
     "fields": {
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "The channel to which the collection belongs.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the collection channel listing.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isPublished": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Indicates if the collection is published in the channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -10777,7 +10777,7 @@
   "CollectionCountableConnection": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "Represents a connection to a list of collections.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -14313,34 +14313,34 @@
       "Node",
       "ObjectWithMetadata"
     ],
-    "description": null,
+    "description": "Represents digital content associated with a product variant.",
     "deprecated": null,
     "message": null,
     "fields": {
       "automaticFulfillment": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Indicator for automatic fulfillment of digital content.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "contentFile": {
         "type": "String!",
-        "description": null,
+        "description": "File associated with digital content.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the digital content.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "maxDownloads": {
         "type": "Int",
-        "description": null,
+        "description": "Maximum number of allowed downloads for the digital content.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -14428,7 +14428,7 @@
       },
       "urlValidDays": {
         "type": "Int",
-        "description": null,
+        "description": "Number of days the URL for the digital content remains valid.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -14442,7 +14442,7 @@
       },
       "useDefaultSettings": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Default settings indicator for digital content.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -14452,7 +14452,7 @@
   "DigitalContentCountableConnection": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "A connection to a list of digital content items.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -14718,34 +14718,34 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents a URL for digital content.",
     "deprecated": null,
     "message": null,
     "fields": {
       "content": {
         "type": "DigitalContent!",
-        "description": null,
+        "description": "Digital content associated with the URL.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time when the digital content URL was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "downloadNum": {
         "type": "Int!",
-        "description": null,
+        "description": "Number of times digital content has been downloaded.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the digital content URL.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -24464,20 +24464,20 @@
   "Margin": {
     "type": "object",
     "interfaces": [],
-    "description": null,
+    "description": "Metadata for the Margin class.",
     "deprecated": null,
     "message": null,
     "fields": {
       "start": {
         "type": "Int",
-        "description": null,
+        "description": "The starting value of the margin.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "stop": {
         "type": "Int",
-        "description": null,
+        "description": "The ending value of the margin.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43426,14 +43426,14 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The date and time when the product was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "defaultVariant": {
         "type": "ProductVariant",
-        "description": null,
+        "description": "Default variant of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43461,7 +43461,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43579,7 +43579,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "SEO description of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43638,35 +43638,35 @@
       },
       "productType": {
         "type": "ProductType!",
-        "description": null,
+        "description": "Type of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "rating": {
         "type": "Float",
-        "description": null,
+        "description": "Rating of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "seoDescription": {
         "type": "String",
-        "description": null,
+        "description": "SEO description of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "seoTitle": {
         "type": "String",
-        "description": null,
+        "description": "SEO title of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "slug": {
         "type": "String!",
-        "description": null,
+        "description": "Slug of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43687,7 +43687,7 @@
       },
       "thumbnail": {
         "type": "Image",
-        "description": null,
+        "description": "Thumbnail of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -43724,7 +43724,7 @@
       },
       "updatedAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The date and time when the product was last updated.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43760,7 +43760,7 @@
       },
       "weight": {
         "type": "Weight",
-        "description": null,
+        "description": "Weight of the product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -44316,7 +44316,7 @@
       },
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "The channel in which the product is listed.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -44330,7 +44330,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the product channel listing.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -44344,7 +44344,7 @@
       },
       "isPublished": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Indicates if the product is published in the channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -44394,7 +44394,7 @@
       },
       "visibleInListings": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Indicates product visibility in the channel listings.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -45406,7 +45406,7 @@
       },
       "url": {
         "type": "String!",
-        "description": null,
+        "description": "The URL of the image.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -45553,14 +45553,14 @@
     "fields": {
       "alt": {
         "type": "String!",
-        "description": null,
+        "description": "The alt text of the media.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The unique ID of the product media.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -45604,7 +45604,7 @@
       },
       "oembedData": {
         "type": "JSONString!",
-        "description": null,
+        "description": "The oEmbed data of the media.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -45655,21 +45655,21 @@
       },
       "sortOrder": {
         "type": "Int",
-        "description": null,
+        "description": "The sort order of the media.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "type": {
         "type": "ProductMediaType!",
-        "description": null,
+        "description": "The type of the media.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "url": {
         "type": "String!",
-        "description": null,
+        "description": "The URL of the media.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -46610,28 +46610,28 @@
       },
       "hasVariants": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Whether the product type has variants.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the product type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isDigital": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Whether the product type is digital.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isShippingRequired": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Whether shipping is required for this product type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -46682,7 +46682,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "Name of the product type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -46776,7 +46776,7 @@
       },
       "slug": {
         "type": "String!",
-        "description": null,
+        "description": "Slug of the product type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -46812,7 +46812,7 @@
       },
       "weight": {
         "type": "Weight",
-        "description": null,
+        "description": "Weight of the product type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47395,7 +47395,7 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The date and time when the product variant was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47416,7 +47416,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47481,7 +47481,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "The name of the product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47547,7 +47547,7 @@
       },
       "product": {
         "type": "Product!",
-        "description": null,
+        "description": "The product to which the variant belongs.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47576,7 +47576,7 @@
       },
       "quantityLimitPerCustomer": {
         "type": "Int",
-        "description": null,
+        "description": "The maximum quantity of this variant that a customer can purchase.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47605,7 +47605,7 @@
       },
       "sku": {
         "type": "String",
-        "description": null,
+        "description": "The SKU (stock keeping unit) of the product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47634,7 +47634,7 @@
       },
       "trackInventory": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Whether the inventory of the variant is tracked.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -47656,14 +47656,14 @@
       },
       "updatedAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The date and time when the product variant was last updated.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "weight": {
         "type": "Weight",
-        "description": null,
+        "description": "The weight of the product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -48207,7 +48207,7 @@
     "fields": {
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "The channel to which the variant listing belongs.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -48221,7 +48221,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the variant channel listing.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -48242,7 +48242,7 @@
       },
       "price": {
         "type": "Money",
-        "description": null,
+        "description": "The price of the variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
