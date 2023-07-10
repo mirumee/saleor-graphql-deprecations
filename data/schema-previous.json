@@ -7484,7 +7484,8 @@
   "Channel": {
     "type": "object",
     "interfaces": [
-      "Node"
+      "Node",
+      "ObjectWithMetadata"
     ],
     "description": "Represents channel.",
     "deprecated": null,
@@ -7547,6 +7548,43 @@
         "message": null,
         "arguments": {}
       },
+      "metadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "metafield": {
+        "type": "String",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "metafields": {
+        "type": "Metadata",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "name": {
         "type": "String!",
         "description": "Name of the channel.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
@@ -7560,6 +7598,43 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "privateMetadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetafield": {
+        "type": "String",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "privateMetafields": {
+        "type": "Metadata",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       },
       "slug": {
         "type": "String!",
@@ -7685,6 +7760,13 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Channel public metadata.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "name": {
         "type": "String!",
         "description": "Name of the channel.",
@@ -7695,6 +7777,13 @@
       "orderSettings": {
         "type": "OrderSettingsInput",
         "description": "The channel order settings\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Channel private metadata.\n\nAdded in Saleor 3.15.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -8148,6 +8237,13 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Channel public metadata.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "name": {
         "type": "String",
         "description": "Name of the channel.",
@@ -8158,6 +8254,13 @@
       "orderSettings": {
         "type": "OrderSettingsInput",
         "description": "The channel order settings\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Channel private metadata.\n\nAdded in Saleor 3.15.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -15631,7 +15734,7 @@
       },
       "createdAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Creation time of an event delivery.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -15645,7 +15748,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of an event delivery.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -15691,7 +15794,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of Event Delivery Attempt.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19649,14 +19752,14 @@
     "fields": {
       "createdAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which invoice was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "externalUrl": {
         "type": "String",
-        "description": null,
+        "description": "URL to view an invoice.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19670,7 +19773,7 @@
       },
       "message": {
         "type": "String",
-        "description": null,
+        "description": "Message associated with an invoice.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19714,7 +19817,7 @@
       },
       "number": {
         "type": "String",
-        "description": null,
+        "description": "Invoice number.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19772,7 +19875,7 @@
       },
       "updatedAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which invoice was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -30661,6 +30764,28 @@
           }
         }
       },
+      "productBulkTranslate": {
+        "type": "ProductBulkTranslate",
+        "description": "Creates/updates translations for products.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): Called when a translation was created.\n- TRANSLATION_UPDATED (async): Called when a translation was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "translations": {
+            "type": "[ProductBulkTranslateInput!]!",
+            "description": "List of product translations.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "productChannelListingUpdate": {
         "type": "ProductChannelListingUpdate",
         "description": "Manage product's availability in channels. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
@@ -31037,6 +31162,28 @@
           "skus": {
             "type": "[String!]",
             "description": "List of product variant SKUs to delete.\n\nAdded in Saleor 3.8.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "productVariantBulkTranslate": {
+        "type": "ProductVariantBulkTranslate",
+        "description": "Creates/updates translations for products variants.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): A translation was created.\n- TRANSLATION_UPDATED (async): A translation was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "translations": {
+            "type": "[ProductVariantBulkTranslateInput!]!",
+            "description": "List of products variants translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -35140,14 +35287,14 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of discount applied.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "name": {
         "type": "String",
-        "description": null,
+        "description": "The name of applied discount.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35161,14 +35308,14 @@
       },
       "translatedName": {
         "type": "String",
-        "description": null,
+        "description": "Translated name of the applied discount.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "type": {
         "type": "OrderDiscountType!",
-        "description": null,
+        "description": "The type of applied discount: Sale, Voucher or Manual.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -44291,6 +44438,125 @@
       }
     }
   },
+  "ProductBulkTranslate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates/updates translations for products.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): Called when a translation was created.\n- TRANSLATION_UPDATED (async): Called when a translation was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many translations were created/updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[ProductBulkTranslateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "results": {
+        "type": "[ProductBulkTranslateResult!]!",
+        "description": "List of the translations.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductBulkTranslateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "ProductTranslateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "path": {
+        "type": "String",
+        "description": "Path to field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductBulkTranslateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "externalReference": {
+        "type": "String",
+        "description": "External reference of an product.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "id": {
+        "type": "ID",
+        "description": "Product ID.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "languageCode": {
+        "type": "LanguageCodeEnum!",
+        "description": "Translation language code.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "translationFields": {
+        "type": "TranslationInput!",
+        "description": "Translation fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "ProductBulkTranslateResult": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[ProductBulkTranslateError!]",
+        "description": "List of errors occurred on translation attempt.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "ProductTranslation",
+        "description": "Product translation data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductChannelListing": {
     "type": "object",
     "interfaces": [
@@ -46473,6 +46739,34 @@
       }
     }
   },
+  "ProductTranslateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "ProductTranslation": {
     "type": "object",
     "interfaces": [
@@ -48067,6 +48361,125 @@
       }
     }
   },
+  "ProductVariantBulkTranslate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates/updates translations for products variants.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): A translation was created.\n- TRANSLATION_UPDATED (async): A translation was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many translations were created/updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[ProductVariantBulkTranslateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "results": {
+        "type": "[ProductVariantBulkTranslateResult!]!",
+        "description": "List of the translations.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantBulkTranslateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "ProductVariantTranslateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "path": {
+        "type": "String",
+        "description": "Path to field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantBulkTranslateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "externalReference": {
+        "type": "String",
+        "description": "External reference of a product variant.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "id": {
+        "type": "ID",
+        "description": "Product variant ID.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "languageCode": {
+        "type": "LanguageCodeEnum!",
+        "description": "Translation language code.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "translationFields": {
+        "type": "NameTranslationInput!",
+        "description": "Translation fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "ProductVariantBulkTranslateResult": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[ProductVariantBulkTranslateError!]",
+        "description": "List of errors occurred on translation attempt.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "ProductVariantTranslation",
+        "description": "Product variant translation data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductVariantBulkUpdate": {
     "type": "object",
     "interfaces": [],
@@ -49302,6 +49715,34 @@
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
         "arguments": {}
+      }
+    }
+  },
+  "ProductVariantTranslateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -52607,7 +53048,7 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The date and time when the sale was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52628,14 +53069,14 @@
       },
       "endDate": {
         "type": "DateTime",
-        "description": null,
+        "description": "The end date and time of the sale.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the sale.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52679,7 +53120,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "The name of the sale.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52759,7 +53200,7 @@
       },
       "startDate": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The start date and time of the sale.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52781,14 +53222,14 @@
       },
       "type": {
         "type": "SaleType!",
-        "description": null,
+        "description": "Type of the sale, fixed or percentage.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "updatedAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The date and time when the sale was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52902,28 +53343,28 @@
     "fields": {
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "The channel in which the sale is available.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "currency": {
         "type": "String!",
-        "description": null,
+        "description": "The currency in which the discount value is specified.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "discountValue": {
         "type": "Float!",
-        "description": null,
+        "description": "The value of the discount applied to the sale in the channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the channel listing.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55946,7 +56387,9 @@
   },
   "Shop": {
     "type": "object",
-    "interfaces": [],
+    "interfaces": [
+      "ObjectWithMetadata"
+    ],
     "description": "Represents a shop resource containing general shop data and configuration.",
     "deprecated": null,
     "message": null,
@@ -56178,6 +56621,43 @@
         "message": null,
         "arguments": {}
       },
+      "metadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of public metadata items. Can be accessed without permissions.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "metafield": {
+        "type": "String",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "metafields": {
+        "type": "Metadata",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "name": {
         "type": "String!",
         "description": "Shop's name.",
@@ -56198,6 +56678,43 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "privateMetadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of private metadata items. Requires staff permissions to access.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetafield": {
+        "type": "String",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "privateMetafields": {
+        "type": "Metadata",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       },
       "reserveStockDurationAnonymousUser": {
         "type": "Int",
@@ -56535,6 +57052,20 @@
       "limitQuantityPerCheckout": {
         "type": "Int",
         "description": "Default number of maximum line quantity in single checkout. Minimum possible value is 1, default value is 50.\n\nAdded in Saleor 3.1.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Shop public metadata.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Shop private metadata.\n\nAdded in Saleor 3.15.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -62993,14 +63524,14 @@
     "fields": {
       "applyOncePerCustomer": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determine if the voucher usage should be limited to one use per customer.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "applyOncePerOrder": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determine if the voucher should be applied once per order. If set to True, the voucher is applied to a single cheapest eligible product in checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63050,7 +63581,7 @@
       },
       "code": {
         "type": "String!",
-        "description": null,
+        "description": "The code of the voucher.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63121,14 +63652,14 @@
       },
       "endDate": {
         "type": "DateTime",
-        "description": null,
+        "description": "The end date and time of voucher.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of the voucher.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63172,7 +63703,7 @@
       },
       "minCheckoutItemsQuantity": {
         "type": "Int",
-        "description": null,
+        "description": "Determine minimum quantity of items for checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63186,14 +63717,14 @@
       },
       "name": {
         "type": "String",
-        "description": null,
+        "description": "The name of the voucher.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "onlyForStaff": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determine if the voucher is available only for staff members.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63273,7 +63804,7 @@
       },
       "startDate": {
         "type": "DateTime!",
-        "description": null,
+        "description": "The start date and time of voucher.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63302,14 +63833,14 @@
       },
       "usageLimit": {
         "type": "Int",
-        "description": null,
+        "description": "The number of times a voucher can be used.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "used": {
         "type": "Int!",
-        "description": null,
+        "description": "Usage count of the voucher.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63423,35 +63954,35 @@
     "fields": {
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "The channel in which voucher can be applied.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "currency": {
         "type": "String!",
-        "description": null,
+        "description": "Currency code for voucher in a channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "discountValue": {
         "type": "Float!",
-        "description": null,
+        "description": "The value of the discount on voucher in a channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of channel listing.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "minSpent": {
         "type": "Money",
-        "description": null,
+        "description": "Minimum order value for voucher to apply in channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -65205,7 +65736,7 @@
     "fields": {
       "app": {
         "type": "App!",
-        "description": null,
+        "description": "The app associated with Webhook.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -65283,7 +65814,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of webhook.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -65297,7 +65828,7 @@
       },
       "name": {
         "type": "String",
-        "description": null,
+        "description": "The name of webhook.",
         "deprecated": null,
         "message": null,
         "arguments": {}

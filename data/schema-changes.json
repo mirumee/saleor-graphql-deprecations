@@ -1,135 +1,142 @@
 [
   {
-    "diff": "type_deleted",
-    "type": "TransactionActionRequest"
+    "diff": "type_new",
+    "type": "ProductBulkTranslate"
   },
   {
-    "diff": "type_deleted",
-    "type": "TransactionStatus"
+    "diff": "type_new",
+    "type": "ProductBulkTranslateError"
   },
   {
-    "diff": "field_deleted",
-    "type": "OrderEvent",
-    "field": "status"
+    "diff": "type_new",
+    "type": "ProductBulkTranslateInput"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionCreateInput",
-    "field": "amountVoided"
+    "diff": "type_new",
+    "type": "ProductBulkTranslateResult"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionCreateInput",
-    "field": "reference"
+    "diff": "type_new",
+    "type": "ProductTranslateErrorCode"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionCreateInput",
-    "field": "status"
+    "diff": "type_new",
+    "type": "ProductVariantBulkTranslate"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionCreateInput",
-    "field": "type"
+    "diff": "type_new",
+    "type": "ProductVariantBulkTranslateError"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionEvent",
-    "field": "name"
+    "diff": "type_new",
+    "type": "ProductVariantBulkTranslateInput"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionEvent",
-    "field": "reference"
+    "diff": "type_new",
+    "type": "ProductVariantBulkTranslateResult"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionEvent",
-    "field": "status"
+    "diff": "type_new",
+    "type": "ProductVariantTranslateErrorCode"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionEventInput",
-    "field": "name"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "metadata"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionEventInput",
-    "field": "reference"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "metafield"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionEventInput",
-    "field": "status"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "metafields"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionItem",
-    "field": "reference"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "privateMetadata"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionItem",
-    "field": "status"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "privateMetafield"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionItem",
-    "field": "type"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "privateMetafields"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionItem",
-    "field": "voidedAmount"
+    "diff": "field_new",
+    "type": "ChannelCreateInput",
+    "field": "metadata"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionUpdateInput",
-    "field": "amountVoided"
+    "diff": "field_new",
+    "type": "ChannelCreateInput",
+    "field": "privateMetadata"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionUpdateInput",
-    "field": "reference"
+    "diff": "field_new",
+    "type": "ChannelUpdateInput",
+    "field": "metadata"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionUpdateInput",
-    "field": "status"
+    "diff": "field_new",
+    "type": "ChannelUpdateInput",
+    "field": "privateMetadata"
   },
   {
-    "diff": "field_deleted",
-    "type": "TransactionUpdateInput",
-    "field": "type"
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "productBulkTranslate"
   },
   {
-    "diff": "enum_value_deleted",
-    "enum": "OrderEventsEnum",
-    "value": "TRANSACTION_CAPTURE_REQUESTED"
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "productVariantBulkTranslate"
   },
   {
-    "diff": "enum_value_deleted",
-    "enum": "OrderEventsEnum",
-    "value": "TRANSACTION_VOID_REQUESTED"
+    "diff": "field_new",
+    "type": "Shop",
+    "field": "metadata"
   },
   {
-    "diff": "enum_value_deleted",
-    "enum": "TransactionActionEnum",
-    "value": "VOID"
+    "diff": "field_new",
+    "type": "Shop",
+    "field": "metafield"
   },
   {
-    "diff": "enum_value_deleted",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "TRANSACTION_ACTION_REQUEST"
+    "diff": "field_new",
+    "type": "Shop",
+    "field": "metafields"
   },
   {
-    "diff": "enum_value_deleted",
-    "enum": "WebhookEventTypeEnum",
-    "value": "TRANSACTION_ACTION_REQUEST"
+    "diff": "field_new",
+    "type": "Shop",
+    "field": "privateMetadata"
   },
   {
-    "diff": "enum_value_deleted",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "TRANSACTION_ACTION_REQUEST"
+    "diff": "field_new",
+    "type": "Shop",
+    "field": "privateMetafield"
+  },
+  {
+    "diff": "field_new",
+    "type": "Shop",
+    "field": "privateMetafields"
+  },
+  {
+    "diff": "field_new",
+    "type": "ShopSettingsInput",
+    "field": "metadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "ShopSettingsInput",
+    "field": "privateMetadata"
   }
 ]
