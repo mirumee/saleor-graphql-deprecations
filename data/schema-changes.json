@@ -1,142 +1,26 @@
 [
   {
     "diff": "type_new",
-    "type": "ProductBulkTranslate"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductBulkTranslateError"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductBulkTranslateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductBulkTranslateResult"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductTranslateErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantBulkTranslate"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantBulkTranslateError"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantBulkTranslateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantBulkTranslateResult"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantTranslateErrorCode"
-  },
-  {
-    "diff": "field_new",
-    "type": "Channel",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "Channel",
-    "field": "metafield"
-  },
-  {
-    "diff": "field_new",
-    "type": "Channel",
-    "field": "metafields"
-  },
-  {
-    "diff": "field_new",
-    "type": "Channel",
-    "field": "privateMetadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "Channel",
-    "field": "privateMetafield"
-  },
-  {
-    "diff": "field_new",
-    "type": "Channel",
-    "field": "privateMetafields"
-  },
-  {
-    "diff": "field_new",
-    "type": "ChannelCreateInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "ChannelCreateInput",
-    "field": "privateMetadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "ChannelUpdateInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "ChannelUpdateInput",
-    "field": "privateMetadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "productBulkTranslate"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "productVariantBulkTranslate"
+    "type": "ShopMetadataUpdated"
   },
   {
     "diff": "field_new",
     "type": "Shop",
-    "field": "metadata"
+    "field": "id"
   },
   {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "metafield"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "SHOP_METADATA_UPDATED"
   },
   {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "metafields"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "SHOP_METADATA_UPDATED"
   },
   {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "privateMetadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "privateMetafield"
-  },
-  {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "privateMetafields"
-  },
-  {
-    "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "privateMetadata"
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "SHOP_METADATA_UPDATED"
   }
 ]

@@ -24986,7 +24986,7 @@
   "MenuBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes menus. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Deletes menus. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_DELETED (async): A menu was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -25069,7 +25069,7 @@
   "MenuCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new Menu. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Creates a new Menu. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_CREATED (async): A menu was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -25182,7 +25182,7 @@
   "MenuDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Deletes a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_DELETED (async): A menu was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -25578,7 +25578,7 @@
   "MenuItemBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes menu items. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Deletes menu items. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_DELETED (async): A menu item was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -25661,7 +25661,7 @@
   "MenuItemCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Creates a new menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_CREATED (async): A menu item was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -25802,7 +25802,7 @@
   "MenuItemDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Deletes a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_DELETED (async): A menu item was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -25951,7 +25951,7 @@
   "MenuItemMove": {
     "type": "object",
     "interfaces": [],
-    "description": "Moves items of menus. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Moves items of menus. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_UPDATED (async): Optionally triggered when sort order or parent changed for menu item.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -26141,7 +26141,7 @@
   "MenuItemUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Updates a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_UPDATED (async): A menu item was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -26278,7 +26278,7 @@
   "MenuUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+    "description": "Updates a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_UPDATED (async): A menu was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -28191,7 +28191,7 @@
             "default": null
           },
           "shippingMethodId": {
-            "type": "ID!",
+            "type": "ID",
             "description": "Shipping method.",
             "deprecated": null,
             "message": null,
@@ -29302,7 +29302,7 @@
       },
       "menuBulkDelete": {
         "type": "MenuBulkDelete",
-        "description": "Deletes menus. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Deletes menus. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_DELETED (async): A menu was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29317,7 +29317,7 @@
       },
       "menuCreate": {
         "type": "MenuCreate",
-        "description": "Creates a new Menu. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Creates a new Menu. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_CREATED (async): A menu was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29332,7 +29332,7 @@
       },
       "menuDelete": {
         "type": "MenuDelete",
-        "description": "Deletes a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Deletes a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_DELETED (async): A menu was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29347,7 +29347,7 @@
       },
       "menuItemBulkDelete": {
         "type": "MenuItemBulkDelete",
-        "description": "Deletes menu items. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Deletes menu items. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_DELETED (async): A menu item was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29362,7 +29362,7 @@
       },
       "menuItemCreate": {
         "type": "MenuItemCreate",
-        "description": "Creates a new menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Creates a new menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_CREATED (async): A menu item was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29377,7 +29377,7 @@
       },
       "menuItemDelete": {
         "type": "MenuItemDelete",
-        "description": "Deletes a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Deletes a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_DELETED (async): A menu item was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29392,7 +29392,7 @@
       },
       "menuItemMove": {
         "type": "MenuItemMove",
-        "description": "Moves items of menus. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Moves items of menus. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_UPDATED (async): Optionally triggered when sort order or parent changed for menu item.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29443,7 +29443,7 @@
       },
       "menuItemUpdate": {
         "type": "MenuItemUpdate",
-        "description": "Updates a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Updates a menu item. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_ITEM_UPDATED (async): A menu item was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29465,7 +29465,7 @@
       },
       "menuUpdate": {
         "type": "MenuUpdate",
-        "description": "Updates a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.",
+        "description": "Updates a menu. \n\nRequires one of the following permissions: MANAGE_MENUS.\n\nTriggers the following webhook events:\n- MENU_UPDATED (async): A menu was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -56593,6 +56593,13 @@
         "message": null,
         "arguments": {}
       },
+      "id": {
+        "type": "ID!",
+        "description": "ID of the shop.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "includeTaxesInPrices": {
         "type": "Boolean!",
         "description": "Include taxes in prices.",
@@ -56934,6 +56941,52 @@
         "description": null,
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "ShopMetadataUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when shop metadata is updated.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shop": {
+        "type": "Shop",
+        "description": "Shop data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
         "arguments": {}
       }
     }
@@ -66805,6 +66858,11 @@
         "deprecated": null,
         "message": null
       },
+      "SHOP_METADATA_UPDATED": {
+        "description": "Shop metadata is updated.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null
+      },
       "STAFF_CREATED": {
         "description": "A new staff user is created.",
         "deprecated": null,
@@ -67480,6 +67538,11 @@
       },
       "SHIPPING_ZONE_UPDATED": {
         "description": "A shipping zone is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "SHOP_METADATA_UPDATED": {
+        "description": "Shop metadata is updated.\n\nAdded in Saleor 3.15.",
         "deprecated": null,
         "message": null
       },
@@ -68210,6 +68273,11 @@
         "message": null
       },
       "SHIPPING_ZONE_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SHOP_METADATA_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null
