@@ -54598,35 +54598,35 @@
     "fields": {
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "The channel associated with the shipping method channel listing.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of shipping method channel listing.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "maximumOrderPrice": {
         "type": "Money",
-        "description": null,
+        "description": "Maximum order price.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "minimumOrderPrice": {
         "type": "Money",
-        "description": null,
+        "description": "Minimum order price.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "price": {
         "type": "Money",
-        "description": null,
+        "description": "Price of the shipping method in the associated channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55737,7 +55737,7 @@
       },
       "default": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Indicates if the shipping zone is default one.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55751,7 +55751,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "The ID of shipping zone.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55795,7 +55795,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "Shipping zone name.",
         "deprecated": null,
         "message": null,
         "arguments": {}
