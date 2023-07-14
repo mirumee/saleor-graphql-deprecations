@@ -32071,7 +32071,7 @@
       },
       "shopSettingsUpdate": {
         "type": "ShopSettingsUpdate",
-        "description": "Updates shop settings. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Updates shop settings. \n\nRequires one of the following permissions: MANAGE_SETTINGS.\n\nTriggers the following webhook events:\n- SHOP_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57201,7 +57201,7 @@
   "ShopSettingsUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates shop settings. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+    "description": "Updates shop settings. \n\nRequires one of the following permissions: MANAGE_SETTINGS.\n\nTriggers the following webhook events:\n- SHOP_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
     "deprecated": null,
     "message": null,
     "fields": {
