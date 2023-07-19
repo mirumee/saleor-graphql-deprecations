@@ -1,26 +1,43 @@
 [
   {
     "diff": "type_new",
-    "type": "ShopMetadataUpdated"
+    "type": "AttributeBulkCreate"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeBulkCreateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeBulkCreateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeBulkCreateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeBulkCreateResult"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeBulkCreateValueInput"
   },
   {
     "diff": "field_new",
-    "type": "Shop",
-    "field": "id"
+    "type": "Mutation",
+    "field": "attributeBulkCreate"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deprecated",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "SHOP_METADATA_UPDATED"
+    "value": "ANY_EVENTS",
+    "version": "4.0"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deprecated",
     "enum": "WebhookEventTypeEnum",
-    "value": "SHOP_METADATA_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "SHOP_METADATA_UPDATED"
+    "value": "ANY_EVENTS",
+    "version": "4.0"
   }
 ]
