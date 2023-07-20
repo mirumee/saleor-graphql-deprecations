@@ -637,7 +637,7 @@
   "AccountRegister": {
     "type": "object",
     "interfaces": [],
-    "description": "Register a new user.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- NOTIFY_USER (async): A notification for account confirmation.",
+    "description": "Register a new user.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- NOTIFY_USER (async): A notification for account confirmation.\n- ACCOUNT_CONFIRMATION_REQUESTED (async): An user confirmation was requested. This event is always sent regardless of settings.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -14310,6 +14310,13 @@
         "message": null,
         "default": null
       },
+      "isConfirmed": {
+        "type": "Boolean",
+        "description": "User account is confirmed.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "languageCode": {
         "type": "LanguageCodeEnum",
         "description": "User language code.",
@@ -26945,7 +26952,7 @@
       },
       "accountRegister": {
         "type": "AccountRegister",
-        "description": "Register a new user.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- NOTIFY_USER (async): A notification for account confirmation.",
+        "description": "Register a new user.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- NOTIFY_USER (async): A notification for account confirmation.\n- ACCOUNT_CONFIRMATION_REQUESTED (async): An user confirmation was requested. This event is always sent regardless of settings.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32039,6 +32046,28 @@
           "input": {
             "type": "SaleInput!",
             "description": "Fields required to update a sale.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "sendConfirmationEmail": {
+        "type": "SendConfirmationEmail",
+        "description": "Sends a notification confirmation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account confirmation.\n- ACCOUNT_CONFIRMATION_REQUESTED (async): An account confirmation was requested. This event is always sent regardless of settings.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channel": {
+            "type": "String!",
+            "description": "Slug of a channel which will be used for notify user.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "redirectUrl": {
+            "type": "String!",
+            "description": "Base of frontend URL that will be needed to create confirmation URL.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -38860,6 +38889,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "allowUnpaidOrders": {
+        "type": "Boolean!",
+        "description": "Determine if it is possible to place unpdaid order by calling `checkoutComplete` mutation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "automaticallyConfirmAllNewOrders": {
         "type": "Boolean!",
         "description": "When disabled, all new orders from checkout will be marked as unconfirmed. When enabled orders from checkout will become unfulfilled immediately.",
@@ -38953,6 +38989,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "allowUnpaidOrders": {
+        "type": "Boolean",
+        "description": "Determine if it is possible to place unpdaid order by calling `checkoutComplete` mutation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "automaticallyConfirmAllNewOrders": {
         "type": "Boolean",
         "description": "When disabled, all new orders from checkout will be marked as unconfirmed. When enabled orders from checkout will become unfulfilled immediately. By default set to True",
@@ -54470,6 +54513,80 @@
       }
     }
   },
+  "SendConfirmationEmail": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Sends a notification confirmation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account confirmation.\n- ACCOUNT_CONFIRMATION_REQUESTED (async): An account confirmation was requested. This event is always sent regardless of settings.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[SendConfirmationEmailError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "SendConfirmationEmailError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "SendConfirmationEmailErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "SendConfirmationEmailErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ACCOUNT_CONFIRMED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CONFIRMATION_ALREADY_REQUESTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MISSING_CHANNEL_SLUG": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "SeoInput": {
     "type": "input",
     "description": null,
@@ -56687,6 +56804,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "allowLoginWithoutConfirmation": {
+        "type": "Boolean",
+        "description": "Determines if user can login without confirmation when `enableAccountConfrimation` is enabled.\n\nAdded in Saleor 3.15.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "automaticFulfillmentDigitalProducts": {
         "type": "Boolean",
         "description": "Enable automatic fulfillment for all digital products.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
@@ -57290,6 +57414,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "allowLoginWithoutConfirmation": {
+        "type": "Boolean",
+        "description": "Enable possibility to login without account confirmation.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "automaticFulfillmentDigitalProducts": {
         "type": "Boolean",
         "description": "Enable automatic fulfillment for all digital products.",
@@ -63023,6 +63154,13 @@
         "message": null,
         "arguments": {}
       },
+      "isConfirmed": {
+        "type": "Boolean!",
+        "description": "Determines if user has confirmed email.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "isStaff": {
         "type": "Boolean!",
         "description": "Determine if the user is a staff admin.",
@@ -63407,6 +63545,13 @@
       "isActive": {
         "type": "Boolean",
         "description": "User account is active.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isConfirmed": {
+        "type": "Boolean",
+        "description": "User account is confirmed.\n\nAdded in Saleor 3.15.",
         "deprecated": null,
         "message": null,
         "default": null
