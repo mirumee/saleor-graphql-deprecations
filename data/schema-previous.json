@@ -1223,6 +1223,13 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Address public metadata.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "phone": {
         "type": "String",
         "description": "Phone number.\n\nPhone numbers are validated with Google's [libphonenumber](https://github.com/google/libphonenumber) library.",

@@ -1,54 +1,7 @@
 [
   {
-    "diff": "type_new",
-    "type": "SendConfirmationEmail"
-  },
-  {
-    "diff": "type_new",
-    "type": "SendConfirmationEmailError"
-  },
-  {
-    "diff": "type_new",
-    "type": "SendConfirmationEmailErrorCode"
-  },
-  {
     "diff": "field_new",
-    "type": "CustomerInput",
-    "field": "isConfirmed"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "sendConfirmationEmail"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderSettings",
-    "field": "allowUnpaidOrders"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderSettingsInput",
-    "field": "allowUnpaidOrders"
-  },
-  {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "allowLoginWithoutConfirmation"
-  },
-  {
-    "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "allowLoginWithoutConfirmation"
-  },
-  {
-    "diff": "field_new",
-    "type": "User",
-    "field": "isConfirmed"
-  },
-  {
-    "diff": "field_new",
-    "type": "UserCreateInput",
-    "field": "isConfirmed"
+    "type": "AddressInput",
+    "field": "metadata"
   }
 ]
