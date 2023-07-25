@@ -1,7 +1,21 @@
 [
   {
-    "diff": "field_new",
-    "type": "AddressInput",
-    "field": "metadata"
+    "diff": "type_new",
+    "type": "ChannelMetadataUpdated"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "CHANNEL_METADATA_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "CHANNEL_METADATA_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "CHANNEL_METADATA_UPDATED"
   }
 ]

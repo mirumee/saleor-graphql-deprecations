@@ -8382,6 +8382,52 @@
       }
     }
   },
+  "ChannelMetadataUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when channel metadata is updated.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel",
+        "description": "The channel the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ChannelReorderWarehouses": {
     "type": "object",
     "interfaces": [],
@@ -8454,7 +8500,7 @@
   "ChannelUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.",
+    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -27866,7 +27912,7 @@
       },
       "channelUpdate": {
         "type": "ChannelUpdate",
-        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.",
+        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -66883,6 +66929,11 @@
         "deprecated": null,
         "message": null
       },
+      "CHANNEL_METADATA_UPDATED": {
+        "description": "A channel metadata is updated.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null
+      },
       "CHANNEL_STATUS_CHANGED": {
         "description": "A channel status is changed.",
         "deprecated": null,
@@ -67498,6 +67549,11 @@
       },
       "CHANNEL_DELETED": {
         "description": "A channel is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "CHANNEL_METADATA_UPDATED": {
+        "description": "A channel metadata is updated.\n\nAdded in Saleor 3.15.",
         "deprecated": null,
         "message": null
       },
@@ -68298,6 +68354,11 @@
         "message": null
       },
       "CHANNEL_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHANNEL_METADATA_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null
