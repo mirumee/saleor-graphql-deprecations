@@ -265,6 +265,80 @@
       }
     }
   },
+  "AccountConfirmed": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when account is confirmed.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel",
+        "description": "The channel data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "redirectUrl": {
+        "type": "String",
+        "description": "The URL to redirect the user after he accepts the request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shop": {
+        "type": "Shop",
+        "description": "Shop data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "token": {
+        "type": "String",
+        "description": "The token required to confirm request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "The user the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "AccountDelete": {
     "type": "object",
     "interfaces": [],
@@ -12306,7 +12380,7 @@
   "ConfirmAccount": {
     "type": "object",
     "interfaces": [],
-    "description": "Confirm user account with token sent by email during registration.",
+    "description": "Confirm user account with token sent by email during registration.\n\nTriggers the following webhook events:\n- ACCOUNT_CONFIRMED (async): Account was confirmed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -28745,7 +28819,7 @@
       },
       "confirmAccount": {
         "type": "ConfirmAccount",
-        "description": "Confirm user account with token sent by email during registration.",
+        "description": "Confirm user account with token sent by email during registration.\n\nTriggers the following webhook events:\n- ACCOUNT_CONFIRMED (async): Account was confirmed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -66829,6 +66903,11 @@
         "deprecated": null,
         "message": null
       },
+      "ACCOUNT_CONFIRMED": {
+        "description": "An account is confirmed.\n\nAdded in Saleor 3.15.",
+        "deprecated": null,
+        "message": null
+      },
       "ACCOUNT_DELETE_REQUESTED": {
         "description": "An account delete is requested.",
         "deprecated": null,
@@ -67449,6 +67528,11 @@
       },
       "ACCOUNT_CONFIRMATION_REQUESTED": {
         "description": "An account confirmation is requested.",
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_CONFIRMED": {
+        "description": "An account is confirmed.\n\nAdded in Saleor 3.15.",
         "deprecated": null,
         "message": null
       },
@@ -68259,6 +68343,11 @@
         "message": null
       },
       "ACCOUNT_CONFIRMATION_REQUESTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_CONFIRMED": {
         "description": null,
         "deprecated": null,
         "message": null
