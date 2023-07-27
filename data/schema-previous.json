@@ -342,7 +342,7 @@
   "AccountDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Remove user account. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+    "description": "Remove user account. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- ACCOUNT_DELETED (async): Account was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -375,6 +375,80 @@
       "Event"
     ],
     "description": "Event sent when account delete is requested.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel",
+        "description": "The channel data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "redirectUrl": {
+        "type": "String",
+        "description": "The URL to redirect the user after he accepts the request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shop": {
+        "type": "Shop",
+        "description": "Shop data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "token": {
+        "type": "String",
+        "description": "The token required to confirm request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "The user the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AccountDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when account is deleted.\n\nAdded in Saleor 3.15.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -27064,7 +27138,7 @@
       },
       "accountDelete": {
         "type": "AccountDelete",
-        "description": "Remove user account. \n\nRequires one of the following permissions: AUTHENTICATED_USER.",
+        "description": "Remove user account. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- ACCOUNT_DELETED (async): Account was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39605,21 +39679,21 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which page was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the page.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isPublished": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determines if the page is published.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39663,7 +39737,7 @@
       },
       "pageType": {
         "type": "PageType!",
-        "description": null,
+        "description": "Determines the type of page",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39721,28 +39795,28 @@
       },
       "seoDescription": {
         "type": "String",
-        "description": null,
+        "description": "Description of the page for SEO.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "seoTitle": {
         "type": "String",
-        "description": null,
+        "description": "Title of the page for SEO.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "slug": {
         "type": "String!",
-        "description": null,
+        "description": "Slug of the page.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "title": {
         "type": "String!",
-        "description": null,
+        "description": "Title of the page.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40770,7 +40844,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the page type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40814,7 +40888,7 @@
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "Name of the page type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40858,7 +40932,7 @@
       },
       "slug": {
         "type": "String!",
-        "description": null,
+        "description": "Slug of the page type.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -66904,7 +66978,12 @@
         "message": null
       },
       "ACCOUNT_CONFIRMED": {
-        "description": "An account is confirmed.\n\nAdded in Saleor 3.15.",
+        "description": "An account is confirmed.",
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_DELETED": {
+        "description": "An account is deleted.",
         "deprecated": null,
         "message": null
       },
@@ -67009,7 +67088,7 @@
         "message": null
       },
       "CHANNEL_METADATA_UPDATED": {
-        "description": "A channel metadata is updated.\n\nAdded in Saleor 3.15.",
+        "description": "A channel metadata is updated.",
         "deprecated": null,
         "message": null
       },
@@ -67532,7 +67611,12 @@
         "message": null
       },
       "ACCOUNT_CONFIRMED": {
-        "description": "An account is confirmed.\n\nAdded in Saleor 3.15.",
+        "description": "An account is confirmed.",
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_DELETED": {
+        "description": "An account is deleted.",
         "deprecated": null,
         "message": null
       },
@@ -67637,7 +67721,7 @@
         "message": null
       },
       "CHANNEL_METADATA_UPDATED": {
-        "description": "A channel metadata is updated.\n\nAdded in Saleor 3.15.",
+        "description": "A channel metadata is updated.",
         "deprecated": null,
         "message": null
       },
@@ -68348,6 +68432,11 @@
         "message": null
       },
       "ACCOUNT_CONFIRMED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_DELETED": {
         "description": null,
         "deprecated": null,
         "message": null
