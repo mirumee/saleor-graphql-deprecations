@@ -1,21 +1,21 @@
 [
   {
     "diff": "type_new",
-    "type": "AccountDeleted"
+    "type": "AccountEmailChanged"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ACCOUNT_DELETED"
+    "value": "ACCOUNT_EMAIL_CHANGED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeEnum",
-    "value": "ACCOUNT_DELETED"
+    "value": "ACCOUNT_EMAIL_CHANGED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookSampleEventTypeEnum",
-    "value": "ACCOUNT_DELETED"
+    "value": "ACCOUNT_EMAIL_CHANGED"
   }
 ]
