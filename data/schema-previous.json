@@ -1017,6 +1017,80 @@
       }
     }
   },
+  "AccountSetPasswordRequested": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when setting a new password is requested.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel",
+        "description": "The channel data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "redirectUrl": {
+        "type": "String",
+        "description": "The URL to redirect the user after he accepts the request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shop": {
+        "type": "Shop",
+        "description": "Shop data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "token": {
+        "type": "String",
+        "description": "The token required to confirm request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "The user the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "AccountUpdate": {
     "type": "object",
     "interfaces": [],
@@ -14227,7 +14301,7 @@
   "CustomerCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.\n- NOTIFY_USER (async): A notification for setting the password.",
+    "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.\n- NOTIFY_USER (async): A notification for setting the password.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -29070,7 +29144,7 @@
       },
       "customerCreate": {
         "type": "CustomerCreate",
-        "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.\n- NOTIFY_USER (async): A notification for setting the password.",
+        "description": "Creates a new customer. \n\nRequires one of the following permissions: MANAGE_USERS.\n\nTriggers the following webhook events:\n- CUSTOMER_CREATED (async): A new customer account was created.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.\n- NOTIFY_USER (async): A notification for setting the password.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32145,7 +32219,7 @@
       },
       "requestPasswordReset": {
         "type": "RequestPasswordReset",
-        "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.",
+        "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -53555,7 +53629,7 @@
   "RequestPasswordReset": {
     "type": "object",
     "interfaces": [],
-    "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.",
+    "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67078,6 +67152,11 @@
         "deprecated": null,
         "message": null
       },
+      "ACCOUNT_SET_PASSWORD_REQUESTED": {
+        "description": "Setting a new password for the account is requested.",
+        "deprecated": null,
+        "message": null
+      },
       "ADDRESS_CREATED": {
         "description": "A new address created.",
         "deprecated": null,
@@ -67713,6 +67792,11 @@
       },
       "ACCOUNT_EMAIL_CHANGED": {
         "description": "An account email was changed",
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_SET_PASSWORD_REQUESTED": {
+        "description": "Setting a new password for the account is requested.",
         "deprecated": null,
         "message": null
       },
@@ -68538,6 +68622,11 @@
         "message": null
       },
       "ACCOUNT_EMAIL_CHANGED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ACCOUNT_SET_PASSWORD_REQUESTED": {
         "description": null,
         "deprecated": null,
         "message": null
