@@ -32219,7 +32219,7 @@
       },
       "requestPasswordReset": {
         "type": "RequestPasswordReset",
-        "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.",
+        "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.\n- STAFF_SET_PASSWORD_REQUESTED (async): Setting a new password for the staff account is requested.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32779,7 +32779,7 @@
       },
       "staffCreate": {
         "type": "StaffCreate",
-        "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_CREATED (async): A new staff account was created.\n- NOTIFY_USER (async): A notification for setting the password.",
+        "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_CREATED (async): A new staff account was created.\n- NOTIFY_USER (async): A notification for setting the password.\n- STAFF_SET_PASSWORD_REQUESTED (async): Setting a new password for the staff account is requested.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -53629,7 +53629,7 @@
   "RequestPasswordReset": {
     "type": "object",
     "interfaces": [],
-    "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.",
+    "description": "Sends an email with the account password modification link.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for password reset.\n- ACCOUNT_SET_PASSWORD_REQUESTED (async): Setting a new password for the account is requested.\n- STAFF_SET_PASSWORD_REQUESTED (async): Setting a new password for the staff account is requested.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -58102,7 +58102,7 @@
   "StaffCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_CREATED (async): A new staff account was created.\n- NOTIFY_USER (async): A notification for setting the password.",
+    "description": "Creates a new staff user. Apps are not allowed to perform this mutation. \n\nRequires one of the following permissions: MANAGE_STAFF.\n\nTriggers the following webhook events:\n- STAFF_CREATED (async): A new staff account was created.\n- NOTIFY_USER (async): A notification for setting the password.\n- STAFF_SET_PASSWORD_REQUESTED (async): Setting a new password for the staff account is requested.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -58550,6 +58550,80 @@
       "staffNotificationRecipient": {
         "type": "StaffNotificationRecipient",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "StaffSetPasswordRequested": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when setting a new password for staff is requested.\n\nAdded in Saleor 3.15.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel",
+        "description": "The channel data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "redirectUrl": {
+        "type": "String",
+        "description": "The URL to redirect the user after he accepts the request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shop": {
+        "type": "Shop",
+        "description": "Shop data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "token": {
+        "type": "String",
+        "description": "The token required to confirm request.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "The user the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67692,6 +67766,11 @@
         "deprecated": null,
         "message": null
       },
+      "STAFF_SET_PASSWORD_REQUESTED": {
+        "description": "Setting a new password for the staff account is requested.",
+        "deprecated": null,
+        "message": null
+      },
       "STAFF_UPDATED": {
         "description": "A staff user is updated.",
         "deprecated": null,
@@ -68397,6 +68476,11 @@
       },
       "STAFF_DELETED": {
         "description": "A staff user is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "STAFF_SET_PASSWORD_REQUESTED": {
+        "description": "Setting a new password for the staff account is requested.",
         "deprecated": null,
         "message": null
       },
@@ -69157,6 +69241,11 @@
         "message": null
       },
       "STAFF_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "STAFF_SET_PASSWORD_REQUESTED": {
         "description": null,
         "deprecated": null,
         "message": null

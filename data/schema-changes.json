@@ -1,21 +1,21 @@
 [
   {
     "diff": "type_new",
-    "type": "AccountSetPasswordRequested"
+    "type": "StaffSetPasswordRequested"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "ACCOUNT_SET_PASSWORD_REQUESTED"
+    "value": "STAFF_SET_PASSWORD_REQUESTED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeEnum",
-    "value": "ACCOUNT_SET_PASSWORD_REQUESTED"
+    "value": "STAFF_SET_PASSWORD_REQUESTED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookSampleEventTypeEnum",
-    "value": "ACCOUNT_SET_PASSWORD_REQUESTED"
+    "value": "STAFF_SET_PASSWORD_REQUESTED"
   }
 ]
