@@ -41715,14 +41715,14 @@
       },
       "checkout": {
         "type": "Checkout",
-        "description": null,
+        "description": "Checkout associated with a payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which payment was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -41743,21 +41743,21 @@
       },
       "gateway": {
         "type": "String!",
-        "description": null,
+        "description": "Payment gateway used for payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isActive": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determines if the payment is active or not.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -41801,21 +41801,21 @@
       },
       "modified": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which payment was modified.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "order": {
         "type": "Order",
-        "description": null,
+        "description": "Order associated with a payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "paymentMethodType": {
         "type": "String!",
-        "description": null,
+        "description": "Type of method used for payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -41859,7 +41859,7 @@
       },
       "token": {
         "type": "String!",
-        "description": null,
+        "description": "Unique token associated with a payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42503,7 +42503,7 @@
       },
       "gatewayConfigs": {
         "type": "[PaymentGatewayConfig!]",
-        "description": null,
+        "description": "List of payment gateway configurations.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42661,7 +42661,7 @@
       },
       "initializedPayment": {
         "type": "PaymentInitialized",
-        "description": null,
+        "description": "Payment that was initialized.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61078,56 +61078,56 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time which transaction was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "error": {
         "type": "String",
-        "description": null,
+        "description": "Error associated with transaction, if any.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "gatewayResponse": {
         "type": "JSONString!",
-        "description": null,
+        "description": "Response returned by payment gateway.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isSuccess": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Determines if the transaction was successful.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "kind": {
         "type": "TransactionKind!",
-        "description": null,
+        "description": "Determines the type of transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "payment": {
         "type": "Payment!",
-        "description": null,
+        "description": "Determines the payment associated with a transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "token": {
         "type": "String!",
-        "description": null,
+        "description": "Unique token associated with a transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61480,7 +61480,7 @@
       },
       "createdAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which a transaction event was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61992,7 +61992,7 @@
       },
       "createdAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which payment transaction was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -62071,7 +62071,7 @@
       },
       "modifiedAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time at which payment transaction was modified.",
         "deprecated": null,
         "message": null,
         "arguments": {}
