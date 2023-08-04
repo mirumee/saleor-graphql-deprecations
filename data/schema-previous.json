@@ -48620,7 +48620,7 @@
       },
       "trackInventory": {
         "type": "Boolean!",
-        "description": "Whether the inventory of the variant is tracked.",
+        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item. If the field is not provided, `Shop.trackInventoryByDefault` will be used.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -48839,7 +48839,7 @@
       },
       "trackInventory": {
         "type": "Boolean",
-        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item.",
+        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item. If the field is not provided, `Shop.trackInventoryByDefault` will be used.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -49287,7 +49287,7 @@
       },
       "trackInventory": {
         "type": "Boolean",
-        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item.",
+        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item. If the field is not provided, `Shop.trackInventoryByDefault` will be used.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -49610,7 +49610,7 @@
       },
       "trackInventory": {
         "type": "Boolean",
-        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item.",
+        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item. If the field is not provided, `Shop.trackInventoryByDefault` will be used.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -49869,7 +49869,7 @@
       },
       "trackInventory": {
         "type": "Boolean",
-        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item.",
+        "description": "Determines if the inventory of this variant should be tracked. If false, the quantity won't change when customers buy this item. If the field is not provided, `Shop.trackInventoryByDefault` will be used.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -57526,7 +57526,7 @@
       },
       "trackInventoryByDefault": {
         "type": "Boolean",
-        "description": "Enable inventory tracking.",
+        "description": "This field is used as a default value for `ProductVariant.trackInventory`.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -57919,7 +57919,7 @@
       },
       "trackInventoryByDefault": {
         "type": "Boolean",
-        "description": "Enable inventory tracking.",
+        "description": "This field is used as a default value for `ProductVariant.trackInventory`.",
         "deprecated": null,
         "message": null,
         "default": null
