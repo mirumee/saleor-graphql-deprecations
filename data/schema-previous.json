@@ -4093,98 +4093,6 @@
       }
     }
   },
-  "AttributeBulkCreateInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "entityType": {
-        "type": "AttributeEntityTypeEnum",
-        "description": "The entity type which can be used as a reference.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "externalReference": {
-        "type": "String",
-        "description": "External ID of this attribute.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "filterableInDashboard": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in dashboard.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "inputType": {
-        "type": "AttributeInputTypeEnum",
-        "description": "The input type to use for entering attribute values in the dashboard.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "isVariantOnly": {
-        "type": "Boolean",
-        "description": "Whether the attribute is for variants only.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "name": {
-        "type": "String!",
-        "description": "Name of an attribute displayed in the interface.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "slug": {
-        "type": "String",
-        "description": "Internal representation of an attribute name.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "type": {
-        "type": "AttributeTypeEnum!",
-        "description": "The attribute type.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "unit": {
-        "type": "MeasurementUnitsEnum",
-        "description": "The unit of attribute values.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "valueRequired": {
-        "type": "Boolean",
-        "description": "Whether the attribute requires values to be passed or not.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "values": {
-        "type": "[AttributeBulkCreateValueInput!]",
-        "description": "List of attribute's values.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "visibleInStorefront": {
-        "type": "Boolean",
-        "description": "Whether the attribute should be visible or not in storefront.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      }
-    }
-  },
   "AttributeBulkCreateResult": {
     "type": "object",
     "interfaces": [],
@@ -4205,49 +4113,6 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
-      }
-    }
-  },
-  "AttributeBulkCreateValueInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "contentType": {
-        "type": "String",
-        "description": "File content type.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "externalReference": {
-        "type": "String",
-        "description": "External ID of this attribute value.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "fileUrl": {
-        "type": "String",
-        "description": "URL of the file attribute. Every time, a new value is created.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "name": {
-        "type": "String!",
-        "description": "Name of a value displayed in the interface.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "value": {
-        "type": "String",
-        "description": "Represent value of the attribute value (e.g. color values for swatch attributes).",
-        "deprecated": null,
-        "message": null,
-        "default": null
       }
     }
   },
@@ -4400,6 +4265,171 @@
       }
     }
   },
+  "AttributeBulkUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates attributes.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated. Optionally called when new attribute value was created or deleted.\n- ATTRIBUTE_VALUE_CREATED (async): Called optionally when an attribute value was created.\n- ATTRIBUTE_VALUE_DELETED (async): Called optionally when an attribute value was deleted.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many objects were updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[AttributeBulkUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "results": {
+        "type": "[AttributeBulkUpdateResult!]!",
+        "description": "List of the updated attributes.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AttributeBulkUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "AttributeBulkUpdateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "path": {
+        "type": "String",
+        "description": "Path to field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AttributeBulkUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ALREADY_EXISTS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "BLANK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DUPLICATED_INPUT_ITEM": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MAX_LENGTH": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "AttributeBulkUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "externalReference": {
+        "type": "String",
+        "description": "External ID of this attribute.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "fields": {
+        "type": "AttributeUpdateInput!",
+        "description": "Fields to update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "id": {
+        "type": "ID",
+        "description": "ID of an attribute to update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "AttributeBulkUpdateResult": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute",
+        "description": "Attribute data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[AttributeBulkUpdateError!]",
+        "description": "List of errors occurred on update attempt.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "AttributeChoicesSortField": {
     "type": "enum",
     "description": null,
@@ -4525,7 +4555,7 @@
   },
   "AttributeCreateInput": {
     "type": "input",
-    "description": null,
+    "description": "Represents an input for create of attribute.\n\nNOTE: Deprecated fields `filterableInStorefront`, `storefrontSearchPosition` and `availableInGrid` are not supported in bulk mutations: `attributeBulkCreate`, `attributeBulkUpdate`.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -5426,7 +5456,7 @@
   },
   "AttributeUpdateInput": {
     "type": "input",
-    "description": null,
+    "description": "Represents an input for update of attribute.\n\nNOTE: Deprecated fields `filterableInStorefront`, `storefrontSearchPosition` and `availableInGrid` are not supported in bulk mutations: `attributeBulkCreate`, `attributeBulkUpdate`.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -27713,8 +27743,8 @@
         "message": null,
         "arguments": {
           "attributes": {
-            "type": "[AttributeBulkCreateInput!]!",
-            "description": "Input list of products to create.",
+            "type": "[AttributeCreateInput!]!",
+            "description": "Input list of attributes to create.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -27759,6 +27789,28 @@
           "translations": {
             "type": "[AttributeBulkTranslateInput!]!",
             "description": "List of attributes translations.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "attributeBulkUpdate": {
+        "type": "AttributeBulkUpdate",
+        "description": "Updates attributes.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated. Optionally called when new attribute value was created or deleted.\n- ATTRIBUTE_VALUE_CREATED (async): Called optionally when an attribute value was created.\n- ATTRIBUTE_VALUE_DELETED (async): Called optionally when an attribute value was deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "attributes": {
+            "type": "[AttributeBulkUpdateInput!]!",
+            "description": "Input list of attributes to update.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "errorPolicy": {
+            "type": "ErrorPolicyEnum",
+            "description": "Policies of error handling. DEFAULT: REJECT_EVERYTHING",
             "deprecated": null,
             "message": null,
             "default": null

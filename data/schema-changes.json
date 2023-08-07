@@ -1,21 +1,35 @@
 [
   {
     "diff": "type_new",
-    "type": "StaffSetPasswordRequested"
+    "type": "AttributeBulkUpdate"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "STAFF_SET_PASSWORD_REQUESTED"
+    "diff": "type_new",
+    "type": "AttributeBulkUpdateError"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "STAFF_SET_PASSWORD_REQUESTED"
+    "diff": "type_new",
+    "type": "AttributeBulkUpdateErrorCode"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "STAFF_SET_PASSWORD_REQUESTED"
+    "diff": "type_new",
+    "type": "AttributeBulkUpdateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeBulkUpdateResult"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "AttributeBulkCreateInput"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "AttributeBulkCreateValueInput"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "attributeBulkUpdate"
   }
 ]
