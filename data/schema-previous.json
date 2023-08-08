@@ -67136,6 +67136,11 @@
         "deprecated": null,
         "message": null
       },
+      "INVALID_NOTIFY_WITH_SUBSCRIPTION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MISSING_EVENT": {
         "description": null,
         "deprecated": null,
