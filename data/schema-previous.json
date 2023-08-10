@@ -8117,6 +8117,13 @@
           }
         }
       },
+      "checkoutSettings": {
+        "type": "CheckoutSettings!",
+        "description": "Channel-specific checkout settings.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_CHANNELS, MANAGE_CHECKOUTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "countries": {
         "type": "[CountryDisplay!]",
         "description": "List of shippable countries for the channel.\n\nAdded in Saleor 3.6.",
@@ -8346,6 +8353,13 @@
       "addWarehouses": {
         "type": "[ID!]",
         "description": "List of warehouses to assign to the channel.\n\nAdded in Saleor 3.5.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "checkoutSettings": {
+        "type": "CheckoutSettingsInput",
+        "description": "The channel checkout settings\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -8833,7 +8847,7 @@
   "ChannelUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
+    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only `orderSettings` field: MANAGE_CHANNELS, MANAGE_ORDERS.Requires one of the following permissions when updating only `checkoutSettings` field: MANAGE_CHANNELS, MANAGE_CHECKOUTS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -8876,6 +8890,13 @@
       "addWarehouses": {
         "type": "[ID!]",
         "description": "List of warehouses to assign to the channel.\n\nAdded in Saleor 3.5.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "checkoutSettings": {
+        "type": "CheckoutSettingsInput",
+        "description": "The channel checkout settings\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -9221,6 +9242,13 @@
             "default": null
           }
         }
+      },
+      "problems": {
+        "type": "[CheckoutProblem!]",
+        "description": "List of problems with the checkout.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       },
       "quantity": {
         "type": "Int!",
@@ -10477,6 +10505,13 @@
           }
         }
       },
+      "problems": {
+        "type": "[CheckoutLineProblem!]",
+        "description": "List of problems with the checkout line.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "quantity": {
         "type": "Int!",
         "description": "The quantity of product variant assigned to the checkout line.",
@@ -10651,6 +10686,62 @@
         "deprecated": null,
         "message": null,
         "default": null
+      }
+    }
+  },
+  "CheckoutLineProblem": {
+    "type": "union",
+    "description": "Represents an problem in the checkout line.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "CheckoutLineProblemInsufficientStock",
+      "CheckoutLineProblemVariantNotAvailable"
+    ]
+  },
+  "CheckoutLineProblemInsufficientStock": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Indicates insufficient stock for a given checkout line.Placing the order will not be possible until solving this problem.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "availableQuantity": {
+        "type": "Int",
+        "description": "Available quantity of a variant.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "line": {
+        "type": "CheckoutLine!",
+        "description": "The line that has variant with insufficient stock.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "variant": {
+        "type": "ProductVariant!",
+        "description": "The variant with insufficient stock.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutLineProblemVariantNotAvailable": {
+    "type": "object",
+    "interfaces": [],
+    "description": "The variant assigned to the checkout line is not available.Placing the order will not be possible until solving this problem.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "line": {
+        "type": "CheckoutLine!",
+        "description": "The line that has variant that is not available.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -10856,6 +10947,16 @@
       }
     }
   },
+  "CheckoutProblem": {
+    "type": "union",
+    "description": "Represents an problem in the checkout.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "CheckoutLineProblemInsufficientStock",
+      "CheckoutLineProblemVariantNotAvailable"
+    ]
+  },
   "CheckoutRemovePromoCode": {
     "type": "object",
     "interfaces": [],
@@ -10883,6 +10984,37 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "CheckoutSettings": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the channel-specific checkout settings.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "useLegacyErrorFlow": {
+        "type": "Boolean!",
+        "description": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one.\n\nAdded in Saleor 3.15.This field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one.\n\nAdded in Saleor 3.15.This field will be removed in Saleor 4.0.",
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutSettingsInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "useLegacyErrorFlow": {
+        "type": "Boolean",
+        "description": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one. \n\nAdded in Saleor 3.15.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one. \n\nAdded in Saleor 3.15.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "default": null
       }
     }
   },
@@ -28267,7 +28399,7 @@
       },
       "channelUpdate": {
         "type": "ChannelUpdate",
-        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only orderSettings field: MANAGE_CHANNELS, MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
+        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only `orderSettings` field: MANAGE_CHANNELS, MANAGE_ORDERS.Requires one of the following permissions when updating only `checkoutSettings` field: MANAGE_CHANNELS, MANAGE_CHECKOUTS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
         "deprecated": null,
         "message": null,
         "arguments": {

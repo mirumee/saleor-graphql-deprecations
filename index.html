@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-08-09 14:00:57</p>
+      <p class="m-0">Generated on 2023-08-10 14:00:54</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -226,6 +226,17 @@
               
                 <td>ShippingMethod</td>
                 <td colspan="2">minimumOrderWeight</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#CheckoutSettings-useLegacyErrorFlow" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>CheckoutSettings</td>
+                <td colspan="2">useLegacyErrorFlow</td>
               
               <td>4.0</td>
             </tr>
@@ -4083,6 +4094,17 @@
           
             <tr>
               <td>
+                <a href="#CheckoutSettingsInput-useLegacyErrorFlow" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>CheckoutSettingsInput</td>
+                <td colspan="2">useLegacyErrorFlow</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#ChannelUpdate-channelErrors" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -5369,6 +5391,29 @@ DEPRECATED: this value will be removed in Saleor 4.0.</p>
             <div class="font-monospace"><span class="text-primary">type</span> <strong>ShippingMethod</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">minimumOrderWeight</strong>: Weight<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="CheckoutSettings-useLegacyErrorFlow" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#CheckoutSettings-useLegacyErrorFlow" class="text-reset">
+                Field <strong class="text-danger">useLegacyErrorFlow</strong> of type <strong class="text-danger">CheckoutSettings</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Default <strong class="text-danger font-monospace">true</strong>. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If <strong class="text-danger font-monospace">false</strong>, the errors will be aggregated in <strong class="text-danger font-monospace">checkout.problems</strong> field. Some of the <strong class="text-danger font-monospace">problems</strong> can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with <strong class="text-danger font-monospace">checkout.problems</strong> will be the default one.
+
+Added in Saleor 3.15.This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>CheckoutSettings</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">useLegacyErrorFlow</strong>: Boolean!<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -13032,6 +13077,32 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
             <div class="font-monospace"><span class="text-primary">type</span> <strong>ChannelCreate</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">channelErrors</strong>: [ChannelError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="CheckoutSettingsInput-useLegacyErrorFlow" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#CheckoutSettingsInput-useLegacyErrorFlow" class="text-reset">
+                Field <strong class="text-danger">useLegacyErrorFlow</strong> of input <strong class="text-danger">CheckoutSettingsInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Default <strong class="text-danger font-monospace">true</strong>. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If <strong class="text-danger font-monospace">false</strong>, the errors will be aggregated in <strong class="text-danger font-monospace">checkout.problems</strong> field. Some of the <strong class="text-danger font-monospace">problems</strong> can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with <strong class="text-danger font-monospace">checkout.problems</strong> will be the default one. 
+
+Added in Saleor 3.15.
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>CheckoutSettingsInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">useLegacyErrorFlow</strong>: Boolean<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

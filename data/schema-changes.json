@@ -1,7 +1,51 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookErrorCode",
-    "value": "INVALID_NOTIFY_WITH_SUBSCRIPTION"
+    "diff": "type_new",
+    "type": "CheckoutLineProblem"
+  },
+  {
+    "diff": "type_new",
+    "type": "CheckoutLineProblemInsufficientStock"
+  },
+  {
+    "diff": "type_new",
+    "type": "CheckoutLineProblemVariantNotAvailable"
+  },
+  {
+    "diff": "type_new",
+    "type": "CheckoutProblem"
+  },
+  {
+    "diff": "type_new",
+    "type": "CheckoutSettings"
+  },
+  {
+    "diff": "type_new",
+    "type": "CheckoutSettingsInput"
+  },
+  {
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "checkoutSettings"
+  },
+  {
+    "diff": "field_new",
+    "type": "ChannelCreateInput",
+    "field": "checkoutSettings"
+  },
+  {
+    "diff": "field_new",
+    "type": "ChannelUpdateInput",
+    "field": "checkoutSettings"
+  },
+  {
+    "diff": "field_new",
+    "type": "Checkout",
+    "field": "problems"
+  },
+  {
+    "diff": "field_new",
+    "type": "CheckoutLine",
+    "field": "problems"
   }
 ]
