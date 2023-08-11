@@ -9292,6 +9292,21 @@
         "message": null,
         "arguments": {}
       },
+      "storedPaymentMethods": {
+        "type": "[StoredPaymentMethod!]",
+        "description": "List of user's stored payment methods that can be used in this checkout session. It uses the channel that the checkout was created in. When `amount` is not provided, `checkout.total` will be used as a default value.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "amount": {
+            "type": "PositiveDecimal",
+            "description": "Amount that will be used to fetch stored payment methods.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "subtotalPrice": {
         "type": "TaxedMoney!",
         "description": "The price of the checkout before shipping, with taxes included.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
@@ -9507,7 +9522,7 @@
   "CheckoutComplete": {
     "type": "object",
     "interfaces": [],
-    "description": "Completes the checkout. As a result a new order is created and a payment charge is made. This action requires a successful payment before it can be performed. In case additional confirmation step as 3D secure is required confirmationNeeded flag will be set to True and no order created until payment is confirmed with second call of this mutation.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
+    "description": "Completes the checkout. As a result a new order is created. The mutation allows to create the unpaid order when setting `orderSettings.allowUnpaidOrders` for given `Channel` is set to `true`. When `orderSettings.allowUnpaidOrders` is set to `false`, checkout can be completed only when attached `Payment`/`TransactionItem`s fully cover the checkout's total. When processing the checkout with `Payment`, in case of required additional confirmation step like 3D secure, the `confirmationNeeded` flag will be set to True and no order will be created until payment is confirmed with second call of this mutation.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -25225,6 +25240,59 @@
       }
     }
   },
+  "ListStoredPaymentMethods": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "List payment methods stored for the user by payment gateway.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "Channel in context which was used to fetch the list of payment methods.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User!",
+        "description": "The user for which the app should return a list of payment methods.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "Manifest": {
     "type": "object",
     "interfaces": [],
@@ -28500,7 +28568,7 @@
       },
       "checkoutComplete": {
         "type": "CheckoutComplete",
-        "description": "Completes the checkout. As a result a new order is created and a payment charge is made. This action requires a successful payment before it can be performed. In case additional confirmation step as 3D secure is required confirmationNeeded flag will be set to True and no order created until payment is confirmed with second call of this mutation.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
+        "description": "Completes the checkout. As a result a new order is created. The mutation allows to create the unpaid order when setting `orderSettings.allowUnpaidOrders` for given `Channel` is set to `true`. When `orderSettings.allowUnpaidOrders` is set to `false`, checkout can be completed only when attached `Payment`/`TransactionItem`s fully cover the checkout's total. When processing the checkout with `Payment`, in case of required additional confirmation step like 3D secure, the `confirmationNeeded` flag will be set to True and no order will be created until payment is confirmed with second call of this mutation.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -59479,6 +59547,71 @@
       }
     }
   },
+  "StoredPaymentMethod": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents a payment method stored for user (tokenized) in payment gateway.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "creditCardInfo": {
+        "type": "CreditCard",
+        "description": "Stored credit card details if available.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "data": {
+        "type": "JSON",
+        "description": "JSON data returned by Payment Provider app for this payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "gateway": {
+        "type": "PaymentGateway!",
+        "description": "Payment gateway that stores this payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": "Stored payment method ID.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String",
+        "description": "Payment method name. Example: last 4 digits of credit card, obfuscated email, etc.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "paymentMethodId": {
+        "type": "String!",
+        "description": "ID of stored payment method used to make payment actions. Note: method ID is unique only within the payment gateway.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "supportedPaymentFlows": {
+        "type": "[TokenizedPaymentFlowEnum!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "String!",
+        "description": "Type of the payment method. Example: credit card, wallet, etc.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "StringFilterInput": {
     "type": "input",
     "description": "Define the filtering options for string fields.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -61238,6 +61371,19 @@
         "message": null
       },
       "YEAR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "TokenizedPaymentFlowEnum": {
+    "type": "enum",
+    "description": "Represents possible tokenized payment flows that can be used to process payment.\n\n    The following flows are possible:\n    INTERACTIVE - Payment method can be used for 1 click checkout - it's prefilled in\n    checkout form (might require additional authentication from user)",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "INTERACTIVE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -63934,9 +64080,24 @@
         "message": null,
         "arguments": {}
       },
+      "storedPaymentMethods": {
+        "type": "[StoredPaymentMethod!]",
+        "description": "Returns a list of user's stored payment methods that can be used in provided channel. The field returns a list of stored payment methods by payment apps. When `amount` is not provided, 0 will be used as default value.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channel": {
+            "type": "String!",
+            "description": "Slug of a channel for which the data should be returned.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "storedPaymentSources": {
         "type": "[PaymentSource!]",
-        "description": "List of stored payment sources.",
+        "description": "List of stored payment sources. The field returns a list of payment sources stored for payment plugins.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -68328,6 +68489,11 @@
         "deprecated": null,
         "message": null
       },
+      "LIST_STORED_PAYMENT_METHODS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MENU_CREATED": {
         "description": "A new menu created.",
         "deprecated": null,
@@ -68778,6 +68944,11 @@
       },
       "CHECKOUT_FILTER_SHIPPING_METHODS": {
         "description": "Filter shipping methods for checkout.",
+        "deprecated": null,
+        "message": null
+      },
+      "LIST_STORED_PAYMENT_METHODS": {
+        "description": null,
         "deprecated": null,
         "message": null
       },

@@ -1,51 +1,34 @@
 [
   {
     "diff": "type_new",
-    "type": "CheckoutLineProblem"
+    "type": "ListStoredPaymentMethods"
   },
   {
     "diff": "type_new",
-    "type": "CheckoutLineProblemInsufficientStock"
+    "type": "StoredPaymentMethod"
   },
   {
     "diff": "type_new",
-    "type": "CheckoutLineProblemVariantNotAvailable"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutProblem"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutSettings"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutSettingsInput"
-  },
-  {
-    "diff": "field_new",
-    "type": "Channel",
-    "field": "checkoutSettings"
-  },
-  {
-    "diff": "field_new",
-    "type": "ChannelCreateInput",
-    "field": "checkoutSettings"
-  },
-  {
-    "diff": "field_new",
-    "type": "ChannelUpdateInput",
-    "field": "checkoutSettings"
+    "type": "TokenizedPaymentFlowEnum"
   },
   {
     "diff": "field_new",
     "type": "Checkout",
-    "field": "problems"
+    "field": "storedPaymentMethods"
   },
   {
     "diff": "field_new",
-    "type": "CheckoutLine",
-    "field": "problems"
+    "type": "User",
+    "field": "storedPaymentMethods"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "LIST_STORED_PAYMENT_METHODS"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "LIST_STORED_PAYMENT_METHODS"
   }
 ]
