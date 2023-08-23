@@ -8217,6 +8217,13 @@
         "message": null,
         "arguments": {}
       },
+      "paymentSettings": {
+        "type": "PaymentSettings!",
+        "description": "Channel-specific payment settings.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_CHANNELS, HANDLE_PAYMENTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
         "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.15.",
@@ -8402,6 +8409,13 @@
       "orderSettings": {
         "type": "OrderSettingsInput",
         "description": "The channel order settings\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "paymentSettings": {
+        "type": "PaymentSettingsInput",
+        "description": "The channel payment settings\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -8847,7 +8861,7 @@
   "ChannelUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only `orderSettings` field: MANAGE_CHANNELS, MANAGE_ORDERS.Requires one of the following permissions when updating only `checkoutSettings` field: MANAGE_CHANNELS, MANAGE_CHECKOUTS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
+    "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only `orderSettings` field: `MANAGE_CHANNELS`, `MANAGE_ORDERS`.\nRequires one of the following permissions when updating only `checkoutSettings` field: `MANAGE_CHANNELS`, `MANAGE_CHECKOUTS`.\nRequires one of the following permissions when updating only `paymentSettings` field: `MANAGE_CHANNELS`, `HANDLE_PAYMENTS`.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -8932,6 +8946,13 @@
       "orderSettings": {
         "type": "OrderSettingsInput",
         "description": "The channel order settings\n\nAdded in Saleor 3.12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "paymentSettings": {
+        "type": "PaymentSettingsInput",
+        "description": "The channel payment settings\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -18225,6 +18246,13 @@
       "issuingPrincipal": {
         "type": "IssuingPrincipal",
         "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "notifyCustomer": {
+        "type": "Boolean!",
+        "description": "If true, send an email notification to the customer.\n\nAdded in Saleor 3.16.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -28467,7 +28495,7 @@
       },
       "channelUpdate": {
         "type": "ChannelUpdate",
-        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only `orderSettings` field: MANAGE_CHANNELS, MANAGE_ORDERS.Requires one of the following permissions when updating only `checkoutSettings` field: MANAGE_CHANNELS, MANAGE_CHECKOUTS.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
+        "description": "Update a channel.\n\nRequires one of the following permissions: MANAGE_CHANNELS.\nRequires one of the following permissions when updating only `orderSettings` field: `MANAGE_CHANNELS`, `MANAGE_ORDERS`.\nRequires one of the following permissions when updating only `checkoutSettings` field: `MANAGE_CHANNELS`, `MANAGE_CHECKOUTS`.\nRequires one of the following permissions when updating only `paymentSettings` field: `MANAGE_CHANNELS`, `HANDLE_PAYMENTS`.\n\nTriggers the following webhook events:\n- CHANNEL_UPDATED (async): A channel was updated.\n- CHANNEL_METADATA_UPDATED (async): Optionally triggered when public or private metadata is updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30608,7 +30636,7 @@
       },
       "orderFulfill": {
         "type": "OrderFulfill",
-        "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_CREATED (async): A new fulfillment is created.\n- ORDER_FULFILLED (async): Order is fulfilled.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -37546,7 +37574,7 @@
   "OrderFulfill": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_CREATED (async): A new fulfillment is created.\n- ORDER_FULFILLED (async): Order is fulfilled.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -39520,9 +39548,9 @@
       },
       "defaultTransactionFlowStrategy": {
         "type": "TransactionFlowStrategyEnum!",
-        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
-        "deprecated": null,
-        "message": null,
+        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.This preview feature field will be removed in Saleor 3.17. Use `PaymentSettings.defaultTransactionFlowStrategy` instead.",
+        "deprecated": "3.17",
+        "message": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.This preview feature field will be removed in Saleor 3.17. Use `PaymentSettings.defaultTransactionFlowStrategy` instead.",
         "arguments": {}
       },
       "deleteExpiredOrdersAfter": {
@@ -39599,7 +39627,7 @@
     "fields": {
       "allowUnpaidOrders": {
         "type": "Boolean",
-        "description": "Determine if it is possible to place unpdaid order by calling `checkoutComplete` mutation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Determine if it is possible to place unpaid order by calling `checkoutComplete` mutation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -39620,9 +39648,9 @@
       },
       "defaultTransactionFlowStrategy": {
         "type": "TransactionFlowStrategyEnum",
-        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
-        "deprecated": null,
-        "message": null,
+        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nDEPRECATED: this preview feature field will be removed in Saleor 3.17. Use `PaymentSettingsInput.defaultTransactionFlowStrategy` instead.",
+        "deprecated": "3.17",
+        "message": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nDEPRECATED: this preview feature field will be removed in Saleor 3.17. Use `PaymentSettingsInput.defaultTransactionFlowStrategy` instead.",
         "default": null
       },
       "deleteExpiredOrdersAfter": {
@@ -43172,6 +43200,37 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "PaymentSettings": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the channel-specific payment settings.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "defaultTransactionFlowStrategy": {
+        "type": "TransactionFlowStrategyEnum!",
+        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentSettingsInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "defaultTransactionFlowStrategy": {
+        "type": "TransactionFlowStrategyEnum",
+        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },

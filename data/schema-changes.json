@@ -1,34 +1,42 @@
 [
   {
     "diff": "type_new",
-    "type": "ListStoredPaymentMethods"
+    "type": "PaymentSettings"
   },
   {
     "diff": "type_new",
-    "type": "StoredPaymentMethod"
-  },
-  {
-    "diff": "type_new",
-    "type": "TokenizedPaymentFlowEnum"
+    "type": "PaymentSettingsInput"
   },
   {
     "diff": "field_new",
-    "type": "Checkout",
-    "field": "storedPaymentMethods"
+    "type": "Channel",
+    "field": "paymentSettings"
   },
   {
     "diff": "field_new",
-    "type": "User",
-    "field": "storedPaymentMethods"
+    "type": "ChannelCreateInput",
+    "field": "paymentSettings"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "LIST_STORED_PAYMENT_METHODS"
+    "diff": "field_new",
+    "type": "ChannelUpdateInput",
+    "field": "paymentSettings"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeSyncEnum",
-    "value": "LIST_STORED_PAYMENT_METHODS"
+    "diff": "field_new",
+    "type": "FulfillmentCreated",
+    "field": "notifyCustomer"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "OrderSettings",
+    "field": "defaultTransactionFlowStrategy",
+    "version": "3.17"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "OrderSettingsInput",
+    "field": "defaultTransactionFlowStrategy",
+    "version": "3.17"
   }
 ]
