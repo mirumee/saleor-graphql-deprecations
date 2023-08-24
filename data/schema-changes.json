@@ -1,42 +1,33 @@
 [
   {
     "diff": "type_new",
-    "type": "PaymentSettings"
+    "type": "PaymentMethodRequestDeleteError"
   },
   {
     "diff": "type_new",
-    "type": "PaymentSettingsInput"
+    "type": "StoredPaymentMethodDeleteRequested"
+  },
+  {
+    "diff": "type_new",
+    "type": "StoredPaymentMethodRequestDelete"
+  },
+  {
+    "diff": "type_new",
+    "type": "StoredPaymentMethodRequestDeleteErrorCode"
   },
   {
     "diff": "field_new",
-    "type": "Channel",
-    "field": "paymentSettings"
+    "type": "Mutation",
+    "field": "storedPaymentMethodRequestDelete"
   },
   {
-    "diff": "field_new",
-    "type": "ChannelCreateInput",
-    "field": "paymentSettings"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "STORED_PAYMENT_METHOD_DELETE_REQUESTED"
   },
   {
-    "diff": "field_new",
-    "type": "ChannelUpdateInput",
-    "field": "paymentSettings"
-  },
-  {
-    "diff": "field_new",
-    "type": "FulfillmentCreated",
-    "field": "notifyCustomer"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "OrderSettings",
-    "field": "defaultTransactionFlowStrategy",
-    "version": "3.17"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "OrderSettingsInput",
-    "field": "defaultTransactionFlowStrategy",
-    "version": "3.17"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "STORED_PAYMENT_METHOD_DELETE_REQUESTED"
   }
 ]
