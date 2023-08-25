@@ -1,33 +1,45 @@
 [
   {
     "diff": "type_new",
-    "type": "PaymentMethodRequestDeleteError"
+    "type": "FulfillmentTrackingNumberUpdated"
   },
   {
     "diff": "type_new",
-    "type": "StoredPaymentMethodDeleteRequested"
-  },
-  {
-    "diff": "type_new",
-    "type": "StoredPaymentMethodRequestDelete"
-  },
-  {
-    "diff": "type_new",
-    "type": "StoredPaymentMethodRequestDeleteErrorCode"
+    "type": "GiftCardExportCompleted"
   },
   {
     "diff": "field_new",
-    "type": "Mutation",
-    "field": "storedPaymentMethodRequestDelete"
+    "type": "FulfillmentApproved",
+    "field": "notifyCustomer"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "FULFILLMENT_TRACKING_NUMBER_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "GIFT_CARD_EXPORT_COMPLETED"
   },
   {
     "diff": "enum_value_new",
     "enum": "WebhookEventTypeEnum",
-    "value": "STORED_PAYMENT_METHOD_DELETE_REQUESTED"
+    "value": "FULFILLMENT_TRACKING_NUMBER_UPDATED"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeSyncEnum",
-    "value": "STORED_PAYMENT_METHOD_DELETE_REQUESTED"
+    "enum": "WebhookEventTypeEnum",
+    "value": "GIFT_CARD_EXPORT_COMPLETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "FULFILLMENT_TRACKING_NUMBER_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "GIFT_CARD_EXPORT_COMPLETED"
   }
 ]

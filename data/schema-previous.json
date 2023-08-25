@@ -17292,7 +17292,7 @@
   "ExportGiftCards": {
     "type": "object",
     "interfaces": [],
-    "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
+    "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.\n- GIFT_CARD_EXPORT_COMPLETED (async): A notification for the exported file.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18028,7 +18028,7 @@
   "FulfillmentApprove": {
     "type": "object",
     "interfaces": [],
-    "description": "Approve existing fulfillment.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Approve existing fulfillment.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_APPROVED (async): Fulfillment is approved.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -18088,6 +18088,13 @@
       "issuingPrincipal": {
         "type": "IssuingPrincipal",
         "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "notifyCustomer": {
+        "type": "Boolean!",
+        "description": "If true, send a notification to the customer.\n\nAdded in Saleor 3.16.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18252,7 +18259,7 @@
       },
       "notifyCustomer": {
         "type": "Boolean!",
-        "description": "If true, send an email notification to the customer.\n\nAdded in Saleor 3.16.",
+        "description": "If true, the app should send a notification to the customer.\n\nAdded in Saleor 3.16.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18496,10 +18503,63 @@
       }
     }
   },
+  "FulfillmentTrackingNumberUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when the tracking number is updated.\n\nAdded in Saleor 3.16.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "fulfillment": {
+        "type": "Fulfillment",
+        "description": "The fulfillment the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "order": {
+        "type": "Order",
+        "description": "The order the fulfillment belongs to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "FulfillmentUpdateTracking": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a fulfillment for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Updates a fulfillment for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_TRACKING_NUMBER_UPDATED (async): Fulfillment tracking number is updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -19680,6 +19740,52 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "GiftCardExportCompleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when gift card export is completed.\n\nAdded in Saleor 3.16.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "export": {
+        "type": "ExportFile",
+        "description": "The export file for gift cards.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -29749,7 +29855,7 @@
       },
       "exportGiftCards": {
         "type": "ExportGiftCards",
-        "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
+        "description": "Export gift cards to csv file.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.\n- GIFT_CARD_EXPORT_COMPLETED (async): A notification for the exported file.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30636,7 +30742,7 @@
       },
       "orderFulfill": {
         "type": "OrderFulfill",
-        "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_CREATED (async): A new fulfillment is created.\n- ORDER_FULFILLED (async): Order is fulfilled.",
+        "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_CREATED (async): A new fulfillment is created.\n- ORDER_FULFILLED (async): Order is fulfilled.\n- FULFILLMENT_TRACKING_NUMBER_UPDATED (async): Sent when fulfillment tracking number is updated.\n- FULFILLMENT_APPROVED (async): A fulfillment is approved.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30658,7 +30764,7 @@
       },
       "orderFulfillmentApprove": {
         "type": "FulfillmentApprove",
-        "description": "Approve existing fulfillment.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Approve existing fulfillment.\n\nAdded in Saleor 3.1. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_APPROVED (async): Fulfillment is approved.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30753,7 +30859,7 @@
       },
       "orderFulfillmentUpdateTracking": {
         "type": "FulfillmentUpdateTracking",
-        "description": "Updates a fulfillment for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Updates a fulfillment for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_TRACKING_NUMBER_UPDATED (async): Fulfillment tracking number is updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33714,8 +33820,15 @@
         "deprecated": null,
         "message": null,
         "arguments": {
+          "externalReference": {
+            "type": "String",
+            "description": "External reference of a warehouse.\n\nAdded in Saleor 3.16.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "id": {
-            "type": "ID!",
+            "type": "ID",
             "description": "ID of a warehouse to update.",
             "deprecated": null,
             "message": null,
@@ -37596,7 +37709,7 @@
   "OrderFulfill": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_CREATED (async): A new fulfillment is created.\n- ORDER_FULFILLED (async): Order is fulfilled.",
+    "description": "Creates new fulfillments for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.\n\nTriggers the following webhook events:\n- FULFILLMENT_CREATED (async): A new fulfillment is created.\n- ORDER_FULFILLED (async): Order is fulfilled.\n- FULFILLMENT_TRACKING_NUMBER_UPDATED (async): Sent when fulfillment tracking number is updated.\n- FULFILLMENT_APPROVED (async): A fulfillment is approved.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -68015,6 +68128,11 @@
         "deprecated": null,
         "message": null
       },
+      "FULFILLMENT_TRACKING_NUMBER_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GIFT_CARD_CREATED": {
         "description": "A new gift card created.",
         "deprecated": null,
@@ -68022,6 +68140,11 @@
       },
       "GIFT_CARD_DELETED": {
         "description": "A gift card is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_EXPORT_COMPLETED": {
+        "description": "A gift card export is completed.\n\nAdded in Saleor 3.16.",
         "deprecated": null,
         "message": null
       },
@@ -68673,6 +68796,11 @@
         "deprecated": null,
         "message": null
       },
+      "FULFILLMENT_TRACKING_NUMBER_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GIFT_CARD_CREATED": {
         "description": "A new gift card created.",
         "deprecated": null,
@@ -68680,6 +68808,11 @@
       },
       "GIFT_CARD_DELETED": {
         "description": "A gift card is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_EXPORT_COMPLETED": {
+        "description": "A gift card export is completed.\n\nAdded in Saleor 3.16.",
         "deprecated": null,
         "message": null
       },
@@ -69514,12 +69647,22 @@
         "deprecated": null,
         "message": null
       },
+      "FULFILLMENT_TRACKING_NUMBER_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GIFT_CARD_CREATED": {
         "description": null,
         "deprecated": null,
         "message": null
       },
       "GIFT_CARD_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_EXPORT_COMPLETED": {
         "description": null,
         "deprecated": null,
         "message": null
