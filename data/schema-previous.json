@@ -18670,7 +18670,7 @@
       },
       "code": {
         "type": "String!",
-        "description": "Gift card code. Can be fetched by a staff member with MANAGE_GIFT_CARD when gift card wasn't yet used and by the gift card owner.",
+        "description": "Gift card code. It can be fetched both by a staff member with 'MANAGE_GIFT_CARD' when gift card hasn't been used yet or a user who bought or issued the gift card.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -33630,6 +33630,13 @@
             "message": null,
             "default": null
           },
+          "customerIpAddress": {
+            "type": "String",
+            "description": "The customer's IP address. If not provided Saleor will try to determine the customer's IP address on its own. The customer's IP address will be passed to the payment app. The IP should be in ipv4 or ipv6 format. The field can be used only by an app that has `HANDLE_PAYMENTS` permission.\n\nAdded in Saleor 3.16.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "id": {
             "type": "ID!",
             "description": "The ID of the checkout or order.",
@@ -33652,6 +33659,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {
+          "customerIpAddress": {
+            "type": "String",
+            "description": "The customer's IP address. If not provided Saleor will try to determine the customer's IP address on its own. The customer's IP address will be passed to the payment app. The IP should be in ipv4 or ipv6 format. The field can be used only by an app that has `HANDLE_PAYMENTS` permission.\n\nAdded in Saleor 3.16.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "data": {
             "type": "JSON",
             "description": "The data that will be passed to the payment gateway.",
@@ -62545,9 +62559,16 @@
         "message": null,
         "arguments": {}
       },
+      "customerIpAddress": {
+        "type": "String",
+        "description": "The customer's IP address. If not provided as a parameter in the mutation, Saleor will try to determine the customer's IP address on its own.\n\nAdded in Saleor 3.16.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "data": {
         "type": "JSON",
-        "description": "Payment gateway data in JSON format, recieved from storefront.",
+        "description": "Payment gateway data in JSON format, received from storefront.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -63077,9 +63098,16 @@
         "message": null,
         "arguments": {}
       },
+      "customerIpAddress": {
+        "type": "String",
+        "description": "The customer's IP address. If not provided as a parameter in the mutation, Saleor will try to determine the customer's IP address on its own.\n\nAdded in Saleor 3.16.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "data": {
         "type": "JSON",
-        "description": "Payment gateway data in JSON format, recieved from storefront.",
+        "description": "Payment gateway data in JSON format, received from storefront.",
         "deprecated": null,
         "message": null,
         "arguments": {}

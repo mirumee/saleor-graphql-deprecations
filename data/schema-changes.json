@@ -1,45 +1,12 @@
 [
   {
-    "diff": "type_new",
-    "type": "FulfillmentTrackingNumberUpdated"
-  },
-  {
-    "diff": "type_new",
-    "type": "GiftCardExportCompleted"
+    "diff": "field_new",
+    "type": "TransactionInitializeSession",
+    "field": "customerIpAddress"
   },
   {
     "diff": "field_new",
-    "type": "FulfillmentApproved",
-    "field": "notifyCustomer"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "FULFILLMENT_TRACKING_NUMBER_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "GIFT_CARD_EXPORT_COMPLETED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "FULFILLMENT_TRACKING_NUMBER_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "GIFT_CARD_EXPORT_COMPLETED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "FULFILLMENT_TRACKING_NUMBER_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "GIFT_CARD_EXPORT_COMPLETED"
+    "type": "TransactionProcessSession",
+    "field": "customerIpAddress"
   }
 ]
