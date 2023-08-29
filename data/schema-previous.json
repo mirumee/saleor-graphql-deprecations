@@ -967,7 +967,7 @@
   "AccountRequestDeletion": {
     "type": "object",
     "interfaces": [],
-    "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account delete request.",
+    "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account delete request.\n- ACCOUNT_DELETE_REQUESTED (async): An account delete requested.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6156,6 +6156,13 @@
       },
       "search": {
         "type": "String",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slugs": {
+        "type": "[String!]",
         "description": null,
         "deprecated": null,
         "message": null,
@@ -17387,7 +17394,7 @@
   "ExportProducts": {
     "type": "object",
     "interfaces": [],
-    "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
+    "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.\n- PRODUCT_EXPORT_COMPLETED (async): A notification for the exported file.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -27687,7 +27694,7 @@
       },
       "accountRequestDeletion": {
         "type": "AccountRequestDeletion",
-        "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account delete request.",
+        "description": "Sends an email with the account removal link for the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account delete request.\n- ACCOUNT_DELETE_REQUESTED (async): An account delete requested.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29870,7 +29877,7 @@
       },
       "exportProducts": {
         "type": "ExportProducts",
-        "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.",
+        "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.\n- PRODUCT_EXPORT_COMPLETED (async): A notification for the exported file.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32569,7 +32576,7 @@
       },
       "requestEmailChange": {
         "type": "RequestEmailChange",
-        "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account email change.",
+        "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account email change.\n- ACCOUNT_CHANGE_EMAIL_REQUESTED (async): An account email change was requested.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -46594,6 +46601,52 @@
       }
     }
   },
+  "ProductExportCompleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when product export is completed.\n\nAdded in Saleor 3.16.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "export": {
+        "type": "ExportFile",
+        "description": "The export file for products.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductFieldEnum": {
     "type": "enum",
     "description": null,
@@ -54089,7 +54142,7 @@
   "RequestEmailChange": {
     "type": "object",
     "interfaces": [],
-    "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account email change.",
+    "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account email change.\n- ACCOUNT_CHANGE_EMAIL_REQUESTED (async): An account email change was requested.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -68366,6 +68419,11 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_EXPORT_COMPLETED": {
+        "description": "A product export is completed.\n\nAdded in Saleor 3.16.",
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_MEDIA_CREATED": {
         "description": "A new product media is created.\n\nAdded in Saleor 3.12.",
         "deprecated": null,
@@ -69086,6 +69144,11 @@
       },
       "PRODUCT_DELETED": {
         "description": "A product is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_EXPORT_COMPLETED": {
+        "description": "A product export is completed.\n\nAdded in Saleor 3.16.",
         "deprecated": null,
         "message": null
       },
@@ -69881,6 +69944,11 @@
         "message": null
       },
       "PRODUCT_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_EXPORT_COMPLETED": {
         "description": null,
         "deprecated": null,
         "message": null
