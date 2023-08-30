@@ -61893,6 +61893,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "currency": {
+        "type": "String!",
+        "description": "Currency code.\n\nAdded in Saleor 3.16.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
