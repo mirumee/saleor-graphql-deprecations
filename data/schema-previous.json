@@ -59977,16 +59977,9 @@
         "message": null,
         "arguments": {}
       },
-      "message": {
-        "type": "String",
-        "description": "A message returned by payment app.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "success": {
-        "type": "Boolean",
-        "description": "True, if the delete request was processed successfully.",
+      "result": {
+        "type": "StoredPaymentMethodRequestDeleteResult!",
+        "description": "The result of deleting a stored payment method.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -60004,6 +59997,11 @@
         "deprecated": null,
         "message": null
       },
+      "GATEWAY_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
@@ -60015,6 +60013,29 @@
         "message": null
       },
       "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "StoredPaymentMethodRequestDeleteResult": {
+    "type": "enum",
+    "description": "Result of deleting a stored payment method.\n\n    This enum is used to determine the result of deleting a stored payment method.\n    SUCCESSFULLY_DELETED - The stored payment method was successfully deleted.\n    FAILED_TO_DELETE - The stored payment method was not deleted.\n    FAILED_TO_DELIVER - The request to delete the stored payment method was not\n    delivered.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "FAILED_TO_DELETE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "FAILED_TO_DELIVER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SUCCESSFULLY_DELETED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -67126,6 +67147,13 @@
       },
       "isPrivate": {
         "type": "Boolean",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataFilter!]",
         "description": null,
         "deprecated": null,
         "message": null,
