@@ -29937,8 +29937,8 @@
       "externalNotificationTrigger": {
         "type": "ExternalNotificationTrigger",
         "description": "Trigger sending a notification with the notify plugin method. Serializes nodes provided as ids parameter and includes this data in the notification payload.\n\nAdded in Saleor 3.1.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "\\n\\nDEPRECATED: this mutation will be removed in Saleor 4.0.",
         "arguments": {
           "channel": {
             "type": "String!",
@@ -68330,9 +68330,9 @@
         "message": null
       },
       "NOTIFY_USER": {
-        "description": "User notification triggered.",
-        "deprecated": null,
-        "message": null
+        "description": "User notification triggered.\n\nDEPRECATED: this value will be removed in Saleor 4.0. See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/docs/next/upgrade-guides/notify-user-deprecation",
+        "deprecated": "4.0",
+        "message": "User notification triggered.\n\nDEPRECATED: this value will be removed in Saleor 4.0. See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/docs/next/upgrade-guides/notify-user-deprecation"
       },
       "OBSERVABILITY": {
         "description": "An observability event is created.",
@@ -69008,9 +69008,9 @@
         "message": null
       },
       "NOTIFY_USER": {
-        "description": "User notification triggered.",
-        "deprecated": null,
-        "message": null
+        "description": "User notification triggered.\n\nDEPRECATED: this value will be removed in Saleor 4.0. See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/docs/next/upgrade-guides/notify-user-deprecation",
+        "deprecated": "4.0",
+        "message": "User notification triggered.\n\nDEPRECATED: this value will be removed in Saleor 4.0. See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/docs/next/upgrade-guides/notify-user-deprecation"
       },
       "OBSERVABILITY": {
         "description": "An observability event is created.",

@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-09-01 14:01:12</p>
+      <p class="m-0">Generated on 2023-09-05 14:00:58</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -144,11 +144,33 @@
           
             <tr>
               <td>
+                <a href="#WebhookEventTypeEnum-NOTIFY_USER" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>WebhookEventTypeEnum</td>
+                <td colspan="2">NOTIFY_USER</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#WebhookEventTypeAsyncEnum-ANY_EVENTS" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
                 <td>WebhookEventTypeAsyncEnum</td>
                 <td colspan="2">ANY_EVENTS</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#WebhookEventTypeAsyncEnum-NOTIFY_USER" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>WebhookEventTypeAsyncEnum</td>
+                <td colspan="2">NOTIFY_USER</td>
               
               <td>4.0</td>
             </tr>
@@ -1220,6 +1242,17 @@
               
                 <td>Mutation</td>
                 <td colspan="2">orderAddNote</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Mutation-externalNotificationTrigger" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Mutation</td>
+                <td colspan="2">externalNotificationTrigger</td>
               
               <td>4.0</td>
             </tr>
@@ -5249,6 +5282,29 @@ DEPRECATED: this value will be removed in Saleor 4.0.</p>
         </div>
       </div>
     
+      <div id="WebhookEventTypeEnum-NOTIFY_USER" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#WebhookEventTypeEnum-NOTIFY_USER" class="text-reset">
+                Value <strong class="text-danger">NOTIFY_USER</strong> of enum <strong class="text-danger">WebhookEventTypeEnum</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>User notification triggered.
+
+DEPRECATED: this value will be removed in Saleor 4.0. See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/docs/next/upgrade-guides/notify-user-deprecation</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookEventTypeEnum</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">NOTIFY_USER</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="WebhookEventTypeAsyncEnum-ANY_EVENTS" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -5266,6 +5322,29 @@ DEPRECATED: this value will be removed in Saleor 4.0.</p>
             <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookEventTypeAsyncEnum</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">ANY_EVENTS</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="WebhookEventTypeAsyncEnum-NOTIFY_USER" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#WebhookEventTypeAsyncEnum-NOTIFY_USER" class="text-reset">
+                Value <strong class="text-danger">NOTIFY_USER</strong> of enum <strong class="text-danger">WebhookEventTypeAsyncEnum</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>User notification triggered.
+
+DEPRECATED: this value will be removed in Saleor 4.0. See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/docs/next/upgrade-guides/notify-user-deprecation</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookEventTypeAsyncEnum</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">NOTIFY_USER</strong><br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -7377,6 +7456,27 @@ Requires one of the following permissions: MANAGE_ORDERS.</p>
             <div class="font-monospace"><span class="text-primary">type</span> <strong>Mutation</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">orderAddNote</strong>( <span class="text-secondary">...</span> ): OrderAddNote<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Mutation-externalNotificationTrigger" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Mutation-externalNotificationTrigger" class="text-reset">
+                Field <strong class="text-danger">externalNotificationTrigger</strong> of type <strong class="text-danger">Mutation</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>\n\nDEPRECATED: this mutation will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Mutation</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">externalNotificationTrigger</strong>( <span class="text-secondary">...</span> ): ExternalNotificationTrigger<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

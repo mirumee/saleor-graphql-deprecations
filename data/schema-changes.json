@@ -1,31 +1,20 @@
 [
   {
-    "diff": "type_new",
-    "type": "StoredPaymentMethodRequestDeleteResult"
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "externalNotificationTrigger",
+    "version": "4.0"
   },
   {
-    "diff": "field_new",
-    "type": "StoredPaymentMethodRequestDelete",
-    "field": "result"
+    "diff": "enum_value_deprecated",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "NOTIFY_USER",
+    "version": "4.0"
   },
   {
-    "diff": "field_new",
-    "type": "WarehouseFilterInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "StoredPaymentMethodRequestDelete",
-    "field": "message"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "StoredPaymentMethodRequestDelete",
-    "field": "success"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "StoredPaymentMethodRequestDeleteErrorCode",
-    "value": "GATEWAY_ERROR"
+    "diff": "enum_value_deprecated",
+    "enum": "WebhookEventTypeEnum",
+    "value": "NOTIFY_USER",
+    "version": "4.0"
   }
 ]
