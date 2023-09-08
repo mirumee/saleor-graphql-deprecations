@@ -1,20 +1,103 @@
 [
   {
-    "diff": "field_deprecated",
+    "diff": "type_new",
+    "type": "PaymentGatewayInitializeTokenization"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentGatewayInitializeTokenizationError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentGatewayInitializeTokenizationErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentGatewayInitializeTokenizationResult"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentGatewayInitializeTokenizationSession"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodInitializeTokenization"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodInitializeTokenizationError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodInitializeTokenizationErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodInitializeTokenizationSession"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodProcessTokenization"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodProcessTokenizationError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodProcessTokenizationErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodProcessTokenizationSession"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodTokenizationResult"
+  },
+  {
+    "diff": "field_new",
     "type": "Mutation",
-    "field": "externalNotificationTrigger",
-    "version": "4.0"
+    "field": "paymentGatewayInitializeTokenization"
   },
   {
-    "diff": "enum_value_deprecated",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "NOTIFY_USER",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "paymentMethodInitializeTokenization"
   },
   {
-    "diff": "enum_value_deprecated",
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "paymentMethodProcessTokenization"
+  },
+  {
+    "diff": "enum_value_new",
     "enum": "WebhookEventTypeEnum",
-    "value": "NOTIFY_USER",
-    "version": "4.0"
+    "value": "PAYMENT_GATEWAY_INITIALIZE_TOKENIZATION_SESSION"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PAYMENT_METHOD_PROCESS_TOKENIZATION_SESSION"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "PAYMENT_GATEWAY_INITIALIZE_TOKENIZATION_SESSION"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeSyncEnum",
+    "value": "PAYMENT_METHOD_PROCESS_TOKENIZATION_SESSION"
   }
 ]

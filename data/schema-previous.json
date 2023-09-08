@@ -9393,7 +9393,7 @@
       },
       "user": {
         "type": "User",
-        "description": "The user assigned to the checkout.",
+        "description": "The user assigned to the checkout. Requires one of the following permissions: MANAGE_USERS, HANDLE_PAYMENTS, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -31563,6 +31563,35 @@
           }
         }
       },
+      "paymentGatewayInitializeTokenization": {
+        "type": "PaymentGatewayInitializeTokenization",
+        "description": "Initializes payment gateway for tokenizing payment method session.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- PAYMENT_GATEWAY_INITIALIZE_TOKENIZATION_SESSION (sync): The customer requested to initialize payment gateway for tokenization.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channel": {
+            "type": "String!",
+            "description": "Slug of a channel related to tokenization request.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "data": {
+            "type": "JSON",
+            "description": "The data that will be passed to the payment gateway.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "String!",
+            "description": "The identifier of the payment gateway app to initialize tokenization.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "paymentInitialize": {
         "type": "PaymentInitialize",
         "description": "Initializes payment process when it is required by gateway.",
@@ -31586,6 +31615,71 @@
           "paymentData": {
             "type": "JSONString",
             "description": "Client-side generated data required to initialize the payment.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "paymentMethodInitializeTokenization": {
+        "type": "PaymentMethodInitializeTokenization",
+        "description": "Tokenize payment method.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION (sync): The customer requested to tokenize payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channel": {
+            "type": "String!",
+            "description": "Slug of a channel related to tokenization request.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "data": {
+            "type": "JSON",
+            "description": "The data that will be passed to the payment gateway.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "String!",
+            "description": "The identifier of the payment gateway app to initialize payment method tokenization.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "paymentFlowToSupport": {
+            "type": "TokenizedPaymentFlowEnum!",
+            "description": "The payment flow that the tokenized payment method should support.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "paymentMethodProcessTokenization": {
+        "type": "PaymentMethodProcessTokenization",
+        "description": "Tokenize payment method.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- PAYMENT_METHOD_PROCESS_TOKENIZATION_SESSION (sync): The customer continues payment method tokenization.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channel": {
+            "type": "String!",
+            "description": "Slug of a channel related to tokenization request.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "data": {
+            "type": "JSON",
+            "description": "The data that will be passed to the payment gateway.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "String!",
+            "description": "The identifier of the payment gateway app to process payment method tokenization.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34920,7 +35014,7 @@
       },
       "user": {
         "type": "User",
-        "description": "User who placed the order. This field is set only for orders placed by authenticated users. Can be fetched for orders created in Saleor 3.2 and later, for other orders requires one of the following permissions: MANAGE_USERS, MANAGE_ORDERS, OWNER.",
+        "description": "User who placed the order. This field is set only for orders placed by authenticated users. Can be fetched for orders created in Saleor 3.2 and later, for other orders requires one of the following permissions: MANAGE_USERS, MANAGE_ORDERS, HANDLE_PAYMENTS, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43017,7 +43111,7 @@
       },
       "data": {
         "type": "JSON",
-        "description": "Payment gateway data in JSON format, recieved from storefront.",
+        "description": "Payment gateway data in JSON format, received from storefront.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43046,6 +43140,182 @@
       "sourceObject": {
         "type": "OrderOrCheckout!",
         "description": "Checkout or order",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayInitializeTokenization": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Initializes payment gateway for tokenizing payment method session.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- PAYMENT_GATEWAY_INITIALIZE_TOKENIZATION_SESSION (sync): The customer requested to initialize payment gateway for tokenization.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "data": {
+        "type": "JSON",
+        "description": "A data returned by payment app.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[PaymentGatewayInitializeTokenizationError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "result": {
+        "type": "PaymentGatewayInitializeTokenizationResult!",
+        "description": "A status of the payment gateway initialization.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayInitializeTokenizationError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PaymentGatewayInitializeTokenizationErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentGatewayInitializeTokenizationErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CHANNEL_INACTIVE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GATEWAY_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PaymentGatewayInitializeTokenizationResult": {
+    "type": "enum",
+    "description": "Result of initialize payment gateway for tokenization of payment method.\n\n    The result of initialize payment gateway for tokenization of payment method.\n    SUCCESSFULLY_INITIALIZED - The payment gateway was successfully initialized.\n    FAILED_TO_INITIALIZE - The payment gateway was not initialized.\n    FAILED_TO_DELIVER - The request to initialize payment gateway was not delivered.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "FAILED_TO_DELIVER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "FAILED_TO_INITIALIZE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SUCCESSFULLY_INITIALIZED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PaymentGatewayInitializeTokenizationSession": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent to initialize a new session in payment gateway to store the payment method. \n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "Channel related to the requested action.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "data": {
+        "type": "JSON",
+        "description": "Payment gateway data in JSON format, received from storefront.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User!",
+        "description": "The user related to the requested action.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43237,6 +43507,340 @@
       }
     }
   },
+  "PaymentMethodInitializeTokenization": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Tokenize payment method.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION (sync): The customer requested to tokenize payment method.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "data": {
+        "type": "JSON",
+        "description": "A data returned by the payment app.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[PaymentMethodInitializeTokenizationError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "String",
+        "description": "The identifier of the payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "result": {
+        "type": "PaymentMethodTokenizationResult!",
+        "description": "A status of the payment method tokenization.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentMethodInitializeTokenizationError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PaymentMethodInitializeTokenizationErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentMethodInitializeTokenizationErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CHANNEL_INACTIVE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GATEWAY_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PaymentMethodInitializeTokenizationSession": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when user requests a tokenization of payment method.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "Channel related to the requested action.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "data": {
+        "type": "JSON",
+        "description": "Payment gateway data in JSON format, received from storefront.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "paymentFlowToSupport": {
+        "type": "TokenizedPaymentFlowEnum!",
+        "description": "The payment flow that the tokenized payment method should support.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User!",
+        "description": "The user related to the requested action.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentMethodProcessTokenization": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Tokenize payment method.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- PAYMENT_METHOD_PROCESS_TOKENIZATION_SESSION (sync): The customer continues payment method tokenization.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "data": {
+        "type": "JSON",
+        "description": "A data returned by the payment app.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[PaymentMethodProcessTokenizationError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "String",
+        "description": "The identifier of the payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "result": {
+        "type": "PaymentMethodTokenizationResult!",
+        "description": "A status of the payment method tokenization.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentMethodProcessTokenizationError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PaymentMethodProcessTokenizationErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PaymentMethodProcessTokenizationErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CHANNEL_INACTIVE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GATEWAY_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PaymentMethodProcessTokenizationSession": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when user continues a tokenization of payment method.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "Channel related to the requested action.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "data": {
+        "type": "JSON",
+        "description": "Payment gateway data in JSON format, received from storefront.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "String!",
+        "description": "The ID returned by app from `PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION` webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User!",
+        "description": "The user related to the requested action.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "PaymentMethodRequestDeleteError": {
     "type": "object",
     "interfaces": [],
@@ -43264,6 +43868,39 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "PaymentMethodTokenizationResult": {
+    "type": "enum",
+    "description": "Result of tokenization of payment method.\n\n    SUCCESSFULLY_TOKENIZED - The payment method was successfully tokenized.\n    ADDITIONAL_ACTION_REQUIRED - The additional action is required to tokenize payment\n    method.\n    PENDING - The payment method is pending tokenization.\n    FAILED_TO_TOKENIZE - The payment method was not tokenized.\n    FAILED_TO_DELIVER - The request to tokenize payment method was not delivered.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ADDITIONAL_ACTION_REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "FAILED_TO_DELIVER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "FAILED_TO_TOKENIZE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PENDING": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SUCCESSFULLY_TOKENIZED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -69137,8 +69774,23 @@
         "deprecated": null,
         "message": null
       },
+      "PAYMENT_GATEWAY_INITIALIZE_TOKENIZATION_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PAYMENT_LIST_GATEWAYS": {
         "description": "Listing available payment gateways.",
+        "deprecated": null,
+        "message": null
+      },
+      "PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PAYMENT_METHOD_PROCESS_TOKENIZATION_SESSION": {
+        "description": null,
         "deprecated": null,
         "message": null
       },
@@ -69475,8 +70127,23 @@
         "deprecated": null,
         "message": null
       },
+      "PAYMENT_GATEWAY_INITIALIZE_TOKENIZATION_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PAYMENT_LIST_GATEWAYS": {
         "description": "Listing available payment gateways.",
+        "deprecated": null,
+        "message": null
+      },
+      "PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PAYMENT_METHOD_PROCESS_TOKENIZATION_SESSION": {
+        "description": null,
         "deprecated": null,
         "message": null
       },
