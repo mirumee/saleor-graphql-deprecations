@@ -38881,6 +38881,13 @@
         "message": null,
         "arguments": {}
       },
+      "undiscountedTotalPrice": {
+        "type": "TaxedMoney!",
+        "description": "Price of the order line without discounts.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "undiscountedUnitPrice": {
         "type": "TaxedMoney!",
         "description": "Price of the single item in the order line without applied an order line discount.",
