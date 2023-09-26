@@ -33192,9 +33192,9 @@
       },
       "shopDomainUpdate": {
         "type": "ShopDomainUpdate",
-        "description": "Updates site domain of the shop. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
-        "deprecated": null,
-        "message": null,
+        "description": "Updates site domain of the shop.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PUBLIC_URL` environment variable instead. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": "4.0",
+        "message": "Updates site domain of the shop.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PUBLIC_URL` environment variable instead. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "arguments": {
           "input": {
             "type": "SiteDomainInput",
@@ -58775,9 +58775,9 @@
   "ShopDomainUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates site domain of the shop. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
-    "deprecated": null,
-    "message": null,
+    "description": "Updates site domain of the shop.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PUBLIC_URL` environment variable instead. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+    "deprecated": "4.0",
+    "message": "Updates site domain of the shop.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PUBLIC_URL` environment variable instead. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
     "fields": {
       "errors": {
         "type": "[ShopError!]!",

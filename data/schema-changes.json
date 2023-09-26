@@ -1,7 +1,13 @@
 [
   {
-    "diff": "field_new",
-    "type": "OrderLine",
-    "field": "undiscountedTotalPrice"
+    "diff": "type_deprecated",
+    "type": "ShopDomainUpdate",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "shopDomainUpdate",
+    "version": "4.0"
   }
 ]
