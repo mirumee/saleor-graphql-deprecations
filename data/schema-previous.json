@@ -7432,6 +7432,13 @@
             "default": null
           }
         }
+      },
+      "updatedAt": {
+        "type": "DateTime!",
+        "description": "The date and time when the category was last updated.\n\nAdded in Saleor 3.17.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -7700,6 +7707,13 @@
       "slugs": {
         "type": "[String!]",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "updatedAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter by when was the most recent update. \n\nAdded in Saleor 3.17.",
         "deprecated": null,
         "message": null,
         "default": null

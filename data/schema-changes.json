@@ -1,13 +1,12 @@
 [
   {
-    "diff": "type_deprecated",
-    "type": "ShopDomainUpdate",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "Category",
+    "field": "updatedAt"
   },
   {
-    "diff": "field_deprecated",
-    "type": "Mutation",
-    "field": "shopDomainUpdate",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "CategoryFilterInput",
+    "field": "updatedAt"
   }
 ]
