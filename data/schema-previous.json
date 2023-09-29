@@ -5252,7 +5252,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents attribute's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -5357,7 +5357,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents attribute translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6317,7 +6317,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents attribute value's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6443,7 +6443,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents attribute value translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7107,6 +7107,56 @@
       "variants": {
         "type": "[ID!]",
         "description": "Product variant related to the discount.\n\nAdded in Saleor 3.1.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "CataloguePredicateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[CataloguePredicateInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[CataloguePredicateInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "categoryPredicate": {
+        "type": "CategoryWhereInput",
+        "description": "Defines the category conditions to be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "collectionPredicate": {
+        "type": "CollectionWhereInput",
+        "description": "Defines the collection conditions to be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productPredicate": {
+        "type": "ProductWhereInput",
+        "description": "Defines the product conditions to be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "variantPredicate": {
+        "type": "ProductVariantWhereInput",
+        "description": "Defines the product variant conditions to be met.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7841,7 +7891,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents category original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7946,7 +7996,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents category translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -12436,7 +12486,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents collection's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -12541,7 +12591,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents collection translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -15084,6 +15134,35 @@
     "description": "The `DateTime` scalar type represents a DateTime\nvalue as specified by\n[iso8601](https://en.wikipedia.org/wiki/ISO_8601).",
     "deprecated": null,
     "message": null
+  },
+  "DateTimeFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for date time fields.\n\nAdded in Saleor 3.11.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "DateTime",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[DateTime!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "range": {
+        "type": "DateTimeRangeInput",
+        "description": "The value in range.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
   },
   "DateTimeRangeInput": {
     "type": "input",
@@ -27053,7 +27132,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents menu item's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -27130,7 +27209,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents menu item translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -28246,7 +28325,7 @@
           },
           "input": {
             "type": "NameTranslationInput!",
-            "description": null,
+            "description": "Fields required to update attribute translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -28385,7 +28464,7 @@
           },
           "input": {
             "type": "AttributeValueTranslationInput!",
-            "description": null,
+            "description": "Fields required to update attribute value translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -28495,7 +28574,7 @@
           },
           "input": {
             "type": "TranslationInput!",
-            "description": null,
+            "description": "Fields required to update category translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29417,7 +29496,7 @@
           },
           "input": {
             "type": "TranslationInput!",
-            "description": null,
+            "description": "Fields required to update collection translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -30490,7 +30569,7 @@
           },
           "input": {
             "type": "NameTranslationInput!",
-            "description": null,
+            "description": "Fields required to update menu item translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -31364,7 +31443,7 @@
           },
           "input": {
             "type": "PageTranslationInput!",
-            "description": null,
+            "description": "Fields required to update page translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32135,7 +32214,7 @@
           },
           "input": {
             "type": "TranslationInput!",
-            "description": null,
+            "description": "Fields required to update product translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32632,7 +32711,7 @@
           },
           "input": {
             "type": "NameTranslationInput!",
-            "description": null,
+            "description": "Fields required to update product variant translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32676,6 +32755,183 @@
           "sku": {
             "type": "String",
             "description": "SKU of a product variant to update.\n\nAdded in Saleor 3.8.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionBulkDelete": {
+        "type": "PromotionBulkDelete",
+        "description": "Deletes promotions.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "ids": {
+            "type": "[ID!]!",
+            "description": "List of promotion IDs to delete.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionCreate": {
+        "type": "PromotionCreate",
+        "description": "Creates a new promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_CREATED (async): A promotion was created.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "PromotionCreateInput!",
+            "description": "Fields requires to create a promotion.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionDelete": {
+        "type": "PromotionDelete",
+        "description": "Deletes a promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "The ID of the promotion to remove.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionRuleCreate": {
+        "type": "PromotionRuleCreate",
+        "description": "Creates a new promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_CREATED (async): A promotion rule was created.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "PromotionRuleCreateInput!",
+            "description": "Fields required to create a promotion rule.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionRuleDelete": {
+        "type": "PromotionRuleDelete",
+        "description": "Deletes a promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_DELETED (async): A promotion rule was deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "The ID of the promotion to remove.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionRuleTranslate": {
+        "type": "PromotionRuleTranslate",
+        "description": "Creates/updates translations for a promotion rule.\n\nAdded in Saleor 3.17. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "PromotionRule ID or PromotionRuleTranslatableContent ID.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "input": {
+            "type": "PromotionRuleTranslationInput!",
+            "description": "Fields required to update promotion rule translations.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": "Translation language code.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionRuleUpdate": {
+        "type": "PromotionRuleUpdate",
+        "description": "Updates an existing promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_UPDATED (async): A promotion rule was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the promotion rule to update.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "input": {
+            "type": "PromotionRuleUpdateInput!",
+            "description": "Fields required to create a promotion rule.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionTranslate": {
+        "type": "PromotionTranslate",
+        "description": "Creates/updates translations for a promotion.\n\nAdded in Saleor 3.17. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "Promotion ID or PromotionTranslatableContent ID.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "input": {
+            "type": "PromotionTranslationInput!",
+            "description": "Fields required to update promotion translations.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": "Translation language code.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotionUpdate": {
+        "type": "PromotionUpdate",
+        "description": "Updates an existing promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_UPDATED (async): A promotion was updated.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.\n- PROMOTION_ENDED (async): Optionally called if promotion was ended.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the promotion to update.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "input": {
+            "type": "PromotionUpdateInput!",
+            "description": "Fields required to update a promotion.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32764,9 +33020,9 @@
       },
       "saleCataloguesAdd": {
         "type": "SaleAddCatalogues",
-        "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
-        "deprecated": null,
-        "message": null,
+        "description": "Adds products, categories, collections to a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
+        "deprecated": "4.0",
+        "message": "Adds products, categories, collections to a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -32786,9 +33042,9 @@
       },
       "saleCataloguesRemove": {
         "type": "SaleRemoveCatalogues",
-        "description": "Removes products, categories, collections from a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
-        "deprecated": null,
-        "message": null,
+        "description": "Removes products, categories, collections from a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleUpdate` or `promotionRuleDelete` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
+        "deprecated": "4.0",
+        "message": "Removes products, categories, collections from a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleUpdate` or `promotionRuleDelete` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -32808,9 +33064,9 @@
       },
       "saleChannelListingUpdate": {
         "type": "SaleChannelListingUpdate",
-        "description": "Manage sale's availability in channels. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
-        "deprecated": null,
-        "message": null,
+        "description": "Manage sale's availability in channels.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` or `promotionRuleUpdate` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "deprecated": "4.0",
+        "message": "Manage sale's availability in channels.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` or `promotionRuleUpdate` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -32830,9 +33086,9 @@
       },
       "saleCreate": {
         "type": "SaleCreate",
-        "description": "Creates a new sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
-        "deprecated": null,
-        "message": null,
+        "description": "Creates a new sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
+        "deprecated": "4.0",
+        "message": "Creates a new sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
         "arguments": {
           "input": {
             "type": "SaleInput!",
@@ -32845,9 +33101,9 @@
       },
       "saleDelete": {
         "type": "SaleDelete",
-        "description": "Deletes a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
-        "deprecated": null,
-        "message": null,
+        "description": "Deletes a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionDelete` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
+        "deprecated": "4.0",
+        "message": "Deletes a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionDelete` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -32860,9 +33116,9 @@
       },
       "saleTranslate": {
         "type": "SaleTranslate",
-        "description": "Creates/updates translations for a sale. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
-        "deprecated": null,
-        "message": null,
+        "description": "Creates/updates translations for a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PromotionTranslate` mutation instead. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+        "deprecated": "4.0",
+        "message": "Creates/updates translations for a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PromotionTranslate` mutation instead. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -32873,7 +33129,7 @@
           },
           "input": {
             "type": "NameTranslationInput!",
-            "description": null,
+            "description": "Fields required to update sale translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32889,9 +33145,9 @@
       },
       "saleUpdate": {
         "type": "SaleUpdate",
-        "description": "Updates a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
-        "deprecated": null,
-        "message": null,
+        "description": "Updates a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionUpdate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
+        "deprecated": "4.0",
+        "message": "Updates a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionUpdate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -33086,7 +33342,7 @@
           },
           "input": {
             "type": "ShippingPriceTranslationInput!",
-            "description": null,
+            "description": "Fields required to update shipping price translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34186,7 +34442,7 @@
           },
           "input": {
             "type": "NameTranslationInput!",
-            "description": null,
+            "description": "Fields required to update voucher translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -36654,6 +36910,11 @@
     "message": null,
     "values": {
       "MANUAL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -41271,7 +41532,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents page's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -41383,7 +41644,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents page translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -48525,7 +48786,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents product's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -48665,7 +48926,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents product translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -51532,7 +51793,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents product variant's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -51644,7 +51905,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents product variant translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -51952,8 +52213,2247 @@
         "default": null
       },
       "updatedAt": {
-        "type": "DateTimeRangeInput",
+        "type": "DateTimeFilterInput",
         "description": "Filter by when was the most recent update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "Promotion": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "ObjectWithMetadata"
+    ],
+    "description": "Represents the promotion that allow creating discounts based on given conditions, and is visible to all the customers.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdAt": {
+        "type": "DateTime!",
+        "description": "Date time of promotion creation.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "description": {
+        "type": "JSON",
+        "description": "Description of the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "endDate": {
+        "type": "DateTime",
+        "description": "End date of the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "events": {
+        "type": "[PromotionEvent!]",
+        "description": "The list of events associated with the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "metadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of public metadata items. Can be accessed without permissions.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "metafield": {
+        "type": "String",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "metafields": {
+        "type": "Metadata",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "name": {
+        "type": "String!",
+        "description": "Name of the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of private metadata items. Requires staff permissions to access.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetafield": {
+        "type": "String",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "privateMetafields": {
+        "type": "Metadata",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "rules": {
+        "type": "[PromotionRule!]",
+        "description": "The list of promotion rules.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "startDate": {
+        "type": "DateTime!",
+        "description": "Start date of the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "PromotionTranslation",
+        "description": "Returns translated promotion fields for the given language code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": "A language code to return the translation for promotion.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "updatedAt": {
+        "type": "DateTime!",
+        "description": "Date time of last update of promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionBulkDelete": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Deletes promotions.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many objects were affected.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[DiscountError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionCountableConnection": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "edges": {
+        "type": "[PromotionCountableEdge!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "pageInfo": {
+        "type": "PageInfo!",
+        "description": "Pagination data for this connection.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalCount": {
+        "type": "Int",
+        "description": "A total count of items in the collection.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionCountableEdge": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "cursor": {
+        "type": "String!",
+        "description": "A cursor for use in pagination.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "node": {
+        "type": "Promotion!",
+        "description": "The item at the end of the edge.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionCreate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates a new promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_CREATED (async): A promotion was created.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[PromotionCreateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionCreateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PromotionCreateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "index": {
+        "type": "Int",
+        "description": "Index of an input list item that caused the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionCreateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_PRECISION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MULTIPLE_CURRENCIES_NOT_ALLOWED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionCreateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSON",
+        "description": "Promotion description.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "endDate": {
+        "type": "DateTime",
+        "description": "The end date of the promotion in ISO 8601 format.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String!",
+        "description": "Promotion name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rules": {
+        "type": "[PromotionRuleInput!]",
+        "description": "List of promotion rules.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "startDate": {
+        "type": "DateTime",
+        "description": "The start date of the promotion in ISO 8601 format.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionCreated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new promotion is created.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": "The promotion the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionCreatedEvent": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "PromotionEventInterface"
+    ],
+    "description": "History log of the promotion created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionDelete": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Deletes a promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[PromotionDeleteError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionDeleteError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PromotionDeleteErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionDeleteErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when promotion is deleted.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": "The promotion the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionEnded": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "The event informs about the end of the promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": "The promotion the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionEndedEvent": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "PromotionEventInterface"
+    ],
+    "description": "History log of the promotion ended event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionEvent": {
+    "type": "union",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "PromotionCreatedEvent",
+      "PromotionUpdatedEvent",
+      "PromotionStartedEvent",
+      "PromotionEndedEvent",
+      "PromotionRuleCreatedEvent",
+      "PromotionRuleUpdatedEvent",
+      "PromotionRuleDeletedEvent"
+    ]
+  },
+  "PromotionEventInterface": {
+    "type": "interface",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionEventsEnum": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "PROMOTION_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_ENDED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_STARTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "RULE_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "RULE_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "RULE_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionRule": {
+    "type": "object",
+    "interfaces": [
+      "Node"
+    ],
+    "description": "Represents the promotion rule that specifies the conditions that must be met to apply the promotion discount.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "cataloguePredicate": {
+        "type": "JSON",
+        "description": "The catalogue predicate that must be met to apply the rule reward.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "channels": {
+        "type": "[Channel!]",
+        "description": "List of channels where the rule applies.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "description": {
+        "type": "JSON",
+        "description": "Description of the promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String",
+        "description": "Name of the promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": "Promotion to which the rule belongs.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "rewardValue": {
+        "type": "PositiveDecimal",
+        "description": "The reward value of the promotion rule. Defines the discount value applied when the rule conditions are met.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "rewardValueType": {
+        "type": "RewardValueTypeEnum",
+        "description": "The type of reward value of the promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "PromotionRuleTranslation",
+        "description": "Returns translated promotion rule fields for the given language code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": "A language code to return the translation for promotion rule.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      }
+    }
+  },
+  "PromotionRuleCreate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates a new promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_CREATED (async): A promotion rule was created.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[PromotionRuleCreateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotionRule": {
+        "type": "PromotionRule",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleCreateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PromotionRuleCreateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleCreateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_PRECISION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MULTIPLE_CURRENCIES_NOT_ALLOWED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionRuleCreateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "cataloguePredicate": {
+        "type": "CataloguePredicateInput",
+        "description": "Defines the conditions on the catalogue level that must be met for the reward to be applied.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "channels": {
+        "type": "[ID!]",
+        "description": "List of channel ids to which the rule should apply to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "description": {
+        "type": "JSON",
+        "description": "Promotion rule description.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Promotion rule name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "promotion": {
+        "type": "ID!",
+        "description": "The ID of the promotion that rule belongs to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardValue": {
+        "type": "PositiveDecimal",
+        "description": "Defines the discount value. Required when catalogue predicate is provided.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardValueType": {
+        "type": "RewardValueTypeEnum",
+        "description": "Defines the promotion rule reward value type. Must be provided together with reward value.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionRuleCreated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new promotion rule is created.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotionRule": {
+        "type": "PromotionRule",
+        "description": "The promotion rule the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleCreatedEvent": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "PromotionEventInterface",
+      "PromotionRuleEventInterface"
+    ],
+    "description": "History log of the promotion rule created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "ruleId": {
+        "type": "String",
+        "description": "The rule ID associated with the promotion event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleDelete": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Deletes a promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_DELETED (async): A promotion rule was deleted.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[PromotionRuleDeleteError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotionRule": {
+        "type": "PromotionRule",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleDeleteError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PromotionRuleDeleteErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleDeleteErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionRuleDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new promotion rule is deleted.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotionRule": {
+        "type": "PromotionRule",
+        "description": "The promotion rule the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleDeletedEvent": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "PromotionEventInterface",
+      "PromotionRuleEventInterface"
+    ],
+    "description": "History log of the promotion rule created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "ruleId": {
+        "type": "String",
+        "description": "The rule ID associated with the promotion event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleEventInterface": {
+    "type": "interface",
+    "interfaces": [],
+    "description": "History log of the promotion event related to rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "ruleId": {
+        "type": "String",
+        "description": "The rule ID associated with the promotion event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "cataloguePredicate": {
+        "type": "CataloguePredicateInput",
+        "description": "Defines the conditions on the catalogue level that must be met for the reward to be applied.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "channels": {
+        "type": "[ID!]",
+        "description": "List of channel ids to which the rule should apply to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "description": {
+        "type": "JSON",
+        "description": "Promotion rule description.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Promotion rule name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardValue": {
+        "type": "PositiveDecimal",
+        "description": "Defines the discount value. Required when catalogue predicate is provided.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardValueType": {
+        "type": "RewardValueTypeEnum",
+        "description": "Defines the promotion rule reward value type. Must be provided together with reward value.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionRuleTranslatableContent": {
+    "type": "object",
+    "interfaces": [
+      "Node"
+    ],
+    "description": "Represents promotion rule's original translatable fields and related translations.\n\nAdded in Saleor 3.17.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSONString",
+        "description": "Description of the promotion rule.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": "ID of the promotion rule translatable content.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String",
+        "description": "Name of the promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "PromotionRuleTranslation",
+        "description": "Returns translated promotion rule fields for the given language code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": "A language code to return the translation for promotion rule.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      }
+    }
+  },
+  "PromotionRuleTranslate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates/updates translations for a promotion rule.\n\nAdded in Saleor 3.17. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[TranslationError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotionRule": {
+        "type": "PromotionRule",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleTranslation": {
+    "type": "object",
+    "interfaces": [
+      "Node"
+    ],
+    "description": "Represents promotion rule translations.\n\nAdded in Saleor 3.17.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSONString",
+        "description": "Translated description of the promotion rule.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": "ID of the promotion rule translation.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "language": {
+        "type": "LanguageDisplay!",
+        "description": "Translation language.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String",
+        "description": "Translated name of the promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleTranslationInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSON",
+        "description": "Translated promotion description.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionRuleUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates an existing promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_UPDATED (async): A promotion rule was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[PromotionRuleUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotionRule": {
+        "type": "PromotionRule",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channels": {
+        "type": "[ID!]",
+        "description": "List of channel IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "code": {
+        "type": "PromotionRuleUpdateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "DUPLICATED_INPUT_ITEM": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_PRECISION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MISSING_CHANNELS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MULTIPLE_CURRENCIES_NOT_ALLOWED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionRuleUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "addChannels": {
+        "type": "[ID!]",
+        "description": "List of channel ids to remove.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "cataloguePredicate": {
+        "type": "CataloguePredicateInput",
+        "description": "Defines the conditions on the catalogue level that must be met for the reward to be applied.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "description": {
+        "type": "JSON",
+        "description": "Promotion rule description.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Promotion rule name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "removeChannels": {
+        "type": "[ID!]",
+        "description": "List of channel ids to remove.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardValue": {
+        "type": "PositiveDecimal",
+        "description": "Defines the discount value. Required when catalogue predicate is provided.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardValueType": {
+        "type": "RewardValueTypeEnum",
+        "description": "Defines the promotion rule reward value type. Must be provided together with reward value.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionRuleUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new promotion rule is updated.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotionRule": {
+        "type": "PromotionRule",
+        "description": "The promotion rule the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionRuleUpdatedEvent": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "PromotionEventInterface",
+      "PromotionRuleEventInterface"
+    ],
+    "description": "History log of the promotion rule created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "ruleId": {
+        "type": "String",
+        "description": "The rule ID associated with the promotion event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionSortField": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CREATED_AT": {
+        "description": "Sort promotions by created at.",
+        "deprecated": null,
+        "message": null
+      },
+      "END_DATE": {
+        "description": "Sort promotions by end date.",
+        "deprecated": null,
+        "message": null
+      },
+      "NAME": {
+        "description": "Sort promotions by name.",
+        "deprecated": null,
+        "message": null
+      },
+      "START_DATE": {
+        "description": "Sort promotions by start date.",
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionSortingInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "direction": {
+        "type": "OrderDirection!",
+        "description": "Specifies the direction in which to sort promotions.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "field": {
+        "type": "PromotionSortField!",
+        "description": "Sort promotions by the selected field.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionStarted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "The event informs about the start of the promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": "The promotion the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionStartedEvent": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "PromotionEventInterface"
+    ],
+    "description": "History log of the promotion started event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionTranslatableContent": {
+    "type": "object",
+    "interfaces": [
+      "Node"
+    ],
+    "description": "Represents promotion's original translatable fields and related translations.\n\nAdded in Saleor 3.17.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSONString",
+        "description": "Description of the promotion.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": "ID of the promotion translatable content.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String!",
+        "description": "Name of the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "PromotionTranslation",
+        "description": "Returns translated promotion fields for the given language code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": "A language code to return the translation for promotion.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      }
+    }
+  },
+  "PromotionTranslate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates/updates translations for a promotion.\n\nAdded in Saleor 3.17. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[TranslationError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionTranslation": {
+    "type": "object",
+    "interfaces": [
+      "Node"
+    ],
+    "description": "Represents promotion translations.\n\nAdded in Saleor 3.17.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSONString",
+        "description": "Translated description of the promotion.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": "ID of the promotion translation.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "language": {
+        "type": "LanguageDisplay!",
+        "description": "Translation language.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String",
+        "description": "Translated name of the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionTranslationInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSON",
+        "description": "Translated promotion description.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates an existing promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_UPDATED (async): A promotion was updated.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.\n- PROMOTION_ENDED (async): Optionally called if promotion was ended.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[PromotionUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "PromotionUpdateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionUpdateErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "description": {
+        "type": "JSON",
+        "description": "Promotion description.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "endDate": {
+        "type": "DateTime",
+        "description": "The end date of the promotion in ISO 8601 format.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Promotion name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "startDate": {
+        "type": "DateTime",
+        "description": "The start date of the promotion in ISO 8601 format.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PromotionUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when promotion is updated.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "promotion": {
+        "type": "Promotion",
+        "description": "The promotion the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionUpdatedEvent": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "PromotionEventInterface"
+    ],
+    "description": "History log of the promotion updated event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdBy": {
+        "type": "UserOrApp",
+        "description": "User or App that created the promotion event. \n\nRequires one of the following permissions: MANAGE_STAFF, MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "date": {
+        "type": "DateTime!",
+        "description": "Date when event happened.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "PromotionEventsEnum!",
+        "description": "Promotion event type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "PromotionWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[PromotionWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[PromotionWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "endDate": {
+        "type": "DateTimeFilterInput",
+        "description": "Filter promotions by end date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isOldSale": {
+        "type": "Boolean",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataFilter!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "StringFilterInput",
+        "description": "Filter by promotion name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "startDate": {
+        "type": "DateTimeFilterInput",
+        "description": "Filter promotions by start date.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -53916,6 +56416,71 @@
           }
         }
       },
+      "promotion": {
+        "type": "Promotion",
+        "description": "Look up a promotion by ID.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the promotion.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "promotions": {
+        "type": "PromotionCountableConnection",
+        "description": "List of the promotions.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "after": {
+            "type": "String",
+            "description": "Return the elements in the list that come after the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "before": {
+            "type": "String",
+            "description": "Return the elements in the list that come before the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "first": {
+            "type": "Int",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "last": {
+            "type": "Int",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "sortBy": {
+            "type": "PromotionSortingInput",
+            "description": "Sort promotions.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "PromotionWhereInput",
+            "description": "Where filtering options.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "reportProductSales": {
         "type": "ProductVariantCountableConnection",
         "description": "List of top selling products.\n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
@@ -53969,8 +56534,8 @@
       "sale": {
         "type": "Sale",
         "description": "Look up a sale by ID.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use the `promotion` query instead.",
         "arguments": {
           "channel": {
             "type": "String",
@@ -53991,8 +56556,8 @@
       "sales": {
         "type": "SaleCountableConnection",
         "description": "List of the shop's sales.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use the `promotions` query instead.",
         "arguments": {
           "after": {
             "type": "String",
@@ -54850,15 +57415,33 @@
       }
     }
   },
+  "RewardValueTypeEnum": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "FIXED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PERCENTAGE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "Sale": {
     "type": "object",
     "interfaces": [
       "Node",
       "ObjectWithMetadata"
     ],
-    "description": "Sales allow creating discounts for categories, collections or products and are visible to all the customers.",
-    "deprecated": null,
-    "message": null,
+    "description": "Sales allow creating discounts for categories, collections or products and are visible to all the customers.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `Promotion` type instead.",
+    "deprecated": "4.0",
+    "message": "Sales allow creating discounts for categories, collections or products and are visible to all the customers.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `Promotion` type instead.",
     "fields": {
       "categories": {
         "type": "CategoryCountableConnection",
@@ -55168,9 +57751,9 @@
   "SaleAddCatalogues": {
     "type": "object",
     "interfaces": [],
-    "description": "Adds products, categories, collections to a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
-    "deprecated": null,
-    "message": null,
+    "description": "Adds products, categories, collections to a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
+    "deprecated": "4.0",
+    "message": "Adds products, categories, collections to a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
     "fields": {
       "discountErrors": {
         "type": "[DiscountError!]!",
@@ -55230,9 +57813,9 @@
     "interfaces": [
       "Node"
     ],
-    "description": "Represents sale channel listing.",
-    "deprecated": null,
-    "message": null,
+    "description": "Represents sale channel listing.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `PromotionRule` type instead.",
+    "deprecated": "4.0",
+    "message": "Represents sale channel listing.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `PromotionRule` type instead.",
     "fields": {
       "channel": {
         "type": "Channel!",
@@ -55311,9 +57894,9 @@
   "SaleChannelListingUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Manage sale's availability in channels. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
-    "deprecated": null,
-    "message": null,
+    "description": "Manage sale's availability in channels.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` or `promotionRuleUpdate` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+    "deprecated": "4.0",
+    "message": "Manage sale's availability in channels.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleCreate` or `promotionRuleUpdate` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
     "fields": {
       "discountErrors": {
         "type": "[DiscountError!]!",
@@ -55394,9 +57977,9 @@
   "SaleCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
-    "deprecated": null,
-    "message": null,
+    "description": "Creates a new sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
+    "deprecated": "4.0",
+    "message": "Creates a new sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionCreate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_CREATED (async): A sale was created.",
     "fields": {
       "discountErrors": {
         "type": "[DiscountError!]!",
@@ -55426,9 +58009,9 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Event sent when new sale is created.\n\nAdded in Saleor 3.2.",
-    "deprecated": null,
-    "message": null,
+    "description": "Event sent when new sale is created.\n\nAdded in Saleor 3.2.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionCreated` event instead.",
+    "deprecated": "4.0",
+    "message": "Event sent when new sale is created.\n\nAdded in Saleor 3.2.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionCreated` event instead.",
     "fields": {
       "issuedAt": {
         "type": "DateTime",
@@ -55478,9 +58061,9 @@
   "SaleDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
-    "deprecated": null,
-    "message": null,
+    "description": "Deletes a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionDelete` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
+    "deprecated": "4.0",
+    "message": "Deletes a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionDelete` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
     "fields": {
       "discountErrors": {
         "type": "[DiscountError!]!",
@@ -55510,9 +58093,9 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Event sent when sale is deleted.\n\nAdded in Saleor 3.2.",
-    "deprecated": null,
-    "message": null,
+    "description": "Event sent when sale is deleted.\n\nAdded in Saleor 3.2.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionDeleted` event instead.",
+    "deprecated": "4.0",
+    "message": "Event sent when sale is deleted.\n\nAdded in Saleor 3.2.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionDeleted` event instead.",
     "fields": {
       "issuedAt": {
         "type": "DateTime",
@@ -55683,9 +58266,9 @@
   "SaleRemoveCatalogues": {
     "type": "object",
     "interfaces": [],
-    "description": "Removes products, categories, collections from a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
-    "deprecated": null,
-    "message": null,
+    "description": "Removes products, categories, collections from a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleUpdate` or `promotionRuleDelete` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
+    "deprecated": "4.0",
+    "message": "Removes products, categories, collections from a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionRuleUpdate` or `promotionRuleDelete` mutations instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.",
     "fields": {
       "discountErrors": {
         "type": "[DiscountError!]!",
@@ -55787,9 +58370,9 @@
     "interfaces": [
       "Event"
     ],
-    "description": "The event informs about the start or end of the sale.\n\nAdded in Saleor 3.5.",
-    "deprecated": null,
-    "message": null,
+    "description": "The event informs about the start or end of the sale.\n\nAdded in Saleor 3.5.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionStarted` and `PromotionEnded` events instead.",
+    "deprecated": "4.0",
+    "message": "The event informs about the start or end of the sale.\n\nAdded in Saleor 3.5.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionStarted` and `PromotionEnded` events instead.",
     "fields": {
       "issuedAt": {
         "type": "DateTime",
@@ -55841,9 +58424,9 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
-    "deprecated": null,
-    "message": null,
+    "description": "Represents sale's original translatable fields and related translations.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `PromotionTranslatableContent` instead.",
+    "deprecated": "4.0",
+    "message": "Represents sale's original translatable fields and related translations.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `PromotionTranslatableContent` instead.",
     "fields": {
       "id": {
         "type": "ID!",
@@ -55886,9 +58469,9 @@
   "SaleTranslate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates/updates translations for a sale. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
-    "deprecated": null,
-    "message": null,
+    "description": "Creates/updates translations for a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PromotionTranslate` mutation instead. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+    "deprecated": "4.0",
+    "message": "Creates/updates translations for a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `PromotionTranslate` mutation instead. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
     "fields": {
       "errors": {
         "type": "[TranslationError!]!",
@@ -55918,9 +58501,9 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
-    "deprecated": null,
-    "message": null,
+    "description": "Represents sale translations.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `PromotionTranslation` instead.",
+    "deprecated": "4.0",
+    "message": "Represents sale translations.\n\nDEPRECATED: this type will be removed in Saleor 4.0. Use `PromotionTranslation` instead.",
     "fields": {
       "id": {
         "type": "ID!",
@@ -55966,9 +58549,9 @@
   "SaleUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a sale. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
-    "deprecated": null,
-    "message": null,
+    "description": "Updates a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionUpdate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
+    "deprecated": "4.0",
+    "message": "Updates a sale.\n\nDEPRECATED: this mutation will be removed in Saleor 4.0. Use `promotionUpdate` mutation instead. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_UPDATED (async): A sale was updated.\n- SALE_TOGGLE (async): Optionally triggered when a sale is started or stopped.",
     "fields": {
       "discountErrors": {
         "type": "[DiscountError!]!",
@@ -55998,9 +58581,9 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Event sent when sale is updated.\n\nAdded in Saleor 3.2.",
-    "deprecated": null,
-    "message": null,
+    "description": "Event sent when sale is updated.\n\nAdded in Saleor 3.2.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionUpdated` event instead.",
+    "deprecated": "4.0",
+    "message": "Event sent when sale is updated.\n\nAdded in Saleor 3.2.\n\nDEPRECATED: this event will be removed in Saleor 4.0. Use `PromotionUpdated` event instead.",
     "fields": {
       "issuedAt": {
         "type": "DateTime",
@@ -56732,7 +59315,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents shipping method's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56786,7 +59369,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents shipping method translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -59214,7 +61797,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents shop translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -64316,7 +66899,9 @@
       "ShippingMethodTranslatableContent",
       "SaleTranslatableContent",
       "VoucherTranslatableContent",
-      "MenuItemTranslatableContent"
+      "MenuItemTranslatableContent",
+      "PromotionTranslatableContent",
+      "PromotionRuleTranslatableContent"
     ]
   },
   "TranslatableItemConnection": {
@@ -64409,6 +66994,16 @@
         "message": null
       },
       "PRODUCT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -64591,7 +67186,9 @@
       "ShippingMethodTranslation",
       "SaleTranslation",
       "VoucherTranslation",
-      "MenuItemTranslation"
+      "MenuItemTranslation",
+      "PromotionTranslation",
+      "PromotionRuleTranslation"
     ]
   },
   "TranslationUpdated": {
@@ -67027,7 +69624,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents voucher's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67104,7 +69701,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": null,
+    "description": "Represents voucher translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -69177,6 +71774,46 @@
         "deprecated": null,
         "message": null
       },
+      "PROMOTION_CREATED": {
+        "description": "A promotion is created.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_DELETED": {
+        "description": "A promotion is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_ENDED": {
+        "description": "A promotion is deactivated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_CREATED": {
+        "description": "A promotion rule is created.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_DELETED": {
+        "description": "A promotion rule is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_UPDATED": {
+        "description": "A promotion rule is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_STARTED": {
+        "description": "A promotion is activated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_UPDATED": {
+        "description": "A promotion is updated.",
+        "deprecated": null,
+        "message": null
+      },
       "SALE_CREATED": {
         "description": "A sale is created.",
         "deprecated": null,
@@ -69917,6 +72554,46 @@
       },
       "PRODUCT_VARIANT_UPDATED": {
         "description": "A product variant is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_CREATED": {
+        "description": "A promotion is created.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_DELETED": {
+        "description": "A promotion is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_ENDED": {
+        "description": "A promotion is deactivated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_CREATED": {
+        "description": "A promotion rule is created.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_DELETED": {
+        "description": "A promotion rule is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_UPDATED": {
+        "description": "A promotion rule is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_STARTED": {
+        "description": "A promotion is activated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_UPDATED": {
+        "description": "A promotion is updated.",
         "deprecated": null,
         "message": null
       },
@@ -70732,6 +73409,46 @@
         "message": null
       },
       "PRODUCT_VARIANT_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_ENDED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_RULE_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_STARTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PROMOTION_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null

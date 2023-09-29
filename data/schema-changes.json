@@ -1,12 +1,585 @@
 [
   {
-    "diff": "field_new",
-    "type": "Category",
-    "field": "updatedAt"
+    "diff": "type_new",
+    "type": "CataloguePredicateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "DateTimeFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "Promotion"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionBulkDelete"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCountableConnection"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCountableEdge"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCreate"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCreateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCreateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCreateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCreated"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionCreatedEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionDelete"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionDeleteError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionDeleteErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionDeleted"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionEnded"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionEndedEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionEventInterface"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionEventsEnum"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRule"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleCreate"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleCreateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleCreateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleCreateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleCreated"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleCreatedEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleDelete"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleDeleteError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleDeleteErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleDeleted"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleDeletedEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleEventInterface"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleTranslatableContent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleTranslate"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleTranslation"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleTranslationInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleUpdateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleUpdateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleUpdated"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionRuleUpdatedEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionSortField"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionSortingInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionStarted"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionStartedEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionTranslatableContent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionTranslate"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionTranslation"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionTranslationInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionUpdateErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionUpdateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionUpdated"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionUpdatedEvent"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionWhereInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "RewardValueTypeEnum"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "Sale",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleAddCatalogues",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleChannelListing",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleChannelListingUpdate",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleCreate",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleCreated",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleDelete",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleDeleted",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleRemoveCatalogues",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleToggle",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleTranslatableContent",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleTranslate",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleTranslation",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleUpdate",
+    "version": "4.0"
+  },
+  {
+    "diff": "type_deprecated",
+    "type": "SaleUpdated",
+    "version": "4.0"
   },
   {
     "diff": "field_new",
-    "type": "CategoryFilterInput",
-    "field": "updatedAt"
+    "type": "Mutation",
+    "field": "promotionBulkDelete"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionCreate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionDelete"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionRuleCreate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionRuleDelete"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionRuleTranslate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionRuleUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionTranslate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "promotionUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Query",
+    "field": "promotion"
+  },
+  {
+    "diff": "field_new",
+    "type": "Query",
+    "field": "promotions"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "saleCataloguesAdd",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "saleCataloguesRemove",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "saleChannelListingUpdate",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "saleCreate",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "saleDelete",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "saleTranslate",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Mutation",
+    "field": "saleUpdate",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Query",
+    "field": "sale",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Query",
+    "field": "sales",
+    "version": "4.0"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderDiscountType",
+    "value": "PROMOTION"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TranslatableKinds",
+    "value": "PROMOTION"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TranslatableKinds",
+    "value": "PROMOTION_RULE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_ENDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_RULE_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_RULE_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_RULE_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_STARTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PROMOTION_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_ENDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_RULE_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_RULE_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_RULE_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_STARTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PROMOTION_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_ENDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_RULE_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_RULE_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_RULE_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_STARTED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PROMOTION_UPDATED"
+  },
+  {
+    "diff": "union_type_new",
+    "union": "TranslatableItem",
+    "type": "PromotionTranslatableContent"
+  },
+  {
+    "diff": "union_type_new",
+    "union": "TranslatableItem",
+    "type": "PromotionRuleTranslatableContent"
+  },
+  {
+    "diff": "union_type_new",
+    "union": "TranslationTypes",
+    "type": "PromotionTranslation"
+  },
+  {
+    "diff": "union_type_new",
+    "union": "TranslationTypes",
+    "type": "PromotionRuleTranslation"
   }
 ]
