@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-10-04 14:01:08</p>
+      <p class="m-0">Generated on 2023-10-05 14:01:08</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -1139,6 +1139,17 @@
               
                 <td>Order</td>
                 <td colspan="2">translatedDiscountName</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Invoice-externalUrl" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Invoice</td>
+                <td colspan="2">externalUrl</td>
               
               <td>4.0</td>
             </tr>
@@ -7506,6 +7517,27 @@ DEPRECATED: this field will be removed in Saleor 4.0.</p>
             <div class="font-monospace"><span class="text-primary">type</span> <strong>Order</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">translatedDiscountName</strong>: String<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Invoice-externalUrl" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Invoice-externalUrl" class="text-reset">
+                Field <strong class="text-danger">externalUrl</strong> of type <strong class="text-danger">Invoice</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0. Use <strong class="text-danger font-monospace">url</strong> field.This field will be removed in 4.0</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Invoice</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">externalUrl</strong>: String<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
