@@ -65079,7 +65079,7 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": "Date and time which transaction was created.",
+        "description": "Date and time at which transaction was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
