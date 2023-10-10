@@ -39078,6 +39078,13 @@
         "message": null,
         "arguments": {}
       },
+      "saleId": {
+        "type": "ID",
+        "description": "Denormalized sale ID, set when order line is created for a product variant that is on sale.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "taxClass": {
         "type": "TaxClass",
         "description": "Denormalized tax class of the product in this order line.\n\nAdded in Saleor 3.9.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
@@ -39215,6 +39222,13 @@
       "variantName": {
         "type": "String!",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "voucherCode": {
+        "type": "String",
+        "description": "Voucher code that was used for this order line.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42625,6 +42639,13 @@
         "message": null,
         "arguments": {}
       },
+      "partial": {
+        "type": "Boolean!",
+        "description": "Informs whether this is a partial payment.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "paymentMethodType": {
         "type": "String!",
         "description": "Type of method used for payment.",
@@ -42668,6 +42689,13 @@
             "default": null
           }
         }
+      },
+      "pspReference": {
+        "type": "String",
+        "description": "PSP reference of the payment.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       },
       "token": {
         "type": "String!",

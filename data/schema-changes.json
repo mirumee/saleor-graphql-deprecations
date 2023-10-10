@@ -1,8 +1,22 @@
 [
   {
-    "diff": "field_deprecated",
-    "type": "Invoice",
-    "field": "externalUrl",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "OrderLine",
+    "field": "saleId"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderLine",
+    "field": "voucherCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "Payment",
+    "field": "partial"
+  },
+  {
+    "diff": "field_new",
+    "type": "Payment",
+    "field": "pspReference"
   }
 ]
