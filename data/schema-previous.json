@@ -66925,11 +66925,11 @@
       "ProductVariantTranslatableContent",
       "PageTranslatableContent",
       "ShippingMethodTranslatableContent",
-      "SaleTranslatableContent",
       "VoucherTranslatableContent",
       "MenuItemTranslatableContent",
       "PromotionTranslatableContent",
-      "PromotionRuleTranslatableContent"
+      "PromotionRuleTranslatableContent",
+      "SaleTranslatableContent"
     ]
   },
   "TranslatableItemConnection": {
@@ -67212,11 +67212,11 @@
       "ProductVariantTranslation",
       "PageTranslation",
       "ShippingMethodTranslation",
-      "SaleTranslation",
       "VoucherTranslation",
       "MenuItemTranslation",
       "PromotionTranslation",
-      "PromotionRuleTranslation"
+      "PromotionRuleTranslation",
+      "SaleTranslation"
     ]
   },
   "TranslationUpdated": {
