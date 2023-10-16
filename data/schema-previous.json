@@ -9200,7 +9200,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether checkout prices should include taxes when displayed in a storefront.\n\nAdded in Saleor 3.9.",
+        "description": "Determines whether displayed prices should include taxes.\n\nAdded in Saleor 3.9.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -16030,7 +16030,7 @@
   "Domain": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents shop's domain.",
+    "description": "Represents API domain.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -16050,7 +16050,7 @@
       },
       "url": {
         "type": "String!",
-        "description": "Shop's absolute URL.",
+        "description": "The absolute URL of the API.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -33640,7 +33640,7 @@
       },
       "stockBulkUpdate": {
         "type": "StockBulkUpdate",
-        "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock details were updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34832,7 +34832,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether checkout prices should include taxes when displayed in a storefront.\n\nAdded in Saleor 3.9.",
+        "description": "Determines whether displayed prices should include taxes.\n\nAdded in Saleor 3.9.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35810,7 +35810,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean",
-        "description": "Determines whether checkout prices should include taxes, when displayed in a storefront.",
+        "description": "Determines whether displayed prices should include taxes.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48722,7 +48722,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether this product's price displayed in a storefront should include taxes.\n\nAdded in Saleor 3.9.",
+        "description": "Determines whether displayed prices should include taxes.\n\nAdded in Saleor 3.9.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -62715,7 +62715,7 @@
   "StockBulkUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock details were updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -63974,7 +63974,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether prices displayed in a storefront should include taxes.",
+        "description": "Determines whether displayed prices should include taxes.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64174,7 +64174,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether prices displayed in a storefront should include taxes for this country.",
+        "description": "Determines whether displayed prices should include taxes for this country.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64210,7 +64210,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether prices displayed in a storefront should include taxes for this country.",
+        "description": "Determines whether displayed prices should include taxes for this country.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -64327,7 +64327,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean",
-        "description": "Determines whether prices displayed in a storefront should include taxes.",
+        "description": "Determines whether displayed prices should include taxes.",
         "deprecated": null,
         "message": null,
         "default": null
