@@ -1,22 +1,7 @@
 [
   {
-    "diff": "field_new",
-    "type": "OrderLine",
-    "field": "saleId"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderLine",
-    "field": "voucherCode"
-  },
-  {
-    "diff": "field_new",
-    "type": "Payment",
-    "field": "partial"
-  },
-  {
-    "diff": "field_new",
-    "type": "Payment",
-    "field": "pspReference"
+    "diff": "enum_value_new",
+    "enum": "OrderErrorCode",
+    "value": "INVALID_VOUCHER"
   }
 ]

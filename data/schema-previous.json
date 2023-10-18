@@ -37148,6 +37148,11 @@
         "deprecated": null,
         "message": null
       },
+      "INVALID_VOUCHER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_AVAILABLE_IN_CHANNEL": {
         "description": null,
         "deprecated": null,
