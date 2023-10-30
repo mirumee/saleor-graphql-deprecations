@@ -1,7 +1,147 @@
 [
   {
+    "diff": "type_new",
+    "type": "ExportVoucherCodes"
+  },
+  {
+    "diff": "type_new",
+    "type": "ExportVoucherCodesInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "VoucherCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "VoucherCodeBulkDelete"
+  },
+  {
+    "diff": "type_new",
+    "type": "VoucherCodeBulkDeleteError"
+  },
+  {
+    "diff": "type_new",
+    "type": "VoucherCodeBulkDeleteErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "VoucherCodeCountableConnection"
+  },
+  {
+    "diff": "type_new",
+    "type": "VoucherCodeCountableEdge"
+  },
+  {
+    "diff": "type_new",
+    "type": "VoucherCodeExportCompleted"
+  },
+  {
+    "diff": "field_new",
+    "type": "DiscountError",
+    "field": "voucherCodes"
+  },
+  {
+    "diff": "field_new",
+    "type": "DraftOrderCreateInput",
+    "field": "voucherCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "DraftOrderInput",
+    "field": "voucherCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "exportVoucherCodes"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "voucherCodeBulkDelete"
+  },
+  {
+    "diff": "field_new",
+    "type": "Order",
+    "field": "voucherCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderBulkCreateInput",
+    "field": "voucherCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "Voucher",
+    "field": "codes"
+  },
+  {
+    "diff": "field_new",
+    "type": "Voucher",
+    "field": "singleUse"
+  },
+  {
+    "diff": "field_new",
+    "type": "VoucherInput",
+    "field": "addCodes"
+  },
+  {
+    "diff": "field_new",
+    "type": "VoucherInput",
+    "field": "singleUse"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "OrderBulkCreateInput",
+    "field": "voucher",
+    "version": "3.19"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "Voucher",
+    "field": "code",
+    "version": "4.0"
+  },
+  {
+    "diff": "field_deprecated",
+    "type": "VoucherInput",
+    "field": "code",
+    "version": "4.0"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "DiscountErrorCode",
+    "value": "VOUCHER_ALREADY_USED"
+  },
+  {
     "diff": "enum_value_new",
     "enum": "OrderErrorCode",
-    "value": "INVALID_VOUCHER"
+    "value": "INVALID_VOUCHER_CODE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "VoucherSortField",
+    "value": "NAME"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
+  },
+  {
+    "diff": "enum_value_deprecated",
+    "enum": "VoucherSortField",
+    "value": "CODE",
+    "version": "4.0"
   }
 ]

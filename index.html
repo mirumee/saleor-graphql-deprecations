@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-10-27 14:01:04</p>
+      <p class="m-0">Generated on 2023-10-30 14:01:17</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -817,6 +817,17 @@
           
             <tr>
               <td>
+                <a href="#Voucher-code" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Voucher</td>
+                <td colspan="2">code</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#MenuItemTranslatableContent-menuItem" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -1271,6 +1282,17 @@
               
                 <td>VoucherSortingInput</td>
                 <td colspan="2">channel</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#VoucherSortField-CODE" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>VoucherSortField</td>
+                <td colspan="2">CODE</td>
               
               <td>4.0</td>
             </tr>
@@ -3561,6 +3583,17 @@
           
             <tr>
               <td>
+                <a href="#OrderBulkCreateInput-voucher" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>OrderBulkCreateInput</td>
+                <td colspan="2">voucher</td>
+              
+              <td>3.19</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#DeleteMetadata-metadataErrors" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -4076,6 +4109,17 @@
               
                 <td>VoucherCreate</td>
                 <td colspan="2">discountErrors</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#VoucherInput-code" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>VoucherInput</td>
+                <td colspan="2">code</td>
               
               <td>4.0</td>
             </tr>
@@ -6879,6 +6923,27 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
         </div>
       </div>
     
+      <div id="Voucher-code" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Voucher-code" class="text-reset">
+                Field <strong class="text-danger">code</strong> of type <strong class="text-danger">Voucher</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>The code of the voucher.This field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Voucher</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">code</strong>: String<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="MenuItemTranslatableContent-menuItem" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -7796,6 +7861,29 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use root-level channel arg
             <div class="font-monospace"><span class="text-primary">input</span> <strong>VoucherSortingInput</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">channel</strong>: String<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="VoucherSortField-CODE" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#VoucherSortField-CODE" class="text-reset">
+                Value <strong class="text-danger">CODE</strong> of enum <strong class="text-danger">VoucherSortField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Sort vouchers by code.
+
+DEPRECATED: this field will be removed in Saleor 4.0.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>VoucherSortField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">CODE</strong><br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -12451,6 +12539,30 @@ DEPRECATED: this field will be removed in Saleor 4.0.</p>
         </div>
       </div>
     
+      <div id="OrderBulkCreateInput-voucher" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#OrderBulkCreateInput-voucher" class="text-reset">
+                Field <strong class="text-danger">voucher</strong> of input <strong class="text-danger">OrderBulkCreateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 3.19</strong></p>
+            <p>Code of a voucher associated with the order.
+
+DEPRECATED: this field will be removed in Saleor 3.19. Use <strong class="text-danger font-monospace">voucherCode</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>OrderBulkCreateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">voucher</strong>: String<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="DeleteMetadata-metadataErrors" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -13498,6 +13610,28 @@ Requires one of the following permissions: MANAGE_DISCOUNTS.</p>
             <div class="font-monospace"><span class="text-primary">type</span> <strong>VoucherCreate</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">discountErrors</strong>: [DiscountError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="VoucherInput-code" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#VoucherInput-code" class="text-reset">
+                Field <strong class="text-danger">code</strong> of input <strong class="text-danger">VoucherInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>Code to use the voucher. This field will be removed in Saleor 4.0. Use <strong class="text-danger font-monospace">addCodes</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>VoucherInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">code</strong>: String<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

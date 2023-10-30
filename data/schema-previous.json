@@ -15887,6 +15887,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "voucherCodes": {
+        "type": "[String!]",
+        "description": "List of voucher codes which causes the error.\n\nAdded in Saleor 3.18.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -15932,6 +15939,11 @@
         "message": null
       },
       "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_ALREADY_USED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -16236,6 +16248,13 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "voucherCode": {
+        "type": "String",
+        "description": "A code of the voucher associated with the order.\n\nAdded in Saleor 3.18.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -16440,6 +16459,13 @@
       "voucher": {
         "type": "ID",
         "description": "ID of the voucher associated with the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "voucherCode": {
+        "type": "String",
+        "description": "A code of the voucher associated with the order.\n\nAdded in Saleor 3.18.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -17577,6 +17603,58 @@
         "description": "Export products with given ids.",
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "ExportVoucherCodes": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Export voucher codes to csv/xlsx file.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CODE_EXPORT_COMPLETED (async): A notification for the exported file.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[ExportError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "exportFile": {
+        "type": "ExportFile",
+        "description": "The newly created export file job which is responsible for export data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ExportVoucherCodesInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "fileType": {
+        "type": "FileTypesEnum!",
+        "description": "Type of exported file.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": "List of voucher code IDs to export.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "voucherId": {
+        "type": "ID",
+        "description": "The ID of the voucher. If provided, exports all codes belonging to the voucher.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -29983,6 +30061,21 @@
           }
         }
       },
+      "exportVoucherCodes": {
+        "type": "ExportVoucherCodes",
+        "description": "Export voucher codes to csv/xlsx file.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CODE_EXPORT_COMPLETED (async): A notification for the exported file.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "ExportVoucherCodesInput!",
+            "description": "Fields required to export voucher codes.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "externalAuthenticationUrl": {
         "type": "ExternalAuthenticationUrl",
         "description": "Prepare external authentication URL for user by custom plugin.",
@@ -34397,6 +34490,21 @@
           }
         }
       },
+      "voucherCodeBulkDelete": {
+        "type": "VoucherCodeBulkDelete",
+        "description": "Deletes voucher codes.\n\nAdded in Saleor 3.18. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "ids": {
+            "type": "[ID!]!",
+            "description": "List of voucher codes IDs to delete.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "voucherCreate": {
         "type": "VoucherCreate",
         "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CREATED (async): A voucher was created.",
@@ -35303,6 +35411,13 @@
         "message": null,
         "arguments": {}
       },
+      "voucherCode": {
+        "type": "String",
+        "description": "Voucher code that was used for Order.\n\nAdded in Saleor 3.18.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "weight": {
         "type": "Weight!",
         "description": null,
@@ -35915,7 +36030,14 @@
       },
       "voucher": {
         "type": "String",
-        "description": "Code of a voucher associated with the order.",
+        "description": "Code of a voucher associated with the order.\n\nDEPRECATED: this field will be removed in Saleor 3.19. Use `voucherCode` instead.",
+        "deprecated": "3.19",
+        "message": "Code of a voucher associated with the order.\n\nDEPRECATED: this field will be removed in Saleor 3.19. Use `voucherCode` instead.",
+        "default": null
+      },
+      "voucherCode": {
+        "type": "String",
+        "description": "Code of a voucher associated with the order.\n\nAdded in Saleor 3.18.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -37149,6 +37271,11 @@
         "message": null
       },
       "INVALID_VOUCHER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_VOUCHER_CODE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -68585,11 +68712,47 @@
         "arguments": {}
       },
       "code": {
-        "type": "String!",
-        "description": "The code of the voucher.",
+        "type": "String",
+        "description": "The code of the voucher.This field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "The code of the voucher.This field will be removed in Saleor 4.0.",
+        "arguments": {}
+      },
+      "codes": {
+        "type": "VoucherCodeCountableConnection",
+        "description": "List of codes available for this voucher.\n\nAdded in Saleor 3.18.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
+        "arguments": {
+          "after": {
+            "type": "String",
+            "description": "Return the elements in the list that come after the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "before": {
+            "type": "String",
+            "description": "Return the elements in the list that come before the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "first": {
+            "type": "Int",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "last": {
+            "type": "Int",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       },
       "collections": {
         "type": "CollectionCountableConnection",
@@ -68806,6 +68969,13 @@
             "default": null
           }
         }
+      },
+      "singleUse": {
+        "type": "Boolean!",
+        "description": "Determine if the voucher codes can be used once or multiple times.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       },
       "startDate": {
         "type": "DateTime!",
@@ -69069,6 +69239,232 @@
       "voucher": {
         "type": "Voucher",
         "description": "An updated voucher instance.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "VoucherCode": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents voucher code.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "String",
+        "description": "Code to use the voucher.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "createdAt": {
+        "type": "DateTime!",
+        "description": "Date time of code creation.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "id": {
+        "type": "ID!",
+        "description": "The ID of the voucher code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "isActive": {
+        "type": "Boolean",
+        "description": "Whether a code is active or not.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "used": {
+        "type": "Int",
+        "description": "Number of times a code has been used.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "VoucherCodeBulkDelete": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Deletes voucher codes.\n\nAdded in Saleor 3.18. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "count": {
+        "type": "Int!",
+        "description": "Returns how many codes were deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[VoucherCodeBulkDeleteError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "VoucherCodeBulkDeleteError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "VoucherCodeBulkDeleteErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "path": {
+        "type": "String",
+        "description": "Path to field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "voucherCodes": {
+        "type": "[ID!]",
+        "description": "List of voucher codes which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "VoucherCodeBulkDeleteErrorCode": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "VoucherCodeCountableConnection": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "edges": {
+        "type": "[VoucherCodeCountableEdge!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "pageInfo": {
+        "type": "PageInfo!",
+        "description": "Pagination data for this connection.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalCount": {
+        "type": "Int",
+        "description": "A total count of items in the collection.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "VoucherCodeCountableEdge": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "cursor": {
+        "type": "String!",
+        "description": "A cursor for use in pagination.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "node": {
+        "type": "VoucherCode!",
+        "description": "The item at the end of the edge.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "VoucherCodeExportCompleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when voucher code export is completed.\n\nAdded in Saleor 3.18.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "export": {
+        "type": "ExportFile",
+        "description": "The export file for voucher codes.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -69382,6 +69778,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "addCodes": {
+        "type": "[String!]",
+        "description": "List of codes to add.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "applyOncePerCustomer": {
         "type": "Boolean",
         "description": "Voucher should be applied once per customer.",
@@ -69405,9 +69808,9 @@
       },
       "code": {
         "type": "String",
-        "description": "Code to use the voucher.",
-        "deprecated": null,
-        "message": null,
+        "description": "Code to use the voucher. This field will be removed in Saleor 4.0. Use `addCodes` instead.",
+        "deprecated": "4.0",
+        "message": "Code to use the voucher. This field will be removed in Saleor 4.0. Use `addCodes` instead.",
         "default": null
       },
       "collections": {
@@ -69462,6 +69865,13 @@
       "products": {
         "type": "[ID!]",
         "description": "Products discounted by the voucher.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "singleUse": {
+        "type": "Boolean",
+        "description": "When set to 'True', each voucher code can be used only once; otherwise, codes can be used multiple times depending on `usageLimit`.\n\nThe option can only be changed if none of the voucher codes have been used.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -69587,9 +69997,9 @@
     "message": null,
     "values": {
       "CODE": {
-        "description": "Sort vouchers by code.",
-        "deprecated": null,
-        "message": null
+        "description": "Sort vouchers by code.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
+        "deprecated": "4.0",
+        "message": "Sort vouchers by code.\n\nDEPRECATED: this field will be removed in Saleor 4.0."
       },
       "END_DATE": {
         "description": "Sort vouchers by end date.",
@@ -69598,6 +70008,11 @@
       },
       "MINIMUM_SPENT_AMOUNT": {
         "description": "Sort vouchers by minimum spent amount.\n\nThis option requires a channel filter to work as the values can vary between channels.",
+        "deprecated": null,
+        "message": null
+      },
+      "NAME": {
+        "description": "Sort vouchers by name.\n\nAdded in Saleor 3.18.",
         "deprecated": null,
         "message": null
       },
@@ -71947,6 +72362,11 @@
         "deprecated": null,
         "message": null
       },
+      "VOUCHER_CODE_EXPORT_COMPLETED": {
+        "description": "A voucher code export is completed.\n\nAdded in Saleor 3.18.",
+        "deprecated": null,
+        "message": null
+      },
       "VOUCHER_CREATED": {
         "description": "A new voucher created.",
         "deprecated": null,
@@ -72762,6 +73182,11 @@
       },
       "TRANSLATION_UPDATED": {
         "description": "A translation is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_CODE_EXPORT_COMPLETED": {
+        "description": "A voucher code export is completed.\n\nAdded in Saleor 3.18.",
         "deprecated": null,
         "message": null
       },
@@ -73582,6 +74007,11 @@
         "message": null
       },
       "TRANSLATION_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_CODE_EXPORT_COMPLETED": {
         "description": null,
         "deprecated": null,
         "message": null
