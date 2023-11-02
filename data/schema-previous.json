@@ -9462,6 +9462,13 @@
         "message": null,
         "arguments": {}
       },
+      "voucher": {
+        "type": "Voucher",
+        "description": "The voucher assigned to the checkout.\n\nAdded in Saleor 3.18.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "voucherCode": {
         "type": "String",
         "description": "The code of voucher assigned to the checkout.",
