@@ -18180,6 +18180,13 @@
           }
         }
       },
+      "shippingRefundedAmount": {
+        "type": "Money",
+        "description": "Amount of refunded shipping price.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "status": {
         "type": "FulfillmentStatus!",
         "description": null,
@@ -18190,6 +18197,13 @@
       "statusDisplay": {
         "type": "String",
         "description": "User-friendly fulfillment status.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalRefundedAmount": {
+        "type": "Money",
+        "description": "Total refunded amount assigned to this fulfillment.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}

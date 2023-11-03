@@ -1,7 +1,12 @@
 [
   {
     "diff": "field_new",
-    "type": "Checkout",
-    "field": "voucher"
+    "type": "Fulfillment",
+    "field": "shippingRefundedAmount"
+  },
+  {
+    "diff": "field_new",
+    "type": "Fulfillment",
+    "field": "totalRefundedAmount"
   }
 ]
