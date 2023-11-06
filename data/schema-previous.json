@@ -40266,6 +40266,13 @@
         "message": null,
         "arguments": {}
       },
+      "includeDraftOrderInVoucherUsage": {
+        "type": "Boolean!",
+        "description": "Determine if voucher applied on draft order should be count toward voucher usage.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "markAsPaidStrategy": {
         "type": "MarkAsPaidStrategyEnum!",
         "description": "Determine what strategy will be used to mark the order as paid. Based on the chosen option, the proper object will be created and attached to the order when it's manually marked as paid.\n`PAYMENT_FLOW` - [default option] creates the `Payment` object.\n`TRANSACTION_FLOW` - creates the `TransactionItem` object.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -40362,6 +40369,13 @@
       "expireOrdersAfter": {
         "type": "Minute",
         "description": "Expiration time in minutes. Default null - means do not expire any orders. Enter 0 or null to disable.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "includeDraftOrderInVoucherUsage": {
+        "type": "Boolean",
+        "description": "Specify whether a coupon applied to draft orders will count toward voucher usage.\n\nWarning:  when switching this setting from `false` to `true`, the vouchers will be disconnected from all draft orders.\n\nAdded in Saleor 3.18.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null

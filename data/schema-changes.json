@@ -1,12 +1,12 @@
 [
   {
     "diff": "field_new",
-    "type": "Fulfillment",
-    "field": "shippingRefundedAmount"
+    "type": "OrderSettings",
+    "field": "includeDraftOrderInVoucherUsage"
   },
   {
     "diff": "field_new",
-    "type": "Fulfillment",
-    "field": "totalRefundedAmount"
+    "type": "OrderSettingsInput",
+    "field": "includeDraftOrderInVoucherUsage"
   }
 ]
