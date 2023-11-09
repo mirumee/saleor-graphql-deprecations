@@ -34103,7 +34103,7 @@
         "arguments": {
           "action": {
             "type": "TransactionFlowStrategyEnum",
-            "description": "The expected action called for the transaction. By default, the `channel.defaultTransactionFlowStrategy` will be used. The field can be used only by app that has `HANDLE_PAYMENTS` permission.",
+            "description": "The expected action called for the transaction. By default, the `channel.paymentSettings.defaultTransactionFlowStrategy` will be used.The field can be used only by app that has `HANDLE_PAYMENTS` permission.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -40245,13 +40245,6 @@
         "message": null,
         "arguments": {}
       },
-      "defaultTransactionFlowStrategy": {
-        "type": "TransactionFlowStrategyEnum!",
-        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.This preview feature field will be removed in Saleor 3.17. Use `PaymentSettings.defaultTransactionFlowStrategy` instead.",
-        "deprecated": "3.17",
-        "message": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.This preview feature field will be removed in Saleor 3.17. Use `PaymentSettings.defaultTransactionFlowStrategy` instead.",
-        "arguments": {}
-      },
       "deleteExpiredOrdersAfter": {
         "type": "Day!",
         "description": "The time in days after expired orders will be deleted.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -40352,13 +40345,6 @@
         "message": null,
         "default": null
       },
-      "defaultTransactionFlowStrategy": {
-        "type": "TransactionFlowStrategyEnum",
-        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nDEPRECATED: this preview feature field will be removed in Saleor 3.17. Use `PaymentSettingsInput.defaultTransactionFlowStrategy` instead.",
-        "deprecated": "3.17",
-        "message": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nDEPRECATED: this preview feature field will be removed in Saleor 3.17. Use `PaymentSettingsInput.defaultTransactionFlowStrategy` instead.",
-        "default": null
-      },
       "deleteExpiredOrdersAfter": {
         "type": "Day",
         "description": "The time in days after expired orders will be deleted.Allowed range is from 1 to 120.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -40434,7 +40420,7 @@
       },
       "automaticallyFulfillNonShippableGiftCard": {
         "type": "Boolean",
-        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By defualt set to True.",
+        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By default set to True.",
         "deprecated": null,
         "message": null,
         "default": null

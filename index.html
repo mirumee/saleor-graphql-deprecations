@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2023-11-08 14:00:58</p>
+      <p class="m-0">Generated on 2023-11-09 14:00:52</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -272,17 +272,6 @@
                 <td colspan="2">minimumOrderWeight</td>
               
               <td>4.0</td>
-            </tr>
-          
-            <tr>
-              <td>
-                <a href="#OrderSettings-defaultTransactionFlowStrategy" class="btn btn-primary btn-sm py-0 px-2">...</a>
-              </td>
-              
-                <td>OrderSettings</td>
-                <td colspan="2">defaultTransactionFlowStrategy</td>
-              
-              <td>3.17</td>
             </tr>
           
             <tr>
@@ -4423,17 +4412,6 @@
           
             <tr>
               <td>
-                <a href="#OrderSettingsInput-defaultTransactionFlowStrategy" class="btn btn-primary btn-sm py-0 px-2">...</a>
-              </td>
-              
-                <td>OrderSettingsInput</td>
-                <td colspan="2">defaultTransactionFlowStrategy</td>
-              
-              <td>3.17</td>
-            </tr>
-          
-            <tr>
-              <td>
                 <a href="#CheckoutSettingsInput-useLegacyErrorFlow" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -5859,31 +5837,6 @@ DEPRECATED: this value will be removed in Saleor 4.0. See the docs for more deta
             <div class="font-monospace"><span class="text-primary">type</span> <strong>ShippingMethod</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">minimumOrderWeight</strong>: Weight<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-}</div>
-          </div>
-        </div>
-      </div>
-    
-      <div id="OrderSettings-defaultTransactionFlowStrategy" class="border-bottom py-3 my-3">
-        <div class="row">
-          <div class="col-12 col-md">
-            <h2 class="fs-4 mb-3">
-              <a href="#OrderSettings-defaultTransactionFlowStrategy" class="text-reset">
-                Field <strong class="text-danger">defaultTransactionFlowStrategy</strong> of type <strong class="text-danger">OrderSettings</strong>
-              </a>
-            </h2>
-            <p>Removed in <strong>Saleor 3.17</strong></p>
-            <p>Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.
-
-Added in Saleor 3.13.
-
-Note: this API is currently in Feature Preview and can be subject to changes at later point.This preview feature field will be removed in Saleor 3.17. Use <strong class="text-danger font-monospace">PaymentSettings.defaultTransactionFlowStrategy</strong> instead.</p>
-          </div>
-          <div class="col-12 col-md">
-            <div class="font-monospace"><span class="text-primary">type</span> <strong>OrderSettings</strong> {<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-&nbsp;&nbsp;<strong class="text-danger">defaultTransactionFlowStrategy</strong>: TransactionFlowStrategyEnum!<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -14202,34 +14155,6 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
             <div class="font-monospace"><span class="text-primary">type</span> <strong>ChannelCreate</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">channelErrors</strong>: [ChannelError!]!<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-}</div>
-          </div>
-        </div>
-      </div>
-    
-      <div id="OrderSettingsInput-defaultTransactionFlowStrategy" class="border-bottom py-3 my-3">
-        <div class="row">
-          <div class="col-12 col-md">
-            <h2 class="fs-4 mb-3">
-              <a href="#OrderSettingsInput-defaultTransactionFlowStrategy" class="text-reset">
-                Field <strong class="text-danger">defaultTransactionFlowStrategy</strong> of input <strong class="text-danger">OrderSettingsInput</strong>
-                
-              </a>
-            </h2>
-            <p>Removed in <strong>Saleor 3.17</strong></p>
-            <p>Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.
-
-Added in Saleor 3.13.
-
-Note: this API is currently in Feature Preview and can be subject to changes at later point.
-
-DEPRECATED: this preview feature field will be removed in Saleor 3.17. Use <strong class="text-danger font-monospace">PaymentSettingsInput.defaultTransactionFlowStrategy</strong> instead.</p>
-          </div>
-          <div class="col-12 col-md">
-            <div class="font-monospace"><span class="text-primary">input</span> <strong>OrderSettingsInput</strong> {<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-&nbsp;&nbsp;<strong class="text-danger">defaultTransactionFlowStrategy</strong>: TransactionFlowStrategyEnum<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

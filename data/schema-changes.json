@@ -1,12 +1,12 @@
 [
   {
-    "diff": "field_new",
+    "diff": "field_deleted",
     "type": "OrderSettings",
-    "field": "includeDraftOrderInVoucherUsage"
+    "field": "defaultTransactionFlowStrategy"
   },
   {
-    "diff": "field_new",
+    "diff": "field_deleted",
     "type": "OrderSettingsInput",
-    "field": "includeDraftOrderInVoucherUsage"
+    "field": "defaultTransactionFlowStrategy"
   }
 ]
