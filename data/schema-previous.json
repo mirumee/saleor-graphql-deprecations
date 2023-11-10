@@ -72219,7 +72219,7 @@
         "message": null
       },
       "PRODUCT_VARIANT_DELETED": {
-        "description": "A product variant is deleted.",
+        "description": "A product variant is deleted. Warning: this event will not be executed when parent product has been deleted. Check PRODUCT_DELETED.",
         "deprecated": null,
         "message": null
       },
@@ -73007,7 +73007,7 @@
         "message": null
       },
       "PRODUCT_VARIANT_DELETED": {
-        "description": "A product variant is deleted.",
+        "description": "A product variant is deleted. Warning: this event will not be executed when parent product has been deleted. Check PRODUCT_DELETED.",
         "deprecated": null,
         "message": null
       },
