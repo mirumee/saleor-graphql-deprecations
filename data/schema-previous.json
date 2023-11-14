@@ -50666,6 +50666,11 @@
         "deprecated": null,
         "message": null
       },
+      "STOCK_ALREADY_EXISTS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "UNIQUE": {
         "description": null,
         "deprecated": null,

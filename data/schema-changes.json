@@ -1,12 +1,7 @@
 [
   {
-    "diff": "field_deleted",
-    "type": "OrderSettings",
-    "field": "defaultTransactionFlowStrategy"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "OrderSettingsInput",
-    "field": "defaultTransactionFlowStrategy"
+    "diff": "enum_value_new",
+    "enum": "ProductVariantBulkErrorCode",
+    "value": "STOCK_ALREADY_EXISTS"
   }
 ]
