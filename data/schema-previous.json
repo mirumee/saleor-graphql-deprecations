@@ -55663,8 +55663,8 @@
       "homepageEvents": {
         "type": "OrderEventCountableConnection",
         "description": "List of activity events to display on homepage (at the moment it only contains order-events).\n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {
           "after": {
             "type": "String",
@@ -55979,8 +55979,8 @@
       "ordersTotal": {
         "type": "TaxedMoney",
         "description": "Return the total sales amount from a specific period.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {
           "channel": {
             "type": "String",
@@ -56670,8 +56670,8 @@
       "reportProductSales": {
         "type": "ProductVariantCountableConnection",
         "description": "List of top selling products.\n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {
           "after": {
             "type": "String",
