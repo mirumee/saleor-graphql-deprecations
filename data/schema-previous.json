@@ -18080,21 +18080,21 @@
     "fields": {
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time when fulfillment was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "fulfillmentOrder": {
         "type": "Int!",
-        "description": null,
+        "description": "Sequence in which the fulfillments were created for an order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the fulfillment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18189,7 +18189,7 @@
       },
       "status": {
         "type": "FulfillmentStatus!",
-        "description": null,
+        "description": "Status of fulfillment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18210,7 +18210,7 @@
       },
       "trackingNumber": {
         "type": "String!",
-        "description": null,
+        "description": "Fulfillment tracking number.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18497,21 +18497,21 @@
     "fields": {
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the fulfillment line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "orderLine": {
         "type": "OrderLine",
-        "description": null,
+        "description": "The order line to which the fulfillment line is related.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "quantity": {
         "type": "Int!",
-        "description": null,
+        "description": "The number of items included in the fulfillment line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18876,7 +18876,7 @@
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time when gift card was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18933,14 +18933,14 @@
       },
       "expiryDate": {
         "type": "Date",
-        "description": null,
+        "description": "Expiry date of the gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18968,7 +18968,7 @@
       },
       "lastUsedOn": {
         "type": "DateTime",
-        "description": null,
+        "description": "Date and time when gift card was last used.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19752,7 +19752,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the event associated with a gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -20477,14 +20477,14 @@
     "fields": {
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the tag associated with a gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "name": {
         "type": "String!",
-        "description": null,
+        "description": "Name of the tag associated with a gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -34891,7 +34891,7 @@
       },
       "channel": {
         "type": "Channel!",
-        "description": null,
+        "description": "Channel through which the order was placed.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -34912,21 +34912,21 @@
       },
       "collectionPointName": {
         "type": "String",
-        "description": null,
+        "description": "Name of the collection point where the order should be picked up by the customer.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "created": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time when the order was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "customerNote": {
         "type": "String!",
-        "description": null,
+        "description": "Additional information provided by the customer about the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35010,7 +35010,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35175,7 +35175,7 @@
       },
       "redirectUrl": {
         "type": "String",
-        "description": null,
+        "description": "URL to which user should be redirected after order is placed.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35196,7 +35196,7 @@
       },
       "shippingMethodName": {
         "type": "String",
-        "description": null,
+        "description": "Method used for shipping.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35252,7 +35252,7 @@
       },
       "status": {
         "type": "OrderStatus!",
-        "description": null,
+        "description": "Status of the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35406,7 +35406,7 @@
       },
       "updatedAt": {
         "type": "DateTime!",
-        "description": null,
+        "description": "Date and time when the order was created.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35427,7 +35427,7 @@
       },
       "voucher": {
         "type": "Voucher",
-        "description": null,
+        "description": "Voucher linked to the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35441,7 +35441,7 @@
       },
       "weight": {
         "type": "Weight!",
-        "description": null,
+        "description": "Weight of the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -37450,7 +37450,7 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the event associated with an order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39103,14 +39103,14 @@
       },
       "id": {
         "type": "ID!",
-        "description": null,
+        "description": "ID of the order line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "isShippingRequired": {
         "type": "Boolean!",
-        "description": null,
+        "description": "Whether the product variant requires shipping.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39191,35 +39191,35 @@
       },
       "productName": {
         "type": "String!",
-        "description": null,
+        "description": "Name of the product in order line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "productSku": {
         "type": "String",
-        "description": null,
+        "description": "SKU of the product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "productVariantId": {
         "type": "String",
-        "description": null,
+        "description": "The ID of the product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "quantity": {
         "type": "Int!",
-        "description": null,
+        "description": "Number of variant items ordered.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "quantityFulfilled": {
         "type": "Int!",
-        "description": null,
+        "description": "Number of variant items fulfilled.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39268,7 +39268,7 @@
       },
       "taxRate": {
         "type": "Float!",
-        "description": null,
+        "description": "Rate of tax applied on product variant.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39339,7 +39339,7 @@
       },
       "unitDiscountReason": {
         "type": "String",
-        "description": null,
+        "description": "Reason for any discounts applied on a product in the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39374,7 +39374,7 @@
       },
       "variantName": {
         "type": "String!",
-        "description": null,
+        "description": "Name of the variant of product in order line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -53969,7 +53969,7 @@
     "fields": {
       "addChannels": {
         "type": "[ID!]",
-        "description": "List of channel ids to remove.",
+        "description": "List of channel ids to add.",
         "deprecated": null,
         "message": null,
         "default": null
