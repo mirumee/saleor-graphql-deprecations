@@ -1966,6 +1966,13 @@
         "message": null,
         "arguments": {}
       },
+      "identifier": {
+        "type": "String",
+        "description": "Canonical app ID from the manifest\n\nAdded in Saleor 3.19.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "isActive": {
         "type": "Boolean",
         "description": "Determine if app will be set active or not.",

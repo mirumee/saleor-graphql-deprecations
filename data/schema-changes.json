@@ -1,20 +1,7 @@
 [
   {
-    "diff": "field_deprecated",
-    "type": "Query",
-    "field": "homepageEvents",
-    "version": "4.0"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "Query",
-    "field": "ordersTotal",
-    "version": "4.0"
-  },
-  {
-    "diff": "field_deprecated",
-    "type": "Query",
-    "field": "reportProductSales",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "App",
+    "field": "identifier"
   }
 ]
