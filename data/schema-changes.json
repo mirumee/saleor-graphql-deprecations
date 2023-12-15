@@ -1,7 +1,12 @@
 [
   {
     "diff": "field_new",
-    "type": "App",
-    "field": "identifier"
+    "type": "TransactionItem",
+    "field": "checkout"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "OrderBulkCreateInput",
+    "field": "voucher"
   }
 ]

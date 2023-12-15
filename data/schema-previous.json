@@ -36056,13 +36056,6 @@
         "message": null,
         "default": null
       },
-      "voucher": {
-        "type": "String",
-        "description": "Code of a voucher associated with the order.\n\nDEPRECATED: this field will be removed in Saleor 3.19. Use `voucherCode` instead.",
-        "deprecated": "3.19",
-        "message": "Code of a voucher associated with the order.\n\nDEPRECATED: this field will be removed in Saleor 3.19. Use `voucherCode` instead.",
-        "default": null
-      },
       "voucherCode": {
         "type": "String",
         "description": "Code of a voucher associated with the order.\n\nAdded in Saleor 3.18.",
@@ -66194,6 +66187,13 @@
       "chargedAmount": {
         "type": "Money!",
         "description": "Total amount charged for this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "checkout": {
+        "type": "Checkout",
+        "description": "The related checkout.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
