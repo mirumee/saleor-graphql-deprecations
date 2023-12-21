@@ -34136,6 +34136,13 @@
             "message": null,
             "default": null
           },
+          "idempotencyKey": {
+            "type": "String",
+            "description": "The idempotency key assigned to the action. It will be passed to the payment app to discover potential duplicate actions. If not provided, the default one will be generated. If empty string provided, INVALID error code will be raised.\n\nAdded in Saleor 3.14.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "paymentGateway": {
             "type": "PaymentGatewayToInitialize!",
             "description": "Payment gateway used to initialize the transaction.",
@@ -65700,6 +65707,13 @@
         "message": null,
         "arguments": {}
       },
+      "idempotencyKey": {
+        "type": "String",
+        "description": "Idempotency key assigned to the event.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "message": {
         "type": "String!",
         "description": "Message related to the transaction's event.\n\nAdded in Saleor 3.13.",
@@ -66048,6 +66062,11 @@
         "description": null,
         "deprecated": null,
         "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -66077,6 +66096,13 @@
       "data": {
         "type": "JSON",
         "description": "Payment gateway data in JSON format, received from storefront.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "idempotencyKey": {
+        "type": "String!",
+        "description": "Idempotency key assigned to the transaction initialize.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}

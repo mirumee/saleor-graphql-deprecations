@@ -1,12 +1,17 @@
 [
   {
     "diff": "field_new",
-    "type": "TransactionItem",
-    "field": "checkout"
+    "type": "TransactionEvent",
+    "field": "idempotencyKey"
   },
   {
-    "diff": "field_deleted",
-    "type": "OrderBulkCreateInput",
-    "field": "voucher"
+    "diff": "field_new",
+    "type": "TransactionInitializeSession",
+    "field": "idempotencyKey"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionInitializeErrorCode",
+    "value": "UNIQUE"
   }
 ]
