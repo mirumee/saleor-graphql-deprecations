@@ -33761,7 +33761,7 @@
       },
       "stockBulkUpdate": {
         "type": "StockBulkUpdate",
-        "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock details were updated.",
+        "description": "Updates stocks for a given variant and warehouse. Variant and warehouse selectors have to be the same for all stock inputs. Is not allowed to use 'variantId' in one input and 'variantExternalReference' in another.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock details were updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -62880,7 +62880,7 @@
   "StockBulkUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates stocks for a given variant and warehouse.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock details were updated.",
+    "description": "Updates stocks for a given variant and warehouse. Variant and warehouse selectors have to be the same for all stock inputs. Is not allowed to use 'variantId' in one input and 'variantExternalReference' in another.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock details were updated.",
     "deprecated": null,
     "message": null,
     "fields": {
