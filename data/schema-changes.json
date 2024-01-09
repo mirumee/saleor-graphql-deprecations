@@ -1,17 +1,40 @@
 [
   {
-    "diff": "field_new",
-    "type": "TransactionEvent",
-    "field": "idempotencyKey"
+    "diff": "type_new",
+    "type": "VoucherCodesCreated"
   },
   {
-    "diff": "field_new",
-    "type": "TransactionInitializeSession",
-    "field": "idempotencyKey"
+    "diff": "type_new",
+    "type": "VoucherCodesDeleted"
   },
   {
     "diff": "enum_value_new",
-    "enum": "TransactionInitializeErrorCode",
-    "value": "UNIQUE"
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "VOUCHER_CODES_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "VOUCHER_CODES_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "VOUCHER_CODES_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "VOUCHER_CODES_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "VOUCHER_CODES_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "VOUCHER_CODES_DELETED"
   }
 ]

@@ -34527,7 +34527,7 @@
       },
       "voucherCodeBulkDelete": {
         "type": "VoucherCodeBulkDelete",
-        "description": "Deletes voucher codes.\n\nAdded in Saleor 3.18. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
+        "description": "Deletes voucher codes.\n\nAdded in Saleor 3.18. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CODES_DELETED (async): A voucher codes were deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34542,7 +34542,7 @@
       },
       "voucherCreate": {
         "type": "VoucherCreate",
-        "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CREATED (async): A voucher was created.",
+        "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CREATED (async): A voucher was created.\n- VOUCHER_CODES_CREATED (async): A voucher codes were created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34601,7 +34601,7 @@
       },
       "voucherUpdate": {
         "type": "VoucherUpdate",
-        "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
+        "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.\n- VOUCHER_CODES_CREATED (async): A voucher code was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -69351,7 +69351,7 @@
   "VoucherCodeBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes voucher codes.\n\nAdded in Saleor 3.18. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
+    "description": "Deletes voucher codes.\n\nAdded in Saleor 3.18. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CODES_DELETED (async): A voucher codes were deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -69530,6 +69530,98 @@
       }
     }
   },
+  "VoucherCodesCreated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new voucher codes were created.\n\nAdded in Saleor 3.19.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "voucherCodes": {
+        "type": "[VoucherCode!]",
+        "description": "The voucher codes the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "VoucherCodesDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when voucher codes were deleted.\n\nAdded in Saleor 3.19.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "voucherCodes": {
+        "type": "[VoucherCode!]",
+        "description": "The voucher codes the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "VoucherCountableConnection": {
     "type": "object",
     "interfaces": [],
@@ -69586,7 +69678,7 @@
   "VoucherCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CREATED (async): A voucher was created.",
+    "description": "Creates a new voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CREATED (async): A voucher was created.\n- VOUCHER_CODES_CREATED (async): A voucher codes were created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -70261,7 +70353,7 @@
   "VoucherUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.",
+    "description": "Updates a voucher. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_UPDATED (async): A voucher was updated.\n- VOUCHER_CODES_CREATED (async): A voucher code was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -72421,6 +72513,16 @@
         "deprecated": null,
         "message": null
       },
+      "VOUCHER_CODES_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_CODES_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "VOUCHER_CODE_EXPORT_COMPLETED": {
         "description": "A voucher code export is completed.\n\nAdded in Saleor 3.18.",
         "deprecated": null,
@@ -73241,6 +73343,16 @@
       },
       "TRANSLATION_UPDATED": {
         "description": "A translation is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_CODES_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_CODES_DELETED": {
+        "description": null,
         "deprecated": null,
         "message": null
       },
@@ -74066,6 +74178,16 @@
         "message": null
       },
       "TRANSLATION_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_CODES_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_CODES_DELETED": {
         "description": null,
         "deprecated": null,
         "message": null
