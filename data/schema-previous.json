@@ -74474,7 +74474,7 @@
       },
       "value": {
         "type": "Float!",
-        "description": "Weight value.",
+        "description": "Weight value. Returns a value with maximal three decimal places",
         "deprecated": null,
         "message": null,
         "arguments": {}
