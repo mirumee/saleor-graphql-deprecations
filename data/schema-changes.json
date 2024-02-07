@@ -1,40 +1,132 @@
 [
   {
     "diff": "type_new",
-    "type": "VoucherCodesCreated"
+    "type": "DiscountedObjectWhereInput"
   },
   {
     "diff": "type_new",
-    "type": "VoucherCodesDeleted"
+    "type": "OrderPredicateInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionTypeEnum"
+  },
+  {
+    "diff": "type_new",
+    "type": "PromotionTypeEnumFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "RewardTypeEnum"
+  },
+  {
+    "diff": "field_new",
+    "type": "Promotion",
+    "field": "type"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionCreateError",
+    "field": "exceedBy"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionCreateError",
+    "field": "rulesLimit"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionCreateInput",
+    "field": "type"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRule",
+    "field": "orderPredicate"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRule",
+    "field": "predicateType"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRule",
+    "field": "rewardType"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleCreateError",
+    "field": "exceedBy"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleCreateError",
+    "field": "rulesLimit"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleCreateInput",
+    "field": "orderPredicate"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleCreateInput",
+    "field": "rewardType"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleInput",
+    "field": "orderPredicate"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleInput",
+    "field": "rewardType"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleUpdateInput",
+    "field": "orderPredicate"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionRuleUpdateInput",
+    "field": "rewardType"
+  },
+  {
+    "diff": "field_new",
+    "type": "PromotionWhereInput",
+    "field": "type"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "VOUCHER_CODES_CREATED"
+    "enum": "OrderDiscountType",
+    "value": "ORDER_PROMOTION"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "VOUCHER_CODES_DELETED"
+    "enum": "PromotionCreateErrorCode",
+    "value": "MISSING_CHANNELS"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "VOUCHER_CODES_CREATED"
+    "enum": "PromotionCreateErrorCode",
+    "value": "RULES_NUMBER_LIMIT"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "VOUCHER_CODES_DELETED"
+    "enum": "PromotionRuleCreateErrorCode",
+    "value": "MISSING_CHANNELS"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "VOUCHER_CODES_CREATED"
+    "enum": "PromotionRuleCreateErrorCode",
+    "value": "RULES_NUMBER_LIMIT"
   },
   {
     "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "VOUCHER_CODES_DELETED"
+    "enum": "PromotionRuleUpdateErrorCode",
+    "value": "REQUIRED"
   }
 ]

@@ -16005,6 +16005,42 @@
       }
     }
   },
+  "DiscountedObjectWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[DiscountedObjectWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[DiscountedObjectWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "baseSubtotalPrice": {
+        "type": "DecimalFilterInput",
+        "description": "Filter by the base subtotal price.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "baseTotalPrice": {
+        "type": "DecimalFilterInput",
+        "description": "Filter by the base total price.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "DistanceUnitsEnum": {
     "type": "enum",
     "description": "An enumeration.",
@@ -37064,6 +37100,11 @@
         "deprecated": null,
         "message": null
       },
+      "ORDER_PROMOTION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PROMOTION": {
         "description": null,
         "deprecated": null,
@@ -39964,6 +40005,35 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "OrderPredicateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[OrderPredicateInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[OrderPredicateInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "discountedObjectPredicate": {
+        "type": "DiscountedObjectWhereInput",
+        "description": "Defines the conditions related to checkout and order objects.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -52569,6 +52639,13 @@
           }
         }
       },
+      "type": {
+        "type": "PromotionTypeEnum",
+        "description": "The type of the promotion. Implicate if the discount is applied on catalogue or order level.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "updatedAt": {
         "type": "DateTime!",
         "description": "Date time of last update of promotion.",
@@ -52691,6 +52768,13 @@
         "message": null,
         "arguments": {}
       },
+      "exceedBy": {
+        "type": "Int",
+        "description": "Number of rules with orderPredicate defined exceeding the limit.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "field": {
         "type": "String",
         "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
@@ -52708,6 +52792,13 @@
       "message": {
         "type": "String",
         "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "rulesLimit": {
+        "type": "Int",
+        "description": "Limit of rules with orderPredicate defined.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52735,6 +52826,11 @@
         "deprecated": null,
         "message": null
       },
+      "MISSING_CHANNELS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MULTIPLE_CURRENCIES_NOT_ALLOWED": {
         "description": null,
         "deprecated": null,
@@ -52746,6 +52842,11 @@
         "message": null
       },
       "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "RULES_NUMBER_LIMIT": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -52789,6 +52890,13 @@
       "startDate": {
         "type": "DateTime",
         "description": "The start date of the promotion in ISO 8601 format.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "type": {
+        "type": "PromotionTypeEnum",
+        "description": "Defines the promotion type. Implicate the required promotion rules predicate type and whether the promotion rules will give the catalogue or order discount. \n\nThe default value is `Catalogue`.\n\nThis field will be required from Saleor 3.20.\n\nAdded in Saleor 3.19.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -53223,6 +53331,20 @@
         "message": null,
         "arguments": {}
       },
+      "orderPredicate": {
+        "type": "JSON",
+        "description": "The checkout/order predicate that must be met to apply the rule reward.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "predicateType": {
+        "type": "PromotionTypeEnum",
+        "description": "The type of the predicate that must be met to apply the reward.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "promotion": {
         "type": "Promotion",
         "description": "Promotion to which the rule belongs.",
@@ -53230,9 +53352,16 @@
         "message": null,
         "arguments": {}
       },
+      "rewardType": {
+        "type": "RewardTypeEnum",
+        "description": "The reward type of the promotion rule.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "rewardValue": {
         "type": "PositiveDecimal",
-        "description": "The reward value of the promotion rule. Defines the discount value applied when the rule conditions are met.",
+        "description": "The reward value of the promotion rule. Defines the discount value applied when the rule conditions are met.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -53298,6 +53427,13 @@
         "message": null,
         "arguments": {}
       },
+      "exceedBy": {
+        "type": "Int",
+        "description": "Number of rules with orderPredicate defined exceeding the limit.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "field": {
         "type": "String",
         "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
@@ -53308,6 +53444,13 @@
       "message": {
         "type": "String",
         "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "rulesLimit": {
+        "type": "Int",
+        "description": "Limit of rules with orderPredicate defined.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -53335,6 +53478,11 @@
         "deprecated": null,
         "message": null
       },
+      "MISSING_CHANNELS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MULTIPLE_CURRENCIES_NOT_ALLOWED": {
         "description": null,
         "deprecated": null,
@@ -53346,6 +53494,11 @@
         "message": null
       },
       "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "RULES_NUMBER_LIMIT": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -53386,9 +53539,23 @@
         "message": null,
         "default": null
       },
+      "orderPredicate": {
+        "type": "OrderPredicateInput",
+        "description": "Defines the conditions on the checkout/draft order level that must be met for the reward to be applied.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "promotion": {
         "type": "ID!",
         "description": "The ID of the promotion that rule belongs to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardType": {
+        "type": "RewardTypeEnum",
+        "description": "Defines the reward type of the promotion rule.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -53718,6 +53885,20 @@
         "message": null,
         "default": null
       },
+      "orderPredicate": {
+        "type": "OrderPredicateInput",
+        "description": "Defines the conditions on the checkout/draft order level that must be met for the reward to be applied.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardType": {
+        "type": "RewardTypeEnum",
+        "description": "Defines the reward type of the promotion rule.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "rewardValue": {
         "type": "PositiveDecimal",
         "description": "Defines the discount value. Required when catalogue predicate is provided.",
@@ -53965,6 +54146,11 @@
         "description": null,
         "deprecated": null,
         "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -54002,9 +54188,23 @@
         "message": null,
         "default": null
       },
+      "orderPredicate": {
+        "type": "OrderPredicateInput",
+        "description": "Defines the conditions on the checkout/draft order level that must be met for the reward to be applied.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "removeChannels": {
         "type": "[ID!]",
         "description": "List of channel ids to remove.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "rewardType": {
+        "type": "RewardTypeEnum",
+        "description": "Defines the reward type of the promotion rule.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -54386,6 +54586,46 @@
       }
     }
   },
+  "PromotionTypeEnum": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CATALOGUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "ORDER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PromotionTypeEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "PromotionTypeEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[PromotionTypeEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "PromotionUpdate": {
     "type": "object",
     "interfaces": [],
@@ -54647,6 +54887,13 @@
       "startDate": {
         "type": "DateTimeFilterInput",
         "description": "Filter promotions by start date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "type": {
+        "type": "PromotionTypeEnumFilterInput",
+        "description": null,
         "deprecated": null,
         "message": null,
         "default": null
@@ -57605,6 +57852,19 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "RewardTypeEnum": {
+    "type": "enum",
+    "description": "An enumeration.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "SUBTOTAL_DISCOUNT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
