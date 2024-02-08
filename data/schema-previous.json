@@ -34102,8 +34102,8 @@
             "default": null
           },
           "id": {
-            "type": "ID!",
-            "description": "The ID of the transaction.",
+            "type": "ID",
+            "description": "The ID of the transaction. One of field id or token is required.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34125,6 +34125,13 @@
           "time": {
             "type": "DateTime",
             "description": "The time of the event to report. If not provide, the current time will be used.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "token": {
+            "type": "UUID",
+            "description": "The token of the transaction. One of field id or token is required.\n\nAdded in Saleor 3.14.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34209,8 +34216,15 @@
             "default": null
           },
           "id": {
-            "type": "ID!",
-            "description": "The ID of the transaction to process.",
+            "type": "ID",
+            "description": "The ID of the transaction to process. One of field id or token is required.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "token": {
+            "type": "UUID",
+            "description": "The token of the transaction to process. One of field id or token is required.\n\nAdded in Saleor 3.14.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34238,8 +34252,15 @@
             "default": null
           },
           "id": {
-            "type": "ID!",
-            "description": "The ID of the transaction.",
+            "type": "ID",
+            "description": "The ID of the transaction. One of field id or token is required.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "token": {
+            "type": "UUID",
+            "description": "The token of the transaction. One of field id or token is required.\n\nAdded in Saleor 3.14.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34260,8 +34281,15 @@
             "default": null
           },
           "id": {
-            "type": "ID!",
-            "description": "The ID of the transaction.",
+            "type": "ID",
+            "description": "The ID of the transaction. One of field id or token is required.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "token": {
+            "type": "UUID",
+            "description": "The token of the transaction. One of field id or token is required.\n\nAdded in Saleor 3.14.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34275,8 +34303,15 @@
         "message": null,
         "arguments": {
           "id": {
-            "type": "ID!",
-            "description": "The ID of the transaction.",
+            "type": "ID",
+            "description": "The ID of the transaction. One of field id or token is required.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "token": {
+            "type": "UUID",
+            "description": "The token of the transaction. One of field id or token is required.\n\nAdded in Saleor 3.14.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57403,8 +57438,15 @@
         "message": null,
         "arguments": {
           "id": {
-            "type": "ID!",
-            "description": "ID of a transaction.",
+            "type": "ID",
+            "description": "ID of a transaction. Either it or token is required to fetch the transaction data.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "token": {
+            "type": "UUID",
+            "description": "Token of a transaction. Either it or ID is required to fetch the transaction data.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -66638,6 +66680,13 @@
       "refundedAmount": {
         "type": "Money!",
         "description": "Total amount refunded for this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "token": {
+        "type": "UUID!",
+        "description": "The transaction token.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
