@@ -10260,6 +10260,16 @@
         "deprecated": null,
         "message": null
       },
+      "NON_EDITABLE_GIFT_LINE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NON_REMOVABLE_GIFT_LINE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_FOUND": {
         "description": null,
         "deprecated": null,
@@ -10548,6 +10558,13 @@
       "id": {
         "type": "ID!",
         "description": "The ID of the checkout line.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "isGift": {
+        "type": "Boolean",
+        "description": "Determine if the line is a gift.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -37384,6 +37401,16 @@
         "deprecated": null,
         "message": null
       },
+      "NON_EDITABLE_GIFT_LINE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NON_REMOVABLE_GIFT_LINE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_AVAILABLE_IN_CHANNEL": {
         "description": null,
         "deprecated": null,
@@ -39187,6 +39214,13 @@
       "id": {
         "type": "ID!",
         "description": "ID of the order line.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "isGift": {
+        "type": "Boolean",
+        "description": "Determine if the line is a gift.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52803,16 +52837,23 @@
         "message": null,
         "arguments": {}
       },
-      "exceedBy": {
-        "type": "Int",
-        "description": "Number of rules with orderPredicate defined exceeding the limit.",
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
-      "field": {
-        "type": "String",
-        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+      "giftsLimit": {
+        "type": "Int",
+        "description": "Limit of gifts assigned to promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftsLimitExceedBy": {
+        "type": "Int",
+        "description": "Number of gifts defined for this promotion rule exceeding the limit.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52837,6 +52878,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "rulesLimitExceedBy": {
+        "type": "Int",
+        "description": "Number of rules with orderPredicate defined exceeding the limit.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -52846,12 +52894,22 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "GIFTS_NUMBER_LIMIT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
         "message": null
       },
       "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_GIFT_TYPE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -53352,6 +53410,20 @@
         "message": null,
         "arguments": {}
       },
+      "giftIds": {
+        "type": "[ID!]",
+        "description": "Product variant IDs available as a gift to choose.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftsLimit": {
+        "type": "Int",
+        "description": "Defines the maximum number of gifts to choose from the gifts list.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "id": {
         "type": "ID!",
         "description": null,
@@ -53462,16 +53534,23 @@
         "message": null,
         "arguments": {}
       },
-      "exceedBy": {
-        "type": "Int",
-        "description": "Number of rules with orderPredicate defined exceeding the limit.",
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
-      "field": {
-        "type": "String",
-        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+      "giftsLimit": {
+        "type": "Int",
+        "description": "Limit of gifts assigned to promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftsLimitExceedBy": {
+        "type": "Int",
+        "description": "Number of gifts defined for this promotion rule exceeding the limit.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -53489,6 +53568,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "rulesLimitExceedBy": {
+        "type": "Int",
+        "description": "Number of rules with orderPredicate defined exceeding the limit.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -53498,12 +53584,22 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "GIFTS_NUMBER_LIMIT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
         "message": null
       },
       "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_GIFT_TYPE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -53563,6 +53659,13 @@
       "description": {
         "type": "JSON",
         "description": "Promotion rule description.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "gifts": {
+        "type": "[ID!]",
+        "description": "Product variant IDs available as a gift to choose.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -53913,6 +54016,13 @@
         "message": null,
         "default": null
       },
+      "gifts": {
+        "type": "[ID!]",
+        "description": "Product variant IDs available as a gift to choose.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "name": {
         "type": "String",
         "description": "Promotion rule name.",
@@ -54132,6 +54242,20 @@
         "message": null,
         "arguments": {}
       },
+      "giftsLimit": {
+        "type": "Int",
+        "description": "Limit of gifts assigned to promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftsLimitExceedBy": {
+        "type": "Int",
+        "description": "Number of gifts defined for this promotion rule exceeding the limit.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "message": {
         "type": "String",
         "description": "The error message.",
@@ -54152,12 +54276,22 @@
         "deprecated": null,
         "message": null
       },
+      "GIFTS_NUMBER_LIMIT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
         "message": null
       },
       "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_GIFT_TYPE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -54202,6 +54336,13 @@
         "message": null,
         "default": null
       },
+      "addGifts": {
+        "type": "[ID!]",
+        "description": "List of variant IDs available as a gift to add.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "cataloguePredicate": {
         "type": "CataloguePredicateInput",
         "description": "Defines the conditions on the catalogue level that must be met for the reward to be applied.",
@@ -54233,6 +54374,13 @@
       "removeChannels": {
         "type": "[ID!]",
         "description": "List of channel ids to remove.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "removeGifts": {
+        "type": "[ID!]",
+        "description": "List of variant IDs available as a gift to remove.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -57903,6 +58051,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "GIFT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "SUBTOTAL_DISCOUNT": {
         "description": null,
         "deprecated": null,
