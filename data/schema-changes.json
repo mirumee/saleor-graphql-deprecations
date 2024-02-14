@@ -1,147 +1,32 @@
 [
   {
     "diff": "field_new",
-    "type": "CheckoutLine",
-    "field": "isGift"
+    "type": "AppInput",
+    "field": "identifier"
   },
   {
     "diff": "field_new",
-    "type": "OrderLine",
-    "field": "isGift"
+    "type": "Shop",
+    "field": "availableTaxApps"
   },
   {
     "diff": "field_new",
-    "type": "PromotionCreateError",
-    "field": "giftsLimit"
+    "type": "TaxConfiguration",
+    "field": "taxAppId"
   },
   {
     "diff": "field_new",
-    "type": "PromotionCreateError",
-    "field": "giftsLimitExceedBy"
+    "type": "TaxConfigurationPerCountry",
+    "field": "taxAppId"
   },
   {
     "diff": "field_new",
-    "type": "PromotionCreateError",
-    "field": "rulesLimitExceedBy"
+    "type": "TaxConfigurationPerCountryInput",
+    "field": "taxAppId"
   },
   {
     "diff": "field_new",
-    "type": "PromotionRule",
-    "field": "giftIds"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRule",
-    "field": "giftsLimit"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleCreateError",
-    "field": "giftsLimit"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleCreateError",
-    "field": "giftsLimitExceedBy"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleCreateError",
-    "field": "rulesLimitExceedBy"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleCreateInput",
-    "field": "gifts"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleInput",
-    "field": "gifts"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleUpdateError",
-    "field": "giftsLimit"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleUpdateError",
-    "field": "giftsLimitExceedBy"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleUpdateInput",
-    "field": "addGifts"
-  },
-  {
-    "diff": "field_new",
-    "type": "PromotionRuleUpdateInput",
-    "field": "removeGifts"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "PromotionCreateError",
-    "field": "exceedBy"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "PromotionRuleCreateError",
-    "field": "exceedBy"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "CheckoutErrorCode",
-    "value": "NON_EDITABLE_GIFT_LINE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "CheckoutErrorCode",
-    "value": "NON_REMOVABLE_GIFT_LINE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "OrderErrorCode",
-    "value": "NON_EDITABLE_GIFT_LINE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "OrderErrorCode",
-    "value": "NON_REMOVABLE_GIFT_LINE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "PromotionCreateErrorCode",
-    "value": "GIFTS_NUMBER_LIMIT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "PromotionCreateErrorCode",
-    "value": "INVALID_GIFT_TYPE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "PromotionRuleCreateErrorCode",
-    "value": "GIFTS_NUMBER_LIMIT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "PromotionRuleCreateErrorCode",
-    "value": "INVALID_GIFT_TYPE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "PromotionRuleUpdateErrorCode",
-    "value": "GIFTS_NUMBER_LIMIT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "PromotionRuleUpdateErrorCode",
-    "value": "INVALID_GIFT_TYPE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "RewardTypeEnum",
-    "value": "GIFT"
+    "type": "TaxConfigurationUpdateInput",
+    "field": "taxAppId"
   }
 ]

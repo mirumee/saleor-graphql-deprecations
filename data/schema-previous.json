@@ -2843,6 +2843,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "identifier": {
+        "type": "String",
+        "description": "Canonical app ID. If not provided, the identifier will be generated based on app.id.\n\nAdded in Saleor 3.19.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "name": {
         "type": "String",
         "description": "Name of the app.",
@@ -61657,6 +61664,13 @@
           }
         }
       },
+      "availableTaxApps": {
+        "type": "[App!]!",
+        "description": "List of tax apps that can be assigned to the channel. The list will be calculated by Saleor based on the apps that are subscribed to webhooks related to tax calculations: CHECKOUT_CALCULATE_TAXES\n\nAdded in Saleor 3.19.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, MANAGE_APPS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "channelCurrencies": {
         "type": "[String!]!",
         "description": "List of all currencies supported by shop's channels.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
@@ -64687,6 +64701,13 @@
           }
         }
       },
+      "taxAppId": {
+        "type": "String",
+        "description": "The tax app id that will be used to calculate the taxes for the given channel. Empty value for `TAX_APP` set as `taxCalculationStrategy` means that Saleor will iterate over all installed tax apps. If multiple tax apps exist with provided tax app id use the `App` with newest `created` date. Will become mandatory in 4.0 for `TAX_APP` `taxCalculationStrategy`.\n\nAdded in Saleor 3.19.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "taxCalculationStrategy": {
         "type": "TaxCalculationStrategy",
         "description": "The default strategy to use for tax calculation in the given channel. Taxes can be calculated either using user-defined flat rates or with a tax app. Empty value means that no method is selected and taxes are not calculated.",
@@ -64799,6 +64820,13 @@
         "message": null,
         "arguments": {}
       },
+      "taxAppId": {
+        "type": "String",
+        "description": "The tax app id that will be used to calculate the taxes for the given channel and country. If not provided, use the value from the channel's tax configuration.\n\nAdded in Saleor 3.19.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "taxCalculationStrategy": {
         "type": "TaxCalculationStrategy",
         "description": "A country-specific strategy to use for tax calculation. Taxes can be calculated either using user-defined flat rates or with a tax app. If not provided, use the value from the channel's tax configuration.",
@@ -64831,6 +64859,13 @@
       "displayGrossPrices": {
         "type": "Boolean!",
         "description": "Determines whether displayed prices should include taxes for this country.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "taxAppId": {
+        "type": "String",
+        "description": "The tax app identifier that will be used to calculate the taxes for the given channel and country. If not provided, use the value from the channel's tax configuration.\n\nAdded in Saleor 3.19.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -64962,6 +64997,13 @@
       "removeCountriesConfiguration": {
         "type": "[CountryCode!]",
         "description": "List of country codes for which to remove the tax configuration.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "taxAppId": {
+        "type": "String",
+        "description": "The tax app id that will be used to calculate the taxes for the given channel. Empty value for `TAX_APP` set as `taxCalculationStrategy` means that Saleor will iterate over all installed tax apps. If multiple tax apps exist with provided tax app id use the `App` with newest `created` date. Will become mandatory in 4.0 for `TAX_APP` `taxCalculationStrategy`.\n\nAdded in Saleor 3.19.",
         "deprecated": null,
         "message": null,
         "default": null
