@@ -10100,7 +10100,7 @@
   "CheckoutDeliveryMethodUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates the delivery method (shipping method or pick up point) of the checkout.\n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+    "description": "Updates the delivery method (shipping method or pick up point) of the checkout. Updates the checkout shipping_address for click and collect delivery for a warehouse address. \n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10313,6 +10313,11 @@
         "message": null
       },
       "SHIPPING_ADDRESS_NOT_SET": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SHIPPING_CHANGE_FORBIDDEN": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -29120,7 +29125,7 @@
       },
       "checkoutDeliveryMethodUpdate": {
         "type": "CheckoutDeliveryMethodUpdate",
-        "description": "Updates the delivery method (shipping method or pick up point) of the checkout.\n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+        "description": "Updates the delivery method (shipping method or pick up point) of the checkout. Updates the checkout shipping_address for click and collect delivery for a warehouse address. \n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {

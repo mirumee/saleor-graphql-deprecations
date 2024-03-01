@@ -1,32 +1,7 @@
 [
   {
-    "diff": "field_new",
-    "type": "AppInput",
-    "field": "identifier"
-  },
-  {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "availableTaxApps"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfiguration",
-    "field": "taxAppId"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfigurationPerCountry",
-    "field": "taxAppId"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfigurationPerCountryInput",
-    "field": "taxAppId"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfigurationUpdateInput",
-    "field": "taxAppId"
+    "diff": "enum_value_new",
+    "enum": "CheckoutErrorCode",
+    "value": "SHIPPING_CHANGE_FORBIDDEN"
   }
 ]
