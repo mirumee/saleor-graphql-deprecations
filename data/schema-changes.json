@@ -1,7 +1,8 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "CheckoutErrorCode",
-    "value": "SHIPPING_CHANGE_FORBIDDEN"
+    "diff": "field_deprecated",
+    "type": "UserCreateInput",
+    "field": "isConfirmed",
+    "version": "4.0"
   }
 ]

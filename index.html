@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2024-03-07 14:01:08</p>
+      <p class="m-0">Generated on 2024-03-08 14:01:10</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -5176,6 +5176,17 @@
               
                 <td>CustomerCreate</td>
                 <td colspan="2">accountErrors</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#UserCreateInput-isConfirmed" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>UserCreateInput</td>
+                <td colspan="2">isConfirmed</td>
               
               <td>4.0</td>
             </tr>
@@ -15683,6 +15694,34 @@ DEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute ha
             <div class="font-monospace"><span class="text-primary">type</span> <strong>CustomerCreate</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">accountErrors</strong>: [AccountError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="UserCreateInput-isConfirmed" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#UserCreateInput-isConfirmed" class="text-reset">
+                Field <strong class="text-danger">isConfirmed</strong> of input <strong class="text-danger">UserCreateInput</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>User account is confirmed.
+
+Added in Saleor 3.15.
+
+DEPRECATED: this field will be removed in Saleor 4.0.
+
+The user will be always set as unconfirmed. The confirmation will take place when the user sets the password.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">input</span> <strong>UserCreateInput</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">isConfirmed</strong>: Boolean<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
