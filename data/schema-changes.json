@@ -1,8 +1,7 @@
 [
   {
-    "diff": "field_deprecated",
-    "type": "UserCreateInput",
-    "field": "isConfirmed",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "Channel",
+    "field": "taxConfiguration"
   }
 ]

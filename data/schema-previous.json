@@ -8360,6 +8360,13 @@
         "message": null,
         "arguments": {}
       },
+      "taxConfiguration": {
+        "type": "TaxConfiguration!",
+        "description": "Channel specific tax configuration.\n\nAdded in Saleor 3.20.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "warehouses": {
         "type": "[Warehouse!]!",
         "description": "List of warehouses assigned to this channel.\n\nAdded in Saleor 3.5.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
