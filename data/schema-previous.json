@@ -1703,14 +1703,14 @@
     "fields": {
       "addressFormat": {
         "type": "String!",
-        "description": "The address format of the address validation rule.\n\nMany fields in the JSON refer to address fields by one-letter abbreviations. These are defined as follows:\n\n- `N`: Name\n- `O`: Organisation\n- `A`: Street Address Line(s)\n- `D`: Dependent locality (may be an inner-city district or a suburb)\n- `C`: City or Locality\n- `S`: Administrative area such as a state, province, island etc\n- `Z`: Zip or postal code\n- `X`: Sorting code\n\n[Click here for more information.](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata)",
+        "description": "The address format of the address validation rule.\n\nMany fields in the JSON refer to address fields by one-letter abbreviations. These are defined as follows:\n\n- `N`: Name\n- `O`: Organization\n- `A`: Street Address Line(s)\n- `D`: Dependent locality (may be an inner-city district or a suburb)\n- `C`: City or Locality\n- `S`: Administrative area such as a state, province, island etc\n- `Z`: Zip or postal code\n- `X`: Sorting code\n\n[Click here for more information.](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata)",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "addressLatinFormat": {
         "type": "String!",
-        "description": "The latin address format of the address validation rule.\n\nMany fields in the JSON refer to address fields by one-letter abbreviations. These are defined as follows:\n\n- `N`: Name\n- `O`: Organisation\n- `A`: Street Address Line(s)\n- `D`: Dependent locality (may be an inner-city district or a suburb)\n- `C`: City or Locality\n- `S`: Administrative area such as a state, province, island etc\n- `Z`: Zip or postal code\n- `X`: Sorting code\n\n[Click here for more information.](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata)",
+        "description": "The latin address format of the address validation rule.\n\nMany fields in the JSON refer to address fields by one-letter abbreviations. These are defined as follows:\n\n- `N`: Name\n- `O`: Organization\n- `A`: Street Address Line(s)\n- `D`: Dependent locality (may be an inner-city district or a suburb)\n- `C`: City or Locality\n- `S`: Administrative area such as a state, province, island etc\n- `Z`: Zip or postal code\n- `X`: Sorting code\n\n[Click here for more information.](https://github.com/google/libaddressinput/wiki/AddressValidationMetadata)",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -1891,7 +1891,7 @@
       },
       "accessToken": {
         "type": "String",
-        "description": "JWT token used to authenticate by thridparty app.",
+        "description": "JWT token used to authenticate by third-party app.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -5680,7 +5680,7 @@
       },
       "plainText": {
         "type": "String",
-        "description": "Represents the text of the attribute value, plain text without formating.",
+        "description": "Represents the text of the attribute value, plain text without formatting.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6005,9 +6005,9 @@
       },
       "plainText": {
         "type": "String",
-        "description": "Represents the text of the attribute value, plain text without formating.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
+        "description": "Represents the text of the attribute value, plain text without formatting.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
         "deprecated": "4.0",
-        "message": "Represents the text of the attribute value, plain text without formating.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
+        "message": "Represents the text of the attribute value, plain text without formatting.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
         "default": null
       },
       "richText": {
@@ -6600,9 +6600,9 @@
       },
       "plainText": {
         "type": "String",
-        "description": "Represents the text of the attribute value, plain text without formating.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
+        "description": "Represents the text of the attribute value, plain text without formatting.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
         "deprecated": "4.0",
-        "message": "Represents the text of the attribute value, plain text without formating.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
+        "message": "Represents the text of the attribute value, plain text without formatting.\n\nDEPRECATED: this field will be removed in Saleor 4.0.The plain text attribute hasn't got predefined value, so can be specified only from instance that supports the given attribute.",
         "default": null
       },
       "richText": {
@@ -10201,7 +10201,7 @@
       },
       "variants": {
         "type": "[ID!]",
-        "description": "List of varint IDs which causes the error.",
+        "description": "List of variant IDs which causes the error.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -17916,7 +17916,7 @@
       },
       "extraPayload": {
         "type": "JSONString",
-        "description": "Additional payload that will be merged with the one based on the bussines object ID.",
+        "description": "Additional payload that will be merged with the one based on the business object ID.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -40391,7 +40391,7 @@
     "fields": {
       "allowUnpaidOrders": {
         "type": "Boolean!",
-        "description": "Determine if it is possible to place unpdaid order by calling `checkoutComplete` mutation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Determine if it is possible to place unpaid order by calling `checkoutComplete` mutation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40505,7 +40505,7 @@
       },
       "automaticallyFulfillNonShippableGiftCard": {
         "type": "Boolean",
-        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By defualt set to True.",
+        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By default set to True.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -45153,7 +45153,7 @@
     "fields": {
       "channels": {
         "type": "[ID!]",
-        "description": "List of chnnels IDs which causes the error.",
+        "description": "List of channels IDs which causes the error.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61613,7 +61613,7 @@
     "fields": {
       "allowLoginWithoutConfirmation": {
         "type": "Boolean",
-        "description": "Determines if user can login without confirmation when `enableAccountConfrimation` is enabled.\n\nAdded in Saleor 3.15.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Determines if user can login without confirmation when `enableAccountConfirmation` is enabled.\n\nAdded in Saleor 3.15.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
