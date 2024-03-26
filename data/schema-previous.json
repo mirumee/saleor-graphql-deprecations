@@ -5277,9 +5277,16 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "attributeId": {
+        "type": "ID!",
+        "description": "The ID of the attribute to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "id": {
         "type": "ID!",
-        "description": "The ID of the attribute.",
+        "description": "The ID of the attribute translatable content.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -5392,6 +5399,13 @@
       "name": {
         "type": "String!",
         "description": "Translated attribute name.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "AttributeTranslatableContent",
+        "description": "Represents the attribute fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6349,6 +6363,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "attributeValueId": {
+        "type": "ID!",
+        "description": "The ID of the attribute value to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "id": {
         "type": "ID!",
         "description": "The ID of the attribute value translatable content.",
@@ -6492,6 +6513,13 @@
       "richText": {
         "type": "JSONString",
         "description": "Translated rich-text attribute value.\n\nRich text format. For reference see https://editorjs.io/",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "AttributeValueTranslatableContent",
+        "description": "Represents the attribute value fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -7916,6 +7944,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "categoryId": {
+        "type": "ID!",
+        "description": "The ID of the category to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "description": {
         "type": "JSONString",
         "description": "Category description to translate.\n\nRich text format. For reference see https://editorjs.io/",
@@ -8059,6 +8094,13 @@
       "seoTitle": {
         "type": "String",
         "description": "Translated SEO title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "CategoryTranslatableContent",
+        "description": "Represents the category fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -12547,6 +12589,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "collectionId": {
+        "type": "ID!",
+        "description": "The ID of the collection to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "description": {
         "type": "JSONString",
         "description": "Collection's description to translate.\n\nRich text format. For reference see https://editorjs.io/",
@@ -12690,6 +12739,13 @@
       "seoTitle": {
         "type": "String",
         "description": "Translated SEO title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "CollectionTranslatableContent",
+        "description": "Represents the collection fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -27328,6 +27384,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "menuItemId": {
+        "type": "ID!",
+        "description": "The ID of the menu item to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "name": {
         "type": "String!",
         "description": "Name of the menu item to translate.",
@@ -27408,6 +27471,13 @@
       "name": {
         "type": "String!",
         "description": "Translated menu item name.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "MenuItemTranslatableContent",
+        "description": "Represents the menu item fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -41903,6 +41973,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "pageId": {
+        "type": "ID!",
+        "description": "The ID of the page to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "seoDescription": {
         "type": "String",
         "description": "SEO description to translate.",
@@ -42025,6 +42102,13 @@
       "title": {
         "type": "String",
         "description": "Translated page title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "PageTranslatableContent",
+        "description": "Represents the page fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -49178,6 +49262,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "productId": {
+        "type": "ID!",
+        "description": "The ID of the product to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "seoDescription": {
         "type": "String",
         "description": "SEO description to translate.",
@@ -49321,6 +49412,13 @@
       "seoTitle": {
         "type": "String",
         "description": "Translated SEO title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "ProductTranslatableContent",
+        "description": "Represents the product fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52176,6 +52274,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "productVariantId": {
+        "type": "ID!",
+        "description": "The ID of the product variant to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "ProductVariantTranslation",
         "description": "Returns translated product variant fields for the given language code.",
@@ -52277,6 +52382,13 @@
       "name": {
         "type": "String!",
         "description": "Translated product variant name.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "ProductVariantTranslatableContent",
+        "description": "Represents the product variant fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -54109,6 +54221,13 @@
         "message": null,
         "arguments": {}
       },
+      "promotionRuleId": {
+        "type": "ID!",
+        "description": "ID of the promotion rule to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "PromotionRuleTranslation",
         "description": "Returns translated promotion rule fields for the given language code.",
@@ -54182,6 +54301,13 @@
       "name": {
         "type": "String",
         "description": "Translated name of the promotion rule.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "PromotionRuleTranslatableContent",
+        "description": "Represents the promotion rule fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -54687,6 +54813,13 @@
         "message": null,
         "arguments": {}
       },
+      "promotionId": {
+        "type": "ID!",
+        "description": "ID of the promotion to translate.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "PromotionTranslation",
         "description": "Returns translated promotion fields for the given language code.",
@@ -54760,6 +54893,13 @@
       "name": {
         "type": "String",
         "description": "Translated name of the promotion.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "PromotionTranslatableContent",
+        "description": "Represents the promotion fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -59116,6 +59256,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "saleId": {
+        "type": "ID!",
+        "description": "The ID of the sale to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "SaleTranslation",
         "description": "Returns translated sale fields for the given language code.",
@@ -59189,6 +59336,13 @@
       "name": {
         "type": "String",
         "description": "Translated name of sale.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "SaleTranslatableContent",
+        "description": "Represents the sale fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -60014,6 +60168,13 @@
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
       },
+      "shippingMethodId": {
+        "type": "ID!",
+        "description": "The ID of the shipping method to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "ShippingMethodTranslation",
         "description": "Returns translated shipping method fields for the given language code.",
@@ -60064,6 +60225,13 @@
       "name": {
         "type": "String!",
         "description": "Translated shipping method name.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "ShippingMethodTranslatableContent",
+        "description": "Represents the shipping method fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -70778,6 +70946,13 @@
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Get model fields from the root level queries.",
         "arguments": {}
+      },
+      "voucherId": {
+        "type": "ID!",
+        "description": "The ID of the voucher to translate.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -70837,6 +71012,13 @@
       "name": {
         "type": "String",
         "description": "Translated voucher name.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatableContent": {
+        "type": "VoucherTranslatableContent",
+        "description": "Represents the voucher fields to translate.\n\nAdded in Saleor 3.14.",
         "deprecated": null,
         "message": null,
         "arguments": {}
