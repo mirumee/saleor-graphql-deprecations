@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2024-04-16 14:01:08</p>
+      <p class="m-0">Generated on 2024-04-17 14:00:54</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -148,6 +148,17 @@
                 <td>Query</td>
                 <td>vouchers</td>
                 <td>query</td>
+              
+              <td>4.0</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Query-taxTypes" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Query</td>
+                <td colspan="2">taxTypes</td>
               
               <td>4.0</td>
             </tr>
@@ -5624,6 +5635,27 @@ DEPRECATED: this field will be removed in Saleor 4.0. Use <strong class="text-da
 &nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">query</strong>: String<span class="text-secondary">,</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;): VoucherCountableConnection<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Query-taxTypes" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Query-taxTypes" class="text-reset">
+                Field <strong class="text-danger">taxTypes</strong> of type <strong class="text-danger">Query</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 4.0</strong></p>
+            <p>This field will be removed in Saleor 4.0. Use <strong class="text-danger font-monospace">taxClasses</strong> field instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Query</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">taxTypes</strong>: [TaxType!]<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
