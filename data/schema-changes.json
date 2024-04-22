@@ -1,8 +1,56 @@
 [
   {
-    "diff": "field_deprecated",
-    "type": "Query",
-    "field": "taxTypes",
-    "version": "4.0"
+    "diff": "type_new",
+    "type": "OrderGrantedRefundStatusEnum"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundCreateInput",
+    "field": "transactionId"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateInput",
+    "field": "transactionId"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantedRefund",
+    "field": "status"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantedRefund",
+    "field": "transaction"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantedRefund",
+    "field": "transactionEvents"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundCreateErrorCode",
+    "value": "AMOUNT_GREATER_THAN_AVAILABLE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundUpdateErrorCode",
+    "value": "AMOUNT_GREATER_THAN_AVAILABLE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionRequestRefundForGrantedRefundErrorCode",
+    "value": "AMOUNT_GREATER_THAN_AVAILABLE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionRequestRefundForGrantedRefundErrorCode",
+    "value": "REFUND_ALREADY_PROCESSED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionRequestRefundForGrantedRefundErrorCode",
+    "value": "REFUND_IS_PENDING"
   }
 ]

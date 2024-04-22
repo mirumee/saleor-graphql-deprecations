@@ -31892,7 +31892,7 @@
       },
       "paymentGatewayInitialize": {
         "type": "PaymentGatewayInitialize",
-        "description": "Initializes a payment gateway session. It triggers the webhook `PAYMENT_GATEWAY_INITIALIZE_SESSION`, to the requested `paymentGateways`. If `paymentGateways` is not provided, the webhook will be send to all subscribed payment gateways.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Initializes a payment gateway session. It triggers the webhook `PAYMENT_GATEWAY_INITIALIZE_SESSION`, to the requested `paymentGateways`. If `paymentGateways` is not provided, the webhook will be send to all subscribed payment gateways. There is a limit of 100 transaction items per checkout / order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34253,7 +34253,7 @@
       },
       "transactionInitialize": {
         "type": "TransactionInitialize",
-        "description": "Initializes a transaction session. It triggers the webhook `TRANSACTION_INITIALIZE_SESSION`, to the requested `paymentGateways`. \n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Initializes a transaction session. It triggers the webhook `TRANSACTION_INITIALIZE_SESSION`, to the requested `paymentGateways`. There is a limit of 100 transaction items per checkout / order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34388,14 +34388,14 @@
           },
           "id": {
             "type": "ID",
-            "description": "The ID of the transaction. One of field id or token is required.",
+            "description": "The ID of the transaction. One of field id or token is required, if `transactionItem` is not already assigned to the `orderGrantedRefund`. If `transactionItem` is already assigned to the grantedRefund the field will be ignored.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "token": {
             "type": "UUID",
-            "description": "The token of the transaction. One of field id or token is required.\n\nAdded in Saleor 3.14.",
+            "description": "The token of the transaction. One of field id or token is required, if `transactionItem` is not already assigned to the `orderGrantedRefund`. If `transactionItem` is already assigned to the grantedRefund the field will be ignored.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -38776,6 +38776,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "AMOUNT_GREATER_THAN_AVAILABLE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
@@ -38833,6 +38838,13 @@
       "reason": {
         "type": "String",
         "description": "Reason of the granted refund.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "transactionId": {
+        "type": "ID",
+        "description": "The ID of the transaction item related to the granted refund. If `amount` provided in the input, the transaction.chargedAmount needs to be equal or greater than provided `amount`.If `amount` is not provided in the input and calculated automatically by Saleor, the `min(calculatedAmount, transaction.chargedAmount)` will be used.Field will be required starting from Saleor 3.21.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -39008,6 +39020,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "AMOUNT_GREATER_THAN_AVAILABLE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
@@ -39072,6 +39089,13 @@
       "removeLines": {
         "type": "[ID!]",
         "description": "Lines to remove from granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "transactionId": {
+        "type": "ID",
+        "description": "The ID of the transaction item related to the granted refund. If `amount` provided in the input, the transaction.chargedAmount needs to be equal or greater than provided `amount`.If `amount` is not provided in the input and calculated automatically by Saleor, the `min(calculatedAmount, transaction.chargedAmount)` will be used.Field will be required starting from Saleor 3.21.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -39223,6 +39247,27 @@
         "message": null,
         "arguments": {}
       },
+      "status": {
+        "type": "OrderGrantedRefundStatusEnum!",
+        "description": "Status of the granted refund calculated based on transactionItem assigned to granted refund.\n\nAdded in Saleor 3.20.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transaction": {
+        "type": "TransactionItem",
+        "description": "The transaction assigned to the granted refund.\n\nAdded in Saleor 3.20.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "transactionEvents": {
+        "type": "[TransactionEvent!]",
+        "description": "List of refund events associated with the granted refund.\n\nAdded in Saleor 3.20.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "updatedAt": {
         "type": "DateTime!",
         "description": "Time of last update.",
@@ -39273,6 +39318,34 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "OrderGrantedRefundStatusEnum": {
+    "type": "enum",
+    "description": "Represents the status of a granted refund.\n\n    NONE - the refund on related transactionItem is not processed\n    PENDING - the refund on related transactionItem is pending\n    FULL - the refund on related transactionItem is fully processed\n    FAIL - the refund on related transactionItem failed",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "FAILURE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NONE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PENDING": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SUCCESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -43732,7 +43805,7 @@
   "PaymentGatewayInitialize": {
     "type": "object",
     "interfaces": [],
-    "description": "Initializes a payment gateway session. It triggers the webhook `PAYMENT_GATEWAY_INITIALIZE_SESSION`, to the requested `paymentGateways`. If `paymentGateways` is not provided, the webhook will be send to all subscribed payment gateways.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Initializes a payment gateway session. It triggers the webhook `PAYMENT_GATEWAY_INITIALIZE_SESSION`, to the requested `paymentGateways`. If `paymentGateways` is not provided, the webhook will be send to all subscribed payment gateways. There is a limit of 100 transaction items per checkout / order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -66655,7 +66728,7 @@
   "TransactionInitialize": {
     "type": "object",
     "interfaces": [],
-    "description": "Initializes a transaction session. It triggers the webhook `TRANSACTION_INITIALIZE_SESSION`, to the requested `paymentGateways`. \n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Initializes a transaction session. It triggers the webhook `TRANSACTION_INITIALIZE_SESSION`, to the requested `paymentGateways`. There is a limit of 100 transaction items per checkout / order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67588,6 +67661,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "AMOUNT_GREATER_THAN_AVAILABLE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
@@ -67604,6 +67682,16 @@
         "message": null
       },
       "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REFUND_ALREADY_PROCESSED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REFUND_IS_PENDING": {
         "description": null,
         "deprecated": null,
         "message": null
