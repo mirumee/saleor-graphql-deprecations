@@ -57609,7 +57609,7 @@
         "arguments": {
           "id": {
             "type": "ID!",
-            "description": "ID of an warehouse",
+            "description": "ID of a stock",
             "deprecated": null,
             "message": null,
             "default": null
@@ -71402,6 +71402,42 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "stocks": {
+        "type": "StockCountableConnection",
+        "description": "Stocks that belong to this warehouse.\n\nAdded in Saleor 3.20.\n\nRequires one of the following permissions: MANAGE_PRODUCTS, MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "after": {
+            "type": "String",
+            "description": "Return the elements in the list that come after the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "before": {
+            "type": "String",
+            "description": "Return the elements in the list that come before the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "first": {
+            "type": "Int",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "last": {
+            "type": "Int",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       }
     }
   },
