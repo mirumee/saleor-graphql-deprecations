@@ -9492,7 +9492,7 @@
       },
       "totalPrice": {
         "type": "TaxedMoney!",
-        "description": "The sum of the the checkout line prices, with all the taxes,shipping costs, and discounts included.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
+        "description": "The sum of the checkout line prices, with all the taxes,shipping costs, and discounts included.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
