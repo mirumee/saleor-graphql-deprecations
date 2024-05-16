@@ -43588,6 +43588,11 @@
         "deprecated": null,
         "message": null
       },
+      "CHECKOUT_COMPLETION_IN_PROGRESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "CHECKOUT_EMAIL_NOT_SET": {
         "description": null,
         "deprecated": null,

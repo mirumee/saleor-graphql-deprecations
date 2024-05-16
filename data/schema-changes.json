@@ -1,7 +1,7 @@
 [
   {
-    "diff": "field_new",
-    "type": "Warehouse",
-    "field": "stocks"
+    "diff": "enum_value_new",
+    "enum": "PaymentErrorCode",
+    "value": "CHECKOUT_COMPLETION_IN_PROGRESS"
   }
 ]
