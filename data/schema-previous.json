@@ -66803,6 +66803,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "CHECKOUT_COMPLETION_IN_PROGRESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
@@ -67353,6 +67358,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "CHECKOUT_COMPLETION_IN_PROGRESS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
