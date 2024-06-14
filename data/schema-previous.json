@@ -39387,6 +39387,13 @@
         "message": null,
         "arguments": {}
       },
+      "isPriceOverridden": {
+        "type": "Boolean",
+        "description": "Returns True, if the line unit price was overridden.\n\nAdded in Saleor 3.14.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "isShippingRequired": {
         "type": "Boolean!",
         "description": "Whether the product variant requires shipping.",

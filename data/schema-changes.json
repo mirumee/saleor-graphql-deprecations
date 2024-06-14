@@ -1,12 +1,7 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "TransactionInitializeErrorCode",
-    "value": "CHECKOUT_COMPLETION_IN_PROGRESS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "TransactionProcessErrorCode",
-    "value": "CHECKOUT_COMPLETION_IN_PROGRESS"
+    "diff": "field_new",
+    "type": "OrderLine",
+    "field": "isPriceOverridden"
   }
 ]
