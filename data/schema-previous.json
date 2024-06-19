@@ -2,7 +2,7 @@
   "AccountAddressCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
+    "description": "Create a new address for the customer.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1094,7 +1094,7 @@
   "AccountUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
+    "description": "Updates the account of the logged-in user.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -1546,6 +1546,13 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "skipValidation": {
+        "type": "Boolean",
+        "description": "Determine if the address should be validated. By default, Saleor accepts only address inputs matching ruleset from [Google Address Data]{https://chromium-i18n.appspot.com/ssl-address), using [i18naddress](https://github.com/mirumee/google-i18n-address) library. Some mutations may require additional permissions to use the the field. More info about permissions can be found in relevant mutation.\n\nAdded in Saleor 3.19.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "default": false
       },
       "streetAddress1": {
         "type": "String",
@@ -9781,7 +9788,7 @@
   "CheckoutCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create a new checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
+    "description": "Create a new checkout.\n\n`skipValidation` field requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9991,7 +9998,7 @@
     "fields": {
       "billingAddress": {
         "type": "AddressInput",
-        "description": "Billing address of the customer.",
+        "description": "Billing address of the customer. `skipValidation` requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -10026,7 +10033,7 @@
       },
       "shippingAddress": {
         "type": "AddressInput",
-        "description": "The mailing address to where the checkout will be shipped. Note: the address will be ignored if the checkout doesn't contain shippable items.",
+        "description": "The mailing address to where the checkout will be shipped. Note: the address will be ignored if the checkout doesn't contain shippable items. `skipValidation` requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -27946,10 +27953,17 @@
     "fields": {
       "accountAddressCreate": {
         "type": "AccountAddressCreate",
-        "description": "Create a new address for the customer. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
+        "description": "Create a new address for the customer.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- ADDRESS_CREATED (async): An address was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
+          "customerId": {
+            "type": "ID",
+            "description": "ID of customer the application is impersonating. The field can be used and is required by apps only. Requires IMPERSONATE_USER and AUTHENTICATED_APP permission.\n\nAdded in Saleor 3.19.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "input": {
             "type": "AddressInput!",
             "description": "Fields required to create address.",
@@ -28079,10 +28093,17 @@
       },
       "accountUpdate": {
         "type": "AccountUpdate",
-        "description": "Updates the account of the logged-in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
+        "description": "Updates the account of the logged-in user.\n\nRequires one of following set of permissions: AUTHENTICATED_USER or AUTHENTICATED_APP + IMPERSONATE_USER.\n\nTriggers the following webhook events:\n- CUSTOMER_UPDATED (async): A customer account was updated.\n- CUSTOMER_METADATA_UPDATED (async): Optionally called when customer's metadata was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
+          "customerId": {
+            "type": "ID",
+            "description": "ID of customer the application is impersonating. The field can be used and is required by apps only. Requires IMPERSONATE_USER and AUTHENTICATED_APP permission.\n\nAdded in Saleor 3.19.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "input": {
             "type": "AccountInput!",
             "description": "Fields required to update the account of the logged-in user.",
@@ -29107,7 +29128,7 @@
       },
       "checkoutCreate": {
         "type": "CheckoutCreate",
-        "description": "Create a new checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
+        "description": "Create a new checkout.\n\n`skipValidation` field requires HANDLE_CHECKOUTS and AUTHENTICATED_APP permissions.\n\nTriggers the following webhook events:\n- CHECKOUT_CREATED (async): A checkout was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
