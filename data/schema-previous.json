@@ -56585,7 +56585,7 @@
         "arguments": {
           "externalReference": {
             "type": "String",
-            "description": "External ID of an order. \n\nAdded in Saleor 3.10.",
+            "description": "External ID of an order. \n\nAdded in Saleor 3.10..\n\nRequires one of the following permissions: MANAGE_ORDERS.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65677,7 +65677,7 @@
       },
       "shippingPrice": {
         "type": "Money!",
-        "description": "The price of shipping method.",
+        "description": "The price of shipping method, includes shipping voucher discount if applied.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -65758,14 +65758,14 @@
       },
       "totalPrice": {
         "type": "Money!",
-        "description": "Price of the order line.",
+        "description": "Price of the order line. The price includes catalogue promotions, specific product and applied once per order voucher discounts. The price does not include the entire order discount.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "unitPrice": {
         "type": "Money!",
-        "description": "Price of the single item in the order line.",
+        "description": "Price of the single item in the order line. The price includes catalogue promotions, specific product and applied once per order voucher discounts. The price does not include the entire order discount.",
         "deprecated": null,
         "message": null,
         "arguments": {}
