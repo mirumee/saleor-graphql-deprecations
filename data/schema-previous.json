@@ -751,6 +751,11 @@
         "deprecated": null,
         "message": null
       },
+      "LOGIN_ATTEMPT_DELAYED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MISSING_CHANNEL_SLUG": {
         "description": null,
         "deprecated": null,
@@ -807,6 +812,11 @@
         "message": null
       },
       "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNKNOWN_IP_ADDRESS": {
         "description": null,
         "deprecated": null,
         "message": null
