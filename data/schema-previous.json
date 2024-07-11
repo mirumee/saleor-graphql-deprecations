@@ -53235,8 +53235,8 @@
         "default": null
       },
       "type": {
-        "type": "PromotionTypeEnum",
-        "description": "Defines the promotion type. Implicate the required promotion rules predicate type and whether the promotion rules will give the catalogue or order discount. \n\nThe default value is `Catalogue`.\n\nThis field will be required from Saleor 3.20.\n\nAdded in Saleor 3.19.",
+        "type": "PromotionTypeEnum!",
+        "description": "Defines the promotion type. Implicate the required promotion rules predicate type and whether the promotion rules will give the catalogue or order discount. \n\nAdded in Saleor 3.19.",
         "deprecated": null,
         "message": null,
         "default": null
