@@ -13060,9 +13060,9 @@
   },
   "CountryCode": {
     "type": "enum",
-    "description": "An enumeration.",
-    "deprecated": null,
-    "message": null,
+    "description": "Represents country codes defined by the ISO 3166-1 alpha-2 standard.\n\nThe `EU` value is DEPRECATED and will be removed in Saleor 3.21.",
+    "deprecated": "3.21",
+    "message": "Represents country codes defined by the ISO 3166-1 alpha-2 standard.\n\nThe `EU` value is DEPRECATED and will be removed in Saleor 3.21.",
     "values": {
       "AD": {
         "description": null,

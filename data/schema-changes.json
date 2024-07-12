@@ -1,12 +1,7 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "AccountErrorCode",
-    "value": "LOGIN_ATTEMPT_DELAYED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AccountErrorCode",
-    "value": "UNKNOWN_IP_ADDRESS"
+    "diff": "type_deprecated",
+    "type": "CountryCode",
+    "version": "3.21"
   }
 ]
