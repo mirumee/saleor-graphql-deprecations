@@ -8708,7 +8708,7 @@
     "fields": {
       "channelId": {
         "type": "ID!",
-        "description": "ID of channel to migrate orders from origin channel.",
+        "description": "ID of a channel to migrate orders from the origin channel. Target channel has to have the same currency as the origin.",
         "deprecated": null,
         "message": null,
         "default": null
