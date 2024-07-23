@@ -10163,6 +10163,36 @@
       }
     }
   },
+  "CheckoutCustomerNoteUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates customer note in the existing checkout object.\n\nAdded in Saleor 3.21.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "checkout": {
+        "type": "Checkout",
+        "description": "An updated checkout.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "checkoutErrors": {
+        "type": "[CheckoutError!]!",
+        "description": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CheckoutError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "CheckoutDeliveryMethodUpdate": {
     "type": "object",
     "interfaces": [],
@@ -29227,6 +29257,28 @@
             "description": "Checkout token.\n\nDEPRECATED: this field will be removed in Saleor 4.0. Use `id` instead.",
             "deprecated": "4.0",
             "message": "Checkout token.\n\nDEPRECATED: this field will be removed in Saleor 4.0. Use `id` instead.",
+            "default": null
+          }
+        }
+      },
+      "checkoutCustomerNoteUpdate": {
+        "type": "CheckoutCustomerNoteUpdate",
+        "description": "Updates customer note in the existing checkout object.\n\nAdded in Saleor 3.21.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "customerNote": {
+            "type": "String!",
+            "description": "New customer note content.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "ID!",
+            "description": "The checkout's ID.",
+            "deprecated": null,
+            "message": null,
             "default": null
           }
         }

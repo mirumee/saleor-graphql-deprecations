@@ -1,7 +1,11 @@
 [
   {
-    "diff": "type_deprecated",
-    "type": "CountryCode",
-    "version": "3.21"
+    "diff": "type_new",
+    "type": "CheckoutCustomerNoteUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "checkoutCustomerNoteUpdate"
   }
 ]
