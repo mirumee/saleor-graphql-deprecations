@@ -35671,6 +35671,13 @@
         "message": "This field will be removed in Saleor 4.0. Use the `discounts` field instead.",
         "arguments": {}
       },
+      "undiscountedShippingPrice": {
+        "type": "Money!",
+        "description": "Undiscounted total price of shipping.\n\nAdded in Saleor 3.19.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "undiscountedTotal": {
         "type": "TaxedMoney!",
         "description": "Undiscounted total amount of the order.",
