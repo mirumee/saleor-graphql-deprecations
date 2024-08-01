@@ -38392,6 +38392,13 @@
         "message": null,
         "default": null
       },
+      "checkoutTokens": {
+        "type": "[UUID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "created": {
         "type": "DateRangeInput",
         "description": null,

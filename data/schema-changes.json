@@ -1,7 +1,7 @@
 [
   {
     "diff": "field_new",
-    "type": "Order",
-    "field": "undiscountedShippingPrice"
+    "type": "OrderFilterInput",
+    "field": "checkoutTokens"
   }
 ]
