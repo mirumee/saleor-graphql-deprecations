@@ -1,7 +1,8 @@
 [
   {
-    "diff": "field_new",
-    "type": "OrderFilterInput",
-    "field": "checkoutTokens"
+    "diff": "field_deprecated",
+    "type": "Shop",
+    "field": "limits",
+    "version": "4.0"
   }
 ]

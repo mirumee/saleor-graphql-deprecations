@@ -62205,8 +62205,8 @@
       "limits": {
         "type": "LimitInfo!",
         "description": "Resource limitations and current usage if any set for a shop\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "metadata": {
