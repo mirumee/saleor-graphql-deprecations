@@ -8010,6 +8010,13 @@
         "message": null,
         "arguments": {}
       },
+      "slug": {
+        "type": "String",
+        "description": "Slug to translate.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "CategoryTranslation",
         "description": "Returns translated category fields for the given language code.",
@@ -8111,6 +8118,13 @@
       "seoTitle": {
         "type": "String",
         "description": "Translated SEO title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "slug": {
+        "type": "String",
+        "description": "Translated category slug.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -12685,6 +12699,13 @@
         "message": null,
         "arguments": {}
       },
+      "slug": {
+        "type": "String",
+        "description": "Slug to translate\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "CollectionTranslation",
         "description": "Returns translated collection fields for the given language code.",
@@ -12786,6 +12807,13 @@
       "seoTitle": {
         "type": "String",
         "description": "Translated SEO title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "slug": {
+        "type": "String",
+        "description": "Translated collection slug.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42171,6 +42199,13 @@
         "message": null,
         "arguments": {}
       },
+      "slug": {
+        "type": "String",
+        "description": "Slug to translate.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "title": {
         "type": "String!",
         "description": "Page title to translate.",
@@ -42276,6 +42311,13 @@
         "message": null,
         "arguments": {}
       },
+      "slug": {
+        "type": "String",
+        "description": "Translated page slug.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "title": {
         "type": "String",
         "description": "Translated page title.",
@@ -42313,6 +42355,13 @@
         "default": null
       },
       "seoTitle": {
+        "type": "String",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
         "type": "String",
         "description": null,
         "deprecated": null,
@@ -49465,6 +49514,13 @@
         "message": null,
         "arguments": {}
       },
+      "slug": {
+        "type": "String",
+        "description": "Slug to translate.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "translation": {
         "type": "ProductTranslation",
         "description": "Returns translated product fields for the given language code.",
@@ -49594,6 +49650,13 @@
       "seoTitle": {
         "type": "String",
         "description": "Translated SEO title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "slug": {
+        "type": "String",
+        "description": "Translated product slug.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55853,6 +55916,13 @@
             "deprecated": null,
             "message": null,
             "default": null
+          },
+          "slugLanguageCode": {
+            "type": "LanguageCodeEnum",
+            "description": "Language code of the category slug, omit to use primary slug.\n\nAdded in Saleor 3.21.",
+            "deprecated": null,
+            "message": null,
+            "default": null
           }
         }
       },
@@ -56002,7 +56072,7 @@
       },
       "collection": {
         "type": "Collection",
-        "description": "Look up a collection by ID. Requires one of the following permissions to include the unpublished items: MANAGE_ORDERS, MANAGE_DISCOUNTS, MANAGE_PRODUCTS.",
+        "description": "Look up a collection by ID or slug. If slugLanguageCode is provided, category will be fetched by slug translation. Requires one of the following permissions to include the unpublished items: MANAGE_ORDERS, MANAGE_DISCOUNTS, MANAGE_PRODUCTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -56022,7 +56092,14 @@
           },
           "slug": {
             "type": "String",
-            "description": "Slug of the category",
+            "description": "Slug of the collection",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "slugLanguageCode": {
+            "type": "LanguageCodeEnum",
+            "description": "Language code of the collection slug, omit to use primary slug.\n\nAdded in Saleor 3.21.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56795,6 +56872,13 @@
             "deprecated": null,
             "message": null,
             "default": null
+          },
+          "slugLanguageCode": {
+            "type": "LanguageCodeEnum",
+            "description": "Language code of the page slug, omit to use primary slug.\n\nAdded in Saleor 3.21.",
+            "deprecated": null,
+            "message": null,
+            "default": null
           }
         }
       },
@@ -57131,6 +57215,13 @@
           "slug": {
             "type": "String",
             "description": "Slug of the product.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "slugLanguageCode": {
+            "type": "LanguageCodeEnum",
+            "description": "Language code of the product slug, omit to use primary slug.\n\nAdded in Saleor 3.21.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -68241,6 +68332,11 @@
         "description": null,
         "deprecated": null,
         "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -68272,6 +68368,13 @@
         "default": null
       },
       "seoTitle": {
+        "type": "String",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
         "type": "String",
         "description": null,
         "deprecated": null,

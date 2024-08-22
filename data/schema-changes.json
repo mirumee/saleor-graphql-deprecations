@@ -1,8 +1,57 @@
 [
   {
-    "diff": "field_deprecated",
-    "type": "Shop",
-    "field": "limits",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "CategoryTranslatableContent",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "CategoryTranslation",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "CollectionTranslatableContent",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "CollectionTranslation",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "PageTranslatableContent",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "PageTranslation",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "PageTranslationInput",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "ProductTranslatableContent",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "ProductTranslation",
+    "field": "slug"
+  },
+  {
+    "diff": "field_new",
+    "type": "TranslationInput",
+    "field": "slug"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TranslationErrorCode",
+    "value": "UNIQUE"
   }
 ]
