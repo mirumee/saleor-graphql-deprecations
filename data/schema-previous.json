@@ -64427,12 +64427,237 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "draftOrderCreated": {
+        "type": "DraftOrderCreated",
+        "description": "Event sent when new draft order is created.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "draftOrderDeleted": {
+        "type": "DraftOrderDeleted",
+        "description": "Event sent when draft order is deleted.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "draftOrderUpdated": {
+        "type": "DraftOrderUpdated",
+        "description": "Event sent when draft order is updated.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "event": {
         "type": "Event",
         "description": "Look up subscription event.\n\nAdded in Saleor 3.2.",
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "orderBulkCreated": {
+        "type": "OrderBulkCreated",
+        "description": "Event sent when orders are imported.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderCancelled": {
+        "type": "OrderCancelled",
+        "description": "Event sent when order is cancelled.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderConfirmed": {
+        "type": "OrderConfirmed",
+        "description": "Event sent when order is confirmed.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderCreated": {
+        "type": "OrderCreated",
+        "description": "Event sent when new order is created.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderExpired": {
+        "type": "OrderExpired",
+        "description": "Event sent when order becomes expired.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderFulfilled": {
+        "type": "OrderFulfilled",
+        "description": "Event sent when order is fulfilled.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderFullyPaid": {
+        "type": "OrderFullyPaid",
+        "description": "Event sent when order is fully paid.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderFullyRefunded": {
+        "type": "OrderFullyRefunded",
+        "description": "The order is fully refunded.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderMetadataUpdated": {
+        "type": "OrderMetadataUpdated",
+        "description": "Event sent when order metadata is updated.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderPaid": {
+        "type": "OrderPaid",
+        "description": "Payment has been made. The order may be partially or fully paid.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderRefunded": {
+        "type": "OrderRefunded",
+        "description": "The order received a refund. The order may be partially or fully refunded.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "orderUpdated": {
+        "type": "OrderUpdated",
+        "description": "Event sent when order is updated.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       }
     }
   },

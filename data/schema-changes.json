@@ -1,57 +1,77 @@
 [
   {
     "diff": "field_new",
-    "type": "CategoryTranslatableContent",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "draftOrderCreated"
   },
   {
     "diff": "field_new",
-    "type": "CategoryTranslation",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "draftOrderDeleted"
   },
   {
     "diff": "field_new",
-    "type": "CollectionTranslatableContent",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "draftOrderUpdated"
   },
   {
     "diff": "field_new",
-    "type": "CollectionTranslation",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "orderBulkCreated"
   },
   {
     "diff": "field_new",
-    "type": "PageTranslatableContent",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "orderCancelled"
   },
   {
     "diff": "field_new",
-    "type": "PageTranslation",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "orderConfirmed"
   },
   {
     "diff": "field_new",
-    "type": "PageTranslationInput",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "orderCreated"
   },
   {
     "diff": "field_new",
-    "type": "ProductTranslatableContent",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "orderExpired"
   },
   {
     "diff": "field_new",
-    "type": "ProductTranslation",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "orderFulfilled"
   },
   {
     "diff": "field_new",
-    "type": "TranslationInput",
-    "field": "slug"
+    "type": "Subscription",
+    "field": "orderFullyPaid"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "TranslationErrorCode",
-    "value": "UNIQUE"
+    "diff": "field_new",
+    "type": "Subscription",
+    "field": "orderFullyRefunded"
+  },
+  {
+    "diff": "field_new",
+    "type": "Subscription",
+    "field": "orderMetadataUpdated"
+  },
+  {
+    "diff": "field_new",
+    "type": "Subscription",
+    "field": "orderPaid"
+  },
+  {
+    "diff": "field_new",
+    "type": "Subscription",
+    "field": "orderRefunded"
+  },
+  {
+    "diff": "field_new",
+    "type": "Subscription",
+    "field": "orderUpdated"
   }
 ]
