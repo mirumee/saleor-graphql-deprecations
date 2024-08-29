@@ -1,77 +1,13 @@
 [
   {
     "diff": "field_new",
-    "type": "Subscription",
-    "field": "draftOrderCreated"
+    "type": "Checkout",
+    "field": "customerNote"
   },
   {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "draftOrderDeleted"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "draftOrderUpdated"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderBulkCreated"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderCancelled"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderConfirmed"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderCreated"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderExpired"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderFulfilled"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderFullyPaid"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderFullyRefunded"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderMetadataUpdated"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderPaid"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderRefunded"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "orderUpdated"
+    "diff": "field_deprecated",
+    "type": "Checkout",
+    "field": "note",
+    "version": "4.0"
   }
 ]

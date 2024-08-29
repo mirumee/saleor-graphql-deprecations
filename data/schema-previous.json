@@ -9271,6 +9271,13 @@
         "message": null,
         "arguments": {}
       },
+      "customerNote": {
+        "type": "String!",
+        "description": "The customer note for the checkout. \n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "deliveryMethod": {
         "type": "DeliveryMethod",
         "description": "The delivery method selected for this checkout.\n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
@@ -9388,8 +9395,8 @@
       "note": {
         "type": "String!",
         "description": "The note for the checkout.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use `customerNote` instead.",
         "arguments": {}
       },
       "privateMetadata": {
