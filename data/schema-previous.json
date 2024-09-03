@@ -637,7 +637,7 @@
   },
   "AccountErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -1612,7 +1612,7 @@
   },
   "AddressTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -2471,7 +2471,7 @@
   },
   "AppErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -3584,7 +3584,7 @@
   },
   "AreaUnitsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -4073,7 +4073,7 @@
   },
   "AttributeBulkCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -4358,7 +4358,7 @@
   },
   "AttributeBulkUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -4821,7 +4821,7 @@
   },
   "AttributeEntityTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -4896,7 +4896,7 @@
   },
   "AttributeErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -5090,7 +5090,7 @@
   },
   "AttributeInputTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -5364,7 +5364,7 @@
   },
   "AttributeTranslateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -5431,7 +5431,7 @@
   },
   "AttributeTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -6464,7 +6464,7 @@
   },
   "AttributeValueTranslateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -8821,7 +8821,7 @@
   },
   "ChannelErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -9915,7 +9915,7 @@
   },
   "CheckoutCreateFromOrderErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -9985,7 +9985,7 @@
   },
   "CheckoutCreateFromOrderUnavailableVariantErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -10320,7 +10320,7 @@
   },
   "CheckoutErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -12278,7 +12278,7 @@
   },
   "CollectionErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -13022,7 +13022,7 @@
   },
   "ConfigurationTypeFieldEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -14680,7 +14680,7 @@
   },
   "CustomerBulkUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -14937,7 +14937,7 @@
   },
   "CustomerEventsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -16087,7 +16087,7 @@
   },
   "DiscountErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -16217,7 +16217,7 @@
   },
   "DistanceUnitsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -17301,7 +17301,7 @@
   },
   "ExportErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -17382,7 +17382,7 @@
   },
   "ExportEventsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -17997,7 +17997,7 @@
   },
   "ExternalNotificationErrorCodes": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -18239,7 +18239,7 @@
   },
   "FileTypesEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -18878,7 +18878,7 @@
   },
   "FulfillmentStatus": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -19877,7 +19877,7 @@
   },
   "GiftCardErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -20093,7 +20093,7 @@
   },
   "GiftCardEventsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -20503,7 +20503,7 @@
   },
   "GiftCardSettingsErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -20526,7 +20526,7 @@
   },
   "GiftCardSettingsExpiryTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -21431,7 +21431,7 @@
   },
   "InvoiceErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -21771,7 +21771,7 @@
   },
   "JobStatusEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -21799,7 +21799,7 @@
   },
   "LanguageCodeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -26021,7 +26021,7 @@
   },
   "MeasurementUnitsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -26709,7 +26709,7 @@
   },
   "MenuErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -27825,7 +27825,7 @@
   },
   "MetadataErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -36037,7 +36037,7 @@
   },
   "OrderBulkCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -37059,7 +37059,7 @@
   },
   "OrderCreateFromCheckoutErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -37357,7 +37357,7 @@
   },
   "OrderDiscountType": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -37521,7 +37521,7 @@
   },
   "OrderErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -38043,7 +38043,7 @@
   },
   "OrderEventsEmailsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -38904,7 +38904,7 @@
   },
   "OrderGrantRefundCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -39022,7 +39022,7 @@
   },
   "OrderGrantRefundCreateLineErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -39148,7 +39148,7 @@
   },
   "OrderGrantRefundUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -39302,7 +39302,7 @@
   },
   "OrderGrantRefundUpdateLineErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -40180,7 +40180,7 @@
   },
   "OrderNoteAddErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -40273,7 +40273,7 @@
   },
   "OrderNoteUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -40306,7 +40306,7 @@
   },
   "OrderOriginEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -40754,7 +40754,7 @@
   },
   "OrderSettingsErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -40946,7 +40946,7 @@
   },
   "OrderStatus": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -41861,7 +41861,7 @@
   },
   "PageErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -43479,7 +43479,7 @@
   },
   "PaymentChargeStatusEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -43729,7 +43729,7 @@
   },
   "PaymentErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -43946,7 +43946,7 @@
   },
   "PaymentGatewayConfigErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -44022,7 +44022,7 @@
   },
   "PaymentGatewayInitializeErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -44165,7 +44165,7 @@
   },
   "PaymentGatewayInitializeTokenizationErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -44526,7 +44526,7 @@
   },
   "PaymentMethodInitializeTokenizationErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -44693,7 +44693,7 @@
   },
   "PaymentMethodProcessTokenizationErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -45145,7 +45145,7 @@
   },
   "PermissionEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -45519,7 +45519,7 @@
   },
   "PermissionGroupErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -45944,7 +45944,7 @@
   },
   "PluginErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -46131,7 +46131,7 @@
   },
   "PostalCodeRuleInclusionTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -46939,7 +46939,7 @@
   },
   "ProductBulkCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -48082,7 +48082,7 @@
   },
   "ProductErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -49050,7 +49050,7 @@
   },
   "ProductMediaType": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -49577,7 +49577,7 @@
   },
   "ProductTranslateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -50286,7 +50286,7 @@
   },
   "ProductTypeKindEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -51122,7 +51122,7 @@
   },
   "ProductVariantBulkErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -52582,7 +52582,7 @@
   },
   "ProductVariantTranslateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -53273,7 +53273,7 @@
   },
   "PromotionCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -53520,7 +53520,7 @@
   },
   "PromotionDeleteErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -53722,7 +53722,7 @@
   },
   "PromotionEventsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -53963,7 +53963,7 @@
   },
   "PromotionRuleCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -54246,7 +54246,7 @@
   },
   "PromotionRuleDeleteErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -54664,7 +54664,7 @@
   },
   "PromotionRuleUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -55182,7 +55182,7 @@
   },
   "PromotionTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -55275,7 +55275,7 @@
   },
   "PromotionUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -58486,7 +58486,7 @@
   },
   "RewardTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -58504,7 +58504,7 @@
   },
   "RewardValueTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -59802,7 +59802,7 @@
   },
   "SendConfirmationEmailErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -59947,7 +59947,7 @@
   },
   "ShippingErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -60748,7 +60748,7 @@
   },
   "ShippingMethodTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -62553,7 +62553,7 @@
   },
   "ShopErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -63868,7 +63868,7 @@
   },
   "StockBulkUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -64022,7 +64022,7 @@
   },
   "StockErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -64351,7 +64351,7 @@
   },
   "StoredPaymentMethodRequestDeleteErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -64938,7 +64938,7 @@
   },
   "TaxClassCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -65036,7 +65036,7 @@
   },
   "TaxClassDeleteErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -65205,7 +65205,7 @@
   },
   "TaxClassUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -65626,7 +65626,7 @@
   },
   "TaxConfigurationUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -65787,7 +65787,7 @@
   },
   "TaxCountryConfigurationDeleteErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -65870,7 +65870,7 @@
   },
   "TaxCountryConfigurationUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -65956,7 +65956,7 @@
   },
   "TaxExemptionManageErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -66329,7 +66329,7 @@
   },
   "ThumbnailFormatEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -66397,7 +66397,7 @@
   },
   "TimePeriodTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -66724,7 +66724,7 @@
   },
   "TransactionCreateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -67010,7 +67010,7 @@
   },
   "TransactionEventReportErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -67226,7 +67226,7 @@
   },
   "TransactionInitializeErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -67626,7 +67626,7 @@
   },
   "TransactionKind": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -67781,7 +67781,7 @@
   },
   "TransactionProcessErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -68018,7 +68018,7 @@
   },
   "TransactionRequestActionErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -68099,7 +68099,7 @@
   },
   "TransactionRequestRefundForGrantedRefundErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -68195,7 +68195,7 @@
   },
   "TransactionUpdateErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -68541,7 +68541,7 @@
   },
   "TranslationErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -68822,7 +68822,7 @@
   },
   "UploadErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -69858,7 +69858,7 @@
   },
   "VolumeUnitsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -70636,7 +70636,7 @@
   },
   "VoucherCodeBulkDeleteErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -71897,7 +71897,7 @@
   },
   "WarehouseClickAndCollectOptionEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -72212,7 +72212,7 @@
   },
   "WarehouseErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -72910,7 +72910,7 @@
   },
   "WebhookDryRunErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -72993,7 +72993,7 @@
   },
   "WebhookErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -74804,7 +74804,7 @@
   },
   "WebhookSampleEventTypeEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -75570,7 +75570,7 @@
   },
   "WebhookTriggerErrorCode": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
@@ -75765,7 +75765,7 @@
   },
   "WeightUnitsEnum": {
     "type": "enum",
-    "description": "An enumeration.",
+    "description": null,
     "deprecated": null,
     "message": null,
     "values": {
