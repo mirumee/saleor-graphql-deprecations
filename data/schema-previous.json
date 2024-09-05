@@ -60503,7 +60503,7 @@
         "arguments": {}
       },
       "name": {
-        "type": "String!",
+        "type": "String",
         "description": "Translated shipping method name.",
         "deprecated": null,
         "message": null,
@@ -66110,6 +66110,31 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "type": {
+        "type": "TaxableObjectDiscountTypeEnum!",
+        "description": "Indicates which part of the order the discount should affect: SUBTOTAL or SHIPPING.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "TaxableObjectDiscountTypeEnum": {
+    "type": "enum",
+    "description": "Indicates which part of the order the discount should affect: SUBTOTAL or SHIPPING.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "SHIPPING": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "SUBTOTAL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },

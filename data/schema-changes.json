@@ -1,13 +1,11 @@
 [
   {
-    "diff": "field_new",
-    "type": "Checkout",
-    "field": "customerNote"
+    "diff": "type_new",
+    "type": "TaxableObjectDiscountTypeEnum"
   },
   {
-    "diff": "field_deprecated",
-    "type": "Checkout",
-    "field": "note",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "TaxableObjectDiscount",
+    "field": "type"
   }
 ]
