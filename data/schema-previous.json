@@ -21243,7 +21243,7 @@
       },
       "url": {
         "type": "String",
-        "description": "URL to view/download an invoice. This can be an internal URL if the Invoicing Plugin was used or an external URL if it has been provided.",
+        "description": "URL to view/download an invoice.",
         "deprecated": null,
         "message": null,
         "arguments": {}
