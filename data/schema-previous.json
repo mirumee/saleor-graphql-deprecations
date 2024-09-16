@@ -34305,8 +34305,8 @@
         "message": null,
         "arguments": {
           "amount": {
-            "type": "PositiveDecimal!",
-            "description": "The amount of the event to report.",
+            "type": "PositiveDecimal",
+            "description": "The amount of the event to report. \n\nRequired for all `REQUEST`, `SUCCESS`, `ACTION_REQUIRED`, and `ADJUSTMENT` events. For other events, the amount will be calculated based on the previous events with the same pspReference. If not possible to calculate, the mutation will return an error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -67060,6 +67060,11 @@
         "message": null
       },
       "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
         "description": null,
         "deprecated": null,
         "message": null

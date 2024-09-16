@@ -1,11 +1,7 @@
 [
   {
-    "diff": "type_new",
-    "type": "TaxableObjectDiscountTypeEnum"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxableObjectDiscount",
-    "field": "type"
+    "diff": "enum_value_new",
+    "enum": "TransactionEventReportErrorCode",
+    "value": "REQUIRED"
   }
 ]
