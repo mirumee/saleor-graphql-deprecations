@@ -34300,7 +34300,7 @@
       },
       "transactionEventReport": {
         "type": "TransactionEventReport",
-        "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.",
+        "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.\n\nTriggers the following webhook events:\n- TRANSACTION_ITEM_METADATA_UPDATED (async): Optionally called when transaction's metadata was updated.\n- CHECKOUT_FULLY_PAID (async): Optionally called when the checkout charge status changed to `FULL` or `OVERCHARGED`.\n- ORDER_UPDATED (async): Optionally called when the transaction is related to the order and the order was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34356,6 +34356,20 @@
           "token": {
             "type": "UUID",
             "description": "The token of the transaction. One of field id or token is required.\n\nAdded in Saleor 3.14.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "transactionMetadata": {
+            "type": "[MetadataInput!]",
+            "description": "Fields required to update the transaction metadata.\n\nAdded in Saleor 3.17.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "transactionPrivateMetadata": {
+            "type": "[MetadataInput!]",
+            "description": "Fields required to update the transaction private metadata.\n\nAdded in Saleor 3.17.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -66969,7 +66983,7 @@
   "TransactionEventReport": {
     "type": "object",
     "interfaces": [],
-    "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.",
+    "description": "Report the event for the transaction.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires the following permissions: OWNER and HANDLE_PAYMENTS for apps, HANDLE_PAYMENTS for staff users. Staff user cannot update a transaction that is owned by the app.\n\nTriggers the following webhook events:\n- TRANSACTION_ITEM_METADATA_UPDATED (async): Optionally called when transaction's metadata was updated.\n- CHECKOUT_FULLY_PAID (async): Optionally called when the checkout charge status changed to `FULL` or `OVERCHARGED`.\n- ORDER_UPDATED (async): Optionally called when the transaction is related to the order and the order was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
