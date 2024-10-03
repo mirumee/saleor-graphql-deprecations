@@ -10603,7 +10603,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Event sent when checkout is fully paid with transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Event sent when checkout is fully paid with transactions. The checkout is considered as fully paid when the checkout `charge_status` is `FULL` or `OVERCHARGED`. The event is not sent when the checkout authorization flow strategy is used.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
     "deprecated": null,
     "message": null,
     "fields": {
