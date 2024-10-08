@@ -11261,6 +11261,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "automaticallyCompleteFullyPaidCheckouts": {
+        "type": "Boolean!",
+        "description": "Default `false`. Determines if the paid checkouts should be automatically completed. This setting applies only to checkouts where payment was processed through transactions.When enabled, the checkout will be automatically completed once the checkout `charge_status` reaches `FULL`. This occurs when the total sum of charged and authorized transaction amounts equals or exceeds the checkout's total amount.\n\nAdded in Saleor 3.20.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "useLegacyErrorFlow": {
         "type": "Boolean!",
         "description": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one.\n\nAdded in Saleor 3.15.This field will be removed in Saleor 4.0.",
@@ -11276,6 +11283,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "automaticallyCompleteFullyPaidCheckouts": {
+        "type": "Boolean",
+        "description": "Default `false`. Determines if the paid checkouts should be automatically completed. This setting applies only to checkouts where payment was processed through transactions.When enabled, the checkout will be automatically completed once the checkout `charge_status` reaches `FULL`. This occurs when the total sum of charged and authorized transaction amounts equals or exceeds the checkout's total amount.\n\nAdded in Saleor 3.20.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "useLegacyErrorFlow": {
         "type": "Boolean",
         "description": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one. \n\nAdded in Saleor 3.15.\n\nDEPRECATED: this field will be removed in Saleor 4.0.",
@@ -38310,6 +38324,11 @@
         "message": null
       },
       "PLACED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PLACED_AUTOMATICALLY_FROM_PAID_CHECKOUT": {
         "description": null,
         "deprecated": null,
         "message": null

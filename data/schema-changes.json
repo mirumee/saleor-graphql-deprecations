@@ -1,7 +1,17 @@
 [
   {
+    "diff": "field_new",
+    "type": "CheckoutSettings",
+    "field": "automaticallyCompleteFullyPaidCheckouts"
+  },
+  {
+    "diff": "field_new",
+    "type": "CheckoutSettingsInput",
+    "field": "automaticallyCompleteFullyPaidCheckouts"
+  },
+  {
     "diff": "enum_value_new",
-    "enum": "TransactionEventReportErrorCode",
-    "value": "REQUIRED"
+    "enum": "OrderEventsEnum",
+    "value": "PLACED_AUTOMATICALLY_FROM_PAID_CHECKOUT"
   }
 ]
