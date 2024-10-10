@@ -5296,7 +5296,7 @@
       },
       "attributeId": {
         "type": "ID!",
-        "description": "The ID of the attribute to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the attribute to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -5422,7 +5422,7 @@
       },
       "translatableContent": {
         "type": "AttributeTranslatableContent",
-        "description": "Represents the attribute fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the attribute fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6368,7 +6368,7 @@
     "fields": {
       "attribute": {
         "type": "AttributeTranslatableContent",
-        "description": "Associated attribute that can be translated.\n\nAdded in Saleor 3.9.",
+        "description": "Associated attribute that can be translated.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6382,7 +6382,7 @@
       },
       "attributeValueId": {
         "type": "ID!",
-        "description": "The ID of the attribute value to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the attribute value to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6536,7 +6536,7 @@
       },
       "translatableContent": {
         "type": "AttributeValueTranslatableContent",
-        "description": "Represents the attribute value fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the attribute value fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -7165,7 +7165,7 @@
       },
       "variants": {
         "type": "[ID!]",
-        "description": "Product variant related to the discount.\n\nAdded in Saleor 3.1.",
+        "description": "Product variant related to the discount.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7822,7 +7822,7 @@
       },
       "updatedAt": {
         "type": "DateTimeRangeInput",
-        "description": "Filter by when was the most recent update. \n\nAdded in Saleor 3.17.",
+        "description": "Filter by when was the most recent update.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7963,7 +7963,7 @@
       },
       "categoryId": {
         "type": "ID!",
-        "description": "The ID of the category to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the category to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8131,7 +8131,7 @@
       },
       "translatableContent": {
         "type": "CategoryTranslatableContent",
-        "description": "Represents the category fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the category fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8262,7 +8262,7 @@
     "fields": {
       "availableShippingMethodsPerCountry": {
         "type": "[ShippingMethodsPerCountry!]",
-        "description": "Shipping methods that are available for the channel.\n\nAdded in Saleor 3.6.",
+        "description": "Shipping methods that are available for the channel.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8277,14 +8277,14 @@
       },
       "checkoutSettings": {
         "type": "CheckoutSettings!",
-        "description": "Channel-specific checkout settings.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_CHANNELS, MANAGE_CHECKOUTS.",
+        "description": "Channel-specific checkout settings.\n\nRequires one of the following permissions: MANAGE_CHANNELS, MANAGE_CHECKOUTS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "countries": {
         "type": "[CountryDisplay!]",
-        "description": "List of shippable countries for the channel.\n\nAdded in Saleor 3.6.",
+        "description": "List of shippable countries for the channel.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8298,7 +8298,7 @@
       },
       "defaultCountry": {
         "type": "CountryDisplay!",
-        "description": "Default country for the channel. Default country can be used in checkout to determine the stock quantities or calculate taxes when the country was not explicitly provided.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
+        "description": "Default country for the channel. Default country can be used in checkout to determine the stock quantities or calculate taxes when the country was not explicitly provided.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8326,14 +8326,14 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.15.",
+        "description": "List of public metadata items. Can be accessed without permissions.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.15.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8348,7 +8348,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.15.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8370,28 +8370,28 @@
       },
       "orderSettings": {
         "type": "OrderSettings!",
-        "description": "Channel-specific order settings.\n\nAdded in Saleor 3.12.\n\nRequires one of the following permissions: MANAGE_CHANNELS, MANAGE_ORDERS.",
+        "description": "Channel-specific order settings.\n\nRequires one of the following permissions: MANAGE_CHANNELS, MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "paymentSettings": {
         "type": "PaymentSettings!",
-        "description": "Channel-specific payment settings.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_CHANNELS, HANDLE_PAYMENTS.",
+        "description": "Channel-specific payment settings.\n\nRequires one of the following permissions: MANAGE_CHANNELS, HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.15.",
+        "description": "List of private metadata items. Requires staff permissions to access.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.15.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8406,7 +8406,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.15.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -8428,7 +8428,7 @@
       },
       "stockSettings": {
         "type": "StockSettings!",
-        "description": "Define the stock setting for this channel.\n\nAdded in Saleor 3.7.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
+        "description": "Define the stock setting for this channel.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -8442,7 +8442,7 @@
       },
       "warehouses": {
         "type": "[Warehouse!]!",
-        "description": "List of warehouses assigned to this channel.\n\nAdded in Saleor 3.5.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
+        "description": "List of warehouses assigned to this channel.\n\nRequires one of the following permissions: AUTHENTICATED_APP, AUTHENTICATED_STAFF_USER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9217,14 +9217,14 @@
     "fields": {
       "authorizeStatus": {
         "type": "CheckoutAuthorizeStatusEnum!",
-        "description": "The authorize status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
+        "description": "The authorize status of the checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "availableCollectionPoints": {
         "type": "[Warehouse!]!",
-        "description": "Collection points that can be used for this order.\n\nAdded in Saleor 3.1.",
+        "description": "Collection points that can be used for this order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9259,7 +9259,7 @@
       },
       "chargeStatus": {
         "type": "CheckoutChargeStatusEnum!",
-        "description": "The charge status of the checkout.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
+        "description": "The charge status of the checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9280,7 +9280,7 @@
       },
       "deliveryMethod": {
         "type": "DeliveryMethod",
-        "description": "The delivery method selected for this checkout.\n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
+        "description": "The delivery method selected for this checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9301,7 +9301,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether displayed prices should include taxes.\n\nAdded in Saleor 3.9.",
+        "description": "Determines whether displayed prices should include taxes.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9438,7 +9438,7 @@
       },
       "problems": {
         "type": "[CheckoutProblem!]",
-        "description": "List of problems with the checkout.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of problems with the checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9480,14 +9480,14 @@
       },
       "stockReservationExpires": {
         "type": "DateTime",
-        "description": "Date when oldest stock reservation for this checkout expires or null if no stock is reserved.\n\nAdded in Saleor 3.1.",
+        "description": "Date when oldest stock reservation for this checkout expires or null if no stock is reserved.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "storedPaymentMethods": {
         "type": "[StoredPaymentMethod!]",
-        "description": "List of user's stored payment methods that can be used in this checkout session. It uses the channel that the checkout was created in. When `amount` is not provided, `checkout.total` will be used as a default value.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of user's stored payment methods that can be used in this checkout session. It uses the channel that the checkout was created in. When `amount` is not provided, `checkout.total` will be used as a default value.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -9509,7 +9509,7 @@
       },
       "taxExemption": {
         "type": "Boolean!",
-        "description": "Returns True if checkout has to be exempt from taxes.\n\nAdded in Saleor 3.8.",
+        "description": "Returns True if checkout has to be exempt from taxes.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9523,7 +9523,7 @@
       },
       "totalBalance": {
         "type": "Money!",
-        "description": "The difference between the paid and the checkout total amount.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
+        "description": "The difference between the paid and the checkout total amount.\n\nTriggers the following webhook events:\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9537,7 +9537,7 @@
       },
       "transactions": {
         "type": "[TransactionItem!]",
-        "description": "List of transactions for the checkout. Requires one of the following permissions: MANAGE_CHECKOUTS, HANDLE_PAYMENTS.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of transactions for the checkout. Requires one of the following permissions: MANAGE_CHECKOUTS, HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9551,7 +9551,7 @@
       },
       "updatedAt": {
         "type": "DateTime!",
-        "description": "Time of last modification of the given checkout.\n\nAdded in Saleor 3.13.",
+        "description": "Time of last modification of the given checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -9856,7 +9856,7 @@
   "CheckoutCreateFromOrder": {
     "type": "object",
     "interfaces": [],
-    "description": "Create new checkout from existing order.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Create new checkout from existing order.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10071,7 +10071,7 @@
       },
       "validationRules": {
         "type": "CheckoutValidationRules",
-        "description": "The checkout validation rules that can be changed.\n\nAdded in Saleor 3.5.",
+        "description": "The checkout validation rules that can be changed.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -10217,7 +10217,7 @@
   "CheckoutDeliveryMethodUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates the delivery method (shipping method or pick up point) of the checkout. Updates the checkout shipping_address for click and collect delivery for a warehouse address. \n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+    "description": "Updates the delivery method (shipping method or pick up point) of the checkout. Updates the checkout shipping_address for click and collect delivery for a warehouse address. \n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10700,14 +10700,14 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.5.",
+        "description": "List of public metadata items. Can be accessed without permissions.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10722,7 +10722,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10737,14 +10737,14 @@
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.5.",
+        "description": "List of private metadata items. Requires staff permissions to access.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10759,7 +10759,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -10774,7 +10774,7 @@
       },
       "problems": {
         "type": "[CheckoutLineProblem!]",
-        "description": "List of problems with the checkout line.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "List of problems with the checkout line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -10921,21 +10921,21 @@
     "fields": {
       "forceNewLine": {
         "type": "Boolean",
-        "description": "Flag that allow force splitting the same variant into multiple lines by skipping the matching logic. \n\nAdded in Saleor 3.6.",
+        "description": "Flag that allow force splitting the same variant into multiple lines by skipping the matching logic.",
         "deprecated": null,
         "message": null,
         "default": false
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the object's metadata.\n\nAdded in Saleor 3.8.",
+        "description": "Fields required to update the object's metadata.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "price": {
         "type": "PositiveDecimal",
-        "description": "Custom price of the item. Can be set only by apps with `HANDLE_CHECKOUTS` permission. When the line with the same variant will be provided multiple times, the last price will be used.\n\nAdded in Saleor 3.1.",
+        "description": "Custom price of the item. Can be set only by apps with `HANDLE_CHECKOUTS` permission. When the line with the same variant will be provided multiple times, the last price will be used.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -10958,7 +10958,7 @@
   },
   "CheckoutLineProblem": {
     "type": "union",
-    "description": "Represents an problem in the checkout line.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents an problem in the checkout line.",
     "deprecated": null,
     "message": null,
     "types": [
@@ -10969,7 +10969,7 @@
   "CheckoutLineProblemInsufficientStock": {
     "type": "object",
     "interfaces": [],
-    "description": "Indicates insufficient stock for a given checkout line.Placing the order will not be possible until solving this problem.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Indicates insufficient stock for a given checkout line.Placing the order will not be possible until solving this problem.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10999,7 +10999,7 @@
   "CheckoutLineProblemVariantNotAvailable": {
     "type": "object",
     "interfaces": [],
-    "description": "The variant assigned to the checkout line is not available.Placing the order will not be possible until solving this problem.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "The variant assigned to the checkout line is not available.Placing the order will not be possible until solving this problem.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -11020,14 +11020,14 @@
     "fields": {
       "lineId": {
         "type": "ID",
-        "description": "ID of the line.\n\nAdded in Saleor 3.6.",
+        "description": "ID of the line.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "price": {
         "type": "PositiveDecimal",
-        "description": "Custom price of the item. Can be set only by apps with `HANDLE_CHECKOUTS` permission. When the line with the same variant will be provided multiple times, the last price will be used.\n\nAdded in Saleor 3.1.",
+        "description": "Custom price of the item. Can be set only by apps with `HANDLE_CHECKOUTS` permission. When the line with the same variant will be provided multiple times, the last price will be used.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -11216,7 +11216,7 @@
   },
   "CheckoutProblem": {
     "type": "union",
-    "description": "Represents an problem in the checkout.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents an problem in the checkout.",
     "deprecated": null,
     "message": null,
     "types": [
@@ -11257,7 +11257,7 @@
   "CheckoutSettings": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents the channel-specific checkout settings.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents the channel-specific checkout settings.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -11270,9 +11270,9 @@
       },
       "useLegacyErrorFlow": {
         "type": "Boolean!",
-        "description": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one.\n\nAdded in Saleor 3.15.This field will be removed in Saleor 4.0.",
+        "description": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one.This field will be removed in Saleor 4.0.",
         "deprecated": "4.0",
-        "message": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one.\n\nAdded in Saleor 3.15.This field will be removed in Saleor 4.0.",
+        "message": "Default `true`. Determines if the checkout mutations should use legacy error flow. In legacy flow, all mutations can raise an exception unrelated to the requested action - (e.g. out-of-stock exception when updating checkoutShippingAddress.) If `false`, the errors will be aggregated in `checkout.problems` field. Some of the `problems` can block the finalizing checkout process. The legacy flow will be removed in Saleor 4.0. The flow with `checkout.problems` will be the default one.This field will be removed in Saleor 4.0.",
         "arguments": {}
       }
     }
@@ -12673,7 +12673,7 @@
       },
       "collectionId": {
         "type": "ID!",
-        "description": "The ID of the collection to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the collection to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -12841,7 +12841,7 @@
       },
       "translatableContent": {
         "type": "CollectionTranslatableContent",
-        "description": "Represents the collection fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the collection fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -15536,7 +15536,7 @@
   },
   "DeliveryMethod": {
     "type": "union",
-    "description": "Represents a delivery method chosen for the checkout. `Warehouse` type is used when checkout is marked as \"click and collect\" and `ShippingMethod` otherwise.\n\nAdded in Saleor 3.1.",
+    "description": "Represents a delivery method chosen for the checkout. `Warehouse` type is used when checkout is marked as \"click and collect\" and `ShippingMethod` otherwise.",
     "deprecated": null,
     "message": null,
     "types": [
@@ -18413,7 +18413,7 @@
       },
       "shippingRefundedAmount": {
         "type": "Money",
-        "description": "Amount of refunded shipping price.\n\nAdded in Saleor 3.14.",
+        "description": "Amount of refunded shipping price.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -18434,7 +18434,7 @@
       },
       "totalRefundedAmount": {
         "type": "Money",
-        "description": "Total refunded amount assigned to this fulfillment.\n\nAdded in Saleor 3.14.",
+        "description": "Total refunded amount assigned to this fulfillment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19086,14 +19086,14 @@
     "fields": {
       "app": {
         "type": "App",
-        "description": "App which created the gift card.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_APPS, OWNER.",
+        "description": "App which created the gift card.\n\nRequires one of the following permissions: MANAGE_APPS, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "boughtInChannel": {
         "type": "String",
-        "description": "Slug of the channel where the gift card was bought.\n\nAdded in Saleor 3.1.",
+        "description": "Slug of the channel where the gift card was bought.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19114,14 +19114,14 @@
       },
       "createdBy": {
         "type": "User",
-        "description": "The user who bought or issued a gift card.\n\nAdded in Saleor 3.1.",
+        "description": "The user who bought or issued a gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "createdByEmail": {
         "type": "String",
-        "description": "Email address of the user who bought or issued gift card.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_USERS, OWNER.",
+        "description": "Email address of the user who bought or issued gift card.\n\nRequires one of the following permissions: MANAGE_USERS, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19149,7 +19149,7 @@
       },
       "events": {
         "type": "[GiftCardEvent!]!",
-        "description": "List of events associated with the gift card.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "List of events associated with the gift card.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -19280,7 +19280,7 @@
       },
       "product": {
         "type": "Product",
-        "description": "Related gift card product.\n\nAdded in Saleor 3.1.",
+        "description": "Related gift card product.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -19294,21 +19294,21 @@
       },
       "tags": {
         "type": "[GiftCardTag!]!",
-        "description": "The gift card tag.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "The gift card tag.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "usedBy": {
         "type": "User",
-        "description": "The customer who used a gift card.\n\nAdded in Saleor 3.1.",
+        "description": "The customer who used a gift card.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
       },
       "usedByEmail": {
         "type": "String",
-        "description": "Email address of the customer who used a gift card.\n\nAdded in Saleor 3.1.",
+        "description": "Email address of the customer who used a gift card.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0.",
         "arguments": {}
@@ -19942,7 +19942,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "History log of the gift card.\n\nAdded in Saleor 3.1.",
+    "description": "History log of the gift card.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -20608,7 +20608,7 @@
     "message": null,
     "values": {
       "CREATED_AT": {
-        "description": "Sort gift cards by created at.\n\nAdded in Saleor 3.8.",
+        "description": "Sort gift cards by created at.",
         "deprecated": null,
         "message": null
       },
@@ -20702,7 +20702,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "The gift card tag.\n\nAdded in Saleor 3.1.",
+    "description": "The gift card tag.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -21199,7 +21199,7 @@
       },
       "order": {
         "type": "Order",
-        "description": "Order related to the invoice.\n\nAdded in Saleor 3.10.",
+        "description": "Order related to the invoice.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -27482,7 +27482,7 @@
       },
       "menuItemId": {
         "type": "ID!",
-        "description": "The ID of the menu item to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the menu item to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -27573,7 +27573,7 @@
       },
       "translatableContent": {
         "type": "MenuItemTranslatableContent",
-        "description": "Represents the menu item fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the menu item fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -29094,7 +29094,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29137,7 +29137,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29151,7 +29151,7 @@
           },
           "validationRules": {
             "type": "CheckoutAddressValidationRules",
-            "description": "The rules for changing validation for received billing address data.\n\nAdded in Saleor 3.5.",
+            "description": "The rules for changing validation for received billing address data.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29173,14 +29173,14 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "metadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the checkout metadata.\n\nAdded in Saleor 3.8.",
+            "description": "Fields required to update the checkout metadata.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29232,7 +29232,7 @@
       },
       "checkoutCreateFromOrder": {
         "type": "CheckoutCreateFromOrder",
-        "description": "Create new checkout from existing order.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Create new checkout from existing order.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29267,7 +29267,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29296,7 +29296,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29334,7 +29334,7 @@
       },
       "checkoutDeliveryMethodUpdate": {
         "type": "CheckoutDeliveryMethodUpdate",
-        "description": "Updates the delivery method (shipping method or pick up point) of the checkout. Updates the checkout shipping_address for click and collect delivery for a warehouse address. \n\nAdded in Saleor 3.1.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+        "description": "Updates the delivery method (shipping method or pick up point) of the checkout. Updates the checkout shipping_address for click and collect delivery for a warehouse address. \n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29347,7 +29347,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29383,7 +29383,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29412,7 +29412,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29448,7 +29448,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29484,7 +29484,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29513,7 +29513,7 @@
         "arguments": {
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29549,7 +29549,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29621,7 +29621,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29664,7 +29664,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29685,7 +29685,7 @@
           },
           "validationRules": {
             "type": "CheckoutAddressValidationRules",
-            "description": "The rules for changing validation for received shipping address data.\n\nAdded in Saleor 3.5.",
+            "description": "The rules for changing validation for received shipping address data.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -29707,7 +29707,7 @@
           },
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -31142,7 +31142,7 @@
       },
       "orderCreateFromCheckout": {
         "type": "OrderCreateFromCheckout",
-        "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nAdded in Saleor 3.2.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
+        "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31155,14 +31155,14 @@
           },
           "metadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the checkout metadata.\n\nAdded in Saleor 3.8.",
+            "description": "Fields required to update the checkout metadata.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "privateMetadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the checkout private metadata.\n\nAdded in Saleor 3.8.",
+            "description": "Fields required to update the checkout private metadata.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -33158,7 +33158,7 @@
       },
       "promotionBulkDelete": {
         "type": "PromotionBulkDelete",
-        "description": "Deletes promotions.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+        "description": "Deletes promotions. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33173,7 +33173,7 @@
       },
       "promotionCreate": {
         "type": "PromotionCreate",
-        "description": "Creates a new promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_CREATED (async): A promotion was created.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.",
+        "description": "Creates a new promotion. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_CREATED (async): A promotion was created.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33188,7 +33188,7 @@
       },
       "promotionDelete": {
         "type": "PromotionDelete",
-        "description": "Deletes a promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+        "description": "Deletes a promotion. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33203,7 +33203,7 @@
       },
       "promotionRuleCreate": {
         "type": "PromotionRuleCreate",
-        "description": "Creates a new promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_CREATED (async): A promotion rule was created.",
+        "description": "Creates a new promotion rule. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_CREATED (async): A promotion rule was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33218,7 +33218,7 @@
       },
       "promotionRuleDelete": {
         "type": "PromotionRuleDelete",
-        "description": "Deletes a promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_DELETED (async): A promotion rule was deleted.",
+        "description": "Deletes a promotion rule. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_DELETED (async): A promotion rule was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33262,7 +33262,7 @@
       },
       "promotionRuleUpdate": {
         "type": "PromotionRuleUpdate",
-        "description": "Updates an existing promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_UPDATED (async): A promotion rule was updated.",
+        "description": "Updates an existing promotion rule. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_UPDATED (async): A promotion rule was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33313,7 +33313,7 @@
       },
       "promotionUpdate": {
         "type": "PromotionUpdate",
-        "description": "Updates an existing promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_UPDATED (async): A promotion was updated.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.\n- PROMOTION_ENDED (async): Optionally called if promotion was ended.",
+        "description": "Updates an existing promotion. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_UPDATED (async): A promotion was updated.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.\n- PROMOTION_ENDED (async): Optionally called if promotion was ended.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35193,14 +35193,14 @@
       },
       "authorizeStatus": {
         "type": "OrderAuthorizeStatusEnum!",
-        "description": "The authorize status of the order.\n\nAdded in Saleor 3.4.",
+        "description": "The authorize status of the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "availableCollectionPoints": {
         "type": "[Warehouse!]!",
-        "description": "Collection points that can be used for this order.\n\nAdded in Saleor 3.1.",
+        "description": "Collection points that can be used for this order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35235,14 +35235,14 @@
       },
       "chargeStatus": {
         "type": "OrderChargeStatusEnum!",
-        "description": "The charge status of the order.\n\nAdded in Saleor 3.4.",
+        "description": "The charge status of the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "checkoutId": {
         "type": "ID",
-        "description": "ID of the checkout that the order was created from. \n\nAdded in Saleor 3.11.",
+        "description": "ID of the checkout that the order was created from.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35270,7 +35270,7 @@
       },
       "deliveryMethod": {
         "type": "DeliveryMethod",
-        "description": "The delivery method selected for this order.\n\nAdded in Saleor 3.1.",
+        "description": "The delivery method selected for this order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35298,7 +35298,7 @@
       },
       "displayGrossPrices": {
         "type": "Boolean!",
-        "description": "Determines whether displayed prices should include taxes.\n\nAdded in Saleor 3.9.",
+        "description": "Determines whether displayed prices should include taxes.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35319,7 +35319,7 @@
       },
       "externalReference": {
         "type": "String",
-        "description": "External ID of this order. \n\nAdded in Saleor 3.10.",
+        "description": "External ID of this order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35340,7 +35340,7 @@
       },
       "grantedRefunds": {
         "type": "[OrderGrantedRefund!]!",
-        "description": "List of granted refunds.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "List of granted refunds.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35554,28 +35554,28 @@
       },
       "shippingTaxClass": {
         "type": "TaxClass",
-        "description": "Denormalized tax class assigned to the shipping method.\n\nAdded in Saleor 3.9.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "description": "Denormalized tax class assigned to the shipping method.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "shippingTaxClassMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "Denormalized public metadata of the shipping method's tax class.\n\nAdded in Saleor 3.9.",
+        "description": "Denormalized public metadata of the shipping method's tax class.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "shippingTaxClassName": {
         "type": "String",
-        "description": "Denormalized name of the tax class assigned to the shipping method.\n\nAdded in Saleor 3.9.",
+        "description": "Denormalized name of the tax class assigned to the shipping method.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "shippingTaxClassPrivateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "Denormalized private metadata of the shipping method's tax class. Requires staff permissions to access.\n\nAdded in Saleor 3.9.",
+        "description": "Denormalized private metadata of the shipping method's tax class. Requires staff permissions to access.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35610,7 +35610,7 @@
       },
       "taxExemption": {
         "type": "Boolean!",
-        "description": "Returns True if order has to be exempt from taxes.\n\nAdded in Saleor 3.8.",
+        "description": "Returns True if order has to be exempt from taxes.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35631,7 +35631,7 @@
       },
       "totalAuthorizePending": {
         "type": "Money!",
-        "description": "Total amount of ongoing authorize requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Total amount of ongoing authorize requests for the order's transactions.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35652,14 +35652,14 @@
       },
       "totalCancelPending": {
         "type": "Money!",
-        "description": "Total amount of ongoing cancel requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Total amount of ongoing cancel requests for the order's transactions.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "totalCanceled": {
         "type": "Money!",
-        "description": "Amount canceled for the order.\n\nAdded in Saleor 3.13.",
+        "description": "Amount canceled for the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35673,42 +35673,42 @@
       },
       "totalChargePending": {
         "type": "Money!",
-        "description": "Total amount of ongoing charge requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Total amount of ongoing charge requests for the order's transactions.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "totalCharged": {
         "type": "Money!",
-        "description": "Amount charged for the order.\n\nAdded in Saleor 3.13.",
+        "description": "Amount charged for the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "totalGrantedRefund": {
         "type": "Money!",
-        "description": "Total amount of granted refund.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Total amount of granted refund.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "totalRefundPending": {
         "type": "Money!",
-        "description": "Total amount of ongoing refund requests for the order's transactions.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Total amount of ongoing refund requests for the order's transactions.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "totalRefunded": {
         "type": "Money!",
-        "description": "Total refund amount for the order.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Total refund amount for the order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "totalRemainingGrant": {
         "type": "Money!",
-        "description": "The difference amount between granted refund and the amounts that are pending and refunded.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "The difference amount between granted refund and the amounts that are pending and refunded.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35722,7 +35722,7 @@
       },
       "transactions": {
         "type": "[TransactionItem!]!",
-        "description": "List of transactions for the order. Requires one of the following permissions: MANAGE_ORDERS, HANDLE_PAYMENTS.\n\nAdded in Saleor 3.4.",
+        "description": "List of transactions for the order. Requires one of the following permissions: MANAGE_ORDERS, HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -37021,7 +37021,7 @@
   "OrderCreateFromCheckout": {
     "type": "object",
     "interfaces": [],
-    "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nAdded in Saleor 3.2.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
+    "description": "Create new order from existing checkout. Requires the following permissions: AUTHENTICATED_APP and HANDLE_CHECKOUTS.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_CALCULATE_TAXES (sync): Optionally triggered when checkout prices are expired.\n- ORDER_CREATED (async): Triggered when order is created.\n- NOTIFY_USER (async): A notification for order placement.\n- NOTIFY_USER (async): A staff notification for order placement.\n- ORDER_UPDATED (async): Triggered when order received the update after placement.\n- ORDER_PAID (async): Triggered when newly created order is paid.\n- ORDER_FULLY_PAID (async): Triggered when newly created order is fully paid.\n- ORDER_CONFIRMED (async): Optionally triggered when newly created order are automatically marked as confirmed.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -37872,7 +37872,7 @@
       },
       "related": {
         "type": "OrderEvent",
-        "description": "The order event which is related to this event.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "The order event which is related to this event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39359,7 +39359,7 @@
   "OrderGrantedRefund": {
     "type": "object",
     "interfaces": [],
-    "description": "The details of granted refund.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "The details of granted refund.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -39393,7 +39393,7 @@
       },
       "lines": {
         "type": "[OrderGrantedRefundLine!]",
-        "description": "Lines assigned to the granted refund.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Lines assigned to the granted refund.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39407,7 +39407,7 @@
       },
       "shippingCostsIncluded": {
         "type": "Boolean!",
-        "description": "If true, the refunded amount includes the shipping price.If false, the refunded amount does not include the shipping price.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "If true, the refunded amount includes the shipping price.If false, the refunded amount does not include the shipping price.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39452,7 +39452,7 @@
   "OrderGrantedRefundLine": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents granted refund line.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents granted refund line.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -39554,7 +39554,7 @@
       },
       "isPriceOverridden": {
         "type": "Boolean",
-        "description": "Returns True, if the line unit price was overridden.\n\nAdded in Saleor 3.14.",
+        "description": "Returns True, if the line unit price was overridden.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39568,14 +39568,14 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items. Can be accessed without permissions.\n\nAdded in Saleor 3.5.",
+        "description": "List of public metadata items. Can be accessed without permissions.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "metafield": {
         "type": "String",
-        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39590,7 +39590,7 @@
       },
       "metafields": {
         "type": "Metadata",
-        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39605,14 +39605,14 @@
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of private metadata items. Requires staff permissions to access.\n\nAdded in Saleor 3.5.",
+        "description": "List of private metadata items. Requires staff permissions to access.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "privateMetafield": {
         "type": "String",
-        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.5.",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39627,7 +39627,7 @@
       },
       "privateMetafields": {
         "type": "Metadata",
-        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.5.",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.\n\nAdded in Saleor 3.3.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -39677,42 +39677,42 @@
       },
       "quantityToFulfill": {
         "type": "Int!",
-        "description": "A quantity of items remaining to be fulfilled.\n\nAdded in Saleor 3.1.",
+        "description": "A quantity of items remaining to be fulfilled.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "saleId": {
         "type": "ID",
-        "description": "Denormalized sale ID, set when order line is created for a product variant that is on sale.\n\nAdded in Saleor 3.14.",
+        "description": "Denormalized sale ID, set when order line is created for a product variant that is on sale.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "taxClass": {
         "type": "TaxClass",
-        "description": "Denormalized tax class of the product in this order line.\n\nAdded in Saleor 3.9.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "description": "Denormalized tax class of the product in this order line.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "taxClassMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "Denormalized public metadata of the tax class.\n\nAdded in Saleor 3.9.",
+        "description": "Denormalized public metadata of the tax class.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "taxClassName": {
         "type": "String",
-        "description": "Denormalized name of the tax class.\n\nAdded in Saleor 3.9.",
+        "description": "Denormalized name of the tax class.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "taxClassPrivateMetadata": {
         "type": "[MetadataItem!]!",
-        "description": "Denormalized private metadata of the tax class. Requires staff permissions to access.\n\nAdded in Saleor 3.9.",
+        "description": "Denormalized private metadata of the tax class. Requires staff permissions to access.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39832,7 +39832,7 @@
       },
       "voucherCode": {
         "type": "String",
-        "description": "Voucher code that was used for this order line.\n\nAdded in Saleor 3.14.",
+        "description": "Voucher code that was used for this order line.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40706,7 +40706,7 @@
     "fields": {
       "allowUnpaidOrders": {
         "type": "Boolean!",
-        "description": "Determine if it is possible to place unpaid order by calling `checkoutComplete` mutation.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Determine if it is possible to place unpaid order by calling `checkoutComplete` mutation.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40727,14 +40727,14 @@
       },
       "deleteExpiredOrdersAfter": {
         "type": "Day!",
-        "description": "The time in days after expired orders will be deleted.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "The time in days after expired orders will be deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "expireOrdersAfter": {
         "type": "Minute",
-        "description": "Expiration time in minutes. Default null - means do not expire any orders.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Expiration time in minutes. Default null - means do not expire any orders.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -40748,7 +40748,7 @@
       },
       "markAsPaidStrategy": {
         "type": "MarkAsPaidStrategyEnum!",
-        "description": "Determine what strategy will be used to mark the order as paid. Based on the chosen option, the proper object will be created and attached to the order when it's manually marked as paid.\n`PAYMENT_FLOW` - [default option] creates the `Payment` object.\n`TRANSACTION_FLOW` - creates the `TransactionItem` object.\n\nAdded in Saleor 3.13.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Determine what strategy will be used to mark the order as paid. Based on the chosen option, the proper object will be created and attached to the order when it's manually marked as paid.\n`PAYMENT_FLOW` - [default option] creates the `Payment` object.\n`TRANSACTION_FLOW` - creates the `TransactionItem` object.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -41402,7 +41402,7 @@
       },
       "publishedAt": {
         "type": "DateTime",
-        "description": "The page publication date.\n\nAdded in Saleor 3.3.",
+        "description": "The page publication date.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42220,7 +42220,7 @@
       },
       "pageId": {
         "type": "ID!",
-        "description": "The ID of the page to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the page to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -42367,7 +42367,7 @@
       },
       "translatableContent": {
         "type": "PageTranslatableContent",
-        "description": "Represents the page fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the page fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43309,7 +43309,7 @@
       },
       "partial": {
         "type": "Boolean!",
-        "description": "Informs whether this is a partial payment.\n\nAdded in Saleor 3.14.",
+        "description": "Informs whether this is a partial payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43360,7 +43360,7 @@
       },
       "pspReference": {
         "type": "String",
-        "description": "PSP reference of the payment.\n\nAdded in Saleor 3.14.",
+        "description": "PSP reference of the payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43873,7 +43873,7 @@
       },
       "ids": {
         "type": "[ID!]",
-        "description": "Filter by ids. \n\nAdded in Saleor 3.8.",
+        "description": "Filter by ids.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -45018,7 +45018,7 @@
     "fields": {
       "defaultTransactionFlowStrategy": {
         "type": "TransactionFlowStrategyEnum!",
-        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.\n\nAdded in Saleor 3.16.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "description": "Determine the transaction flow strategy to be used. Include the selected option in the payload sent to the payment app, as a requested action for the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -45063,7 +45063,7 @@
       },
       "metadata": {
         "type": "[MetadataItem!]!",
-        "description": "List of public metadata items.\n\nAdded in Saleor 3.1.\n\nCan be accessed without permissions.",
+        "description": "List of public metadata items.\n\nCan be accessed without permissions.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -48350,7 +48350,7 @@
       },
       "availableFrom": {
         "type": "DateTime",
-        "description": "Filter by the date of availability for purchase. \n\nAdded in Saleor 3.8.",
+        "description": "Filter by the date of availability for purchase.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48406,7 +48406,7 @@
       },
       "isAvailable": {
         "type": "Boolean",
-        "description": "Filter by availability for purchase. \n\nAdded in Saleor 3.8.",
+        "description": "Filter by availability for purchase.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48420,7 +48420,7 @@
       },
       "isVisibleInListing": {
         "type": "Boolean",
-        "description": "Filter by visibility in product listings. \n\nAdded in Saleor 3.8.",
+        "description": "Filter by visibility in product listings.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48455,7 +48455,7 @@
       },
       "publishedFrom": {
         "type": "DateTime",
-        "description": "Filter by the publication date. \n\nAdded in Saleor 3.8.",
+        "description": "Filter by the publication date.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -49306,7 +49306,7 @@
         "message": null
       },
       "CREATED_AT": {
-        "description": "Sort products by creation date.\n\nAdded in Saleor 3.8.",
+        "description": "Sort products by creation date.",
         "deprecated": null,
         "message": null
       },
@@ -49535,7 +49535,7 @@
       },
       "productId": {
         "type": "ID!",
-        "description": "The ID of the product to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the product to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -49703,7 +49703,7 @@
       },
       "translatableContent": {
         "type": "ProductTranslatableContent",
-        "description": "Represents the product fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the product fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52561,7 +52561,7 @@
       },
       "productVariantId": {
         "type": "ID!",
-        "description": "The ID of the product variant to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the product variant to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52673,7 +52673,7 @@
       },
       "translatableContent": {
         "type": "ProductVariantTranslatableContent",
-        "description": "Represents the product variant fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the product variant fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -52975,7 +52975,7 @@
       "Node",
       "ObjectWithMetadata"
     ],
-    "description": "Represents the promotion that allow creating discounts based on given conditions, and is visible to all the customers.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents the promotion that allow creating discounts based on given conditions, and is visible to all the customers.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53143,7 +53143,7 @@
   "PromotionBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes promotions.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+    "description": "Deletes promotions. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53219,7 +53219,7 @@
   "PromotionCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_CREATED (async): A promotion was created.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.",
+    "description": "Creates a new promotion. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_CREATED (async): A promotion was created.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53464,7 +53464,7 @@
       "Node",
       "PromotionEventInterface"
     ],
-    "description": "History log of the promotion created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion created event.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53501,7 +53501,7 @@
   "PromotionDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
+    "description": "Deletes a promotion. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_DELETED (async): A promotion was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53667,7 +53667,7 @@
       "Node",
       "PromotionEventInterface"
     ],
-    "description": "History log of the promotion ended event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion ended event.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53801,7 +53801,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "Represents the promotion rule that specifies the conditions that must be met to apply the promotion discount.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents the promotion rule that specifies the conditions that must be met to apply the promotion discount.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53916,7 +53916,7 @@
   "PromotionRuleCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a new promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_CREATED (async): A promotion rule was created.",
+    "description": "Creates a new promotion rule. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_CREATED (async): A promotion rule was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54183,7 +54183,7 @@
       "PromotionEventInterface",
       "PromotionRuleEventInterface"
     ],
-    "description": "History log of the promotion rule created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion rule created event.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54227,7 +54227,7 @@
   "PromotionRuleDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_DELETED (async): A promotion rule was deleted.",
+    "description": "Deletes a promotion rule. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_DELETED (async): A promotion rule was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54348,7 +54348,7 @@
       "PromotionEventInterface",
       "PromotionRuleEventInterface"
     ],
-    "description": "History log of the promotion rule created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion rule created event.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54392,7 +54392,7 @@
   "PromotionRuleEventInterface": {
     "type": "interface",
     "interfaces": [],
-    "description": "History log of the promotion event related to rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion event related to rule.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54481,7 +54481,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "Represents promotion rule's original translatable fields and related translations.\n\nAdded in Saleor 3.17.",
+    "description": "Represents promotion rule's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54508,7 +54508,7 @@
       },
       "promotionRuleId": {
         "type": "ID!",
-        "description": "ID of the promotion rule to translate.\n\nAdded in Saleor 3.14.",
+        "description": "ID of the promotion rule to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -54558,7 +54558,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "Represents promotion rule translations.\n\nAdded in Saleor 3.17.",
+    "description": "Represents promotion rule translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54592,7 +54592,7 @@
       },
       "translatableContent": {
         "type": "PromotionRuleTranslatableContent",
-        "description": "Represents the promotion rule fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the promotion rule fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -54624,7 +54624,7 @@
   "PromotionRuleUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates an existing promotion rule.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_UPDATED (async): A promotion rule was updated.",
+    "description": "Updates an existing promotion rule. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_RULE_UPDATED (async): A promotion rule was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54891,7 +54891,7 @@
       "PromotionEventInterface",
       "PromotionRuleEventInterface"
     ],
-    "description": "History log of the promotion rule created event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion rule created event.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55034,7 +55034,7 @@
       "Node",
       "PromotionEventInterface"
     ],
-    "description": "History log of the promotion started event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion started event.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55073,7 +55073,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "Represents promotion's original translatable fields and related translations.\n\nAdded in Saleor 3.17.",
+    "description": "Represents promotion's original translatable fields and related translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55150,7 +55150,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "Represents promotion translations.\n\nAdded in Saleor 3.17.",
+    "description": "Represents promotion translations.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55184,7 +55184,7 @@
       },
       "translatableContent": {
         "type": "PromotionTranslatableContent",
-        "description": "Represents the promotion fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the promotion fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -55256,7 +55256,7 @@
   "PromotionUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates an existing promotion.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_UPDATED (async): A promotion was updated.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.\n- PROMOTION_ENDED (async): Optionally called if promotion was ended.",
+    "description": "Updates an existing promotion. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- PROMOTION_UPDATED (async): A promotion was updated.\n- PROMOTION_STARTED (async): Optionally called if promotion was started.\n- PROMOTION_ENDED (async): Optionally called if promotion was ended.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55422,7 +55422,7 @@
       "Node",
       "PromotionEventInterface"
     ],
-    "description": "History log of the promotion updated event.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "History log of the promotion updated event.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55930,7 +55930,7 @@
           },
           "where": {
             "type": "CategoryWhereInput",
-            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "description": "Where filtering options.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -55981,7 +55981,7 @@
           },
           "slug": {
             "type": "String",
-            "description": "Slug of the channel.\n\nAdded in Saleor 3.6.",
+            "description": "Slug of the channel.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56003,7 +56003,7 @@
         "arguments": {
           "id": {
             "type": "ID",
-            "description": "The checkout's ID.\n\nAdded in Saleor 3.4.",
+            "description": "The checkout's ID.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56082,7 +56082,7 @@
           },
           "filter": {
             "type": "CheckoutFilterInput",
-            "description": "Filtering options for checkouts.\n\nAdded in Saleor 3.1.",
+            "description": "Filtering options for checkouts.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56103,7 +56103,7 @@
           },
           "sortBy": {
             "type": "CheckoutSortingInput",
-            "description": "Sort checkouts.\n\nAdded in Saleor 3.1.",
+            "description": "Sort checkouts.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56203,7 +56203,7 @@
           },
           "where": {
             "type": "CollectionWhereInput",
-            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "description": "Where filtering options.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56443,7 +56443,7 @@
       },
       "giftCardCurrencies": {
         "type": "[String!]!",
-        "description": "List of gift card currencies.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "List of gift card currencies.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -56457,7 +56457,7 @@
       },
       "giftCardTags": {
         "type": "GiftCardTagCountableConnection",
-        "description": "List of gift card tags.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
+        "description": "List of gift card tags.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -56520,7 +56520,7 @@
           },
           "filter": {
             "type": "GiftCardFilterInput",
-            "description": "Filtering options for gift cards.\n\nAdded in Saleor 3.1.",
+            "description": "Filtering options for gift cards.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56541,14 +56541,14 @@
           },
           "search": {
             "type": "String",
-            "description": "Search gift cards by email and name of user, who created or used the gift card, and by code.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "description": "Search gift cards by email and name of user, who created or used the gift card, and by code.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "sortBy": {
             "type": "GiftCardSortingInput",
-            "description": "Sort gift cards.\n\nAdded in Saleor 3.1.",
+            "description": "Sort gift cards.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -56778,7 +56778,7 @@
         "arguments": {
           "externalReference": {
             "type": "String",
-            "description": "External ID of an order. \n\nAdded in Saleor 3.10..\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+            "description": "External ID of an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57240,7 +57240,7 @@
           },
           "externalReference": {
             "type": "String",
-            "description": "External ID of the product. \n\nAdded in Saleor 3.10.",
+            "description": "External ID of the product.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57348,7 +57348,7 @@
           },
           "externalReference": {
             "type": "String",
-            "description": "External ID of the product. \n\nAdded in Saleor 3.10.",
+            "description": "External ID of the product.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57433,7 +57433,7 @@
           },
           "where": {
             "type": "ProductVariantWhereInput",
-            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "description": "Where filtering options.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57490,7 +57490,7 @@
           },
           "search": {
             "type": "String",
-            "description": "Search products.\n\nAdded in Saleor 3.14.",
+            "description": "Search products.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57504,7 +57504,7 @@
           },
           "where": {
             "type": "ProductWhereInput",
-            "description": "Where filtering options.\n\nAdded in Saleor 3.14.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+            "description": "Where filtering options.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57513,7 +57513,7 @@
       },
       "promotion": {
         "type": "Promotion",
-        "description": "Look up a promotion by ID.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "Look up a promotion by ID.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57528,7 +57528,7 @@
       },
       "promotions": {
         "type": "PromotionCountableConnection",
-        "description": "List of the promotions.\n\nAdded in Saleor 3.17.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "List of the promotions.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57901,7 +57901,7 @@
       },
       "taxClass": {
         "type": "TaxClass",
-        "description": "Look up a tax class.\n\nAdded in Saleor 3.9.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "description": "Look up a tax class.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57916,7 +57916,7 @@
       },
       "taxClasses": {
         "type": "TaxClassCountableConnection",
-        "description": "List of tax classes.\n\nAdded in Saleor 3.9.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "description": "List of tax classes.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57966,7 +57966,7 @@
       },
       "taxConfiguration": {
         "type": "TaxConfiguration",
-        "description": "Look up a tax configuration.\n\nAdded in Saleor 3.9.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "description": "Look up a tax configuration.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57981,7 +57981,7 @@
       },
       "taxConfigurations": {
         "type": "TaxConfigurationCountableConnection",
-        "description": "List of tax configurations.\n\nAdded in Saleor 3.9.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "description": "List of tax configurations.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -58053,7 +58053,7 @@
       },
       "transaction": {
         "type": "TransactionItem",
-        "description": "Look up a transaction by ID.\n\nAdded in Saleor 3.6.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.\n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
+        "description": "Look up a transaction by ID.\n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -58261,7 +58261,7 @@
         "arguments": {
           "externalReference": {
             "type": "String",
-            "description": "External ID of a warehouse. \n\nAdded in Saleor 3.10.",
+            "description": "External ID of a warehouse.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -58832,7 +58832,7 @@
       },
       "variants": {
         "type": "ProductVariantCountableConnection",
-        "description": "List of product variants this sale applies to.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "List of product variants this sale applies to.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -59571,7 +59571,7 @@
       },
       "saleId": {
         "type": "ID!",
-        "description": "The ID of the sale to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the sale to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -59655,7 +59655,7 @@
       },
       "translatableContent": {
         "type": "SaleTranslatableContent",
-        "description": "Represents the sale fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the sale fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -60483,7 +60483,7 @@
       },
       "shippingMethodId": {
         "type": "ID!",
-        "description": "The ID of the shipping method to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the shipping method to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -60544,7 +60544,7 @@
       },
       "translatableContent": {
         "type": "ShippingMethodTranslatableContent",
-        "description": "Represents the shipping method fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the shipping method fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -60800,7 +60800,7 @@
   "ShippingMethodsPerCountry": {
     "type": "object",
     "interfaces": [],
-    "description": "List of shipping methods available for the country.\n\nAdded in Saleor 3.6.",
+    "description": "List of shipping methods available for the country.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -62094,7 +62094,7 @@
     "fields": {
       "allowLoginWithoutConfirmation": {
         "type": "Boolean",
-        "description": "Determines if user can login without confirmation when `enableAccountConfirmation` is enabled.\n\nAdded in Saleor 3.15.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Determines if user can login without confirmation when `enableAccountConfirmation` is enabled.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -62166,7 +62166,7 @@
       },
       "channelCurrencies": {
         "type": "[String!]!",
-        "description": "List of all currencies supported by shop's channels.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
+        "description": "List of all currencies supported by shop's channels.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -62279,21 +62279,21 @@
       },
       "enableAccountConfirmationByEmail": {
         "type": "Boolean",
-        "description": "Determines if account confirmation by email is enabled.\n\nAdded in Saleor 3.14.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Determines if account confirmation by email is enabled.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "fulfillmentAllowUnpaid": {
         "type": "Boolean!",
-        "description": "Allow to approve fulfillments which are unpaid.\n\nAdded in Saleor 3.1.",
+        "description": "Allow to approve fulfillments which are unpaid.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "fulfillmentAutoApprove": {
         "type": "Boolean!",
-        "description": "Automatically approve all new fulfillments.\n\nAdded in Saleor 3.1.",
+        "description": "Automatically approve all new fulfillments.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -62328,7 +62328,7 @@
       },
       "limitQuantityPerCheckout": {
         "type": "Int",
-        "description": "Default number of maximum line quantity in single checkout (per single checkout line).\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Default number of maximum line quantity in single checkout (per single checkout line).\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -62437,21 +62437,21 @@
       },
       "reserveStockDurationAnonymousUser": {
         "type": "Int",
-        "description": "Default number of minutes stock will be reserved for anonymous checkout or null when stock reservation is disabled.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Default number of minutes stock will be reserved for anonymous checkout or null when stock reservation is disabled.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "reserveStockDurationAuthenticatedUser": {
         "type": "Int",
-        "description": "Default number of minutes stock will be reserved for authenticated checkout or null when stock reservation is disabled.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Default number of minutes stock will be reserved for authenticated checkout or null when stock reservation is disabled.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "schemaVersion": {
         "type": "String!",
-        "description": "Minor Saleor API version.\n\nAdded in Saleor 3.5.",
+        "description": "Minor Saleor API version.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -64138,7 +64138,7 @@
   "StockSettings": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents the channel stock settings.\n\nAdded in Saleor 3.7.",
+    "description": "Represents the channel stock settings.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -64237,7 +64237,7 @@
   "StoredPaymentMethod": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents a payment method stored for user (tokenized) in payment gateway.\n\nAdded in Saleor 3.15.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents a payment method stored for user (tokenized) in payment gateway.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -64725,7 +64725,7 @@
       "Node",
       "ObjectWithMetadata"
     ],
-    "description": "Tax class is a named object used to define tax rates per country. Tax class can be assigned to product types, products and shipping methods to define their tax rates.\n\nAdded in Saleor 3.9.",
+    "description": "Tax class is a named object used to define tax rates per country. Tax class can be assigned to product types, products and shipping methods to define their tax rates.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -64882,7 +64882,7 @@
   "TaxClassCountryRate": {
     "type": "object",
     "interfaces": [],
-    "description": "Tax rate for a country. When tax class is null, it represents the default tax rate for that country; otherwise it's a country tax rate specific to the given tax class.\n\nAdded in Saleor 3.9.",
+    "description": "Tax rate for a country. When tax class is null, it represents the default tax rate for that country; otherwise it's a country tax rate specific to the given tax class.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -65299,7 +65299,7 @@
       "Node",
       "ObjectWithMetadata"
     ],
-    "description": "Channel-specific tax configuration.\n\nAdded in Saleor 3.9.",
+    "description": "Channel-specific tax configuration.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -65513,7 +65513,7 @@
   "TaxConfigurationPerCountry": {
     "type": "object",
     "interfaces": [],
-    "description": "Country-specific exceptions of a channel's tax configuration.\n\nAdded in Saleor 3.9.",
+    "description": "Country-specific exceptions of a channel's tax configuration.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -65745,7 +65745,7 @@
   "TaxCountryConfiguration": {
     "type": "object",
     "interfaces": [],
-    "description": "Tax class rates grouped by country.\n\nAdded in Saleor 3.9.",
+    "description": "Tax class rates grouped by country.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -66914,7 +66914,7 @@
     "fields": {
       "amount": {
         "type": "Money!",
-        "description": "The amount related to this event.\n\nAdded in Saleor 3.13.",
+        "description": "The amount related to this event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -66928,14 +66928,14 @@
       },
       "createdBy": {
         "type": "UserOrApp",
-        "description": "User or App that created the transaction event.\n\nAdded in Saleor 3.13.",
+        "description": "User or App that created the transaction event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "externalUrl": {
         "type": "String!",
-        "description": "The url that will allow to redirect user to payment provider page with transaction details.\n\nAdded in Saleor 3.13.",
+        "description": "The url that will allow to redirect user to payment provider page with transaction details.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -66949,28 +66949,28 @@
       },
       "idempotencyKey": {
         "type": "String",
-        "description": "Idempotency key assigned to the event.\n\nAdded in Saleor 3.14.",
+        "description": "Idempotency key assigned to the event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "message": {
         "type": "String!",
-        "description": "Message related to the transaction's event.\n\nAdded in Saleor 3.13.",
+        "description": "Message related to the transaction's event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "pspReference": {
         "type": "String!",
-        "description": "PSP reference of transaction.\n\nAdded in Saleor 3.13.",
+        "description": "PSP reference of transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "type": {
         "type": "TransactionEventTypeEnum",
-        "description": "The type of action related to this event.\n\nAdded in Saleor 3.13.",
+        "description": "The type of action related to this event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67414,7 +67414,7 @@
       "Node",
       "ObjectWithMetadata"
     ],
-    "description": "Represents a payment transaction.\n\nAdded in Saleor 3.4.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+    "description": "Represents a payment transaction.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67427,7 +67427,7 @@
       },
       "authorizePendingAmount": {
         "type": "Money!",
-        "description": "Total amount of ongoing authorization requests for the transaction.\n\nAdded in Saleor 3.13.",
+        "description": "Total amount of ongoing authorization requests for the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67441,21 +67441,21 @@
       },
       "cancelPendingAmount": {
         "type": "Money!",
-        "description": "Total amount of ongoing cancel requests for the transaction.\n\nAdded in Saleor 3.13.",
+        "description": "Total amount of ongoing cancel requests for the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "canceledAmount": {
         "type": "Money!",
-        "description": "Total amount canceled for this payment.\n\nAdded in Saleor 3.13.",
+        "description": "Total amount canceled for this payment.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "chargePendingAmount": {
         "type": "Money!",
-        "description": "Total amount of ongoing charge requests for the transaction.\n\nAdded in Saleor 3.13.",
+        "description": "Total amount of ongoing charge requests for the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67469,7 +67469,7 @@
       },
       "checkout": {
         "type": "Checkout",
-        "description": "The related checkout.\n\nAdded in Saleor 3.14.",
+        "description": "The related checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67483,7 +67483,7 @@
       },
       "createdBy": {
         "type": "UserOrApp",
-        "description": "User or App that created the transaction.\n\nAdded in Saleor 3.13.",
+        "description": "User or App that created the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67497,7 +67497,7 @@
       },
       "externalUrl": {
         "type": "String!",
-        "description": "The url that will allow to redirect user to payment provider page with transaction details.\n\nAdded in Saleor 3.13.",
+        "description": "The url that will allow to redirect user to payment provider page with transaction details.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67511,7 +67511,7 @@
       },
       "message": {
         "type": "String!",
-        "description": "Message related to the transaction.\n\nAdded in Saleor 3.13.",
+        "description": "Message related to the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67562,14 +67562,14 @@
       },
       "name": {
         "type": "String!",
-        "description": "Name of the transaction.\n\nAdded in Saleor 3.13.",
+        "description": "Name of the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "order": {
         "type": "Order",
-        "description": "The related order.\n\nAdded in Saleor 3.6.",
+        "description": "The related order.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67613,14 +67613,14 @@
       },
       "pspReference": {
         "type": "String!",
-        "description": "PSP reference of transaction.\n\nAdded in Saleor 3.13.",
+        "description": "PSP reference of transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "refundPendingAmount": {
         "type": "Money!",
-        "description": "Total amount of ongoing refund requests for the transaction.\n\nAdded in Saleor 3.13.",
+        "description": "Total amount of ongoing refund requests for the transaction.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -67634,7 +67634,7 @@
       },
       "token": {
         "type": "UUID!",
-        "description": "The transaction token.\n\nAdded in Saleor 3.14.",
+        "description": "The transaction token.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -70370,7 +70370,7 @@
       },
       "variants": {
         "type": "ProductVariantCountableConnection",
-        "description": "List of product variants this voucher applies to.\n\nAdded in Saleor 3.1.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
+        "description": "List of product variants this voucher applies to.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -71339,7 +71339,7 @@
       },
       "variants": {
         "type": "[ID!]",
-        "description": "Variants discounted by the voucher.\n\nAdded in Saleor 3.1.",
+        "description": "Variants discounted by the voucher.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -71554,7 +71554,7 @@
       },
       "voucherId": {
         "type": "ID!",
-        "description": "The ID of the voucher to translate.\n\nAdded in Saleor 3.14.",
+        "description": "The ID of the voucher to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -71623,7 +71623,7 @@
       },
       "translatableContent": {
         "type": "VoucherTranslatableContent",
-        "description": "Represents the voucher fields to translate.\n\nAdded in Saleor 3.14.",
+        "description": "Represents the voucher fields to translate.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -71756,7 +71756,7 @@
       },
       "clickAndCollectOption": {
         "type": "WarehouseClickAndCollectOptionEnum!",
-        "description": "Click and collect options: local, all or disabled.\n\nAdded in Saleor 3.1.",
+        "description": "Click and collect options: local, all or disabled.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -71777,7 +71777,7 @@
       },
       "externalReference": {
         "type": "String",
-        "description": "External ID of this warehouse. \n\nAdded in Saleor 3.10.",
+        "description": "External ID of this warehouse.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -72086,7 +72086,7 @@
       },
       "externalReference": {
         "type": "String",
-        "description": "External ID of the warehouse.\n\nAdded in Saleor 3.10.",
+        "description": "External ID of the warehouse.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -72554,7 +72554,7 @@
       },
       "clickAndCollectOption": {
         "type": "WarehouseClickAndCollectOptionEnum",
-        "description": "Click and collect options: local, all or disabled.\n\nAdded in Saleor 3.1.",
+        "description": "Click and collect options: local, all or disabled.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -72568,14 +72568,14 @@
       },
       "externalReference": {
         "type": "String",
-        "description": "External ID of the warehouse.\n\nAdded in Saleor 3.10.",
+        "description": "External ID of the warehouse.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "isPrivate": {
         "type": "Boolean",
-        "description": "Visibility of warehouse stocks.\n\nAdded in Saleor 3.1.",
+        "description": "Visibility of warehouse stocks.",
         "deprecated": null,
         "message": null,
         "default": null
