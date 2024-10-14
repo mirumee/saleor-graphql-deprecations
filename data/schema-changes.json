@@ -1,17 +1,22 @@
 [
   {
     "diff": "field_new",
-    "type": "CheckoutSettings",
-    "field": "automaticallyCompleteFullyPaidCheckouts"
+    "type": "OrderBulkCreateOrderLineInput",
+    "field": "productSku"
   },
   {
     "diff": "field_new",
-    "type": "CheckoutSettingsInput",
-    "field": "automaticallyCompleteFullyPaidCheckouts"
+    "type": "OrderBulkCreateOrderLineInput",
+    "field": "unitDiscountReason"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "OrderEventsEnum",
-    "value": "PLACED_AUTOMATICALLY_FROM_PAID_CHECKOUT"
+    "diff": "field_new",
+    "type": "OrderBulkCreateOrderLineInput",
+    "field": "unitDiscountType"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderBulkCreateOrderLineInput",
+    "field": "unitDiscountValue"
   }
 ]

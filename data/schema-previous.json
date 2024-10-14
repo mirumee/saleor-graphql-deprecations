@@ -36550,6 +36550,13 @@
         "message": null,
         "default": null
       },
+      "productSku": {
+        "type": "String",
+        "description": "The SKU of the product.\n\nAdded in Saleor 3.18.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "quantity": {
         "type": "Int!",
         "description": "Number of items in the order line",
@@ -36616,6 +36623,27 @@
       "undiscountedTotalPrice": {
         "type": "TaxedMoneyInput!",
         "description": "Price of the order line excluding applied discount.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "unitDiscountReason": {
+        "type": "String",
+        "description": "Reason of the discount on order line.\n\nAdded in Saleor 3.19.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "unitDiscountType": {
+        "type": "DiscountValueTypeEnum",
+        "description": "Type of the discount: fixed or percent\n\nAdded in Saleor 3.19.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "unitDiscountValue": {
+        "type": "PositiveDecimal",
+        "description": "Value of the discount. Can store fixed value or percent value\n\nAdded in Saleor 3.19.",
         "deprecated": null,
         "message": null,
         "default": null
