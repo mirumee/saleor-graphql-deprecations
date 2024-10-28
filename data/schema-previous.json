@@ -33377,7 +33377,7 @@
         "arguments": {
           "channel": {
             "type": "String",
-            "description": "Slug of a channel which will be used for notify user. Optional when only one channel exists.",
+            "description": "Slug of a channel which will be used for notify user.",
             "deprecated": null,
             "message": null,
             "default": null
