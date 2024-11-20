@@ -46627,6 +46627,63 @@
         "message": null,
         "arguments": {}
       },
+      "productVariants": {
+        "type": "ProductVariantCountableConnection",
+        "description": "List of variants for the product. Requires the following permissions to include the unpublished items: MANAGE_ORDERS, MANAGE_DISCOUNTS, MANAGE_PRODUCTS.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "after": {
+            "type": "String",
+            "description": "Return the elements in the list that come after the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "before": {
+            "type": "String",
+            "description": "Return the elements in the list that come before the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "filter": {
+            "type": "ProductVariantFilterInput",
+            "description": "Filtering options for product variant.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "first": {
+            "type": "Int",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "last": {
+            "type": "Int",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "sortBy": {
+            "type": "ProductVariantSortingInput",
+            "description": "Sort products variants.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "ProductVariantWhereInput",
+            "description": "Where filtering options.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "rating": {
         "type": "Float",
         "description": "Rating of the product.",
@@ -46738,8 +46795,8 @@
       "variants": {
         "type": "[ProductVariant!]",
         "description": "List of variants for the product. Requires the following permissions to include the unpublished items: MANAGE_ORDERS, MANAGE_DISCOUNTS, MANAGE_PRODUCTS.",
-        "deprecated": null,
-        "message": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use `productVariants` field instead.",
         "arguments": {}
       },
       "weight": {

@@ -1,22 +1,13 @@
 [
   {
     "diff": "field_new",
-    "type": "OrderBulkCreateOrderLineInput",
-    "field": "productSku"
+    "type": "Product",
+    "field": "productVariants"
   },
   {
-    "diff": "field_new",
-    "type": "OrderBulkCreateOrderLineInput",
-    "field": "unitDiscountReason"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderBulkCreateOrderLineInput",
-    "field": "unitDiscountType"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderBulkCreateOrderLineInput",
-    "field": "unitDiscountValue"
+    "diff": "field_deprecated",
+    "type": "Product",
+    "field": "variants",
+    "version": "4.0"
   }
 ]
