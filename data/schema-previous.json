@@ -34348,7 +34348,7 @@
           },
           "message": {
             "type": "String",
-            "description": "The message related to the event.",
+            "description": "The message related to the event. The maximum length is 512 characters; any text exceeding this limit will be truncated.",
             "deprecated": null,
             "message": null,
             "default": null
