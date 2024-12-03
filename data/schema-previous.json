@@ -39804,42 +39804,42 @@
       },
       "undiscountedUnitPrice": {
         "type": "TaxedMoney!",
-        "description": "Price of the single item in the order line without applied an order line discount.",
+        "description": "Price of the single item in the order line without any discount applied.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "unitDiscount": {
         "type": "Money!",
-        "description": "The discount applied to the single order line.",
+        "description": "Sum of the line-level discounts applied to the order line. Order-level discounts which affect the line are not visible in this field. For order-level discount portion (if any), please query `order.discounts` field.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "unitDiscountReason": {
         "type": "String",
-        "description": "Reason for any discounts applied on a product in the order.",
+        "description": "Reason for line-level discounts applied on the order line. Order-level discounts which affect the line are not visible in this field. For order-level discount reason (if any), please query `order.discounts` field.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "unitDiscountType": {
         "type": "DiscountValueTypeEnum",
-        "description": "Type of the discount: fixed or percent",
+        "description": "Type of the discount: `fixed` or `percent`. This field shouldn't be used when multiple discounts affect the line. There is a limitation, that after running `checkoutComplete` mutation the field is always set to `fixed`.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "unitDiscountValue": {
         "type": "PositiveDecimal!",
-        "description": "Value of the discount. Can store fixed value or percent value",
+        "description": "Value of the discount. Can store fixed value or percent value. This field shouldn't be used when multiple discounts affect the line. There is a limitation, that after running `checkoutComplete` mutation the field always stores fixed value.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "unitPrice": {
         "type": "TaxedMoney!",
-        "description": "Price of the single item in the order line.",
+        "description": "Price of the single item in the order line with all the line-level discounts and order-level discount portions applied.",
         "deprecated": null,
         "message": null,
         "arguments": {}
