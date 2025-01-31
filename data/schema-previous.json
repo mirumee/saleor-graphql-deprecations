@@ -8905,6 +8905,13 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "priorPrice": {
+        "type": "PositiveDecimal",
+        "description": "Price of the variant before discount.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -10734,6 +10741,20 @@
             "default": null
           }
         }
+      },
+      "priorTotalPrice": {
+        "type": "Money",
+        "description": "The sum of the checkout line price prior to promotion.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "priorUnitPrice": {
+        "type": "Money",
+        "description": "The unit price of the checkout line prior to promotion.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
@@ -49478,6 +49499,13 @@
         "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
         "arguments": {}
       },
+      "discountPrior": {
+        "type": "TaxedMoney",
+        "description": "The discount amount compared to prior price. Null if product is not on sale or prior price was not provided in VariantChannelListing\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "displayGrossPrices": {
         "type": "Boolean!",
         "description": "Determines whether displayed prices should include taxes.",
@@ -49504,6 +49532,13 @@
         "description": "The discounted price range of the product variants in the local currency.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
+        "arguments": {}
+      },
+      "priceRangePrior": {
+        "type": "TaxedMoneyRange",
+        "description": "The prior price range of the product variants.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
         "arguments": {}
       },
       "priceRangeUndiscounted": {
@@ -51632,6 +51667,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "priorPrice": {
+        "type": "Money",
+        "description": "Prior price of the variant used for discount calculations.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -51665,6 +51707,13 @@
       "price": {
         "type": "PositiveDecimal!",
         "description": "Price of the particular variant in channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "priorPrice": {
+        "type": "PositiveDecimal",
+        "description": "Previous price of the variant in channel. Useful for providing promotion information required by customer protection laws such as EU Omnibus directive.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -69930,6 +69979,13 @@
         "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
         "arguments": {}
       },
+      "discountPrior": {
+        "type": "TaxedMoney",
+        "description": "The discount amount compared to prior price. Null if product is not on sale or prior price was not provided in VariantChannelListing\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "onSale": {
         "type": "Boolean",
         "description": "Whether it is in sale or not.",
@@ -69949,6 +70005,13 @@
         "description": "The discounted price in the local currency.",
         "deprecated": "4.0",
         "message": "This field will be removed in Saleor 4.0. Always returns `null`.",
+        "arguments": {}
+      },
+      "pricePrior": {
+        "type": "TaxedMoney",
+        "description": "The price prior to discount.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
         "arguments": {}
       },
       "priceUndiscounted": {
