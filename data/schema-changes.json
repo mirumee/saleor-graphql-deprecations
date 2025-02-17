@@ -1,47 +1,22 @@
 [
   {
     "diff": "field_new",
-    "type": "ChannelListingUpdateInput",
-    "field": "priorPrice"
+    "type": "DraftOrderCreateInput",
+    "field": "metadata"
   },
   {
     "diff": "field_new",
-    "type": "CheckoutLine",
-    "field": "priorTotalPrice"
+    "type": "DraftOrderCreateInput",
+    "field": "privateMetadata"
   },
   {
     "diff": "field_new",
-    "type": "CheckoutLine",
-    "field": "priorUnitPrice"
+    "type": "DraftOrderInput",
+    "field": "metadata"
   },
   {
     "diff": "field_new",
-    "type": "ProductPricingInfo",
-    "field": "discountPrior"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductPricingInfo",
-    "field": "priceRangePrior"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductVariantChannelListing",
-    "field": "priorPrice"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductVariantChannelListingAddInput",
-    "field": "priorPrice"
-  },
-  {
-    "diff": "field_new",
-    "type": "VariantPricingInfo",
-    "field": "discountPrior"
-  },
-  {
-    "diff": "field_new",
-    "type": "VariantPricingInfo",
-    "field": "pricePrior"
+    "type": "DraftOrderInput",
+    "field": "privateMetadata"
   }
 ]

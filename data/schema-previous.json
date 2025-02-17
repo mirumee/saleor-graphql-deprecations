@@ -16466,6 +16466,20 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Order public metadata.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Order private metadata.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "redirectUrl": {
         "type": "String",
         "description": "URL of a view where users should be redirected to see the order details. URL in RFC 1808 format.",
@@ -16676,6 +16690,20 @@
       "externalReference": {
         "type": "String",
         "description": "External ID of this order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Order public metadata.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Order private metadata.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null
