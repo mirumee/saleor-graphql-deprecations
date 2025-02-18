@@ -1,22 +1,14 @@
 [
   {
-    "diff": "field_new",
+    "diff": "field_deprecated",
     "type": "DraftOrderCreateInput",
-    "field": "metadata"
+    "field": "discount",
+    "version": "4.0"
   },
   {
-    "diff": "field_new",
-    "type": "DraftOrderCreateInput",
-    "field": "privateMetadata"
-  },
-  {
-    "diff": "field_new",
+    "diff": "field_deprecated",
     "type": "DraftOrderInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "DraftOrderInput",
-    "field": "privateMetadata"
+    "field": "discount",
+    "version": "4.0"
   }
 ]

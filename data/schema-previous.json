@@ -16447,9 +16447,9 @@
       },
       "discount": {
         "type": "PositiveDecimal",
-        "description": "Discount amount for the order.",
-        "deprecated": null,
-        "message": null,
+        "description": "Discount amount for the order.\n\nDEPRECATED: this field will be removed in Saleor 4.0. Providing a value for the field has no effect. Use `orderDiscountAdd` mutation instead.",
+        "deprecated": "4.0",
+        "message": "Discount amount for the order.\n\nDEPRECATED: this field will be removed in Saleor 4.0. Providing a value for the field has no effect. Use `orderDiscountAdd` mutation instead.",
         "default": null
       },
       "externalReference": {
@@ -16682,9 +16682,9 @@
       },
       "discount": {
         "type": "PositiveDecimal",
-        "description": "Discount amount for the order.",
-        "deprecated": null,
-        "message": null,
+        "description": "Discount amount for the order.\n\nDEPRECATED: this field will be removed in Saleor 4.0. Providing a value for the field has no effect. Use `orderDiscountAdd` mutation instead.",
+        "deprecated": "4.0",
+        "message": "Discount amount for the order.\n\nDEPRECATED: this field will be removed in Saleor 4.0. Providing a value for the field has no effect. Use `orderDiscountAdd` mutation instead.",
         "default": null
       },
       "externalReference": {
