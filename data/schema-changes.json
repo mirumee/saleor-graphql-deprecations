@@ -1,14 +1,22 @@
 [
   {
-    "diff": "field_deprecated",
-    "type": "DraftOrderCreateInput",
-    "field": "discount",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "GiftCardCreateInput",
+    "field": "metadata"
   },
   {
-    "diff": "field_deprecated",
-    "type": "DraftOrderInput",
-    "field": "discount",
-    "version": "4.0"
+    "diff": "field_new",
+    "type": "GiftCardCreateInput",
+    "field": "privateMetadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "GiftCardUpdateInput",
+    "field": "metadata"
+  },
+  {
+    "diff": "field_new",
+    "type": "GiftCardUpdateInput",
+    "field": "privateMetadata"
   }
 ]

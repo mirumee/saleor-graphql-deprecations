@@ -19726,9 +19726,23 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Gift Card public metadata.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "note": {
         "type": "String",
         "description": "The gift card note from the staff member.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Gift Card private metadata.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -20899,6 +20913,20 @@
       "expiryDate": {
         "type": "Date",
         "description": "The gift card expiry date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Gift Card public metadata.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Gift Card private metadata.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null
