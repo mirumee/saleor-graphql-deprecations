@@ -1,22 +1,25 @@
 [
   {
-    "diff": "field_new",
-    "type": "GiftCardCreateInput",
-    "field": "metadata"
+    "diff": "type_new",
+    "type": "AppReenableSyncWebhooks"
+  },
+  {
+    "diff": "type_new",
+    "type": "CircuitBreakerStateEnum"
   },
   {
     "diff": "field_new",
-    "type": "GiftCardCreateInput",
-    "field": "privateMetadata"
+    "type": "App",
+    "field": "breakerLastStateChange"
   },
   {
     "diff": "field_new",
-    "type": "GiftCardUpdateInput",
-    "field": "metadata"
+    "type": "App",
+    "field": "breakerState"
   },
   {
     "diff": "field_new",
-    "type": "GiftCardUpdateInput",
-    "field": "privateMetadata"
+    "type": "Mutation",
+    "field": "appReenableSyncWebhooks"
   }
 ]

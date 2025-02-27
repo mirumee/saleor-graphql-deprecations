@@ -1934,6 +1934,20 @@
         "message": null,
         "arguments": {}
       },
+      "breakerLastStateChange": {
+        "type": "DateTime",
+        "description": "Circuit breaker last state change date.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "breakerState": {
+        "type": "CircuitBreakerStateEnum!",
+        "description": "Circuit breaker state, if open, sync webhooks operation is disrupted.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "configurationUrl": {
         "type": "String",
         "description": "URL to iframe with the configuration for the app.",
@@ -3215,6 +3229,36 @@
       "targetUrl": {
         "type": "String!",
         "description": "The url to receive the payload.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AppReenableSyncWebhooks": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Re-enable sync webhooks for provided app. Can be used to manually re-enable sync webhooks for the app before the cooldown period ends.\n\nAdded in Saleor 3.21. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "app": {
+        "type": "App",
+        "description": "App for which sync webhooks were re-enabled.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "appErrors": {
+        "type": "[AppError!]!",
+        "description": null,
+        "deprecated": "4.0",
+        "message": "This field will be removed in Saleor 4.0. Use `errors` field instead.",
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[AppError!]!",
+        "description": null,
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -11513,6 +11557,29 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "CircuitBreakerStateEnum": {
+    "type": "enum",
+    "description": "Enum determining the state of a circuit breaker.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CLOSED": {
+        "description": "The breaker is conducting (requests are passing through).",
+        "deprecated": null,
+        "message": null
+      },
+      "HALF_OPEN": {
+        "description": "The breaker is in a trial period (to close or open). Note that unlike classic breaker patterns, this is not a state where we are throttling the number of requests, it's a state similar to CLOSED but with different thresholds.",
+        "deprecated": null,
+        "message": null
+      },
+      "OPEN": {
+        "description": "The breaker is tripped (no requests are passing). Breaker will enter half-open state after cooldown period.",
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -28466,6 +28533,21 @@
           "input": {
             "type": "AppInstallInput!",
             "description": "Fields required to install a new app.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "appReenableSyncWebhooks": {
+        "type": "AppReenableSyncWebhooks",
+        "description": "Re-enable sync webhooks for provided app. Can be used to manually re-enable sync webhooks for the app before the cooldown period ends.\n\nAdded in Saleor 3.21. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "appId": {
+            "type": "ID!",
+            "description": "The app ID to re-enable sync webhooks for.",
             "deprecated": null,
             "message": null,
             "default": null
