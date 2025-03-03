@@ -1,25 +1,42 @@
 [
   {
-    "diff": "type_new",
-    "type": "AppReenableSyncWebhooks"
-  },
-  {
-    "diff": "type_new",
-    "type": "CircuitBreakerStateEnum"
+    "diff": "field_new",
+    "type": "CheckoutCreateInput",
+    "field": "saveBillingAddress"
   },
   {
     "diff": "field_new",
-    "type": "App",
-    "field": "breakerLastStateChange"
+    "type": "CheckoutCreateInput",
+    "field": "saveShippingAddress"
   },
   {
     "diff": "field_new",
-    "type": "App",
-    "field": "breakerState"
+    "type": "DraftOrderCreateInput",
+    "field": "saveBillingAddress"
   },
   {
     "diff": "field_new",
-    "type": "Mutation",
-    "field": "appReenableSyncWebhooks"
+    "type": "DraftOrderCreateInput",
+    "field": "saveShippingAddress"
+  },
+  {
+    "diff": "field_new",
+    "type": "DraftOrderInput",
+    "field": "saveBillingAddress"
+  },
+  {
+    "diff": "field_new",
+    "type": "DraftOrderInput",
+    "field": "saveShippingAddress"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "CheckoutErrorCode",
+    "value": "MISSING_ADDRESS_DATA"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderErrorCode",
+    "value": "MISSING_ADDRESS_DATA"
   }
 ]
