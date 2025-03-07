@@ -1,42 +1,16 @@
 [
   {
-    "diff": "field_new",
-    "type": "CheckoutCreateInput",
-    "field": "saveBillingAddress"
+    "diff": "type_new",
+    "type": "Hour"
   },
   {
     "diff": "field_new",
-    "type": "CheckoutCreateInput",
-    "field": "saveShippingAddress"
+    "type": "OrderSettings",
+    "field": "draftOrderLinePriceFreezePeriod"
   },
   {
     "diff": "field_new",
-    "type": "DraftOrderCreateInput",
-    "field": "saveBillingAddress"
-  },
-  {
-    "diff": "field_new",
-    "type": "DraftOrderCreateInput",
-    "field": "saveShippingAddress"
-  },
-  {
-    "diff": "field_new",
-    "type": "DraftOrderInput",
-    "field": "saveBillingAddress"
-  },
-  {
-    "diff": "field_new",
-    "type": "DraftOrderInput",
-    "field": "saveShippingAddress"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "CheckoutErrorCode",
-    "value": "MISSING_ADDRESS_DATA"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "OrderErrorCode",
-    "value": "MISSING_ADDRESS_DATA"
+    "type": "OrderSettingsInput",
+    "field": "draftOrderLinePriceFreezePeriod"
   }
 ]

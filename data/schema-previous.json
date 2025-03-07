@@ -21242,6 +21242,12 @@
       }
     }
   },
+  "Hour": {
+    "type": "scalar",
+    "description": "The `Hour` scalar type represents number of hours by integer value.",
+    "deprecated": null,
+    "message": null
+  },
   "IconThumbnailFormatEnum": {
     "type": "enum",
     "description": "Thumbnail formats for icon images.",
@@ -40985,6 +40991,13 @@
         "message": null,
         "arguments": {}
       },
+      "draftOrderLinePriceFreezePeriod": {
+        "type": "Hour",
+        "description": "Time in hours after which the draft order line price will be refreshed.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "expireOrdersAfter": {
         "type": "Minute",
         "description": "Expiration time in minutes. Default null - means do not expire any orders.",
@@ -41081,6 +41094,13 @@
       "deleteExpiredOrdersAfter": {
         "type": "Day",
         "description": "The time in days after expired orders will be deleted.Allowed range is from 1 to 120.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "draftOrderLinePriceFreezePeriod": {
+        "type": "Hour",
+        "description": "Time in hours after which the draft order line price will be refreshed. Default value is 24 hours. Enter 0 or null to disable.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -56357,7 +56377,7 @@
       },
       "checkoutLines": {
         "type": "CheckoutLineCountableConnection",
-        "description": "List of checkout lines.\n\nRequires one of the following permissions: MANAGE_CHECKOUTS.",
+        "description": "List of checkout lines. The query will not initiate any external requests, including fetching external shipping methods, filtering available shipping methods, or performing external tax calculations.\n\nRequires one of the following permissions: MANAGE_CHECKOUTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -56393,7 +56413,7 @@
       },
       "checkouts": {
         "type": "CheckoutCountableConnection",
-        "description": "List of checkouts.\n\nRequires one of the following permissions: MANAGE_CHECKOUTS, HANDLE_PAYMENTS.",
+        "description": "List of checkouts. The query will not initiate any external requests, including fetching external shipping methods, filtering available shipping methods, or performing external tax calculations.\n\nRequires one of the following permissions: MANAGE_CHECKOUTS, HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -56651,7 +56671,7 @@
       },
       "draftOrders": {
         "type": "OrderCountableConnection",
-        "description": "List of draft orders.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "List of draft orders. The query will not initiate any external requests, including filtering available shipping methods, or performing external tax calculations.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -57154,7 +57174,7 @@
       },
       "orders": {
         "type": "OrderCountableConnection",
-        "description": "List of orders.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "List of orders. The query will not initiate any external requests, including filtering available shipping methods, or performing external tax calculations.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -69319,7 +69339,7 @@
       },
       "checkouts": {
         "type": "CheckoutCountableConnection",
-        "description": "Returns checkouts assigned to this user.",
+        "description": "Returns checkouts assigned to this user. The query will not initiate any external requests, including fetching external shipping methods, filtering available shipping methods, or performing external tax calculations.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -69547,7 +69567,7 @@
       },
       "orders": {
         "type": "OrderCountableConnection",
-        "description": "List of user's orders. Requires one of the following permissions: MANAGE_STAFF, OWNER.",
+        "description": "List of user's orders. The query will not initiate any external requests, including filtering available shipping methods, or performing external tax calculations. Requires one of the following permissions: MANAGE_STAFF, OWNER.",
         "deprecated": null,
         "message": null,
         "arguments": {
