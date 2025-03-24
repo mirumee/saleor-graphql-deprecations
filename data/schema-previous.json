@@ -866,7 +866,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user metadata.",
+        "description": "Fields required to update the user metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -953,7 +953,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "User public metadata.",
+        "description": "User public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -1538,7 +1538,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Address public metadata.",
+        "description": "Address public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7902,7 +7902,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the category metadata.",
+        "description": "Fields required to update the category metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7916,7 +7916,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the category private metadata.",
+        "description": "Fields required to update the category private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -8603,7 +8603,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Channel public metadata.",
+        "description": "Channel public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -8631,7 +8631,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Channel private metadata.",
+        "description": "Channel private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -9147,7 +9147,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Channel public metadata.",
+        "description": "Channel public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -9175,7 +9175,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Channel private metadata.",
+        "description": "Channel private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -11012,7 +11012,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the object's metadata.",
+        "description": "Fields required to update the object's metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -12173,7 +12173,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the collection metadata.",
+        "description": "Fields required to update the collection metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -12187,7 +12187,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the collection private metadata.",
+        "description": "Fields required to update the collection private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -12526,7 +12526,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the collection metadata.",
+        "description": "Fields required to update the collection metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -12540,7 +12540,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the collection private metadata.",
+        "description": "Fields required to update the collection private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -15267,7 +15267,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user metadata.",
+        "description": "Fields required to update the user metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -15281,7 +15281,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user private metadata.",
+        "description": "Fields required to update the user private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -15935,14 +15935,14 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the digital content metadata.",
+        "description": "Fields required to update the digital content metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the digital content private metadata.",
+        "description": "Fields required to update the digital content private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -16029,14 +16029,14 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the digital content metadata.",
+        "description": "Fields required to update the digital content metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the digital content private metadata.",
+        "description": "Fields required to update the digital content private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -16554,14 +16554,14 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Order public metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Order public metadata. \n\nAdded in Saleor 3.21. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Order private metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Order private metadata. \n\nAdded in Saleor 3.21. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -16796,14 +16796,14 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Order public metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Order public metadata. \n\nAdded in Saleor 3.21. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Order private metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Order private metadata. \n\nAdded in Saleor 3.21. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -19842,7 +19842,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Gift Card public metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Gift Card public metadata. \n\nAdded in Saleor 3.21. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -19856,7 +19856,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Gift Card private metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Gift Card private metadata. \n\nAdded in Saleor 3.21. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -21033,14 +21033,14 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Gift Card public metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Gift Card public metadata. \n\nAdded in Saleor 3.21. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Gift Card private metadata.\n\nAdded in Saleor 3.21.",
+        "description": "Gift Card private metadata. \n\nAdded in Saleor 3.21. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -21499,7 +21499,7 @@
     "fields": {
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the invoice metadata.",
+        "description": "Fields required to update the invoice metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -21513,7 +21513,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the invoice private metadata.",
+        "description": "Fields required to update the invoice private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -29399,7 +29399,7 @@
           },
           "metadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the checkout metadata.",
+            "description": "Fields required to update the checkout metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -31381,14 +31381,14 @@
           },
           "metadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the checkout metadata.",
+            "description": "Fields required to update the checkout metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "privateMetadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the checkout private metadata.",
+            "description": "Fields required to update the checkout private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34602,14 +34602,14 @@
           },
           "transactionMetadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the transaction metadata.",
+            "description": "Fields required to update the transaction metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "transactionPrivateMetadata": {
             "type": "[MetadataInput!]",
-            "description": "Fields required to update the transaction private metadata.",
+            "description": "Fields required to update the transaction private metadata.\n\nRequires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34834,7 +34834,7 @@
       },
       "updateMetadata": {
         "type": "UpdateMetadata",
-        "description": "Updates metadata of an object. To use it, you need to have access to the modified object.",
+        "description": "Updates metadata of an object.Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34856,7 +34856,7 @@
       },
       "updatePrivateMetadata": {
         "type": "UpdatePrivateMetadata",
-        "description": "Updates private metadata of an object. To use it, you need to be an authenticated staff user or an app and have access to the modified object.",
+        "description": "Updates private metadata of an object. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -36217,7 +36217,7 @@
       },
       "shippingTaxClassMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Metadata of the tax class.",
+        "description": "Metadata of the tax class. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36231,7 +36231,7 @@
       },
       "shippingTaxClassPrivateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Private metadata of the tax class.",
+        "description": "Private metadata of the tax class. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36565,7 +36565,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Metadata of the order.",
+        "description": "Metadata of the order. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36579,7 +36579,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Private metadata of the order.",
+        "description": "Private metadata of the order. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36650,7 +36650,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Metadata of the invoice.",
+        "description": "Metadata of the invoice. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36664,7 +36664,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Private metadata of the invoice.",
+        "description": "Private metadata of the invoice. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36757,14 +36757,14 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Metadata of the order line.",
+        "description": "Metadata of the order line. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Private metadata of the order line.",
+        "description": "Private metadata of the order line. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36799,7 +36799,7 @@
       },
       "taxClassMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Metadata of the tax class.",
+        "description": "Metadata of the tax class. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36813,7 +36813,7 @@
       },
       "taxClassPrivateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Private metadata of the tax class.",
+        "description": "Private metadata of the tax class. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -44689,7 +44689,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "User public metadata.",
+        "description": "User public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -47447,7 +47447,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product metadata.",
+        "description": "Fields required to update the product metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -47461,7 +47461,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product private metadata.",
+        "description": "Fields required to update the product private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48177,7 +48177,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product metadata.",
+        "description": "Fields required to update the product metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48191,7 +48191,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product private metadata.",
+        "description": "Fields required to update the product private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48929,7 +48929,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product metadata.",
+        "description": "Fields required to update the product metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48943,7 +48943,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product private metadata.",
+        "description": "Fields required to update the product private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -51325,7 +51325,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant metadata.",
+        "description": "Fields required to update the product variant metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -51346,7 +51346,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant private metadata.",
+        "description": "Fields required to update the product variant private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -51778,7 +51778,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant metadata.",
+        "description": "Fields required to update the product variant metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -51799,7 +51799,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant private metadata.",
+        "description": "Fields required to update the product variant private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -52108,7 +52108,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant metadata.",
+        "description": "Fields required to update the product variant metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -52129,7 +52129,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant private metadata.",
+        "description": "Fields required to update the product variant private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -52381,7 +52381,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant metadata.",
+        "description": "Fields required to update the product variant metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -52402,7 +52402,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the product variant private metadata.",
+        "description": "Fields required to update the product variant private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -63188,14 +63188,14 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Shop public metadata.",
+        "description": "Shop public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Shop private metadata.",
+        "description": "Shop private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -63469,7 +63469,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user metadata.",
+        "description": "Fields required to update the user metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -63483,7 +63483,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user private metadata.",
+        "description": "Fields required to update the user private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -64000,7 +64000,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user metadata.",
+        "description": "Fields required to update the user metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -64014,7 +64014,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user private metadata.",
+        "description": "Fields required to update the user private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -67233,7 +67233,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Payment public metadata.",
+        "description": "Payment public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -67247,7 +67247,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Payment private metadata.",
+        "description": "Payment private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -68709,7 +68709,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Payment public metadata.",
+        "description": "Payment public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -68723,7 +68723,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Payment private metadata.",
+        "description": "Payment private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -69117,7 +69117,7 @@
     "fields": {
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the invoice metadata.",
+        "description": "Fields required to update the invoice metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -69131,7 +69131,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the invoice private metadata.",
+        "description": "Fields required to update the invoice private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -69148,7 +69148,7 @@
   "UpdateMetadata": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates metadata of an object. To use it, you need to have access to the modified object.",
+    "description": "Updates metadata of an object.Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -69178,7 +69178,7 @@
   "UpdatePrivateMetadata": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates private metadata of an object. To use it, you need to be an authenticated staff user or an app and have access to the modified object.",
+    "description": "Updates private metadata of an object. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -69919,7 +69919,7 @@
       },
       "metadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user metadata.",
+        "description": "Fields required to update the user metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -69933,7 +69933,7 @@
       },
       "privateMetadata": {
         "type": "[MetadataInput!]",
-        "description": "Fields required to update the user private metadata.",
+        "description": "Fields required to update the user private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
         "deprecated": null,
         "message": null,
         "default": null
