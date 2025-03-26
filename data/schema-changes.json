@@ -1,16 +1,12 @@
 [
   {
-    "diff": "type_new",
-    "type": "Hour"
+    "diff": "field_new",
+    "type": "OrderUpdateInput",
+    "field": "metadata"
   },
   {
     "diff": "field_new",
-    "type": "OrderSettings",
-    "field": "draftOrderLinePriceFreezePeriod"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderSettingsInput",
-    "field": "draftOrderLinePriceFreezePeriod"
+    "type": "OrderUpdateInput",
+    "field": "privateMetadata"
   }
 ]

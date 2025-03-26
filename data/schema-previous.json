@@ -41396,6 +41396,20 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Order public metadata. \n\nAdded in Saleor 3.21.Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "privateMetadata": {
+        "type": "[MetadataInput!]",
+        "description": "Order private metadata. \n\nAdded in Saleor 3.21.Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "shippingAddress": {
         "type": "AddressInput",
         "description": "Shipping address of the customer.",
