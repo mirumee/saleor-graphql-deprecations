@@ -1,12 +1,7 @@
 [
   {
     "diff": "field_new",
-    "type": "CheckoutCreateInput",
+    "type": "CheckoutLineUpdateInput",
     "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "CheckoutCreateInput",
-    "field": "privateMetadata"
   }
 ]

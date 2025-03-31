@@ -11123,6 +11123,13 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "[MetadataInput!]",
+        "description": "Checkout line public metadata. Will add and update keys. To delete keys use deleteMetadata mutation. \n\nAdded in Saleor 3.21. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "price": {
         "type": "PositiveDecimal",
         "description": "Custom price of the item. Can be set only by apps with `HANDLE_CHECKOUTS` permission. When the line with the same variant will be provided multiple times, the last price will be used.",
