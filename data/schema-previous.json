@@ -16566,6 +16566,13 @@
         "message": null,
         "default": null
       },
+      "languageCode": {
+        "type": "LanguageCodeEnum",
+        "description": "Order language code.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "lines": {
         "type": "[OrderLineCreateInput!]",
         "description": "Variant line input consisting of variant ID and quantity of products.",
@@ -16811,6 +16818,13 @@
       "externalReference": {
         "type": "String",
         "description": "External ID of this order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "languageCode": {
+        "type": "LanguageCodeEnum",
+        "description": "Order language code.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -41413,6 +41427,13 @@
       "externalReference": {
         "type": "String",
         "description": "External ID of this order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "languageCode": {
+        "type": "LanguageCodeEnum",
+        "description": "Order language code.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null

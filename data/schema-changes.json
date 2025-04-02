@@ -1,7 +1,17 @@
 [
   {
     "diff": "field_new",
-    "type": "CheckoutLineUpdateInput",
-    "field": "metadata"
+    "type": "DraftOrderCreateInput",
+    "field": "languageCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "DraftOrderInput",
+    "field": "languageCode"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderUpdateInput",
+    "field": "languageCode"
   }
 ]
