@@ -37529,7 +37529,7 @@
         "type": "Money!",
         "description": "Returns amount of discount.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `total` instead.",
         "arguments": {}
       },
       "id": {
@@ -37549,6 +37549,13 @@
       "reason": {
         "type": "String",
         "description": "Explanation for the applied discount.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "total": {
+        "type": "Money!",
+        "description": "The amount of discount applied to the order.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39832,6 +39839,13 @@
         "message": null,
         "arguments": {}
       },
+      "discounts": {
+        "type": "[OrderLineDiscount!]",
+        "description": "List of applied discounts\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "id": {
         "type": "ID!",
         "description": "ID of the order line.",
@@ -40200,6 +40214,78 @@
       "orderLine": {
         "type": "OrderLine",
         "description": "An order line that was deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OrderLineDiscount": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represent the discount applied to order line.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "id": {
+        "type": "ID!",
+        "description": "The ID of discount applied.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String",
+        "description": "The name of applied discount.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reason": {
+        "type": "String",
+        "description": "Explanation for the applied discount.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "total": {
+        "type": "Money!",
+        "description": "The discount amount applied to the line item.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translatedName": {
+        "type": "String",
+        "description": "Translated name of the applied discount.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "OrderDiscountType!",
+        "description": "The type of applied discount: Sale, Voucher or Manual.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "unit": {
+        "type": "Money!",
+        "description": "The discount amount applied to the single line unit.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "PositiveDecimal!",
+        "description": "Value of the discount. Can store fixed value or percent value",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "valueType": {
+        "type": "DiscountValueTypeEnum!",
+        "description": "Type of the discount: fixed or percent",
         "deprecated": null,
         "message": null,
         "arguments": {}

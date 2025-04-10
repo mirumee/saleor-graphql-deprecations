@@ -1,17 +1,16 @@
 [
   {
-    "diff": "field_new",
-    "type": "DraftOrderCreateInput",
-    "field": "languageCode"
+    "diff": "type_new",
+    "type": "OrderLineDiscount"
   },
   {
     "diff": "field_new",
-    "type": "DraftOrderInput",
-    "field": "languageCode"
+    "type": "OrderDiscount",
+    "field": "total"
   },
   {
     "diff": "field_new",
-    "type": "OrderUpdateInput",
-    "field": "languageCode"
+    "type": "OrderLine",
+    "field": "discounts"
   }
 ]
