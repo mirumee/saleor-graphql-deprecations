@@ -1,16 +1,12 @@
 [
   {
-    "diff": "type_new",
-    "type": "OrderLineDiscount"
+    "diff": "field_new",
+    "type": "OrderSettings",
+    "field": "useLegacyLineVoucherPropagation"
   },
   {
     "diff": "field_new",
-    "type": "OrderDiscount",
-    "field": "total"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderLine",
-    "field": "discounts"
+    "type": "OrderSettingsInput",
+    "field": "useLegacyLineVoucherPropagation"
   }
 ]
