@@ -39309,8 +39309,8 @@
         "default": null
       },
       "transactionId": {
-        "type": "ID",
-        "description": "The ID of the transaction item related to the granted refund. If `amount` provided in the input, the transaction.chargedAmount needs to be equal or greater than provided `amount`.If `amount` is not provided in the input and calculated automatically by Saleor, the `min(calculatedAmount, transaction.chargedAmount)` will be used.Field will be required starting from Saleor 3.21.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "type": "ID!",
+        "description": "The ID of the transaction item related to the granted refund. If `amount` provided in the input, the transaction.chargedAmount needs to be equal or greater than provided `amount`.If `amount` is not provided in the input and calculated automatically by Saleor, the `min(calculatedAmount, transaction.chargedAmount)` will be used. Field required starting from Saleor 3.21.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "default": null
