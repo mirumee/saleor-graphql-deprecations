@@ -2,10 +2,20 @@
   {
     "diff": "field_new",
     "type": "OrderSettings",
-    "field": "useLegacyLineVoucherPropagation"
+    "field": "useLegacyLineDiscountPropagation"
   },
   {
     "diff": "field_new",
+    "type": "OrderSettingsInput",
+    "field": "useLegacyLineDiscountPropagation"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "OrderSettings",
+    "field": "useLegacyLineVoucherPropagation"
+  },
+  {
+    "diff": "field_deleted",
     "type": "OrderSettingsInput",
     "field": "useLegacyLineVoucherPropagation"
   }
