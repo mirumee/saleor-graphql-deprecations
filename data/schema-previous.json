@@ -64981,6 +64981,66 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "checkoutCreated": {
+        "type": "CheckoutCreated",
+        "description": "Event sent when new checkout is created.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "checkoutFullyPaid": {
+        "type": "CheckoutFullyPaid",
+        "description": "Event sent when checkout is fully-paid.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "checkoutMetadataUpdated": {
+        "type": "CheckoutMetadataUpdated",
+        "description": "Event sent when checkout metadata is updated.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "checkoutUpdated": {
+        "type": "CheckoutUpdated",
+        "description": "Event sent when checkout is updated.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "draftOrderCreated": {
         "type": "DraftOrderCreated",
         "description": "Event sent when new draft order is created.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -64989,7 +65049,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65004,7 +65064,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65019,7 +65079,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65041,7 +65101,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65056,7 +65116,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65071,7 +65131,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65086,7 +65146,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65101,7 +65161,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65116,7 +65176,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65131,7 +65191,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65146,7 +65206,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65161,7 +65221,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65176,7 +65236,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65191,7 +65251,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -65206,7 +65266,7 @@
         "arguments": {
           "channels": {
             "type": "[String!]",
-            "description": "List of channel slugs. The event will be sent only if the order belongs to one of the provided channels. If the channel slug list is empty, orders that belong to any channel will be sent. Maximally 500 items.",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
             "deprecated": null,
             "message": null,
             "default": null

@@ -1,22 +1,22 @@
 [
   {
     "diff": "field_new",
-    "type": "OrderSettings",
-    "field": "useLegacyLineDiscountPropagation"
+    "type": "Subscription",
+    "field": "checkoutCreated"
   },
   {
     "diff": "field_new",
-    "type": "OrderSettingsInput",
-    "field": "useLegacyLineDiscountPropagation"
+    "type": "Subscription",
+    "field": "checkoutFullyPaid"
   },
   {
-    "diff": "field_deleted",
-    "type": "OrderSettings",
-    "field": "useLegacyLineVoucherPropagation"
+    "diff": "field_new",
+    "type": "Subscription",
+    "field": "checkoutMetadataUpdated"
   },
   {
-    "diff": "field_deleted",
-    "type": "OrderSettingsInput",
-    "field": "useLegacyLineVoucherPropagation"
+    "diff": "field_new",
+    "type": "Subscription",
+    "field": "checkoutUpdated"
   }
 ]
