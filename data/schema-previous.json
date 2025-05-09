@@ -34759,7 +34759,7 @@
           },
           "amount": {
             "type": "PositiveDecimal",
-            "description": "Transaction request amount. If empty for refund or capture, maximal possible amount will be used.",
+            "description": "Transaction request amount. If empty, maximal possible amount will be used.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -67157,8 +67157,8 @@
         "arguments": {}
       },
       "amount": {
-        "type": "PositiveDecimal",
-        "description": "Transaction request amount. Null when action type is VOID.",
+        "type": "PositiveDecimal!",
+        "description": "Transaction request amount.",
         "deprecated": null,
         "message": null,
         "arguments": {}
