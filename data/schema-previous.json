@@ -21324,6 +21324,35 @@
       }
     }
   },
+  "IntFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for integer fields.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "Int",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[Int!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "range": {
+        "type": "IntRangeInput",
+        "description": "The value in range.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "IntRangeInput": {
     "type": "input",
     "description": null,
@@ -36156,6 +36185,28 @@
       }
     }
   },
+  "OrderAuthorizeStatusEnumFilterInput": {
+    "type": "input",
+    "description": "Filter by authorize status.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "OrderAuthorizeStatusEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[OrderAuthorizeStatusEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "OrderBulkCancel": {
     "type": "object",
     "interfaces": [],
@@ -37175,6 +37226,28 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "OrderChargeStatusEnumFilterInput": {
+    "type": "input",
+    "description": "Filter by charge status.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "OrderChargeStatusEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[OrderChargeStatusEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -41438,6 +41511,28 @@
       }
     }
   },
+  "OrderStatusEnumFilterInput": {
+    "type": "input",
+    "description": "Filter by order status.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "OrderStatus",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[OrderStatus!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "OrderStatusFilter": {
     "type": "enum",
     "description": null,
@@ -41689,6 +41784,147 @@
       }
     }
   },
+  "OrderWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[OrderWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[OrderWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "authorizeStatus": {
+        "type": "OrderAuthorizeStatusEnumFilterInput",
+        "description": "Filter by authorize status.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "channelId": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "chargeStatus": {
+        "type": "OrderChargeStatusEnumFilterInput",
+        "description": "Filter by charge status.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "checkoutId": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by checkout id.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "checkoutToken": {
+        "type": "UUIDFilterInput",
+        "description": "Filter by checkout token.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "createdAt": {
+        "type": "DateTimeFilterInput",
+        "description": "Filter order by created at date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isClickAndCollect": {
+        "type": "Boolean",
+        "description": "Filter by whether the order uses the click and collect delivery method.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isGiftCardBought": {
+        "type": "Boolean",
+        "description": "Filter based on whether the order includes a gift card purchase.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isGiftCardUsed": {
+        "type": "Boolean",
+        "description": "Filter based on whether a gift card was used in the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isPreorder": {
+        "type": "Boolean",
+        "description": "Filter by whether the order contains preorder items.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "number": {
+        "type": "IntFilterInput",
+        "description": "Filter by order number.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "paymentStatus": {
+        "type": "PaymentStatusEnumFilterInput",
+        "description": "Filter by payment status.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "status": {
+        "type": "OrderStatusEnumFilterInput",
+        "description": "Filter by order status.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "updatedAt": {
+        "type": "DateTimeFilterInput",
+        "description": "Filter order by updated at date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "user": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "userEmail": {
+        "type": "StringFilterInput",
+        "description": "Filter by user email.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "Page": {
     "type": "object",
     "interfaces": [
@@ -41699,9 +41935,24 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "attribute": {
+        "type": "SelectedAttribute",
+        "description": "Get a single attribute attached to page by attribute slug.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "slug": {
+            "type": "String!",
+            "description": "Slug of the attribute",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "attributes": {
         "type": "[SelectedAttribute!]!",
-        "description": "List of attributes assigned to this product.",
+        "description": "List of attributes assigned to this page.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -45503,6 +45754,28 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "PaymentStatusEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "PaymentChargeStatusEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[PaymentChargeStatusEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -57376,9 +57649,23 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search orders.\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "OrderSortingInput",
             "description": "Sort orders.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "OrderWhereInput",
+            "description": "Where filtering options for draft orders.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -69324,6 +69611,28 @@
     "description": null,
     "deprecated": null,
     "message": null
+  },
+  "UUIDFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for string fields.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "UUID",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[UUID!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
   },
   "UpdateInvoiceInput": {
     "type": "input",
