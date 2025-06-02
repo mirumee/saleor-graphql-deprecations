@@ -5116,9 +5116,16 @@
         "message": null,
         "default": null
       },
+      "valueNames": {
+        "type": "[String!]",
+        "description": "Names corresponding to the attributeValues associated with the Attribute. When specified, it filters the results to include only records with one of the matching values.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "values": {
         "type": "[String!]",
-        "description": "Internal representation of a value (unique per attribute).",
+        "description": "Slugs identifying the attributeValues associated with the Attribute. When specified, it filters the results to include only records with one of the matching values.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -41888,13 +41895,6 @@
         "message": null,
         "default": null
       },
-      "paymentStatus": {
-        "type": "PaymentStatusEnumFilterInput",
-        "description": "Filter by payment status.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
       "status": {
         "type": "OrderStatusEnumFilterInput",
         "description": "Filter by order status.",
@@ -45754,28 +45754,6 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
-      }
-    }
-  },
-  "PaymentStatusEnumFilterInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "eq": {
-        "type": "PaymentChargeStatusEnum",
-        "description": "The value equal to.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "oneOf": {
-        "type": "[PaymentChargeStatusEnum!]",
-        "description": "The value included in.",
-        "deprecated": null,
-        "message": null,
-        "default": null
       }
     }
   },
@@ -66293,6 +66271,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "useWeightedTaxForShipping": {
+        "type": "Boolean",
+        "description": "Determines whether to use weighted tax for shipping. When set to true, the tax rate for shipping will be calculated based on the weighted average of tax rates from the order or checkout lines.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -66412,6 +66397,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "useWeightedTaxForShipping": {
+        "type": "Boolean",
+        "description": "Determines whether to use weighted tax for shipping. When set to true, the tax rate for shipping will be calculated based on the weighted average of tax rates from the order or checkout lines.\n\nAdded in Saleor 3.21.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -66452,6 +66444,13 @@
       "taxCalculationStrategy": {
         "type": "TaxCalculationStrategy",
         "description": "A country-specific strategy to use for tax calculation. Taxes can be calculated either using user-defined flat rates or with a tax app. If not provided, use the value from the channel's tax configuration.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "useWeightedTaxForShipping": {
+        "type": "Boolean",
+        "description": "Determines whether to use weighted tax for shipping. When set to true, the tax rate for shipping will be calculated based on the weighted average of tax rates from the order or checkout lines. Default value is `False`.Can be used only with `taxCalculationStrategy` set to `FLAT_RATES`.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -66597,6 +66596,13 @@
       "updateCountriesConfiguration": {
         "type": "[TaxConfigurationPerCountryInput!]",
         "description": "List of tax country configurations to create or update (identified by a country code).",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "useWeightedTaxForShipping": {
+        "type": "Boolean",
+        "description": "Determines whether to use weighted tax for shipping. When set to true, the tax rate for shipping will be calculated based on the weighted average of tax rates from the order or checkout lines. Default value is `False`.Can be used only with `taxCalculationStrategy` set to `FLAT_RATES`.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "default": null

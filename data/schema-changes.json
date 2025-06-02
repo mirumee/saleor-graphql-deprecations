@@ -1,35 +1,36 @@
 [
   {
-    "diff": "type_new",
-    "type": "IntFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderAuthorizeStatusEnumFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderChargeStatusEnumFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderStatusEnumFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "OrderWhereInput"
-  },
-  {
-    "diff": "type_new",
+    "diff": "type_deleted",
     "type": "PaymentStatusEnumFilterInput"
   },
   {
-    "diff": "type_new",
-    "type": "UUIDFilterInput"
+    "diff": "field_new",
+    "type": "AttributeInput",
+    "field": "valueNames"
   },
   {
     "diff": "field_new",
-    "type": "Page",
-    "field": "attribute"
+    "type": "TaxConfiguration",
+    "field": "useWeightedTaxForShipping"
+  },
+  {
+    "diff": "field_new",
+    "type": "TaxConfigurationPerCountry",
+    "field": "useWeightedTaxForShipping"
+  },
+  {
+    "diff": "field_new",
+    "type": "TaxConfigurationPerCountryInput",
+    "field": "useWeightedTaxForShipping"
+  },
+  {
+    "diff": "field_new",
+    "type": "TaxConfigurationUpdateInput",
+    "field": "useWeightedTaxForShipping"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "OrderWhereInput",
+    "field": "paymentStatus"
   }
 ]
