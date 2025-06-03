@@ -1,36 +1,7 @@
 [
   {
-    "diff": "type_deleted",
-    "type": "PaymentStatusEnumFilterInput"
-  },
-  {
     "diff": "field_new",
-    "type": "AttributeInput",
-    "field": "valueNames"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfiguration",
-    "field": "useWeightedTaxForShipping"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfigurationPerCountry",
-    "field": "useWeightedTaxForShipping"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfigurationPerCountryInput",
-    "field": "useWeightedTaxForShipping"
-  },
-  {
-    "diff": "field_new",
-    "type": "TaxConfigurationUpdateInput",
-    "field": "useWeightedTaxForShipping"
-  },
-  {
-    "diff": "field_deleted",
     "type": "OrderWhereInput",
-    "field": "paymentStatus"
+    "field": "voucherCode"
   }
 ]
