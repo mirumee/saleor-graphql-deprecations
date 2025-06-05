@@ -2714,6 +2714,36 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "CATEGORY_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CATEGORY_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CATEGORY_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "COLLECTION_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "COLLECTION_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "COLLECTION_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "CUSTOMER_DETAILS_MORE_ACTIONS": {
         "description": null,
         "deprecated": null,
@@ -2725,6 +2755,66 @@
         "message": null
       },
       "CUSTOMER_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DISCOUNT_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DISCOUNT_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DISCOUNT_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DRAFT_ORDER_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DRAFT_ORDER_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "DRAFT_ORDER_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MENU_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MENU_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MENU_OVERVIEW_MORE_ACTIONS": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -2774,6 +2864,36 @@
         "deprecated": null,
         "message": null
       },
+      "PAGE_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PAGE_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PAGE_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PAGE_TYPE_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PAGE_TYPE_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PAGE_TYPE_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_DETAILS_MORE_ACTIONS": {
         "description": null,
         "deprecated": null,
@@ -2788,6 +2908,21 @@
         "description": null,
         "deprecated": null,
         "message": null
+      },
+      "VOUCHER_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_OVERVIEW_CREATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "VOUCHER_OVERVIEW_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
       }
     }
   },
@@ -2798,6 +2933,11 @@
     "message": null,
     "values": {
       "APP_PAGE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NEW_TAB": {
         "description": null,
         "deprecated": null,
         "message": null
