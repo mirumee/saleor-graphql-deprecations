@@ -1,142 +1,16 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "CATEGORY_DETAILS_MORE_ACTIONS"
+    "diff": "type_new",
+    "type": "InvoiceFilterInput"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "CATEGORY_OVERVIEW_CREATE"
+    "diff": "field_new",
+    "type": "OrderWhereInput",
+    "field": "hasInvoices"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "CATEGORY_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "COLLECTION_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "COLLECTION_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "COLLECTION_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "DISCOUNT_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "DISCOUNT_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "DISCOUNT_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "DRAFT_ORDER_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "DRAFT_ORDER_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "DRAFT_ORDER_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "GIFT_CARD_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "GIFT_CARD_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "GIFT_CARD_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "MENU_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "MENU_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "MENU_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "PAGE_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "PAGE_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "PAGE_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "PAGE_TYPE_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "PAGE_TYPE_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "PAGE_TYPE_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "VOUCHER_DETAILS_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "VOUCHER_OVERVIEW_CREATE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "VOUCHER_OVERVIEW_MORE_ACTIONS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionTargetEnum",
-    "value": "NEW_TAB"
+    "diff": "field_new",
+    "type": "OrderWhereInput",
+    "field": "invoices"
   }
 ]

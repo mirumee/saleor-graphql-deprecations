@@ -21899,6 +21899,21 @@
       }
     }
   },
+  "InvoiceFilterInput": {
+    "type": "input",
+    "description": "Filter input for invoices.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter invoices by creation date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "InvoiceRequest": {
     "type": "object",
     "interfaces": [],
@@ -41993,9 +42008,23 @@
         "message": null,
         "default": null
       },
+      "hasInvoices": {
+        "type": "Boolean",
+        "description": "Filter by whether the order has any invoices.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "ids": {
         "type": "[ID!]",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "invoices": {
+        "type": "InvoiceFilterInput",
+        "description": "Filter by invoice data associated with the order.",
         "deprecated": null,
         "message": null,
         "default": null
