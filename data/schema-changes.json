@@ -1,16 +1,25 @@
 [
   {
     "diff": "type_new",
-    "type": "InvoiceFilterInput"
+    "type": "FulfillmentFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "FulfillmentStatusEnumFilterInput"
   },
   {
     "diff": "field_new",
     "type": "OrderWhereInput",
-    "field": "hasInvoices"
+    "field": "fulfillments"
   },
   {
     "diff": "field_new",
     "type": "OrderWhereInput",
-    "field": "invoices"
+    "field": "hasFulfillments"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderWhereInput",
+    "field": "linesCount"
   }
 ]
