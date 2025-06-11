@@ -1,25 +1,16 @@
 [
   {
     "diff": "type_new",
-    "type": "FulfillmentFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "FulfillmentStatusEnumFilterInput"
+    "type": "PriceFilterInput"
   },
   {
     "diff": "field_new",
     "type": "OrderWhereInput",
-    "field": "fulfillments"
+    "field": "totalGross"
   },
   {
     "diff": "field_new",
     "type": "OrderWhereInput",
-    "field": "hasFulfillments"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderWhereInput",
-    "field": "linesCount"
+    "field": "totalNet"
   }
 ]

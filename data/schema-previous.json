@@ -42129,6 +42129,20 @@
         "message": null,
         "default": null
       },
+      "totalGross": {
+        "type": "PriceFilterInput",
+        "description": "Filter by total gross amount of the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "totalNet": {
+        "type": "PriceFilterInput",
+        "description": "Filter by total net amount of the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "updatedAt": {
         "type": "DateTimeRangeInput",
         "description": "Filter order by updated at date.",
@@ -47166,6 +47180,28 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "PriceFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "amount": {
+        "type": "DecimalFilterInput!",
+        "description": "The amount of the price to filter by.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "currency": {
+        "type": "String",
+        "description": "The currency of the price to filter by.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
