@@ -2610,6 +2610,13 @@
         "message": null,
         "arguments": {}
       },
+      "options": {
+        "type": "AppExtensionPossibleOptions",
+        "description": "App extension options.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "permissions": {
         "type": "[Permission!]!",
         "description": "List of the app extension's permissions.",
@@ -2734,6 +2741,11 @@
         "deprecated": null,
         "message": null
       },
+      "COLLECTION_DETAILS_WIDGETS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "COLLECTION_OVERVIEW_CREATE": {
         "description": null,
         "deprecated": null,
@@ -2745,6 +2757,11 @@
         "message": null
       },
       "CUSTOMER_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_DETAILS_WIDGETS": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -2779,6 +2796,11 @@
         "deprecated": null,
         "message": null
       },
+      "DRAFT_ORDER_DETAILS_WIDGETS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "DRAFT_ORDER_OVERVIEW_CREATE": {
         "description": null,
         "deprecated": null,
@@ -2790,6 +2812,11 @@
         "message": null
       },
       "GIFT_CARD_DETAILS_MORE_ACTIONS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GIFT_CARD_DETAILS_WIDGETS": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -2854,6 +2881,11 @@
         "deprecated": null,
         "message": null
       },
+      "ORDER_DETAILS_WIDGETS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "ORDER_OVERVIEW_CREATE": {
         "description": null,
         "deprecated": null,
@@ -2899,6 +2931,11 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_DETAILS_WIDGETS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_OVERVIEW_CREATE": {
         "description": null,
         "deprecated": null,
@@ -2914,6 +2951,11 @@
         "deprecated": null,
         "message": null
       },
+      "VOUCHER_DETAILS_WIDGETS": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "VOUCHER_OVERVIEW_CREATE": {
         "description": null,
         "deprecated": null,
@@ -2925,6 +2967,48 @@
         "message": null
       }
     }
+  },
+  "AppExtensionOptionsNewTab": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the options for an app extension.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "newTabTarget": {
+        "type": "NewTabTargetOptions",
+        "description": "Options controlling behavior of the NEW_TAB extension target",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AppExtensionOptionsWidget": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the options for an app extension.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "widgetTarget": {
+        "type": "WidgetTargetOptions",
+        "description": "Options for displaying a Widget",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AppExtensionPossibleOptions": {
+    "type": "union",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "AppExtensionOptionsWidget",
+      "AppExtensionOptionsNewTab"
+    ]
   },
   "AppExtensionTargetEnum": {
     "type": "enum",
@@ -2943,6 +3027,11 @@
         "message": null
       },
       "POPUP": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "WIDGET": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -21467,6 +21556,24 @@
     "deprecated": null,
     "message": null
   },
+  "HttpMethod": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GET": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "POST": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "IconThumbnailFormatEnum": {
     "type": "enum",
     "description": "Thumbnail formats for icon images.",
@@ -35561,6 +35668,22 @@
         "description": "Secondary storefront navigation.",
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "NewTabTargetOptions": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the NEW_TAB target options for an app extension.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "method": {
+        "type": "HttpMethod!",
+        "description": "HTTP method for New Tab target (GET or POST)",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -77029,6 +77152,22 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "WidgetTargetOptions": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents the WIDGET target options for an app extension.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "method": {
+        "type": "HttpMethod!",
+        "description": "HTTP method for Widget target (GET or POST)",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
