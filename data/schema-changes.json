@@ -1,71 +1,34 @@
 [
   {
     "diff": "type_new",
-    "type": "AppExtensionOptionsNewTab"
+    "type": "LinesFilterInput"
   },
   {
     "diff": "type_new",
-    "type": "AppExtensionOptionsWidget"
+    "type": "MetadataFilterInput"
   },
   {
     "diff": "type_new",
-    "type": "AppExtensionPossibleOptions"
-  },
-  {
-    "diff": "type_new",
-    "type": "HttpMethod"
-  },
-  {
-    "diff": "type_new",
-    "type": "NewTabTargetOptions"
-  },
-  {
-    "diff": "type_new",
-    "type": "WidgetTargetOptions"
+    "type": "MetadataValueFilterInput"
   },
   {
     "diff": "field_new",
-    "type": "AppExtension",
-    "field": "options"
+    "type": "FulfillmentFilterInput",
+    "field": "metadata"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "COLLECTION_DETAILS_WIDGETS"
+    "diff": "field_new",
+    "type": "OrderWhereInput",
+    "field": "lines"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "CUSTOMER_DETAILS_WIDGETS"
+    "diff": "field_new",
+    "type": "OrderWhereInput",
+    "field": "metadata"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "DRAFT_ORDER_DETAILS_WIDGETS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "GIFT_CARD_DETAILS_WIDGETS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "ORDER_DETAILS_WIDGETS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "PRODUCT_DETAILS_WIDGETS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "VOUCHER_DETAILS_WIDGETS"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionTargetEnum",
-    "value": "WIDGET"
+    "diff": "field_new",
+    "type": "OrderWhereInput",
+    "field": "productTypeId"
   }
 ]

@@ -19153,10 +19153,17 @@
   },
   "FulfillmentFilterInput": {
     "type": "input",
-    "description": "Filter input for fulfillments.",
+    "description": "Filter input for order fulfillments data.",
     "deprecated": null,
     "message": null,
     "fields": {
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "status": {
         "type": "FulfillmentStatusEnumFilterInput",
         "description": "Filter by fulfillment status.",
@@ -26371,6 +26378,21 @@
       }
     }
   },
+  "LinesFilterInput": {
+    "type": "input",
+    "description": "Filter input for order lines data.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields of order lines.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "ListStoredPaymentMethods": {
     "type": "object",
     "interfaces": [
@@ -28459,6 +28481,28 @@
       }
     }
   },
+  "MetadataFilterInput": {
+    "type": "input",
+    "description": "Allows filtering based on metadata key/value pairs.\n\n        Examples:\n        - `{key: \"size\"}`\n          Matches objects where the metadata key \"size\" exists, regardless of its value.\n        - `{key: \"color\", value: {oneOf: [\"blue\", \"green\"]}}`\n          Matches objects where the metadata key \"color\" is set to either \"blue\" or \"green\".\n        - `{key: \"status\", value: {eq: \"active\"}}`\n          Matches objects where the metadata key \"status\" is set to \"active\".",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "key": {
+        "type": "String!",
+        "description": "Key to filter by. If not other fields provided - checking the existence of the key in metadata.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "value": {
+        "type": "MetadataValueFilterInput",
+        "description": "Value to filter by.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "MetadataInput": {
     "type": "input",
     "description": null,
@@ -28501,6 +28545,28 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "MetadataValueFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for metadata value fields.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "String",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[String!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -42231,6 +42297,13 @@
         "message": null,
         "default": null
       },
+      "lines": {
+        "type": "LinesFilterInput",
+        "description": "Filter by metadata fields of order lines.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "linesCount": {
         "type": "IntFilterInput",
         "description": "Filter by number of lines in the order.",
@@ -42238,9 +42311,23 @@
         "message": null,
         "default": null
       },
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "number": {
         "type": "IntFilterInput",
         "description": "Filter by order number.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productTypeId": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by the product type of related order lines.",
         "deprecated": null,
         "message": null,
         "default": null
