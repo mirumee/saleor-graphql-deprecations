@@ -38794,6 +38794,28 @@
       }
     }
   },
+  "OrderEventFilterInput": {
+    "type": "input",
+    "description": "Filter input for order events data.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "date": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter order events by date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "type": {
+        "type": "OrderEventTypeEnumFilterInput",
+        "description": "Filter order events by type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "OrderEventOrderLineObject": {
     "type": "object",
     "interfaces": [],
@@ -38828,6 +38850,28 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "OrderEventTypeEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "OrderEventsEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[OrderEventsEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -41788,9 +41832,9 @@
         "message": null
       },
       "CREATION_DATE": {
-        "description": "Sort orders by creation date.",
+        "description": "Sort orders by creation date",
         "deprecated": null,
-        "message": null
+        "message": "Use `createdAt` instead."
       },
       "CUSTOMER": {
         "description": "Sort orders by customer.",
@@ -41800,10 +41844,10 @@
       "FULFILLMENT_STATUS": {
         "description": "Sort orders by fulfillment status.",
         "deprecated": null,
-        "message": null
+        "message": "Use `status` instead."
       },
       "LAST_MODIFIED_AT": {
-        "description": "Sort orders by last modified at.",
+        "description": "Sort orders by last modified date.",
         "deprecated": null,
         "message": null
       },
@@ -41813,12 +41857,17 @@
         "message": null
       },
       "PAYMENT": {
-        "description": "Sort orders by payment.",
+        "description": "Sort orders by payment status.",
         "deprecated": null,
         "message": null
       },
       "RANK": {
         "description": "Sort orders by rank. Note: This option is available only with the `search` filter.",
+        "deprecated": null,
+        "message": null
+      },
+      "STATUS": {
+        "description": "Sort orders by order status. \n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null
       }
@@ -42230,6 +42279,13 @@
       "createdAt": {
         "type": "DateTimeRangeInput",
         "description": "Filter order by created at date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "events": {
+        "type": "OrderEventFilterInput",
+        "description": "Filter by order events.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -58123,7 +58179,7 @@
           },
           "where": {
             "type": "OrderWhereInput",
-            "description": "Where filtering options for draft orders.\n\nAdded in Saleor 3.22.",
+            "description": "Where filtering options for orders.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null

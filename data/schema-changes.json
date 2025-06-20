@@ -1,34 +1,20 @@
 [
   {
     "diff": "type_new",
-    "type": "LinesFilterInput"
+    "type": "OrderEventFilterInput"
   },
   {
     "diff": "type_new",
-    "type": "MetadataFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "MetadataValueFilterInput"
-  },
-  {
-    "diff": "field_new",
-    "type": "FulfillmentFilterInput",
-    "field": "metadata"
+    "type": "OrderEventTypeEnumFilterInput"
   },
   {
     "diff": "field_new",
     "type": "OrderWhereInput",
-    "field": "lines"
+    "field": "events"
   },
   {
-    "diff": "field_new",
-    "type": "OrderWhereInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_new",
-    "type": "OrderWhereInput",
-    "field": "productTypeId"
+    "diff": "enum_value_new",
+    "enum": "OrderSortField",
+    "value": "STATUS"
   }
 ]
