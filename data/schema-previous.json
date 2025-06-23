@@ -7416,6 +7416,109 @@
       }
     }
   },
+  "CardPaymentMethodDetails": {
+    "type": "object",
+    "interfaces": [
+      "GenericPaymentMethodDetails"
+    ],
+    "description": "Represents a card payment method used for a transaction.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "brand": {
+        "type": "String",
+        "description": "Card brand.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "expMonth": {
+        "type": "Int",
+        "description": "Two-digit number representing the card\u2019s expiration month.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "expYear": {
+        "type": "Int",
+        "description": "Four-digit number representing the card\u2019s expiration year.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "firstDigits": {
+        "type": "String",
+        "description": "First 4 digits of the card number.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "lastDigits": {
+        "type": "String",
+        "description": "Last 4 digits of the card number.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String!",
+        "description": "Name of the payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CardPaymentMethodDetailsInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "brand": {
+        "type": "String",
+        "description": "Brand of the payment method used for the transaction. Max length is 40 characters.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "expMonth": {
+        "type": "Int",
+        "description": "Expiration month of the card used for the transaction. Value must be between 1 and 12.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "expYear": {
+        "type": "Int",
+        "description": "Expiration year of the card used for the transaction. Value must be between 2000 and 9999.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "firstDigits": {
+        "type": "String",
+        "description": "First digits of the card used for the transaction. Max length is 4 characters.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "lastDigits": {
+        "type": "String",
+        "description": "Last digits of the card used for the transaction. Max length is 4 characters.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String!",
+        "description": "Name of the payment method used for the transaction. Max length is 256 characters.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "CatalogueInput": {
     "type": "input",
     "description": null,
@@ -12981,10 +13084,10 @@
       "PUBLICATION_DATE": {
         "description": "Sort collections by publication date.\n\nThis option requires a channel filter to work as the values can vary between channels.",
         "deprecated": null,
-        "message": null
+        "message": "Use `PUBLISHED_AT` instead."
       },
       "PUBLISHED_AT": {
-        "description": "Sort collections by publication date.\n\nThis option requires a channel filter to work as the values can vary between channels.",
+        "description": "Sort collections by published at.\n\nThis option requires a channel filter to work as the values can vary between channels.",
         "deprecated": null,
         "message": null
       }
@@ -18061,7 +18164,7 @@
       "UPDATED_AT": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "Use `LAST_MODIFIED_AT` instead."
       }
     }
   },
@@ -19540,6 +19643,22 @@
       "value": {
         "type": "String",
         "description": "Gateway config value for key.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "GenericPaymentMethodDetails": {
+    "type": "interface",
+    "interfaces": [],
+    "description": "Represents a payment method used for a transaction.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "name": {
+        "type": "String!",
+        "description": "Name of the payment method.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35015,6 +35134,13 @@
             "message": null,
             "default": null
           },
+          "paymentMethodDetails": {
+            "type": "PaymentMethodDetailsInput",
+            "description": "Details of the payment method used for the transaction.\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "pspReference": {
             "type": "String!",
             "description": "PSP Reference of the event to report.",
@@ -41834,7 +41960,7 @@
       "CREATION_DATE": {
         "description": "Sort orders by creation date",
         "deprecated": null,
-        "message": "Use `createdAt` instead."
+        "message": "Use `CREATED_AT` instead."
       },
       "CUSTOMER": {
         "description": "Sort orders by customer.",
@@ -41844,7 +41970,7 @@
       "FULFILLMENT_STATUS": {
         "description": "Sort orders by fulfillment status.",
         "deprecated": null,
-        "message": "Use `status` instead."
+        "message": "Use `STATUS` instead."
       },
       "LAST_MODIFIED_AT": {
         "description": "Sort orders by last modified date.",
@@ -42433,6 +42559,39 @@
       "voucherCode": {
         "type": "StringFilterInput",
         "description": "Filter by voucher code used in the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "OtherPaymentMethodDetails": {
+    "type": "object",
+    "interfaces": [
+      "GenericPaymentMethodDetails"
+    ],
+    "description": "Represents a payment method used for a transaction.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "name": {
+        "type": "String!",
+        "description": "Name of the payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "OtherPaymentMethodDetailsInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "name": {
+        "type": "String!",
+        "description": "Name of the payment method used for the transaction.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43317,12 +43476,12 @@
       "CREATION_DATE": {
         "description": "Sort pages by creation date.",
         "deprecated": null,
-        "message": null
+        "message": "Use `CREATED_AT` instead."
       },
       "PUBLICATION_DATE": {
         "description": "Sort pages by publication date.",
         "deprecated": null,
-        "message": null
+        "message": "Use `PUBLISHED_AT` instead."
       },
       "PUBLISHED_AT": {
         "description": "Sort pages by publication date.",
@@ -44323,6 +44482,56 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "PageWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[PageWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[PageWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "pageType": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by page type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "StringFilterInput",
+        "description": "Filter by page slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -45681,6 +45890,38 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "PaymentMethodDetails": {
+    "type": "union",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "CardPaymentMethodDetails",
+      "OtherPaymentMethodDetails"
+    ]
+  },
+  "PaymentMethodDetailsInput": {
+    "type": "input",
+    "description": "Details of the payment method used for the transaction. One of `card` or `other` is required.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "card": {
+        "type": "CardPaymentMethodDetailsInput",
+        "description": "Details of the card payment method used for the transaction.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "other": {
+        "type": "OtherPaymentMethodDetailsInput",
+        "description": "Details of the non-card payment method used for this transaction.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -50586,12 +50827,12 @@
       "DATE": {
         "description": "Sort products by update date.",
         "deprecated": null,
-        "message": null
+        "message": "Use `LAST_MODIFIED_AT` instead."
       },
       "LAST_MODIFIED": {
         "description": "Sort products by update date.",
         "deprecated": null,
-        "message": null
+        "message": "Use `LAST_MODIFIED_AT` instead."
       },
       "LAST_MODIFIED_AT": {
         "description": "Sort products by update date.",
@@ -50616,7 +50857,7 @@
       "PUBLICATION_DATE": {
         "description": "Sort products by publication date.\n\nThis option requires a channel filter to work as the values can vary between channels.",
         "deprecated": null,
-        "message": null
+        "message": "Use `PUBLISHED_AT` instead."
       },
       "PUBLISHED": {
         "description": "Sort products by publication status.\n\nThis option requires a channel filter to work as the values can vary between channels.",
@@ -53615,7 +53856,7 @@
     "message": null,
     "values": {
       "LAST_MODIFIED_AT": {
-        "description": "Sort products variants by last modified at.",
+        "description": "Sort product variants by last modification date.",
         "deprecated": null,
         "message": null
       }
@@ -56240,7 +56481,7 @@
     "message": null,
     "values": {
       "CREATED_AT": {
-        "description": "Sort promotions by created at.",
+        "description": "Sort promotions by creation date.",
         "deprecated": null,
         "message": null
       },
@@ -58326,7 +58567,7 @@
             "type": "PageFilterInput",
             "description": "Filtering options for pages.",
             "deprecated": null,
-            "message": null,
+            "message": "+ Use `where` and `search` instead.",
             "default": null
           },
           "first": {
@@ -58343,9 +58584,23 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search pages. Overrides filter.search input.\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "PageSortingInput",
             "description": "Sort pages.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "PageWhereInput",
+            "description": "Where filtering options for pages.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -60735,7 +60990,7 @@
     "message": null,
     "values": {
       "CREATED_AT": {
-        "description": "Sort sales by created at.",
+        "description": "Sort sales by creation date.",
         "deprecated": null,
         "message": null
       },
@@ -60745,7 +61000,7 @@
         "message": null
       },
       "LAST_MODIFIED_AT": {
-        "description": "Sort sales by last modified at.",
+        "description": "Sort sales by last modification date.",
         "deprecated": null,
         "message": null
       },
@@ -68290,6 +68545,13 @@
         "message": null,
         "default": null
       },
+      "paymentMethodDetails": {
+        "type": "PaymentMethodDetailsInput",
+        "description": "Details of the payment method used for the transaction.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "privateMetadata": {
         "type": "[MetadataInput!]",
         "description": "Payment private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
@@ -68973,6 +69235,13 @@
       "order": {
         "type": "Order",
         "description": "The related order.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "paymentMethodDetails": {
+        "type": "PaymentMethodDetails",
+        "description": "The payment method used for this transaction.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -69762,6 +70031,13 @@
       "name": {
         "type": "String",
         "description": "Payment name of the transaction.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "paymentMethodDetails": {
+        "type": "PaymentMethodDetailsInput",
+        "description": "Details of the payment method used for the transaction.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "default": null

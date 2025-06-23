@@ -1,20 +1,49 @@
 [
   {
     "diff": "type_new",
-    "type": "OrderEventFilterInput"
+    "type": "CardPaymentMethodDetails"
   },
   {
     "diff": "type_new",
-    "type": "OrderEventTypeEnumFilterInput"
+    "type": "CardPaymentMethodDetailsInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "GenericPaymentMethodDetails"
+  },
+  {
+    "diff": "type_new",
+    "type": "OtherPaymentMethodDetails"
+  },
+  {
+    "diff": "type_new",
+    "type": "OtherPaymentMethodDetailsInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PageWhereInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodDetails"
+  },
+  {
+    "diff": "type_new",
+    "type": "PaymentMethodDetailsInput"
   },
   {
     "diff": "field_new",
-    "type": "OrderWhereInput",
-    "field": "events"
+    "type": "TransactionCreateInput",
+    "field": "paymentMethodDetails"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "OrderSortField",
-    "value": "STATUS"
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "paymentMethodDetails"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionUpdateInput",
+    "field": "paymentMethodDetails"
   }
 ]

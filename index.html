@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2025-06-20 14:00:47</p>
+      <p class="m-0">Generated on 2025-06-23 14:00:51</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -46,6 +46,18 @@
               
                 <td>Query</td>
                 <td colspan="2">orderSettings</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Query-pages-filter" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Query</td>
+                <td>pages</td>
+                <td>filter</td>
               
               <td>None</td>
             </tr>
@@ -422,6 +434,39 @@
               
                 <td>ProductOrder</td>
                 <td colspan="2">channel</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#ProductOrderField-LAST_MODIFIED" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>ProductOrderField</td>
+                <td colspan="2">LAST_MODIFIED</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#ProductOrderField-DATE" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>ProductOrderField</td>
+                <td colspan="2">DATE</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#ProductOrderField-PUBLICATION_DATE" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>ProductOrderField</td>
+                <td colspan="2">PUBLICATION_DATE</td>
               
               <td>None</td>
             </tr>
@@ -1025,6 +1070,39 @@
           
             <tr>
               <td>
+                <a href="#CollectionSortField-PUBLICATION_DATE" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>CollectionSortField</td>
+                <td colspan="2">PUBLICATION_DATE</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#PageSortField-CREATION_DATE" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>PageSortField</td>
+                <td colspan="2">CREATION_DATE</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#PageSortField-PUBLICATION_DATE" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>PageSortField</td>
+                <td colspan="2">PUBLICATION_DATE</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#OrderSortField-CREATION_DATE" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -1063,6 +1141,17 @@
               
                 <td>VoucherSortingInput</td>
                 <td colspan="2">channel</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#ExportFileSortField-UPDATED_AT" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>ExportFileSortField</td>
+                <td colspan="2">UPDATED_AT</td>
               
               <td>None</td>
             </tr>
@@ -4895,6 +4984,32 @@
         </div>
       </div>
     
+      <div id="Query-pages-filter" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Query-pages-filter" class="text-reset">
+                Argument <strong class="text-danger">filter</strong> of field <strong class="text-danger">pages</strong> on the type <strong class="text-danger">Query</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>+ Use <strong class="text-danger font-monospace">where</strong> and <strong class="text-danger font-monospace">search</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Query</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong>pages</strong>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: PageFilterInput<span class="text-secondary">,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;): PageCountableConnection<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="Query-sale" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -5621,6 +5736,69 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">input</span> <strong>ProductOrder</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">channel</strong>: String<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="ProductOrderField-LAST_MODIFIED" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#ProductOrderField-LAST_MODIFIED" class="text-reset">
+                Value <strong class="text-danger">LAST_MODIFIED</strong> of enum <strong class="text-danger">ProductOrderField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">LAST_MODIFIED_AT</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>ProductOrderField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">LAST_MODIFIED</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="ProductOrderField-DATE" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#ProductOrderField-DATE" class="text-reset">
+                Value <strong class="text-danger">DATE</strong> of enum <strong class="text-danger">ProductOrderField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">LAST_MODIFIED_AT</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>ProductOrderField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">DATE</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="ProductOrderField-PUBLICATION_DATE" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#ProductOrderField-PUBLICATION_DATE" class="text-reset">
+                Value <strong class="text-danger">PUBLICATION_DATE</strong> of enum <strong class="text-danger">ProductOrderField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">PUBLISHED_AT</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>ProductOrderField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">PUBLICATION_DATE</strong><br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -6779,6 +6957,69 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
         </div>
       </div>
     
+      <div id="CollectionSortField-PUBLICATION_DATE" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#CollectionSortField-PUBLICATION_DATE" class="text-reset">
+                Value <strong class="text-danger">PUBLICATION_DATE</strong> of enum <strong class="text-danger">CollectionSortField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">PUBLISHED_AT</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>CollectionSortField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">PUBLICATION_DATE</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="PageSortField-CREATION_DATE" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#PageSortField-CREATION_DATE" class="text-reset">
+                Value <strong class="text-danger">CREATION_DATE</strong> of enum <strong class="text-danger">PageSortField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">CREATED_AT</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>PageSortField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">CREATION_DATE</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="PageSortField-PUBLICATION_DATE" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#PageSortField-PUBLICATION_DATE" class="text-reset">
+                Value <strong class="text-danger">PUBLICATION_DATE</strong> of enum <strong class="text-danger">PageSortField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">PUBLISHED_AT</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>PageSortField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">PUBLICATION_DATE</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="OrderSortField-CREATION_DATE" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -6788,7 +7029,7 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
               </a>
             </h2>
             <p>Removed in <strong>Saleor None</strong></p>
-            <p>Use <strong class="text-danger font-monospace">createdAt</strong> instead.</p>
+            <p>Use <strong class="text-danger font-monospace">CREATED_AT</strong> instead.</p>
           </div>
           <div class="col-12 col-md">
             <div class="font-monospace"><span class="text-primary">enum</span> <strong>OrderSortField</strong> {<br />
@@ -6809,7 +7050,7 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
               </a>
             </h2>
             <p>Removed in <strong>Saleor None</strong></p>
-            <p>Use <strong class="text-danger font-monospace">status</strong> instead.</p>
+            <p>Use <strong class="text-danger font-monospace">STATUS</strong> instead.</p>
           </div>
           <div class="col-12 col-md">
             <div class="font-monospace"><span class="text-primary">enum</span> <strong>OrderSortField</strong> {<br />
@@ -6859,6 +7100,27 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">input</span> <strong>VoucherSortingInput</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">channel</strong>: String<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="ExportFileSortField-UPDATED_AT" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#ExportFileSortField-UPDATED_AT" class="text-reset">
+                Value <strong class="text-danger">UPDATED_AT</strong> of enum <strong class="text-danger">ExportFileSortField</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">LAST_MODIFIED_AT</strong> instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>ExportFileSortField</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">UPDATED_AT</strong><br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
