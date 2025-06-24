@@ -15770,6 +15770,63 @@
       }
     }
   },
+  "CustomerWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[CustomerWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[CustomerWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "dateJoined": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter by date joined.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "placedOrdersAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter by date when orders were placed.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "updatedAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter by last updated date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "Date": {
     "type": "scalar",
     "description": "The `Date` scalar type represents a Date\nvalue as specified by\n[iso8601](https://en.wikipedia.org/wiki/ISO_8601).",
@@ -57776,7 +57833,7 @@
             "type": "CustomerFilterInput",
             "description": "Filtering options for customers.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -57793,9 +57850,23 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search customers.\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "UserSortingInput",
             "description": "Sort customers.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "CustomerWhereInput",
+            "description": "Where filtering options for customers.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
