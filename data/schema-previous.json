@@ -1481,6 +1481,21 @@
       }
     }
   },
+  "AddressFilterInput": {
+    "type": "input",
+    "description": "Filtering options for addresses.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "phoneNumber": {
+        "type": "StringFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "AddressInput": {
     "type": "input",
     "description": null,
@@ -7854,7 +7869,7 @@
           },
           "filter": {
             "type": "ProductFilterInput",
-            "description": "Filtering options for products.",
+            "description": "Filtering options for products. {DEPRECATED_IN_3X_INPUT} Use `where` filter instead.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -7873,6 +7888,13 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search products.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "ProductOrder",
             "description": "Sort products.",
@@ -7882,7 +7904,7 @@
           },
           "where": {
             "type": "ProductWhereInput",
-            "description": "Filtering options for products.",
+            "description": "Where filtering options for products.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -12134,7 +12156,7 @@
             "type": "ProductFilterInput",
             "description": "Filtering options for products.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -12151,6 +12173,13 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search products.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "ProductOrder",
             "description": "Sort products.",
@@ -12160,7 +12189,7 @@
           },
           "where": {
             "type": "ProductWhereInput",
-            "description": "Filtering options for products.",
+            "description": "Where filtering options for products.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -15790,6 +15819,13 @@
         "message": null,
         "default": null
       },
+      "addresses": {
+        "type": "AddressFilterInput",
+        "description": "Filter by addresses data associated with user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "dateJoined": {
         "type": "DateTimeRangeInput",
         "description": "Filter by date joined.",
@@ -15797,9 +15833,23 @@
         "message": null,
         "default": null
       },
+      "email": {
+        "type": "StringFilterInput",
+        "description": "Filter by email address.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "ids": {
         "type": "[ID!]",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isActive": {
+        "type": "Boolean",
+        "description": "Filter by whether the user is active.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -42592,6 +42642,13 @@
         "message": null,
         "default": null
       },
+      "transactions": {
+        "type": "TransactionFilterInput",
+        "description": "Filter by transaction data associated with the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "updatedAt": {
         "type": "DateTimeRangeInput",
         "description": "Filter order by updated at date.",
@@ -43866,9 +43923,9 @@
           },
           "filter": {
             "type": "AttributeFilterInput",
-            "description": null,
+            "description": "Filtering options for attributes.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -43885,9 +43942,16 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search attributes.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "where": {
             "type": "AttributeWhereInput",
-            "description": null,
+            "description": "Where filtering options for attributes.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -45960,6 +46024,43 @@
       "OtherPaymentMethodDetails"
     ]
   },
+  "PaymentMethodDetailsCardFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "brand": {
+        "type": "StringFilterInput",
+        "description": "Filter by payment method brand used to pay for the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "PaymentMethodDetailsFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "card": {
+        "type": "PaymentMethodDetailsCardFilterInput",
+        "description": "Filter by card details used to pay for the order. Skips `type` filter if provided.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "type": {
+        "type": "PaymentMethodTypeEnumFilterInput",
+        "description": "Filter by payment method type used to pay for the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "PaymentMethodDetailsInput": {
     "type": "input",
     "description": "Details of the payment method used for the transaction. One of `card` or `other` is required.\n\nAdded in Saleor 3.22.",
@@ -46376,6 +46477,46 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "PaymentMethodTypeEnum": {
+    "type": "enum",
+    "description": "Represents possible payment method types.\n\n    The following types are possible:\n    CARD - represents a card payment method.\n    OTHER - represents any payment method that is not a card payment.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CARD": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "OTHER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "PaymentMethodTypeEnumFilterInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "PaymentMethodTypeEnum",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[PaymentMethodTypeEnum!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -48163,7 +48304,7 @@
           },
           "where": {
             "type": "ProductVariantWhereInput",
-            "description": "Where filtering options.",
+            "description": "Where filtering options for product variants.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -51342,9 +51483,9 @@
           },
           "filter": {
             "type": "AttributeFilterInput",
-            "description": null,
+            "description": "Filtering options for attributes of this product type.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -51361,9 +51502,16 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search attributes.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "where": {
             "type": "AttributeWhereInput",
-            "description": null,
+            "description": "Where filtering options for attributes of this product type.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57432,7 +57580,7 @@
             "type": "AttributeFilterInput",
             "description": "Filtering options for attributes.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -57465,7 +57613,7 @@
           },
           "where": {
             "type": "AttributeWhereInput",
-            "description": "Filtering options for attributes.",
+            "description": "Where filtering options for attributes.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57529,7 +57677,7 @@
           },
           "where": {
             "type": "CategoryWhereInput",
-            "description": "Where filtering options.",
+            "description": "Where filtering options for categories.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -57802,7 +57950,7 @@
           },
           "where": {
             "type": "CollectionWhereInput",
-            "description": "Where filtering options.",
+            "description": "Where filtering options for collections.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -58458,7 +58606,7 @@
             "type": "OrderFilterInput",
             "description": "Filtering options for orders.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -59074,7 +59222,7 @@
           },
           "where": {
             "type": "ProductVariantWhereInput",
-            "description": "Where filtering options.",
+            "description": "Where filtering options for product variants.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -59112,7 +59260,7 @@
             "type": "ProductFilterInput",
             "description": "Filtering options for products.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -59145,7 +59293,7 @@
           },
           "where": {
             "type": "ProductWhereInput",
-            "description": "Where filtering options.",
+            "description": "Where filtering options for products.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -59210,7 +59358,7 @@
           },
           "where": {
             "type": "PromotionWhereInput",
-            "description": "Where filtering options.",
+            "description": "Where filtering options for promotions.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -68935,6 +69083,21 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "TransactionFilterInput": {
+    "type": "input",
+    "description": "Filter input for transactions.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "paymentMethodDetails": {
+        "type": "PaymentMethodDetailsFilterInput",
+        "description": "Filter by payment method details used to pay for the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
