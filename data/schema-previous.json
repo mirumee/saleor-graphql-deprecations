@@ -1487,6 +1487,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "country": {
+        "type": "CountryCodeEnumFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "phoneNumber": {
         "type": "StringFilterInput",
         "description": null,
@@ -14888,6 +14895,35 @@
         "description": null,
         "deprecated": null,
         "message": null
+      }
+    }
+  },
+  "CountryCodeEnumFilterInput": {
+    "type": "input",
+    "description": "Filter by country code.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "eq": {
+        "type": "CountryCode",
+        "description": "The value equal to.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "notOneOf": {
+        "type": "[CountryCode!]",
+        "description": "The value not included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "oneOf": {
+        "type": "[CountryCode!]",
+        "description": "The value included in.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -42481,6 +42517,13 @@
         "message": null,
         "default": null
       },
+      "billingAddress": {
+        "type": "AddressFilterInput",
+        "description": "Filter by billing address of the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "channelId": {
         "type": "GlobalIDFilterInput",
         "description": "Filter by channel.",
@@ -42617,6 +42660,13 @@
       "productTypeId": {
         "type": "GlobalIDFilterInput",
         "description": "Filter by the product type of related order lines.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "shippingAddress": {
+        "type": "AddressFilterInput",
+        "description": "Filter by shipping address of the order.",
         "deprecated": null,
         "message": null,
         "default": null

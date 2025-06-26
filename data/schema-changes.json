@@ -1,46 +1,21 @@
 [
   {
     "diff": "type_new",
-    "type": "AddressFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentMethodDetailsCardFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentMethodDetailsFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentMethodTypeEnum"
-  },
-  {
-    "diff": "type_new",
-    "type": "PaymentMethodTypeEnumFilterInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "TransactionFilterInput"
+    "type": "CountryCodeEnumFilterInput"
   },
   {
     "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "addresses"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "email"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "isActive"
+    "type": "AddressFilterInput",
+    "field": "country"
   },
   {
     "diff": "field_new",
     "type": "OrderWhereInput",
-    "field": "transactions"
+    "field": "billingAddress"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderWhereInput",
+    "field": "shippingAddress"
   }
 ]
