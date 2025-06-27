@@ -15876,6 +15876,13 @@
         "message": null,
         "default": null
       },
+      "firstName": {
+        "type": "StringFilterInput",
+        "description": "Filter by first name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "ids": {
         "type": "[ID!]",
         "description": null,
@@ -15890,9 +15897,23 @@
         "message": null,
         "default": null
       },
+      "lastName": {
+        "type": "StringFilterInput",
+        "description": "Filter by last name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "metadata": {
         "type": "MetadataFilterInput",
         "description": "Filter by metadata fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "numberOfOrders": {
+        "type": "IntFilterInput",
+        "description": "Filter by number of orders placed by the user.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -42622,13 +42643,6 @@
         "message": null,
         "default": null
       },
-      "isPreorder": {
-        "type": "Boolean",
-        "description": "Filter by whether the order contains preorder items.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
       "lines": {
         "type": "LinesFilterInput",
         "description": "Filter by metadata fields of order lines.",
@@ -69142,6 +69156,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields of transactions.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "paymentMethodDetails": {
         "type": "PaymentMethodDetailsFilterInput",
         "description": "Filter by payment method details used to pay for the order.",
