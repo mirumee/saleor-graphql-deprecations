@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2025-06-27 14:00:48</p>
+      <p class="m-0">Generated on 2025-06-30 14:00:55</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -81,6 +81,18 @@
               
                 <td>Query</td>
                 <td>orders</td>
+                <td>filter</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Query-draftOrders-filter" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Query</td>
+                <td>draftOrders</td>
                 <td>filter</td>
               
               <td>None</td>
@@ -5138,6 +5150,32 @@
 &nbsp;&nbsp;<strong>orders</strong>(<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: OrderFilterInput<span class="text-secondary">,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;): OrderCountableConnection<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Query-draftOrders-filter" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Query-draftOrders-filter" class="text-reset">
+                Argument <strong class="text-danger">filter</strong> of field <strong class="text-danger">draftOrders</strong> on the type <strong class="text-danger">Query</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">where</strong> filter instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Query</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong>draftOrders</strong>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: OrderDraftFilterInput<span class="text-secondary">,</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;): OrderCountableConnection<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />

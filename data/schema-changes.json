@@ -1,27 +1,6 @@
 [
   {
-    "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "firstName"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "lastName"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "numberOfOrders"
-  },
-  {
-    "diff": "field_new",
-    "type": "TransactionFilterInput",
-    "field": "metadata"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "OrderWhereInput",
-    "field": "isPreorder"
+    "diff": "type_new",
+    "type": "DraftOrderWhereInput"
   }
 ]

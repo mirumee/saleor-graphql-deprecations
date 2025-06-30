@@ -17517,6 +17517,175 @@
       }
     }
   },
+  "DraftOrderWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[DraftOrderWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[DraftOrderWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "authorizeStatus": {
+        "type": "OrderAuthorizeStatusEnumFilterInput",
+        "description": "Filter by authorize status.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "billingAddress": {
+        "type": "AddressFilterInput",
+        "description": "Filter by billing address of the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "channelId": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by channel.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "chargeStatus": {
+        "type": "OrderChargeStatusEnumFilterInput",
+        "description": "Filter by charge status.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "createdAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter order by created at date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "events": {
+        "type": "OrderEventFilterInput",
+        "description": "Filter by order events.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isClickAndCollect": {
+        "type": "Boolean",
+        "description": "Filter by whether the order uses the click and collect delivery method.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "lines": {
+        "type": "LinesFilterInput",
+        "description": "Filter by metadata fields of order lines.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "linesCount": {
+        "type": "IntFilterInput",
+        "description": "Filter by number of lines in the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "number": {
+        "type": "IntFilterInput",
+        "description": "Filter by order number.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productTypeId": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by the product type of related order lines.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "shippingAddress": {
+        "type": "AddressFilterInput",
+        "description": "Filter by shipping address of the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "totalGross": {
+        "type": "PriceFilterInput",
+        "description": "Filter by total gross amount of the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "totalNet": {
+        "type": "PriceFilterInput",
+        "description": "Filter by total net amount of the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "transactions": {
+        "type": "TransactionFilterInput",
+        "description": "Filter by transaction data associated with the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "updatedAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter order by updated at date.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "user": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "userEmail": {
+        "type": "StringFilterInput",
+        "description": "Filter by user email.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "voucherCode": {
+        "type": "StringFilterInput",
+        "description": "Filter by voucher code used in the order.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "ErrorPolicyEnum": {
     "type": "enum",
     "description": null,
@@ -58160,7 +58329,7 @@
             "type": "OrderDraftFilterInput",
             "description": "Filtering options for draft orders.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -58177,9 +58346,23 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search orders.\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "OrderSortingInput",
             "description": "Sort draft orders.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "DraftOrderWhereInput",
+            "description": "Where filtering options for draft orders.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
