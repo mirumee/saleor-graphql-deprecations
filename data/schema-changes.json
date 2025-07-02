@@ -1,7 +1,25 @@
 [
   {
+    "diff": "type_new",
+    "type": "AttributePageWhereInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "AttributeValuePageInput"
+  },
+  {
+    "diff": "field_new",
+    "type": "PageWhereInput",
+    "field": "attributes"
+  },
+  {
     "diff": "enum_value_new",
-    "enum": "CountryCode",
-    "value": "XK"
+    "enum": "AttributeEntityTypeEnum",
+    "value": "CATEGORY"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "AttributeEntityTypeEnum",
+    "value": "COLLECTION"
   }
 ]
