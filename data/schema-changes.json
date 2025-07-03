@@ -1,25 +1,11 @@
 [
   {
     "diff": "type_new",
-    "type": "AttributePageWhereInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "AttributeValuePageInput"
+    "type": "AttributeValueReferencedObject"
   },
   {
     "diff": "field_new",
-    "type": "PageWhereInput",
-    "field": "attributes"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AttributeEntityTypeEnum",
-    "value": "CATEGORY"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AttributeEntityTypeEnum",
-    "value": "COLLECTION"
+    "type": "AttributeValue",
+    "field": "referencedObject"
   }
 ]

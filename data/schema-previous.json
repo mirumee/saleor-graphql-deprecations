@@ -6052,7 +6052,14 @@
       },
       "reference": {
         "type": "ID",
-        "description": "The ID of the attribute reference.",
+        "description": "The ID of the referenced object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "referencedObject": {
+        "type": "AttributeValueReferencedObject",
+        "description": "The object referenced by the attribute value.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6711,6 +6718,17 @@
         "default": null
       }
     }
+  },
+  "AttributeValueReferencedObject": {
+    "type": "union",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "Product",
+      "ProductVariant",
+      "Page"
+    ]
   },
   "AttributeValueSelectableTypeInput": {
     "type": "input",
