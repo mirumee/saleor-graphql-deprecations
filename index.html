@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2025-07-03 14:00:48</p>
+      <p class="m-0">Generated on 2025-07-04 14:00:48</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -57,6 +57,18 @@
               
                 <td>Query</td>
                 <td>products</td>
+                <td>filter</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Query-productVariants-filter" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Query</td>
+                <td>productVariants</td>
                 <td>filter</td>
               
               <td>None</td>
@@ -379,6 +391,18 @@
           
             <tr>
               <td>
+                <a href="#Product-productVariants-filter" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Product</td>
+                <td>productVariants</td>
+                <td>filter</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#Product-images" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -439,6 +463,18 @@
               
                 <td>ProductType</td>
                 <td>availableAttributes</td>
+                <td>filter</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Attribute-choices-filter" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Attribute</td>
+                <td>choices</td>
                 <td>filter</td>
               
               <td>None</td>
@@ -619,6 +655,18 @@
               
                 <td>Category</td>
                 <td colspan="2">descriptionJson</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Category-products-filter" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Category</td>
+                <td>products</td>
+                <td>filter</td>
               
               <td>None</td>
             </tr>
@@ -5106,6 +5154,32 @@
         </div>
       </div>
     
+      <div id="Query-productVariants-filter" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Query-productVariants-filter" class="text-reset">
+                Argument <strong class="text-danger">filter</strong> of field <strong class="text-danger">productVariants</strong> on the type <strong class="text-danger">Query</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">where</strong> filter instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Query</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong>productVariants</strong>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: ProductVariantFilterInput<span class="text-secondary">,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;): ProductVariantCountableConnection<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="Query-pages-filter" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -5734,6 +5808,32 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
         </div>
       </div>
     
+      <div id="Product-productVariants-filter" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Product-productVariants-filter" class="text-reset">
+                Argument <strong class="text-danger">filter</strong> of field <strong class="text-danger">productVariants</strong> on the type <strong class="text-danger">Product</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">where</strong> filter instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Product</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong>productVariants</strong>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: ProductVariantFilterInput<span class="text-secondary">,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;): ProductVariantCountableConnection<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="Product-images" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -5859,6 +5959,32 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
 &nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: AttributeFilterInput<span class="text-secondary">,</span><br />
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;): AttributeCountableConnection<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Attribute-choices-filter" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Attribute-choices-filter" class="text-reset">
+                Argument <strong class="text-danger">filter</strong> of field <strong class="text-danger">choices</strong> on the type <strong class="text-danger">Attribute</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use where filter instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Attribute</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong>choices</strong>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: AttributeValueFilterInput<span class="text-secondary">,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;): AttributeValueCountableConnection<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -6211,6 +6337,32 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">type</span> <strong>Category</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">descriptionJson</strong>: JSONString<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Category-products-filter" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Category-products-filter" class="text-reset">
+                Argument <strong class="text-danger">filter</strong> of field <strong class="text-danger">products</strong> on the type <strong class="text-danger">Category</strong>
+                
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">where</strong> filter instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Category</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong>products</strong>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<strong class="text-danger">filter</strong>: ProductFilterInput<span class="text-secondary">,</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;): ProductCountableConnection<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

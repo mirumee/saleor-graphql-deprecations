@@ -4019,7 +4019,7 @@
             "type": "AttributeValueFilterInput",
             "description": "Filtering options for attribute choices.",
             "deprecated": null,
-            "message": null,
+            "message": "Use where filter instead.",
             "default": null
           },
           "first": {
@@ -4036,9 +4036,23 @@
             "message": null,
             "default": null
           },
+          "search": {
+            "type": "String",
+            "description": "Search attribute choices.\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "sortBy": {
             "type": "AttributeChoicesSortingInput",
             "description": "Sort attribute choices.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "AttributeValueWhereInput",
+            "description": "Where filtering options for attribute choices.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -7114,6 +7128,49 @@
       }
     }
   },
+  "AttributeValueWhereInput": {
+    "type": "input",
+    "description": "Where filtering options for attribute values.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[AttributeValueWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[AttributeValueWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "StringFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "StringFilterInput",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "AttributeWhereInput": {
     "type": "input",
     "description": "Where filtering options.",
@@ -7976,9 +8033,9 @@
           },
           "filter": {
             "type": "ProductFilterInput",
-            "description": "Filtering options for products. {DEPRECATED_IN_3X_INPUT} Use `where` filter instead.",
+            "description": "Filtering options for products.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -48623,7 +48680,7 @@
             "type": "ProductVariantFilterInput",
             "description": "Filtering options for product variant.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -54889,6 +54946,20 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "sku": {
+        "type": "StringFilterInput",
+        "description": "Filter by product SKU.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "updatedAt": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter by when was the most recent update.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -59546,9 +59617,9 @@
           },
           "filter": {
             "type": "ProductVariantFilterInput",
-            "description": "Filtering options for product variant.",
+            "description": "Filtering options for product variants.",
             "deprecated": null,
-            "message": null,
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -59568,6 +59639,13 @@
           "last": {
             "type": "Int",
             "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "search": {
+            "type": "String",
+            "description": "Search product variants.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
