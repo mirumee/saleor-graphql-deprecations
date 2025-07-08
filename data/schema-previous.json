@@ -3997,7 +3997,7 @@
       },
       "choices": {
         "type": "AttributeValueCountableConnection",
-        "description": "List of attribute's values.",
+        "description": "A list of predefined attribute choices available for selection. Available only for attributes with predefined choices.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -4019,7 +4019,7 @@
             "type": "AttributeValueFilterInput",
             "description": "Filtering options for attribute choices.",
             "deprecated": null,
-            "message": "Use where filter instead.",
+            "message": "Use `where` filter instead.",
             "default": null
           },
           "first": {
@@ -4303,6 +4303,21 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "values": {
+        "type": "[AttributeValue!]",
+        "description": "List of all existing attribute values. This includes all values that have been assigned to attributes.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "Int",
+            "description": "Maximum number of attribute values to return. The default value is also the maximum number of values that can be fetched.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
       },
       "visibleInStorefront": {
         "type": "Boolean!",
@@ -59104,6 +59119,13 @@
         "deprecated": null,
         "message": null,
         "arguments": {
+          "channel": {
+            "type": "String",
+            "description": "Slug of a channel for which the data should be returned.\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
           "id": {
             "type": "ID",
             "description": "ID of the page.",
@@ -59208,6 +59230,13 @@
           "before": {
             "type": "String",
             "description": "Return the elements in the list that come before the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "channel": {
+            "type": "String",
+            "description": "Slug of a channel for which the data should be returned.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -68842,7 +68871,7 @@
         "type": "JSONString!",
         "description": "Response returned by payment gateway.",
         "deprecated": null,
-        "message": null,
+        "message": "This field is a part of a legacy Payments API. Please use apps instead.",
         "arguments": {}
       },
       "id": {
