@@ -1,7 +1,32 @@
 [
   {
     "diff": "field_new",
-    "type": "Attribute",
-    "field": "values"
+    "type": "PaymentSettings",
+    "field": "checkoutReleaseFundsCutOffDate"
+  },
+  {
+    "diff": "field_new",
+    "type": "PaymentSettings",
+    "field": "checkoutTtlBeforeReleasingFunds"
+  },
+  {
+    "diff": "field_new",
+    "type": "PaymentSettings",
+    "field": "releaseFundsForExpiredCheckouts"
+  },
+  {
+    "diff": "field_new",
+    "type": "PaymentSettingsInput",
+    "field": "checkoutReleaseFundsCutOffDate"
+  },
+  {
+    "diff": "field_new",
+    "type": "PaymentSettingsInput",
+    "field": "checkoutTtlBeforeReleasingFunds"
+  },
+  {
+    "diff": "field_new",
+    "type": "PaymentSettingsInput",
+    "field": "releaseFundsForExpiredCheckouts"
   }
 ]
