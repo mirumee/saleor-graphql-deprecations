@@ -1,32 +1,30 @@
 [
   {
-    "diff": "field_new",
-    "type": "PaymentSettings",
-    "field": "checkoutReleaseFundsCutOffDate"
+    "diff": "type_new",
+    "type": "ContainsFilterInput"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReferenceAttributeWhereInput"
   },
   {
     "diff": "field_new",
-    "type": "PaymentSettings",
-    "field": "checkoutTtlBeforeReleasingFunds"
+    "type": "AttributeValueInput",
+    "field": "reference"
   },
   {
     "diff": "field_new",
-    "type": "PaymentSettings",
-    "field": "releaseFundsForExpiredCheckouts"
+    "type": "AttributeValuePageInput",
+    "field": "reference"
   },
   {
     "diff": "field_new",
-    "type": "PaymentSettingsInput",
-    "field": "checkoutReleaseFundsCutOffDate"
+    "type": "BulkAttributeValueInput",
+    "field": "reference"
   },
   {
-    "diff": "field_new",
-    "type": "PaymentSettingsInput",
-    "field": "checkoutTtlBeforeReleasingFunds"
-  },
-  {
-    "diff": "field_new",
-    "type": "PaymentSettingsInput",
-    "field": "releaseFundsForExpiredCheckouts"
+    "diff": "enum_value_new",
+    "enum": "AttributeInputTypeEnum",
+    "value": "SINGLE_REFERENCE"
   }
 ]

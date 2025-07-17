@@ -5485,6 +5485,11 @@
         "deprecated": null,
         "message": null
       },
+      "SINGLE_REFERENCE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "SWATCH": {
         "description": null,
         "deprecated": null,
@@ -6668,6 +6673,13 @@
         "message": null,
         "default": null
       },
+      "reference": {
+        "type": "ID",
+        "description": "ID of the referenced entity for single reference attribute.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "references": {
         "type": "[ID!]",
         "description": "List of entity IDs that will be used as references.",
@@ -6735,6 +6747,13 @@
       "numeric": {
         "type": "DecimalFilterInput",
         "description": "Filter by numeric value for attributes of numeric type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reference": {
+        "type": "ReferenceAttributeWhereInput",
+        "description": "Filter by reference attribute value.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -7385,6 +7404,13 @@
       "plainText": {
         "type": "String",
         "description": "Plain text content.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reference": {
+        "type": "ID",
+        "description": "ID of the referenced entity for single reference attribute.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -13809,6 +13835,28 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "ContainsFilterInput": {
+    "type": "input",
+    "description": "Define the filtering options for fields that can contain multiple values.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "containsAll": {
+        "type": "[String!]",
+        "description": "The field contains all of the specified values.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "containsAny": {
+        "type": "[String!]",
+        "description": "The field contains at least one of the specified values.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -60681,6 +60729,42 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "ReferenceAttributeWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "pageSlugs": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a page identified by the given slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productSlugs": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a product identified by the given slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productVariantSkus": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a product variant identified by the given sku.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "referencedIds": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to an object identified by the given ID.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
