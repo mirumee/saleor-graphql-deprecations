@@ -17799,7 +17799,7 @@
       },
       "events": {
         "type": "[OrderEventFilterInput!]",
-        "description": "Filter by order events. Each list item specifies conditions that must be satisfied by a single event. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by order events. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -17820,7 +17820,7 @@
       },
       "lines": {
         "type": "[LinesFilterInput!]",
-        "description": "Filter by line items associated with the order. Each list item specifies conditions that must be satisfied by a single line. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by line items associated with the order. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -17876,7 +17876,7 @@
       },
       "transactions": {
         "type": "[TransactionFilterInput!]",
-        "description": "Filter by transaction data associated with the order.Each list item specifies conditions that must be satisfied by a single transaction. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by transaction data associated with the order. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -42976,14 +42976,14 @@
       },
       "events": {
         "type": "[OrderEventFilterInput!]",
-        "description": "Filter by order events. Each list item specifies conditions that must be satisfied by a single event. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by order events. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "fulfillments": {
         "type": "[FulfillmentFilterInput!]",
-        "description": "Filter by fulfillment data associated with the order.Each list item specifies conditions that must be satisfied by a single fulfillment. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by fulfillment data associated with the order. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43011,7 +43011,7 @@
       },
       "invoices": {
         "type": "[InvoiceFilterInput!]",
-        "description": "Filter by invoice data associated with the order. Each list item represents conditions that must be satisfied by a single invoice. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by invoice data associated with the order. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43039,7 +43039,7 @@
       },
       "lines": {
         "type": "[LinesFilterInput!]",
-        "description": "Filter by line items associated with the order. Each list item specifies conditions that must be satisfied by a single line. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by line items associated with the order. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43102,7 +43102,7 @@
       },
       "transactions": {
         "type": "[TransactionFilterInput!]",
-        "description": "Filter by transaction data associated with the order.Each list item specifies conditions that must be satisfied by a single transaction. The filter matches orders that have related objects meeting all specified groups of conditions.",
+        "description": "Filter by transaction data associated with the order. Each list item represents conditions that must be satisfied by a single object. The filter matches orders that have related objects meeting all specified groups of conditions.",
         "deprecated": null,
         "message": null,
         "default": null
