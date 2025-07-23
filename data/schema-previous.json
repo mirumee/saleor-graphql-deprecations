@@ -3955,6 +3955,121 @@
       }
     }
   },
+  "AssignedAttributeReferenceInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "pageSlugs": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a page identified by the given slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productSlugs": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a product identified by the given slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "productVariantSkus": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a product variant identified by the given sku.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "referencedIds": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to an object identified by the given ID.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "AssignedAttributeValueInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "boolean": {
+        "type": "Boolean",
+        "description": "Filter by boolean value for attributes of boolean type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "date": {
+        "type": "DateRangeInput",
+        "description": "Filter by date value for attributes of date type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "dateTime": {
+        "type": "DateTimeRangeInput",
+        "description": "Filter by date time value for attributes of date time type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "StringFilterInput",
+        "description": "Filter by name assigned to AttributeValue.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "numeric": {
+        "type": "DecimalFilterInput",
+        "description": "Filter by numeric value for attributes of numeric type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reference": {
+        "type": "AssignedAttributeReferenceInput",
+        "description": "Filter by reference attribute value.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "StringFilterInput",
+        "description": "Filter by slug assigned to AttributeValue.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "AssignedAttributeWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "slug": {
+        "type": "String",
+        "description": "Filter by attribute slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "value": {
+        "type": "AssignedAttributeValueInput",
+        "description": "Filter by value of the attribute. Only one value input field is allowed. If provided more than one, the error will be raised.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "AssignedVariantAttribute": {
     "type": "object",
     "interfaces": [],
@@ -5519,28 +5634,6 @@
       }
     }
   },
-  "AttributePageWhereInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "slug": {
-        "type": "String!",
-        "description": "Filter by attribute slug.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "value": {
-        "type": "AttributeValuePageInput",
-        "description": "Filter by value of the attribute. Only one value input field is allowed. If provided more than one, the error will be raised.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      }
-    }
-  },
   "AttributeReorderValues": {
     "type": "object",
     "interfaces": [],
@@ -6704,63 +6797,6 @@
       "values": {
         "type": "[String!]",
         "description": "The value or slug of an attribute to resolve. If the passed value is non-existent, it will be created.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      }
-    }
-  },
-  "AttributeValuePageInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "boolean": {
-        "type": "Boolean",
-        "description": "Filter by boolean value for attributes of boolean type.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "date": {
-        "type": "DateRangeInput",
-        "description": "Filter by date value for attributes of date type.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "dateTime": {
-        "type": "DateTimeRangeInput",
-        "description": "Filter by date time value for attributes of date time type.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "name": {
-        "type": "StringFilterInput",
-        "description": "Filter by name assigned to AttributeValue.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "numeric": {
-        "type": "DecimalFilterInput",
-        "description": "Filter by numeric value for attributes of numeric type.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "reference": {
-        "type": "ReferenceAttributeWhereInput",
-        "description": "Filter by reference attribute value.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "slug": {
-        "type": "StringFilterInput",
-        "description": "Filter by slug assigned to AttributeValue.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -45085,7 +45121,7 @@
         "default": null
       },
       "attributes": {
-        "type": "[AttributePageWhereInput!]",
+        "type": "[AssignedAttributeWhereInput!]",
         "description": "Filter by attributes associated with the page.",
         "deprecated": null,
         "message": null,
@@ -60729,42 +60765,6 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
-      }
-    }
-  },
-  "ReferenceAttributeWhereInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "pageSlugs": {
-        "type": "ContainsFilterInput",
-        "description": "Returns objects with a reference pointing to a page identified by the given slug.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "productSlugs": {
-        "type": "ContainsFilterInput",
-        "description": "Returns objects with a reference pointing to a product identified by the given slug.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "productVariantSkus": {
-        "type": "ContainsFilterInput",
-        "description": "Returns objects with a reference pointing to a product variant identified by the given sku.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "referencedIds": {
-        "type": "ContainsFilterInput",
-        "description": "Returns objects with a reference pointing to an object identified by the given ID.",
-        "deprecated": null,
-        "message": null,
-        "default": null
       }
     }
   },
