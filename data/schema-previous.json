@@ -5495,28 +5495,35 @@
     "fields": {
       "boolean": {
         "type": "Boolean",
-        "description": "The boolean value of the attribute.",
+        "description": "The boolean value of the attribute. Requires `slug` to be provided.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `value` instead.",
         "default": null
       },
       "date": {
         "type": "DateRangeInput",
-        "description": "The date range that the returned values should be in. In case of date/time attributes, the UTC midnight of the given date is used.",
+        "description": "The date range that the returned values should be in. In case of date/time attributes, the UTC midnight of the given date is used. Requires `slug` to be provided.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `value` instead.",
         "default": null
       },
       "dateTime": {
         "type": "DateTimeRangeInput",
-        "description": "The date/time range that the returned values should be in.",
+        "description": "The date/time range that the returned values should be in. Requires `slug` to be provided.",
+        "deprecated": null,
+        "message": "Use `value` instead.",
+        "default": null
+      },
+      "slug": {
+        "type": "String",
+        "description": "Internal representation of an attribute name.",
         "deprecated": null,
         "message": null,
         "default": null
       },
-      "slug": {
-        "type": "String!",
-        "description": "Internal representation of an attribute name.",
+      "value": {
+        "type": "AssignedAttributeValueInput",
+        "description": "Filter by value of the attribute. Only one value input field is allowed. If provided more than one, the error will be raised. Cannot be combined with deprecated fields of `AttributeInput`.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -5530,16 +5537,16 @@
       },
       "values": {
         "type": "[String!]",
-        "description": "Slugs identifying the attributeValues associated with the Attribute. When specified, it filters the results to include only records with one of the matching values.",
+        "description": "Slugs identifying the attributeValues associated with the Attribute. When specified, it filters the results to include only records with one of the matching values. Requires `slug` to be provided.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `value` instead.",
         "default": null
       },
       "valuesRange": {
         "type": "IntRangeInput",
-        "description": "The range that the returned values should be in.",
+        "description": "The range that the returned values should be in. Requires `slug` to be provided.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `value` instead.",
         "default": null
       }
     }

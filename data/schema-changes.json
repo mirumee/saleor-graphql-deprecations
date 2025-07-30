@@ -1,26 +1,7 @@
 [
   {
-    "diff": "type_new",
-    "type": "AssignedAttributeReferenceInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedAttributeValueInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedAttributeWhereInput"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "AttributePageWhereInput"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "AttributeValuePageInput"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "ReferenceAttributeWhereInput"
+    "diff": "field_new",
+    "type": "AttributeInput",
+    "field": "value"
   }
 ]
