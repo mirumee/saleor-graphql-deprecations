@@ -39,7 +39,7 @@
   "AccountAddressDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
+    "description": "Deletes an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -2395,7 +2395,7 @@
   "AppDeleteFailedInstallation": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete failed installation. \n\nRequires one of the following permissions: MANAGE_APPS.",
+    "description": "Deletes failed installation. \n\nRequires one of the following permissions: MANAGE_APPS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6269,7 +6269,7 @@
   "AttributeValueBulkTranslate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates/updates translations for attributes values. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+    "description": "Creates/updates translations for attribute values. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9135,7 +9135,7 @@
   "ChannelCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_CREATED (async): A channel was created.",
+    "description": "Creates a new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_CREATED (async): A channel was created.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -9340,7 +9340,7 @@
   "ChannelDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_DELETED (async): A channel was deleted.",
+    "description": "Deletes a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_DELETED (async): A channel was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10324,7 +10324,7 @@
   "CheckoutBillingAddressUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update billing address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+    "description": "Updates billing address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10516,7 +10516,7 @@
   "CheckoutCreateFromOrder": {
     "type": "object",
     "interfaces": [],
-    "description": "Create new checkout from existing order.",
+    "description": "Creates a new checkout from existing order.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -11340,7 +11340,7 @@
   "CheckoutLanguageCodeUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update language code in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+    "description": "Updates language code in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -11894,7 +11894,7 @@
   "CheckoutPaymentCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create a new payment for given checkout.",
+    "description": "Creates a new payment for given checkout.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -12016,7 +12016,7 @@
   "CheckoutShippingAddressUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update shipping address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+    "description": "Updates shipping address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -16758,7 +16758,7 @@
   "DigitalContentUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update digital content. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Updates digital content. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -20621,7 +20621,7 @@
   "GiftCardBulkCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
+    "description": "Creates gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -20717,7 +20717,7 @@
   "GiftCardBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
+    "description": "Deletes gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -20991,7 +20991,7 @@
   "GiftCardDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
+    "description": "Deletes gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -29316,6 +29316,20 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "fractionDigits": {
+        "type": "Int!",
+        "description": "Number of digits after the decimal point in the currency.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "fractionalAmount": {
+        "type": "Int!",
+        "description": "Amount of money represented as an integer in the smallest currency unit.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -29424,7 +29438,7 @@
       },
       "accountAddressDelete": {
         "type": "AccountAddressDelete",
-        "description": "Delete an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
+        "description": "Deletes an address of the logged-in user. Requires one of the following permissions: MANAGE_USERS, IS_OWNER.\n\nTriggers the following webhook events:\n- ADDRESS_DELETED (async): An address was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -29705,7 +29719,7 @@
       },
       "appDeleteFailedInstallation": {
         "type": "AppDeleteFailedInstallation",
-        "description": "Delete failed installation. \n\nRequires one of the following permissions: MANAGE_APPS.",
+        "description": "Deletes failed installation. \n\nRequires one of the following permissions: MANAGE_APPS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30111,7 +30125,7 @@
       },
       "attributeValueBulkTranslate": {
         "type": "AttributeValueBulkTranslate",
-        "description": "Creates/updates translations for attributes values. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
+        "description": "Creates/updates translations for attribute values. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30353,7 +30367,7 @@
       },
       "channelCreate": {
         "type": "ChannelCreate",
-        "description": "Creates new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_CREATED (async): A channel was created.",
+        "description": "Creates a new channel. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_CREATED (async): A channel was created.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30383,7 +30397,7 @@
       },
       "channelDelete": {
         "type": "ChannelDelete",
-        "description": "Delete a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_DELETED (async): A channel was deleted.",
+        "description": "Deletes a channel. Orders associated with the deleted channel will be moved to the target channel. Checkouts, product availability, and pricing will be removed. \n\nRequires one of the following permissions: MANAGE_CHANNELS.\n\nTriggers the following webhook events:\n- CHANNEL_DELETED (async): A channel was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30485,7 +30499,7 @@
       },
       "checkoutBillingAddressUpdate": {
         "type": "CheckoutBillingAddressUpdate",
-        "description": "Update billing address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+        "description": "Updates billing address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30607,7 +30621,7 @@
       },
       "checkoutCreateFromOrder": {
         "type": "CheckoutCreateFromOrder",
-        "description": "Create new checkout from existing order.",
+        "description": "Creates a new checkout from existing order.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30774,7 +30788,7 @@
       },
       "checkoutLanguageCodeUpdate": {
         "type": "CheckoutLanguageCodeUpdate",
-        "description": "Update language code in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+        "description": "Updates language code in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -30947,7 +30961,7 @@
       },
       "checkoutPaymentCreate": {
         "type": "CheckoutPaymentCreate",
-        "description": "Create a new payment for given checkout.",
+        "description": "Creates a new payment for given checkout.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31026,7 +31040,7 @@
       },
       "checkoutShippingAddressUpdate": {
         "type": "CheckoutShippingAddressUpdate",
-        "description": "Update shipping address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
+        "description": "Updates shipping address in the existing checkout.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31340,7 +31354,7 @@
       },
       "createWarehouse": {
         "type": "WarehouseCreate",
-        "description": "Creates new warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Creates a new warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31554,7 +31568,7 @@
       },
       "digitalContentUpdate": {
         "type": "DigitalContentUpdate",
-        "description": "Update digital content. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Updates digital content. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31968,7 +31982,7 @@
       },
       "giftCardBulkCreate": {
         "type": "GiftCardBulkCreate",
-        "description": "Create gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
+        "description": "Creates gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_CREATED (async): A gift card was created.\n- NOTIFY_USER (async): A notification for created gift card.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31998,7 +32012,7 @@
       },
       "giftCardBulkDelete": {
         "type": "GiftCardBulkDelete",
-        "description": "Delete gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
+        "description": "Deletes gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32043,7 +32057,7 @@
       },
       "giftCardDelete": {
         "type": "GiftCardDelete",
-        "description": "Delete gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
+        "description": "Deletes gift card. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_DELETED (async): A gift card was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32876,7 +32890,7 @@
       },
       "orderLinesCreate": {
         "type": "OrderLinesCreate",
-        "description": "Create order lines for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "description": "Creates order lines for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33236,7 +33250,7 @@
       },
       "pageTypeBulkDelete": {
         "type": "PageTypeBulkDelete",
-        "description": "Delete page types. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+        "description": "Deletes page types. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33251,7 +33265,7 @@
       },
       "pageTypeCreate": {
         "type": "PageTypeCreate",
-        "description": "Create a new page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+        "description": "Creates a new page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33266,7 +33280,7 @@
       },
       "pageTypeDelete": {
         "type": "PageTypeDelete",
-        "description": "Delete a page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+        "description": "Deletes a page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -33303,7 +33317,7 @@
       },
       "pageTypeUpdate": {
         "type": "PageTypeUpdate",
-        "description": "Update page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+        "description": "Updates page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34183,7 +34197,7 @@
       },
       "productVariantBulkTranslate": {
         "type": "ProductVariantBulkTranslate",
-        "description": "Creates/updates translations for products variants. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): A translation was created.\n- TRANSLATION_UPDATED (async): A translation was updated.",
+        "description": "Creates/updates translations for product variants. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): A translation was created.\n- TRANSLATION_UPDATED (async): A translation was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34196,7 +34210,7 @@
           },
           "translations": {
             "type": "[ProductVariantBulkTranslateInput!]!",
-            "description": "List of products variants translations.",
+            "description": "List of product variant translations.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34205,7 +34219,7 @@
       },
       "productVariantBulkUpdate": {
         "type": "ProductVariantBulkUpdate",
-        "description": "Update multiple product variants. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Updates multiple product variants. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34417,7 +34431,7 @@
       },
       "productVariantStocksDelete": {
         "type": "ProductVariantStocksDelete",
-        "description": "Delete stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Deletes stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -34446,7 +34460,7 @@
       },
       "productVariantStocksUpdate": {
         "type": "ProductVariantStocksUpdate",
-        "description": "Update stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Updates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35358,7 +35372,7 @@
       },
       "staffNotificationRecipientDelete": {
         "type": "StaffNotificationRecipientDelete",
-        "description": "Delete staff notification recipient. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "description": "Deletes staff notification recipient. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35461,7 +35475,7 @@
       },
       "taxClassCreate": {
         "type": "TaxClassCreate",
-        "description": "Create a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+        "description": "Creates a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35476,7 +35490,7 @@
       },
       "taxClassDelete": {
         "type": "TaxClassDelete",
-        "description": "Delete a tax class. After deleting the tax class any products, product types or shipping methods using it are updated to use the default tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+        "description": "Deletes a tax class. After deleting the tax class any products, product types or shipping methods using it are updated to use the default tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35491,7 +35505,7 @@
       },
       "taxClassUpdate": {
         "type": "TaxClassUpdate",
-        "description": "Update a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+        "description": "Updates a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35513,7 +35527,7 @@
       },
       "taxConfigurationUpdate": {
         "type": "TaxConfigurationUpdate",
-        "description": "Update tax configuration for a channel. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+        "description": "Updates tax configuration for a channel. \n\nRequires one of the following permissions: MANAGE_TAXES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35550,7 +35564,7 @@
       },
       "taxCountryConfigurationUpdate": {
         "type": "TaxCountryConfigurationUpdate",
-        "description": "Update tax class rates for a specific country. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+        "description": "Updates tax class rates for a specific country. \n\nRequires one of the following permissions: MANAGE_TAXES.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35667,7 +35681,7 @@
       },
       "transactionCreate": {
         "type": "TransactionCreate",
-        "description": "Create transaction for checkout or order. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
+        "description": "Creates transaction for checkout or order. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -36350,7 +36364,7 @@
       },
       "webhookDelete": {
         "type": "WebhookDelete",
-        "description": "Delete a webhook. Before the deletion, the webhook is deactivated to pause any deliveries that are already scheduled. The deletion might fail if delivery is in progress. In such a case, the webhook is not deleted but remains deactivated. \n\nRequires one of the following permissions: MANAGE_APPS, AUTHENTICATED_APP.",
+        "description": "Deletes a webhook. Before the deletion, the webhook is deactivated to pause any deliveries that are already scheduled. The deletion might fail if delivery is in progress. In such a case, the webhook is not deleted but remains deactivated. \n\nRequires one of the following permissions: MANAGE_APPS, AUTHENTICATED_APP.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -41653,7 +41667,7 @@
   "OrderLinesCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create order lines for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
+    "description": "Creates order lines for an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -44566,7 +44580,7 @@
   "PageTypeBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete page types. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+    "description": "Deletes page types. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -44649,7 +44663,7 @@
   "PageTypeCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create a new page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+    "description": "Creates a new page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -44754,7 +44768,7 @@
   "PageTypeDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete a page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+    "description": "Deletes a page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -44922,7 +44936,7 @@
   "PageTypeUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
+    "description": "Updates page type. \n\nRequires one of the following permissions: MANAGE_PAGE_TYPES_AND_ATTRIBUTES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53535,7 +53549,7 @@
   "ProductVariantBulkTranslate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates/updates translations for products variants. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): A translation was created.\n- TRANSLATION_UPDATED (async): A translation was updated.",
+    "description": "Creates/updates translations for product variants. \n\nRequires one of the following permissions: MANAGE_TRANSLATIONS.\n\nTriggers the following webhook events:\n- TRANSLATION_CREATED (async): A translation was created.\n- TRANSLATION_UPDATED (async): A translation was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53654,7 +53668,7 @@
   "ProductVariantBulkUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update multiple product variants. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Updates multiple product variants. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54733,7 +54747,7 @@
   "ProductVariantStocksDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Deletes stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -54763,7 +54777,7 @@
   "ProductVariantStocksUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Updates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -55077,6 +55091,13 @@
       "OR": {
         "type": "[ProductVariantWhereInput!]",
         "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "attributes": {
+        "type": "[AssignedAttributeWhereInput!]",
+        "description": "Filter by attributes associated with the variant.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -65797,7 +65818,7 @@
   "StaffNotificationRecipientDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete staff notification recipient. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+    "description": "Deletes staff notification recipient. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67360,7 +67381,7 @@
   "TaxClassCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+    "description": "Creates a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67465,7 +67486,7 @@
   "TaxClassDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete a tax class. After deleting the tax class any products, product types or shipping methods using it are updated to use the default tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+    "description": "Deletes a tax class. After deleting the tax class any products, product types or shipping methods using it are updated to use the default tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67627,7 +67648,7 @@
   "TaxClassUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+    "description": "Updates a tax class. \n\nRequires one of the following permissions: MANAGE_TAXES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -68069,7 +68090,7 @@
   "TaxConfigurationUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update tax configuration for a channel. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+    "description": "Updates tax configuration for a channel. \n\nRequires one of the following permissions: MANAGE_TAXES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -68320,7 +68341,7 @@
   "TaxCountryConfigurationUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Update tax class rates for a specific country. \n\nRequires one of the following permissions: MANAGE_TAXES.",
+    "description": "Updates tax class rates for a specific country. \n\nRequires one of the following permissions: MANAGE_TAXES.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -69206,7 +69227,7 @@
   "TransactionCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Create transaction for checkout or order. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
+    "description": "Creates transaction for checkout or order. \n\nRequires one of the following permissions: HANDLE_PAYMENTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -74592,7 +74613,7 @@
   "WarehouseCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates new warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Creates a new warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -75446,7 +75467,7 @@
   "WebhookDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Delete a webhook. Before the deletion, the webhook is deactivated to pause any deliveries that are already scheduled. The deletion might fail if delivery is in progress. In such a case, the webhook is not deleted but remains deactivated. \n\nRequires one of the following permissions: MANAGE_APPS, AUTHENTICATED_APP.",
+    "description": "Deletes a webhook. Before the deletion, the webhook is deactivated to pause any deliveries that are already scheduled. The deletion might fail if delivery is in progress. In such a case, the webhook is not deleted but remains deactivated. \n\nRequires one of the following permissions: MANAGE_APPS, AUTHENTICATED_APP.",
     "deprecated": null,
     "message": null,
     "fields": {
