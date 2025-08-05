@@ -1,17 +1,7 @@
 [
   {
-    "diff": "field_new",
-    "type": "Money",
-    "field": "fractionDigits"
-  },
-  {
-    "diff": "field_new",
-    "type": "Money",
-    "field": "fractionalAmount"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductVariantWhereInput",
-    "field": "attributes"
+    "diff": "field_deleted",
+    "type": "AttributeInput",
+    "field": "valueNames"
   }
 ]

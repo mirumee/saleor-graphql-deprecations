@@ -5528,13 +5528,6 @@
         "message": null,
         "default": null
       },
-      "valueNames": {
-        "type": "[String!]",
-        "description": "Names corresponding to the attributeValues associated with the Attribute. When specified, it filters the results to include only records with one of the matching values.\n\nAdded in Saleor 3.22.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
       "values": {
         "type": "[String!]",
         "description": "Slugs identifying the attributeValues associated with the Attribute. When specified, it filters the results to include only records with one of the matching values. Requires `slug` to be provided.",
