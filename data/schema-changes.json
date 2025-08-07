@@ -1,7 +1,25 @@
 [
   {
+    "diff": "type_new",
+    "type": "FulfillmentWarehouseFilterInput"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "AttributeValueReferencedObject"
+  },
+  {
+    "diff": "field_new",
+    "type": "FulfillmentFilterInput",
+    "field": "warehouse"
+  },
+  {
     "diff": "field_deleted",
-    "type": "AttributeInput",
-    "field": "valueNames"
+    "type": "Attribute",
+    "field": "values"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeValue",
+    "field": "referencedObject"
   }
 ]

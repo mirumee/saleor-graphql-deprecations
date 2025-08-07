@@ -4419,21 +4419,6 @@
         "message": null,
         "arguments": {}
       },
-      "values": {
-        "type": "[AttributeValue!]",
-        "description": "List of all existing attribute values. This includes all values that have been assigned to attributes.\n\nAdded in Saleor 3.22.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {
-          "limit": {
-            "type": "Int",
-            "description": "Maximum number of attribute values to return. The default value is also the maximum number of values that can be fetched.",
-            "deprecated": null,
-            "message": null,
-            "default": 100
-          }
-        }
-      },
       "visibleInStorefront": {
         "type": "Boolean!",
         "description": "Whether the attribute should be visible or not in storefront. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
@@ -6184,13 +6169,6 @@
         "message": null,
         "arguments": {}
       },
-      "referencedObject": {
-        "type": "AttributeValueReferencedObject",
-        "description": "The object referenced by the attribute value.\n\nAdded in Saleor 3.22.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
       "richText": {
         "type": "JSONString",
         "description": "Represents the text of the attribute value, includes formatting.\n\nRich text format. For reference see https://editorjs.io/",
@@ -6802,17 +6780,6 @@
         "default": null
       }
     }
-  },
-  "AttributeValueReferencedObject": {
-    "type": "union",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "types": [
-      "Product",
-      "ProductVariant",
-      "Page"
-    ]
   },
   "AttributeValueSelectableTypeInput": {
     "type": "input",
@@ -19867,6 +19834,13 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "warehouse": {
+        "type": "FulfillmentWarehouseFilterInput",
+        "description": "Filter by fulfillment warehouse.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -20214,6 +20188,35 @@
       "trackingNumber": {
         "type": "String",
         "description": "Fulfillment tracking number.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "FulfillmentWarehouseFilterInput": {
+    "type": "input",
+    "description": "Filter input for fulfillment warehouses.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "externalReference": {
+        "type": "StringFilterInput",
+        "description": "Filter fulfillments by warehouse external reference.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "id": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter fulfillments by warehouse ID.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "StringFilterInput",
+        "description": "Filter fulfillments by warehouse slug.",
         "deprecated": null,
         "message": null,
         "default": null
