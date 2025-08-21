@@ -45833,6 +45833,11 @@
         "deprecated": null,
         "message": null
       },
+      "CHECKOUT_HAS_TRANSACTION": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
