@@ -62177,7 +62177,7 @@
   "SelectedAttribute": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents a custom attribute.",
+    "description": "Represents an assigned attribute to an object.",
     "deprecated": null,
     "message": null,
     "fields": {
