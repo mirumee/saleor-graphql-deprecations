@@ -7642,7 +7642,7 @@
   "CardPaymentMethodDetails": {
     "type": "object",
     "interfaces": [
-      "GenericPaymentMethodDetails"
+      "PaymentMethodDetails"
     ],
     "description": "Represents a card payment method used for a transaction.\n\nAdded in Saleor 3.22.",
     "deprecated": null,
@@ -20240,22 +20240,6 @@
       "value": {
         "type": "String",
         "description": "Gateway config value for key.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      }
-    }
-  },
-  "GenericPaymentMethodDetails": {
-    "type": "interface",
-    "interfaces": [],
-    "description": "Represents a payment method used for a transaction.\n\nAdded in Saleor 3.22.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "name": {
-        "type": "String!",
-        "description": "Name of the payment method.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43193,7 +43177,7 @@
   "OtherPaymentMethodDetails": {
     "type": "object",
     "interfaces": [
-      "GenericPaymentMethodDetails"
+      "PaymentMethodDetails"
     ],
     "description": "Represents a payment method used for a transaction.\n\nAdded in Saleor 3.22.",
     "deprecated": null,
@@ -46538,14 +46522,20 @@
     }
   },
   "PaymentMethodDetails": {
-    "type": "union",
-    "description": null,
+    "type": "interface",
+    "interfaces": [],
+    "description": "Represents a payment method used for a transaction.\n\nAdded in Saleor 3.22.",
     "deprecated": null,
     "message": null,
-    "types": [
-      "CardPaymentMethodDetails",
-      "OtherPaymentMethodDetails"
-    ]
+    "fields": {
+      "name": {
+        "type": "String!",
+        "description": "Name of the payment method.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
   },
   "PaymentMethodDetailsCardFilterInput": {
     "type": "input",

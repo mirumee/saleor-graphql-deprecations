@@ -1,7 +1,14 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "PaymentErrorCode",
-    "value": "CHECKOUT_HAS_TRANSACTION"
+    "diff": "type_new",
+    "type": "PaymentMethodDetails"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "GenericPaymentMethodDetails"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "PaymentMethodDetails"
   }
 ]
