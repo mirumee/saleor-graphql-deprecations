@@ -3955,6 +3955,22 @@
       }
     }
   },
+  "AssignedAttribute": {
+    "type": "interface",
+    "interfaces": [],
+    "description": "Represents an attribute assigned to an object.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "AssignedAttributeReferenceInput": {
     "type": "input",
     "description": null,
@@ -4067,6 +4083,659 @@
         "deprecated": null,
         "message": null,
         "default": null
+      }
+    }
+  },
+  "AssignedBooleanAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents a boolean attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "Boolean",
+        "description": "The assigned boolean value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedChoiceAttributeValue": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents a single choice value of the attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "name": {
+        "type": "String",
+        "description": "Name of a value displayed in the interface.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "slug": {
+        "type": "String",
+        "description": "Internal representation of a value (unique per attribute).",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "String",
+        "description": "Translation of the name.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      }
+    }
+  },
+  "AssignedDateAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents a date attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "Date",
+        "description": "The assigned date value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedDateTimeAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents a date time attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "DateTime",
+        "description": "The assigned date time value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedFileAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents file attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "File",
+        "description": "The assigned file.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedMultiCategoryReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents multi category reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "[Category!]!",
+        "description": "List of assigned category references.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of referenced categories to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      }
+    }
+  },
+  "AssignedMultiChoiceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents a multi choice attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "[AssignedChoiceAttributeValue!]!",
+        "description": "List of assigned choice values.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of choices to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      }
+    }
+  },
+  "AssignedMultiCollectionReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents multi collection reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "[Collection!]!",
+        "description": "List of assigned collection references.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of referenced collections to return. Default is 100",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      }
+    }
+  },
+  "AssignedMultiPageReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents multi page reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "[Page!]!",
+        "description": "List of assigned page references.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of referenced pages to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      }
+    }
+  },
+  "AssignedMultiProductReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents multi product reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "[Product!]!",
+        "description": "List of assigned product references.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of referenced products to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      }
+    }
+  },
+  "AssignedMultiProductVariantReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents multi product variant reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "[ProductVariant!]!",
+        "description": "List of assigned product variant references.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of referenced product variants to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      }
+    }
+  },
+  "AssignedNumericAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents a numeric value of an attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "Float",
+        "description": "The assigned numeric value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedPlainTextAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents plain text attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "String",
+        "description": "Translation of the plain text content in the specified language.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "value": {
+        "type": "String",
+        "description": "The assigned plain text content.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSingleCategoryReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents single category reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "Category",
+        "description": "The assigned category reference.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSingleChoiceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents a single choice attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "AssignedChoiceAttributeValue",
+        "description": "The assigned choice value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSingleCollectionReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents single collection reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "Collection",
+        "description": "The assigned collection reference.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSinglePageReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents single page reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "Page",
+        "description": "The assigned page reference.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSingleProductReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents single product reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "Product",
+        "description": "The assigned product reference.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSingleProductVariantReferenceAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents single product variant reference attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "ProductVariant",
+        "description": "The assigned product variant reference.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSwatchAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents a swatch attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "value": {
+        "type": "AssignedSwatchAttributeValue",
+        "description": "The assigned swatch value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedSwatchAttributeValue": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents a single swatch value.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "file": {
+        "type": "File",
+        "description": "File associated with the attribute.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "hexColor": {
+        "type": "String",
+        "description": "Hex color code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "name": {
+        "type": "String",
+        "description": "Name of the selected swatch value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "slug": {
+        "type": "String",
+        "description": "Slug of the selected swatch value.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AssignedTextAttribute": {
+    "type": "object",
+    "interfaces": [
+      "AssignedAttribute"
+    ],
+    "description": "Represents text attribute.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attribute": {
+        "type": "Attribute!",
+        "description": "Attribute assigned to an object.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "translation": {
+        "type": "JSON",
+        "description": "Translation of the rich text content in the specified language.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "value": {
+        "type": "JSON",
+        "description": "The assigned rich text content.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },
@@ -43217,11 +43886,41 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "assignedAttribute": {
+        "type": "AssignedAttribute",
+        "description": "Get a single attribute attached to page by attribute slug.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "slug": {
+            "type": "String!",
+            "description": "Slug of the attribute",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "assignedAttributes": {
+        "type": "[AssignedAttribute!]!",
+        "description": "List of attributes assigned to this page.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of attributes to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      },
       "attribute": {
         "type": "SelectedAttribute",
         "description": "Get a single attribute attached to page by attribute slug.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `assignedAttribute` field instead.",
         "arguments": {
           "slug": {
             "type": "String!",
@@ -43236,7 +43935,7 @@
         "type": "[SelectedAttribute!]!",
         "description": "List of attributes assigned to this page.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `assignedAttributes` field instead.",
         "arguments": {}
       },
       "content": {
@@ -48350,6 +49049,12 @@
     "deprecated": null,
     "message": null
   },
+  "PositiveInt": {
+    "type": "scalar",
+    "description": "Positive Integer scalar implementation.\n\nShould be used in places where value must be positive (greater than 0).",
+    "deprecated": null,
+    "message": null
+  },
   "PostalCodeRuleInclusionTypeEnum": {
     "type": "enum",
     "description": null,
@@ -48519,6 +49224,36 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "assignedAttribute": {
+        "type": "AssignedAttribute",
+        "description": "Get a single attribute attached to product by attribute slug.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "slug": {
+            "type": "String!",
+            "description": "Slug of the attribute",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "assignedAttributes": {
+        "type": "[AssignedAttribute!]!",
+        "description": "List of attributes assigned to this product.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of attributes to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      },
       "attribute": {
         "type": "SelectedAttribute",
         "description": "Get a single attribute attached to product by attribute slug.",
@@ -52829,6 +53564,43 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "assignedAttribute": {
+        "type": "AssignedAttribute",
+        "description": "Get a single attribute attached to product by attribute slug.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "slug": {
+            "type": "String!",
+            "description": "Slug of the attribute",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "assignedAttributes": {
+        "type": "[AssignedAttribute!]!",
+        "description": "List of attributes assigned to this variant.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of attributes to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          },
+          "variantSelection": {
+            "type": "VariantAttributeScope",
+            "description": "Define scope of returned attributes.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "attributes": {
         "type": "[SelectedAttribute!]!",
         "description": "List of attributes assigned to this variant.",

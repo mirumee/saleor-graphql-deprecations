@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2025-09-03 14:00:44</p>
+      <p class="m-0">Generated on 2025-09-04 14:00:50</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -942,6 +942,28 @@
               
                 <td>Page</td>
                 <td colspan="2">contentJson</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Page-attribute" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Page</td>
+                <td colspan="2">attribute</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#Page-attributes" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>Page</td>
+                <td colspan="2">attributes</td>
               
               <td>None</td>
             </tr>
@@ -6961,6 +6983,48 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">type</span> <strong>Page</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">contentJson</strong>: JSONString!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Page-attribute" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Page-attribute" class="text-reset">
+                Field <strong class="text-danger">attribute</strong> of type <strong class="text-danger">Page</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">assignedAttribute</strong> field instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Page</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">attribute</strong>( <span class="text-secondary">...</span> ): SelectedAttribute<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="Page-attributes" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#Page-attributes" class="text-reset">
+                Field <strong class="text-danger">attributes</strong> of type <strong class="text-danger">Page</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Use <strong class="text-danger font-monospace">assignedAttributes</strong> field instead.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>Page</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">attributes</strong>: [SelectedAttribute!]!<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
