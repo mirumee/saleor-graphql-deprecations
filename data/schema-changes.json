@@ -1,128 +1,26 @@
 [
   {
     "diff": "type_new",
-    "type": "AssignedAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedBooleanAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedChoiceAttributeValue"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedDateAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedDateTimeAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedFileAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedMultiCategoryReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedMultiChoiceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedMultiCollectionReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedMultiPageReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedMultiProductReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedMultiProductVariantReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedNumericAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedPlainTextAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSingleCategoryReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSingleChoiceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSingleCollectionReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSinglePageReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSingleProductReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSingleProductVariantReferenceAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSwatchAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedSwatchAttributeValue"
-  },
-  {
-    "diff": "type_new",
-    "type": "AssignedTextAttribute"
-  },
-  {
-    "diff": "type_new",
-    "type": "PositiveInt"
+    "type": "CheckoutFullyAuthorized"
   },
   {
     "diff": "field_new",
-    "type": "Page",
-    "field": "assignedAttribute"
+    "type": "Subscription",
+    "field": "checkoutFullyAuthorized"
   },
   {
-    "diff": "field_new",
-    "type": "Page",
-    "field": "assignedAttributes"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "CHECKOUT_FULLY_AUTHORIZED"
   },
   {
-    "diff": "field_new",
-    "type": "Product",
-    "field": "assignedAttribute"
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "CHECKOUT_FULLY_AUTHORIZED"
   },
   {
-    "diff": "field_new",
-    "type": "Product",
-    "field": "assignedAttributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductVariant",
-    "field": "assignedAttribute"
-  },
-  {
-    "diff": "field_new",
-    "type": "ProductVariant",
-    "field": "assignedAttributes"
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "CHECKOUT_FULLY_AUTHORIZED"
   }
 ]

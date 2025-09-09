@@ -11920,12 +11920,58 @@
       }
     }
   },
+  "CheckoutFullyAuthorized": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when a checkout was fully authorized. A checkout is considered fully authorized when its `authorizeStatus` is `FULL`.\n\nIt is triggered only for checkouts whose payments are processed through the Transaction API.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "checkout": {
+        "type": "Checkout",
+        "description": "The checkout the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "CheckoutFullyPaid": {
     "type": "object",
     "interfaces": [
       "Event"
     ],
-    "description": "Event sent when checkout is fully paid with transactions. The checkout is considered as fully paid when the checkout `charge_status` is `FULL` or `OVERCHARGED`. The event is not sent when the checkout authorization flow strategy is used.",
+    "description": "Event sent when a checkout was fully paid. A checkout is considered fully paid when its `chargeStatus` is `FULL` or `OVERCHARGED`. This event is not sent if payments are only authorized but not fully charged.\n\nIt is triggered only for checkouts whose payments are processed through the Transaction API.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67654,6 +67700,21 @@
           }
         }
       },
+      "checkoutFullyAuthorized": {
+        "type": "CheckoutFullyAuthorized",
+        "description": "Event sent when checkout is fully authorized.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "checkoutFullyPaid": {
         "type": "CheckoutFullyPaid",
         "description": "Event sent when checkout is fully-paid.\n\nAdded in Saleor 3.21.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -76686,8 +76747,13 @@
         "deprecated": null,
         "message": null
       },
+      "CHECKOUT_FULLY_AUTHORIZED": {
+        "description": "A checkout was fully authorized (its `authorizeStatus` is `FULL`).\n\nThis event is emitted only for checkouts whose payments are processed through the Transaction API.",
+        "deprecated": null,
+        "message": null
+      },
       "CHECKOUT_FULLY_PAID": {
-        "description": null,
+        "description": "A checkout was fully paid (its `chargeStatus` is `FULL` or `OVERCHARGED`). This event is not sent if payments are only authorized but not fully charged.\n\nThis event is emitted only for checkouts whose payments are processed through the Transaction API.",
         "deprecated": null,
         "message": null
       },
@@ -77414,8 +77480,13 @@
         "deprecated": null,
         "message": null
       },
+      "CHECKOUT_FULLY_AUTHORIZED": {
+        "description": "A checkout was fully authorized (its `authorizeStatus` is `FULL`).\n\nThis event is emitted only for checkouts whose payments are processed through the Transaction API.",
+        "deprecated": null,
+        "message": null
+      },
       "CHECKOUT_FULLY_PAID": {
-        "description": null,
+        "description": "A checkout was fully paid (its `chargeStatus` is `FULL` or `OVERCHARGED`). This event is not sent if payments are only authorized but not fully charged.\n\nThis event is emitted only for checkouts whose payments are processed through the Transaction API.",
         "deprecated": null,
         "message": null
       },
@@ -78351,6 +78422,11 @@
         "message": null
       },
       "CHECKOUT_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CHECKOUT_FULLY_AUTHORIZED": {
         "description": null,
         "deprecated": null,
         "message": null
