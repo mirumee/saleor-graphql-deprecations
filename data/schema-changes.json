@@ -1,26 +1,6 @@
 [
   {
     "diff": "type_new",
-    "type": "CheckoutFullyAuthorized"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "checkoutFullyAuthorized"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "CHECKOUT_FULLY_AUTHORIZED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "CHECKOUT_FULLY_AUTHORIZED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "CHECKOUT_FULLY_AUTHORIZED"
+    "type": "ObjectWithAttributes"
   }
 ]

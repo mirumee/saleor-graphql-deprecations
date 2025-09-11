@@ -37205,6 +37205,45 @@
       }
     }
   },
+  "ObjectWithAttributes": {
+    "type": "interface",
+    "interfaces": [],
+    "description": "An object with attributes.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "assignedAttribute": {
+        "type": "AssignedAttribute",
+        "description": "Get a single attribute attached to the object by attribute slug.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "slug": {
+            "type": "String!",
+            "description": "Slug of the attribute",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "assignedAttributes": {
+        "type": "[AssignedAttribute!]!",
+        "description": "List of attributes assigned to the object.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of attributes to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      }
+    }
+  },
   "ObjectWithMetadata": {
     "type": "interface",
     "interfaces": [],
@@ -43926,7 +43965,8 @@
     "type": "object",
     "interfaces": [
       "Node",
-      "ObjectWithMetadata"
+      "ObjectWithMetadata",
+      "ObjectWithAttributes"
     ],
     "description": "A static page that can be manually added by a shop operator through the dashboard.",
     "deprecated": null,
@@ -49264,7 +49304,8 @@
     "type": "object",
     "interfaces": [
       "Node",
-      "ObjectWithMetadata"
+      "ObjectWithMetadata",
+      "ObjectWithAttributes"
     ],
     "description": "Represents an individual item for sale in the storefront.",
     "deprecated": null,
@@ -49304,7 +49345,7 @@
         "type": "SelectedAttribute",
         "description": "Get a single attribute attached to product by attribute slug.",
         "deprecated": null,
-        "message": null,
+        "message": "Use the `assignedAttribute` field instead.",
         "arguments": {
           "slug": {
             "type": "String!",
@@ -49319,7 +49360,7 @@
         "type": "[SelectedAttribute!]!",
         "description": "List of attributes assigned to this product.",
         "deprecated": null,
-        "message": null,
+        "message": "Use the `assignedAttributes` field instead.",
         "arguments": {}
       },
       "availableForPurchase": {
@@ -53604,7 +53645,8 @@
     "type": "object",
     "interfaces": [
       "Node",
-      "ObjectWithMetadata"
+      "ObjectWithMetadata",
+      "ObjectWithAttributes"
     ],
     "description": "Represents a version of a product such as different size or color.",
     "deprecated": null,
@@ -53637,13 +53679,6 @@
             "deprecated": null,
             "message": null,
             "default": 100
-          },
-          "variantSelection": {
-            "type": "VariantAttributeScope",
-            "description": "Define scope of returned attributes.",
-            "deprecated": null,
-            "message": null,
-            "default": null
           }
         }
       },
@@ -53651,7 +53686,7 @@
         "type": "[SelectedAttribute!]!",
         "description": "List of attributes assigned to this variant.",
         "deprecated": null,
-        "message": null,
+        "message": "Use the `assignedAttributes` field instead.",
         "arguments": {
           "variantSelection": {
             "type": "VariantAttributeScope",
