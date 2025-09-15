@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2025-09-12 14:01:02</p>
+      <p class="m-0">Generated on 2025-09-15 14:00:57</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -4946,6 +4946,17 @@
               
                 <td>AccountSetDefaultAddress</td>
                 <td colspan="2">accountErrors</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#AccountRegister-user" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>AccountRegister</td>
+                <td colspan="2">user</td>
               
               <td>None</td>
             </tr>
@@ -14799,6 +14810,27 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">type</span> <strong>AccountSetDefaultAddress</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">accountErrors</strong>: [AccountError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="AccountRegister-user" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#AccountRegister-user" class="text-reset">
+                Field <strong class="text-danger">user</strong> of type <strong class="text-danger">AccountRegister</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>The field always returns a <strong class="text-danger font-monospace">User</strong> object constructed from the input data. The <strong class="text-danger font-monospace">user.id</strong> is always empty. To determine whether the user exists in Saleor, query via an external app with the required permissions.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">type</span> <strong>AccountRegister</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">user</strong>: User<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

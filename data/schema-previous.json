@@ -905,7 +905,7 @@
         "type": "User",
         "description": null,
         "deprecated": null,
-        "message": null,
+        "message": "The field always returns a `User` object constructed from the input data. The `user.id` is always empty. To determine whether the user exists in Saleor, query via an external app with the required permissions.",
         "arguments": {}
       }
     }
@@ -5656,7 +5656,7 @@
     "fields": {
       "attribute": {
         "type": "Attribute",
-        "description": null,
+        "description": "The created attribute.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -6593,7 +6593,7 @@
     "fields": {
       "attribute": {
         "type": "Attribute",
-        "description": null,
+        "description": "The updated attribute.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -39130,7 +39130,7 @@
       },
       "order": {
         "type": "Order",
-        "description": null,
+        "description": "Order which has been confirmed.",
         "deprecated": null,
         "message": null,
         "arguments": {}
