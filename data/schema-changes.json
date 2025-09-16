@@ -1,6 +1,80 @@
 [
   {
     "diff": "type_new",
-    "type": "ObjectWithAttributes"
+    "type": "RefundReasonReferenceTypeClear"
+  },
+  {
+    "diff": "type_new",
+    "type": "RefundReasonReferenceTypeClearError"
+  },
+  {
+    "diff": "type_new",
+    "type": "RefundSettings"
+  },
+  {
+    "diff": "type_new",
+    "type": "RefundSettingsErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "RefundSettingsUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "RefundSettingsUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "RefundSettingsUpdateInput"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "refundReasonReferenceClear"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "refundSettingsUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundCreateInput",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateInput",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantedRefund",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "Query",
+    "field": "refundSettings"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionEvent",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "reason"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionItem",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "TransactionRequestActionErrorCode",
+    "value": "REQUIRED"
   }
 ]

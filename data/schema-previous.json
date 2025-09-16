@@ -35424,6 +35424,28 @@
           }
         }
       },
+      "refundReasonReferenceClear": {
+        "type": "RefundReasonReferenceTypeClear",
+        "description": "Updates RefundSettings. The `Page` (Model) Type will be cleared from `reasonReferenceType`. When it's cleared, passing reason reference to refund mutations is no longer accepted and will raise error.\n\nAdded in Saleor 3.22. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "refundSettingsUpdate": {
+        "type": "RefundSettingsUpdate",
+        "description": "Update refund settings across all channels.\n\nAdded in Saleor 3.22. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "RefundSettingsUpdateInput!",
+            "description": "Fields required to update refund settings.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "requestEmailChange": {
         "type": "RequestEmailChange",
         "description": "Request email change of the logged in user. \n\nRequires one of the following permissions: AUTHENTICATED_USER.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for account email change.\n- ACCOUNT_CHANGE_EMAIL_REQUESTED (async): An account email change was requested.",
@@ -36604,6 +36626,20 @@
           "id": {
             "type": "ID",
             "description": "The ID of the transaction. One of field id or token is required.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "refundReason": {
+            "type": "String",
+            "description": "Reason of the refund\n\nAdded in Saleor 3.22.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "refundReasonReference": {
+            "type": "ID",
+            "description": "ID of a `Page` (Model) to reference in reason.\n\nAdded in Saleor 3.22.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -41288,6 +41324,13 @@
         "message": null,
         "default": null
       },
+      "reasonReference": {
+        "type": "ID",
+        "description": "ID of a `Page` (Model) to reference in reason.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "transactionId": {
         "type": "ID!",
         "description": "The ID of the transaction item related to the granted refund. If `amount` provided in the input, the transaction.chargedAmount needs to be equal or greater than provided `amount`.If `amount` is not provided in the input and calculated automatically by Saleor, the `min(calculatedAmount, transaction.chargedAmount)` will be used. Field required starting from Saleor 3.21.\n\nAdded in Saleor 3.20.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
@@ -41532,6 +41575,13 @@
         "message": null,
         "default": null
       },
+      "reasonReference": {
+        "type": "ID",
+        "description": "ID of a `Page` (Model) to reference in reason.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "removeLines": {
         "type": "[ID!]",
         "description": "Lines to remove from granted refund.",
@@ -41681,7 +41731,14 @@
       },
       "reason": {
         "type": "String",
-        "description": "Reason of the refund.",
+        "description": "Reason of the refund.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reasonReference": {
+        "type": "Page",
+        "description": "Reason Model (Page) reference for refund.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -60829,6 +60886,13 @@
           }
         }
       },
+      "refundSettings": {
+        "type": "RefundSettings!",
+        "description": "Refunds related settings. Returns `RefundSettings` configuration, global for the entire shop.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "reportProductSales": {
         "type": "ProductVariantCountableConnection",
         "description": "List of top selling products.\n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
@@ -61674,6 +61738,180 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "RefundReasonReferenceTypeClear": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates RefundSettings. The `Page` (Model) Type will be cleared from `reasonReferenceType`. When it's cleared, passing reason reference to refund mutations is no longer accepted and will raise error.\n\nAdded in Saleor 3.22. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[RefundReasonReferenceTypeClearError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "refundSettings": {
+        "type": "RefundSettings!",
+        "description": "Refund settings.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "refundSettingsErrors": {
+        "type": "[RefundReasonReferenceTypeClearError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": "Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "RefundReasonReferenceTypeClearError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "RefundSettingsErrorCode!",
+        "description": "Failed to clear refund reason reference type",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "RefundSettings": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Refund related settings from site settings.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "reasonReferenceType": {
+        "type": "PageType",
+        "description": "Model type used for refund reasons.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "RefundSettingsErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "RefundSettingsUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Update refund settings across all channels.\n\nAdded in Saleor 3.22. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[RefundSettingsUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "refundSettings": {
+        "type": "RefundSettings!",
+        "description": "Refund settings.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "refundSettingsErrors": {
+        "type": "[RefundSettingsUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": "Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "RefundSettingsUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "RefundSettingsErrorCode!",
+        "description": "Failed to update Refund Settings",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "RefundSettingsUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "refundReasonReferenceType": {
+        "type": "ID!",
+        "description": "The ID of a model type, that will be used to reference refund reasons. All models with of this type will be accepted as refund reasons. \n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -70331,6 +70569,13 @@
         "message": null,
         "arguments": {}
       },
+      "reasonReference": {
+        "type": "Page",
+        "description": "Reason model of the transaction refund.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "type": {
         "type": "TransactionEventTypeEnum",
         "description": "The type of action related to this event.",
@@ -71010,6 +71255,20 @@
         "message": null,
         "arguments": {}
       },
+      "reason": {
+        "type": "String",
+        "description": "Reason of the refund.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reasonReference": {
+        "type": "Page",
+        "description": "Reason `Page` (Model) for refund.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "refundPendingAmount": {
         "type": "Money!",
         "description": "Total amount of ongoing refund requests for the transaction.",
@@ -71493,6 +71752,11 @@
         "message": null
       },
       "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -79338,6 +79602,7 @@
     "message": null,
     "types": [
       "App",
+      "PageType",
       "Address",
       "User",
       "Group",
@@ -79347,8 +79612,7 @@
       "ProductMedia",
       "Category",
       "Collection",
-      "Order",
-      "PageType"
+      "Order"
     ]
   },
   "_Service": {
