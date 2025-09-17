@@ -5038,6 +5038,21 @@
           }
         }
       },
+      "referenceTypes": {
+        "type": "[ReferenceType!]",
+        "description": "The reference types (product or page type) that are used to narrow down the choices of reference objects.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of objects to return. Value must be greater than 0. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
+      },
       "slug": {
         "type": "String",
         "description": "Internal representation of an attribute name.",
@@ -5735,6 +5750,13 @@
       "name": {
         "type": "String!",
         "description": "Name of an attribute displayed in the interface.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "referenceTypes": {
+        "type": "[ID!]",
+        "description": "Specifies reference types to narrow down the choices of reference objects. Applicable only for `REFERENCE` and `SINGLE_REFERENCE` attributes with `PRODUCT`, `PRODUCT_VARIANT` and `PAGE` entity types. Accepts `ProductType` IDs for `PRODUCT` and `PRODUCT_VARIANT` entity types, and `PageType` IDs for `PAGE` entity type. If omitted, all objects of the selected entity type are available as attribute values.\n\nA maximum of 100 reference types can be specified.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -6665,6 +6687,13 @@
       "name": {
         "type": "String",
         "description": "Name of an attribute displayed in the interface.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "referenceTypes": {
+        "type": "[ID!]",
+        "description": "Specifies reference types to narrow down the choices of reference objects. Applicable only for `REFERENCE` and `SINGLE_REFERENCE` attributes with `PRODUCT`, `PRODUCT_VARIANT` and `PAGE` entity types. Accepts `ProductType` IDs for `PRODUCT` and `PRODUCT_VARIANT` entity types, and `PageType` IDs for `PAGE` entity type. If omitted, all objects of the selected entity type are available as attribute values.\n\nA maximum of 100 reference types can be specified.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -61703,6 +61732,16 @@
         "arguments": {}
       }
     }
+  },
+  "ReferenceType": {
+    "type": "union",
+    "description": "The reference types (product or page type) that are used to narrow down the choices of reference objects.\nProductType applicable for reference attribute with `PRODUCT` or `PRODUCT_VARIANT` entity type.\nPageType applicable for reference attribute with `PAGE` entity type.",
+    "deprecated": null,
+    "message": null,
+    "types": [
+      "ProductType",
+      "PageType"
+    ]
   },
   "RefreshToken": {
     "type": "object",
