@@ -3977,6 +3977,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "categorySlugs": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a category identified by the given slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "pageSlugs": {
         "type": "ContainsFilterInput",
         "description": "Returns objects with a reference pointing to a page identified by the given slug.",
