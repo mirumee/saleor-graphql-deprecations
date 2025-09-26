@@ -2,6 +2,6 @@
   {
     "diff": "field_new",
     "type": "AssignedAttributeReferenceInput",
-    "field": "categorySlugs"
+    "field": "collectionSlugs"
   }
 ]

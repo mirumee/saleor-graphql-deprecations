@@ -3984,6 +3984,13 @@
         "message": null,
         "default": null
       },
+      "collectionSlugs": {
+        "type": "ContainsFilterInput",
+        "description": "Returns objects with a reference pointing to a collection identified by the given slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "pageSlugs": {
         "type": "ContainsFilterInput",
         "description": "Returns objects with a reference pointing to a page identified by the given slug.",
