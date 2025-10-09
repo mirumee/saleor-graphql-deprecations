@@ -45850,7 +45850,7 @@
       },
       "removeAttributes": {
         "type": "[ID!]",
-        "description": "List of attribute IDs to be assigned to the page type.",
+        "description": "List of attribute IDs to be unassigned from the page type.",
         "deprecated": null,
         "message": null,
         "default": null
