@@ -2629,6 +2629,13 @@
         "type": "AppExtensionMountEnum!",
         "description": "Place where given extension will be mounted.",
         "deprecated": null,
+        "message": "Use `mountName` instead.",
+        "arguments": {}
+      },
+      "mountName": {
+        "type": "String!",
+        "description": "Name of the extension mount point in the dashboard. Replaces `mount`\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
         "message": null,
         "arguments": {}
       },
@@ -2636,7 +2643,7 @@
         "type": "AppExtensionPossibleOptions",
         "description": "App extension options.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `settings` field directly.",
         "arguments": {}
       },
       "permissions": {
@@ -2646,9 +2653,23 @@
         "message": null,
         "arguments": {}
       },
+      "settings": {
+        "type": "JSON!",
+        "description": "App extension settings. Replaces options field.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "target": {
         "type": "AppExtensionTargetEnum!",
         "description": "Type of way how app extension will be opened.",
+        "deprecated": null,
+        "message": "Use `targetName` instead.",
+        "arguments": {}
+      },
+      "targetName": {
+        "type": "String!",
+        "description": "Name of the extension target in the dashboard. Replaces `target`\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -3001,7 +3022,7 @@
         "type": "NewTabTargetOptions",
         "description": "Options controlling behavior of the NEW_TAB extension target",
         "deprecated": null,
-        "message": null,
+        "message": "Use `settings` field directly.",
         "arguments": {}
       }
     }
@@ -3017,7 +3038,7 @@
         "type": "WidgetTargetOptions",
         "description": "Options for displaying a Widget",
         "deprecated": null,
-        "message": null,
+        "message": "Use `settings` field directly.",
         "arguments": {}
       }
     }
@@ -3393,6 +3414,13 @@
         "type": "AppExtensionMountEnum!",
         "description": "Place where given extension will be mounted.",
         "deprecated": null,
+        "message": "Use `mountName` instead.",
+        "arguments": {}
+      },
+      "mountName": {
+        "type": "String!",
+        "description": "Name of the extension mount point in the dashboard. Replaces `mount`\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
         "message": null,
         "arguments": {}
       },
@@ -3403,9 +3431,23 @@
         "message": null,
         "arguments": {}
       },
+      "settings": {
+        "type": "JSON!",
+        "description": "App extension settings. Replaces options field.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "target": {
         "type": "AppExtensionTargetEnum!",
         "description": "Type of way how app extension will be opened.",
+        "deprecated": null,
+        "message": "Use `targetName` instead.",
+        "arguments": {}
+      },
+      "targetName": {
+        "type": "String!",
+        "description": "Name of the extension target in the dashboard. Replaces `target`\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -37263,7 +37305,7 @@
         "type": "HttpMethod!",
         "description": "HTTP method for New Tab target (GET or POST)",
         "deprecated": null,
-        "message": null,
+        "message": "Use `settings` field directly.",
         "arguments": {}
       }
     }
@@ -79637,7 +79679,7 @@
         "type": "HttpMethod!",
         "description": "HTTP method for Widget target (GET or POST)",
         "deprecated": null,
-        "message": null,
+        "message": "Use `settings` field directly.",
         "arguments": {}
       }
     }

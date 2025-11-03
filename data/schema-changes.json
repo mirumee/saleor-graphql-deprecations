@@ -1,7 +1,32 @@
 [
   {
     "diff": "field_new",
-    "type": "AssignedAttributeReferenceInput",
-    "field": "collectionSlugs"
+    "type": "AppExtension",
+    "field": "mountName"
+  },
+  {
+    "diff": "field_new",
+    "type": "AppExtension",
+    "field": "settings"
+  },
+  {
+    "diff": "field_new",
+    "type": "AppExtension",
+    "field": "targetName"
+  },
+  {
+    "diff": "field_new",
+    "type": "AppManifestExtension",
+    "field": "mountName"
+  },
+  {
+    "diff": "field_new",
+    "type": "AppManifestExtension",
+    "field": "settings"
+  },
+  {
+    "diff": "field_new",
+    "type": "AppManifestExtension",
+    "field": "targetName"
   }
 ]
