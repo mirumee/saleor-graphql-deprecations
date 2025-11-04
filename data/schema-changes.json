@@ -1,32 +1,7 @@
 [
   {
-    "diff": "field_new",
-    "type": "AppExtension",
-    "field": "mountName"
-  },
-  {
-    "diff": "field_new",
-    "type": "AppExtension",
-    "field": "settings"
-  },
-  {
-    "diff": "field_new",
-    "type": "AppExtension",
-    "field": "targetName"
-  },
-  {
-    "diff": "field_new",
-    "type": "AppManifestExtension",
-    "field": "mountName"
-  },
-  {
-    "diff": "field_new",
-    "type": "AppManifestExtension",
-    "field": "settings"
-  },
-  {
-    "diff": "field_new",
-    "type": "AppManifestExtension",
-    "field": "targetName"
+    "diff": "enum_value_new",
+    "enum": "AppExtensionMountEnum",
+    "value": "TRANSLATIONS_MORE_ACTIONS"
   }
 ]
