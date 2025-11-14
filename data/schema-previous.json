@@ -2744,14 +2744,28 @@
     "fields": {
       "mount": {
         "type": "[AppExtensionMountEnum!]",
-        "description": null,
+        "description": "DEPRECATED: Use `mountName` instead.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "mountName": {
+        "type": "String",
+        "description": "Plain-text mount name (case insensitive)\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "default": null
       },
       "target": {
         "type": "AppExtensionTargetEnum",
-        "description": null,
+        "description": "DEPRECATED: Use `targetName` instead.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "targetName": {
+        "type": "String",
+        "description": "Plain-text target name (case insensitive)\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "default": null

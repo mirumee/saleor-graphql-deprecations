@@ -1,7 +1,12 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "AppExtensionMountEnum",
-    "value": "TRANSLATIONS_MORE_ACTIONS"
+    "diff": "field_new",
+    "type": "AppExtensionFilterInput",
+    "field": "mountName"
+  },
+  {
+    "diff": "field_new",
+    "type": "AppExtensionFilterInput",
+    "field": "targetName"
   }
 ]
