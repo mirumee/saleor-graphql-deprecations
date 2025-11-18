@@ -2750,7 +2750,7 @@
         "default": null
       },
       "mountName": {
-        "type": "String",
+        "type": "[String!]",
         "description": "Plain-text mount name (case insensitive)\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
