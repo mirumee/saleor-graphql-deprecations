@@ -11054,6 +11054,35 @@
       }
     }
   },
+  "CheckoutAutoCompleteInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "cutOffDate": {
+        "type": "DateTime",
+        "description": "Specifies the earliest date on which fully paid checkouts can begin to be automatically completed. Fully paid checkouts dated before this cut-off will not be automatically completed. Must be less than the threshold of the oldest modified checkout eligible for automatic completion. Default is current date time.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "delay": {
+        "type": "Minute",
+        "description": "The time in minutes after which the fully paid checkout will be automatically completed. Default is 30. Set to 0 for immediate completion. Should be less than the threshold for the oldest modified checkout eligible for automatic completion.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "enabled": {
+        "type": "Boolean!",
+        "description": "Default `false`. Determines if the paid checkouts should be automatically completed. This setting applies only to checkouts where payment was processed through transactions.When enabled, the checkout will be automatically completed once the checkout `charge_status` reaches `FULL`. This occurs when the total sum of charged and authorized transaction amounts equals or exceeds the checkout's total amount.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "CheckoutBillingAddressUpdate": {
     "type": "object",
     "interfaces": [],
@@ -12754,6 +12783,20 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "automaticCompletionCutOffDate": {
+        "type": "DateTime",
+        "description": "The date time defines the earliest checkout creation date on which fully paid checkouts can begin to be automatically completed. \n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "automaticCompletionDelay": {
+        "type": "Minute",
+        "description": "The time in minutes to wait after a checkout is fully paid before automatically completing it.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "automaticallyCompleteFullyPaidCheckouts": {
         "type": "Boolean!",
         "description": "Default `false`. Determines if the paid checkouts should be automatically completed. This setting applies only to checkouts where payment was processed through transactions.When enabled, the checkout will be automatically completed once the checkout `charge_status` reaches `FULL`. This occurs when the total sum of charged and authorized transaction amounts equals or exceeds the checkout's total amount.\n\nAdded in Saleor 3.20.",
@@ -12776,11 +12819,18 @@
     "deprecated": null,
     "message": null,
     "fields": {
-      "automaticallyCompleteFullyPaidCheckouts": {
-        "type": "Boolean",
-        "description": "Default `false`. Determines if the paid checkouts should be automatically completed. This setting applies only to checkouts where payment was processed through transactions.When enabled, the checkout will be automatically completed once the checkout `charge_status` reaches `FULL`. This occurs when the total sum of charged and authorized transaction amounts equals or exceeds the checkout's total amount.\n\nAdded in Saleor 3.20.",
+      "automaticCompletion": {
+        "type": "CheckoutAutoCompleteInput",
+        "description": "Settings for automatic completion of fully paid checkouts.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
+        "default": null
+      },
+      "automaticallyCompleteFullyPaidCheckouts": {
+        "type": "Boolean",
+        "description": "Default `false`. Determines if the paid checkouts should be automatically completed. This setting applies only to checkouts where payment was processed through transactions.When enabled, the checkout will be automatically completed once the checkout `authorize_status` reaches `FULL`. This occurs when the total sum of charged and authorized transaction amounts equals or exceeds the checkout's total amount.\n\nAdded in Saleor 3.20.",
+        "deprecated": null,
+        "message": "Use `automatic_completion` instead.",
         "default": null
       },
       "useLegacyErrorFlow": {

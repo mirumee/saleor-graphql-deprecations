@@ -1,12 +1,21 @@
 [
   {
-    "diff": "field_new",
-    "type": "AppExtensionFilterInput",
-    "field": "mountName"
+    "diff": "type_new",
+    "type": "CheckoutAutoCompleteInput"
   },
   {
     "diff": "field_new",
-    "type": "AppExtensionFilterInput",
-    "field": "targetName"
+    "type": "CheckoutSettings",
+    "field": "automaticCompletionCutOffDate"
+  },
+  {
+    "diff": "field_new",
+    "type": "CheckoutSettings",
+    "field": "automaticCompletionDelay"
+  },
+  {
+    "diff": "field_new",
+    "type": "CheckoutSettingsInput",
+    "field": "automaticCompletion"
   }
 ]
