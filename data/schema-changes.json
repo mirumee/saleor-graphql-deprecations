@@ -1,21 +1,29 @@
 [
   {
     "diff": "type_new",
-    "type": "CheckoutAutoCompleteInput"
+    "type": "CheckoutProblemDeliveryMethodInvalid"
+  },
+  {
+    "diff": "type_new",
+    "type": "CheckoutProblemDeliveryMethodStale"
+  },
+  {
+    "diff": "type_new",
+    "type": "Delivery"
   },
   {
     "diff": "field_new",
-    "type": "CheckoutSettings",
-    "field": "automaticCompletionCutOffDate"
+    "type": "Checkout",
+    "field": "delivery"
   },
   {
-    "diff": "field_new",
-    "type": "CheckoutSettings",
-    "field": "automaticCompletionDelay"
+    "diff": "union_type_new",
+    "union": "CheckoutProblem",
+    "type": "CheckoutProblemDeliveryMethodStale"
   },
   {
-    "diff": "field_new",
-    "type": "CheckoutSettingsInput",
-    "field": "automaticCompletion"
+    "diff": "union_type_new",
+    "union": "CheckoutProblem",
+    "type": "CheckoutProblemDeliveryMethodInvalid"
   }
 ]

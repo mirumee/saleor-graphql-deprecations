@@ -10671,11 +10671,18 @@
         "message": null,
         "arguments": {}
       },
+      "delivery": {
+        "type": "Delivery",
+        "description": "The delivery method selected for this checkout.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "deliveryMethod": {
         "type": "DeliveryMethod",
         "description": "The delivery method selected for this checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
         "deprecated": null,
-        "message": null,
+        "message": "Use `delivery` instead.",
         "arguments": {}
       },
       "discount": {
@@ -10854,7 +10861,7 @@
         "type": "ShippingMethod",
         "description": "The shipping method related with checkout.\n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Optionally triggered when cached external shipping methods are invalid.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.",
         "deprecated": null,
-        "message": "Use `deliveryMethod` instead.",
+        "message": "Use `delivery` instead.",
         "arguments": {}
       },
       "shippingMethods": {
@@ -12742,9 +12749,43 @@
     "deprecated": null,
     "message": null,
     "types": [
+      "CheckoutProblemDeliveryMethodStale",
+      "CheckoutProblemDeliveryMethodInvalid",
       "CheckoutLineProblemInsufficientStock",
       "CheckoutLineProblemVariantNotAvailable"
     ]
+  },
+  "CheckoutProblemDeliveryMethodInvalid": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Indicates that the selected delivery method is invalid.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "delivery": {
+        "type": "Delivery!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutProblemDeliveryMethodStale": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Indicates that the delivery methods are stale.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "delivery": {
+        "type": "Delivery!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
   },
   "CheckoutRemovePromoCode": {
     "type": "object",
@@ -17258,6 +17299,29 @@
         "description": null,
         "deprecated": null,
         "message": "Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "Delivery": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Represents a delivery option for the checkout.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "id": {
+        "type": "ID!",
+        "description": "The ID of the delivery.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "shippingMethod": {
+        "type": "ShippingMethod",
+        "description": "Shipping method represented by the delivery.",
+        "deprecated": null,
+        "message": null,
         "arguments": {}
       }
     }
