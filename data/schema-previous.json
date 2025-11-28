@@ -2625,25 +2625,11 @@
         "message": null,
         "arguments": {}
       },
-      "mount": {
-        "type": "AppExtensionMountEnum!",
-        "description": "Place where given extension will be mounted.",
-        "deprecated": null,
-        "message": "Use `mountName` instead.",
-        "arguments": {}
-      },
       "mountName": {
         "type": "String!",
         "description": "Name of the extension mount point in the dashboard. Replaces `mount`\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
-      },
-      "options": {
-        "type": "AppExtensionPossibleOptions",
-        "description": "App extension options.\n\nAdded in Saleor 3.22.",
-        "deprecated": null,
-        "message": "Use `settings` field directly.",
         "arguments": {}
       },
       "permissions": {
@@ -2658,13 +2644,6 @@
         "description": "App extension settings. Replaces options field.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
-      },
-      "target": {
-        "type": "AppExtensionTargetEnum!",
-        "description": "Type of way how app extension will be opened.",
-        "deprecated": null,
-        "message": "Use `targetName` instead.",
         "arguments": {}
       },
       "targetName": {
@@ -2742,23 +2721,9 @@
     "deprecated": null,
     "message": null,
     "fields": {
-      "mount": {
-        "type": "[AppExtensionMountEnum!]",
-        "description": "DEPRECATED: Use `mountName` instead.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
       "mountName": {
         "type": "[String!]",
         "description": "Plain-text mount name (case insensitive)\n\nAdded in Saleor 3.22.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "target": {
-        "type": "AppExtensionTargetEnum",
-        "description": "DEPRECATED: Use `targetName` instead.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -2769,334 +2734,6 @@
         "deprecated": null,
         "message": null,
         "default": null
-      }
-    }
-  },
-  "AppExtensionMountEnum": {
-    "type": "enum",
-    "description": "All places where app extension can be mounted.",
-    "deprecated": null,
-    "message": null,
-    "values": {
-      "CATEGORY_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "CATEGORY_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "CATEGORY_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "COLLECTION_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "COLLECTION_DETAILS_WIDGETS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "COLLECTION_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "COLLECTION_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "CUSTOMER_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "CUSTOMER_DETAILS_WIDGETS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "CUSTOMER_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "CUSTOMER_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "DISCOUNT_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "DISCOUNT_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "DISCOUNT_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "DRAFT_ORDER_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "DRAFT_ORDER_DETAILS_WIDGETS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "DRAFT_ORDER_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "DRAFT_ORDER_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "GIFT_CARD_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "GIFT_CARD_DETAILS_WIDGETS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "GIFT_CARD_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "GIFT_CARD_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "MENU_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "MENU_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "MENU_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "NAVIGATION_CATALOG": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "NAVIGATION_CUSTOMERS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "NAVIGATION_DISCOUNTS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "NAVIGATION_ORDERS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "NAVIGATION_PAGES": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "NAVIGATION_TRANSLATIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "ORDER_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "ORDER_DETAILS_WIDGETS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "ORDER_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "ORDER_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PAGE_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PAGE_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PAGE_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PAGE_TYPE_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PAGE_TYPE_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PAGE_TYPE_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PRODUCT_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PRODUCT_DETAILS_WIDGETS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PRODUCT_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "PRODUCT_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "TRANSLATIONS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "VOUCHER_DETAILS_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "VOUCHER_DETAILS_WIDGETS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "VOUCHER_OVERVIEW_CREATE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "VOUCHER_OVERVIEW_MORE_ACTIONS": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      }
-    }
-  },
-  "AppExtensionOptionsNewTab": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Represents the options for an app extension.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "newTabTarget": {
-        "type": "NewTabTargetOptions",
-        "description": "Options controlling behavior of the NEW_TAB extension target",
-        "deprecated": null,
-        "message": "Use `settings` field directly.",
-        "arguments": {}
-      }
-    }
-  },
-  "AppExtensionOptionsWidget": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Represents the options for an app extension.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "widgetTarget": {
-        "type": "WidgetTargetOptions",
-        "description": "Options for displaying a Widget",
-        "deprecated": null,
-        "message": "Use `settings` field directly.",
-        "arguments": {}
-      }
-    }
-  },
-  "AppExtensionPossibleOptions": {
-    "type": "union",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "types": [
-      "AppExtensionOptionsWidget",
-      "AppExtensionOptionsNewTab"
-    ]
-  },
-  "AppExtensionTargetEnum": {
-    "type": "enum",
-    "description": "All available ways of opening an app extension.\n\n    POPUP - app's extension will be mounted as a popup window\n    APP_PAGE - redirect to app's page",
-    "deprecated": null,
-    "message": null,
-    "values": {
-      "APP_PAGE": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "NEW_TAB": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "POPUP": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "WIDGET": {
-        "description": null,
-        "deprecated": null,
-        "message": null
       }
     }
   },
@@ -3429,13 +3066,6 @@
         "message": null,
         "arguments": {}
       },
-      "mount": {
-        "type": "AppExtensionMountEnum!",
-        "description": "Place where given extension will be mounted.",
-        "deprecated": null,
-        "message": "Use `mountName` instead.",
-        "arguments": {}
-      },
       "mountName": {
         "type": "String!",
         "description": "Name of the extension mount point in the dashboard. Replaces `mount`\n\nAdded in Saleor 3.22.",
@@ -3455,13 +3085,6 @@
         "description": "App extension settings. Replaces options field.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
-      },
-      "target": {
-        "type": "AppExtensionTargetEnum!",
-        "description": "Type of way how app extension will be opened.",
-        "deprecated": null,
-        "message": "Use `targetName` instead.",
         "arguments": {}
       },
       "targetName": {
@@ -23196,24 +22819,6 @@
     "deprecated": null,
     "message": null
   },
-  "HttpMethod": {
-    "type": "enum",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "values": {
-      "GET": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "POST": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      }
-    }
-  },
   "IconThumbnailFormatEnum": {
     "type": "enum",
     "description": "Thumbnail formats for icon images.",
@@ -37424,22 +37029,6 @@
         "description": "Secondary storefront navigation.",
         "deprecated": null,
         "message": null
-      }
-    }
-  },
-  "NewTabTargetOptions": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Represents the NEW_TAB target options for an app extension.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "method": {
-        "type": "HttpMethod!",
-        "description": "HTTP method for New Tab target (GET or POST)",
-        "deprecated": null,
-        "message": "Use `settings` field directly.",
-        "arguments": {}
       }
     }
   },
@@ -54966,7 +54555,7 @@
       },
       "priorPrice": {
         "type": "Money",
-        "description": "Prior price of the variant used for discount calculations.\n\nAdded in Saleor 3.21.",
+        "description": "Previous price of the variant in channel. Useful for providing promotion information required by customer protection laws such as EU Omnibus directive.\n\n Warning: This field is not updated automatically. Use Channel Listings mutation to update it manually.\n\nAdded in Saleor 3.21.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -79798,22 +79387,6 @@
         "description": null,
         "deprecated": null,
         "message": null
-      }
-    }
-  },
-  "WidgetTargetOptions": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Represents the WIDGET target options for an app extension.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "method": {
-        "type": "HttpMethod!",
-        "description": "HTTP method for Widget target (GET or POST)",
-        "deprecated": null,
-        "message": "Use `settings` field directly.",
-        "arguments": {}
       }
     }
   },
