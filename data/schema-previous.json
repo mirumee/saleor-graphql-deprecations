@@ -2627,7 +2627,7 @@
       },
       "mountName": {
         "type": "String!",
-        "description": "Name of the extension mount point in the dashboard. Replaces `mount`\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension mount point in the dashboard. Replaces `mount`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -2648,7 +2648,7 @@
       },
       "targetName": {
         "type": "String!",
-        "description": "Name of the extension target in the dashboard. Replaces `target`\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension target in the dashboard. Replaces `target`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -3068,7 +3068,7 @@
       },
       "mountName": {
         "type": "String!",
-        "description": "Name of the extension mount point in the dashboard. Replaces `mount`\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension mount point in the dashboard. Replaces `mount`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -3089,7 +3089,7 @@
       },
       "targetName": {
         "type": "String!",
-        "description": "Name of the extension target in the dashboard. Replaces `target`\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension target in the dashboard. Replaces `target`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -49325,7 +49325,7 @@
         "message": "Use the `mediaById` field instead.",
         "arguments": {
           "id": {
-            "type": "ID",
+            "type": "ID!",
             "description": "ID of a product image.",
             "deprecated": null,
             "message": null,
@@ -49384,7 +49384,7 @@
         "message": null,
         "arguments": {
           "id": {
-            "type": "ID",
+            "type": "ID!",
             "description": "ID of a product media.",
             "deprecated": null,
             "message": null,
