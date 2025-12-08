@@ -2627,7 +2627,7 @@
       },
       "mountName": {
         "type": "String!",
-        "description": "Name of the extension mount point in the dashboard. Replaces `mount`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension mount point in the dashboard. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -2641,14 +2641,14 @@
       },
       "settings": {
         "type": "JSON!",
-        "description": "App extension settings. Replaces options field.\n\nAdded in Saleor 3.22.",
+        "description": "App extension settings.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "targetName": {
         "type": "String!",
-        "description": "Name of the extension target in the dashboard. Replaces `target`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension target in the dashboard. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -3068,7 +3068,7 @@
       },
       "mountName": {
         "type": "String!",
-        "description": "Name of the extension mount point in the dashboard. Replaces `mount`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension mount point in the dashboard. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -3082,14 +3082,14 @@
       },
       "settings": {
         "type": "JSON!",
-        "description": "App extension settings. Replaces options field.\n\nAdded in Saleor 3.22.",
+        "description": "App extension settings.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
       },
       "targetName": {
         "type": "String!",
-        "description": "Name of the extension target in the dashboard. Replaces `target`. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
+        "description": "Name of the extension target in the dashboard. Value returned in UPPERCASE.\n\nAdded in Saleor 3.22.",
         "deprecated": null,
         "message": null,
         "arguments": {}
