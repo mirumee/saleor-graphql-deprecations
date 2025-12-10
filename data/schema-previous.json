@@ -12447,6 +12447,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "allowLegacyGiftCardUse": {
+        "type": "Boolean!",
+        "description": "Default to `true`. Determines whether gift cards can be attached to a Checkout via `addPromoCode` mutation. Usage of this mutation with gift cards is deprecated.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "automaticCompletionCutOffDate": {
         "type": "DateTime",
         "description": "The date time defines the earliest checkout creation date on which fully paid checkouts can begin to be automatically completed. \n\nAdded in Saleor 3.22.",
@@ -12483,6 +12490,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "allowLegacyGiftCardUse": {
+        "type": "Boolean",
+        "description": "Default to `true`. Determines whether gift cards can be attached to a Checkout via `addPromoCode` mutation. Usage of this mutation with gift cards is deprecated.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "automaticCompletion": {
         "type": "CheckoutAutoCompleteInput",
         "description": "Settings for automatic completion of fully paid checkouts.\n\nAdded in Saleor 3.22.",

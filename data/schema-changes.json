@@ -1,69 +1,12 @@
 [
   {
-    "diff": "type_deleted",
-    "type": "AppExtensionMountEnum"
+    "diff": "field_new",
+    "type": "CheckoutSettings",
+    "field": "allowLegacyGiftCardUse"
   },
   {
-    "diff": "type_deleted",
-    "type": "AppExtensionOptionsNewTab"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "AppExtensionOptionsWidget"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "AppExtensionPossibleOptions"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "AppExtensionTargetEnum"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "HttpMethod"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "NewTabTargetOptions"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "WidgetTargetOptions"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AppExtension",
-    "field": "mount"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AppExtension",
-    "field": "options"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AppExtension",
-    "field": "target"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AppExtensionFilterInput",
-    "field": "mount"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AppExtensionFilterInput",
-    "field": "target"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AppManifestExtension",
-    "field": "mount"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AppManifestExtension",
-    "field": "target"
+    "diff": "field_new",
+    "type": "CheckoutSettingsInput",
+    "field": "allowLegacyGiftCardUse"
   }
 ]
