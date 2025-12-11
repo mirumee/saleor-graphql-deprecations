@@ -1,12 +1,12 @@
 [
   {
     "diff": "field_new",
-    "type": "CheckoutSettings",
-    "field": "allowLegacyGiftCardUse"
+    "type": "Shop",
+    "field": "useLegacyUpdateWebhookEmission"
   },
   {
     "diff": "field_new",
-    "type": "CheckoutSettingsInput",
-    "field": "allowLegacyGiftCardUse"
+    "type": "ShopSettingsInput",
+    "field": "useLegacyUpdateWebhookEmission"
   }
 ]
