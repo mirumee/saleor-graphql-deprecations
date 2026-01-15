@@ -4621,7 +4621,7 @@
         }
       },
       "name": {
-        "type": "String",
+        "type": "String!",
         "description": "Name of an attribute displayed in the interface.",
         "deprecated": null,
         "message": null,
@@ -4752,7 +4752,7 @@
         }
       },
       "slug": {
-        "type": "String",
+        "type": "String!",
         "description": "Internal representation of an attribute name.",
         "deprecated": null,
         "message": null,
@@ -4781,7 +4781,7 @@
         }
       },
       "type": {
-        "type": "AttributeTypeEnum",
+        "type": "AttributeTypeEnum!",
         "description": "The attribute type.",
         "deprecated": null,
         "message": null,
