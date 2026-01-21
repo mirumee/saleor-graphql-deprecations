@@ -51126,6 +51126,11 @@
         "deprecated": null,
         "message": null
       },
+      "INVALID_FILE_TYPE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "INVALID_PRICE": {
         "description": null,
         "deprecated": null,
@@ -51177,6 +51182,11 @@
         "message": null
       },
       "UNSUPPORTED_MEDIA_PROVIDER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNSUPPORTED_MIME_TYPE": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -72420,6 +72430,16 @@
     "message": null,
     "values": {
       "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID_FILE_TYPE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNSUPPORTED_MIME_TYPE": {
         "description": null,
         "deprecated": null,
         "message": null

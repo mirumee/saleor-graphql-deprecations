@@ -1,12 +1,22 @@
 [
   {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "useLegacyUpdateWebhookEmission"
+    "diff": "enum_value_new",
+    "enum": "ProductErrorCode",
+    "value": "INVALID_FILE_TYPE"
   },
   {
-    "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "useLegacyUpdateWebhookEmission"
+    "diff": "enum_value_new",
+    "enum": "ProductErrorCode",
+    "value": "UNSUPPORTED_MIME_TYPE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "UploadErrorCode",
+    "value": "INVALID_FILE_TYPE"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "UploadErrorCode",
+    "value": "UNSUPPORTED_MIME_TYPE"
   }
 ]
