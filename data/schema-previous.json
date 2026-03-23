@@ -61944,7 +61944,7 @@
         "arguments": {}
       },
       "refundSettings": {
-        "type": "RefundSettings!",
+        "type": "RefundSettings",
         "description": "Refund settings.",
         "deprecated": null,
         "message": null,
