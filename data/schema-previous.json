@@ -55250,6 +55250,73 @@
       }
     }
   },
+  "ProductVariantDiscountedPriceUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when product variant discounted price is recalculated.\n\nAdded in Saleor 3.22.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "The channel where the price changed.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "newPrice": {
+        "type": "Money!",
+        "description": "The new discounted price.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "previousPrice": {
+        "type": "Money!",
+        "description": "The previous discounted price.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productVariant": {
+        "type": "ProductVariant!",
+        "description": "The product variant the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductVariantFilterInput": {
     "type": "input",
     "description": null,
@@ -68358,6 +68425,21 @@
             "default": null
           }
         }
+      },
+      "productVariantDiscountedPriceUpdated": {
+        "type": "ProductVariantDiscountedPriceUpdated",
+        "description": "Event sent when product variant discounted price is recalculated.\n\nAdded in Saleor 3.22.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       }
     }
   },
@@ -77720,6 +77802,11 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_VARIANT_DISCOUNTED_PRICE_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_VARIANT_METADATA_UPDATED": {
         "description": "A product variant metadata is updated.",
         "deprecated": null,
@@ -78520,6 +78607,11 @@
       },
       "PRODUCT_VARIANT_DELETED": {
         "description": "A product variant is deleted. Warning: this event will not be executed when parent product has been deleted. Check PRODUCT_DELETED.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_DISCOUNTED_PRICE_UPDATED": {
+        "description": null,
         "deprecated": null,
         "message": null
       },
@@ -79395,6 +79487,11 @@
         "message": null
       },
       "PRODUCT_VARIANT_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_DISCOUNTED_PRICE_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null
