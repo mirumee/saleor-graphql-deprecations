@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2026-04-09 14:32:23</p>
+      <p class="m-0">Generated on 2026-04-10 14:20:39</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -2548,6 +2548,17 @@
               
                 <td>CollectionAddProducts</td>
                 <td colspan="2">collectionErrors</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#CollectionErrorCode-CANNOT_MANAGE_PRODUCT_WITHOUT_VARIANT" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>CollectionErrorCode</td>
+                <td colspan="2">CANNOT_MANAGE_PRODUCT_WITHOUT_VARIANT</td>
               
               <td>None</td>
             </tr>
@@ -10330,6 +10341,27 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">type</span> <strong>CollectionAddProducts</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">collectionErrors</strong>: [CollectionError!]!<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="CollectionErrorCode-CANNOT_MANAGE_PRODUCT_WITHOUT_VARIANT" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#CollectionErrorCode-CANNOT_MANAGE_PRODUCT_WITHOUT_VARIANT" class="text-reset">
+                Value <strong class="text-danger">CANNOT_MANAGE_PRODUCT_WITHOUT_VARIANT</strong> of enum <strong class="text-danger">CollectionErrorCode</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>Products without variants can now be assigned to collections. This error will never be returned.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>CollectionErrorCode</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">CANNOT_MANAGE_PRODUCT_WITHOUT_VARIANT</strong><br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
