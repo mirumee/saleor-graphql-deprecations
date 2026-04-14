@@ -701,6 +701,11 @@
         "deprecated": null,
         "message": null
       },
+      "FILE_SIZE_LIMIT_EXCEEDED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
@@ -13977,6 +13982,11 @@
         "message": "Products without variants can now be assigned to collections. This error will never be returned."
       },
       "DUPLICATED_INPUT_ITEM": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "FILE_SIZE_LIMIT_EXCEEDED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -50229,6 +50239,11 @@
         "deprecated": null,
         "message": null
       },
+      "FILE_SIZE_LIMIT_EXCEEDED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "GRAPHQL_ERROR": {
         "description": null,
         "deprecated": null,
@@ -51373,6 +51388,11 @@
         "message": null
       },
       "DUPLICATED_INPUT_ITEM": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "FILE_SIZE_LIMIT_EXCEEDED": {
         "description": null,
         "deprecated": null,
         "message": null

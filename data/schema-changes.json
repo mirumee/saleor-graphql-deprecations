@@ -1,12 +1,22 @@
 [
   {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "useLegacyShippingZoneStockAvailability"
+    "diff": "enum_value_new",
+    "enum": "AccountErrorCode",
+    "value": "FILE_SIZE_LIMIT_EXCEEDED"
   },
   {
-    "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "useLegacyShippingZoneStockAvailability"
+    "diff": "enum_value_new",
+    "enum": "CollectionErrorCode",
+    "value": "FILE_SIZE_LIMIT_EXCEEDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "ProductBulkCreateErrorCode",
+    "value": "FILE_SIZE_LIMIT_EXCEEDED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "ProductErrorCode",
+    "value": "FILE_SIZE_LIMIT_EXCEEDED"
   }
 ]
