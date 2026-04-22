@@ -54206,6 +54206,112 @@
       }
     }
   },
+  "ProductVariantBackInStockForClickAndCollect": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when a product variant becomes available again across click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "The channel the stock availability changed in.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productVariant": {
+        "type": "ProductVariant!",
+        "description": "The product variant the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantBackInStockInChannel": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when a product variant becomes available again across non click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "The channel the stock availability changed in.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productVariant": {
+        "type": "ProductVariant!",
+        "description": "The product variant the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductVariantBulkCreate": {
     "type": "object",
     "interfaces": [],
@@ -55567,6 +55673,112 @@
       "warehouse": {
         "type": "Warehouse",
         "description": "Look up a warehouse.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantOutOfStockForClickAndCollect": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when a product variant becomes out of stock across all click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "The channel the stock availability changed in.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productVariant": {
+        "type": "ProductVariant!",
+        "description": "The product variant the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductVariantOutOfStockInChannel": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when a product variant becomes out of stock across all non click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "channel": {
+        "type": "Channel!",
+        "description": "The channel the stock availability changed in.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productVariant": {
+        "type": "ProductVariant!",
+        "description": "The product variant the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -68460,9 +68672,69 @@
           }
         }
       },
+      "productVariantBackInStockForClickAndCollect": {
+        "type": "ProductVariantBackInStockForClickAndCollect",
+        "description": "Event sent when a product variant becomes available again across click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "productVariantBackInStockInChannel": {
+        "type": "ProductVariantBackInStockInChannel",
+        "description": "Event sent when a product variant becomes available again across non click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "productVariantDiscountedPriceUpdated": {
         "type": "ProductVariantDiscountedPriceUpdated",
         "description": "Event sent when product variant discounted price is recalculated.\n\nAdded in Saleor 3.22.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "productVariantOutOfStockForClickAndCollect": {
+        "type": "ProductVariantOutOfStockForClickAndCollect",
+        "description": "Event sent when a product variant becomes out of stock across all click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "channels": {
+            "type": "[String!]",
+            "description": "List of channel slugs. The event will be sent only if the object belongs to one of the provided channels. If the channel slug list is empty, objects that belong to any channel will be sent. Maximally 500 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "productVariantOutOfStockInChannel": {
+        "type": "ProductVariantOutOfStockInChannel",
+        "description": "Event sent when a product variant becomes out of stock across all non click-and-collect warehouses in a channel.\n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n\nAdded in Saleor 3.23.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -77826,6 +78098,16 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT": {
+        "description": "A product variant becomes available again across click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL": {
+        "description": "A product variant becomes available again across non click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_VARIANT_CREATED": {
         "description": "A new product variant is created.",
         "deprecated": null,
@@ -77848,6 +78130,16 @@
       },
       "PRODUCT_VARIANT_OUT_OF_STOCK": {
         "description": "A product variant is out of stock.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT": {
+        "description": "A product variant becomes out of stock across all click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL": {
+        "description": "A product variant becomes out of stock across all non click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
         "deprecated": null,
         "message": null
       },
@@ -78634,6 +78926,16 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT": {
+        "description": "A product variant becomes available again across click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL": {
+        "description": "A product variant becomes available again across non click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_VARIANT_CREATED": {
         "description": "A new product variant is created.",
         "deprecated": null,
@@ -78656,6 +78958,16 @@
       },
       "PRODUCT_VARIANT_OUT_OF_STOCK": {
         "description": "A product variant is out of stock.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT": {
+        "description": "A product variant becomes out of stock across all click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL": {
+        "description": "A product variant becomes out of stock across all non click-and-collect warehouses in a channel. \n\nNote: Only triggered when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
         "deprecated": null,
         "message": null
       },
@@ -79515,6 +79827,16 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_VARIANT_CREATED": {
         "description": null,
         "deprecated": null,
@@ -79536,6 +79858,16 @@
         "message": null
       },
       "PRODUCT_VARIANT_OUT_OF_STOCK": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL": {
         "description": null,
         "deprecated": null,
         "message": null
