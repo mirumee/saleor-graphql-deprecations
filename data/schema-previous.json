@@ -11718,6 +11718,52 @@
       }
     }
   },
+  "CheckoutDelete": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Deletes a checkout.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CHECKOUTS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[CheckoutDeleteError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CheckoutDeleteError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CheckoutErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "CheckoutDeliveryMethodUpdate": {
     "type": "object",
     "interfaces": [],
@@ -31557,6 +31603,21 @@
           }
         }
       },
+      "checkoutDelete": {
+        "type": "CheckoutDelete",
+        "description": "Deletes a checkout.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CHECKOUTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "The checkout's ID.\n\nAdded in Saleor 3.23.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "checkoutDeliveryMethodUpdate": {
         "type": "CheckoutDeliveryMethodUpdate",
         "description": "Updates the delivery method (shipping method or pick up point) of the checkout. Updates the checkout shipping_address for click and collect delivery for a warehouse address. \n\nTriggers the following webhook events:\n- SHIPPING_LIST_METHODS_FOR_CHECKOUT (sync): Triggered when updating the checkout delivery method with the external one.\n- CHECKOUT_FILTER_SHIPPING_METHODS (sync): Optionally triggered when cached filtered shipping methods are invalid.\n- CHECKOUT_UPDATED (async): A checkout was updated.",
@@ -32352,7 +32413,7 @@
       },
       "deleteWarehouse": {
         "type": "WarehouseDelete",
-        "description": "Deletes selected warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Deletes selected warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- WAREHOUSE_DELETED (async): A warehouse is deleted.\n- PRODUCT_VARIANT_OUT_OF_STOCK (async): A product variant stock is removed together with the deleted warehouse.\n- PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL (async): A product variant is out of stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is out of stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35186,7 +35247,7 @@
       },
       "productVariantStocksCreate": {
         "type": "ProductVariantStocksCreate",
-        "description": "Creates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Creates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_BACK_IN_STOCK (async): A product variant stock is created in a warehouse.\n- PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL (async): A product variant is back in stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is back in stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35208,7 +35269,7 @@
       },
       "productVariantStocksDelete": {
         "type": "ProductVariantStocksDelete",
-        "description": "Deletes stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Deletes stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_OUT_OF_STOCK (async): A product variant stock is deleted from a warehouse.\n- PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL (async): A product variant is out of stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is out of stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -35237,7 +35298,7 @@
       },
       "productVariantStocksUpdate": {
         "type": "ProductVariantStocksUpdate",
-        "description": "Updates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Updates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock is updated.\n- PRODUCT_VARIANT_BACK_IN_STOCK (async): A product variant stock transitioned from no availability to available quantity.\n- PRODUCT_VARIANT_OUT_OF_STOCK (async): A product variant stock transitioned from available quantity to no availability.\n- PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL (async): A product variant is back in stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL (async): A product variant is out of stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is back in stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is out of stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -55997,7 +56058,7 @@
   "ProductVariantStocksCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Creates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_BACK_IN_STOCK (async): A product variant stock is created in a warehouse.\n- PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL (async): A product variant is back in stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is back in stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56027,7 +56088,7 @@
   "ProductVariantStocksDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Deletes stocks from product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_OUT_OF_STOCK (async): A product variant stock is deleted from a warehouse.\n- PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL (async): A product variant is out of stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is out of stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -56057,7 +56118,7 @@
   "ProductVariantStocksUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Updates stocks for product variant. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- PRODUCT_VARIANT_STOCK_UPDATED (async): A product variant stock is updated.\n- PRODUCT_VARIANT_BACK_IN_STOCK (async): A product variant stock transitioned from no availability to available quantity.\n- PRODUCT_VARIANT_OUT_OF_STOCK (async): A product variant stock transitioned from available quantity to no availability.\n- PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL (async): A product variant is back in stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL (async): A product variant is out of stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is back in stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is out of stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -76574,7 +76635,7 @@
   "WarehouseDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes selected warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Deletes selected warehouse. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- WAREHOUSE_DELETED (async): A warehouse is deleted.\n- PRODUCT_VARIANT_OUT_OF_STOCK (async): A product variant stock is removed together with the deleted warehouse.\n- PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL (async): A product variant is out of stock in a channel (non click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.\n- PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT (async): A product variant is out of stock in a channel (click-and-collect warehouses).\n\nNote: Triggered only when the `useLegacyShippingZoneStockAvailability` shop setting is disabled.",
     "deprecated": null,
     "message": null,
     "fields": {

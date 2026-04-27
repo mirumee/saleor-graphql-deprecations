@@ -1,98 +1,15 @@
 [
   {
     "diff": "type_new",
-    "type": "ProductVariantBackInStockForClickAndCollect"
+    "type": "CheckoutDelete"
   },
   {
     "diff": "type_new",
-    "type": "ProductVariantBackInStockInChannel"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantOutOfStockForClickAndCollect"
-  },
-  {
-    "diff": "type_new",
-    "type": "ProductVariantOutOfStockInChannel"
+    "type": "CheckoutDeleteError"
   },
   {
     "diff": "field_new",
-    "type": "Subscription",
-    "field": "productVariantBackInStockForClickAndCollect"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "productVariantBackInStockInChannel"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "productVariantOutOfStockForClickAndCollect"
-  },
-  {
-    "diff": "field_new",
-    "type": "Subscription",
-    "field": "productVariantOutOfStockInChannel"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "PRODUCT_VARIANT_BACK_IN_STOCK_FOR_CLICK_AND_COLLECT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "PRODUCT_VARIANT_BACK_IN_STOCK_IN_CHANNEL"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "PRODUCT_VARIANT_OUT_OF_STOCK_FOR_CLICK_AND_COLLECT"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "PRODUCT_VARIANT_OUT_OF_STOCK_IN_CHANNEL"
+    "type": "Mutation",
+    "field": "checkoutDelete"
   }
 ]
