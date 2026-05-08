@@ -1,15 +1,6 @@
 [
   {
     "diff": "type_new",
-    "type": "CheckoutDelete"
-  },
-  {
-    "diff": "type_new",
-    "type": "CheckoutDeleteError"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "checkoutDelete"
+    "type": "CustomerDeleted"
   }
 ]

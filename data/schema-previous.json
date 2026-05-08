@@ -16662,6 +16662,52 @@
       }
     }
   },
+  "CustomerDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when customer user is deleted.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "user": {
+        "type": "User",
+        "description": "The user the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "CustomerEvent": {
     "type": "object",
     "interfaces": [
