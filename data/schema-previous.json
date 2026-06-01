@@ -30868,7 +30868,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of attribute IDs to delete.",
+            "description": "List of attribute IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -31044,7 +31044,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of attribute value IDs to delete.",
+            "description": "List of attribute value IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -31183,7 +31183,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of category IDs to delete.",
+            "description": "List of category IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32097,7 +32097,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of collection IDs to delete.",
+            "description": "List of collection IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32318,7 +32318,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of user IDs to delete.",
+            "description": "List of user IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32495,7 +32495,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of draft order IDs to delete.",
+            "description": "List of draft order IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32562,7 +32562,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of order lines IDs to delete.",
+            "description": "List of order lines IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -32902,7 +32902,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of gift card IDs to delete.",
+            "description": "List of gift card IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -33125,7 +33125,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of menu IDs to delete.",
+            "description": "List of menu IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -33170,7 +33170,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of menu item IDs to delete.",
+            "description": "List of menu item IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34015,7 +34015,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of page IDs to delete.",
+            "description": "List of page IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34140,7 +34140,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of page type IDs to delete",
+            "description": "List of page type IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34668,7 +34668,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of product IDs to delete.",
+            "description": "List of product IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34764,7 +34764,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of product media IDs to delete.",
+            "description": "List of product media IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -34911,7 +34911,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of product type IDs to delete.",
+            "description": "List of product type IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -35065,14 +35065,14 @@
         "arguments": {
           "ids": {
             "type": "[ID!]",
-            "description": "List of product variant IDs to delete.",
+            "description": "List of product variant IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
           },
           "skus": {
             "type": "[String!]",
-            "description": "List of product variant SKUs to delete.",
+            "description": "List of product variant SKUs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -35444,7 +35444,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of promotion IDs to delete.",
+            "description": "List of promotion IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -35708,7 +35708,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of sale IDs to delete.",
+            "description": "List of sale IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -35943,7 +35943,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of shipping price IDs to delete.",
+            "description": "List of shipping price IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -36083,7 +36083,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of shipping zone IDs to delete.",
+            "description": "List of shipping zone IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -36224,7 +36224,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of user IDs to delete.",
+            "description": "List of user IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -37098,7 +37098,7 @@
         "arguments": {
           "ids": {
             "type": "[ID!]!",
-            "description": "List of voucher IDs to delete.",
+            "description": "List of voucher IDs to delete. The number of items is limited to 100 by default. Exceeding the limit returns an `INVALID` error.",
             "deprecated": null,
             "message": null,
             "default": null
