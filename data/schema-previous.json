@@ -31438,13 +31438,6 @@
             "message": null,
             "default": null
           },
-          "checkoutId": {
-            "type": "ID",
-            "description": "The ID of the checkout.",
-            "deprecated": null,
-            "message": "Use `id` instead.",
-            "default": null
-          },
           "id": {
             "type": "ID",
             "description": "The checkout's ID.",
@@ -31987,13 +31980,6 @@
         "deprecated": null,
         "message": null,
         "arguments": {
-          "checkoutId": {
-            "type": "ID",
-            "description": "The ID of the checkout.",
-            "deprecated": null,
-            "message": "Use `id` instead.",
-            "default": null
-          },
           "id": {
             "type": "ID",
             "description": "The checkout's ID.",
