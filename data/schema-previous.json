@@ -4818,6 +4818,21 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "translation": {
+        "type": "String",
+        "description": "Translation of the name.\n\nAdded in Saleor 3.22.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "languageCode": {
+            "type": "LanguageCodeEnum!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
       }
     }
   },
