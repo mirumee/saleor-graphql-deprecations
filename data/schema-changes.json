@@ -1,7 +1,12 @@
 [
   {
     "diff": "field_new",
-    "type": "AssignedSwatchAttributeValue",
-    "field": "translation"
+    "type": "ProductVariantWhereInput",
+    "field": "stockAvailability"
+  },
+  {
+    "diff": "field_new",
+    "type": "ProductVariantWhereInput",
+    "field": "stocks"
   }
 ]

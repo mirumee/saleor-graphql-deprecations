@@ -56511,6 +56511,20 @@
         "message": null,
         "default": null
       },
+      "stockAvailability": {
+        "type": "StockAvailability",
+        "description": "Filter by variants having a specific stock status in the given channel.\n\nAdded in Saleor 3.24.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "stocks": {
+        "type": "ProductStockFilterInput",
+        "description": "Filter by stock of the variant.\n\nAdded in Saleor 3.24.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "updatedAt": {
         "type": "DateTimeRangeInput",
         "description": "Filter by when was the most recent update.",
