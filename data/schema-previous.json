@@ -20382,6 +20382,20 @@
           }
         }
       },
+      "reason": {
+        "type": "String",
+        "description": "Reason for returning this fulfillment.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reasonReference": {
+        "type": "Page",
+        "description": "Reason Model (Page) reference for this fulfillment.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "shippingRefundedAmount": {
         "type": "Money",
         "description": "Amount of refunded shipping price.",
@@ -20743,6 +20757,20 @@
       "quantity": {
         "type": "Int!",
         "description": "The number of items included in the fulfillment line.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason for returning this fulfillment line.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reasonReference": {
+        "type": "Page",
+        "description": "Reason Model (Page) reference for this fulfillment line.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -35701,6 +35729,28 @@
           }
         }
       },
+      "returnReasonReferenceClear": {
+        "type": "ReturnReasonReferenceTypeClear",
+        "description": "Updates ReturnSettings. The `Page` (Model) Type will be cleared from `reasonReferenceType`. When it's cleared, passing reason reference to return mutations is no longer accepted and will raise error.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "returnSettingsUpdate": {
+        "type": "ReturnSettingsUpdate",
+        "description": "Update return settings across all channels.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "ReturnSettingsUpdateInput!",
+            "description": "Fields required to update return settings.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "saleBulkDelete": {
         "type": "SaleBulkDelete",
         "description": "Deletes sales. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- SALE_DELETED (async): A sale was deleted.",
@@ -41447,6 +41497,11 @@
         "deprecated": null,
         "message": null
       },
+      "NOT_CONFIGURED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_FOUND": {
         "description": null,
         "deprecated": null,
@@ -41562,6 +41617,16 @@
         "deprecated": null,
         "message": null
       },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_CONFIGURED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "NOT_FOUND": {
         "description": null,
         "deprecated": null,
@@ -41597,6 +41662,13 @@
       "reason": {
         "type": "String",
         "description": "Reason of the granted refund for the line.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reasonReference": {
+        "type": "ID",
+        "description": "ID of a `Page` (Model) to reference in reason for the line.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -41694,6 +41766,11 @@
         "message": null
       },
       "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_CONFIGURED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -41798,6 +41875,13 @@
         "deprecated": null,
         "message": null,
         "default": null
+      },
+      "reasonReference": {
+        "type": "ID",
+        "description": "ID of a `Page` (Model) to reference in reason for the line.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -41845,6 +41929,16 @@
     "message": null,
     "values": {
       "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_CONFIGURED": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -41992,6 +42086,13 @@
       "reason": {
         "type": "String",
         "description": "Reason for refunding the line.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "reasonReference": {
+        "type": "Page",
+        "description": "Reason Model (Page) reference for this refund line.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -43200,6 +43301,20 @@
         "message": null,
         "default": null
       },
+      "reason": {
+        "type": "String",
+        "description": "Reason for returning this fulfillment line.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reasonReference": {
+        "type": "ID",
+        "description": "ID of a `Page` (Model) to reference in reason for this fulfillment line.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "replace": {
         "type": "Boolean",
         "description": "Determines, if the line should be added to replace order.",
@@ -43225,6 +43340,20 @@
       "quantity": {
         "type": "Int!",
         "description": "The number of items to be returned.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason for returning this line.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reasonReference": {
+        "type": "ID",
+        "description": "ID of a `Page` (Model) to reference in reason for this line.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -43268,6 +43397,20 @@
       "orderLines": {
         "type": "[OrderReturnLineInput!]",
         "description": "List of unfulfilled lines to return.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reason": {
+        "type": "String",
+        "description": "Reason for returning this order.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "reasonReference": {
+        "type": "ID",
+        "description": "ID of a `Page` (Model) to reference in reason for this return.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -53509,6 +53652,52 @@
       }
     }
   },
+  "ProductTypeCreated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new product type is created.\n\nAdded in Saleor 3.24.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productType": {
+        "type": "ProductType",
+        "description": "The product type the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "ProductTypeDelete": {
     "type": "object",
     "interfaces": [],
@@ -53533,6 +53722,52 @@
       "productType": {
         "type": "ProductType",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductTypeDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when product type is deleted.\n\nAdded in Saleor 3.24.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productType": {
+        "type": "ProductType",
+        "description": "The product type the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -53816,6 +54051,52 @@
       "productType": {
         "type": "ProductType",
         "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ProductTypeUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when product type is updated.\n\nAdded in Saleor 3.24.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "productType": {
+        "type": "ProductType",
+        "description": "The product type the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -61393,6 +61674,13 @@
           }
         }
       },
+      "returnSettings": {
+        "type": "ReturnSettings!",
+        "description": "Returns related settings. Returns `ReturnSettings` configuration, global for the entire shop.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "sale": {
         "type": "Sale",
         "description": "Look up a sale by ID.\n\nRequires one of the following permissions: MANAGE_DISCOUNTS.",
@@ -62515,6 +62803,185 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      }
+    }
+  },
+  "ReturnReasonReferenceTypeClear": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates ReturnSettings. The `Page` (Model) Type will be cleared from `reasonReferenceType`. When it's cleared, passing reason reference to return mutations is no longer accepted and will raise error.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[ReturnReasonReferenceTypeClearError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "returnSettings": {
+        "type": "ReturnSettings",
+        "description": "Return settings.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "returnSettingsErrors": {
+        "type": "[ReturnReasonReferenceTypeClearError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": "Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "ReturnReasonReferenceTypeClearError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "ReturnSettingsErrorCode!",
+        "description": "Failed to clear return reason reference type",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ReturnSettings": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Return related settings from site settings.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "reasonReferenceType": {
+        "type": "PageType",
+        "description": "Model type used for return reasons.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ReturnSettingsErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "ReturnSettingsUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Update return settings across all channels.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[ReturnSettingsUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "returnSettings": {
+        "type": "ReturnSettings",
+        "description": "Return settings.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "returnSettingsErrors": {
+        "type": "[ReturnSettingsUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": "Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "ReturnSettingsUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "ReturnSettingsErrorCode!",
+        "description": "Failed to update Return Settings",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "ReturnSettingsUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "returnReasonReferenceType": {
+        "type": "ID!",
+        "description": "The ID of a model type, that will be used to reference return reasons. All models of this type will be accepted as return reasons. \n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
       }
     }
   },
@@ -78210,6 +78677,21 @@
         "deprecated": null,
         "message": null
       },
+      "PRODUCT_TYPE_CREATED": {
+        "description": "A new product type is created.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_DELETED": {
+        "description": "A product type is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_UPDATED": {
+        "description": "A product type is updated.",
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_UPDATED": {
         "description": "A product is updated.",
         "deprecated": null,
@@ -79035,6 +79517,21 @@
       },
       "PRODUCT_METADATA_UPDATED": {
         "description": "A product metadata is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_CREATED": {
+        "description": "A new product type is created.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_DELETED": {
+        "description": "A product type is deleted.",
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_UPDATED": {
+        "description": "A product type is updated.",
         "deprecated": null,
         "message": null
       },
@@ -79935,6 +80432,21 @@
         "message": null
       },
       "PRODUCT_METADATA_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "PRODUCT_TYPE_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null

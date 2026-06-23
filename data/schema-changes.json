@@ -1,12 +1,197 @@
 [
   {
-    "diff": "field_new",
-    "type": "ProductVariantWhereInput",
-    "field": "stockAvailability"
+    "diff": "type_new",
+    "type": "ProductTypeCreated"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductTypeDeleted"
+  },
+  {
+    "diff": "type_new",
+    "type": "ProductTypeUpdated"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReturnReasonReferenceTypeClear"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReturnReasonReferenceTypeClearError"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReturnSettings"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReturnSettingsErrorCode"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReturnSettingsUpdate"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReturnSettingsUpdateError"
+  },
+  {
+    "diff": "type_new",
+    "type": "ReturnSettingsUpdateInput"
   },
   {
     "diff": "field_new",
-    "type": "ProductVariantWhereInput",
-    "field": "stocks"
+    "type": "Fulfillment",
+    "field": "reason"
+  },
+  {
+    "diff": "field_new",
+    "type": "Fulfillment",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "FulfillmentLine",
+    "field": "reason"
+  },
+  {
+    "diff": "field_new",
+    "type": "FulfillmentLine",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "returnReasonReferenceClear"
+  },
+  {
+    "diff": "field_new",
+    "type": "Mutation",
+    "field": "returnSettingsUpdate"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundCreateLineInput",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantRefundUpdateLineAddInput",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderGrantedRefundLine",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderReturnFulfillmentLineInput",
+    "field": "reason"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderReturnFulfillmentLineInput",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderReturnLineInput",
+    "field": "reason"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderReturnLineInput",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderReturnProductsInput",
+    "field": "reason"
+  },
+  {
+    "diff": "field_new",
+    "type": "OrderReturnProductsInput",
+    "field": "reasonReference"
+  },
+  {
+    "diff": "field_new",
+    "type": "Query",
+    "field": "returnSettings"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundCreateErrorCode",
+    "value": "NOT_CONFIGURED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundCreateLineErrorCode",
+    "value": "INVALID"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundCreateLineErrorCode",
+    "value": "NOT_CONFIGURED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundUpdateErrorCode",
+    "value": "NOT_CONFIGURED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundUpdateLineErrorCode",
+    "value": "INVALID"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "OrderGrantRefundUpdateLineErrorCode",
+    "value": "NOT_CONFIGURED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PRODUCT_TYPE_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PRODUCT_TYPE_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeAsyncEnum",
+    "value": "PRODUCT_TYPE_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PRODUCT_TYPE_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PRODUCT_TYPE_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookEventTypeEnum",
+    "value": "PRODUCT_TYPE_UPDATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PRODUCT_TYPE_CREATED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PRODUCT_TYPE_DELETED"
+  },
+  {
+    "diff": "enum_value_new",
+    "enum": "WebhookSampleEventTypeEnum",
+    "value": "PRODUCT_TYPE_UPDATED"
   }
 ]
