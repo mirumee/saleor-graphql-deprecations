@@ -1921,6 +1921,97 @@
       }
     }
   },
+  "Announcement": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Lists current announcements that the user should see.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "createdAt": {
+        "type": "DateTime!",
+        "description": "The date & time at which this announcement was created.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "extra": {
+        "type": "Metadata!",
+        "description": "Additional information about this announcement.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "importance": {
+        "type": "AnnouncementImportanceEnum!",
+        "description": "Determine the how critical the announcement is. UNSET if no severity level was defined for this announcement. When value is `UNSET`, it should be considered as low importance or informational.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "messageHtml": {
+        "type": "String!",
+        "description": "The announcement's description, may contain HTML formatting.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "title": {
+        "type": "String!",
+        "description": "The announcement's title.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "type": {
+        "type": "String!",
+        "description": "The announcement's type, for example \"CUSTOM\". Used to programatically distinguish between message types thus allowing to render the message differently, and allows to know the expected shape for the `extra` field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "updatedAt": {
+        "type": "DateTime!",
+        "description": "The date & time at which this announcement was last updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "AnnouncementImportanceEnum": {
+    "type": "enum",
+    "description": "Defines a shop-level announcement's level/severity.",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CRITICAL": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "HIGH": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "LOW": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "MODERATE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNSET": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "App": {
     "type": "object",
     "interfaces": [
@@ -66563,6 +66654,13 @@
       "allowLoginWithoutConfirmation": {
         "type": "Boolean",
         "description": "Determines if user can login without confirmation when `enableAccountConfirmation` is enabled.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "announcements": {
+        "type": "[Announcement!]!",
+        "description": "List of announcements for this shop.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER.",
         "deprecated": null,
         "message": null,
         "arguments": {}
