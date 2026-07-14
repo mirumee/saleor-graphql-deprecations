@@ -12,7 +12,7 @@
   <div class="container py-3">
     <div class="border-bottom py-3 mb-3">
       <h1>Saleor Deprecations Report</h1>
-      <p class="m-0">Generated on 2026-07-13 14:55:20</p>
+      <p class="m-0">Generated on 2026-07-14 14:31:01</p>
     </div>
     <div class="py-3 my-3">
       <h2 class="fs-4 mb-3">Summary</h2>
@@ -35,17 +35,6 @@
               
                 <td>Query</td>
                 <td colspan="2">webhookEvents</td>
-              
-              <td>None</td>
-            </tr>
-          
-            <tr>
-              <td>
-                <a href="#Query-orderSettings" class="btn btn-primary btn-sm py-0 px-2">...</a>
-              </td>
-              
-                <td>Query</td>
-                <td colspan="2">orderSettings</td>
               
               <td>None</td>
             </tr>
@@ -238,6 +227,17 @@
           
             <tr>
               <td>
+                <a href="#WebhookEventTypeEnum-OBSERVABILITY" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>WebhookEventTypeEnum</td>
+                <td colspan="2">OBSERVABILITY</td>
+              
+              <td>3.24</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#WebhookEventTypeAsyncEnum-NOTIFY_USER" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -245,6 +245,17 @@
                 <td colspan="2">NOTIFY_USER</td>
               
               <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#WebhookEventTypeAsyncEnum-OBSERVABILITY" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>WebhookEventTypeAsyncEnum</td>
+                <td colspan="2">OBSERVABILITY</td>
+              
+              <td>3.24</td>
             </tr>
           
             <tr>
@@ -267,6 +278,17 @@
                 <td colspan="2">configurationUrl</td>
               
               <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#PermissionEnum-MANAGE_OBSERVABILITY" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>PermissionEnum</td>
+                <td colspan="2">MANAGE_OBSERVABILITY</td>
+              
+              <td>3.24</td>
             </tr>
           
             <tr>
@@ -1268,6 +1290,28 @@
           
             <tr>
               <td>
+                <a href="#WebhookSampleEventTypeEnum-NOTIFY_USER" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>WebhookSampleEventTypeEnum</td>
+                <td colspan="2">NOTIFY_USER</td>
+              
+              <td>None</td>
+            </tr>
+          
+            <tr>
+              <td>
+                <a href="#WebhookSampleEventTypeEnum-OBSERVABILITY" class="btn btn-primary btn-sm py-0 px-2">...</a>
+              </td>
+              
+                <td>WebhookSampleEventTypeEnum</td>
+                <td colspan="2">OBSERVABILITY</td>
+              
+              <td>3.24</td>
+            </tr>
+          
+            <tr>
+              <td>
                 <a href="#MenuItemTranslatableContent-menuItem" class="btn btn-primary btn-sm py-0 px-2">...</a>
               </td>
               
@@ -1494,17 +1538,6 @@
               
                 <td>Mutation</td>
                 <td colspan="2">shopDomainUpdate</td>
-              
-              <td>None</td>
-            </tr>
-          
-            <tr>
-              <td>
-                <a href="#Mutation-orderSettingsUpdate" class="btn btn-primary btn-sm py-0 px-2">...</a>
-              </td>
-              
-                <td>Mutation</td>
-                <td colspan="2">orderSettingsUpdate</td>
               
               <td>None</td>
             </tr>
@@ -2260,17 +2293,6 @@
               
                 <td>ShopAddressUpdate</td>
                 <td colspan="2">shopErrors</td>
-              
-              <td>None</td>
-            </tr>
-          
-            <tr>
-              <td>
-                <a href="#OrderSettingsUpdate-orderSettingsErrors" class="btn btn-primary btn-sm py-0 px-2">...</a>
-              </td>
-              
-                <td>OrderSettingsUpdate</td>
-                <td colspan="2">orderSettingsErrors</td>
               
               <td>None</td>
             </tr>
@@ -5369,27 +5391,6 @@
         </div>
       </div>
     
-      <div id="Query-orderSettings" class="border-bottom py-3 my-3">
-        <div class="row">
-          <div class="col-12 col-md">
-            <h2 class="fs-4 mb-3">
-              <a href="#Query-orderSettings" class="text-reset">
-                Field <strong class="text-danger">orderSettings</strong> of type <strong class="text-danger">Query</strong>
-              </a>
-            </h2>
-            <p>Removed in <strong>Saleor None</strong></p>
-            <p>Use the <strong class="text-danger font-monospace">channel</strong> query to fetch the <strong class="text-danger font-monospace">orderSettings</strong> field instead.</p>
-          </div>
-          <div class="col-12 col-md">
-            <div class="font-monospace"><span class="text-primary">type</span> <strong>Query</strong> {<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-&nbsp;&nbsp;<strong class="text-danger">orderSettings</strong>: OrderSettings<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-}</div>
-          </div>
-        </div>
-      </div>
-    
       <div id="Query-products-filter" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -5776,6 +5777,27 @@
         </div>
       </div>
     
+      <div id="WebhookEventTypeEnum-OBSERVABILITY" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#WebhookEventTypeEnum-OBSERVABILITY" class="text-reset">
+                Value <strong class="text-danger">OBSERVABILITY</strong> of enum <strong class="text-danger">WebhookEventTypeEnum</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 3.24</strong></p>
+            <p>The observability feature is no longer supported. This event will be removed in Saleor 3.24.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookEventTypeEnum</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">OBSERVABILITY</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="WebhookEventTypeAsyncEnum-NOTIFY_USER" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -5791,6 +5813,27 @@
             <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookEventTypeAsyncEnum</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">NOTIFY_USER</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="WebhookEventTypeAsyncEnum-OBSERVABILITY" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#WebhookEventTypeAsyncEnum-OBSERVABILITY" class="text-reset">
+                Value <strong class="text-danger">OBSERVABILITY</strong> of enum <strong class="text-danger">WebhookEventTypeAsyncEnum</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 3.24</strong></p>
+            <p>The observability feature is no longer supported. This event will be removed in Saleor 3.24.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookEventTypeAsyncEnum</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">OBSERVABILITY</strong><br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -5833,6 +5876,27 @@
             <div class="font-monospace"><span class="text-primary">type</span> <strong>App</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">configurationUrl</strong>: String<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="PermissionEnum-MANAGE_OBSERVABILITY" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#PermissionEnum-MANAGE_OBSERVABILITY" class="text-reset">
+                Value <strong class="text-danger">MANAGE_OBSERVABILITY</strong> of enum <strong class="text-danger">PermissionEnum</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 3.24</strong></p>
+            <p>The observability feature is no longer supported. This permission will be removed in Saleor 3.24.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>PermissionEnum</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">MANAGE_OBSERVABILITY</strong><br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -7777,6 +7841,48 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
         </div>
       </div>
     
+      <div id="WebhookSampleEventTypeEnum-NOTIFY_USER" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#WebhookSampleEventTypeEnum-NOTIFY_USER" class="text-reset">
+                Value <strong class="text-danger">NOTIFY_USER</strong> of enum <strong class="text-danger">WebhookSampleEventTypeEnum</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor None</strong></p>
+            <p>See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/upgrade-guides/core/3-16-to-3-17#migrating-from-notify_user</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookSampleEventTypeEnum</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">NOTIFY_USER</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="WebhookSampleEventTypeEnum-OBSERVABILITY" class="border-bottom py-3 my-3">
+        <div class="row">
+          <div class="col-12 col-md">
+            <h2 class="fs-4 mb-3">
+              <a href="#WebhookSampleEventTypeEnum-OBSERVABILITY" class="text-reset">
+                Value <strong class="text-danger">OBSERVABILITY</strong> of enum <strong class="text-danger">WebhookSampleEventTypeEnum</strong>
+              </a>
+            </h2>
+            <p>Removed in <strong>Saleor 3.24</strong></p>
+            <p>The observability feature is no longer supported. This event will be removed in Saleor 3.24.</p>
+          </div>
+          <div class="col-12 col-md">
+            <div class="font-monospace"><span class="text-primary">enum</span> <strong>WebhookSampleEventTypeEnum</strong> {<br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+&nbsp;&nbsp;<strong class="text-danger">OBSERVABILITY</strong><br />
+&nbsp;&nbsp;<span class="text-secondary">...</span><br />
+}</div>
+          </div>
+        </div>
+      </div>
+    
       <div id="MenuItemTranslatableContent-menuItem" class="border-bottom py-3 my-3">
         <div class="row">
           <div class="col-12 col-md">
@@ -8223,27 +8329,6 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">type</span> <strong>Mutation</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">shopDomainUpdate</strong>( <span class="text-secondary">...</span> ): ShopDomainUpdate<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-}</div>
-          </div>
-        </div>
-      </div>
-    
-      <div id="Mutation-orderSettingsUpdate" class="border-bottom py-3 my-3">
-        <div class="row">
-          <div class="col-12 col-md">
-            <h2 class="fs-4 mb-3">
-              <a href="#Mutation-orderSettingsUpdate" class="text-reset">
-                Field <strong class="text-danger">orderSettingsUpdate</strong> of type <strong class="text-danger">Mutation</strong>
-              </a>
-            </h2>
-            <p>Removed in <strong>Saleor None</strong></p>
-            <p>Use <strong class="text-danger font-monospace">channelUpdate</strong> mutation instead.</p>
-          </div>
-          <div class="col-12 col-md">
-            <div class="font-monospace"><span class="text-primary">type</span> <strong>Mutation</strong> {<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-&nbsp;&nbsp;<strong class="text-danger">orderSettingsUpdate</strong>( <span class="text-secondary">...</span> ): OrderSettingsUpdate<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>
@@ -9783,27 +9868,6 @@ The <strong class="text-danger font-monospace">EU</strong> value is DEPRECATED a
             <div class="font-monospace"><span class="text-primary">type</span> <strong>ShopAddressUpdate</strong> {<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 &nbsp;&nbsp;<strong class="text-danger">shopErrors</strong>: [ShopError!]!<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-}</div>
-          </div>
-        </div>
-      </div>
-    
-      <div id="OrderSettingsUpdate-orderSettingsErrors" class="border-bottom py-3 my-3">
-        <div class="row">
-          <div class="col-12 col-md">
-            <h2 class="fs-4 mb-3">
-              <a href="#OrderSettingsUpdate-orderSettingsErrors" class="text-reset">
-                Field <strong class="text-danger">orderSettingsErrors</strong> of type <strong class="text-danger">OrderSettingsUpdate</strong>
-              </a>
-            </h2>
-            <p>Removed in <strong>Saleor None</strong></p>
-            <p>Use <strong class="text-danger font-monospace">errors</strong> field instead.</p>
-          </div>
-          <div class="col-12 col-md">
-            <div class="font-monospace"><span class="text-primary">type</span> <strong>OrderSettingsUpdate</strong> {<br />
-&nbsp;&nbsp;<span class="text-secondary">...</span><br />
-&nbsp;&nbsp;<strong class="text-danger">orderSettingsErrors</strong>: [OrderSettingsError!]!<br />
 &nbsp;&nbsp;<span class="text-secondary">...</span><br />
 }</div>
           </div>

@@ -2627,6 +2627,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "DUPLICATED_EXTENSION_IDENTIFIER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "FORBIDDEN": {
         "description": null,
         "deprecated": null,
@@ -2730,6 +2735,13 @@
       "id": {
         "type": "ID!",
         "description": "The ID of the app extension.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "identifier": {
+        "type": "String",
+        "description": "Extension identifier, unique per app. Null when the app does not declare one.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -3175,6 +3187,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "identifier": {
+        "type": "String",
+        "description": "Extension identifier, unique per app. Null when the app does not declare one.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "label": {
         "type": "String!",
         "description": "Label of the extension to show in the dashboard.",
@@ -34002,21 +34021,6 @@
           }
         }
       },
-      "orderSettingsUpdate": {
-        "type": "OrderSettingsUpdate",
-        "description": "Update shop order settings across all channels. Returns `orderSettings` for the first `channel` in alphabetical order.  \n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": "Use `channelUpdate` mutation instead.",
-        "arguments": {
-          "input": {
-            "type": "OrderSettingsUpdateInput!",
-            "description": "Fields required to update shop order settings.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          }
-        }
-      },
       "orderUpdate": {
         "type": "OrderUpdate",
         "description": "Updates an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
@@ -43587,49 +43591,6 @@
       }
     }
   },
-  "OrderSettingsError": {
-    "type": "object",
-    "interfaces": [],
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "code": {
-        "type": "OrderSettingsErrorCode!",
-        "description": "The error code.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "field": {
-        "type": "String",
-        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "message": {
-        "type": "String",
-        "description": "The error message.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      }
-    }
-  },
-  "OrderSettingsErrorCode": {
-    "type": "enum",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "values": {
-      "INVALID": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      }
-    }
-  },
   "OrderSettingsInput": {
     "type": "input",
     "description": null,
@@ -43695,58 +43656,6 @@
       "useLegacyLineDiscountPropagation": {
         "type": "Boolean",
         "description": "This flag only affects orders created from checkout and applies specifically to vouchers of the types: `SPECIFIC_PRODUCT` and `ENTIRE_ORDER` with `applyOncePerOrder` enabled.\n- When legacy propagation is enabled, discounts from these vouchers are represented as `OrderDiscount` objects, attached to the order and returned in the `Order.discounts` field. Additionally, percentage-based vouchers are converted to fixed-value discounts.\n- When legacy propagation is disabled, discounts are represented as `OrderLineDiscount` objects, attached to individual lines and returned in the `OrderLine.discounts` field. In this case, percentage-based vouchers retain their original type.\nIn future releases, `OrderLineDiscount` will become the default behavior, and this flag will be deprecated and removed.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      }
-    }
-  },
-  "OrderSettingsUpdate": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Update shop order settings across all channels. Returns `orderSettings` for the first `channel` in alphabetical order.  \n\nRequires one of the following permissions: MANAGE_ORDERS.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "errors": {
-        "type": "[OrderSettingsError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "orderSettings": {
-        "type": "OrderSettings",
-        "description": "Order settings.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "orderSettingsErrors": {
-        "type": "[OrderSettingsError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": "Use `errors` field instead.",
-        "arguments": {}
-      }
-    }
-  },
-  "OrderSettingsUpdateInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "automaticallyConfirmAllNewOrders": {
-        "type": "Boolean",
-        "description": "When disabled, all new orders from checkout will be marked as unconfirmed. When enabled orders from checkout will become unfulfilled immediately. By default set to True",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "automaticallyFulfillNonShippableGiftCard": {
-        "type": "Boolean",
-        "description": "When enabled, all non-shippable gift card orders will be fulfilled automatically. By default set to True.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -48698,8 +48607,8 @@
       },
       "MANAGE_OBSERVABILITY": {
         "description": null,
-        "deprecated": null,
-        "message": null
+        "deprecated": "3.24",
+        "message": "The observability feature is no longer supported. This permission will be removed in Saleor 3.24."
       },
       "MANAGE_ORDERS": {
         "description": null,
@@ -60890,13 +60799,6 @@
           }
         }
       },
-      "orderSettings": {
-        "type": "OrderSettings",
-        "description": "Order related settings from site settings. Returns `orderSettings` for the first `channel` in alphabetical order.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": "Use the `channel` query to fetch the `orderSettings` field instead.",
-        "arguments": {}
-      },
       "orders": {
         "type": "OrderCountableConnection",
         "description": "List of orders. The query will not initiate any external requests, including filtering available shipping methods, or performing external tax calculations.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
@@ -67388,6 +67290,13 @@
       "metadata": {
         "type": "[MetadataInput!]",
         "description": "Shop public metadata. Can be read by any API client authorized to read the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Shop's name.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -78632,8 +78541,8 @@
       },
       "OBSERVABILITY": {
         "description": "An observability event is created.",
-        "deprecated": null,
-        "message": null
+        "deprecated": "3.24",
+        "message": "The observability feature is no longer supported. This event will be removed in Saleor 3.24."
       },
       "ORDER_BULK_CREATED": {
         "description": "Orders are imported.",
@@ -79410,8 +79319,8 @@
       },
       "OBSERVABILITY": {
         "description": "An observability event is created.",
-        "deprecated": null,
-        "message": null
+        "deprecated": "3.24",
+        "message": "The observability feature is no longer supported. This event will be removed in Saleor 3.24."
       },
       "ORDER_BULK_CREATED": {
         "description": "Orders are imported.",
@@ -80387,12 +80296,12 @@
       "NOTIFY_USER": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "See the docs for more details about migrating from NOTIFY_USER to other events: https://docs.saleor.io/upgrade-guides/core/3-16-to-3-17#migrating-from-notify_user"
       },
       "OBSERVABILITY": {
         "description": null,
-        "deprecated": null,
-        "message": null
+        "deprecated": "3.24",
+        "message": "The observability feature is no longer supported. This event will be removed in Saleor 3.24."
       },
       "ORDER_BULK_CREATED": {
         "description": null,
