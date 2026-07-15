@@ -11657,8 +11657,8 @@
         "default": null
       },
       "lines": {
-        "type": "[CheckoutLineInput!]!",
-        "description": "A list of checkout lines, each containing information about an item in the checkout.",
+        "type": "[CheckoutLineInput!]",
+        "description": "A list of checkout lines, each containing information about an item in the checkout. When omitted, a checkout with no lines is created.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -36297,21 +36297,6 @@
           "input": {
             "type": "AddressInput",
             "description": "Fields required to update shop address.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          }
-        }
-      },
-      "shopDomainUpdate": {
-        "type": "ShopDomainUpdate",
-        "description": "Updates site domain of the shop. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
-        "deprecated": null,
-        "message": "Use `PUBLIC_URL` environment variable instead.",
-        "arguments": {
-          "input": {
-            "type": "SiteDomainInput",
-            "description": "Fields required to update site.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -66719,7 +66704,7 @@
       },
       "domain": {
         "type": "Domain!",
-        "description": "Shop's domain data.",
+        "description": "Shop's domain data. Can be customized using the `PUBLIC_URL` environment variable if self-hosted. If a custom domain is needed in your Saleor Cloud environment, then contact Saleor support.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -66973,36 +66958,6 @@
     "type": "object",
     "interfaces": [],
     "description": "Update the shop's address. If the `null` value is passed, the currently selected address will be deleted. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "errors": {
-        "type": "[ShopError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "shop": {
-        "type": "Shop",
-        "description": "Updated shop.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "shopErrors": {
-        "type": "[ShopError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": "Use `errors` field instead.",
-        "arguments": {}
-      }
-    }
-  },
-  "ShopDomainUpdate": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Updates site domain of the shop. \n\nRequires one of the following permissions: MANAGE_SETTINGS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -67477,28 +67432,6 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
-      }
-    }
-  },
-  "SiteDomainInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "domain": {
-        "type": "String",
-        "description": "Domain name for shop.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "name": {
-        "type": "String",
-        "description": "Shop site name.",
-        "deprecated": null,
-        "message": null,
-        "default": null
       }
     }
   },

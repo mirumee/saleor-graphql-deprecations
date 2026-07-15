@@ -1,72 +1,15 @@
 [
   {
     "diff": "type_deleted",
-    "type": "OrderSettingsError"
+    "type": "ShopDomainUpdate"
   },
   {
     "diff": "type_deleted",
-    "type": "OrderSettingsErrorCode"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "OrderSettingsUpdate"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "OrderSettingsUpdateInput"
-  },
-  {
-    "diff": "field_new",
-    "type": "AppExtension",
-    "field": "identifier"
-  },
-  {
-    "diff": "field_new",
-    "type": "AppManifestExtension",
-    "field": "identifier"
-  },
-  {
-    "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "name"
+    "type": "SiteDomainInput"
   },
   {
     "diff": "field_deleted",
     "type": "Mutation",
-    "field": "orderSettingsUpdate"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "Query",
-    "field": "orderSettings"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppErrorCode",
-    "value": "DUPLICATED_EXTENSION_IDENTIFIER"
-  },
-  {
-    "diff": "enum_value_deprecated",
-    "enum": "PermissionEnum",
-    "value": "MANAGE_OBSERVABILITY",
-    "version": "3.24"
-  },
-  {
-    "diff": "enum_value_deprecated",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "OBSERVABILITY",
-    "version": "3.24"
-  },
-  {
-    "diff": "enum_value_deprecated",
-    "enum": "WebhookEventTypeEnum",
-    "value": "OBSERVABILITY",
-    "version": "3.24"
-  },
-  {
-    "diff": "enum_value_deprecated",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "OBSERVABILITY",
-    "version": "3.24"
+    "field": "shopDomainUpdate"
   }
 ]
