@@ -8557,7 +8557,7 @@
   },
   "CardInput": {
     "type": "input",
-    "description": null,
+    "description": "Card data used to check a payment balance.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -10798,7 +10798,7 @@
         "type": "[PaymentGateway!]!",
         "description": "List of available payment gateways.\n\nTriggers the following webhook events:\n- PAYMENT_LIST_GATEWAYS (sync): Fetch payment gateways available for checkout.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "availableShippingMethods": {
@@ -10963,13 +10963,6 @@
             "default": null
           }
         }
-      },
-      "note": {
-        "type": "String!",
-        "description": "The note for the checkout.",
-        "deprecated": null,
-        "message": "Use `customerNote` instead.",
-        "arguments": {}
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
@@ -13194,7 +13187,7 @@
       "PAYMENT": {
         "description": "Sort checkouts by payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "RANK": {
         "description": "Sort checkouts by rank. Note: This option is available only with the `search` filter.",
@@ -21280,6 +21273,20 @@
         "message": null,
         "arguments": {}
       },
+      "assignedTo": {
+        "type": "User",
+        "description": "The customer the gift card usage is restricted to.\n\nRequires one of the following permissions: MANAGE_USERS, OWNER. \n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "assignedToEmail": {
+        "type": "String",
+        "description": "Email of the customer the gift card is restricted to.\n\nRequires one of the following permissions: MANAGE_GIFT_CARD, OWNER. \n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "boughtInChannel": {
         "type": "String",
         "description": "Slug of the channel where the gift card was bought.",
@@ -21586,6 +21593,66 @@
       }
     }
   },
+  "GiftCardAssignUser": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Restrict a gift card so only the given customer can use it. \n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[GiftCardError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftCard": {
+        "type": "GiftCard",
+        "description": "The assigned gift card.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftCardErrors": {
+        "type": "[GiftCardError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": "Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
+  "GiftCardBalanceAdjust": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Adjust a gift card's balance by a delta. \n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[GiftCardError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftCard": {
+        "type": "GiftCard",
+        "description": "The adjusted gift card.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftCardErrors": {
+        "type": "[GiftCardError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": "Use `errors` field instead.",
+        "arguments": {}
+      }
+    }
+  },
   "GiftCardBulkActivate": {
     "type": "object",
     "interfaces": [],
@@ -21820,6 +21887,13 @@
       "addTags": {
         "type": "[String!]",
         "description": "The gift card tags to add.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "assignedTo": {
+        "type": "ID",
+        "description": "ID of the customer the gift card is restricted to. \n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -22103,6 +22177,11 @@
         "deprecated": null,
         "message": null
       },
+      "CANNOT_ASSIGN": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "DUPLICATED_INPUT_ITEM": {
         "description": null,
         "deprecated": null,
@@ -22152,6 +22231,13 @@
       "app": {
         "type": "App",
         "description": "App that performed the action. Requires one of the following permissions: MANAGE_APPS, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "assignedTo": {
+        "type": "GiftCardEventAssignment",
+        "description": "The customer assignment change recorded by the event. Only set for ASSIGNED_TO_USER and UNASSIGNED_FROM_USER events. \n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -22249,6 +22335,43 @@
       }
     }
   },
+  "GiftCardEventAssignment": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "currentAssignedTo": {
+        "type": "User",
+        "description": "The customer the gift card is assigned to after this event. \n\nRequires one of the following permissions: MANAGE_USERS, MANAGE_STAFF, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "currentAssignedToEmail": {
+        "type": "String",
+        "description": "Email of the customer the gift card is assigned to after this event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "oldAssignedTo": {
+        "type": "User",
+        "description": "The customer the gift card was assigned to before this event. \n\nRequires one of the following permissions: MANAGE_USERS, MANAGE_STAFF, OWNER.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "oldAssignedToEmail": {
+        "type": "String",
+        "description": "Email of the customer the gift card was assigned to before this event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
   "GiftCardEventBalance": {
     "type": "object",
     "interfaces": [],
@@ -22319,6 +22442,16 @@
         "deprecated": null,
         "message": null
       },
+      "ASSIGNED_TO_USER": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "BALANCE_ADJUSTED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "BALANCE_RESET": {
         "description": null,
         "deprecated": null,
@@ -22365,6 +22498,11 @@
         "message": null
       },
       "TAGS_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNASSIGNED_FROM_USER": {
         "description": null,
         "deprecated": null,
         "message": null
@@ -22433,6 +22571,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "assignedTo": {
+        "type": "[ID!]",
+        "description": "Filter by the customer the gift card usage is restricted to.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "code": {
         "type": "String",
         "description": null,
@@ -22505,7 +22650,7 @@
       },
       "usedBy": {
         "type": "[ID!]",
-        "description": null,
+        "description": "Filter by the customer who used a gift card.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -23068,6 +23213,36 @@
         "deprecated": null,
         "message": null,
         "default": null
+      }
+    }
+  },
+  "GiftCardUnassignUser": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Remove a customer restriction from a gift card. \n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "errors": {
+        "type": "[GiftCardError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftCard": {
+        "type": "GiftCard",
+        "description": "The unassigned gift card.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "giftCardErrors": {
+        "type": "[GiftCardError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": "Use `errors` field instead.",
+        "arguments": {}
       }
     }
   },
@@ -28384,7 +28559,7 @@
       "PAYMENT_FLOW": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "TRANSACTION_FLOW": {
         "description": null,
@@ -32052,7 +32227,7 @@
         "type": "CheckoutPaymentCreate",
         "description": "Creates a new payment for given checkout.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "checkoutId": {
             "type": "ID",
@@ -32988,6 +33163,50 @@
           }
         }
       },
+      "giftCardAssignUser": {
+        "type": "GiftCardAssignUser",
+        "description": "Restrict a gift card so only the given customer can use it. \n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the gift card.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "userId": {
+            "type": "ID!",
+            "description": "ID of the customer to restrict the card to.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "giftCardBalanceAdjust": {
+        "type": "GiftCardBalanceAdjust",
+        "description": "Adjust a gift card's balance by a delta. \n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "amount": {
+            "type": "Decimal!",
+            "description": "Signed amount to adjust the current balance by. Positive tops up, negative deducts. A deduction below zero clamps the balance to zero. A top-up above the initial balance raises the initial balance to the new current balance. \n\nAdded in Saleor 3.23.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "id": {
+            "type": "ID!",
+            "description": "ID of the gift card to adjust.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "giftCardBulkActivate": {
         "type": "GiftCardBulkActivate",
         "description": "Activate gift cards. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_STATUS_CHANGED (async): A gift card was activated.",
@@ -33117,6 +33336,21 @@
           "input": {
             "type": "GiftCardSettingsUpdateInput!",
             "description": "Fields required to update gift card settings.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "giftCardUnassignUser": {
+        "type": "GiftCardUnassignUser",
+        "description": "Remove a customer restriction from a gift card. \n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- GIFT_CARD_UPDATED (async): A gift card was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the gift card.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -33526,7 +33760,7 @@
         "type": "OrderCapture",
         "description": "Capture an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "amount": {
             "type": "PositiveDecimal!",
@@ -34003,7 +34237,7 @@
         "type": "OrderRefund",
         "description": "Refund an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "amount": {
             "type": "PositiveDecimal!",
@@ -34076,7 +34310,7 @@
         "type": "OrderVoid",
         "description": "Void an order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -34393,7 +34627,7 @@
         "type": "PaymentCapture",
         "description": "Captures the authorized payment amount. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "amount": {
             "type": "PositiveDecimal",
@@ -34415,7 +34649,7 @@
         "type": "PaymentCheckBalance",
         "description": "Check payment balance.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "input": {
             "type": "PaymentCheckBalanceInput!",
@@ -34488,7 +34722,7 @@
         "type": "PaymentInitialize",
         "description": "Initializes payment process when it is required by gateway.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "channel": {
             "type": "String",
@@ -34582,7 +34816,7 @@
         "type": "PaymentRefund",
         "description": "Refunds the captured payment amount. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "amount": {
             "type": "PositiveDecimal",
@@ -34604,7 +34838,7 @@
         "type": "PaymentVoid",
         "description": "Voids the authorized payment. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "paymentId": {
             "type": "ID!",
@@ -37698,13 +37932,6 @@
         "message": null,
         "arguments": {}
       },
-      "availableShippingMethods": {
-        "type": "[ShippingMethod!]",
-        "description": "Shipping methods that can be used with this order.",
-        "deprecated": null,
-        "message": "Use `shippingMethods`, this field will be removed in 4.0",
-        "arguments": {}
-      },
       "billingAddress": {
         "type": "Address",
         "description": "Billing address. The full data can be access for orders created in Saleor 3.2 and later, for other orders requires one of the following permissions: MANAGE_ORDERS, OWNER.",
@@ -37963,7 +38190,7 @@
         "type": "[Payment!]!",
         "description": "List of payments for the order.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "privateMetadata": {
@@ -38294,7 +38521,7 @@
       "CAPTURE": {
         "description": "Represents the capture action.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "MARK_AS_PAID": {
         "description": "Represents a mark-as-paid action.",
@@ -38304,12 +38531,12 @@
       "REFUND": {
         "description": "Represents a refund action.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "VOID": {
         "description": "Represents a void action.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       }
     }
   },
@@ -41153,9 +41380,9 @@
       },
       "paymentStatus": {
         "type": "[PaymentChargeStatusEnum!]",
-        "description": null,
+        "description": "Filter orders by payment charge status.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "default": null
       },
       "search": {
@@ -43686,7 +43913,7 @@
       "PAYMENT": {
         "description": "Sort orders by payment status.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "RANK": {
         "description": "Sort orders by rank. Note: This option is available only with the `search` filter.",
@@ -46359,7 +46586,7 @@
       "Node",
       "ObjectWithMetadata"
     ],
-    "description": "Represents a payment of a given type.",
+    "description": "Represents a payment of a given type.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -46577,7 +46804,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Authorize payment.",
+    "description": "Authorize payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -46599,7 +46826,7 @@
         "type": "Payment",
         "description": "Look up a payment.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "recipient": {
@@ -46653,7 +46880,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Capture payment.",
+    "description": "Capture payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -46675,7 +46902,7 @@
         "type": "Payment",
         "description": "Look up a payment.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "recipient": {
@@ -46774,7 +47001,7 @@
   },
   "PaymentCheckBalanceInput": {
     "type": "input",
-    "description": null,
+    "description": "Fields required to check a payment balance.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -46813,7 +47040,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Confirm payment.",
+    "description": "Confirm payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -46835,7 +47062,7 @@
         "type": "Payment",
         "description": "Look up a payment.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "recipient": {
@@ -47049,7 +47276,7 @@
   },
   "PaymentFilterInput": {
     "type": "input",
-    "description": null,
+    "description": "Filtering options for payments.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -47556,7 +47783,7 @@
   "PaymentInitialized": {
     "type": "object",
     "interfaces": [],
-    "description": "Server-side data generated by a payment gateway. Optional step when the payment provider requires an additional action to initialize payment session.",
+    "description": "Server-side data generated by a payment gateway. Optional step when the payment provider requires an additional action to initialize payment session.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -47585,7 +47812,7 @@
   },
   "PaymentInput": {
     "type": "input",
-    "description": null,
+    "description": "Fields required to create a payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -47638,7 +47865,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "List payment gateways.",
+    "description": "List payment gateways.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -48208,7 +48435,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Process payment.",
+    "description": "Process payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -48230,7 +48457,7 @@
         "type": "Payment",
         "description": "Look up a payment.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "recipient": {
@@ -48284,7 +48511,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Refund payment.",
+    "description": "Refund payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -48306,7 +48533,7 @@
         "type": "Payment",
         "description": "Look up a payment.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "recipient": {
@@ -48401,7 +48628,7 @@
   "PaymentSource": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents a payment source stored for user in payment gateway, such as credit card.",
+    "description": "Represents a payment source stored for user in payment gateway, such as credit card.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -48470,7 +48697,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Void payment.",
+    "description": "Void payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -48492,7 +48719,7 @@
         "type": "Payment",
         "description": "Look up a payment.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "recipient": {
@@ -50158,28 +50385,6 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
-      },
-      "variant": {
-        "type": "ProductVariant",
-        "description": "Get a single variant by SKU or ID.",
-        "deprecated": null,
-        "message": "Use top-level `variant` query.",
-        "arguments": {
-          "id": {
-            "type": "ID",
-            "description": "ID of the variant.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          },
-          "sku": {
-            "type": "String",
-            "description": "SKU of the variant.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          }
-        }
       },
       "variants": {
         "type": "[ProductVariant!]",
@@ -61053,7 +61258,7 @@
         "type": "Payment",
         "description": "Look up a payment by ID.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -61068,7 +61273,7 @@
         "type": "PaymentCountableConnection",
         "description": "List of payments.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "after": {
             "type": "String",
@@ -66563,7 +66768,7 @@
         "type": "[PaymentGateway!]!",
         "description": "List of available payment gateways.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "channel": {
             "type": "String",
@@ -68647,17 +68852,17 @@
       "NONE": {
         "description": "Storage is disabled. The payment is not stored.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "OFF_SESSION": {
         "description": "Off session storage type. The payment is stored to be reused even if the customer is absent.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "ON_SESSION": {
         "description": "On session storage type. The payment is stored only to be reused when the customer is present in the checkout flow.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       }
     }
   },
@@ -71104,7 +71309,7 @@
     "interfaces": [
       "Node"
     ],
-    "description": "An object representing a single payment.",
+    "description": "An object representing a single payment.\n\nThe legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -71133,7 +71338,7 @@
         "type": "JSONString!",
         "description": "Response returned by payment gateway.",
         "deprecated": null,
-        "message": "This field is a part of a legacy Payments API. Please use apps instead.",
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {}
       },
       "id": {
@@ -72462,52 +72667,52 @@
       "ACTION_TO_CONFIRM": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "AUTH": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "CANCEL": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "CAPTURE": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "CONFIRM": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "EXTERNAL": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PENDING": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "REFUND": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "REFUND_ONGOING": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "VOID": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       }
     }
   },
@@ -74234,7 +74439,7 @@
         "type": "[PaymentSource!]",
         "description": "List of stored payment sources. The field returns a list of payment sources stored for payment plugins.",
         "deprecated": null,
-        "message": null,
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead.",
         "arguments": {
           "channel": {
             "type": "String",
@@ -79358,17 +79563,17 @@
       "PAYMENT_AUTHORIZE": {
         "description": "Authorize payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_CAPTURE": {
         "description": "Capture payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_CONFIRM": {
         "description": "Confirm payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_GATEWAY_INITIALIZE_SESSION": {
         "description": null,
@@ -79383,7 +79588,7 @@
       "PAYMENT_LIST_GATEWAYS": {
         "description": "Listing available payment gateways.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION": {
         "description": null,
@@ -79398,17 +79603,17 @@
       "PAYMENT_PROCESS": {
         "description": "Process payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_REFUND": {
         "description": "Refund payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_VOID": {
         "description": "Void payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PERMISSION_GROUP_CREATED": {
         "description": "A new permission group is created.",
@@ -79806,17 +80011,17 @@
       "PAYMENT_AUTHORIZE": {
         "description": "Authorize payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_CAPTURE": {
         "description": "Capture payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_CONFIRM": {
         "description": "Confirm payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_GATEWAY_INITIALIZE_SESSION": {
         "description": null,
@@ -79831,7 +80036,7 @@
       "PAYMENT_LIST_GATEWAYS": {
         "description": "Listing available payment gateways.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_METHOD_INITIALIZE_TOKENIZATION_SESSION": {
         "description": null,
@@ -79846,17 +80051,17 @@
       "PAYMENT_PROCESS": {
         "description": "Process payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_REFUND": {
         "description": "Refund payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "PAYMENT_VOID": {
         "description": "Void payment.",
         "deprecated": null,
-        "message": null
+        "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
       },
       "SHIPPING_LIST_METHODS_FOR_CHECKOUT": {
         "description": "Fetch external shipping methods for checkout.",
