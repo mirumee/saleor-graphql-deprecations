@@ -1,93 +1,27 @@
 [
   {
-    "diff": "type_new",
-    "type": "GiftCardAssignUser"
-  },
-  {
-    "diff": "type_new",
-    "type": "GiftCardBalanceAdjust"
-  },
-  {
-    "diff": "type_new",
-    "type": "GiftCardEventAssignment"
-  },
-  {
-    "diff": "type_new",
-    "type": "GiftCardUnassignUser"
+    "diff": "field_new",
+    "type": "CheckoutLine",
+    "field": "priceOverrideReason"
   },
   {
     "diff": "field_new",
-    "type": "GiftCard",
-    "field": "assignedTo"
+    "type": "CheckoutLineInput",
+    "field": "priceOverrideReason"
   },
   {
     "diff": "field_new",
-    "type": "GiftCard",
-    "field": "assignedToEmail"
+    "type": "CheckoutLineUpdateInput",
+    "field": "priceOverrideReason"
   },
   {
     "diff": "field_new",
-    "type": "GiftCardCreateInput",
-    "field": "assignedTo"
-  },
-  {
-    "diff": "field_new",
-    "type": "GiftCardEvent",
-    "field": "assignedTo"
-  },
-  {
-    "diff": "field_new",
-    "type": "GiftCardFilterInput",
-    "field": "assignedTo"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "giftCardAssignUser"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "giftCardBalanceAdjust"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "giftCardUnassignUser"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "Checkout",
-    "field": "note"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "Order",
-    "field": "availableShippingMethods"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "Product",
-    "field": "variant"
+    "type": "OrderLine",
+    "field": "priceOverrideReason"
   },
   {
     "diff": "enum_value_new",
-    "enum": "GiftCardErrorCode",
-    "value": "CANNOT_ASSIGN"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "GiftCardEventsEnum",
-    "value": "ASSIGNED_TO_USER"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "GiftCardEventsEnum",
-    "value": "BALANCE_ADJUSTED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "GiftCardEventsEnum",
-    "value": "UNASSIGNED_FROM_USER"
+    "enum": "CheckoutErrorCode",
+    "value": "PRICE_OVERRIDE_REASON_WITHOUT_OVERRIDE"
   }
 ]

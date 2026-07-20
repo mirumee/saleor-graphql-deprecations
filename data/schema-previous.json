@@ -12082,6 +12082,11 @@
         "deprecated": null,
         "message": null
       },
+      "PRICE_OVERRIDE_REASON_WITHOUT_OVERRIDE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PRODUCT_NOT_PUBLISHED": {
         "description": null,
         "deprecated": null,
@@ -12454,6 +12459,13 @@
           }
         }
       },
+      "priceOverrideReason": {
+        "type": "String",
+        "description": "Reason explaining why a custom price was set on the line, provided by the app that set the price override.\n\nAdded in Saleor 3.23.\n\nRequires one of the following permissions: MANAGE_CHECKOUTS, HANDLE_CHECKOUTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "priorTotalPrice": {
         "type": "Money",
         "description": "The sum of the checkout line price prior to promotion.",
@@ -12673,6 +12685,13 @@
         "message": null,
         "default": null
       },
+      "priceOverrideReason": {
+        "type": "String",
+        "description": "Reason explaining why a custom `price` was set on the line, for debugging and auditing. Can be set only by apps with `HANDLE_CHECKOUTS` permission and only when the line has a `price` override. Setting a new `price` without a reason clears the previous reason. Blank values are stored as no reason. Limited to 255 characters; longer values are truncated.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "quantity": {
         "type": "Int!",
         "description": "The number of items purchased.",
@@ -12768,6 +12787,13 @@
       "price": {
         "type": "PositiveDecimal",
         "description": "Custom price of the item. Can be set only by apps with `HANDLE_CHECKOUTS` permission. When the line with the same variant will be provided multiple times, the last price will be used.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "priceOverrideReason": {
+        "type": "String",
+        "description": "Reason explaining why a custom `price` was set on the line, for debugging and auditing. Can be set only by apps with `HANDLE_CHECKOUTS` permission and only when the line has a `price` override. Setting a new `price` without a reason clears the previous reason. Blank values are stored as no reason. Limited to 255 characters; longer values are truncated.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -42522,6 +42548,13 @@
             "default": null
           }
         }
+      },
+      "priceOverrideReason": {
+        "type": "String",
+        "description": "Reason explaining why a custom price was set on the line, copied from the checkout line when the order was created from a checkout.\n\nAdded in Saleor 3.23.\n\nRequires one of the following permissions: MANAGE_ORDERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       },
       "privateMetadata": {
         "type": "[MetadataItem!]!",
