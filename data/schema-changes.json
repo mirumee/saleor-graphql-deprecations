@@ -1,27 +1,22 @@
 [
   {
-    "diff": "field_new",
-    "type": "CheckoutLine",
-    "field": "priceOverrideReason"
+    "diff": "field_deleted",
+    "type": "ProductType",
+    "field": "isDigital"
   },
   {
-    "diff": "field_new",
-    "type": "CheckoutLineInput",
-    "field": "priceOverrideReason"
+    "diff": "field_deleted",
+    "type": "ProductTypeInput",
+    "field": "isDigital"
   },
   {
-    "diff": "field_new",
-    "type": "CheckoutLineUpdateInput",
-    "field": "priceOverrideReason"
+    "diff": "enum_value_deleted",
+    "enum": "ProductTypeEnum",
+    "value": "DIGITAL"
   },
   {
-    "diff": "field_new",
-    "type": "OrderLine",
-    "field": "priceOverrideReason"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "CheckoutErrorCode",
-    "value": "PRICE_OVERRIDE_REASON_WITHOUT_OVERRIDE"
+    "diff": "enum_value_deleted",
+    "enum": "ProductTypeSortField",
+    "value": "DIGITAL"
   }
 ]
