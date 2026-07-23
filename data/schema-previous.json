@@ -6108,7 +6108,7 @@
   "AttributeDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
+    "description": "Deletes an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6856,7 +6856,7 @@
   "AttributeUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+    "description": "Updates attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -31290,7 +31290,7 @@
       },
       "attributeDelete": {
         "type": "AttributeDelete",
-        "description": "Deletes an attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
+        "description": "Deletes an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31363,7 +31363,7 @@
       },
       "attributeUpdate": {
         "type": "AttributeUpdate",
-        "description": "Updates attribute. \n\nRequires one of the following permissions: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+        "description": "Updates attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
