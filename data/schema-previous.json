@@ -191,6 +191,24 @@
       }
     }
   },
+  "AccountConfirmModeEnum": {
+    "type": "enum",
+    "description": "AccountConfirmMode set the account merging mode for anonymous objects.\n\n    This dictates the behavior of the `confirmAccount()` mutation for\n    password-based authentication when attempting to merge orders & giftcard\n    that aren't associated to a user account.\n\n    Modes:\n\n    - MERGE_DISABLED disables merging only when the authentication method\n      is password (i.e., when not using OIDC)\n    - REQUIRE_PASSWORD enables account merging who accounts that use password\n      authentication but it requires the user to enter their password",
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "MERGE_DISABLED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRE_PASSWORD": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
   "AccountConfirmationRequested": {
     "type": "object",
     "interfaces": [
@@ -32600,6 +32618,13 @@
           "email": {
             "type": "String!",
             "description": "E-mail of the user performing account confirmation.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "password": {
+            "type": "String",
+            "description": "Password of the user confirming their account. Required when `REQUIRED_PASSWORD` mode is enabled in shop settings. Learn more at https://docs.saleor.io/upgrade-guides/core/migrate-account-merging",
             "deprecated": null,
             "message": null,
             "default": null
@@ -66752,6 +66777,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "accountConfirmMergeMode": {
+        "type": "AccountConfirmModeEnum!",
+        "description": "Controls the method used for merging existing orders and giftcards when password-based authentication is used. Learn more at https://docs.saleor.io/upgrade-guides/core/migrate-account-merging",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "allowLoginWithoutConfirmation": {
         "type": "Boolean",
         "description": "Determines if user can login without confirmation when `enableAccountConfirmation` is enabled.\n\nRequires one of the following permissions: MANAGE_SETTINGS.",
@@ -67358,6 +67390,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "accountConfirmMergeMode": {
+        "type": "AccountConfirmModeEnum",
+        "description": "Controls the method used for merging existing orders and giftcards when password-based authentication is used. Learn more at https://docs.saleor.io/upgrade-guides/core/migrate-account-merging",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "allowLoginWithoutConfirmation": {
         "type": "Boolean",
         "description": "Enable possibility to login without account confirmation.",
