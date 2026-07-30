@@ -1,32 +1,12 @@
 [
   {
     "diff": "field_new",
-    "type": "Webhook",
-    "field": "identifier"
+    "type": "Shop",
+    "field": "allowStorefrontTraffic"
   },
   {
     "diff": "field_new",
-    "type": "WebhookCreateInput",
-    "field": "identifier"
-  },
-  {
-    "diff": "field_new",
-    "type": "WebhookUpdateInput",
-    "field": "identifier"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AppErrorCode",
-    "value": "DUPLICATED_WEBHOOK_IDENTIFIER"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "CustomerEventsEnum",
-    "value": "DIGITAL_LINK_DOWNLOADED"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "OrderEventsEmailsEnum",
-    "value": "DIGITAL_LINKS"
+    "type": "ShopSettingsInput",
+    "field": "allowStorefrontTraffic"
   }
 ]
