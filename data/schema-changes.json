@@ -1,12 +1,15 @@
 [
   {
-    "diff": "field_new",
-    "type": "Shop",
-    "field": "allowStorefrontTraffic"
+    "diff": "type_deleted",
+    "type": "OrderAddNote"
   },
   {
-    "diff": "field_new",
-    "type": "ShopSettingsInput",
-    "field": "allowStorefrontTraffic"
+    "diff": "type_deleted",
+    "type": "OrderAddNoteInput"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "Mutation",
+    "field": "orderAddNote"
   }
 ]

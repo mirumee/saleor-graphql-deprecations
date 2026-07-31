@@ -33726,28 +33726,6 @@
           }
         }
       },
-      "orderAddNote": {
-        "type": "OrderAddNote",
-        "description": "Adds note to the order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
-        "deprecated": null,
-        "message": "Use `orderNoteAdd` instead.",
-        "arguments": {
-          "input": {
-            "type": "OrderAddNoteInput!",
-            "description": "Fields required to create a note for the order.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          },
-          "order": {
-            "type": "ID!",
-            "description": "ID of the order to add a note for.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          }
-        }
-      },
       "orderBulkCancel": {
         "type": "OrderBulkCancel",
         "description": "Cancels orders. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
@@ -38588,58 +38566,6 @@
         "description": "Represents a void action.",
         "deprecated": null,
         "message": "The legacy Payments API is deprecated and will be removed. Use the Transactions API instead."
-      }
-    }
-  },
-  "OrderAddNote": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Adds note to the order. \n\nRequires one of the following permissions: MANAGE_ORDERS.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "errors": {
-        "type": "[OrderError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "event": {
-        "type": "OrderEvent",
-        "description": "Order note created.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "order": {
-        "type": "Order",
-        "description": "Order with the note added.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "orderErrors": {
-        "type": "[OrderError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": "Use `errors` field instead.",
-        "arguments": {}
-      }
-    }
-  },
-  "OrderAddNoteInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "message": {
-        "type": "String!",
-        "description": "Note message.",
-        "deprecated": null,
-        "message": null,
-        "default": null
       }
     }
   },
