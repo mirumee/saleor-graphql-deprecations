@@ -1,15 +1,11 @@
 [
   {
     "diff": "type_deleted",
-    "type": "OrderAddNote"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "OrderAddNoteInput"
+    "type": "ShopFetchTaxRates"
   },
   {
     "diff": "field_deleted",
     "type": "Mutation",
-    "field": "orderAddNote"
+    "field": "shopFetchTaxRates"
   }
 ]
