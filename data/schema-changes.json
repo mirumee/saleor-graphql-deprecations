@@ -1,11 +1,11 @@
 [
   {
     "diff": "type_deleted",
-    "type": "ShopFetchTaxRates"
+    "type": "CheckoutLineDelete"
   },
   {
     "diff": "field_deleted",
     "type": "Mutation",
-    "field": "shopFetchTaxRates"
+    "field": "checkoutLineDelete"
   }
 ]

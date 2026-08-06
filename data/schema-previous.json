@@ -12651,36 +12651,6 @@
       }
     }
   },
-  "CheckoutLineDelete": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Deletes a CheckoutLine.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "checkout": {
-        "type": "Checkout",
-        "description": "An updated checkout.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "checkoutErrors": {
-        "type": "[CheckoutError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": "Use `errors` field instead.",
-        "arguments": {}
-      },
-      "errors": {
-        "type": "[CheckoutError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      }
-    }
-  },
   "CheckoutLineInput": {
     "type": "input",
     "description": null,
@@ -32117,42 +32087,6 @@
           "languageCode": {
             "type": "LanguageCodeEnum!",
             "description": "New language code.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          },
-          "token": {
-            "type": "UUID",
-            "description": "Checkout token.",
-            "deprecated": null,
-            "message": "Use `id` instead.",
-            "default": null
-          }
-        }
-      },
-      "checkoutLineDelete": {
-        "type": "CheckoutLineDelete",
-        "description": "Deletes a CheckoutLine.\n\nTriggers the following webhook events:\n- CHECKOUT_UPDATED (async): A checkout was updated.",
-        "deprecated": null,
-        "message": "Use `checkoutLinesDelete` instead.",
-        "arguments": {
-          "checkoutId": {
-            "type": "ID",
-            "description": "The ID of the checkout.",
-            "deprecated": null,
-            "message": "Use `id` instead.",
-            "default": null
-          },
-          "id": {
-            "type": "ID",
-            "description": "The checkout's ID.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          },
-          "lineId": {
-            "type": "ID",
-            "description": "ID of the checkout line to delete.",
             "deprecated": null,
             "message": null,
             "default": null
