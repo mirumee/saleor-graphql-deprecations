@@ -630,6 +630,13 @@
         "message": null,
         "arguments": {}
       },
+      "attributes": {
+        "type": "[ID!]",
+        "description": "List of attributes IDs which causes the error.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "code": {
         "type": "AccountErrorCode!",
         "description": "The error code.",
@@ -5528,7 +5535,7 @@
   "AttributeBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes attributes.\n\nRequires one of the following permissions, depending on the type of each attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
+    "description": "Deletes attributes.\n\nRequires one of the following permissions, depending on the type of each attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6131,7 +6138,7 @@
   "AttributeDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
+    "description": "Deletes an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6583,7 +6590,7 @@
   "AttributeReorderValues": {
     "type": "object",
     "interfaces": [],
-    "description": "Reorder the values of an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+    "description": "Reorder the values of an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6842,6 +6849,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "CUSTOMER_TYPE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "PAGE_TYPE": {
         "description": null,
         "deprecated": null,
@@ -6879,7 +6891,7 @@
   "AttributeUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+    "description": "Updates attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7178,7 +7190,7 @@
   "AttributeValueBulkDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes values of attributes.\n\nRequires one of the following permissions, depending on the type of each value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+    "description": "Deletes values of attributes.\n\nRequires one of the following permissions, depending on the type of each value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7380,7 +7392,7 @@
   "AttributeValueCreate": {
     "type": "object",
     "interfaces": [],
-    "description": "Creates a value for an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_CREATED (async): An attribute value was created.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+    "description": "Creates a value for an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_CREATED (async): An attribute value was created.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7520,7 +7532,7 @@
   "AttributeValueDelete": {
     "type": "object",
     "interfaces": [],
-    "description": "Deletes a value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+    "description": "Deletes a value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -7996,7 +8008,7 @@
   "AttributeValueUpdate": {
     "type": "object",
     "interfaces": [],
-    "description": "Updates value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+    "description": "Updates value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -16593,6 +16605,13 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "attributes": {
+        "type": "[ID!]",
+        "description": "List of attributes IDs which causes the error.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "code": {
         "type": "CustomerBulkUpdateErrorCode!",
         "description": "The error code.",
@@ -17053,6 +17072,20 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "attributes": {
+        "type": "[AttributeValueInput!]",
+        "description": "List of attribute values to assign to the user. The attributes must belong to the customer type the user ends up with.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "customerType": {
+        "type": "ID",
+        "description": "ID of the customer type to assign to the user. If not provided when creating a customer, the default customer type is assigned.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "defaultBillingAddress": {
         "type": "AddressInput",
         "description": "Billing address of the customer.",
@@ -17382,6 +17415,1028 @@
       }
     }
   },
+  "CustomerType": {
+    "type": "object",
+    "interfaces": [
+      "Node",
+      "ObjectWithMetadata"
+    ],
+    "description": "Represents a type of customer. It allows to segment users and defines what attributes are available to users of this type.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attributes": {
+        "type": "[Attribute!]",
+        "description": "Customer attributes assigned to this customer type. Attributes that are not visible in the storefront require one of the following permissions to be included: MANAGE_USERS, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "availableAttributes": {
+        "type": "AttributeCountableConnection",
+        "description": "Customer attributes that can be assigned to the customer type.\n\nRequires one of the following permissions: MANAGE_USERS, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "after": {
+            "type": "String",
+            "description": "Return the elements in the list that come after the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "before": {
+            "type": "String",
+            "description": "Return the elements in the list that come before the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "first": {
+            "type": "Int",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "last": {
+            "type": "Int",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "search": {
+            "type": "String",
+            "description": "Search attributes.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "AttributeWhereInput",
+            "description": "Where filtering options for attributes.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "id": {
+        "type": "ID!",
+        "description": "The ID of the customer type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "isDefault": {
+        "type": "Boolean!",
+        "description": "Whether this is the default customer type. The default customer type is assigned to every newly created user and cannot be deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "metadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of public metadata items. Can be accessed without permissions.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "metafield": {
+        "type": "String",
+        "description": "A single key from public metadata.\n\nTip: Use GraphQL aliases to fetch multiple keys.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "metafields": {
+        "type": "Metadata",
+        "description": "Public metadata. Use `keys` to control which fields you want to include. The default is to include everything.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "name": {
+        "type": "String!",
+        "description": "Name of the customer type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetadata": {
+        "type": "[MetadataItem!]!",
+        "description": "List of private metadata items. Requires staff permissions to access.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "privateMetafield": {
+        "type": "String",
+        "description": "A single key from private metadata. Requires staff permissions to access.\n\nTip: Use GraphQL aliases to fetch multiple keys.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "key": {
+            "type": "String!",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "privateMetafields": {
+        "type": "Metadata",
+        "description": "Private metadata. Requires staff permissions to access. Use `keys` to control which fields you want to include. The default is to include everything.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "keys": {
+            "type": "[String!]",
+            "description": null,
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "slug": {
+        "type": "String!",
+        "description": "Slug of the customer type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeAssignAttributes": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Assign attributes to a given customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": "The updated customer type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerTypeAssignAttributesError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeAssignAttributesError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attributes": {
+        "type": "[ID!]",
+        "description": "List of attributes IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "code": {
+        "type": "CustomerTypeAssignAttributesErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeAssignAttributesErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "ATTRIBUTE_ALREADY_ASSIGNED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerTypeCountableConnection": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "edges": {
+        "type": "[CustomerTypeCountableEdge!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "pageInfo": {
+        "type": "PageInfo!",
+        "description": "Pagination data for this connection.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "totalCount": {
+        "type": "Int",
+        "description": "A total count of items in the collection.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeCountableEdge": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "cursor": {
+        "type": "String!",
+        "description": "A cursor for use in pagination.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "node": {
+        "type": "CustomerType!",
+        "description": "The item at the end of the edge.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeCreate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Creates a new customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_CREATED (async): A new customer type was created.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerTypeCreateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeCreateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CustomerTypeCreateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeCreateErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerTypeCreateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "isDefault": {
+        "type": "Boolean",
+        "description": "Determines if the customer type should become the default one, assigned to every newly created user. Passing `true` clears the flag on the current default customer type - exactly one default customer type always exists.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Name of the customer type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "String",
+        "description": "Slug of the customer type. If not provided, it will be generated from the name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "CustomerTypeCreated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when new customer type is created.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": "The customer type the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeDelete": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Deletes a customer type. Users of the deleted customer type are reassigned to the default customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_DELETED (async): A customer type was deleted.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerTypeDeleteError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeDeleteError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CustomerTypeDeleteErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeDeleteErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CANNOT_DELETE_DEFAULT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerTypeDeleted": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when customer type is deleted.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": "The customer type the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeReorderAttributes": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Reorder the attributes of a customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": "Customer type from which attributes are reordered.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerTypeReorderAttributesError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeReorderAttributesError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "attributes": {
+        "type": "[ID!]",
+        "description": "List of attributes IDs which causes the error.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "code": {
+        "type": "CustomerTypeReorderAttributesErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeReorderAttributesErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerTypeSortField": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "NAME": {
+        "description": "Sort customer types by name.",
+        "deprecated": null,
+        "message": null
+      },
+      "SLUG": {
+        "description": "Sort customer types by slug.",
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerTypeSortingInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "direction": {
+        "type": "OrderDirection!",
+        "description": "Specifies the direction in which to sort customer types.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "field": {
+        "type": "CustomerTypeSortField!",
+        "description": "Sort customer types by the selected field.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "CustomerTypeUnassignAttributes": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Unassign attributes from a given customer type. Values already assigned to users are kept in the database, but are hidden until the attribute is assigned to the user's customer type again.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": "The updated customer type.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerTypeUnassignAttributesError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeUnassignAttributesError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CustomerTypeUnassignAttributesErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeUnassignAttributesErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerTypeUpdate": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Updates a customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "errors": {
+        "type": "[CustomerTypeUpdateError!]!",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeUpdateError": {
+    "type": "object",
+    "interfaces": [],
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "code": {
+        "type": "CustomerTypeUpdateErrorCode!",
+        "description": "The error code.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "field": {
+        "type": "String",
+        "description": "Name of a field that caused the error. A value of `null` indicates that the error isn't associated with a particular field.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "message": {
+        "type": "String",
+        "description": "The error message.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeUpdateErrorCode": {
+    "type": "enum",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "values": {
+      "CANNOT_UNSET_DEFAULT": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "GRAPHQL_ERROR": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "INVALID": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "NOT_FOUND": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "REQUIRED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "UNIQUE": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      }
+    }
+  },
+  "CustomerTypeUpdateInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "isDefault": {
+        "type": "Boolean",
+        "description": "Determines if the customer type should become the default one, assigned to every newly created user. Passing `true` clears the flag on the current default customer type - exactly one default customer type always exists.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "String",
+        "description": "Name of the customer type.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "String",
+        "description": "Slug of the customer type. If not provided, it will be generated from the name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
+  "CustomerTypeUpdated": {
+    "type": "object",
+    "interfaces": [
+      "Event"
+    ],
+    "description": "Event sent when customer type is updated.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "customerType": {
+        "type": "CustomerType",
+        "description": "The customer type the event relates to.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuedAt": {
+        "type": "DateTime",
+        "description": "Time of the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "issuingPrincipal": {
+        "type": "IssuingPrincipal",
+        "description": "The user or application that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "recipient": {
+        "type": "App",
+        "description": "The application receiving the webhook.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "version": {
+        "type": "String",
+        "description": "Saleor version that triggered the event.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      }
+    }
+  },
+  "CustomerTypeWhereInput": {
+    "type": "input",
+    "description": null,
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "AND": {
+        "type": "[CustomerTypeWhereInput!]",
+        "description": "List of conditions that must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "OR": {
+        "type": "[CustomerTypeWhereInput!]",
+        "description": "A list of conditions of which at least one must be met.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "ids": {
+        "type": "[ID!]",
+        "description": null,
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "isDefault": {
+        "type": "Boolean",
+        "description": "Filter by whether the customer type is the default one.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "metadata": {
+        "type": "MetadataFilterInput",
+        "description": "Filter by metadata fields.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "name": {
+        "type": "StringFilterInput",
+        "description": "Filter by customer type name.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "slug": {
+        "type": "StringFilterInput",
+        "description": "Filter by customer type slug.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      }
+    }
+  },
   "CustomerUpdate": {
     "type": "object",
     "interfaces": [],
@@ -17481,6 +18536,20 @@
       "addresses": {
         "type": "AddressFilterInput",
         "description": "Filter by addresses data associated with user.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "attributes": {
+        "type": "[AssignedAttributeWhereInput!]",
+        "description": "Filter by attributes associated with the customer.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "customerType": {
+        "type": "GlobalIDFilterInput",
+        "description": "Filter by customer type. Filtering by the default customer type also matches users without an explicitly assigned customer type.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -31204,7 +32273,7 @@
       },
       "attributeBulkDelete": {
         "type": "AttributeBulkDelete",
-        "description": "Deletes attributes.\n\nRequires one of the following permissions, depending on the type of each attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
+        "description": "Deletes attributes.\n\nRequires one of the following permissions, depending on the type of each attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31278,7 +32347,7 @@
       },
       "attributeDelete": {
         "type": "AttributeDelete",
-        "description": "Deletes an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
+        "description": "Deletes an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_DELETED (async): An attribute was deleted.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31300,7 +32369,7 @@
       },
       "attributeReorderValues": {
         "type": "AttributeReorderValues",
-        "description": "Reorder the values of an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+        "description": "Reorder the values of an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31351,7 +32420,7 @@
       },
       "attributeUpdate": {
         "type": "AttributeUpdate",
-        "description": "Updates attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+        "description": "Updates attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31380,7 +32449,7 @@
       },
       "attributeValueBulkDelete": {
         "type": "AttributeValueBulkDelete",
-        "description": "Deletes values of attributes.\n\nRequires one of the following permissions, depending on the type of each value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+        "description": "Deletes values of attributes.\n\nRequires one of the following permissions, depending on the type of each value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31417,7 +32486,7 @@
       },
       "attributeValueCreate": {
         "type": "AttributeValueCreate",
-        "description": "Creates a value for an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_CREATED (async): An attribute value was created.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+        "description": "Creates a value for an attribute.\n\nRequires one of the following permissions, depending on the attribute type: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_CREATED (async): An attribute value was created.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31439,7 +32508,7 @@
       },
       "attributeValueDelete": {
         "type": "AttributeValueDelete",
-        "description": "Deletes a value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+        "description": "Deletes a value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_DELETED (async): An attribute value was deleted.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -31490,7 +32559,7 @@
       },
       "attributeValueUpdate": {
         "type": "AttributeValueUpdate",
-        "description": "Updates value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
+        "description": "Updates value of an attribute.\n\nRequires one of the following permissions, depending on the type of the value's attribute: MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES for `PRODUCT_TYPE` attributes, MANAGE_PAGE_TYPES_AND_ATTRIBUTES for `PAGE_TYPE` attributes, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES for `CUSTOMER_TYPE` attributes.\n\nTriggers the following webhook events:\n- ATTRIBUTE_VALUE_UPDATED (async): An attribute value was updated.\n- ATTRIBUTE_UPDATED (async): An attribute was updated.",
         "deprecated": null,
         "message": null,
         "arguments": {
@@ -32677,6 +33746,124 @@
           "id": {
             "type": "ID",
             "description": "ID of a customer to delete.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "customerTypeAssignAttributes": {
+        "type": "CustomerTypeAssignAttributes",
+        "description": "Assign attributes to a given customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "attributeIds": {
+            "type": "[ID!]!",
+            "description": "The IDs of the attributes to assign. Maximum of 100 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "customerTypeId": {
+            "type": "ID!",
+            "description": "ID of the customer type to assign the attributes to.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "customerTypeCreate": {
+        "type": "CustomerTypeCreate",
+        "description": "Creates a new customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_CREATED (async): A new customer type was created.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "input": {
+            "type": "CustomerTypeCreateInput!",
+            "description": "Fields required to create a customer type.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "customerTypeDelete": {
+        "type": "CustomerTypeDelete",
+        "description": "Deletes a customer type. Users of the deleted customer type are reassigned to the default customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_DELETED (async): A customer type was deleted.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the customer type to delete.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "customerTypeReorderAttributes": {
+        "type": "CustomerTypeReorderAttributes",
+        "description": "Reorder the attributes of a customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "customerTypeId": {
+            "type": "ID!",
+            "description": "ID of a customer type.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "moves": {
+            "type": "[ReorderInput!]!",
+            "description": "The list of attribute reordering operations.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "customerTypeUnassignAttributes": {
+        "type": "CustomerTypeUnassignAttributes",
+        "description": "Unassign attributes from a given customer type. Values already assigned to users are kept in the database, but are hidden until the attribute is assigned to the user's customer type again.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "attributeIds": {
+            "type": "[ID!]!",
+            "description": "The IDs of the attributes to unassign. Maximum of 100 items.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "customerTypeId": {
+            "type": "ID!",
+            "description": "ID of the customer type from which the attributes should be unassigned.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "customerTypeUpdate": {
+        "type": "CustomerTypeUpdate",
+        "description": "Updates a customer type.\n\nAdded in Saleor 3.23. \n\nRequires one of the following permissions: MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES.\n\nTriggers the following webhook events:\n- CUSTOMER_TYPE_UPDATED (async): A customer type was updated.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the customer type to update.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "input": {
+            "type": "CustomerTypeUpdateInput!",
+            "description": "Fields required to update a customer type.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -48708,6 +49895,11 @@
         "deprecated": null,
         "message": null
       },
+      "MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
       "MANAGE_DISCOUNTS": {
         "description": null,
         "deprecated": null,
@@ -60297,6 +61489,78 @@
           }
         }
       },
+      "customerType": {
+        "type": "CustomerType",
+        "description": "Look up a customer type by ID.\n\nAdded in Saleor 3.23.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES, MANAGE_USERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "id": {
+            "type": "ID!",
+            "description": "ID of the customer type.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "customerTypes": {
+        "type": "CustomerTypeCountableConnection",
+        "description": "List of the customer types.\n\nAdded in Saleor 3.23.\n\nRequires one of the following permissions: AUTHENTICATED_STAFF_USER, AUTHENTICATED_APP, MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES, MANAGE_USERS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "after": {
+            "type": "String",
+            "description": "Return the elements in the list that come after the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "before": {
+            "type": "String",
+            "description": "Return the elements in the list that come before the specified cursor.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "first": {
+            "type": "Int",
+            "description": "Retrieve the first n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "last": {
+            "type": "Int",
+            "description": "Retrieve the last n elements from the list. Note that the system only allows fetching a maximum of 100 objects in a single query.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "search": {
+            "type": "String",
+            "description": "Search customer types by name or slug.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "sortBy": {
+            "type": "CustomerTypeSortingInput",
+            "description": "Sort customer types.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "where": {
+            "type": "CustomerTypeWhereInput",
+            "description": "Where filtering options for customer types.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
       "customers": {
         "type": "UserCountableConnection",
         "description": "List of the shop's customers. This list includes all users who registered through the accountRegister mutation. Additionally, staff users who have placed an order using their account will also appear in this list.\n\nRequires one of the following permissions: MANAGE_ORDERS, MANAGE_USERS.",
@@ -67787,6 +69051,13 @@
         "message": null,
         "arguments": {}
       },
+      "attributes": {
+        "type": "[ID!]",
+        "description": "List of attributes IDs which causes the error.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "code": {
         "type": "AccountErrorCode!",
         "description": "The error code.",
@@ -73899,7 +75170,8 @@
     "type": "object",
     "interfaces": [
       "Node",
-      "ObjectWithMetadata"
+      "ObjectWithMetadata",
+      "ObjectWithAttributes"
     ],
     "description": "Represents user data.",
     "deprecated": null,
@@ -73918,6 +75190,36 @@
         "deprecated": null,
         "message": null,
         "arguments": {}
+      },
+      "assignedAttribute": {
+        "type": "AssignedAttribute",
+        "description": "Get a single attribute assigned to the user by attribute slug. The attribute is looked up among the attributes of the user's customer type. Requires one of the following permissions: MANAGE_USERS, OWNER. The owner can access only attributes that are visible in the storefront.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "slug": {
+            "type": "String!",
+            "description": "Slug of the attribute",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          }
+        }
+      },
+      "assignedAttributes": {
+        "type": "[AssignedAttribute!]!",
+        "description": "List of attributes assigned to the user through the user's customer type. Requires one of the following permissions: MANAGE_USERS, OWNER. The owner can access only attributes that are visible in the storefront.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {
+          "limit": {
+            "type": "PositiveInt",
+            "description": "Maximum number of attributes to return. Default is 100.",
+            "deprecated": null,
+            "message": null,
+            "default": 100
+          }
+        }
       },
       "avatar": {
         "type": "Image",
@@ -74020,6 +75322,13 @@
             "default": null
           }
         }
+      },
+      "customerType": {
+        "type": "CustomerType",
+        "description": "The customer type assigned to the user. Requires one of the following permissions: MANAGE_USERS, OWNER.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       },
       "dateJoined": {
         "type": "DateTime!",
@@ -74495,9 +75804,23 @@
     "deprecated": null,
     "message": null,
     "fields": {
+      "attributes": {
+        "type": "[AttributeValueInput!]",
+        "description": "List of attribute values to assign to the user. The attributes must belong to the customer type the user ends up with.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
       "channel": {
         "type": "String",
         "description": "Slug of a channel which will be used for notify user. Optional when only one channel exists.",
+        "deprecated": null,
+        "message": null,
+        "default": null
+      },
+      "customerType": {
+        "type": "ID",
+        "description": "ID of the customer type to assign to the user. If not provided when creating a customer, the default customer type is assigned.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "default": null
@@ -78441,6 +79764,21 @@
         "deprecated": null,
         "message": null
       },
+      "CUSTOMER_TYPE_CREATED": {
+        "description": "A new customer type is created.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_DELETED": {
+        "description": "A customer type is deleted.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_UPDATED": {
+        "description": "A customer type is updated.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null
+      },
       "CUSTOMER_UPDATED": {
         "description": "A customer account is updated.",
         "deprecated": null,
@@ -79211,6 +80549,21 @@
       },
       "CUSTOMER_METADATA_UPDATED": {
         "description": "A customer account metadata is updated.",
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_CREATED": {
+        "description": "A new customer type is created.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_DELETED": {
+        "description": "A customer type is deleted.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_UPDATED": {
+        "description": "A customer type is updated.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null
       },
@@ -80196,6 +81549,21 @@
         "message": null
       },
       "CUSTOMER_METADATA_UPDATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_CREATED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_DELETED": {
+        "description": null,
+        "deprecated": null,
+        "message": null
+      },
+      "CUSTOMER_TYPE_UPDATED": {
         "description": null,
         "deprecated": null,
         "message": null
