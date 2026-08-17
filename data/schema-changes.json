@@ -1,273 +1,66 @@
 [
   {
-    "diff": "type_new",
-    "type": "CustomerType"
+    "diff": "type_deleted",
+    "type": "ExportGiftCards"
   },
   {
-    "diff": "type_new",
-    "type": "CustomerTypeAssignAttributes"
+    "diff": "type_deleted",
+    "type": "ExportGiftCardsInput"
   },
   {
-    "diff": "type_new",
-    "type": "CustomerTypeAssignAttributesError"
+    "diff": "type_deleted",
+    "type": "ExportVoucherCodes"
   },
   {
-    "diff": "type_new",
-    "type": "CustomerTypeAssignAttributesErrorCode"
+    "diff": "type_deleted",
+    "type": "ExportVoucherCodesInput"
   },
   {
-    "diff": "type_new",
-    "type": "CustomerTypeCountableConnection"
+    "diff": "type_deleted",
+    "type": "GiftCardExportCompleted"
   },
   {
-    "diff": "type_new",
-    "type": "CustomerTypeCountableEdge"
+    "diff": "type_deleted",
+    "type": "VoucherCodeExportCompleted"
   },
   {
-    "diff": "type_new",
-    "type": "CustomerTypeCreate"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeCreateError"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeCreateErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeCreateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeCreated"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeDelete"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeDeleteError"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeDeleteErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeDeleted"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeReorderAttributes"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeReorderAttributesError"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeReorderAttributesErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeSortField"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeSortingInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUnassignAttributes"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUnassignAttributesError"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUnassignAttributesErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUpdate"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUpdateError"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUpdateErrorCode"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUpdateInput"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeUpdated"
-  },
-  {
-    "diff": "type_new",
-    "type": "CustomerTypeWhereInput"
-  },
-  {
-    "diff": "field_new",
-    "type": "AccountError",
-    "field": "attributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerBulkUpdateError",
-    "field": "attributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerInput",
-    "field": "attributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerInput",
-    "field": "customerType"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "attributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "CustomerWhereInput",
-    "field": "customerType"
-  },
-  {
-    "diff": "field_new",
+    "diff": "field_deleted",
     "type": "Mutation",
-    "field": "customerTypeAssignAttributes"
+    "field": "exportGiftCards"
   },
   {
-    "diff": "field_new",
+    "diff": "field_deleted",
     "type": "Mutation",
-    "field": "customerTypeCreate"
+    "field": "exportVoucherCodes"
   },
   {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "customerTypeDelete"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "customerTypeReorderAttributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "customerTypeUnassignAttributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "Mutation",
-    "field": "customerTypeUpdate"
-  },
-  {
-    "diff": "field_new",
-    "type": "Query",
-    "field": "customerType"
-  },
-  {
-    "diff": "field_new",
-    "type": "Query",
-    "field": "customerTypes"
-  },
-  {
-    "diff": "field_new",
-    "type": "StaffError",
-    "field": "attributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "User",
-    "field": "assignedAttribute"
-  },
-  {
-    "diff": "field_new",
-    "type": "User",
-    "field": "assignedAttributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "User",
-    "field": "customerType"
-  },
-  {
-    "diff": "field_new",
-    "type": "UserCreateInput",
-    "field": "attributes"
-  },
-  {
-    "diff": "field_new",
-    "type": "UserCreateInput",
-    "field": "customerType"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "AttributeTypeEnum",
-    "value": "CUSTOMER_TYPE"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "PermissionEnum",
-    "value": "MANAGE_CUSTOMER_TYPES_AND_ATTRIBUTES"
-  },
-  {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "CUSTOMER_TYPE_CREATED"
+    "value": "GIFT_CARD_EXPORT_COMPLETED"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookEventTypeAsyncEnum",
-    "value": "CUSTOMER_TYPE_DELETED"
+    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "CUSTOMER_TYPE_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookEventTypeEnum",
-    "value": "CUSTOMER_TYPE_CREATED"
+    "value": "GIFT_CARD_EXPORT_COMPLETED"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookEventTypeEnum",
-    "value": "CUSTOMER_TYPE_DELETED"
+    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
   },
   {
-    "diff": "enum_value_new",
-    "enum": "WebhookEventTypeEnum",
-    "value": "CUSTOMER_TYPE_UPDATED"
-  },
-  {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookSampleEventTypeEnum",
-    "value": "CUSTOMER_TYPE_CREATED"
+    "value": "GIFT_CARD_EXPORT_COMPLETED"
   },
   {
-    "diff": "enum_value_new",
+    "diff": "enum_value_deleted",
     "enum": "WebhookSampleEventTypeEnum",
-    "value": "CUSTOMER_TYPE_DELETED"
-  },
-  {
-    "diff": "enum_value_new",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "CUSTOMER_TYPE_UPDATED"
+    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
   }
 ]

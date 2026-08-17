@@ -20810,65 +20810,6 @@
       }
     }
   },
-  "ExportGiftCards": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Export gift cards to csv file. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.\n- GIFT_CARD_EXPORT_COMPLETED (async): A notification for the exported file.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "errors": {
-        "type": "[ExportError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "exportFile": {
-        "type": "ExportFile",
-        "description": "The newly created export file job which is responsible for export data.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      }
-    }
-  },
-  "ExportGiftCardsInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "fileType": {
-        "type": "FileTypesEnum!",
-        "description": "Type of exported file.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "filter": {
-        "type": "GiftCardFilterInput",
-        "description": "Filtering options for gift cards.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "ids": {
-        "type": "[ID!]",
-        "description": "List of gift cards IDs to export.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "scope": {
-        "type": "ExportScope!",
-        "description": "Determine which gift cards should be exported.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      }
-    }
-  },
   "ExportInfoInput": {
     "type": "input",
     "description": null,
@@ -20998,58 +20939,6 @@
         "description": "Export products with given ids.",
         "deprecated": null,
         "message": null
-      }
-    }
-  },
-  "ExportVoucherCodes": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Export voucher codes to csv/xlsx file. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CODE_EXPORT_COMPLETED (async): A notification for the exported file.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "errors": {
-        "type": "[ExportError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "exportFile": {
-        "type": "ExportFile",
-        "description": "The newly created export file job which is responsible for export data.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      }
-    }
-  },
-  "ExportVoucherCodesInput": {
-    "type": "input",
-    "description": null,
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "fileType": {
-        "type": "FileTypesEnum!",
-        "description": "Type of exported file.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "ids": {
-        "type": "[ID!]",
-        "description": "List of voucher code IDs to export.",
-        "deprecated": null,
-        "message": null,
-        "default": null
-      },
-      "voucherId": {
-        "type": "ID",
-        "description": "The ID of the voucher. If provided, exports all codes belonging to the voucher.",
-        "deprecated": null,
-        "message": null,
-        "default": null
       }
     }
   },
@@ -23599,52 +23488,6 @@
         "description": null,
         "deprecated": null,
         "message": null
-      }
-    }
-  },
-  "GiftCardExportCompleted": {
-    "type": "object",
-    "interfaces": [
-      "Event"
-    ],
-    "description": "Event sent when gift card export is completed.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "export": {
-        "type": "ExportFile",
-        "description": "The export file for gift cards.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "issuedAt": {
-        "type": "DateTime",
-        "description": "Time of the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "issuingPrincipal": {
-        "type": "IssuingPrincipal",
-        "description": "The user or application that triggered the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "recipient": {
-        "type": "App",
-        "description": "The application receiving the webhook.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "version": {
-        "type": "String",
-        "description": "Saleor version that triggered the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
       }
     }
   },
@@ -34099,21 +33942,6 @@
           }
         }
       },
-      "exportGiftCards": {
-        "type": "ExportGiftCards",
-        "description": "Export gift cards to csv file. \n\nRequires one of the following permissions: MANAGE_GIFT_CARD.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.\n- GIFT_CARD_EXPORT_COMPLETED (async): A notification for the exported file.",
-        "deprecated": null,
-        "message": "Export functionality is deprecated and will be removed. All data can be fetched via the GraphQL API and parsed into the desired format by apps or external tools.",
-        "arguments": {
-          "input": {
-            "type": "ExportGiftCardsInput!",
-            "description": "Fields required to export gift cards data.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          }
-        }
-      },
       "exportProducts": {
         "type": "ExportProducts",
         "description": "Export products to csv file. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.\n\nTriggers the following webhook events:\n- NOTIFY_USER (async): A notification for the exported file.\n- PRODUCT_EXPORT_COMPLETED (async): A notification for the exported file.",
@@ -34123,21 +33951,6 @@
           "input": {
             "type": "ExportProductsInput!",
             "description": "Fields required to export product data.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          }
-        }
-      },
-      "exportVoucherCodes": {
-        "type": "ExportVoucherCodes",
-        "description": "Export voucher codes to csv/xlsx file. \n\nRequires one of the following permissions: MANAGE_DISCOUNTS.\n\nTriggers the following webhook events:\n- VOUCHER_CODE_EXPORT_COMPLETED (async): A notification for the exported file.",
-        "deprecated": null,
-        "message": "Export functionality is deprecated and will be removed. All data can be fetched via the GraphQL API and parsed into the desired format by apps or external tools.",
-        "arguments": {
-          "input": {
-            "type": "ExportVoucherCodesInput!",
-            "description": "Fields required to export voucher codes.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -38797,8 +38610,15 @@
         "message": null,
         "arguments": {
           "id": {
-            "type": "ID!",
-            "description": "ID of a webhook to delete.",
+            "type": "ID",
+            "description": "ID of a webhook to delete. Cannot be used together with `identifier`.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "identifier": {
+            "type": "String",
+            "description": "App-provided identifier of a webhook to delete. Identifiers are unique per app only, so this argument is available exclusively to an app referencing its own webhook; staff users must use `id`. Cannot be used together with `id`.\n\nAdded in Saleor 3.23.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -38856,8 +38676,15 @@
         "message": null,
         "arguments": {
           "id": {
-            "type": "ID!",
-            "description": "ID of a webhook to update.",
+            "type": "ID",
+            "description": "ID of a webhook to update. Cannot be used together with `identifier`.",
+            "deprecated": null,
+            "message": null,
+            "default": null
+          },
+          "identifier": {
+            "type": "String",
+            "description": "App-provided identifier of a webhook to update. Identifiers are unique per app only, so this argument is available exclusively to an app referencing its own webhook; staff users must use `id`. Cannot be used together with `id`.\n\nAdded in Saleor 3.23.",
             "deprecated": null,
             "message": null,
             "default": null
@@ -53018,7 +52845,7 @@
     "interfaces": [
       "Event"
     ],
-    "description": "Event sent when product export is completed.",
+    "description": "Event sent when product export is completed.\n\nExport functionality is deprecated and will be removed. All data can be fetched via the GraphQL API and parsed into the desired format by apps or external tools.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -53026,7 +52853,7 @@
         "type": "ExportFile",
         "description": "The export file for products.",
         "deprecated": null,
-        "message": null,
+        "message": "Export functionality is deprecated and will be removed. All data can be fetched via the GraphQL API and parsed into the desired format by apps or external tools.",
         "arguments": {}
       },
       "issuedAt": {
@@ -77121,52 +76948,6 @@
       }
     }
   },
-  "VoucherCodeExportCompleted": {
-    "type": "object",
-    "interfaces": [
-      "Event"
-    ],
-    "description": "Event sent when voucher code export is completed.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "export": {
-        "type": "ExportFile",
-        "description": "The export file for voucher codes.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "issuedAt": {
-        "type": "DateTime",
-        "description": "Time of the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "issuingPrincipal": {
-        "type": "IssuingPrincipal",
-        "description": "The user or application that triggered the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "recipient": {
-        "type": "App",
-        "description": "The application receiving the webhook.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "version": {
-        "type": "String",
-        "description": "Saleor version that triggered the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      }
-    }
-  },
   "VoucherCodesCreated": {
     "type": "object",
     "interfaces": [
@@ -79834,11 +79615,6 @@
         "deprecated": null,
         "message": null
       },
-      "GIFT_CARD_EXPORT_COMPLETED": {
-        "description": "A gift card export is completed.",
-        "deprecated": null,
-        "message": null
-      },
       "GIFT_CARD_METADATA_UPDATED": {
         "description": "A gift card metadata is updated.",
         "deprecated": null,
@@ -80032,7 +79808,7 @@
       "PRODUCT_EXPORT_COMPLETED": {
         "description": "A product export is completed.",
         "deprecated": null,
-        "message": null
+        "message": "Export functionality is deprecated and will be removed. All data can be fetched via the GraphQL API and parsed into the desired format by apps or external tools."
       },
       "PRODUCT_MEDIA_CREATED": {
         "description": "A new product media is created.",
@@ -80281,11 +80057,6 @@
       },
       "VOUCHER_CODES_DELETED": {
         "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "VOUCHER_CODE_EXPORT_COMPLETED": {
-        "description": "A voucher code export is completed.",
         "deprecated": null,
         "message": null
       },
@@ -80622,11 +80393,6 @@
         "deprecated": null,
         "message": null
       },
-      "GIFT_CARD_EXPORT_COMPLETED": {
-        "description": "A gift card export is completed.",
-        "deprecated": null,
-        "message": null
-      },
       "GIFT_CARD_METADATA_UPDATED": {
         "description": "A gift card metadata is updated.",
         "deprecated": null,
@@ -80890,7 +80656,7 @@
       "PRODUCT_EXPORT_COMPLETED": {
         "description": "A product export is completed.",
         "deprecated": null,
-        "message": null
+        "message": "Export functionality is deprecated and will be removed. All data can be fetched via the GraphQL API and parsed into the desired format by apps or external tools."
       },
       "PRODUCT_MEDIA_CREATED": {
         "description": "A new product media is created.",
@@ -81174,11 +80940,6 @@
       },
       "VOUCHER_CODES_DELETED": {
         "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "VOUCHER_CODE_EXPORT_COMPLETED": {
-        "description": "A voucher code export is completed.",
         "deprecated": null,
         "message": null
       },
@@ -81623,11 +81384,6 @@
         "deprecated": null,
         "message": null
       },
-      "GIFT_CARD_EXPORT_COMPLETED": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
       "GIFT_CARD_METADATA_UPDATED": {
         "description": null,
         "deprecated": null,
@@ -81821,7 +81577,7 @@
       "PRODUCT_EXPORT_COMPLETED": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "Export functionality is deprecated and will be removed. All data can be fetched via the GraphQL API and parsed into the desired format by apps or external tools."
       },
       "PRODUCT_MEDIA_CREATED": {
         "description": null,
@@ -82069,11 +81825,6 @@
         "message": null
       },
       "VOUCHER_CODES_DELETED": {
-        "description": null,
-        "deprecated": null,
-        "message": null
-      },
-      "VOUCHER_CODE_EXPORT_COMPLETED": {
         "description": null,
         "deprecated": null,
         "message": null
