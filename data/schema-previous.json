@@ -5053,7 +5053,7 @@
         "type": "Boolean!",
         "description": "Whether the attribute can be displayed in the admin product list. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "arguments": {}
       },
       "choices": {
@@ -5138,14 +5138,14 @@
         "type": "Boolean!",
         "description": "Whether the attribute can be filtered in dashboard. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
         "arguments": {}
       },
       "filterableInStorefront": {
         "type": "Boolean!",
         "description": "Whether the attribute can be filtered in storefront. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "arguments": {}
       },
       "id": {
@@ -5341,7 +5341,7 @@
         "type": "Int!",
         "description": "The position of the attribute in the storefront navigation (0 by default). Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "arguments": {}
       },
       "translation": {
@@ -5979,7 +5979,7 @@
         "type": "Boolean",
         "description": "Whether the attribute can be displayed in the admin product list.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "entityType": {
@@ -6000,14 +6000,14 @@
         "type": "Boolean",
         "description": "Whether the attribute can be filtered in dashboard.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
         "default": null
       },
       "filterableInStorefront": {
         "type": "Boolean",
         "description": "Whether the attribute can be filtered in storefront.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "inputType": {
@@ -6049,7 +6049,7 @@
         "type": "Int",
         "description": "The position of the attribute in the storefront navigation (0 by default).",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "type": {
@@ -6342,9 +6342,9 @@
     "fields": {
       "availableInGrid": {
         "type": "Boolean",
-        "description": null,
+        "description": "Whether the attribute can be displayed in the admin product list.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "channel": {
@@ -6356,16 +6356,16 @@
       },
       "filterableInDashboard": {
         "type": "Boolean",
-        "description": null,
+        "description": "Whether the attribute can be filtered in dashboard.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
         "default": null
       },
       "filterableInStorefront": {
         "type": "Boolean",
-        "description": null,
+        "description": "Whether the attribute can be filtered in storefront.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "ids": {
@@ -6626,17 +6626,17 @@
       "AVAILABLE_IN_GRID": {
         "description": "Sort attributes based on whether they can be displayed or not in a product grid.",
         "deprecated": null,
-        "message": null
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead."
       },
       "FILTERABLE_IN_DASHBOARD": {
         "description": "Sort attributes by the filterable in dashboard flag",
         "deprecated": null,
-        "message": null
+        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead."
       },
       "FILTERABLE_IN_STOREFRONT": {
         "description": "Sort attributes by the filterable in storefront flag",
         "deprecated": null,
-        "message": null
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead."
       },
       "IS_VARIANT_ONLY": {
         "description": "Sort attributes by the variant only flag",
@@ -6656,7 +6656,7 @@
       "STOREFRONT_SEARCH_POSITION": {
         "description": "Sort attributes by their position in storefront",
         "deprecated": null,
-        "message": null
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead."
       },
       "VALUE_REQUIRED": {
         "description": "Sort attributes by the value required flag",
@@ -6935,7 +6935,7 @@
         "type": "Boolean",
         "description": "Whether the attribute can be displayed in the admin product list.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "externalReference": {
@@ -6949,14 +6949,14 @@
         "type": "Boolean",
         "description": "Whether the attribute can be filtered in dashboard.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
         "default": null
       },
       "filterableInStorefront": {
         "type": "Boolean",
         "description": "Whether the attribute can be filtered in storefront.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "isVariantOnly": {
@@ -6998,7 +6998,7 @@
         "type": "Int",
         "description": "The position of the attribute in the storefront navigation (0 by default).",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "unit": {
@@ -8217,9 +8217,9 @@
       },
       "filterableInDashboard": {
         "type": "Boolean",
-        "description": null,
+        "description": "Whether the attribute can be filtered in dashboard.",
         "deprecated": null,
-        "message": null,
+        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
         "default": null
       },
       "ids": {
@@ -10489,7 +10489,7 @@
         "type": "Int",
         "description": "The threshold for preorder variant in channel.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "price": {
@@ -36526,9 +36526,9 @@
       },
       "productVariantPreorderDeactivate": {
         "type": "ProductVariantPreorderDeactivate",
-        "description": "Deactivates product variant preorder. It changes all preorder allocation into regular allocation. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+        "description": "Deactivates product variant preorder. It changes all preorder allocation into regular allocation.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {
           "id": {
             "type": "ID!",
@@ -42272,9 +42272,9 @@
       },
       "isPreorder": {
         "type": "Boolean",
-        "description": null,
+        "description": "Filter by orders containing a variant that is currently in preorder.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "metadata": {
@@ -50699,7 +50699,7 @@
   "PreorderData": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents preorder settings for product variant.",
+    "description": "Represents preorder settings for product variant.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -50707,28 +50707,28 @@
         "type": "DateTime",
         "description": "Preorder end date.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {}
       },
       "globalSoldUnits": {
         "type": "Int!",
         "description": "Total number of sold product variant during preorder.\n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {}
       },
       "globalThreshold": {
         "type": "Int",
         "description": "The global preorder threshold for product variant.\n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {}
       }
     }
   },
   "PreorderSettingsInput": {
     "type": "input",
-    "description": null,
+    "description": "Preorder settings for a product variant.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -50736,14 +50736,14 @@
         "type": "DateTime",
         "description": "The end date for preorder.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "globalThreshold": {
         "type": "Int",
         "description": "The global threshold for preorder variant.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       }
     }
@@ -50751,7 +50751,7 @@
   "PreorderThreshold": {
     "type": "object",
     "interfaces": [],
-    "description": "Represents preorder variant data for channel.",
+    "description": "Represents preorder variant data for channel.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -50759,14 +50759,14 @@
         "type": "Int",
         "description": "Preorder threshold for product variant in this channel.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {}
       },
       "soldUnits": {
         "type": "Int!",
         "description": "Number of sold product variant in this channel.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {}
       }
     }
@@ -52806,7 +52806,7 @@
       "PREORDER_VARIANT_CANNOT_BE_DEACTIVATED": {
         "description": null,
         "deprecated": null,
-        "message": null
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit."
       },
       "PRODUCT_NOT_ASSIGNED_TO_CHANNEL": {
         "description": null,
@@ -53011,9 +53011,9 @@
       },
       "hasPreorderedVariants": {
         "type": "Boolean",
-        "description": null,
+        "description": "Filter by product with preordered variants.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "ids": {
@@ -55445,7 +55445,7 @@
         "type": "PreorderData",
         "description": "Preorder data for product variant.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {}
       },
       "pricing": {
@@ -55881,7 +55881,7 @@
         "type": "PreorderSettingsInput",
         "description": "Determines if variant is in preorder.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "privateMetadata": {
@@ -56334,7 +56334,7 @@
         "type": "PreorderSettingsInput",
         "description": "Determines if variant is in preorder.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "privateMetadata": {
@@ -56422,7 +56422,7 @@
         "type": "PreorderThreshold",
         "description": "Preorder variant data.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "arguments": {}
       },
       "price": {
@@ -56465,7 +56465,7 @@
         "type": "Int",
         "description": "The threshold for preorder variant in channel.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "price": {
@@ -56664,7 +56664,7 @@
         "type": "PreorderSettingsInput",
         "description": "Determines if variant is in preorder.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "privateMetadata": {
@@ -56931,9 +56931,9 @@
     "fields": {
       "isPreorder": {
         "type": "Boolean",
-        "description": null,
+        "description": "Filter by variants that are currently in preorder.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "metadata": {
@@ -57004,7 +57004,7 @@
         "type": "PreorderSettingsInput",
         "description": "Determines if variant is in preorder.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "privateMetadata": {
@@ -57268,7 +57268,7 @@
   "ProductVariantPreorderDeactivate": {
     "type": "object",
     "interfaces": [],
-    "description": "Deactivates product variant preorder. It changes all preorder allocation into regular allocation. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
+    "description": "Deactivates product variant preorder. It changes all preorder allocation into regular allocation.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -57972,7 +57972,7 @@
         "type": "Boolean",
         "description": "Filter by product with preordered variants.",
         "deprecated": null,
-        "message": null,
+        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "ids": {
