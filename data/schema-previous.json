@@ -5049,13 +5049,6 @@
     "deprecated": null,
     "message": null,
     "fields": {
-      "availableInGrid": {
-        "type": "Boolean!",
-        "description": "Whether the attribute can be displayed in the admin product list. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
-        "arguments": {}
-      },
       "choices": {
         "type": "AttributeValueCountableConnection",
         "description": "A list of predefined attribute choices available for selection. Available only for attributes with predefined choices.",
@@ -5132,20 +5125,6 @@
         "description": "External ID of this attribute.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
-      },
-      "filterableInDashboard": {
-        "type": "Boolean!",
-        "description": "Whether the attribute can be filtered in dashboard. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
-        "arguments": {}
-      },
-      "filterableInStorefront": {
-        "type": "Boolean!",
-        "description": "Whether the attribute can be filtered in storefront. Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "arguments": {}
       },
       "id": {
@@ -5335,13 +5314,6 @@
         "description": "Internal representation of an attribute name.",
         "deprecated": null,
         "message": null,
-        "arguments": {}
-      },
-      "storefrontSearchPosition": {
-        "type": "Int!",
-        "description": "The position of the attribute in the storefront navigation (0 by default). Requires one of the following permissions: MANAGE_PAGES, MANAGE_PAGE_TYPES_AND_ATTRIBUTES, MANAGE_PRODUCTS, MANAGE_PRODUCT_TYPES_AND_ATTRIBUTES.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "arguments": {}
       },
       "translation": {
@@ -5971,17 +5943,10 @@
   },
   "AttributeCreateInput": {
     "type": "input",
-    "description": "Represents an input for create of attribute.\n\nNOTE: Deprecated fields `filterableInStorefront`, `storefrontSearchPosition` and `availableInGrid` are not supported in bulk mutations: `attributeBulkCreate`, `attributeBulkUpdate`.",
+    "description": "Represents an input for create of attribute.",
     "deprecated": null,
     "message": null,
     "fields": {
-      "availableInGrid": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be displayed in the admin product list.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
-        "default": null
-      },
       "entityType": {
         "type": "AttributeEntityTypeEnum",
         "description": "The entity type which can be used as a reference.",
@@ -5994,20 +5959,6 @@
         "description": "External ID of this attribute.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "filterableInDashboard": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in dashboard.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
-        "default": null
-      },
-      "filterableInStorefront": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in storefront.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "inputType": {
@@ -6043,13 +5994,6 @@
         "description": "Internal representation of an attribute name.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "storefrontSearchPosition": {
-        "type": "Int",
-        "description": "The position of the attribute in the storefront navigation (0 by default).",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "type": {
@@ -6340,32 +6284,11 @@
     "deprecated": null,
     "message": null,
     "fields": {
-      "availableInGrid": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be displayed in the admin product list.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
-        "default": null
-      },
       "channel": {
         "type": "String",
         "description": "Specifies the channel by which the data should be filtered.",
         "deprecated": null,
         "message": "Use root-level channel argument instead.",
-        "default": null
-      },
-      "filterableInDashboard": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in dashboard.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
-        "default": null
-      },
-      "filterableInStorefront": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in storefront.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "ids": {
@@ -6623,21 +6546,6 @@
     "deprecated": null,
     "message": null,
     "values": {
-      "AVAILABLE_IN_GRID": {
-        "description": "Sort attributes based on whether they can be displayed or not in a product grid.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead."
-      },
-      "FILTERABLE_IN_DASHBOARD": {
-        "description": "Sort attributes by the filterable in dashboard flag",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead."
-      },
-      "FILTERABLE_IN_STOREFRONT": {
-        "description": "Sort attributes by the filterable in storefront flag",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead."
-      },
       "IS_VARIANT_ONLY": {
         "description": "Sort attributes by the variant only flag",
         "deprecated": null,
@@ -6652,11 +6560,6 @@
         "description": "Sort attributes by slug",
         "deprecated": null,
         "message": null
-      },
-      "STOREFRONT_SEARCH_POSITION": {
-        "description": "Sort attributes by their position in storefront",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead."
       },
       "VALUE_REQUIRED": {
         "description": "Sort attributes by the value required flag",
@@ -6920,7 +6823,7 @@
   },
   "AttributeUpdateInput": {
     "type": "input",
-    "description": "Represents an input for update of attribute.\n\nNOTE: Deprecated fields `filterableInStorefront`, `storefrontSearchPosition` and `availableInGrid` are not supported in bulk mutations: `attributeBulkCreate`, `attributeBulkUpdate`.",
+    "description": "Represents an input for update of attribute.",
     "deprecated": null,
     "message": null,
     "fields": {
@@ -6931,32 +6834,11 @@
         "message": null,
         "default": null
       },
-      "availableInGrid": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be displayed in the admin product list.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
-        "default": null
-      },
       "externalReference": {
         "type": "String",
         "description": "External ID of this product.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "filterableInDashboard": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in dashboard.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
-        "default": null
-      },
-      "filterableInStorefront": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in storefront.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "isVariantOnly": {
@@ -6992,13 +6874,6 @@
         "description": "Internal representation of an attribute name.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "storefrontSearchPosition": {
-        "type": "Int",
-        "description": "The position of the attribute in the storefront navigation (0 by default).",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the storefront or use `Attribute` metadata instead.",
         "default": null
       },
       "unit": {
@@ -8213,13 +8088,6 @@
         "description": null,
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "filterableInDashboard": {
-        "type": "Boolean",
-        "description": "Whether the attribute can be filtered in dashboard.",
-        "deprecated": null,
-        "message": "This flag is not used by Saleor. Keep the logic in the dashboard or use `Attribute` metadata instead.",
         "default": null
       },
       "ids": {

@@ -1,66 +1,102 @@
 [
   {
-    "diff": "type_deleted",
-    "type": "ExportGiftCards"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "ExportGiftCardsInput"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "ExportVoucherCodes"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "ExportVoucherCodesInput"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "GiftCardExportCompleted"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "VoucherCodeExportCompleted"
+    "diff": "field_deleted",
+    "type": "Attribute",
+    "field": "availableInGrid"
   },
   {
     "diff": "field_deleted",
-    "type": "Mutation",
-    "field": "exportGiftCards"
+    "type": "Attribute",
+    "field": "filterableInDashboard"
   },
   {
     "diff": "field_deleted",
-    "type": "Mutation",
-    "field": "exportVoucherCodes"
+    "type": "Attribute",
+    "field": "filterableInStorefront"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "Attribute",
+    "field": "storefrontSearchPosition"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeCreateInput",
+    "field": "availableInGrid"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeCreateInput",
+    "field": "filterableInDashboard"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeCreateInput",
+    "field": "filterableInStorefront"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeCreateInput",
+    "field": "storefrontSearchPosition"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeFilterInput",
+    "field": "availableInGrid"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeFilterInput",
+    "field": "filterableInDashboard"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeFilterInput",
+    "field": "filterableInStorefront"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeUpdateInput",
+    "field": "availableInGrid"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeUpdateInput",
+    "field": "filterableInDashboard"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeUpdateInput",
+    "field": "filterableInStorefront"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeUpdateInput",
+    "field": "storefrontSearchPosition"
+  },
+  {
+    "diff": "field_deleted",
+    "type": "AttributeWhereInput",
+    "field": "filterableInDashboard"
   },
   {
     "diff": "enum_value_deleted",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "GIFT_CARD_EXPORT_COMPLETED"
+    "enum": "AttributeSortField",
+    "value": "AVAILABLE_IN_GRID"
   },
   {
     "diff": "enum_value_deleted",
-    "enum": "WebhookEventTypeAsyncEnum",
-    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
+    "enum": "AttributeSortField",
+    "value": "FILTERABLE_IN_DASHBOARD"
   },
   {
     "diff": "enum_value_deleted",
-    "enum": "WebhookEventTypeEnum",
-    "value": "GIFT_CARD_EXPORT_COMPLETED"
+    "enum": "AttributeSortField",
+    "value": "FILTERABLE_IN_STOREFRONT"
   },
   {
     "diff": "enum_value_deleted",
-    "enum": "WebhookEventTypeEnum",
-    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "GIFT_CARD_EXPORT_COMPLETED"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "WebhookSampleEventTypeEnum",
-    "value": "VOUCHER_CODE_EXPORT_COMPLETED"
+    "enum": "AttributeSortField",
+    "value": "STOREFRONT_SEARCH_POSITION"
   }
 ]
