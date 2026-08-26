@@ -10353,13 +10353,6 @@
         "message": null,
         "default": null
       },
-      "preorderThreshold": {
-        "type": "Int",
-        "description": "The threshold for preorder variant in channel.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "default": null
-      },
       "price": {
         "type": "PositiveDecimal",
         "description": "Price of the particular variant in channel.",
@@ -36392,21 +36385,6 @@
           }
         }
       },
-      "productVariantPreorderDeactivate": {
-        "type": "ProductVariantPreorderDeactivate",
-        "description": "Deactivates product variant preorder. It changes all preorder allocation into regular allocation.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {
-          "id": {
-            "type": "ID!",
-            "description": "ID of a variant which preorder should be deactivated.",
-            "deprecated": null,
-            "message": null,
-            "default": null
-          }
-        }
-      },
       "productVariantReorder": {
         "type": "ProductVariantReorder",
         "description": "Reorder the variants of a product. Mutation updates updated_at on product and triggers PRODUCT_UPDATED webhook. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
@@ -42136,13 +42114,6 @@
         "description": null,
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "isPreorder": {
-        "type": "Boolean",
-        "description": "Filter by orders containing a variant that is currently in preorder.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "metadata": {
@@ -50564,81 +50535,6 @@
       }
     }
   },
-  "PreorderData": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Represents preorder settings for product variant.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "endDate": {
-        "type": "DateTime",
-        "description": "Preorder end date.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {}
-      },
-      "globalSoldUnits": {
-        "type": "Int!",
-        "description": "Total number of sold product variant during preorder.\n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {}
-      },
-      "globalThreshold": {
-        "type": "Int",
-        "description": "The global preorder threshold for product variant.\n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {}
-      }
-    }
-  },
-  "PreorderSettingsInput": {
-    "type": "input",
-    "description": "Preorder settings for a product variant.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "endDate": {
-        "type": "DateTime",
-        "description": "The end date for preorder.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "default": null
-      },
-      "globalThreshold": {
-        "type": "Int",
-        "description": "The global threshold for preorder variant.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "default": null
-      }
-    }
-  },
-  "PreorderThreshold": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Represents preorder variant data for channel.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "quantity": {
-        "type": "Int",
-        "description": "Preorder threshold for product variant in this channel.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {}
-      },
-      "soldUnits": {
-        "type": "Int!",
-        "description": "Number of sold product variant in this channel.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {}
-      }
-    }
-  },
   "PriceFilterInput": {
     "type": "input",
     "description": null,
@@ -52671,11 +52567,6 @@
         "deprecated": null,
         "message": null
       },
-      "PREORDER_VARIANT_CANNOT_BE_DEACTIVATED": {
-        "description": null,
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit."
-      },
       "PRODUCT_NOT_ASSIGNED_TO_CHANNEL": {
         "description": null,
         "deprecated": null,
@@ -52875,13 +52766,6 @@
         "description": null,
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "hasPreorderedVariants": {
-        "type": "Boolean",
-        "description": "Filter by product with preordered variants.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "ids": {
@@ -55309,13 +55193,6 @@
         "message": null,
         "arguments": {}
       },
-      "preorder": {
-        "type": "PreorderData",
-        "description": "Preorder data for product variant.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {}
-      },
       "pricing": {
         "type": "VariantPricingInfo",
         "description": "Lists the storefront variant's pricing, the current price and discounts, only meant for displaying.",
@@ -55743,13 +55620,6 @@
         "description": "Variant name.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "preorder": {
-        "type": "PreorderSettingsInput",
-        "description": "Determines if variant is in preorder.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "privateMetadata": {
@@ -56198,13 +56068,6 @@
         "message": null,
         "default": null
       },
-      "preorder": {
-        "type": "PreorderSettingsInput",
-        "description": "Determines if variant is in preorder.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "default": null
-      },
       "privateMetadata": {
         "type": "[MetadataInput!]",
         "description": "Fields required to update the product variant private metadata. Requires permissions to modify and to read the metadata of the object it's attached to.\n\nWarning: never store sensitive information, including financial data such as credit card details.",
@@ -56286,13 +56149,6 @@
         "message": null,
         "arguments": {}
       },
-      "preorderThreshold": {
-        "type": "PreorderThreshold",
-        "description": "Preorder variant data.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "arguments": {}
-      },
       "price": {
         "type": "Money",
         "description": "The price of the variant.",
@@ -56327,13 +56183,6 @@
         "description": "Cost price of the variant in channel.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "preorderThreshold": {
-        "type": "Int",
-        "description": "The threshold for preorder variant in channel.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "price": {
@@ -56526,13 +56375,6 @@
         "description": "Variant name.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "preorder": {
-        "type": "PreorderSettingsInput",
-        "description": "Determines if variant is in preorder.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "privateMetadata": {
@@ -56797,13 +56639,6 @@
     "deprecated": null,
     "message": null,
     "fields": {
-      "isPreorder": {
-        "type": "Boolean",
-        "description": "Filter by variants that are currently in preorder.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
-        "default": null
-      },
       "metadata": {
         "type": "[MetadataFilter!]",
         "description": null,
@@ -56866,13 +56701,6 @@
         "description": "Variant name.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "preorder": {
-        "type": "PreorderSettingsInput",
-        "description": "Determines if variant is in preorder.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "privateMetadata": {
@@ -57127,29 +56955,6 @@
       "version": {
         "type": "String",
         "description": "Saleor version that triggered the event.",
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      }
-    }
-  },
-  "ProductVariantPreorderDeactivate": {
-    "type": "object",
-    "interfaces": [],
-    "description": "Deactivates product variant preorder. It changes all preorder allocation into regular allocation.\n\nDEPRECATED: Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit. \n\nRequires one of the following permissions: MANAGE_PRODUCTS.",
-    "deprecated": null,
-    "message": null,
-    "fields": {
-      "errors": {
-        "type": "[ProductError!]!",
-        "description": null,
-        "deprecated": null,
-        "message": null,
-        "arguments": {}
-      },
-      "productVariant": {
-        "type": "ProductVariant",
-        "description": "Product variant with ended preorder.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -57834,13 +57639,6 @@
         "description": "Filter by product with category assigned.",
         "deprecated": null,
         "message": null,
-        "default": null
-      },
-      "hasPreorderedVariants": {
-        "type": "Boolean",
-        "description": "Filter by product with preordered variants.",
-        "deprecated": null,
-        "message": "Preorder is deprecated and will be removed. Model pre-sales with regular stock instead: create the planned quantity in a warehouse, or set `trackInventory` to false to sell without a stock limit.",
         "default": null
       },
       "ids": {

@@ -1,102 +1,88 @@
 [
   {
-    "diff": "field_deleted",
-    "type": "Attribute",
-    "field": "availableInGrid"
+    "diff": "type_deleted",
+    "type": "PreorderData"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "PreorderSettingsInput"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "PreorderThreshold"
+  },
+  {
+    "diff": "type_deleted",
+    "type": "ProductVariantPreorderDeactivate"
   },
   {
     "diff": "field_deleted",
-    "type": "Attribute",
-    "field": "filterableInDashboard"
+    "type": "ChannelListingUpdateInput",
+    "field": "preorderThreshold"
   },
   {
     "diff": "field_deleted",
-    "type": "Attribute",
-    "field": "filterableInStorefront"
+    "type": "Mutation",
+    "field": "productVariantPreorderDeactivate"
   },
   {
     "diff": "field_deleted",
-    "type": "Attribute",
-    "field": "storefrontSearchPosition"
+    "type": "OrderFilterInput",
+    "field": "isPreorder"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeCreateInput",
-    "field": "availableInGrid"
+    "type": "ProductFilterInput",
+    "field": "hasPreorderedVariants"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeCreateInput",
-    "field": "filterableInDashboard"
+    "type": "ProductVariant",
+    "field": "preorder"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeCreateInput",
-    "field": "filterableInStorefront"
+    "type": "ProductVariantBulkCreateInput",
+    "field": "preorder"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeCreateInput",
-    "field": "storefrontSearchPosition"
+    "type": "ProductVariantBulkUpdateInput",
+    "field": "preorder"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeFilterInput",
-    "field": "availableInGrid"
+    "type": "ProductVariantChannelListing",
+    "field": "preorderThreshold"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeFilterInput",
-    "field": "filterableInDashboard"
+    "type": "ProductVariantChannelListingAddInput",
+    "field": "preorderThreshold"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeFilterInput",
-    "field": "filterableInStorefront"
+    "type": "ProductVariantCreateInput",
+    "field": "preorder"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeUpdateInput",
-    "field": "availableInGrid"
+    "type": "ProductVariantFilterInput",
+    "field": "isPreorder"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeUpdateInput",
-    "field": "filterableInDashboard"
+    "type": "ProductVariantInput",
+    "field": "preorder"
   },
   {
     "diff": "field_deleted",
-    "type": "AttributeUpdateInput",
-    "field": "filterableInStorefront"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AttributeUpdateInput",
-    "field": "storefrontSearchPosition"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "AttributeWhereInput",
-    "field": "filterableInDashboard"
+    "type": "ProductWhereInput",
+    "field": "hasPreorderedVariants"
   },
   {
     "diff": "enum_value_deleted",
-    "enum": "AttributeSortField",
-    "value": "AVAILABLE_IN_GRID"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "AttributeSortField",
-    "value": "FILTERABLE_IN_DASHBOARD"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "AttributeSortField",
-    "value": "FILTERABLE_IN_STOREFRONT"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "AttributeSortField",
-    "value": "STOREFRONT_SEARCH_POSITION"
+    "enum": "ProductErrorCode",
+    "value": "PREORDER_VARIANT_CANNOT_BE_DEACTIVATED"
   }
 ]
