@@ -39256,6 +39256,13 @@
         "message": null,
         "arguments": {}
       },
+      "transactionSummaries": {
+        "type": "[TransactionSummary!]!",
+        "description": "Payment history of the order, with one entry per payment transaction that moved any money. Unlike `transactions`, it requires no permission and exposes only the payment method and the amounts, so it can be used to display payment details to the customer without exposing internal information.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "transactions": {
         "type": "[TransactionItem!]!",
         "description": "List of transactions for the order. Requires one of the following permissions: MANAGE_ORDERS, HANDLE_PAYMENTS.",
@@ -73860,6 +73867,71 @@
         "deprecated": null,
         "message": null,
         "default": null
+      }
+    }
+  },
+  "TransactionSummary": {
+    "type": "object",
+    "interfaces": [],
+    "description": "Customer-facing summary of a single payment transaction. Exposes the payment method and the amounts, without the identifiers, events and actions available on `TransactionItem`.\n\nAdded in Saleor 3.23.",
+    "deprecated": null,
+    "message": null,
+    "fields": {
+      "authorizePendingAmount": {
+        "type": "Money!",
+        "description": "Total amount of ongoing authorization requests for the transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "authorizedAmount": {
+        "type": "Money!",
+        "description": "Total amount authorized for this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "canceledAmount": {
+        "type": "Money!",
+        "description": "Total amount canceled for this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "chargePendingAmount": {
+        "type": "Money!",
+        "description": "Total amount of ongoing charge requests for the transaction.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "chargedAmount": {
+        "type": "Money!",
+        "description": "Total amount charged for this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "createdAt": {
+        "type": "DateTime!",
+        "description": "Date and time at which payment transaction was created.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "paymentMethodDetails": {
+        "type": "PaymentMethodDetails",
+        "description": "The payment method used for this transaction. As this field is public, card number digits and expiration date are stripped: `firstDigits`, `lastDigits`, `expMonth` and `expYear` of `CardPaymentMethodDetails` are always `null` here. Read them through `Order.transactions` instead, which requires MANAGE_ORDERS or HANDLE_PAYMENTS.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "refundedAmount": {
+        "type": "Money!",
+        "description": "Total amount refunded for this payment.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
       }
     }
   },

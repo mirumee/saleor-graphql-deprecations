@@ -1,88 +1,11 @@
 [
   {
-    "diff": "type_deleted",
-    "type": "PreorderData"
+    "diff": "type_new",
+    "type": "TransactionSummary"
   },
   {
-    "diff": "type_deleted",
-    "type": "PreorderSettingsInput"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "PreorderThreshold"
-  },
-  {
-    "diff": "type_deleted",
-    "type": "ProductVariantPreorderDeactivate"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ChannelListingUpdateInput",
-    "field": "preorderThreshold"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "Mutation",
-    "field": "productVariantPreorderDeactivate"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "OrderFilterInput",
-    "field": "isPreorder"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductFilterInput",
-    "field": "hasPreorderedVariants"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariant",
-    "field": "preorder"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariantBulkCreateInput",
-    "field": "preorder"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariantBulkUpdateInput",
-    "field": "preorder"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariantChannelListing",
-    "field": "preorderThreshold"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariantChannelListingAddInput",
-    "field": "preorderThreshold"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariantCreateInput",
-    "field": "preorder"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariantFilterInput",
-    "field": "isPreorder"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductVariantInput",
-    "field": "preorder"
-  },
-  {
-    "diff": "field_deleted",
-    "type": "ProductWhereInput",
-    "field": "hasPreorderedVariants"
-  },
-  {
-    "diff": "enum_value_deleted",
-    "enum": "ProductErrorCode",
-    "value": "PREORDER_VARIANT_CANNOT_BE_DEACTIVATED"
+    "diff": "field_new",
+    "type": "Order",
+    "field": "transactionSummaries"
   }
 ]
