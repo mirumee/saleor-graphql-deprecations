@@ -57064,6 +57064,11 @@
     "deprecated": null,
     "message": null,
     "values": {
+      "ID": {
+        "description": "Sort product variants by ID.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null
+      },
       "LAST_MODIFIED_AT": {
         "description": "Sort product variants by last modification date.",
         "deprecated": null,
