@@ -51000,7 +51000,7 @@
         "type": "Float",
         "description": "Rating of the product.",
         "deprecated": null,
-        "message": null,
+        "message": "Product rating is deprecated and will be removed. Use a numeric attribute instead.",
         "arguments": {}
       },
       "seoDescription": {
@@ -51527,7 +51527,7 @@
         "type": "Float",
         "description": "Defines the product rating value.",
         "deprecated": null,
-        "message": null,
+        "message": "Product rating is deprecated and will be removed. Use a numeric attribute instead.",
         "default": null
       },
       "seo": {
@@ -52257,7 +52257,7 @@
         "type": "Float",
         "description": "Defines the product rating value.",
         "deprecated": null,
-        "message": null,
+        "message": "Product rating is deprecated and will be removed. Use a numeric attribute instead.",
         "default": null
       },
       "seo": {
@@ -53000,7 +53000,7 @@
         "type": "Float",
         "description": "Defines the product rating value.",
         "deprecated": null,
-        "message": null,
+        "message": "Product rating is deprecated and will be removed. Use a numeric attribute instead.",
         "default": null
       },
       "seo": {
@@ -53741,7 +53741,7 @@
       "RATING": {
         "description": "Sort products by rating.",
         "deprecated": null,
-        "message": null
+        "message": "Product rating is deprecated and will be removed. Use a numeric attribute instead."
       },
       "TYPE": {
         "description": "Sort products by type.",
