@@ -72103,6 +72103,13 @@
         "message": null,
         "arguments": {}
       },
+      "idempotencyKey": {
+        "type": "String!",
+        "description": "Idempotency key assigned to this requested action. Saleor's delivery retries of this request carry the same key, so an app can use it to avoid performing the action twice. Requesting the action again is a new request and gets a new key.\n\nAdded in Saleor 3.23.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
       "issuedAt": {
         "type": "DateTime",
         "description": "Time of the event.",
@@ -72152,6 +72159,13 @@
       "action": {
         "type": "TransactionAction!",
         "description": "Requested action data.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "idempotencyKey": {
+        "type": "String!",
+        "description": "Idempotency key assigned to this requested action. Saleor's delivery retries of this request carry the same key, so an app can use it to avoid performing the action twice. Requesting the action again is a new request and gets a new key.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "arguments": {}
@@ -73612,6 +73626,13 @@
       "grantedRefund": {
         "type": "OrderGrantedRefund",
         "description": "Granted refund related to refund request.\n\nNote: this API is currently in Feature Preview and can be subject to changes at later point.",
+        "deprecated": null,
+        "message": null,
+        "arguments": {}
+      },
+      "idempotencyKey": {
+        "type": "String!",
+        "description": "Idempotency key assigned to this requested action. Saleor's delivery retries of this request carry the same key, so an app can use it to avoid performing the action twice. Requesting the action again is a new request and gets a new key.\n\nAdded in Saleor 3.23.",
         "deprecated": null,
         "message": null,
         "arguments": {}

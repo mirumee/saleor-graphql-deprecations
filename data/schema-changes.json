@@ -1,7 +1,17 @@
 [
   {
-    "diff": "enum_value_new",
-    "enum": "ProductVariantSortField",
-    "value": "ID"
+    "diff": "field_new",
+    "type": "TransactionCancelationRequested",
+    "field": "idempotencyKey"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionChargeRequested",
+    "field": "idempotencyKey"
+  },
+  {
+    "diff": "field_new",
+    "type": "TransactionRefundRequested",
+    "field": "idempotencyKey"
   }
 ]
